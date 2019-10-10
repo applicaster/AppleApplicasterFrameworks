@@ -1,15 +1,15 @@
 //
-//  QuickBrickAppleTests.swift
-//  QuickBrickAppleTests
+//  AppleApplicasterFrameworksTests.swift
+//  AppleApplicasterFrameworksTests
 //
-//  Created by Anton Kononenko on 9/19/19.
+//  Created by Anton Kononenko on 10/10/19.
 //  Copyright © 2019 Anton Kononenko. All rights reserved.
 //
 
 import XCTest
-@testable import QuickBrickApple
+@testable import AppleApplicasterFrameworks
 
-class QuickBrickAppleTests: XCTestCase {
+class AppleApplicasterFrameworksTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
