@@ -21,7 +21,7 @@ struct ZappPluginModelKeys {
     static let kReactNativePlugin = "react_native"
 }
 
-public enum ZappPluginType: String {
+public enum ZPPluginType: String {
     case Root = "menu"
     case VideoPlayer = "player"
     case Analytics = "analytics"
@@ -40,14 +40,14 @@ public enum ZappPluginType: String {
     case Advertisement = "advertisement"
 }
 
-@objc public class ZappPluginModel: NSObject {
-    private(set) var object: NSDictionary
+@objc open class ZappPluginModel: NSObject {
+    private(set) public var object: NSDictionary
 
-    var api: [String: Any]? {
+    public var api: [String: Any]? {
         return plugin?[ZappPluginModelKeys.kApiString] as? [String: Any]
     }
 
-    var plugin: [String: Any]? {
+    public var plugin: [String: Any]? {
         return object[ZappPluginModelKeys.kPlugin] as? [String: Any]
     }
 
@@ -67,38 +67,37 @@ public enum ZappPluginType: String {
         return plugin?[ZappPluginModelKeys.kPluginNameString] as? String ?? ""
     }
 
-    public lazy var pluginType: ZappPluginType? = {
+    public lazy var pluginType: ZPPluginType? = {
         guard let stringPluginType = plugin?[ZappPluginModelKeys.kPluginTypeString] as? String else {
             return nil
         }
-        return ZappPluginType(rawValue: stringPluginType)
+        return ZPPluginType(rawValue: stringPluginType)
     }()
 
-    var pluginClassName: String? {
+    public var pluginClassName: String? {
         return api?[ZappPluginModelKeys.kPluginClassNameString] as? String
     }
 
-    var pluginModules: [String]? {
+    public var pluginModules: [String]? {
         return api?[ZappPluginModelKeys.kPluginModulesString] as? [String]
     }
 
-    @objc open var configurationJSON: NSDictionary? {
-        return object[ZappPluginModelKeys.kConfigurationJSON] as? NSDictionary
-    }
+    public var configurationJSON: NSDictionary?
 
-    init?(object: NSDictionary?) {
+    public init?(object: NSDictionary?) {
         guard let objectDictionary = object,
             objectDictionary[ZappPluginModelKeys.kPlugin] as? NSDictionary != nil else {
             return nil
         }
         self.object = objectDictionary
+        configurationJSON = objectDictionary[ZappPluginModelKeys.kConfigurationJSON] as? NSDictionary
     }
 
     static func == (lhs: ZappPluginModel, rhs: ZappPluginModel) -> Bool {
         return lhs.identifier == rhs.identifier
     }
 
-    func configurationValue(for key: String) -> AnyObject? {
+    public func configurationValue(for key: String) -> AnyObject? {
         var retValue: AnyObject?
         if let pluginConfiguration = self.object[ZappPluginModelKeys.kConfigurationJSON] as? [String: AnyObject],
             let value = pluginConfiguration[key] {

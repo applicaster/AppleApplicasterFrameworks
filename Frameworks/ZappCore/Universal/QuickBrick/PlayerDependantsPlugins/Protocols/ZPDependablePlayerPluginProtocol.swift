@@ -11,7 +11,7 @@ import AVKit
 
 /// Currently availible types of dependant plugins
 public struct ZPVideoDependantPlugins {
-    public static let VideoAdvertisement = ZappPluginType.VideoAdvertisement.rawValue
+    public static let VideoAdvertisement = ZPPluginType.VideoAdvertisement.rawValue
 }
 
 /// Player that wants to use Dependant Player plugins my implement this protocol
