@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19A2F24B1B6EC12F40C17EE2 /* Pods_AppleApplicasterFrameworksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956F0A2671FEC8D23693C944 /* Pods_AppleApplicasterFrameworksTests.framework */; };
 		408099E0234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408099D6234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework */; };
 		408099E5234FD9BF000FFC74 /* AppleApplicasterFrameworksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408099E4234FD9BF000FFC74 /* AppleApplicasterFrameworksTests.swift */; };
 		408099E7234FD9BF000FFC74 /* AppleApplicasterFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 408099D9234FD9BE000FFC74 /* AppleApplicasterFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7EB99377A8776868CCCF190 /* Pods_AppleApplicasterFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738E9F8C040A7E912F5F62B3 /* Pods_AppleApplicasterFrameworks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +25,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15643A984BAE4141C7757DF8 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworksTests.debug.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworksTests/Pods-AppleApplicasterFrameworksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		230E0337FEAB4045F785F694 /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworksTests.release.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworksTests/Pods-AppleApplicasterFrameworksTests.release.xcconfig"; sourceTree = "<group>"; };
 		408099D6234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppleApplicasterFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		408099D9234FD9BE000FFC74 /* AppleApplicasterFrameworks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleApplicasterFrameworks.h; sourceTree = "<group>"; };
 		408099DA234FD9BE000FFC74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408099DF234FD9BE000FFC74 /* AppleApplicasterFrameworksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleApplicasterFrameworksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		408099E4234FD9BF000FFC74 /* AppleApplicasterFrameworksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleApplicasterFrameworksTests.swift; sourceTree = "<group>"; };
 		408099E6234FD9BF000FFC74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5747F52092AA35545149480F /* Pods-AppleApplicasterFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworks.debug.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworks/Pods-AppleApplicasterFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
+		738E9F8C040A7E912F5F62B3 /* Pods_AppleApplicasterFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleApplicasterFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8592E19AB6F33A830F5A0CAA /* Pods-AppleApplicasterFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworks.release.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworks/Pods-AppleApplicasterFrameworks.release.xcconfig"; sourceTree = "<group>"; };
+		956F0A2671FEC8D23693C944 /* Pods_AppleApplicasterFrameworksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleApplicasterFrameworksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7EB99377A8776868CCCF190 /* Pods_AppleApplicasterFrameworks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				408099E0234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework in Frameworks */,
+				19A2F24B1B6EC12F40C17EE2 /* Pods_AppleApplicasterFrameworksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100B25FDFE9F8C4FC71A112D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				738E9F8C040A7E912F5F62B3 /* Pods_AppleApplicasterFrameworks.framework */,
+				956F0A2671FEC8D23693C944 /* Pods_AppleApplicasterFrameworksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		408099CC234FD9BE000FFC74 = {
 			isa = PBXGroup;
 			children = (
 				408099D8234FD9BE000FFC74 /* AppleApplicasterFrameworks */,
 				408099E3234FD9BF000FFC74 /* AppleApplicasterFrameworksTests */,
 				408099D7234FD9BE000FFC74 /* Products */,
+				7D85C6C4BDD6727A2F86574B /* Pods */,
+				100B25FDFE9F8C4FC71A112D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +107,18 @@
 			path = AppleApplicasterFrameworksTests;
 			sourceTree = "<group>";
 		};
+		7D85C6C4BDD6727A2F86574B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5747F52092AA35545149480F /* Pods-AppleApplicasterFrameworks.debug.xcconfig */,
+				8592E19AB6F33A830F5A0CAA /* Pods-AppleApplicasterFrameworks.release.xcconfig */,
+				15643A984BAE4141C7757DF8 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */,
+				230E0337FEAB4045F785F694 /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,6 +137,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 408099EA234FD9BF000FFC74 /* Build configuration list for PBXNativeTarget "AppleApplicasterFrameworks" */;
 			buildPhases = (
+				FD1EE2FB2DAA682A621B74AD /* [CP] Check Pods Manifest.lock */,
 				408099D1234FD9BE000FFC74 /* Headers */,
 				408099D2234FD9BE000FFC74 /* Sources */,
 				408099D3234FD9BE000FFC74 /* Frameworks */,
@@ -122,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 408099ED234FD9BF000FFC74 /* Build configuration list for PBXNativeTarget "AppleApplicasterFrameworksTests" */;
 			buildPhases = (
+				55EE7299A6D38B45F74F596F /* [CP] Check Pods Manifest.lock */,
 				408099DB234FD9BE000FFC74 /* Sources */,
 				408099DC234FD9BE000FFC74 /* Frameworks */,
 				408099DD234FD9BE000FFC74 /* Resources */,
@@ -189,6 +224,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55EE7299A6D38B45F74F596F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppleApplicasterFrameworksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD1EE2FB2DAA682A621B74AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppleApplicasterFrameworks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		408099D2234FD9BE000FFC74 /* Sources */ = {
@@ -339,6 +421,7 @@
 		};
 		408099EB234FD9BF000FFC74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5747F52092AA35545149480F /* Pods-AppleApplicasterFrameworks.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -363,6 +446,7 @@
 		};
 		408099EC234FD9BF000FFC74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8592E19AB6F33A830F5A0CAA /* Pods-AppleApplicasterFrameworks.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +471,7 @@
 		};
 		408099EE234FD9BF000FFC74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15643A984BAE4141C7757DF8 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppleApplicasterFrameworksTests/Info.plist;
@@ -404,6 +489,7 @@
 		};
 		408099EF234FD9BF000FFC74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 230E0337FEAB4045F785F694 /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppleApplicasterFrameworksTests/Info.plist;

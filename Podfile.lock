@@ -1,0 +1,16 @@
+PODS:
+  - ZappCore (0.1.0)
+
+DEPENDENCIES:
+  - ZappCore (from `./Frameworks/ZappCore/ZappCore.podspec`)
+
+EXTERNAL SOURCES:
+  ZappCore:
+    :path: "./Frameworks/ZappCore/ZappCore.podspec"
+
+SPEC CHECKSUMS:
+  ZappCore: 66252eeb2130866510d845cfca7be8c6316a9b38
+
+PODFILE CHECKSUM: ab21e877918ca1c18e53946b6d98b8c4dc71e2e0
+
+COCOAPODS: 1.7.5
