@@ -7,6 +7,8 @@ target 'AppleApplicasterFrameworks' do
 
   target 'AppleApplicasterFrameworksTests' do
     inherit! :search_paths
+    pod 'ZappCore', :path => './Frameworks/ZappCore/ZappCore.podspec'
+
     # Pods for testing
   end
 

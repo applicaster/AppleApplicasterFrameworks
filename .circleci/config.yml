@@ -1,0 +1,118 @@
+# iOS CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/ios-migrating-from-1-2/ for more details
+#
+version: 2
+jobs:
+  build:
+    # Specify the Xcode version to use
+    macos:
+      xcode: "10.2.1"
+    shell: /bin/bash --login -eo pipefail
+    environment:
+      GENERAL_CACHE_KEY: "AppleApplicasterFrameworks_Cache_1.0.0"
+      PROJECT_NAME: "AppleApplicasterFrameworks"
+      SCHEME_NAME: "AppleApplicasterFrameworks"
+      DEPLOY_COMMAND: "~/.scripts-iOS/circleCi/deploySingleFrameworkMultiPlatform.sh"
+    working_directory: ~/AppleApplicasterFrameworks
+    steps:
+      #Hack general caching until circle does not support global env variables
+      - run: echo "$GENERAL_CACHE_KEY" > ~/_caching_file
+
+      - run:
+          name: Ruby - version
+          command: ruby -v
+
+      # Prepere Git
+      - restore_cache:
+          keys:
+            - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+            - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
+            - GIT-{{ checksum "~/_caching_file" }}-
+
+      - checkout
+
+      - save_cache:
+          name: Git - save cache
+          key: GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+
+      # Prepare Bundler
+      - restore_cache:
+          name: Bundler - restore cache
+          key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Bundler - update dependencies
+          command: bundle check --path=.bundle || bundle install --path=.bundle
+
+      - save_cache:
+          name: Bundler - save cache
+          key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - /Users/distiller/.rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems
+            - ./.bundle
+
+      # Restore Cocoapods cache, save cache on lower level, after pod install
+      - restore_cache:
+          keys:
+            - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+            - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
+            - CocoaPods-{{ checksum "~/_caching_file" }}-
+
+      - run:
+          name: CocoaPods - version
+          command: bundle exec pod --version
+
+      # Pod update
+      - run:
+          name: CocoaPods - update dependencies
+          command: bundle exec pod install
+
+      # Cache CocoaPods
+      - save_cache:
+          name: CocoaPods - save cache
+          key: CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - "~/.cocoapods/repos/cocoapods-"
+
+      # Tests
+      - run:
+          name: Tests - start
+          command: bundle exec fastlane ios test
+
+      # Deploy
+      - deploy:
+          name: Creating Closed SDK version
+          command: |
+            if [ "$CIRCLE_BRANCH" = "master" ] || [[ "$CIRCLE_BRANCH" == "hotfix_"* ]];
+            then
+              echo "Trying to create a tag"
+              project_version="`/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"./${product_name}/Info.plist\"`"
+
+              # check if tag for this version is exists
+              if [ $(git tag -l "$project_version") ]; then
+                echo "ERROR: Project version needs to be updated in order to create closed version, tag for this version already exists."
+                exit 1
+              fi
+
+            git tag $project_version
+            git push origin $project_version
+            echo Tag was succesfuly created
+
+            else
+              echo "Branch is not master, deploy process will be skipped"
+            fi
+
+      - store_test_results:
+          path: ./CircleArtifacts/test-results
+
+      - store_artifacts:
+          path: ./CircleArtifacts
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
