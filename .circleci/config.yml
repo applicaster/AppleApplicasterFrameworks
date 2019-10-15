@@ -84,12 +84,12 @@ jobs:
 
       # Deploy
       - deploy:
-          name: Creating Closed SDK version
+          name: Creating Tag SDK version
           command: |
             if [ "$CIRCLE_BRANCH" = "master" ] || [[ "$CIRCLE_BRANCH" == "hotfix_"* ]];
             then
               echo "Trying to create a tag"
-              project_version="`/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"./${product_name}/Info.plist\"`"
+              project_version="`/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"./${PROJECT_NAME}/Info.plist\"`"
 
               # check if tag for this version is exists
               if [ $(git tag -l "$project_version") ]; then
