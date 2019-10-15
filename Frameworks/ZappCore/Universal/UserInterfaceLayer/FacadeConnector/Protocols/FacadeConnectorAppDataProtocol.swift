@@ -11,8 +11,8 @@ import Foundation
 @objc public protocol FacadeConnectorAppDataProtocol {
     
     /// Retrun plugin json url Path
-    @objc func pluginsURLPath() -> URL?
+    @objc optional func pluginsURLPath() -> URL?
     
     /// Retrieve application app identifier
-    @objc func bundleIdentifier() -> String?
+    @objc optional func bundleIdentifier() -> String?
 }

@@ -40,7 +40,7 @@ public enum ZPPluginType: String {
     case Advertisement = "advertisement"
 }
 
-@objc open class ZappPluginModel: NSObject {
+@objc open class ZPPluginModel: NSObject {
     private(set) public var object: NSDictionary
 
     public var api: [String: Any]? {

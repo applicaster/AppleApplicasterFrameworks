@@ -77,7 +77,6 @@ extension ZPPlayerDependantPluginsManager: QBPlayerObserverProtocol {
                     provider.playerPlugin = playerPlugin
                     provider.playerDidCreate(player: playerPlugin)
                     playerProviders.append(provider)
-
                 }
             }
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc public protocol AdapterProtocol: NSObjectProtocol {
+@objc public protocol ZPAdapterProtocol: NSObjectProtocol {
     var configurationJSON: NSDictionary? { get }
     init(configurationJSON: NSDictionary?)
     init()
