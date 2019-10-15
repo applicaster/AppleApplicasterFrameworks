@@ -10,7 +10,7 @@ import Foundation
 
 
 /// This protocol must be implemented by all plugins that want to be plater dependent and needs player data
-@objc public protocol ZPPlayerDependantPluginProtocol:AdapterProtocol {
+@objc public protocol ZPPlayerDependantPluginProtocol:ZPAdapterProtocol {
     
     /// Player plugin that dependant plugins will be used with 
     var playerPlugin:(ZPDependablePlayerPluginProtocol & QBPlayerProtocol)? { set get }

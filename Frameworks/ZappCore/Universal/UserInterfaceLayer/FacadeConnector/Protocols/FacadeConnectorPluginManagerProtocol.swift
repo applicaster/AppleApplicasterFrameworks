@@ -9,7 +9,7 @@
 import Foundation
 
 @objc public protocol FacadeConnectorPluginManagerProtocol {
-    @objc func plugin(for identifier:String) -> ZappPluginModel?
-    @objc func getAllPlugins() -> [ZappPluginModel]?
-    @objc func adapterClass(_ pluginModel: ZappPluginModel) -> AnyClass?
+    @objc func plugin(for identifier:String) -> ZPPluginModel?
+    @objc func getAllPlugins() -> [ZPPluginModel]?
+    @objc func adapterClass(_ pluginModel: ZPPluginModel) -> AnyClass?
 }
