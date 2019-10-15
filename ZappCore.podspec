@@ -22,5 +22,5 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = '**/*.{swift}'
+  s.source_files = 'Frameworks/ZappCore/**/*.{swift}'
 end

@@ -2,15 +2,15 @@ PODS:
   - ZappCore (0.1.0)
 
 DEPENDENCIES:
-  - ZappCore (from `./Frameworks/ZappCore/ZappCore.podspec`)
+  - ZappCore (from `./ZappCore.podspec`)
 
 EXTERNAL SOURCES:
   ZappCore:
-    :path: "./Frameworks/ZappCore/ZappCore.podspec"
+    :path: "./ZappCore.podspec"
 
 SPEC CHECKSUMS:
-  ZappCore: 66252eeb2130866510d845cfca7be8c6316a9b38
+  ZappCore: 1afd434dc347d4c9caa0c61994e65b1bfb464a22
 
-PODFILE CHECKSUM: 89d6350ca0615fe61af1341aebca9958ca581a7d
+PODFILE CHECKSUM: 479c4526a3c6ba608fa59bb0c8e09ea3662afae8
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.3
