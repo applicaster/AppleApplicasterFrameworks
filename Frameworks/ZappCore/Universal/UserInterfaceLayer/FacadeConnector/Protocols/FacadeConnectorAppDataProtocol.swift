@@ -9,10 +9,12 @@
 import Foundation
 
 @objc public protocol FacadeConnectorAppDataProtocol {
-    
+    // TODO: Try remove!
     /// Retrun plugin json url Path
-    @objc optional func pluginsURLPath() -> URL?
-    
+    @objc func pluginsURLPath() -> URL?
+
     /// Retrieve application app identifier
-    @objc optional func bundleIdentifier() -> String?
+    @objc func bundleIdentifier() -> String
+    @objc func bundleName() -> String
+    @objc func appVersion() -> String
 }

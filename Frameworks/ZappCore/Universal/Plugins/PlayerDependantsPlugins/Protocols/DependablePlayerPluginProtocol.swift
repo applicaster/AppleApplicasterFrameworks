@@ -1,5 +1,5 @@
 //
-//  ZPDependablePlayerPluginProtocol.swift
+//  VideoDependantPlugins.swift
 //  ZappPlugins
 //
 //  Created by Anton Kononenko on 7/22/19.
@@ -10,14 +10,14 @@ import Foundation
 import AVKit
 
 /// Currently availible types of dependant plugins
-public struct ZPVideoDependantPlugins {
+public struct VideoDependantPlugins {
     public static let VideoAdvertisement = ZPPluginType.VideoAdvertisement.rawValue
 }
 
 /// Player that wants to use Dependant Player plugins my implement this protocol
-@objc public protocol ZPDependablePlayerPluginProtocol{
+@objc public protocol DependablePlayerPluginProtocol{
     
     /// Dependant plugins that avalible for this player pluging
-    /// Note: Use list from `ZPVideoDependantPlugins`
+    /// Note: Use list from `VideoDependantPlugins`
     var supportedDependantPluginType:[String] { get }
 }

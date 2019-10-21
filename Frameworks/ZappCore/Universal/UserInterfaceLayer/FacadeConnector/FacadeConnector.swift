@@ -21,10 +21,14 @@ import Foundation
         return connectorProvider as? FacadeConnectorAnalyticsProtocol
     }
 
+    @objc public var playerDependant: FacadeConnectorPlayerDependantProtocol? {
+        return connectorProvider as? FacadeConnectorPlayerDependantProtocol
+    }
+
     @objc public var storage: FacadeConnectorStorageProtocol? {
         return connectorProvider as? FacadeConnectorStorageProtocol
     }
-    
+
     @objc public var pluginManager: FacadeConnectorPluginManagerProtocol? {
         return connectorProvider as? FacadeConnectorPluginManagerProtocol
     }

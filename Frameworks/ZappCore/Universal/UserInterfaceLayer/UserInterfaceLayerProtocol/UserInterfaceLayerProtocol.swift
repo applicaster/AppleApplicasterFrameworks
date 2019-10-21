@@ -9,7 +9,8 @@
 import Foundation
 
 public protocol UserInterfaceLayerProtocol {
-    init(launchOptions:[UIApplication.LaunchOptionsKey: Any]?,
-         applicationData:[String:Any])
-    func prepareLayerForUse(completion:@escaping (_ viewController:UIViewController?, _ error:Error?) -> Void)
+    init(launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
+         applicationData: [String: Any])
+    func prepareLayerForUse(completion: @escaping (_ viewController: UIViewController?,
+                                                   _ error: Error?) -> Void)
 }

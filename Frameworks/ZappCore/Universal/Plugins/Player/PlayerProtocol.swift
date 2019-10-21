@@ -9,7 +9,7 @@
 import Foundation
 
 
-@objc public protocol QBPlayerProtocol:NSObjectProtocol  {
+@objc public protocol PlayerProtocol:NSObjectProtocol  {
     
     /// DS raw atom entry format
     @objc var entry:[String:Any]? { get }

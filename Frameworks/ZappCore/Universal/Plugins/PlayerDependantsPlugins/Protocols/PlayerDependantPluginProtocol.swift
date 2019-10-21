@@ -1,5 +1,5 @@
 //
-//  ZPPlayerDependantPluginProtocol.swift
+//  PlayerDependantPluginProtocol.swift
 //  ZappPlugins
 //
 //  Created by Anton Kononenko on 7/17/19.
@@ -10,9 +10,9 @@ import Foundation
 
 
 /// This protocol must be implemented by all plugins that want to be plater dependent and needs player data
-@objc public protocol ZPPlayerDependantPluginProtocol:ZPAdapterProtocol {
+@objc public protocol PlayerDependantPluginProtocol:ZPAdapterProtocol {
     
     /// Player plugin that dependant plugins will be used with 
-    var playerPlugin:(ZPDependablePlayerPluginProtocol & QBPlayerProtocol)? { set get }
+    var playerPlugin:(DependablePlayerPluginProtocol & PlayerProtocol)? { set get }
        
 }

@@ -1,0 +1,58 @@
+{
+  "api": {
+    "require_startup_execution": false,
+    "class_name": "GoogleInteractiveMediaAdsAdapter",
+    "modules": ["GoogleInteractiveMediaAdsTvOS"]
+  },
+  "platform": "tvos",
+  "author_name": "Anton Kononenko",
+  "author_email": "a.kononenko@applicaster.com",
+  "manifest_version": "1.0.0",
+  "name": "GoogleInteractiveMediaAdsTV",
+  "description": "This plugin allow to add Google Interactive Media Ads to supported players",
+  "type": "video_advertisement",
+  "identifier": "GoogleInteractiveMediaAdsTv",
+  "ui_builder_support": true,
+  "whitelisted_account_ids": ["572a0a65373163000b000000"],
+  "extra_dependencies": [
+    {
+      "GoogleInteractiveMediaAdsTvOS": ":git => 'https://github.com/applicaster-plugins/Google-IMA-Client-TV.git', :tag => '1.0.3'"
+    }
+  ],
+  "min_zapp_sdk": "10.1.1-Dev",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "custom_configuration_fields": [
+    {
+      "type": "text",
+      "key": "tag_vmap_url",
+      "tooltip_text": "VMAP URL",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "key": "tag_preroll_url",
+      "tooltip_text": "Preroll URL",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "key": "tag_postroll_url",
+      "tooltip_text": "Postroll URL",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "key": "tag_midroll_url",
+      "tooltip_text": "Midroll URL",
+      "default": ""
+    },
+    {
+      "type": "number",
+      "key": "midroll_offset",
+      "tooltip_text": "Midroll offset",
+      "default": ""
+    }
+  ]
+}
