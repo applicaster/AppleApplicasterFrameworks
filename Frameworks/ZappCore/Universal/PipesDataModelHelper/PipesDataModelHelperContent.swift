@@ -9,20 +9,20 @@
 import Foundation
 
 public struct PipesDataModelHelperContent {
-    public let contentObject:[AnyHashable:String]?
-    public init(contentDict:[AnyHashable:String]?) {
+    public let contentObject: [AnyHashable: String]?
+    public init(contentDict: [AnyHashable: String]?) {
         contentObject = contentDict
     }
-    
-    public var type:String? {
+
+    public var type: String? {
         return contentObject?["type"]
     }
-    
-    public var content:String? {
+
+    public var content: String? {
         return contentObject?["content"]
     }
-    
-    public var contesrcnt:String? {
+
+    public var contesrcnt: String? {
         return contentObject?["src"]
     }
 }

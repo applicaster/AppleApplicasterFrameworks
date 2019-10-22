@@ -41,7 +41,7 @@ public enum ZPPluginType: String {
 }
 
 @objc open class ZPPluginModel: NSObject {
-    private(set) public var object: NSDictionary
+    public private(set) var object: NSDictionary
 
     public var api: [String: Any]? {
         return plugin?[ZappPluginModelKeys.kApiString] as? [String: Any]

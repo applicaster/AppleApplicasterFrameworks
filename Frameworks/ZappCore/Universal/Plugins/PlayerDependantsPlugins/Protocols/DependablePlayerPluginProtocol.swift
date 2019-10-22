@@ -6,8 +6,8 @@
 //  Copyright © 2019 Applicaster LTD. All rights reserved.
 //
 
-import Foundation
 import AVKit
+import Foundation
 
 /// Currently availible types of dependant plugins
 public struct VideoDependantPlugins {
@@ -15,9 +15,8 @@ public struct VideoDependantPlugins {
 }
 
 /// Player that wants to use Dependant Player plugins my implement this protocol
-@objc public protocol DependablePlayerPluginProtocol{
-    
+@objc public protocol DependablePlayerPluginProtocol {
     /// Dependant plugins that avalible for this player pluging
     /// Note: Use list from `VideoDependantPlugins`
-    var supportedDependantPluginType:[String] { get }
+    var supportedDependantPluginType: [String] { get }
 }

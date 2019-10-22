@@ -9,5 +9,5 @@
 import Foundation
 
 @objc public protocol FacadeConnectorProtocol {
-    var connectorInstance:FacadeConnector? { get }
+    var connectorInstance: FacadeConnector? { get }
 }

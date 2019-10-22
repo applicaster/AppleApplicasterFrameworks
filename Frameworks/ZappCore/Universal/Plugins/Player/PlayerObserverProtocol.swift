@@ -9,33 +9,31 @@
 import Foundation
 
 @objc public protocol PlayerObserverProtocol {
-    
     /// Player finished play video item
     ///
     /// - Parameters:
     ///   - player: instance of the player that conform PlayerProtocol protocol
     ///   - completion: completion when all dependant item will be completed player can start next move or can be closed
-    func playerDidFinishPlayItem(player:PlayerProtocol,
-                                 completion:@escaping (_ finished:Bool) -> Void)
-    
+    func playerDidFinishPlayItem(player: PlayerProtocol,
+                                 completion: @escaping (_ finished: Bool) -> Void)
+
     /// Player instance did created
     ///
     ///  - player: instance of the player that conform PlayerProtocol protocol
-    func playerDidCreate(player:PlayerProtocol)
-    
+    func playerDidCreate(player: PlayerProtocol)
+
     /// Player instance did dismiss
     ///
     ///  - player: instance of the player that conform PlayerProtocol protocol
-    func playerDidDismiss(player:PlayerProtocol)
-    
+    func playerDidDismiss(player: PlayerProtocol)
+
     /// Player instance update current time
     ///
     /// - Parameters:
     ///  - player: instance of the player that conform PlayerProtocol protocol
     ///   - currentTime: current time
     ///   - duration: video item duration
-    func playerProgressUpdate(player:PlayerProtocol,
-                              currentTime:TimeInterval,
-                              duration:TimeInterval)
+    func playerProgressUpdate(player: PlayerProtocol,
+                              currentTime: TimeInterval,
+                              duration: TimeInterval)
 }
-

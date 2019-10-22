@@ -8,11 +8,8 @@
 
 import Foundation
 
-
 /// This protocol must be implemented by all plugins that want to be plater dependent and needs player data
-@objc public protocol PlayerDependantPluginProtocol:ZPAdapterProtocol {
-    
-    /// Player plugin that dependant plugins will be used with 
-    var playerPlugin:(DependablePlayerPluginProtocol & PlayerProtocol)? { set get }
-       
+@objc public protocol PlayerDependantPluginProtocol: ZPAdapterProtocol {
+    /// Player plugin that dependant plugins will be used with
+    var playerPlugin: (DependablePlayerPluginProtocol & PlayerProtocol)? { set get }
 }

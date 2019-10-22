@@ -9,7 +9,6 @@
 import Foundation
 
 @objc public protocol FacadeConnectorAppDataProtocol {
-    // TODO: Try remove!
     /// Retrun plugin json url Path
     @objc func pluginsURLPath() -> URL?
 

@@ -9,13 +9,12 @@
 import Foundation
 
 public struct PipesDataModelHelperMediaItem {
-    public let src:String
-    public let key:String
-    
-    public init(key:String,
-                src:String) {
+    public let src: String
+    public let key: String
+
+    public init(key: String,
+                src: String) {
         self.key = key
         self.src = src
     }
-    
 }

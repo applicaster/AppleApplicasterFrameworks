@@ -9,12 +9,12 @@
 import Foundation
 
 public struct PipesDataModelHelperExtensions {
-    public let extensionsObject:[AnyHashable:Any]?
-    public init(extensionsDict:[AnyHashable:Any]?) {
+    public let extensionsObject: [AnyHashable: Any]?
+    public init(extensionsDict: [AnyHashable: Any]?) {
         extensionsObject = extensionsDict
     }
-    
-    public var isFree:Bool {
+
+    public var isFree: Bool {
         var retVal = true
         if let free = extensionsObject?["free"] as? Bool {
             retVal = free
@@ -23,8 +23,8 @@ public struct PipesDataModelHelperExtensions {
         }
         return retVal
     }
-    
-    public var isLive:Bool {
+
+    public var isLive: Bool {
         var retVal = false
         if let free = extensionsObject?["isLive"] as? Bool {
             retVal = free

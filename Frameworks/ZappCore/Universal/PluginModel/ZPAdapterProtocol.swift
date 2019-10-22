@@ -14,7 +14,7 @@ import UIKit
     init()
 
     @objc optional func handleUrlScheme(_ params: NSDictionary) -> Void
-    
+
     /**
      Implement this method if you need to use the plugin model that initiated your plugin.
      For example if you need extra information out of it - like react plugins sometiimes need the bundle url.

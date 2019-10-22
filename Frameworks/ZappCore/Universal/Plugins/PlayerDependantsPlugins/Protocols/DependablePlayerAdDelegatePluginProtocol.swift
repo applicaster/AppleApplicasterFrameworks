@@ -9,24 +9,23 @@
 import Foundation
 
 public struct DependablePlayerAdDelegatePluginProtocolKeys {
-    static public let playingKey = "advertismentPlaying"
+    public static let playingKey = "advertismentPlaying"
 }
 
 /// Delegation that Video ads plugin pass data about ad
-@objc public protocol DependablePlayerAdDelegatePluginProtocol:NSObjectProtocol {
-    
+@objc public protocol DependablePlayerAdDelegatePluginProtocol: NSObjectProtocol {
     /// Video Ad will be presented
     ///
     /// - Parameter provider: instance of PlayerDependantPluginProtocol that will present ad
-    func advertisementWillPresented(provider:PlayerDependantPluginProtocol)
-    
+    func advertisementWillPresented(provider: PlayerDependantPluginProtocol)
+
     /// Video Ad will be removed
     ///
     /// - Parameter provider: instance of PlayerDependantPluginProtocol that will present ad
-    func advertisementWillDismissed(provider:PlayerDependantPluginProtocol)
-    
+    func advertisementWillDismissed(provider: PlayerDependantPluginProtocol)
+
     /// Video Ad failed to load
     ///
     /// - Parameter provider: instance of PlayerDependantPluginProtocol that will present ad
-    func advertisementFailedToLoad(provider:PlayerDependantPluginProtocol)
+    func advertisementFailedToLoad(provider: PlayerDependantPluginProtocol)
 }
