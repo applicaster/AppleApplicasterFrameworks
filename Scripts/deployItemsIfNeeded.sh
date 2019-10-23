@@ -5,14 +5,14 @@ product_name=${1}
 project_version="`/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"./${product_name}/Info.plist\"`"
 echo $project_version
 
-# # check if tag for this version is exists
-# if [ $(git tag -l "$project_version") ]; then
-#   echo "ERROR: Project version needs to be updated in order to create closed version, tag for this version already exists."
-#   exit 1
-# fi
+# check if tag for this version is exists
+if [ $(git tag -l "$project_version") ]; then
+  echo "ERROR: Project version needs to be updated in order to create closed version, tag for this version already exists."
+  exit 1
+fi
 
-# git tag $project_version
-# git push origin $project_version
+git tag $project_version
+git push origin $project_version
 
 echo "Step 1: "
 
@@ -41,8 +41,9 @@ for PLIST_ITEMS in $frameworksData; do
 		echo $podspec_template
 		podspec_file_name="${frameworkName}.podspec"
 		echo "${podspec_filled}" >"./${podspec_file_name}"
+
+		pod cache clean --all
+		pod repo push --verbose --no-private --allow-warnings --skip-import-validation --no-overwrite ApplicasterSpecs "${podspec_file_name}"
+
 	fi
 done
-
-pod cache clean --all
-pod repo push --verbose --no-private --allow-warnings --skip-import-validation --no-overwrite ApplicasterSpecs "${podspec_file_name}"
