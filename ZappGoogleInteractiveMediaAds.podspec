@@ -1,16 +1,16 @@
 Pod::Spec.new do |s|
 	s.name = "ZappGoogleInteractiveMediaAds"
-	s.version = '0.0.1-Dev'
+	s.version = '0.1.0'
 	s.swift_versions = ['5.0', '5.1']
 	s.tvos.deployment_target = "10.0"
 	s.ios.deployment_target = "10.0"
 	s.summary = "ZappGoogleInteractiveMediaAds"
 	s.description = "Zapp Plugins store Protocol and Managers that relevant for Applicaster Zapp Plugin System"
-	s.homepage = "https://applicaster.com"
+	s.homepage = "'https://github.com/applicaster/AppleApplicasterFrameworks.git"
 	s.license = 'Appache 2.0'
 	s.author = "Applicaster LTD."
 	s.source = {
-		 :git => 'https://github.com/applicaster/Google-IMA-Client-TV.git',
+		 :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
 		 :tag => s.version.to_s
   }
 

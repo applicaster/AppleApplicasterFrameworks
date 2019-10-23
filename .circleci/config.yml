@@ -101,7 +101,7 @@ jobs:
               git push origin $project_version
               echo Tag was succesfuly created
 
-              sh ./deployItemsIfNeeded.sh
+              sh ./deployItemsIfNeeded.sh $PROJECT_NAME
             else
               echo "Branch is not master, Create tag will be skipped"
             fi
