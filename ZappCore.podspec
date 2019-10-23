@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   'General Applicaster iOS and tvOS framework that provides protocol and this lowest hierarchy layer'
   DESC
 
-  s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
+  s.homepage = "https://applicaster.com"
   s.license = 'Appache 2.0'
   s.author = { 'a.kononenko@applicaster.com' => 'a.kononenko@applicaster.com' }
   s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '__TAG__' }

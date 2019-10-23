@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                       ZappAnalyticsPluginGAtvOS container.
                        DESC
-  s.homepage         = "'https://github.com/applicaster/AppleApplicasterFrameworks.git"
-  s.license          = 'CMPS'
+  s.homepage         = "https://applicaster.com"
+  s.license = 'Appache 2.0'
   s.author           = { "cmps" => "a.zchut@applicaster.com" }
   s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '__TAG__' }
   s.platform = :tvos

@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 	s.author = "Applicaster LTD."
 	s.source = {
 		 :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-		 :tag => s.version.to_s
+		 :tag => "__TAG__"
   }
 
 	s.tvos.vendored_frameworks = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/tvOS/GoogleInteractiveMediaAds.framework'
