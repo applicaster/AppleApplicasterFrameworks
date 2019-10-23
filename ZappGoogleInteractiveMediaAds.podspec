@@ -4,6 +4,7 @@ Pod::Spec.new do |s|
 	s.swift_versions = ['5.0', '5.1']
 	s.tvos.deployment_target = "10.0"
 	s.ios.deployment_target = "10.0"
+	s.platform = :tvos, :ios
 	s.summary = "ZappGoogleInteractiveMediaAds"
 	s.description = "Zapp Plugins store Protocol and Managers that relevant for Applicaster Zapp Plugin System"
 	s.homepage = "'https://github.com/applicaster/AppleApplicasterFrameworks.git"

@@ -4,6 +4,7 @@ Pod::Spec.new do |s|
   s.version = '0.0.1-Dev'
   s.summary = 'General Applicaster iOS and tvOS framework that provides protocol'
   s.swift_versions = ['5.0', '5.1']
+  s.platform = :tvos, :ios
   s.description = <<-DESC
   'General Applicaster iOS and tvOS framework that provides protocol and this lowest hierarchy layer'
   DESC
