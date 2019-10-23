@@ -7,7 +7,7 @@ jobs:
   build:
     # Specify the Xcode version to use
     macos:
-      xcode: "10.2.1"
+      xcode: "11.0.0"
     shell: /bin/bash --login -eo pipefail
     environment:
       GENERAL_CACHE_KEY: "AppleApplicasterFrameworks_Cache_1.0.0"
@@ -86,7 +86,7 @@ jobs:
       - deploy:
           name: Creating Tag SDK version
           command: |
-            if [ "$CIRCLE_BRANCH" = "master" ] || [[ "$CIRCLE_BRANCH" == "hotfix_"* ]];
+            if [ "$CIRCLE_BRANCH" = "master" ]];
             then
               echo "Trying to create a tag"
               project_version="`/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"./${PROJECT_NAME}/Info.plist\"`"
@@ -97,12 +97,13 @@ jobs:
                 exit 1
               fi
 
-            git tag $project_version
-            git push origin $project_version
-            echo Tag was succesfuly created
+              git tag $project_version
+              git push origin $project_version
+              echo Tag was succesfuly created
 
+              sh ./deployItemsIfNeeded.sh
             else
-              echo "Branch is not master, deploy process will be skipped"
+              echo "Branch is not master, Create tag will be skipped"
             fi
 
       - store_test_results:

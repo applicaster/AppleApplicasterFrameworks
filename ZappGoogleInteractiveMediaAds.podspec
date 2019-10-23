@@ -1,8 +1,7 @@
 Pod::Spec.new do |s|
 	s.name = "ZappGoogleInteractiveMediaAds"
-	s.version = "1.0.3"
-
-	s.swift_versions = ['5.1']
+	s.version = '0.0.1-Dev'
+	s.swift_versions = ['5.0', '5.1']
 	s.tvos.deployment_target = "10.0"
 	s.ios.deployment_target = "10.0"
 	s.summary = "ZappGoogleInteractiveMediaAds"
@@ -30,8 +29,7 @@ Pod::Spec.new do |s|
 							'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
 							'ENABLE_TESTABILITY' => 'YES',
 							'OTHER_CFLAGS'  => '-fembed-bitcode',
-							'FRAMEWORK_SEARCH_PATHS' => '/Applications/Xcode.app/Contents/Developer/Library/Frameworks',
-							'SWIFT_VERSION' => '5.0',
+							'FRAMEWORK_SEARCH_PATHS' => '/Applications/Xcode.app/Contents/Developer/Library/Frameworks'
 							 }
 
 end
