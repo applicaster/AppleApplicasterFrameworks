@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = "ZappGoogleInteractiveMediaAds"
-	s.version = '0.1.0'
+	s.version = '0.1.1'
 	s.swift_versions = ['5.0', '5.1']
 
 	s.summary = "ZappGoogleInteractiveMediaAds"
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '10.0'
     s.tvos.deployment_target = '10.0'
 	s.tvos.vendored_frameworks = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/tvOS/GoogleInteractiveMediaAds.framework'
-	# s.tvos.preserve_paths = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/GoogleInteractiveMediaAds.framework'
+	s.tvos.preserve_paths = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/GoogleInteractiveMediaAds.framework'
 
 	s.source_files  = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/**/*.swift'
 	s.ios.dependency 'GoogleAds-IMA-iOS-SDK'

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ZappGoogleAnalytics"
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = "ZappGoogleAnalytics"
   s.swift_versions = ['5.0', '5.1']
   s.description      = <<-DESC

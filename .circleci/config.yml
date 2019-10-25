@@ -131,5 +131,4 @@ workflows:
   version: 2
   build:
     jobs:
-      - swiftlint
       - build
