@@ -1,6 +1,7 @@
+
 Pod::Spec.new do |s|
   s.name             = "ZappGoogleAnalytics"
-  s.version          = '0.0.1-Dev'
+  s.version          = '0.1.0'
   s.summary          = "ZappGoogleAnalytics"
   s.swift_versions = ['5.0', '5.1']
   s.description      = <<-DESC
@@ -9,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://applicaster.com"
   s.license = 'Appache 2.0'
   s.author           = { "cmps" => "a.zchut@applicaster.com" }
-  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '__TAG__' }
+  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '0.1.1' }
   s.platform = :tvos, :ios
   s.tvos.deployment_target = "10.0"
   s.ios.deployment_target = '10.0'

@@ -1,9 +1,9 @@
 PODS:
   - GoogleAds-IMA-iOS-SDK (3.10.1)
-  - ZappCore (0.1.0)
-  - ZappGoogleAnalytics (0.3.0):
+  - ZappCore (0.1.3)
+  - ZappGoogleAnalytics (0.1.0):
     - ZappCore
-  - ZappGoogleInteractiveMediaAds (1.0.3):
+  - ZappGoogleInteractiveMediaAds (0.1.0):
     - GoogleAds-IMA-iOS-SDK
     - ZappCore
 
@@ -26,10 +26,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 0e37ab83b22075ad631a70dcba9528cb246c92bf
-  ZappCore: e6b2ecb11b238ba1efe806466b0f8cb24c07945d
-  ZappGoogleAnalytics: fa914d3a69f239e7c4ef44e341ce4566ab155576
-  ZappGoogleInteractiveMediaAds: 1bab219b98b43587e75d4a5a2fab466e53e32d30
+  ZappCore: 353d0d799f48fe83fa7c412f53041a055d8feb62
+  ZappGoogleAnalytics: 92e4fa3377291269d09a54dcb25ee2ae1ba14d16
+  ZappGoogleInteractiveMediaAds: 23e7cde0be00b5157d82b46f728b81013f094b76
 
-PODFILE CHECKSUM: 4cae1e66b743c5df9886f0199f0a6505128217ec
+PODFILE CHECKSUM: 93d972d9e16d0b5ae4f5b69f1d5d36f44dfcadd8
 
 COCOAPODS: 1.8.3
