@@ -1,0 +1,34 @@
+{
+  "api": {
+    "require_startup_execution": false,
+    "class_name": "ZappGoogleAnalytics.GoogleAnalyticsPluginAdapter",
+    "modules": []
+  },
+  "dependency_repository_url": [],
+  "platform": "tvos",
+  "author_name": "Anton Kononenko",
+  "author_email": "a.kononenko@applicaster.com",
+  "manifest_version": "0.3.0",
+  "name": "Zapp Google Analytics QuickBrick",
+  "description": "Provide Google Analytics as agent",
+  "type": "analytics",
+  "identifier": "zapp_google_analytics",
+  "ui_builder_support": true,
+  "dependency_name": "ZappGoogleAnalytics",
+  "dependency_version": "0.3.0",
+  "whitelisted_account_ids": ["5ae06cef8fba0f00084bd3c6"],
+  "min_zapp_sdk": "10.1.1-Dev",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "custom_configuration_fields": [
+    { "type": "text", "key": "tracker_id", "tooltip_text": "Tracker ID" },
+    {
+      "type": "checkbox",
+      "key": "screen_views_enabled",
+      "tooltip_text": "Enable Screen Views",
+      "default": 0
+    }
+  ],
+  "targets": ["tv"]
+}

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = "ZappGoogleInteractiveMediaAds"
-	s.version = '0.1.1'
+	s.version = '0.3.0'
 	s.swift_versions = ['5.0', '5.1']
 
 	s.summary = "ZappGoogleInteractiveMediaAds"
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 	s.author = "Applicaster LTD."
 	s.source = {
 		 :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-		 :tag => "0.1.1"
+		 :tag => "0.1.2"
   }
 
     s.ios.deployment_target = '10.0'
