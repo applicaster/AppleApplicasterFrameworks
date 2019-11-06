@@ -84,7 +84,7 @@ public enum ZPPluginType: String {
 
     public var configurationJSON: NSDictionary?
 
-    public init?(object: NSDictionary?) {
+    @objc public init?(object: NSDictionary?) {
         guard let objectDictionary = object,
             objectDictionary[ZappPluginModelKeys.kPlugin] as? NSDictionary != nil else {
             return nil
