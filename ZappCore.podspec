@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'ZappCore'
-  s.version = '0.4.0'
+  s.version = '0.4.1'
   s.summary = 'General Applicaster iOS and tvOS framework that provides protocol'
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
