@@ -12,6 +12,7 @@ import Foundation
 /// Currently availible types of dependant plugins
 public struct VideoDependantPlugins {
     public static let VideoAdvertisement = ZPPluginType.VideoAdvertisement.rawValue
+    public static let Analytics = ZPPluginType.Analytics.rawValue
 }
 
 /// Player that wants to use Dependant Player plugins my implement this protocol
