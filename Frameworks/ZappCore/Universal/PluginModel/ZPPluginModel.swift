@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ZappPluginModelKeys {
+public struct ZappPluginModelKeys {
     static let kPlugin = "plugin"
     static let kIdentifier = "identifier"
     static let kPluginTypeString = "type"
