@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = "ZappGoogleInteractiveMediaAds"
-	s.version = '0.3.0'
+	s.version = '0.3.1'
 	s.swift_versions = ['5.0', '5.1']
 
 	s.summary = "ZappGoogleInteractiveMediaAds"
