@@ -56,7 +56,8 @@ import ZappCore
     
     func prepareGoogleIMA() {
         guard let player = avPlayer else { return }
-        urlTagData = GoogleUrlTagData(entry:playerPlugin?.entry)
+        urlTagData = GoogleUrlTagData(entry:playerPlugin?.entry,
+                                      pluginParams: configurationJSON)
         contentPlayhead = IMAAVPlayerContentPlayhead(avPlayer: player)
         
         if let urlToPresent = urlTagData?.prerollUrlString() {
@@ -66,11 +67,10 @@ import ZappCore
     
     func setupAdsLoader() {
         let settings = IMASettings()
-        settings.enableDebugMode = true
+        settings.enableDebugMode = false
         adsLoader = IMAAdsLoader(settings: settings)
         adsLoader?.delegate = self;
     }
-
     
     func requestAd(adUrl:String) {
         guard let contentPlayhead = contentPlayhead,
