@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 let extensionsKey = "extensions"
 let videoAdsKey = "video_ads"
 let adUrlKey = "ad_url"
@@ -17,6 +15,13 @@ let offsetKey = "offset"
 let prerollTypeKey = "preroll"
 let postrollTypeKey = "postroll"
 
+struct PluginsCustomizationKeys {
+   static let vmapKey = "tag_vmap_url"
+   static let prerollUrl = "tag_preroll_url"
+   static let postrollUrl = "tag_postroll_url"
+   static let midrollUrl = "tag_midroll_url"
+   static let midrollOffset = "midroll_offset"
+}
 
 // API example VMPA
 
