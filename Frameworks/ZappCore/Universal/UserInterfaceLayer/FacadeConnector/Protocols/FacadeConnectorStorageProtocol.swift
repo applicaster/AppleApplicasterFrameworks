@@ -11,9 +11,9 @@ import Foundation
 @objc public protocol FacadeConnectorStorageProtocol {
     @objc func sessionStorageValue(for key: String, namespace: String?) -> String?
     @objc func sessionStorageSetValue(for key: String, value: String, namespace: String?) -> Bool
-    @objc func sessionStorageAllValues() -> String?
+    @objc func sessionStorageAllValues(namespace: String?) -> String?
 
     @objc func localStorageValue(for key: String, namespace: String?) -> String?
     @objc func localStorageSetValue(for key: String, value: String, namespace: String?) -> Bool
-    @objc func localStorageAllValues() -> String?
+    @objc func localStorageAllValues(namespace: String?) -> String?
 }
