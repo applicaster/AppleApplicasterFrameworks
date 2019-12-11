@@ -12,4 +12,7 @@ import Foundation
     @objc func plugin(for identifier: String) -> ZPPluginModel?
     @objc func getAllPlugins() -> [ZPPluginModel]?
     @objc func adapterClass(_ pluginModel: ZPPluginModel) -> AnyClass?
+
+    /// Get a plugin by type
+    @objc func pluginModel(_ type: String) -> ZPPluginModel?
 }
