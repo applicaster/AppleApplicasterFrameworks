@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ZappCore</key>
-	<string>0.1.3</string>
+	<string>0.2.0</string>
 	<key>ZappGoogleAnalytics</key>
 	<string>0.1.0</string>
 	<key>ZappGoogleInteractiveMediaAds</key>
