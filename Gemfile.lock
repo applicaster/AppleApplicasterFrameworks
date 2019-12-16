@@ -63,7 +63,7 @@ GEM
     dotenv (2.7.5)
     emoji_regex (1.0.1)
     escape (0.0.4)
-    excon (0.67.0)
+    excon (0.71.0)
     faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
     faraday-cookie_jar (0.0.6)
@@ -211,7 +211,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods (= 1.8.3)
-  fastlane
+  fastlane (= 2.134.0)
 
 BUNDLED WITH
    1.17.3
