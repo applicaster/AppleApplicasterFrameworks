@@ -1,6 +1,6 @@
 //
-//  ZPCrashlogsPluginProtocol.swift
-//  ZappCrashlogsPluginsSDK
+//  CrashlogsPluginProtocol.swift
+//  ZappCore
 //
 //  Created by Alex Zchut on 25/09/2019.
 //  Copyright © 2019 Applicaster Ltd. All rights reserved.
