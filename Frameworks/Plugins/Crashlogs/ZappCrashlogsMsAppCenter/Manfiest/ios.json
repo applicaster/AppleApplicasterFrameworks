@@ -1,8 +1,8 @@
 {
   "api": {
     "require_startup_execution": false,
-    "class_name": "CrashlogsMsAppCenter",
-    "modules": ["CrashlogsMsAppCenter"]
+    "class_name": "ZappCrashlogsMsAppCenter",
+    "modules": ["ZappCrashlogsMsAppCenter"]
   },
   "dependency_repository_url": [
     "https://github.com/applicaster/AppleApplicasterFrameworks.git"
@@ -18,7 +18,7 @@
   "identifier": "crashlogs_appcenter",
   "ui_builder_support": true,
   "whitelisted_account_ids": [],
-  "dependency_name": "CrashlogsMsAppCenter",
+  "dependency_name": "ZappCrashlogsMsAppCenter",
   "dependency_version": "0.4.0",
   "min_zapp_sdk": "14.0.0-Dev",
   "deprecated_since_zapp_sdk": "",

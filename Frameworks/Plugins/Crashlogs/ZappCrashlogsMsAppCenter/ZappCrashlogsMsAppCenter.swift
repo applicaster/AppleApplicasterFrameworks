@@ -1,6 +1,6 @@
 //
-//  CrashlogsMsAppCenter.swift
-//  CrashlogsMsAppCenter
+//  ZappCrashlogsMsAppCenter.swift
+//  ZappCrashlogsMsAppCenter
 //
 //  Created by Alex Zchut on 24/09/2019.
 //  Copyright © 2019 Applicaster Ltd. All rights reserved.
@@ -11,7 +11,7 @@ import AppCenterCrashes
 import UIKit
 import ZappCore
 
-public class CrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol {
+public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol {
     public func prepareProvider(completion: (_ isReady: Bool) -> Void) {
         MSAppCenter.startService(MSCrashes.self)
         completion(true)

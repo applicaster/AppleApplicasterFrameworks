@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-  s.name             = "CrashlogsMsAppCenter"
+  s.name             = "ZappCrashlogsMsAppCenter"
   s.version          = '4.0.0'
-  s.summary          = "CrashlogsMsAppCenter"
+  s.summary          = "ZappCrashlogsMsAppCenter"
   s.description      = <<-DESC
   CrashlogsMsAppCenter container.
                        DESC
@@ -13,9 +13,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.static_framework = true
 
-  s.source_files = 'Frameworks/Plugins/Crashlogs/MsAppCenter/**/*.swift'
-]
-  s.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+  s.source_files = 'Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter/**/*.swift'
+
+  s.xcconfig =  { 
+                  'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                     'ENABLE_BITCODE' => 'YES',
                     'SWIFT_VERSION' => '5.1'
                 }
