@@ -21,5 +21,6 @@ Pod::Spec.new do |s|
                     'SWIFT_VERSION' => '5.1'
                 }
 
+  s.dependency 'ZappCore'
   s.dependency 'AppCenter/Crashes', '~> 2.3.0'
 end
