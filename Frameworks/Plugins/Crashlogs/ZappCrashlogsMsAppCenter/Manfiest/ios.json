@@ -1,11 +1,14 @@
 {
   "api": {
     "require_startup_execution": false,
-    "class_name": "ZappCrashlogsMsAppCenter",
-    "modules": ["ZappCrashlogsMsAppCenter"]
+    "class_name": "ZappCrashlogsMsAppCenter.ZappCrashlogsMsAppCenter",
+    "modules": []
   },
-  "dependency_repository_url": [
-    "https://github.com/applicaster/AppleApplicasterFrameworks.git"
+  "dependency_repository_url": [],
+  "extra_dependencies": [
+    {
+      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '0.4.0'"
+    }
   ],
   "platform": "ios",
   "author_name": "Anton Kononenko",
@@ -18,7 +21,6 @@
   "identifier": "crashlogs_appcenter",
   "ui_builder_support": true,
   "whitelisted_account_ids": [],
-  "dependency_name": "ZappCrashlogsMsAppCenter",
   "dependency_version": "0.4.0",
   "min_zapp_sdk": "14.0.0-Dev",
   "deprecated_since_zapp_sdk": "",
