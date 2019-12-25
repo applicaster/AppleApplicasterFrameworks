@@ -7,7 +7,7 @@
   "dependency_repository_url": [],
   "extra_dependencies": [
     {
-      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '0.4.0'"
+      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '0.4.1'"
     }
   ],
   "platform": "ios",
@@ -21,7 +21,7 @@
   "identifier": "crashlogs_appcenter",
   "ui_builder_support": true,
   "whitelisted_account_ids": [],
-  "dependency_version": "0.4.0",
+  "dependency_version": "0.4.1",
   "min_zapp_sdk": "14.0.0-Dev",
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",

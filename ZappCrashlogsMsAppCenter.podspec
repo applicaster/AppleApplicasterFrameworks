@@ -20,7 +20,6 @@ Pod::Spec.new do |s|
                     'ENABLE_BITCODE' => 'YES',
                     'SWIFT_VERSION' => '5.1'
                 }
-
   s.dependency 'ZappCore'
   s.dependency 'AppCenter/Crashes', '~> 2.3.0'
 end
