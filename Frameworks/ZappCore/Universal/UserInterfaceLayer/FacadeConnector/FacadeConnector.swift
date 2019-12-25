@@ -36,7 +36,8 @@ import Foundation
     let connectorProvider: NSObject
 
     @objc public static var connector: FacadeConnector? {
-        guard let application = UIApplication.shared.delegate as? FacadeConnectorProtocol else {
+        guard Thread.isMainThread,
+            let application = UIApplication.shared.delegate as? FacadeConnectorProtocol else {
             return nil
         }
         return application.connectorInstance
