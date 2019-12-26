@@ -211,7 +211,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods (= 1.8.3)
-  fastlane
+  fastlane (= 2.134.0)
 
 BUNDLED WITH
    1.17.3
