@@ -1,6 +1,6 @@
 PODS:
-  - AppCenter/Core (2.3.0)
-  - AppCenter/Crashes (2.3.0):
+  - AppCenter/Core (2.5.3)
+  - AppCenter/Crashes (2.5.3):
     - AppCenter/Core
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
@@ -70,7 +70,7 @@ PODS:
   - nanopb/encode (0.3.9011)
   - ZappCore (0.5.0)
   - ZappCrashlogsMsAppCenter (4.0.0):
-    - AppCenter/Crashes (~> 2.3.0)
+    - AppCenter/Crashes (~> 2.5.3)
     - ZappCore
   - ZappFirebaseAnalytics (0.1.0):
     - Firebase/Analytics (= 6.14.0)
@@ -117,7 +117,7 @@ EXTERNAL SOURCES:
     :path: "./ZappGoogleInteractiveMediaAds.podspec"
 
 SPEC CHECKSUMS:
-  AppCenter: 9784d2fc998c9bd0b8fbaf4fb9ed69526d12ce1a
+  AppCenter: 765ff38c4d360fc5ec61b61a8be24d74cd6d4d83
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
   FirebaseCore: 632e05cc5e1199d9147122c16d92305eb04c34bd
@@ -131,8 +131,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   ZappCore: a6ee61971787649bfdda338bed514236c7c16d52
-  ZappCrashlogsMsAppCenter: fef554f05e3485e8cec602bcb29563df7f41faa5
-  ZappFirebaseAnalytics: f79a56a8758c744d5c92ae6d121e35d6129d4ad9
+  ZappCrashlogsMsAppCenter: 990fe62527f401f98cb881903153c40bf2b71ea8
+  ZappFirebaseAnalytics: ce85c6fd4719e5e6ff5d0a6b32e3b9de2dc07939
   ZappGoogleAnalytics: eb1df7c3a060dfa3ef5f7b1b5f587e3d31aab6b1
   ZappGoogleInteractiveMediaAds: d679c10ffdaf53edb9dc189c69f4e46e8b7485a9
 
