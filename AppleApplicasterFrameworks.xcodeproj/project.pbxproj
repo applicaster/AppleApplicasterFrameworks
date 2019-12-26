@@ -461,6 +461,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.AppleApplicasterFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -488,6 +489,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.AppleApplicasterFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
