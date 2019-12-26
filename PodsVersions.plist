@@ -8,5 +8,9 @@
 	<string>0.1.0</string>
 	<key>ZappGoogleInteractiveMediaAds</key>
 	<string>0.1.0</string>
+	<key>ZappFirebaseAnalytics</key>
+	<string>0.1.0</string>
+	<key>ZappCrashlogsMsAppCenter</key>
+	<string>0.4.0</string>
 </dict>
 </plist>

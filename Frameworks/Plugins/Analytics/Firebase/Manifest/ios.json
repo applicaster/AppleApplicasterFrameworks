@@ -1,0 +1,29 @@
+{
+  "api": {
+    "require_startup_execution": false,
+    "class_name": "ZappFirebaseAnalytics.FirebaseAnalyticsPluginAdapter",
+    "modules": []
+  },
+  "dependency_repository_url": [],
+  "platform": "ios",
+  "author_name": "Anton Kononenko",
+  "author_email": "a.kononenko@applicaster.com",
+  "manifest_version": "0.1.0",
+  "name": "Zapp Firebase Analytics QuickBrick",
+  "description": "Provide Firebase Analytics as agent. Please use this plugin only if you are using quick brick",
+  "type": "analytics",
+  "identifier": "zapp_firebase_analytics",
+  "ui_builder_support": true,
+  "whitelisted_account_ids": ["5ae06cef8fba0f00084bd3c6"],
+  "min_zapp_sdk": "14.0.0-Dev",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "extra_dependencies": [
+    {
+      "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '0.5.0'"
+    }
+  ],
+  "custom_configuration_fields": [],
+  "targets": ["mobile"]
+}
