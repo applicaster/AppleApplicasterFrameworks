@@ -3,14 +3,39 @@
 <plist version="1.0">
 <dict>
 	<key>ZappCore</key>
-	<string>0.5.0</string>
+	<dict>
+		<key>version_id</key>
+		<string>0.6.0</string>
+		<key>folder_path</key>
+		<string>ZappCore</string>
+	</dict>
 	<key>ZappGoogleAnalytics</key>
-	<string>0.1.0</string>
+	<dict>
+		<key>version_id</key>
+		<string>0.4.0</string>
+		<key>folder_path</key>
+		<string>Plugins/Analytics/GoogleAnalytics</string>
+	</dict>
 	<key>ZappGoogleInteractiveMediaAds</key>
-	<string>0.1.0</string>
+	<dict>
+		<key>version_id</key>
+		<string>0.4.0</string>
+		<key>folder_path</key>
+		<string>Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds</string>
+	</dict>
 	<key>ZappFirebaseAnalytics</key>
-	<string>0.1.0</string>
+	<dict>
+		<key>version_id</key>
+		<string>0.2.0</string>
+		<key>folder_path</key>
+		<string>Plugins/Analytics/Firebase</string>
+	</dict>
 	<key>ZappCrashlogsMsAppCenter</key>
-	<string>0.4.0</string>
+	<dict>
+		<key>version_id</key>
+		<string>4.1.0</string>
+		<key>folder_path</key>
+		<string>Plugins/Crashlogs/ZappCrashlogsMsAppCenter</string>
+	</dict>
 </dict>
 </plist>

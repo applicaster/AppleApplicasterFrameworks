@@ -7,7 +7,7 @@
   "platform": "tvos",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "0.3.1",
+  "manifest_version": "0.4.0",
   "name": "Google Interactive Media Ads QuickBrick,",
   "description": "This plugin allow to add Google Interactive Media Ads to supported players.",
   "type": "video_advertisement",
@@ -18,7 +18,7 @@
   ],
   "extra_dependencies": [
     {
-      "ZappGoogleInteractiveMediaAds": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '0.1.7'"
+      "ZappGoogleInteractiveMediaAds": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '1'"
     }
   ],
   "min_zapp_sdk": "10.1.1-Dev",

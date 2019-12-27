@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'ZappGoogleInteractiveMediaAds' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'ZappCore', :path => '../../../../../ZappCore.podspec'
+	pod 'GoogleAds-IMA-iOS-SDK'
+
+  # Pods for ZappGoogleInteractiveMediaAds
+
+  target 'ZappGoogleInteractiveMediaAdsTests' do
+    # Pods for testing
+  end
+
+end

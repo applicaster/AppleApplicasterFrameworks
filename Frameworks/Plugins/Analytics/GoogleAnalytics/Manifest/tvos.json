@@ -8,7 +8,7 @@
   "platform": "tvos",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "0.3.0",
+  "manifest_version": "0.4.0",
   "name": "Zapp Google Analytics QuickBrick",
   "description": "Provide Google Analytics as agent",
   "type": "analytics",
@@ -21,7 +21,7 @@
   "react_native": false,
   "extra_dependencies": [
     {
-      "ZappGoogleAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '0.1.2'"
+      "ZappGoogleAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '1'"
     }
   ],
   "custom_configuration_fields": [

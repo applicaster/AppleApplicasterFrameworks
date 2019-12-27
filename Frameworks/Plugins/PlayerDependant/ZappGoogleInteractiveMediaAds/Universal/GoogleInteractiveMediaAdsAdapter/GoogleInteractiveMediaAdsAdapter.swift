@@ -12,6 +12,8 @@ import GoogleInteractiveMediaAds;
 import ZappCore
 
 @objc public class GoogleInteractiveMediaAdsAdapter: NSObject, PlayerDependantPluginProtocol {
+    
+    /// Player plugin instance that currently presented
     weak public var playerPlugin: (PlayerProtocol & DependablePlayerPluginProtocol)?
     var postrollCompletion:((_ finished:Bool) -> Void)?
     var adRequest: IMAAdsRequest?

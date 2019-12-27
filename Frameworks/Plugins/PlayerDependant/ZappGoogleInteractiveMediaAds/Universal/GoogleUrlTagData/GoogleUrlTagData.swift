@@ -8,16 +8,6 @@
 
 import Foundation
 
-struct MidrollTagData {
-    var timeOffset: TimeInterval
-    var url: String
-
-    init(url: String, timeOffset: TimeInterval) {
-        self.url = url
-        self.timeOffset = timeOffset
-    }
-}
-
 class GoogleUrlTagData {
     var vmapUrl: String?
     var vastPrerrolUrl: String?

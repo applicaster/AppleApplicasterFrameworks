@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GoogleInteractiveMediaAdsAdapter Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/GoogleInteractiveMediaAdsAdapter" class="dashAnchor"></a>
+    <a title="GoogleInteractiveMediaAdsAdapter Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">ZappGoogleInteractiveMediaAds 0.4.0 Docs</a>
+          <span class="no-mobile"> (100% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">ZappGoogleInteractiveMediaAds Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          GoogleInteractiveMediaAdsAdapter Class Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>GoogleInteractiveMediaAdsAdapter</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">GoogleInteractiveMediaAdsAdapter</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">PlayerDependantPluginProtocol</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">GoogleInteractiveMediaAdsAdapter</span><span class="p">:</span><span class="kt">IMAAdsLoaderDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">GoogleInteractiveMediaAdsAdapter</span><span class="p">:</span><span class="kt">IMAAdsManagerDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">GoogleInteractiveMediaAdsAdapter</span><span class="p">:</span> <span class="kt">PlayerObserverProtocol</span></code></pre>
+
+                  </div>
+                </div>
+              
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC12playerPluginXevp"></a>
+                      <a name="//apple_ref/swift/Property/playerPlugin" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC12playerPluginXevp">playerPlugin</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Player plugin instance that currently presented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">weak</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">playerPlugin</span><span class="p">:</span> <span class="p">(</span><span class="kt">PlayerProtocol</span> <span class="o">&amp;</span> <span class="kt">DependablePlayerPluginProtocol</span><span class="p">)?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC18postrollCompletionySbcSgvp"></a>
+                      <a name="//apple_ref/swift/Property/postrollCompletion" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC18postrollCompletionySbcSgvp">postrollCompletion</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">postrollCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC9adRequestSo06IMAAdsH0CSgvp"></a>
+                      <a name="//apple_ref/swift/Property/adRequest" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC9adRequestSo06IMAAdsH0CSgvp">adRequest</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">adRequest</span><span class="p">:</span> <span class="kt">IMAAdsRequest</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC17configurationJSONSo12NSDictionaryCSgvp"></a>
+                      <a name="//apple_ref/swift/Property/configurationJSON" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC17configurationJSONSo12NSDictionaryCSgvp">configurationJSON</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configurationJSON</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC9adsLoaderSo06IMAAdsH0CSgvp"></a>
+                      <a name="//apple_ref/swift/Property/adsLoader" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC9adsLoaderSo06IMAAdsH0CSgvp">adsLoader</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Entry point for the SDK. Used to make ad requests.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">internal</span> <span class="k">var</span> <span class="nv">adsLoader</span><span class="p">:</span> <span class="kt">IMAAdsLoader</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC15contentPlayheadSo018IMAAVPlayerContentH0CSgvp"></a>
+                      <a name="//apple_ref/swift/Property/contentPlayhead" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC15contentPlayheadSo018IMAAVPlayerContentH0CSgvp">contentPlayhead</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Playhead used by the SDK to track content video progress and insert mid-rolls.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">internal</span> <span class="k">var</span> <span class="nv">contentPlayhead</span><span class="p">:</span> <span class="kt">IMAAVPlayerContentPlayhead</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC10adsManagerSo06IMAAdsH0CSgvp"></a>
+                      <a name="//apple_ref/swift/Property/adsManager" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC10adsManagerSo06IMAAdsH0CSgvp">adsManager</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Main point of interaction with the SDK. Created by the SDK as the result of an ad request.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">internal</span> <span class="k">var</span> <span class="nv">adsManager</span><span class="p">:</span> <span class="kt">IMAAdsManager</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC8avPlayerSo8AVPlayerCSgvp"></a>
+                      <a name="//apple_ref/swift/Property/avPlayer" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC8avPlayerSo8AVPlayerCSgvp">avPlayer</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">avPlayer</span><span class="p">:</span> <span class="kt">AVPlayer</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC10urlTagDataAA0b3UrlhI0CSgvp"></a>
+                      <a name="//apple_ref/swift/Property/urlTagData" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC10urlTagDataAA0b3UrlhI0CSgvp">urlTagData</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">urlTagData</span><span class="p">:</span> <span class="kt"><a href="../Classes/GoogleUrlTagData.html">GoogleUrlTagData</a></span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)init"></a>
+                      <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)init">init()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">required</span> <span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC17configurationJSONACSo12NSDictionaryCSg_tcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(configurationJSON:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC17configurationJSONACSo12NSDictionaryCSg_tcfc">init(configurationJSON:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configurationJSON</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">?)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC13containerViewSo6UIViewCSgvp"></a>
+                      <a name="//apple_ref/swift/Property/containerView" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC13containerViewSo6UIViewCSgvp">containerView</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">containerView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC07prepareB3IMAyyF"></a>
+                      <a name="//apple_ref/swift/Method/prepareGoogleIMA()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC07prepareB3IMAyyF">prepareGoogleIMA()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareGoogleIMA</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC05setupE6LoaderyyF"></a>
+                      <a name="//apple_ref/swift/Method/setupAdsLoader()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC05setupE6LoaderyyF">setupAdsLoader()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setupAdsLoader</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC9requestAd5adUrlySS_tF"></a>
+                      <a name="//apple_ref/swift/Method/requestAd(adUrl:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC9requestAd5adUrlySS_tF">requestAd(adUrl:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">requestAd</span><span class="p">(</span><span class="nv">adUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/IMAAdsLoaderDelegate"></a>
+                  <a name="//apple_ref/swift/Section/IMAAdsLoaderDelegate" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/IMAAdsLoaderDelegate"></a>
+                    <h3 class="section-name"><p>IMAAdsLoaderDelegate</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsLoader:adsLoadedWithData:"></a>
+                      <a name="//apple_ref/swift/Method/adsLoader(_:adsLoadedWith:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsLoader:adsLoadedWithData:">adsLoader(_:adsLoadedWith:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">adsLoader</span><span class="p">(</span><span class="n">_</span> <span class="nv">loader</span><span class="p">:</span> <span class="kt">IMAAdsLoader</span><span class="p">?,</span> <span class="n">adsLoadedWith</span> <span class="nv">adsLoadedData</span><span class="p">:</span> <span class="kt">IMAAdsLoadedData</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsLoader:failedWithErrorData:"></a>
+                      <a name="//apple_ref/swift/Method/adsLoader(_:failedWith:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsLoader:failedWithErrorData:">adsLoader(_:failedWith:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">adsLoader</span><span class="p">(</span><span class="n">_</span> <span class="nv">loader</span><span class="p">:</span> <span class="kt">IMAAdsLoader</span><span class="o">!</span><span class="p">,</span> <span class="n">failedWith</span> <span class="nv">adErrorData</span><span class="p">:</span> <span class="kt">IMAAdLoadingErrorData</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC8delegateXevp"></a>
+                      <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC8delegateXevp">delegate</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">DependablePlayerAdDelegatePluginProtocol</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsManager:didReceiveAdEvent:"></a>
+                      <a name="//apple_ref/swift/Method/adsManager(_:didReceive:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsManager:didReceiveAdEvent:">adsManager(_:didReceive:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">adsManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">adsManager</span><span class="p">:</span> <span class="kt">IMAAdsManager</span><span class="p">?,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">IMAAdEvent</span><span class="p">?)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsManagerDidRequestContentPause:"></a>
+                      <a name="//apple_ref/swift/Method/adsManagerDidRequestContentPause(_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsManagerDidRequestContentPause:">adsManagerDidRequestContentPause(_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">adsManagerDidRequestContentPause</span><span class="p">(</span><span class="n">_</span> <span class="nv">adsManager</span><span class="p">:</span> <span class="kt">IMAAdsManager</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsManager:didReceiveAdError:"></a>
+                      <a name="//apple_ref/swift/Method/adsManager(_:didReceive:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsManager:didReceiveAdError:">adsManager(_:didReceive:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">adsManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">adsManager</span><span class="p">:</span> <span class="kt">IMAAdsManager</span><span class="o">!</span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">IMAAdError</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsManagerDidRequestContentResume:"></a>
+                      <a name="//apple_ref/swift/Method/adsManagerDidRequestContentResume(_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappGoogleInteractiveMediaAds@objc(cs)GoogleInteractiveMediaAdsAdapter(im)adsManagerDidRequestContentResume:">adsManagerDidRequestContentResume(_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">adsManagerDidRequestContentResume</span><span class="p">(</span><span class="n">_</span> <span class="nv">adsManager</span><span class="p">:</span> <span class="kt">IMAAdsManager</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC23playerDidFinishPlayItemyyXe_ySbctcACF"></a>
+                      <a name="//apple_ref/swift/Method/playerDidFinishPlayItem(player:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC23playerDidFinishPlayItemyyXe_ySbctcACF">playerDidFinishPlayItem(player:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">playerDidFinishPlayItem</span><span class="p">(</span><span class="nv">player</span><span class="p">:</span><span class="kt">PlayerProtocol</span><span class="p">,</span>
+                             <span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">finished</span><span class="p">:</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC20playerProgressUpdateyyXe_S2dtcACF"></a>
+                      <a name="//apple_ref/swift/Method/playerProgressUpdate(player:currentTime:duration:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC20playerProgressUpdateyyXe_S2dtcACF">playerProgressUpdate(player:currentTime:duration:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">playerProgressUpdate</span><span class="p">(</span><span class="nv">player</span><span class="p">:</span><span class="kt">PlayerProtocol</span><span class="p">,</span>
+                                 <span class="nv">currentTime</span><span class="p">:</span><span class="kt">TimeInterval</span><span class="p">,</span>
+                                 <span class="nv">duration</span><span class="p">:</span><span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC16playerDidDismissyyXe_tcACF"></a>
+                      <a name="//apple_ref/swift/Method/playerDidDismiss(player:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC16playerDidDismissyyXe_tcACF">playerDidDismiss(player:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">playerDidDismiss</span><span class="p">(</span><span class="nv">player</span><span class="p">:</span> <span class="kt">PlayerProtocol</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC15playerDidCreateyyXe_tcACF"></a>
+                      <a name="//apple_ref/swift/Method/playerDidCreate(player:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:29ZappGoogleInteractiveMediaAds0bcdE7AdapterC15playerDidCreateyyXe_tcACF">playerDidCreate(player:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">playerDidCreate</span><span class="p">(</span><span class="nv">player</span><span class="p">:</span> <span class="kt">PlayerProtocol</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/GoogleInteractiveMediaAdsAdapter.html">GoogleInteractiveMediaAdsAdapter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/GoogleUrlTagData.html">GoogleUrlTagData</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Global%20Variables.html">Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:29ZappGoogleInteractiveMediaAds8adUrlKeySSvp">adUrlKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:29ZappGoogleInteractiveMediaAds13extensionsKeySSvp">extensionsKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:29ZappGoogleInteractiveMediaAds9offsetKeySSvp">offsetKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:29ZappGoogleInteractiveMediaAds15postrollTypeKeySSvp">postrollTypeKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:29ZappGoogleInteractiveMediaAds14prerollTypeKeySSvp">prerollTypeKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:29ZappGoogleInteractiveMediaAds05videoE3KeySSvp">videoAdsKey</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/MidrollTagData.html">MidrollTagData</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/PluginsCustomizationKeys.html">PluginsCustomizationKeys</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>© 2019 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

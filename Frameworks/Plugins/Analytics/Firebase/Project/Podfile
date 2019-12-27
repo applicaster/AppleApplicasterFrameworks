@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'ZappFirebaseAnalytics' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for GoogleAnalytics
+  pod 'ZappCore', :path => '../../../../../ZappCore.podspec'
+  pod 'Firebase/Analytics', '= 6.14.0'
+  
+  target 'ZappFirebaseAnalyticsTests' do
+    # Pods for testing
+  end
+
+end

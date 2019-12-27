@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 	s.name = "ZappGoogleInteractiveMediaAds"
-	s.version = '0.3.1'
-	s.swift_versions = ['5.0', '5.1']
+	s.version = '0.4.0'
+	s.swift_versions = '5.1'
 
 	s.summary = "ZappGoogleInteractiveMediaAds"
 	s.description = "Zapp Plugins store Protocol and Managers that relevant for Applicaster Zapp Plugin System"
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 	s.author = "Applicaster LTD."
 	s.source = {
 		 :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-		 :tag => "0.1.4"
+		 :tag => "1"
   }
 
     s.ios.deployment_target = '10.0'
@@ -18,8 +18,11 @@ Pod::Spec.new do |s|
 	s.tvos.vendored_frameworks = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/tvOS/GoogleInteractiveMediaAds.framework'
 	s.tvos.preserve_paths = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/GoogleInteractiveMediaAds.framework'
 
-	s.source_files  = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/**/*.swift'
-	s.ios.dependency 'GoogleAds-IMA-iOS-SDK'
+	s.ios.source_files  = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Universal/**/*.swift'
+	s.tvos.source_files  = ['Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Universal/**/*.swift',
+							'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/tvOS/**/*.swift'
+	]
+	s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '= 3.11.1'
 	
 	s.dependency 'ZappCore'
 

@@ -9,8 +9,8 @@ pre_install do |installer|
 end
 
 target 'AppleApplicasterFrameworks' do
+  supports_swift_versions '5.1'
   use_frameworks!
-  # pod 'ZappCore'
   pod 'ZappCore', :path => './ZappCore.podspec'
   pod 'ZappGoogleAnalytics', :path => './ZappGoogleAnalytics.podspec'
   pod 'ZappGoogleInteractiveMediaAds', :path => './ZappGoogleInteractiveMediaAds.podspec'
@@ -25,7 +25,6 @@ target 'AppleApplicasterFrameworks' do
     pod 'ZappCrashlogsMsAppCenter', :path => './ZappCrashlogsMsAppCenter.podspec'
     pod 'ZappFirebaseAnalytics', :path => './ZappFirebaseAnalytics.podspec'
     
-    # Pods for testing
   end
 
 end

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UserInterfaceLayerProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/UserInterfaceLayerProtocol" class="dashAnchor"></a>
+    <a title="UserInterfaceLayerProtocol Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">ZappCore 0.6.0 Docs</a>
+          <span class="no-mobile"> (100% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/ZappCore">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">ZappCore Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          UserInterfaceLayerProtocol Protocol Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>UserInterfaceLayerProtocol</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">UserInterfaceLayerProtocol</span></code></pre>
+
+                  </div>
+                </div>
+              <p>The UserInterfaceLayerProtocol protocol defines methods that allow you to implement UI Layer plugin inside Zapp infrustrature .
+The methods of this protocol are mandatory.</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:8ZappCore26UserInterfaceLayerProtocolP13launchOptions15applicationDataxSDySo019UIApplicationLaunchH3KeyaypGSg_SDySSypGtcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(launchOptions:applicationData:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:8ZappCore26UserInterfaceLayerProtocolP13launchOptions15applicationDataxSDySo019UIApplicationLaunchH3KeyaypGSg_SDySSypGtcfc">init(launchOptions:applicationData:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Initialization methods for UI Layer  plugin</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This dictionary passes from <code>application:didFinishLaunchingWithOptions:</code> when application ready for use
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="nv">applicationData</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>launchOptions</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A dictionary indicating the reason the app was launched (if any). The contents of this dictionary may be empty in situations where the user launched the app directly. For information about the possible keys in this dictionary and how to handle them, see Launch Options Keys.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>applicationData</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary of general configuration of the application that  may  needed to initialization or usage  UI Layer  plugin</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:8ZappCore26UserInterfaceLayerProtocolP07prepareE6ForUse10completionyySo16UIViewControllerCSg_s5Error_pSgtc_tF"></a>
+                      <a name="//apple_ref/swift/Method/prepareLayerForUse(completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:8ZappCore26UserInterfaceLayerProtocolP07prepareE6ForUse10completionyySo16UIViewControllerCSg_s5Error_pSgtc_tF">prepareLayerForUse(completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Invokation of this method must prepare UI Layer plugin for use.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Plugin in this method must called logic that needs to be done before UI Layer plugin will be presented. Like load <code>River.json</code> that has information about screens to present.
+Do not use in this func any loaders that may be called later.
+
+</div><div class="aside aside-attention">
+    <p class="aside-title">Attention</p>
+    Application will wait completion of this func to present application. Completion must be called as soon as  possible
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareLayerForUse</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">?,</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completion</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Completion handler that notify app level that component  ready to  be presented or fail</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>viewController</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>ViewController instance of root view  controller of the UI Layer plugin, in case plugin failed to present must call nil</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>error</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Error handler in case plugin can not be presented for some reason, Error must  be provided  in case fail, otherwise nil</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../User%20Interface%20Layer.html">User Interface Layer</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/UserInterfaceLayerProtocol.html">UserInterfaceLayerProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/UserInterfaceLayerApplicationDelegate.html">UserInterfaceLayerApplicationDelegate</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Facade%20Connector.html">Facade Connector</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorProtocol.html">FacadeConnectorProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/FacadeConnector.html">FacadeConnector</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorAppDataProtocol.html">FacadeConnectorAppDataProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Facade%20Connector.html#/c:@M@ZappCore@objc(pl)FacadeConnectorPlayerDependantProtocol">FacadeConnectorPlayerDependantProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorAnalyticsProtocol.html">FacadeConnectorAnalyticsProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorPluginManagerProtocol.html">FacadeConnectorPluginManagerProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorStorageProtocol.html">FacadeConnectorStorageProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Pipes%20Data%20Model%20Helper.html">Pipes Data Model Helper</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/PipesDataModelHelper.html">PipesDataModelHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/PipesDataModelHelperMediaItem.html">PipesDataModelHelperMediaItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/PipesDataModelHelperExtensions.html">PipesDataModelHelperExtensions</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/PipesDataModelHelperContent.html">PipesDataModelHelperContent</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/PipesDataModelHelperMediaGroups.html">PipesDataModelHelperMediaGroups</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/PipesDataModelHelperMediaGroupsTypes.html">PipesDataModelHelperMediaGroupsTypes</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Plugins%20Models.html">Plugins Models</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/ZPPluginModel.html">ZPPluginModel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/ZPAdapterProtocol.html">ZPAdapterProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/ZPPluginType.html">ZPPluginType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Plugins%20Models.html#/s:8ZappCore0A15PluginModelKeysV">ZappPluginModelKeys</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Plugin%20Type%3A%20Player.html">Plugin Type: Player</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/PlayerProtocol.html">PlayerProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PlayerObserverProtocol.html">PlayerObserverProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Plugin%20Type%3A%20Analytics.html">Plugin Type: Analytics</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/AnalyticsProviderProtocol.html">AnalyticsProviderProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/APTimedEvent.html">APTimedEvent</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Plugin%20Type%3A%20Player%20Dependant.html">Plugin Type: Player Dependant</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/PlayerDependantPluginProtocol.html">PlayerDependantPluginProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/DependablePlayerPluginProtocol.html">DependablePlayerPluginProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/DependablePlayerAdDelegatePluginProtocol.html">DependablePlayerAdDelegatePluginProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/DependablePlayerAdDelegatePluginProtocolKeys.html">DependablePlayerAdDelegatePluginProtocolKeys</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/VideoDependantPlugins.html">VideoDependantPlugins</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Plugin%20Type%3A%20Crashlogs.html">Plugin Type: Crashlogs</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/CrashlogsPluginProtocol.html">CrashlogsPluginProtocol</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>© 2019 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>
