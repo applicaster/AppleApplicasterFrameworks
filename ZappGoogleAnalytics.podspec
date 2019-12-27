@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://applicaster.com"
   s.license = 'Appache 2.0'
   s.author           = { "cmps" => "a.zchut@applicaster.com" }
-  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '0.5.0' }
+  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '1' }
   s.platform = :tvos, :ios
   s.tvos.deployment_target = "10.0"
   s.ios.deployment_target = '10.0'
