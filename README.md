@@ -11,6 +11,7 @@ TODO: Add documentation
 ##### Analytics
 
 [Google Analytics](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
+
 [Firebase](https://applicaster.github.io/AppleApplicasterFrameworks/ZappFirebaseAnalytics/index.html)
 
 ##### Crashlogs
