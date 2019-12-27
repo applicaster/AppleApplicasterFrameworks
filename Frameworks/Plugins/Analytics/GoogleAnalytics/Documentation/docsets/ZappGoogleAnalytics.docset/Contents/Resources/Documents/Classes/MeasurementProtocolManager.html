@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MeasurementProtocolManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/MeasurementProtocolManager" class="dashAnchor"></a>
+    <a title="MeasurementProtocolManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">ZappGoogleAnalytics 0.4.0 Docs</a>
+          <span class="no-mobile"> (100% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/Analytics/GoogleAnalytics/">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">ZappGoogleAnalytics Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          MeasurementProtocolManager Class Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>MeasurementProtocolManager</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MeasurementProtocolManager</span></code></pre>
+
+                  </div>
+                </div>
+              
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC16dataNotAvailibleSSvp"></a>
+                      <a name="//apple_ref/swift/Property/dataNotAvailible" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC16dataNotAvailibleSSvp">dataNotAvailible</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">dataNotAvailible</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10trackingIDSSvp"></a>
+                      <a name="//apple_ref/swift/Property/trackingID" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10trackingIDSSvp">trackingID</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Google Analytic tracking ID</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">trackingID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC8clientIDSSvp"></a>
+                      <a name="//apple_ref/swift/Property/clientID" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC8clientIDSSvp">clientID</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Create unique user identifier and save it to UserDefaules, in case was generated, retrive from UserDefaules</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">clientID</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC13generalParamsSaySSGvp"></a>
+                      <a name="//apple_ref/swift/Property/generalParams" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC13generalParamsSaySSGvp">generalParams</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Contains array of the general params, that relevant for every hit event</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">generalParams</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10screenSizeSSvp"></a>
+                      <a name="//apple_ref/swift/Property/screenSize" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10screenSizeSSvp">screenSize</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Retrieve current device resolution in format &ldquo;<code>width</code>x<code>height</code>&rdquo;</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">screenSize</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC12userLanguageSSSgvp"></a>
+                      <a name="//apple_ref/swift/Property/userLanguage" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC12userLanguageSSSgvp">userLanguage</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Retrieve current device language</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">userLanguage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC16bundleIdentifierSSSgvp"></a>
+                      <a name="//apple_ref/swift/Property/bundleIdentifier" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC16bundleIdentifierSSSgvp">bundleIdentifier</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Retrieve application bundle identifier</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">bundleIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10bundleNameSSvp"></a>
+                      <a name="//apple_ref/swift/Property/bundleName" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10bundleNameSSvp">bundleName</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Retrieve application bundle name</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">bundleName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC18applicationVersionSSvp"></a>
+                      <a name="//apple_ref/swift/Property/applicationVersion" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC18applicationVersionSSvp">applicationVersion</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Retrieve application version</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">applicationVersion</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10trackingIDACSS_tcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(trackingID:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10trackingIDACSS_tcfc">init(trackingID:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Initialize application with Google Tracking ID</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">trackingID</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>trackingID</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Identifier to send Google Analytics events</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC4send7hitType16customParametersySS_SDyS2SGSgtF"></a>
+                      <a name="//apple_ref/swift/Method/send(hitType:customParameters:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC4send7hitType16customParametersySS_SDyS2SGSgtF">send(hitType:customParameters:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Send event with Hit Type and custom parameters</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">hitType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+          <span class="nv">customParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>hitType</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>string of the hit type</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>customParameters</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>event custom parameters</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10screenView0G4Name16customParametersySS_SDyS2SGSgtF"></a>
+                      <a name="//apple_ref/swift/Method/screenView(screenName:customParameters:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC10screenView0G4Name16customParametersySS_SDyS2SGSgtF">screenView(screenName:customParameters:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Send event with Screen Hit Type and custom parameters</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">screenView</span><span class="p">(</span><span class="nv">screenName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                <span class="nv">customParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC5event8category6action5label16customParametersySS_S2SSgSDyS2SGSgtF"></a>
+                      <a name="//apple_ref/swift/Method/event(category:action:label:customParameters:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC5event8category6action5label16customParametersySS_S2SSgSDyS2SGSgtF">event(category:action:label:customParameters:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Send event with Event Hit Type and custom parameters</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">event</span><span class="p">(</span><span class="nv">category</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+           <span class="nv">action</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+           <span class="nv">label</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+           <span class="nv">customParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC9exception11description7isFatal16customParametersySS_SbSDyS2SGSgtF"></a>
+                      <a name="//apple_ref/swift/Method/exception(description:isFatal:customParameters:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC9exception11description7isFatal16customParametersySS_SbSDyS2SGSgtF">exception(description:isFatal:customParameters:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Send event with Exception Hit Type and custom parameters</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">exception</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+               <span class="nv">isFatal</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+               <span class="nv">customParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC023transferDictParamsToUrlI016customParametersSaySSGSDyS2SG_tF"></a>
+                      <a name="//apple_ref/swift/Method/transferDictParamsToUrlParams(customParameters:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC023transferDictParamsToUrlI016customParametersSaySSGSDyS2SG_tF">transferDictParamsToUrlParams(customParameters:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Transfer analytics parameters in dictianary to format url format to prepare analytics Url request</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">transferDictParamsToUrlParams</span><span class="p">(</span><span class="nv">customParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>customParameters</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Analytics parameters in dictionary</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Array of string in format &ldquo;<code>key=value</code>&rdquo;</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC8urlParam4with5valueS2S_SStF"></a>
+                      <a name="//apple_ref/swift/Method/urlParam(with:value:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC8urlParam4with5valueS2S_SStF">urlParam(with:value:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns parameter for future URL String</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">urlParam</span><span class="p">(</span><span class="n">with</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+              <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>key</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>String that will be used as key for param</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>value</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>String that will be used as value for param</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Returns URL parameter in format <code>&quot;key=value&quot;</code></p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC11sendRequest4withy10Foundation3URLV_tF"></a>
+                      <a name="//apple_ref/swift/Method/sendRequest(with:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC11sendRequest4withy10Foundation3URLV_tF">sendRequest(with:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Send request with hit event to Google Analytics</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendRequest</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>url</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>URL of the hit event</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC6hitURL3for16customParameters10Foundation0H0VSgSS_SDyS2SGSgtF"></a>
+                      <a name="//apple_ref/swift/Method/hitURL(for:customParameters:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC6hitURL3for16customParameters10Foundation0H0VSgSS_SDyS2SGSgtF">hitURL(for:customParameters:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Creates url for hit type event</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hitURL</span><span class="p">(</span><span class="k">for</span> <span class="nv">hitType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">customParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>hitType</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>hit type Event</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>customParameters</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>additional parameters that must be passed with url</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>URL instance if url can be created otherwise nil</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC16isAllowedHitType03hitJ0SbSS_tF"></a>
+                      <a name="//apple_ref/swift/Method/isAllowedHitType(hitType:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC16isAllowedHitType03hitJ0SbSS_tF">isAllowedHitType(hitType:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Check if hit type string is api correct</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isAllowedHitType</span><span class="p">(</span><span class="nv">hitType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>hitType</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>string representation of hit event type</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>true if hit event exist otherwise false</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC15urlParamsString4fromSSSgSaySSG_tF"></a>
+                      <a name="//apple_ref/swift/Method/urlParamsString(from:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC15urlParamsString4fromSSSgSaySSG_tF">urlParamsString(from:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Combine url params array to one string</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">urlParamsString</span><span class="p">(</span><span class="n">from</span> <span class="nv">urlParams</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>urlParams</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>array of url params in format <code>[&quot;a=1&quot;, &quot;b=2&quot;]</code></p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Return cobined string in format &ldquo;<code>a=1&amp;b=2</code>&rdquo;</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC23stringToURLWithEncoding4with10Foundation3URLVSgSS_tF"></a>
+                      <a name="//apple_ref/swift/Method/stringToURLWithEncoding(with:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics26MeasurementProtocolManagerC23stringToURLWithEncoding4with10Foundation3URLVSgSS_tF">stringToURLWithEncoding(with:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Convert url string with url params string to url with encoding <code>CharacterSet.urlHostAllowed</code></p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stringToURLWithEncoding</span><span class="p">(</span><span class="n">with</span> <span class="nv">urlParamsString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>urlParamsString</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>string of url params in format &ldquo;<code>a=1&amp;b=2</code>&rdquo;</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>URL instance in case can be created otherwise nil</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/APTimedEvent.html">APTimedEvent</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CustomDemensionMappingHelper.html">CustomDemensionMappingHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/GoogleAnalyticsPluginAdapter.html">GoogleAnalyticsPluginAdapter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/GoogleAnalyticsPluginAdapter/PluginKeys.html">– PluginKeys</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/MeasurementProtocolManager.html">MeasurementProtocolManager</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Global%20Variables.html">Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:19ZappGoogleAnalytics7baseURLSSvp">baseURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:19ZappGoogleAnalytics13dataSourceKeySSvp">dataSourceKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:19ZappGoogleAnalytics25mesurementProtocolVersionSSvp">mesurementProtocolVersion</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/Dictionary.html">Dictionary</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/String.html">String</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/MeasurementProtocolKeys.html">MeasurementProtocolKeys</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/MeasurementProtocolKeys/All.html">– All</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/MeasurementProtocolKeys/ScreenView.html">– ScreenView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/MeasurementProtocolKeys/AppTracking.html">– AppTracking</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/MeasurementProtocolKeys/EventTracking.html">– EventTracking</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/MeasurementProtocolKeys/ExceptionsTracking.html">– ExceptionsTracking</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>© 2019 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

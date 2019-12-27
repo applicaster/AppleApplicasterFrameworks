@@ -15,4 +15,11 @@ platform :ios do
       code_coverage: true
     )
   end
+
+  lane :makeDocs do
+
+    jazzy()
+ 
+  end
+
 end

@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19A2F24B1B6EC12F40C17EE2 /* Pods_AppleApplicasterFrameworksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956F0A2671FEC8D23693C944 /* Pods_AppleApplicasterFrameworksTests.framework */; };
 		40574347235FB14B00314DFE /* PodsVersions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40574346235FB14B00314DFE /* PodsVersions.plist */; };
 		408099E0234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408099D6234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework */; };
 		408099E5234FD9BF000FFC74 /* AppleApplicasterFrameworksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408099E4234FD9BF000FFC74 /* AppleApplicasterFrameworksTests.swift */; };
 		408099E7234FD9BF000FFC74 /* AppleApplicasterFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 408099D9234FD9BE000FFC74 /* AppleApplicasterFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4093C28623B62F0A00A98A35 /* MyFuckingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093C28523B62F0A00A98A35 /* MyFuckingTest.swift */; };
+		75F813EAD44D7DAD8F4B00C4 /* Pods_AppleApplicasterFrameworksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7299162F672C153AAC24DE52 /* Pods_AppleApplicasterFrameworksTests.framework */; };
 		B7EB99377A8776868CCCF190 /* Pods_AppleApplicasterFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738E9F8C040A7E912F5F62B3 /* Pods_AppleApplicasterFrameworks.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		15643A984BAE4141C7757DF8 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworksTests.debug.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworksTests/Pods-AppleApplicasterFrameworksTests.debug.xcconfig"; sourceTree = "<group>"; };
-		230E0337FEAB4045F785F694 /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworksTests.release.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworksTests/Pods-AppleApplicasterFrameworksTests.release.xcconfig"; sourceTree = "<group>"; };
 		40574346235FB14B00314DFE /* PodsVersions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PodsVersions.plist; sourceTree = "<group>"; };
 		408099D6234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppleApplicasterFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		408099D9234FD9BE000FFC74 /* AppleApplicasterFrameworks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleApplicasterFrameworks.h; sourceTree = "<group>"; };
@@ -35,10 +34,13 @@
 		408099DF234FD9BE000FFC74 /* AppleApplicasterFrameworksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleApplicasterFrameworksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		408099E4234FD9BF000FFC74 /* AppleApplicasterFrameworksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleApplicasterFrameworksTests.swift; sourceTree = "<group>"; };
 		408099E6234FD9BF000FFC74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4093C28523B62F0A00A98A35 /* MyFuckingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFuckingTest.swift; sourceTree = "<group>"; };
 		5747F52092AA35545149480F /* Pods-AppleApplicasterFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworks.debug.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworks/Pods-AppleApplicasterFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB55A1A75B566353FC8FC13 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworksTests.debug.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworksTests/Pods-AppleApplicasterFrameworksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7299162F672C153AAC24DE52 /* Pods_AppleApplicasterFrameworksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleApplicasterFrameworksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		738E9F8C040A7E912F5F62B3 /* Pods_AppleApplicasterFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleApplicasterFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8592E19AB6F33A830F5A0CAA /* Pods-AppleApplicasterFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworks.release.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworks/Pods-AppleApplicasterFrameworks.release.xcconfig"; sourceTree = "<group>"; };
-		956F0A2671FEC8D23693C944 /* Pods_AppleApplicasterFrameworksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleApplicasterFrameworksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49CB587ECFCAB3CE27AA40D /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleApplicasterFrameworksTests.release.xcconfig"; path = "Target Support Files/Pods-AppleApplicasterFrameworksTests/Pods-AppleApplicasterFrameworksTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408099E0234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework in Frameworks */,
-				19A2F24B1B6EC12F40C17EE2 /* Pods_AppleApplicasterFrameworksTests.framework in Frameworks */,
+				75F813EAD44D7DAD8F4B00C4 /* Pods_AppleApplicasterFrameworksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				738E9F8C040A7E912F5F62B3 /* Pods_AppleApplicasterFrameworks.framework */,
-				956F0A2671FEC8D23693C944 /* Pods_AppleApplicasterFrameworksTests.framework */,
+				7299162F672C153AAC24DE52 /* Pods_AppleApplicasterFrameworksTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 			children = (
 				408099D9234FD9BE000FFC74 /* AppleApplicasterFrameworks.h */,
 				408099DA234FD9BE000FFC74 /* Info.plist */,
+				4093C28523B62F0A00A98A35 /* MyFuckingTest.swift */,
 			);
 			path = AppleApplicasterFrameworks;
 			sourceTree = "<group>";
@@ -115,8 +118,8 @@
 			children = (
 				5747F52092AA35545149480F /* Pods-AppleApplicasterFrameworks.debug.xcconfig */,
 				8592E19AB6F33A830F5A0CAA /* Pods-AppleApplicasterFrameworks.release.xcconfig */,
-				15643A984BAE4141C7757DF8 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */,
-				230E0337FEAB4045F785F694 /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */,
+				5CB55A1A75B566353FC8FC13 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */,
+				B49CB587ECFCAB3CE27AA40D /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,11 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 408099ED234FD9BF000FFC74 /* Build configuration list for PBXNativeTarget "AppleApplicasterFrameworksTests" */;
 			buildPhases = (
-				55EE7299A6D38B45F74F596F /* [CP] Check Pods Manifest.lock */,
+				B8247B87F11B7D0D61266117 /* [CP] Check Pods Manifest.lock */,
 				408099DB234FD9BE000FFC74 /* Sources */,
 				408099DC234FD9BE000FFC74 /* Frameworks */,
 				408099DD234FD9BE000FFC74 /* Resources */,
-				CE5C73C0F5815F0F31BE0BE7 /* [CP] Embed Pods Frameworks */,
+				B931235A9D659ED616FA0C50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,7 +234,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		55EE7299A6D38B45F74F596F /* [CP] Check Pods Manifest.lock */ = {
+		B8247B87F11B7D0D61266117 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,7 +256,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CE5C73C0F5815F0F31BE0BE7 /* [CP] Embed Pods Frameworks */ = {
+		B931235A9D659ED616FA0C50 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4093C28623B62F0A00A98A35 /* MyFuckingTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,12 +465,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.AppleApplicasterFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -489,19 +494,21 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.AppleApplicasterFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		408099EE234FD9BF000FFC74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15643A984BAE4141C7757DF8 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */;
+			baseConfigurationReference = 5CB55A1A75B566353FC8FC13 /* Pods-AppleApplicasterFrameworksTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppleApplicasterFrameworksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,8 +524,9 @@
 		};
 		408099EF234FD9BF000FFC74 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 230E0337FEAB4045F785F694 /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */;
+			baseConfigurationReference = B49CB587ECFCAB3CE27AA40D /* Pods-AppleApplicasterFrameworksTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppleApplicasterFrameworksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -8,7 +8,7 @@
   "platform": "ios",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "0.1.0",
+  "manifest_version": "0.2.0",
   "name": "Zapp Firebase Analytics QuickBrick",
   "description": "Provide Firebase Analytics as agent. Please use this plugin only if you are using quick brick",
   "type": "analytics",

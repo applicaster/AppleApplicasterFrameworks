@@ -1,5 +1,6 @@
 # Gemfile
 source 'https://rubygems.org'
 
-gem 'fastlane', '= 2.134.0'
+gem 'fastlane', '= 2.138.0'
 gem 'cocoapods', '= 1.8.3'
+gem 'jazzy'

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 @objc public class FacadeConnector: NSObject {
     public static let enterpriseAppPrefix = "com.applicaster.ent."

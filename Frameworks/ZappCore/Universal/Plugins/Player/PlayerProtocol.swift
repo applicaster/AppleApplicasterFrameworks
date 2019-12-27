@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 @objc public protocol PlayerProtocol: NSObjectProtocol {
     /// DS raw atom entry format

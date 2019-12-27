@@ -1,9 +1,9 @@
 
 Pod::Spec.new do |s|
   s.name             = "ZappFirebaseAnalytics"
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = "ZappFirebaseAnalytics"
-  s.swift_versions = ['5.0', '5.1']
+  s.swift_versions = '5.1'
   s.description      = <<-DESC
                       ZappFirebaseAnalytics container.
                        DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files = ['Frameworks/Plugins/Analytics/Firebase/**/*.{swift}']
+  s.source_files = ['Frameworks/Plugins/Analytics/Firebase/Universal/**/*.{swift}']
 
   s.xcconfig =  {
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
