@@ -1,41 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>ZappCore</key>
+<array>
 	<dict>
+		<key>framework</key>
+		<string>ZappCore</string>
 		<key>version_id</key>
 		<string>0.6.0</string>
 		<key>folder_path</key>
 		<string>ZappCore</string>
+		<key>is_plugin</key>
+		<false/>
 	</dict>
-	<key>ZappGoogleAnalytics</key>
 	<dict>
+		<key>framework</key>
+		<string>ZappGoogleAnalytics</string>
 		<key>version_id</key>
 		<string>0.4.0</string>
 		<key>folder_path</key>
 		<string>Plugins/Analytics/GoogleAnalytics</string>
+		<key>is_plugin</key>
+		<true/>
 	</dict>
-	<key>ZappGoogleInteractiveMediaAds</key>
 	<dict>
+		<key>framework</key>
+		<string>ZappGoogleInteractiveMediaAds</string>
 		<key>version_id</key>
 		<string>0.4.0</string>
 		<key>folder_path</key>
 		<string>Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds</string>
+		<key>is_plugin</key>
+		<true/>
 	</dict>
-	<key>ZappFirebaseAnalytics</key>
 	<dict>
+		<key>framework</key>
+		<string>ZappFirebaseAnalytics</string>
 		<key>version_id</key>
 		<string>0.2.0</string>
 		<key>folder_path</key>
 		<string>Plugins/Analytics/Firebase</string>
+		<key>is_plugin</key>
+		<true/>
 	</dict>
-	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>
+		<key>framework</key>
+		<string>ZappCrashlogsMsAppCenter</string>
 		<key>version_id</key>
 		<string>4.1.0</string>
 		<key>folder_path</key>
 		<string>Plugins/Crashlogs/ZappCrashlogsMsAppCenter</string>
+		<key>is_plugin</key>
+		<true/>
 	</dict>
-</dict>
+</array>
 </plist>

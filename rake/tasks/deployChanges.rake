@@ -50,7 +50,7 @@ task :test do
     update_relevant_templates(items_to_update, new_git_tag)
     generate_documentation(items_to_update)
     upload_manifests_to_zapp(items_to_update)
-    commit_changes_push_and_tag(new_git_tag)
+    commit_changes_push_and_tag(items_to_update, new_git_tag)
   end
   save_versions_data(new_automation_hash)
   puts("System update has been finished!")
