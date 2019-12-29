@@ -46,7 +46,7 @@ task :test do
   puts new_automation_hash
 
   if items_to_update.length() > 0
-    new_git_tag = Time.now.strftime("%Y.%m.%d.%H-%M")
+    new_git_tag = Time.now.strftime("%Y.%m.%d.%H-%M-%S")
     update_relevant_templates(items_to_update, new_git_tag)
     generate_documentation(items_to_update)
     # upload_manifests_to_zapp(items_to_update)
@@ -81,20 +81,13 @@ def generate_documentation(items_to_update)
     base_framework_path = model["folder_path"]
     puts("Generation documentation for framework:#{framework}")
 
-    # Go to plugin folder
-    sh("cd #{base_framework_path}/Project")
-
     # If podfile exist invoke Install Pods
     if File.file?("podfile")
-      sh("pod install")
+      sh("cd #{base_framework_path}/Project && pod install")
     end
 
     # Generate documentation
-    sh("jazzy")
-
-    # Go back to root of the project
-    sh("cd -")
-
+    sh("cd #{base_framework_path}/Project && jazzy")
   end
 end
 
@@ -143,21 +136,20 @@ def update_relevant_templates(items_to_update, new_git_tag)
       end
 
     end
-    update_template(files_to_update, framework, version, new_git_tag)
+    update_template(files_to_update, version, new_git_tag)
   end
 end
 
-def update_template(models_to_update, framework_name , new_version_number, new_git_tag)
-  framework_name_wildcard = "__#{framework_name}__"
+def update_template(models_to_update , new_version_number, new_git_tag)
 
   models_to_update.each do |model|
     puts(model)
   puts("template path:#{model.get_template_path}, original path:#{model.get_original_path}")
     text = File.read(model.get_template_path)
-    new_contents = text.gsub(framework_name_wildcard, new_version_number)
-    new_contents = text.gsub('__REPO_TAG__', new_git_tag)
+    puts
+    new_contents = text.gsub("__VERSION_NUMBER__", new_version_number)
+    new_contents = new_contents.gsub('__REPO_TAG__', new_git_tag)
 
-    # To merely print the contents of the file, use:
     puts new_contents
   
     # To write changes to the file, use:
