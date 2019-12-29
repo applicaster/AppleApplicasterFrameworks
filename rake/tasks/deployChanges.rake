@@ -30,7 +30,7 @@ task :test do
     base_framework_path = model["folder_path"]
 
     automation_framework_version = frameworks_list_automation[framework]    
-    if automation_framework_version == nil || Gem::Version.new(automation_framework_version) > Gem::Version.new(version)
+    if automation_framework_version == nil || Gem::Version.new(automation_framework_version) < Gem::Version.new(version)
       if base_framework_path == nil || framework == nil || version == nil
         puts("Unable to add framework to update list, one of keys is empty: #{model}")
       else 
@@ -49,8 +49,8 @@ task :test do
     new_git_tag = Time.now.strftime("%Y.%m.%d.%H-%M")
     update_relevant_templates(items_to_update, new_git_tag)
     generate_documentation(items_to_update)
-    upload_manifests_to_zapp(items_to_update)
-    commit_changes_push_and_tag(items_to_update, new_git_tag)
+    # upload_manifests_to_zapp(items_to_update)
+    # commit_changes_push_and_tag(items_to_update, new_git_tag)
   end
   save_versions_data(new_automation_hash)
   puts("System update has been finished!")
@@ -84,7 +84,7 @@ def generate_documentation(items_to_update)
   end
 end
 
-def upload_manifests_to_zapp(items_to_update) {
+def upload_manifests_to_zapp(items_to_update) 
   puts("Uploading manifests")
   items_to_update.each do |model|
     is_plugin = model["is_plugin"]
@@ -104,7 +104,7 @@ def upload_manifests_to_zapp(items_to_update) {
 
     end
   end
-}
+end
 
 def update_relevant_templates(items_to_update, new_git_tag)
   items_to_update.each do |model|
@@ -163,9 +163,8 @@ end
 
 def save_versions_data(data)
   versions_automation_file_name = ".versions_automation.json"
-  hash = { "anton" => "foo"}
-  Dir.mkdir(versions_automation_file_name) unless File.exists?(versions_automation_file_name)
   File.open(versions_automation_file_name,"w") do |f|
      f.write(data.to_json)
   end
 end
+
