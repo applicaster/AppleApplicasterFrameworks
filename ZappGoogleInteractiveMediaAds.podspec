@@ -15,12 +15,12 @@ Pod::Spec.new do |s|
 
     s.ios.deployment_target = '10.0'
     s.tvos.deployment_target = '10.0'
-	s.tvos.vendored_frameworks = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/tvOS/GoogleInteractiveMediaAds.framework'
-	s.tvos.preserve_paths = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/GoogleInteractiveMediaAds.framework'
+	s.tvos.vendored_frameworks = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Files/tvOS/GoogleInteractiveMediaAds.framework'
+	s.tvos.preserve_paths = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Files/GoogleInteractiveMediaAds.framework'
 
-	s.ios.source_files  = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Universal/**/*.swift'
-	s.tvos.source_files  = ['Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Universal/**/*.swift',
-							'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/tvOS/**/*.swift'
+	s.ios.source_files  = 'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Files/Universal/**/*.swift'
+	s.tvos.source_files  = ['Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Files/Universal/**/*.swift',
+							'Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Files/tvOS/**/*.swift'
 	]
 	s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '= 3.11.1'
 	

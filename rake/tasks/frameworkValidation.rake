@@ -92,6 +92,12 @@ task :validate_framework, [:framework_to_check] do |t, args|
       puts("Error: 'README.md' does not exist in required path: '#{base_framework_path}/Project/README.md'")
       files_not_defined = true
     end
+
+    if File.exist?("#{base_framework_path}/Files") == false
+      puts("Error: Folder does not exist required path: #{base_framework_path}")
+      files_not_defined = true
+    end
+
     if files_not_defined == false 
       is_all_pathes_valid = true
       puts("All required files exist for framework: #{framework_to_check}")
