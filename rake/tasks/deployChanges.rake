@@ -80,7 +80,21 @@ def generate_documentation(items_to_update)
     framework = model["framework"]
     base_framework_path = model["folder_path"]
     puts("Generation documentation for framework:#{framework}")
-    sh("cd #{base_framework_path}/Project && jazzy ; cd -")
+
+    # Go to plugin folder
+    sh("cd #{base_framework_path}/Project")
+
+    # If podfile exist invoke Install Pods
+    if File.file?("podfile")
+      sh("pod install")
+    end
+
+    # Generate documentation
+    sh("jazzy")
+
+    # Go back to root of the project
+    sh("cd -")
+
   end
 end
 

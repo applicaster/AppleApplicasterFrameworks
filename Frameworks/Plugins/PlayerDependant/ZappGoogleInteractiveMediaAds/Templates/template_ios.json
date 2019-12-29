@@ -7,7 +7,7 @@
   "platform": "ios",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "__ZappGoogleInteractiveMediaAds__",
+  "manifest_version": "__VERSION_NUMBER__",
   "name": "Google Interactive Media Ads QuickBrick,",
   "description": "This plugin allow to add Google Interactive Media Ads to supported players. Please use this plugin only for quickBrick",
   "type": "video_advertisement",
