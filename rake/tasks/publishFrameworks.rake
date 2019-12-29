@@ -3,7 +3,6 @@ require 'json'
 
 class FileToUpdateModel
   def initialize(template_path, original_path)
-    # puts("init template path:#{template_path}, original path:#{original_path}")
     @template_path = template_path
     @original_path = original_path
   end
@@ -17,8 +16,8 @@ class FileToUpdateModel
   end
 end
 
-task :test do
-  frameworks_list = Plist.parse_xml('PodsVersions.plist')
+task :publish_frameworks do
+  frameworks_list = Plist.parse_xml('FrameworksData.plist')
   frameworks_list_automation = read_versions_data()
 
   items_to_update = []
@@ -49,8 +48,8 @@ task :test do
     new_git_tag = Time.now.strftime("%Y.%m.%d.%H-%M-%S")
     update_relevant_templates(items_to_update, new_git_tag)
     generate_documentation(items_to_update)
-    # upload_manifests_to_zapp(items_to_update)
-    # commit_changes_push_and_tag(items_to_update, new_git_tag)
+    upload_manifests_to_zapp(items_to_update)
+    commit_changes_push_and_tag(items_to_update, new_git_tag)
   end
   save_versions_data(new_automation_hash)
   puts("System update has been finished!")
@@ -60,13 +59,14 @@ end
 def commit_changes_push_and_tag(items_to_update, new_git_tag)
   sh("git add docs")
   sh("git add Frameworks")
-  commit_message = "System update, expected tag:#{new_git_tag} updated frameworks:"
-  items_to_update.each do |path|
+  commit_message = "System update, expected tag:#{new_git_tag}, frameworks:"
+  items_to_update.each do |model|
     framework = model["framework"]
     version = model["version_id"]
     sh("git add #{framework}.podspec")
-    commit_message += " #{framework}, ver:#{version}"
+    commit_message += " <#{framework}:#{version}>"
   end
+  puts("Message to commit: #{commit_message}")
   sh("git commit -m #{commit_message}")
   sh("git push origin master")
   sh("git tag #{new_git_tag}")
@@ -144,7 +144,7 @@ def update_template(models_to_update , new_version_number, new_git_tag)
 
   models_to_update.each do |model|
     puts(model)
-  puts("template path:#{model.get_template_path}, original path:#{model.get_original_path}")
+    puts("Template path:#{model.get_template_path}, original path:#{model.get_original_path}")
     text = File.read(model.get_template_path)
     puts
     new_contents = text.gsub("__VERSION_NUMBER__", new_version_number)
