@@ -8,7 +8,7 @@
 		<key>version_id</key>
 		<string>0.6.0</string>
 		<key>folder_path</key>
-		<string>ZappCore</string>
+		<string>Frameworks/ZappCore</string>
 		<key>is_plugin</key>
 		<false/>
 	</dict>
@@ -18,7 +18,7 @@
 		<key>version_id</key>
 		<string>0.4.0</string>
 		<key>folder_path</key>
-		<string>Plugins/Analytics/GoogleAnalytics</string>
+		<string>Frameworks/Plugins/Analytics/GoogleAnalytics</string>
 		<key>is_plugin</key>
 		<true/>
 	</dict>
@@ -28,7 +28,7 @@
 		<key>version_id</key>
 		<string>0.4.0</string>
 		<key>folder_path</key>
-		<string>Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds</string>
+		<string>Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds</string>
 		<key>is_plugin</key>
 		<true/>
 	</dict>
@@ -38,7 +38,7 @@
 		<key>version_id</key>
 		<string>0.2.0</string>
 		<key>folder_path</key>
-		<string>Plugins/Analytics/Firebase</string>
+		<string>Frameworks/Plugins/Analytics/Firebase</string>
 		<key>is_plugin</key>
 		<true/>
 	</dict>
@@ -48,7 +48,7 @@
 		<key>version_id</key>
 		<string>4.1.0</string>
 		<key>folder_path</key>
-		<string>Plugins/Crashlogs/ZappCrashlogsMsAppCenter</string>
+		<string>Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter</string>
 		<key>is_plugin</key>
 		<true/>
 	</dict>
