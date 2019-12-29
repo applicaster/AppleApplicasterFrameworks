@@ -113,19 +113,19 @@ def update_relevant_templates(items_to_update, new_git_tag)
     base_framework_path = model["folder_path"]
     is_plugin = model["is_plugin"]
     files_to_update = [
-      FileToUpdateModel.new("#{base_framework_path}/templates/template_jazzy.yaml", "#{base_framework_path}/Project/.jazzy.yaml"),
-      FileToUpdateModel.new("#{base_framework_path}/templates/template_#{framework}.podspec", "#{framework}.podspec")
+      FileToUpdateModel.new("#{base_framework_path}/Templates/template_jazzy.yaml", "#{base_framework_path}/Project/.jazzy.yaml"),
+      FileToUpdateModel.new("#{base_framework_path}/Templates/template_#{framework}.podspec", "#{framework}.podspec")
     ]
     if is_plugin == true
       ios_manifest_path = "#{base_framework_path}/Manifest/ios.json"
       tvos_manifest_path = "#{base_framework_path}/Manifest/tvos.json"
 
       if File.file?(ios_manifest_path)
-        files_to_update.push(FileToUpdateModel.new("#{base_framework_path}/templates/template_ios.json", "#{base_framework_path}/Manifest/ios.json"))
+        files_to_update.push(FileToUpdateModel.new("#{base_framework_path}/Templates/template_ios.json", "#{base_framework_path}/Manifest/ios.json"))
       end
    
       if File.file?(tvos_manifest_path)
-        files_to_update.push(FileToUpdateModel.new("#{base_framework_path}/templates/template_tvos.json", "#{base_framework_path}/Manifest/tvos.json"))
+        files_to_update.push(FileToUpdateModel.new("#{base_framework_path}/Templates/template_tvos.json", "#{base_framework_path}/Manifest/tvos.json"))
       end
 
     end
