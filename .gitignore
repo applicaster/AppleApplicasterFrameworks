@@ -86,3 +86,5 @@ Frameworks/Plugins/Analytics/Firebase/Project/podfile.lock
 Frameworks/Plugins/Analytics/GoogleAnalytics/Project/build
 Frameworks/Plugins/Analytics/GoogleAnalytics/Project/pods
 Frameworks/Plugins/Analytics/GoogleAnalytics/Project/podfile.lock
+
+**/default.profraw
