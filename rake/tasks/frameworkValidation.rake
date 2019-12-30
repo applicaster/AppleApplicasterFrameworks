@@ -4,7 +4,7 @@ require 'json'
 task :validate_framework, [:framework_to_check] do |t, args|
   frameworks_list = Plist.parse_xml('frameworksData.plist')
   framework_to_check = args[:framework_to_check]
-  puts("Checking Framework '#{framework_to_check}'")
+  puts("\nChecking Framework '#{framework_to_check}'")
   is_framework_defined_in_plist = false
   is_all_pathes_valid = false
 
@@ -47,12 +47,12 @@ task :validate_framework, [:framework_to_check] do |t, args|
     puts("Key:'is_plugin' - Define if framework is a plugin. Value true inform publisher task that this plugin has manifests and need to be uploaded to Zapp")
   else
     puts("Framework: '#{framework_to_check}' all keys was defined in 'FrameworksData.plist'")
-
+    files_not_defined = false
     if File.exist?(base_framework_path) == false
       puts("Error: Framework does not exist in defined path: #{base_framework_path}")
       files_not_defined = true
     end
-    
+
     if File.file?("#{base_framework_path}/Templates/template_jazzy.yaml") == false
       puts("Error: 'template_jazzy.yaml' template yaml does not exist in required path: '#{base_framework_path}/Templates/template_jazzy.yaml'")
       files_not_defined = true
@@ -64,14 +64,13 @@ task :validate_framework, [:framework_to_check] do |t, args|
     end
 
     if is_plugin
-      files_not_defined = false
-      if File.file?("#{base_framework_path}/Templates/template_ios.json") == false || File.file?("#{base_framework_path}/Templates/template_tvos.json") == false 
+      if File.file?("#{base_framework_path}/Templates/template_ios.json") == false && File.file?("#{base_framework_path}/Templates/template_tvos.json") == false 
         puts("Error: Plugin must has at least one manifest for iOS or tvOS")
         puts("Expected pathes ios: #{base_framework_path}/Templates/template_ios.json\ntvos:#{base_framework_path}/Templates/template_tvos.json")
         files_not_defined = true
       end
   
-      if File.file?("#{base_framework_path}/Manifest/ios.json") == false || File.file?("#{base_framework_path}/Manifest/tvos.json") == false
+      if File.file?("#{base_framework_path}/Manifest/ios.json") == false && File.file?("#{base_framework_path}/Manifest/tvos.json") == false
         puts("Error: Plugin must has at least one manifest for iOS or tvOS")
         puts("Expected pathes:\nios: #{base_framework_path}/Manifest/ios.json\ntvos:#{base_framework_path}/Manifest/tvos.json")
         files_not_defined = true
@@ -112,3 +111,14 @@ task :validate_framework, [:framework_to_check] do |t, args|
   
 end
 
+task :validate_existing_frameworks do
+  if ENV["CIRCLE_BRANCH"] != "master"
+    frameworks_list = Plist.parse_xml('frameworksData.plist')
+    frameworks_list.each do |model|
+      if model["framework"] != nil
+          Rake::Task["validate_framework"].reenable
+        Rake::Task["validate_framework"].invoke(model["framework"])
+      end
+    end
+  end
+end

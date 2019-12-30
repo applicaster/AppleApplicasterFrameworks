@@ -17,42 +17,46 @@ class FileToUpdateModel
 end
 
 task :publish_frameworks do
-  frameworks_list = Plist.parse_xml('FrameworksData.plist')
-  frameworks_list_automation = read_versions_data()
+  if ENV["CIRCLE_BRANCH"] == "master"
+    frameworks_list = Plist.parse_xml('FrameworksData.plist')
+    frameworks_list_automation = read_versions_data()
 
-  items_to_update = []
-  new_automation_hash = {}
-  frameworks_list.each do |model|
+    items_to_update = []
+    new_automation_hash = {}
+    frameworks_list.each do |model|
 
-    framework = model["framework"]
-    version = model["version_id"]
-    base_framework_path = model["folder_path"]
+      framework = model["framework"]
+      version = model["version_id"]
+      base_framework_path = model["folder_path"]
 
-    automation_framework_version = frameworks_list_automation[framework]    
-    if automation_framework_version == nil || Gem::Version.new(automation_framework_version) < Gem::Version.new(version)
-      if base_framework_path == nil || framework == nil || version == nil
-        puts("Unable to add framework to update list, one of keys is empty: #{model}")
-      else 
-        puts("Adding framework to update list: #{model}")
-        items_to_update.push(model)
+      automation_framework_version = frameworks_list_automation[framework]    
+      if automation_framework_version == nil || Gem::Version.new(automation_framework_version) < Gem::Version.new(version)
+        if base_framework_path == nil || framework == nil || version == nil
+          puts("Unable to add framework to update list, one of keys is empty: #{model}")
+        else 
+          puts("Adding framework to update list: #{model}")
+          items_to_update.push(model)
+        end
       end
+
+      new_automation_hash[framework] = version
+
     end
+    puts items_to_update
+    puts new_automation_hash
 
-    new_automation_hash[framework] = version
-
+    if items_to_update.length() > 0
+      new_git_tag = Time.now.strftime("%Y.%m.%d.%H-%M-%S")
+      update_relevant_templates(items_to_update, new_git_tag)
+      generate_documentation(items_to_update)
+      upload_manifests_to_zapp(items_to_update)
+      commit_changes_push_and_tag(items_to_update, new_git_tag)
+    end
+    save_versions_data(new_automation_hash)
+    puts("System update has been finished!")
+  else
+    puts("Step skipped, 'master' branch required")
   end
-  puts items_to_update
-  puts new_automation_hash
-
-  if items_to_update.length() > 0
-    new_git_tag = Time.now.strftime("%Y.%m.%d.%H-%M-%S")
-    update_relevant_templates(items_to_update, new_git_tag)
-    generate_documentation(items_to_update)
-    upload_manifests_to_zapp(items_to_update)
-    commit_changes_push_and_tag(items_to_update, new_git_tag)
-  end
-  save_versions_data(new_automation_hash)
-  puts("System update has been finished!")
 end
 
 

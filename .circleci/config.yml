@@ -93,29 +93,13 @@ jobs:
           name: Tests - start
           command: bundle exec fastlane ios test
 
-      # Deploy
-      # - deploy:
-      #     name: Creating Tag SDK version
-      #     command: |
-      #       if [ "$CIRCLE_BRANCH" = "master" ]];
-      #       then
-      #         echo "Trying to create a tag"
-      #         project_version="`/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"./${PROJECT_NAME}/Info.plist\"`"
+      - run:
+          name: Validate Frameworks
+          command: rake validate_existing_frameworks
 
-      #         # check if tag for this version is exists
-      #         if [ $(git tag -l "$project_version") ]; then
-      #           echo "ERROR: Project version needs to be updated in order to create closed version, tag for this version already exists."
-      #           exit 1
-      #         fi
-
-      #         git tag $project_version
-      #         git push origin $project_version
-      #         echo Tag was succesfuly created
-
-      #         sh ./deployItemsIfNeeded.sh $PROJECT_NAME
-      #       else
-      #         echo "Branch is not master, Create tag will be skipped"
-      #       fi
+      - deploy:
+          name: Publish new or changed framework
+          command: rake publish_frameworks
 
       - store_test_results:
           path: ./CircleArtifacts/test-results
