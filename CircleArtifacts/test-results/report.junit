@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='FrameworksAppTests.xctest' tests='2' failures='0'>
+  <testsuite name='FrameworksAppTests.FrameworksAppTests' tests='2' failures='0'>
+    <testcase classname='FrameworksAppTests.FrameworksAppTests' name='testExample' time='0.001'/>
+    <testcase classname='FrameworksAppTests.FrameworksAppTests' name='testPerformanceExample' time='0.363'/>
+  </testsuite>
+</testsuites>
