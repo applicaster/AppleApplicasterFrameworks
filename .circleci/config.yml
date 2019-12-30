@@ -22,9 +22,10 @@ jobs:
     shell: /bin/bash --login -eo pipefail
     environment:
       GENERAL_CACHE_KEY: "AppleApplicasterFrameworks_Cache_1.1.0"
-      PROJECT_NAME: "AppleApplicasterFrameworks"
-      SCHEME_NAME: "AppleApplicasterFrameworks"
-      DEPLOY_COMMAND: "~/.scripts-iOS/circleCi/deploySingleFrameworkMultiPlatform.sh"
+      PROJECT_NAME: "FrameworksApp"
+      SCHEME_NAME: "FrameworksApp"
+      PROJECT_PATH: "FrameworksApp"
+
     working_directory: ~/AppleApplicasterFrameworks
     steps:
       #Hack general caching until circle does not support global env variables
@@ -74,7 +75,7 @@ jobs:
 
       - run:
           name: CocoaPods - version
-          command: bundle exec pod --version
+          command: cd bundle exec pod --version
 
       # Pod update
       - run:
