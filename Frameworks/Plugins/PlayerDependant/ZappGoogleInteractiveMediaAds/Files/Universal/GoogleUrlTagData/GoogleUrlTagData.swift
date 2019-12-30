@@ -97,8 +97,8 @@ class GoogleUrlTagData {
         }
 
         var sortedMidrolls = vastMidrollsArray.sorted(by: { $0.timeOffset < $1.timeOffset })
-
-        // If user seek and jump thought ads we want to present latest add or if time to show add we are showing the latest one
+        /// If user seek and jump thought ads we want to present latest add or
+        /// If time to show add we are showing the latest one
         var midrollToPresent: MidrollTagData?
         if let index = sortedMidrolls.lastIndex(where: { $0.timeOffset < currentVideoTime }) {
             midrollToPresent = sortedMidrolls[index]

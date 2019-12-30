@@ -68,7 +68,7 @@ import ZappCore
         }
 
         if eventSeparated.count == 2 {
-            for (_, eventValue) in eventSeparated.prefix(2).enumerated() {
+            for eventValue in eventSeparated.prefix(2) {
                 if let trimmedValue = trimmString(string: eventValue) {
                     result.append(trimmedValue)
                 }
@@ -131,14 +131,13 @@ import ZappCore
             mergedParameters["Event Duration"] = "\(Int(abs(timedEvent.startTime.timeIntervalSinceNow)))" as Any
             timedEvent.parameters = mergedParameters
             sendEvent(timedEvent.eventName,
-                       parameters: mergedParameters)
+                      parameters: mergedParameters)
             timedEventsDictionary.removeValue(forKey: eventName)
         }
     }
 }
 
 extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
-
     public var providerName: String {
         return "Google Analytics"
     }
@@ -163,11 +162,11 @@ extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
         let events = separatedEvents(forEventString: eventName)
         let combinedProperties = combineProperties(combinedWithEventParams: parameters)
         let eventLabel = analyticsString(fromParams: combinedProperties)
-
+        let customParameters = CustomDemensionMappingHelper.paramsForCustomDemensions(customParamenters: combinedProperties)
         manager?.event(category: events.first ?? "",
                        action: events.last ?? "",
                        label: eventLabel,
-                       customParameters: CustomDemensionMappingHelper.paramsForCustomDemensions(customParamenters: combinedProperties))
+                       customParameters: customParameters)
     }
 
     @objc public func sendScreenEvent(_ screenName: String,

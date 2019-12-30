@@ -8,6 +8,6 @@
 import Foundation
 import UIKit
 
-public protocol UserInterfaceLayerApplicationDelegate {
+public protocol UserInterfaceLayerApplicationDelegate: AnyObject {
     var applicationDelegate: UIApplicationDelegate? { get set }
 }

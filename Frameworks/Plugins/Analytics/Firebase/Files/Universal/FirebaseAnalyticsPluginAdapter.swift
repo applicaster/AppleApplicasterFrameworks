@@ -33,7 +33,7 @@ class FirebaseAnalyticsPluginAdapter: NSObject, ZPAdapterProtocol {
         }
 
         let timedEvent = APTimedEvent(eventName: eventName,
-                                      parameters: parameters as? [String : NSObject],
+                                      parameters: parameters as? [String: NSObject],
                                       startTime: Date())
         timedEventsDictionary[eventName] = timedEvent
     }
@@ -45,7 +45,7 @@ class FirebaseAnalyticsPluginAdapter: NSObject, ZPAdapterProtocol {
             let timedEventParameters = timedEvent.parameters ?? [:] as [String: Any]
             var mergedParameters = timedEventParameters.merging(parameters) { _, new in new }
             mergedParameters["Event Duration"] = "\(Int(abs(timedEvent.startTime.timeIntervalSinceNow)))" as Any
-            timedEvent.parameters = mergedParameters as? [String : NSObject]
+            timedEvent.parameters = mergedParameters as? [String: NSObject]
             sendEvent(timedEvent.eventName,
                       parameters: mergedParameters)
             timedEventsDictionary.removeValue(forKey: eventName)
@@ -61,5 +61,4 @@ class FirebaseAnalyticsPluginAdapter: NSObject, ZPAdapterProtocol {
         // return merging gathered properties with default properties
         return properties.merging(defaultEventParameters) { _, new in new }
     }
-    
 }

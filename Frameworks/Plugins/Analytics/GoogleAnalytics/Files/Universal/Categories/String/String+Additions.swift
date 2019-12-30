@@ -14,7 +14,6 @@ public extension String {
     }
 
     func isEmptyOrWhitespace() -> Bool {
-        return self.trimmingCharacters(in: CharacterSet.whitespaces).isEmpty
+        return trimmingCharacters(in: CharacterSet.whitespaces).isEmpty
     }
-    
 }

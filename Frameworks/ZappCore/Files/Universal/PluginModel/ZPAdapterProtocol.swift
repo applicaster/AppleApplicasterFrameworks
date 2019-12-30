@@ -13,12 +13,12 @@ import UIKit
     init(configurationJSON: NSDictionary?)
     init()
 
-    @objc optional func handleUrlScheme(_ params: NSDictionary) -> Void
+    @objc optional func handleUrlScheme(_ params: NSDictionary)
 
     /**
      Implement this method if you need to use the plugin model that initiated your plugin.
      For example if you need extra information out of it - like react plugins sometiimes need the bundle url.
      Note - NOT all plugin managers are setting the model right now - so if it doesn't please look on `ZPLoginManager` and add it to your plugin manager. This method should be called right after the plugin is being initiated.
      */
-    @objc optional func setPluginModel(_ pluginModel: ZPPluginModel) -> Void
+    @objc optional func setPluginModel(_ pluginModel: ZPPluginModel)
 }
