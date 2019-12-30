@@ -4,9 +4,20 @@
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%20|%20tvOS-f6b854.svg)
 [![GitHub license](https://img.shields.io/github/license/applicaster/AppleApplicasterFrameworks)](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)
 
+- **OS:** iOS 10+, tvOS 12+
+- **Languages:** Swift, frameworks can be used in Swift and Objective-C
+- **Tool requirements:** Xcode 11.3, Swift 5.1
+- **License:** [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)
+
+## Table of Contents
+
 TODO: Add documentation
 
-### Documentation Frameworks
+### Overview
+
+- [Foo](#foo)
+
+### Documentation
 
 [ZappCore](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
