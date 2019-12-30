@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40574347235FB14B00314DFE /* PodsVersions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40574346235FB14B00314DFE /* PodsVersions.plist */; };
+		40574347235FB14B00314DFE /* FrameworksData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40574346235FB14B00314DFE /* FrameworksData.plist */; };
 		408099E0234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408099D6234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework */; };
 		408099E5234FD9BF000FFC74 /* AppleApplicasterFrameworksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408099E4234FD9BF000FFC74 /* AppleApplicasterFrameworksTests.swift */; };
 		408099E7234FD9BF000FFC74 /* AppleApplicasterFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 408099D9234FD9BE000FFC74 /* AppleApplicasterFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,7 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40574346235FB14B00314DFE /* PodsVersions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PodsVersions.plist; sourceTree = "<group>"; };
+		40574346235FB14B00314DFE /* FrameworksData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FrameworksData.plist; sourceTree = "<group>"; };
 		408099D6234FD9BE000FFC74 /* AppleApplicasterFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppleApplicasterFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		408099D9234FD9BE000FFC74 /* AppleApplicasterFrameworks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleApplicasterFrameworks.h; sourceTree = "<group>"; };
 		408099DA234FD9BE000FFC74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		408099CC234FD9BE000FFC74 = {
 			isa = PBXGroup;
 			children = (
-				40574346235FB14B00314DFE /* PodsVersions.plist */,
+				40574346235FB14B00314DFE /* FrameworksData.plist */,
 				408099D8234FD9BE000FFC74 /* AppleApplicasterFrameworks */,
 				408099E3234FD9BF000FFC74 /* AppleApplicasterFrameworksTests */,
 				408099D7234FD9BE000FFC74 /* Products */,
@@ -217,7 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40574347235FB14B00314DFE /* PodsVersions.plist in Resources */,
+				40574347235FB14B00314DFE /* FrameworksData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +461,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.AppleApplicasterFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -490,6 +491,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.AppleApplicasterFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
