@@ -2,6 +2,8 @@
 
 const fs = require("fs");
 const plist = require("plist");
+const semver = require("semver");
+const moment = require("moment");
 
 function readFrameworkDataPlist() {
   const plistData = fs.readFileSync("./FrameworksData.plist", "utf8");
@@ -23,4 +25,40 @@ function circleBranch() {
   return CIRCLE_BRANCH;
 }
 
-module.exports = { readFrameworkDataPlist, proccessArgs, abort, circleBranch };
+function isMasterBranch() {
+  return circleBranch == "master";
+}
+
+function compareVersion(ver1, ver2) {
+  return semver.gt(ver1, ver2);
+}
+
+function automationVersionsDataJSON() {
+  const json = fs.readFileSync(".versions_automation.json", "utf8");
+  try {
+    return JSON.parse(json);
+  } catch (e) {
+    return {};
+  }
+}
+
+function updateAutomationVersionsDataJSON(data) {
+  const json = JSON.stringify(data);
+  fs.writeFileSync(".versions_automation.json", json, { encoding: "utf8" });
+}
+
+function gitTagDate() {
+  return moment().format("Y.m.d.H-M-S");
+}
+
+module.exports = {
+  readFrameworkDataPlist,
+  proccessArgs,
+  abort,
+  circleBranch,
+  compareVersion,
+  isMasterBranch,
+  automationVersionsDataJSON,
+  updateAutomationVersionsDataJSON,
+  gitTagDate
+};
