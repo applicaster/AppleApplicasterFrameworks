@@ -13,10 +13,10 @@ const {
 
 const { updateTemplate } = require("./publishFrameworkHelper");
 
-if (isMasterBranch() == false) {
-  console.log("Step wwas skipped, 'master' branch required");
-  process.exit(0);
-}
+// if (isMasterBranch() == false) {
+//   console.log("Step wwas skipped, 'master' branch required");
+//   process.exit(0);
+// }
 
 const frameworksList = readFrameworkDataPlist();
 const frameworksAutomationList = automationVersionsDataJSON();
@@ -41,17 +41,17 @@ console.log(`Items to Update: ${itemsToUpdate}`);
 
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
-  // updateRelevantTemplates(itemsToUpdate, newGitTag)
+  updateRelevantTemplates(itemsToUpdate, newGitTag);
   // generateDocumentation(itemsToUpdate)
   // uploadManifestsToZapp(itemsToUpdate)
   // updateFrameworksVersions(itemsToUpdate)
   // commitChangesPushAndTag(itemsToUpdate, newGitTag)
 }
 updateAutomationVersionsDataJSON(newAutomationObject);
-puts("System update has been finished!");
+console.log("System update has been finished!");
 
 function updateRelevantTemplates(itemsToUpdate, newGitTag) {
-  frameworksList.forEach(model => {
+  itemsToUpdate.forEach(model => {
     const {
       framework = null,
       version_id = null,
