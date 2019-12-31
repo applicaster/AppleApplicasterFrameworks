@@ -81,14 +81,14 @@ function updateRelevantTemplates(itemsToUpdate, newGitTag) {
       if (fs.existsSync(iosManifestPath)) {
         updateTemplate(
           ejsData,
-          `${templatesBasePath}/${iosFileName}`,
+          `${templatesBasePath}/${iosFileName}${templateExtension}`,
           iosManifestPath
         );
       }
       if (fs.existsSync(tvosManifestPath)) {
         updateTemplate(
           ejsData,
-          `${templatesBasePath}/${tvosFileName}`,
+          `${templatesBasePath}/${tvosFileName}${templateExtension}`,
           tvosManifestPath
         );
       }
