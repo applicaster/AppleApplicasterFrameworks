@@ -88,3 +88,5 @@ Frameworks/Plugins/Analytics/GoogleAnalytics/Project/pods
 Frameworks/Plugins/Analytics/GoogleAnalytics/Project/podfile.lock
 
 **/default.profraw
+
+node_modules/*
