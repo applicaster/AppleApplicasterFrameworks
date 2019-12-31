@@ -109,10 +109,10 @@ function generateDocumentation(itemsToUpdate) {
     console.log(`Generation documentation for framework:${framework}`);
     console.log(`${folder_path}/Project/podfile`);
     if (fs.existsSync(`${folder_path}/Project/podfile`)) {
-      exec(`cd $${base_framework_path}/Project && pod install`);
+      exec(`cd $${folder_path}/Project && pod install`);
       exec("ls");
     }
     // Generate documentation
-    exec(`cd ${base_framework_path}/Project && jazzy`);
+    exec(`cd ${folder_path}/Project && jazzy`);
   });
 }
