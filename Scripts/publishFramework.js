@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
+const { exec } = require("child_process");
 
 const {
   compareVersion,
@@ -42,7 +43,7 @@ console.log(`Items to Update: ${itemsToUpdate}`);
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
   updateRelevantTemplates(itemsToUpdate, newGitTag);
-  // generateDocumentation(itemsToUpdate)
+  generateDocumentation(itemsToUpdate);
   // uploadManifestsToZapp(itemsToUpdate)
   // updateFrameworksVersions(itemsToUpdate)
   // commitChangesPushAndTag(itemsToUpdate, newGitTag)
@@ -93,5 +94,24 @@ function updateRelevantTemplates(itemsToUpdate, newGitTag) {
         );
       }
     }
+  });
+}
+
+function generateDocumentation(itemsToUpdate) {
+  console.log("Generating documentation");
+  itemsToUpdate.forEach(model => {
+    const {
+      framework = null,
+      version_id = null,
+      folder_path = null,
+      is_plugin = null
+    } = model;
+    puts(`Generation documentation for framework:${framework}`);
+    if (fs.existsSync(`${folder_path}/Project/podfile`)) {
+      exec(`cd $#{base_framework_path}/Project && pod install`);
+      exec("ls");
+    }
+    // Generate documentation
+    exec(`cd #{base_framework_path}/Project && jazzy`);
   });
 }
