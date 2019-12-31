@@ -106,7 +106,7 @@ function generateDocumentation(itemsToUpdate) {
       folder_path = null,
       is_plugin = null
     } = model;
-    puts(`Generation documentation for framework:${framework}`);
+    console.log(`Generation documentation for framework:${framework}`);
     if (fs.existsSync(`${folder_path}/Project/podfile`)) {
       exec(`cd $#{base_framework_path}/Project && pod install`);
       exec("ls");
