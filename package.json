@@ -1,0 +1,33 @@
+{
+  "name": "appleframeworks",
+  "version": "1.0.0",
+  "description": "All Core Framework for Zapp Team",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "plist": "3.0.1",
+    "ejs": "3.0.1",
+    "cli-task-runner": "^1.0.4",
+    "dotenv": "^8.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/applicaster/AppleApplicasterFrameworks.git"
+  },
+  "keywords": [
+    "apple",
+    "frameworks"
+  ],
+  "author": "Anton Kononenko",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/applicaster/AppleApplicasterFrameworks/issues"
+  },
+  "homepage": "https://github.com/applicaster/AppleApplicasterFrameworks#readme"
+}
