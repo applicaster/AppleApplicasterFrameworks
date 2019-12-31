@@ -14,7 +14,13 @@ function proccessArgs() {
 }
 
 function abort(message) {
-  throw new Error(message);
+  console.log(message);
+  process.exit(1);
 }
 
-module.exports = { readFrameworkDataPlist, proccessArgs, abort };
+function circleBranch() {
+  const { CIRCLE_BRANCH } = process.env;
+  return CIRCLE_BRANCH;
+}
+
+module.exports = { readFrameworkDataPlist, proccessArgs, abort, circleBranch };
