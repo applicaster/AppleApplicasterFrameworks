@@ -102,8 +102,8 @@ function generateDocumentation(itemsToUpdate) {
   itemsToUpdate.forEach(model => {
     const { framework = null, folder_path = null } = model;
     console.log(`Generation documentation for framework:${framework}`);
-    console.log(`${folder_path}/Project/podfile`);
-    if (fs.existsSync(`${folder_path}/Project/podfile`)) {
+    console.log(`${folder_path}/Project/Podfile`);
+    if (fs.existsSync(`${folder_path}/Project/Podfile`)) {
       execSync(`cd ${folder_path}/Project && pod install`);
       execSync("ls");
     }
