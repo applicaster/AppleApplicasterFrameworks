@@ -123,7 +123,7 @@
 				40C0405823B67B7C006FB32F /* Categories */,
 			);
 			name = Universal;
-			path = ../Universal;
+			path = ../Files/Universal;
 			sourceTree = "<group>";
 		};
 		40C0405523B67B7C006FB32F /* CustomDimensionMapping */ = {

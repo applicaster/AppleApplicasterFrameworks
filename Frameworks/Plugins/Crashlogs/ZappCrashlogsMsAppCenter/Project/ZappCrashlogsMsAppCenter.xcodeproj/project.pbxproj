@@ -79,7 +79,7 @@
 				407706A623B680A600581256 /* ZappCrashlogsMsAppCenter.swift */,
 			);
 			name = iOS;
-			path = ../iOS;
+			path = ../Files/ios;
 			sourceTree = "<group>";
 		};
 		4093C3CE23B675FC00A98A35 = {
