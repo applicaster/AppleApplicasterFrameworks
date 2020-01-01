@@ -32,13 +32,11 @@ frameworksList.forEach(model => {
     !automationFrameworkVersion ||
     compareVersion(version_id, automationFrameworkVersion)
   ) {
-    console.log("Adding framework to update list: #{model}");
+    console.log("Adding framework to update list: #{framework}");
     itemsToUpdate.push(model);
   }
   newAutomationObject[framework] = version_id;
 });
-
-console.log(`Items to Update: ${itemsToUpdate}`);
 
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
@@ -102,24 +100,11 @@ function generateDocumentation(itemsToUpdate) {
   itemsToUpdate.forEach(model => {
     const { framework = null, folder_path = null } = model;
     console.log(`\nGeneration documentation for framework:${framework}`);
-    console.log(`${folder_path}/Project/Podfile`);
-    console.log(fs.existsSync(`${folder_path}/Project/Podfile`));
     const isPodfileExist = fs.existsSync(`${folder_path}/Project/Podfile`);
     if (isPodfileExist) {
-      console.log("I am in");
-      execSync("ls");
       execSync(`cd ${folder_path}/Project && bundle exec pod install`);
-      execSync("ls");
     }
     // Generate documentation
     execSync(`cd ${folder_path}/Project && jazzy`);
-    // exec("cat *.js missing_file | wc -l", (error, stdout, stderr) => {
-    //   if (error) {
-    //     console.error(`exec error: ${error}`);
-    //     return;
-    //   }
-    //   console.log(`stdout: ${stdout}`);
-    //   console.error(`stderr: ${stderr}`);
-    // });
   });
 }
