@@ -98,14 +98,17 @@ function updateRelevantTemplates(itemsToUpdate, newGitTag) {
 }
 
 function generateDocumentation(itemsToUpdate) {
-  console.log("Generating documentation");
+  console.log("Generating documentation\n");
   itemsToUpdate.forEach(model => {
     const { framework = null, folder_path = null } = model;
-    console.log(`Generation documentation for framework:${framework}`);
+    console.log(`\nGeneration documentation for framework:${framework}`);
     console.log(`${folder_path}/Project/Podfile`);
     console.log(fs.existsSync(`${folder_path}/Project/Podfile`));
-    if (fs.existsSync(`${folder_path}/Project/Podfile`)) {
-      execSync(`cd ${folder_path}/Project && pod install`);
+    const isPodfileExist = fs.existsSync(`${folder_path}/Project/Podfile`);
+    if (isPodfileExist) {
+      console.log("I am in");
+      execSync("ls");
+      execSync(`cd ${folder_path}/Project && bundle exec pod install`);
       execSync("ls");
     }
     // Generate documentation
