@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const { exec } = require("child_process");
+const { execSync } = require("child_process");
 
 const {
   compareVersion,
@@ -42,7 +42,7 @@ console.log(`Items to Update: ${itemsToUpdate}`);
 
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
-  updateRelevantTemplates(itemsToUpdate, newGitTag);
+  // updateRelevantTemplates(itemsToUpdate, newGitTag);
   generateDocumentation(itemsToUpdate);
   // uploadManifestsToZapp(itemsToUpdate)
   // updateFrameworksVersions(itemsToUpdate)
@@ -100,19 +100,22 @@ function updateRelevantTemplates(itemsToUpdate, newGitTag) {
 function generateDocumentation(itemsToUpdate) {
   console.log("Generating documentation");
   itemsToUpdate.forEach(model => {
-    const {
-      framework = null,
-      version_id = null,
-      folder_path = null,
-      is_plugin = null
-    } = model;
+    const { framework = null, folder_path = null } = model;
     console.log(`Generation documentation for framework:${framework}`);
     console.log(`${folder_path}/Project/podfile`);
     if (fs.existsSync(`${folder_path}/Project/podfile`)) {
-      exec(`cd $${folder_path}/Project && pod install`);
-      exec("ls");
+      execSync(`cd ${folder_path}/Project && pod install`);
+      execSync("ls");
     }
     // Generate documentation
-    exec(`cd ${folder_path}/Project && jazzy`);
+    execSync(`cd ${folder_path}/Project && jazzy`);
+    // exec("cat *.js missing_file | wc -l", (error, stdout, stderr) => {
+    //   if (error) {
+    //     console.error(`exec error: ${error}`);
+    //     return;
+    //   }
+    //   console.log(`stdout: ${stdout}`);
+    //   console.error(`stderr: ${stderr}`);
+    // });
   });
 }
