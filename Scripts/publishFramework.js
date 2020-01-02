@@ -121,7 +121,7 @@ function generateDocumentation(itemsToUpdate) {
       execSync(`cd ${folder_path}/Project && bundle exec pod install`);
     }
     // Generate documentation
-    execSync(`cd ${folder_path}/Project && jazzy`);
+    execSync(`cd ${folder_path}/Project && bundle exec jazzy`);
   });
 }
 
