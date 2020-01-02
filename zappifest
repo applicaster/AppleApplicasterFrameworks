@@ -1,3 +1,0 @@
-#!/bin/bash
-export GEM_HOME="/usr/local/Cellar/zappifest/0.60.0/libexec/vendor"
-ruby /usr/local/Cellar/zappifest/0.60.0/lib/zappifest.rb "$@"

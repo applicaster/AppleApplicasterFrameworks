@@ -14,6 +14,7 @@ jobs:
       PROJECT_NAME: "FrameworksApp"
       SCHEME_NAME: "FrameworksApp"
       PROJECT_PATH: "FrameworksApp"
+      HOMEBREW_NO_AUTO_UPDATE: "1"
 
     working_directory: ~/AppleApplicasterFrameworks
     steps:
@@ -54,6 +55,28 @@ jobs:
           paths:
             - /Users/distiller/.rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems
             - ./.bundle
+
+      - restore_cache:
+          name: Restore npm dependencies
+          key: YARN-{{ checksum "~/_caching_file" }}-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Install npm dependencies
+          command: yarn
+
+      - save_cache:
+          name: Saving NPM dependencies
+          key: YARN-{{ checksum "~/_caching_file" }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+
+      - run:
+          name: Homebrew tap Applicaster
+          command: brew tap applicaster/tap
+
+      - run:
+          name: Homebrew tap Applicaster
+          command: brew install zappifest
 
       # Restore Cocoapods cache, save cache on lower level, after pod install
       - restore_cache:
