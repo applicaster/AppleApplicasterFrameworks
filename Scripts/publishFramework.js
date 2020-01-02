@@ -12,7 +12,7 @@ const {
   gitTagDate
 } = require("./Helpers");
 
-const { updateTemplate } = require("./publishFrameworkHelper");
+const { updateTemplate, manifestPath } = require("./publishFrameworkHelper");
 
 // if (isMasterBranch() == false) {
 //   console.log("Step wwas skipped, 'master' branch required");
@@ -32,7 +32,7 @@ frameworksList.forEach(model => {
     !automationFrameworkVersion ||
     compareVersion(version_id, automationFrameworkVersion)
   ) {
-    console.log("Adding framework to update list: #{framework}");
+    console.log(`Adding framework to update list: ${framework}`);
     itemsToUpdate.push(model);
   }
   newAutomationObject[framework] = version_id;
@@ -40,11 +40,11 @@ frameworksList.forEach(model => {
 
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
-  // updateRelevantTemplates(itemsToUpdate, newGitTag);
+  updateRelevantTemplates(itemsToUpdate, newGitTag);
   generateDocumentation(itemsToUpdate);
-  // uploadManifestsToZapp(itemsToUpdate)
-  // updateFrameworksVersions(itemsToUpdate)
-  // commitChangesPushAndTag(itemsToUpdate, newGitTag)
+  uploadManifestsToZapp(itemsToUpdate);
+  // updateFrameworksVersionsInGeneralDocs(itemsToUpdate)
+  commitChangesPushAndTag(itemsToUpdate, newGitTag);
 }
 updateAutomationVersionsDataJSON(newAutomationObject);
 console.log("System update has been finished!");
@@ -73,23 +73,39 @@ function updateRelevantTemplates(itemsToUpdate, newGitTag) {
       `${framework}.podspec`
     );
     if (is_plugin) {
-      iosFileName = "ios.json";
-      tvosFileName = "tvos.json";
-      iosManifestPath = `${folder_path}/Manifest/${iosFileName}`;
-      tvosManifestPath = `${folder_path}/Manifest/${tvosFileName}`;
-      if (fs.existsSync(iosManifestPath)) {
-        updateTemplate(
-          ejsData,
-          `${templatesBasePath}/${iosFileName}${templateExtension}`,
-          iosManifestPath
-        );
+      iosManifestPath = manifestPath({
+        model,
+        platform: "ios",
+        template: false
+      });
+      iosTemplatePath = manifestPath({
+        model,
+        platform: "ios",
+        template: true
+      });
+      tvosManifestPath = manifestPath({
+        model,
+        platform: "tvos",
+        template: false
+      });
+      tvosTemplatePath = manifestPath({
+        model,
+        platform: "tvos",
+        template: true
+      });
+      if (
+        iosManifestPath &&
+        iosManifestPath &&
+        fs.existsSync(iosManifestPath)
+      ) {
+        updateTemplate(ejsData, iosTemplatePath, iosManifestPath);
       }
-      if (fs.existsSync(tvosManifestPath)) {
-        updateTemplate(
-          ejsData,
-          `${templatesBasePath}/${tvosFileName}${templateExtension}`,
-          tvosManifestPath
-        );
+      if (
+        tvosManifestPath &&
+        tvosTemplatePath &&
+        fs.existsSync(tvosManifestPath)
+      ) {
+        updateTemplate(ejsData, tvosTemplatePath, tvosManifestPath);
       }
     }
   });
@@ -107,4 +123,50 @@ function generateDocumentation(itemsToUpdate) {
     // Generate documentation
     execSync(`cd ${folder_path}/Project && jazzy`);
   });
+}
+
+function uploadManifestsToZapp(itemsToUpdate) {
+  console.log("Uploading manifests to zapp");
+  itemsToUpdate.forEach(model => {
+    const { is_plugin = null } = model;
+    const zappToken = process.env["ZappToken"];
+    if (is_plugin && zappToken) {
+      iosManifestPath = manifestPath({
+        model,
+        platform: "ios",
+        template: false
+      });
+      tvosManifestPath = manifestPath({
+        model,
+        platform: "tvos",
+        template: false
+      });
+      if (iosManifestPath && fs.existsSync(iosManifestPath)) {
+        execSync(
+          `zappifest publish --manifest ${ios_manifest_path} --access-token ${zappToken}`
+        );
+      }
+      if (tvosManifestPath && fs.existsSync(tvosManifestPath)) {
+        execSync(
+          `zappifest publish --manifest ${tvos_manifest_path} --access-token ${zappToken}`
+        );
+      }
+    }
+  });
+}
+
+function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
+  execSync("git add docs");
+  execSync("git add Frameworks");
+  let commitMessage = `System update, expected tag:${new_git_tag}, frameworks:`;
+  itemsToUpdate.forEach(model => {
+    const { framework = null, version_id = null } = model;
+    sh("git add #{framework}.podspec");
+    commit_message += ` <${framework}:${version}>`;
+  });
+  console.log(`Message to commit: ${commit_message}`);
+  execSync(`git commit -m ${commit_message}`);
+  execSync("git push origin master");
+  execSync(`git tag ${new_git_tag}`);
+  execSync(`git push origin ${new_git_tag}`);
 }

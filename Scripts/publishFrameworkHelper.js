@@ -10,4 +10,25 @@ function updateTemplate(ejsData, templatePath, outputPath) {
   renderFileSync(templatePath, outputPath, ejsData);
 }
 
-module.exports = { updateTemplate };
+function manifestPath({ model, platform, template }) {
+  const { folder_path = null, is_plugin = null } = model;
+
+  iosPath = template == true ? "/Template/ios.json" : "/Manifest/ios.json";
+  tvosPath = template == true ? "/Template/tvos.json" : "/Manifest/tvos.json";
+  if (
+    is_plugin == true &&
+    (platform == "ios" || platform == "tvos") &&
+    template != null &&
+    folder_path != null
+  ) {
+    if (platform == "ios") {
+      return `${folder_path}/${iosPath}`;
+    } else if (platform == "tvos") {
+      return `${folder_path}/${tvosPath}`;
+    }
+  } else {
+    return null;
+  }
+}
+
+module.exports = { updateTemplate, manifestPath };

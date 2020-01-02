@@ -25,7 +25,10 @@ TODO: Add documentation
 
 ##### Analytics
 
-[Google Analytics](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
+[__Google Analytics__](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html):
+Manifests:
+- [ios](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=ios)
+- [tvos](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=tvos)
 
 [Firebase](https://applicaster.github.io/AppleApplicasterFrameworks/ZappFirebaseAnalytics/index.html)
 

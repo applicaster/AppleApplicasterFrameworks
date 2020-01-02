@@ -4,17 +4,6 @@
 #
 version: 2.1
 jobs:
-  swiftlint:
-    docker:
-      - image: dantoml/swiftlint:latest
-    steps:
-      - checkout
-      - run: swiftlint lint --reporter junit | tee result.xml
-      - store_artifacts:
-          path: result.xml
-      - store_test_results:
-          path: result.xml
-
   build:
     # Specify the Xcode version to use
     macos:
@@ -80,7 +69,7 @@ jobs:
       # Pod update
       - run:
           name: CocoaPods - update dependencies
-          command: cd &PROJECT_PATH && bundle exec pod install; cd -
+          command: cd $PROJECT_PATH && bundle exec pod install; cd -
 
       # Cache CocoaPods
       - save_cache:
@@ -96,11 +85,11 @@ jobs:
 
       - run:
           name: Validate Frameworks
-          command: rake validate_existing_frameworks
+          command: node ./Scripts/validateExistingFrameworks.js
 
       - deploy:
           name: Publish new or changed framework
-          command: rake publish_frameworks
+          command: node ./Scripts/publishFramework.js
 
       - store_test_results:
           path: ./CircleArtifacts/test-results
