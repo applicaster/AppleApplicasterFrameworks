@@ -78,6 +78,9 @@ jobs:
           name: Homebrew tap Applicaster
           command: brew install zappifest
 
+      - run:
+          name: Zappifest Version
+          command: zappifest -v
       # Restore Cocoapods cache, save cache on lower level, after pod install
       - restore_cache:
           keys:
