@@ -43,7 +43,7 @@ if (itemsToUpdate.length > 0) {
   updateRelevantTemplates(itemsToUpdate, newGitTag);
   generateDocumentation(itemsToUpdate);
   uploadManifestsToZapp(itemsToUpdate);
-  // updateFrameworksVersionsInGeneralDocs(itemsToUpdate)
+  updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
   commitChangesPushAndTag(itemsToUpdate, newGitTag);
 }
 updateAutomationVersionsDataJSON(newAutomationObject);
@@ -155,18 +155,27 @@ function uploadManifestsToZapp(itemsToUpdate) {
   });
 }
 
+function updateFrameworksVersionsInGeneralDocs(itemsToUpdate) {
+  itemsToUpdate.forEach(model => {
+    const { framework = null, version_id = null } = model;
+    const ejsData = {};
+    ejsData[framework] = version_id;
+    updateTemplate(ejsData, `FrameworksList.md.ejs`, `docs/FrameworksList.md`);
+  });
+}
+
 function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
   execSync("git add docs");
   execSync("git add Frameworks");
-  let commitMessage = `System update, expected tag:${new_git_tag}, frameworks:`;
+  let commitMessage = `System update, expected tag:${newGitTag}, frameworks:`;
   itemsToUpdate.forEach(model => {
     const { framework = null, version_id = null } = model;
     sh("git add #{framework}.podspec");
-    commit_message += ` <${framework}:${version}>`;
+    commitMessage += ` <${framework}:${version_id}>`;
   });
-  console.log(`Message to commit: ${commit_message}`);
-  execSync(`git commit -m ${commit_message}`);
+  console.log(`Message to commit: ${commitMessage}`);
+  execSync(`git commit -m ${commitMessage}`);
   execSync("git push origin master");
-  execSync(`git tag ${new_git_tag}`);
-  execSync(`git push origin ${new_git_tag}`);
+  execSync(`git tag ${newGitTag}`);
+  execSync(`git push origin ${newGitTag}`);
 }
