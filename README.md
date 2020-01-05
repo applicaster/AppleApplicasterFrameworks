@@ -10,7 +10,7 @@
 - **License:** [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)
 
 ## Table of contents
-- [Frameworks List](#frameworks_list)
+- [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/PluginsList.md)
 - [Overview](#overview)
 - [Folder Structure](#folder_structure)
 - [Usage](#usage)
@@ -214,28 +214,3 @@ Apple Framworks
 - After review merge code.
 
 ## How it works?
-
-## Frameworks List
-
-[ZappCore](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
-
-#### Plugins
-
-##### Analytics
-
-[**Google Analytics: 1.9.0**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
-- **Documentation**
-- **Zapp Manifests:**
-	- [ios](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=ios)
-	- [tvos](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=tvos)
-
-
-[Firebase](https://applicaster.github.io/AppleApplicasterFrameworks/ZappFirebaseAnalytics/index.html)
-
-##### Crashlogs
-
-[MS App Center](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCrashlogsMsAppCenter/index.html)
-
-##### Player Dependant
-
-[Google Interactive Media Ads](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleInteractiveMediaAds/index.html)
