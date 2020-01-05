@@ -16,6 +16,7 @@
 - [Usage](#usage)
 - [How to add new framework?](#how_to_add_new_framework)
 - [How to update existing framework?](#how_to_update_framework)
+- [How it works?](how_it_works)
 
 ## Overview
 
@@ -51,7 +52,7 @@ Apple Framworks
 ├── FrameworksApp // General client app that has defined all availible frameworks.
 ├── Scripts // Automotization scripts. All scripts defined in JavaScript.
 ├── .versions_automation.json // Automation file, must not be changed by user. Contains JSON with title and version of each framework.
-├── frameworksData.plist // Contains information about frameworks: title, version and etc.
+├── DrameworksData.plist // Contains information about frameworks: title, version and etc.
 ├── Gemfile // Ruby packages.
 ├── LICENSE // Repo licence type.
 ├── package.json // Java Script packages.
@@ -61,13 +62,105 @@ Apple Framworks
 
 ## How to add new framework
 
+- Create branch `framework_name_new_version_id`
+- Create folder for the new framework in path: `./Frameworks/YourFrameworkName` or if it is Zapp plugin in path: `./Frameworks/Plugin/PluginType/YourFrameworkName`. Next will be mentions as framework root folder
+- Use [Folder Structure](#folder_structure) article to verify place for your items
+- Open `FrameworksData.plist` file.
+	- Add new value in array of frameworks. Value must be dictionary.
+	- Add key `framework` with value `YourFrameworkName`
+	- Add key `version_id` with value `version number` based on `major/minor/bug` `1.0.0` convension.
+	- Add key `folder_path` with value `General path to your framework`.  Example: `./Frameworks/Plugins/Analytics/GoogleAnalytics`
+	- Add key `is_plugin` with value `true/false` in case if it is `Zapp Plugin`.
+- Create `Files` folder in your framework's root folder. Add files that needed for framework.
+- Create `podspec` file for your plugin in root of the repo folder.
+	- `podspec` name must be same name of the `plugin` or `framework`.
+	- Prepare `podspec` defined files and dependencies if needed.
+	- As example can be taken existing framework's `podspec` file.
+- Create `Project` folder in your framework's root folder.
+	- Create xCode project with your framework's name title.
+	- If the framework has [cocoapods](https://cocoapods.org) dependecies, create `podfile` and configure it for the project. Do not add `Pods` folder to git repo.
+	- Create file `.jazzy.yaml` with configuration of [Jazzy documentation](https://github.com/realm/jazzy). Details configure [Jazzy](https://github.com/realm/jazzy) can be founded in [Jazzy Repo](https://github.com/realm/jazzy) or copied from existing frameworks.
+- If framework is Zapp Plugin. Create `Manifest` folder in your framework's root folder. Next step do only for relevant platforms
+	- Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `ios` plugin if needed and rename it to `ios.json`. As dependency use
+    ```ruby
+      "extra_dependencies": [
+        {
+          "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number'"
+        }
+      ],
+    ```
+    - Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `tvos` plugin if needed and rename it to `tvos.json`. As dependency use
+    ```ruby
+      "extra_dependencies": [
+        {
+          "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number'"
+        }
+      ],
+    ```
+    Example:
+    ```
+    ```
+    {
+  "api": {
+    "require_startup_execution": false,
+    "class_name": "ZappFirebaseAnalytics.FirebaseAnalyticsPluginAdapter",
+    "modules": []
+  },
+  "dependency_repository_url": [],
+  "platform": "ios",
+  "author_name": "Anton Kononenko",
+  "author_email": "a.kononenko@applicaster.com",
+  "manifest_version": "<%= version_id %>",
+  "name": "Zapp Firebase Analytics QuickBrick",
+  "description": "Provide Firebase Analytics as agent. Please use this plugin only if you are using quick brick",
+  "type": "analytics",
+  "identifier": "zapp_firebase_analytics",
+  "ui_builder_support": true,
+  "whitelisted_account_ids": ["5ae06cef8fba0f00084bd3c6"],
+  "min_zapp_sdk": "14.0.0-Dev",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "extra_dependencies": [
+    {
+      "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"
+    }
+  ],
+  "custom_configuration_fields": [],
+  "targets": ["mobile"]
+}
+
+```
+- Create `Templates` folder in your framework's root folder. In this folder will be provided data for automated deployment. Templates files use structure of [ejs](https://ejs.co)
+	- Copy created before `.jazzy.yaml` file and rename it to `.jazzy.yaml.ejs`. In renamed file change field `module_version: "version_number"`to `module_version: "<%= version_id %>"`.
+	- Copy created before `FrameworkName.podspec` file from root repo folderand rename it to `FrameworkName.podspec.ejs`.
+		- Change field: `s.version = '<%= version_number %>'`to `  s.version = '<%= version_id %>'`.
+		- Change field: `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number' }` to `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>' }`
+	- If framework is Zapp Plugin. Next step do only for relevant platforms
+		- Copy created before `ios.json` file from root repo folder and rename it to `ios.json.ejs`.
+			- Change field `"manifest_version": "version_number"` to `"manifest_version": "<%= version_id %>"`
+			- Change field `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number"` to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
+		- Copy created before `tvos.json` file from root repo folder and rename it to `ios.json.ejs`.
+			- Change field `"manifest_version": "version_number"` to `"manifest_version": "<%= version_id %>"`
+			- Change field `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number"` to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
+
+
+
+
+
+
 ## How to update existing framework
+
+- Create branch `framework_name_update_version_id`
+- Update framework code. Based on rules described in [creation new framework](how_to_add_new_framework)
+- Update version of your framework in `frameworksData.plist` based on `major/minor/bug` `1.0.0` convension.
+- Push code and create PR. Fill PR template.
+- After review merge code.
+
+## How it works?
 
 ## Frameworks List
 
-<html>
-  <iframe src="1.md" seamless></iframe>
-</html>
 [ZappCore](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
 #### Plugins
