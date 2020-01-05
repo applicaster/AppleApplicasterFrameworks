@@ -26,8 +26,8 @@ Repository has predefined structure if you want to add something, please use str
 
 ```swift
 Apple Framworks
-├── Docs // Contains generated documentation for the frameworks. Content are generates automatically.
-├── Fastlane // Configuration of the fastlane] deployment tool used in CI.
+├── docs // Contains generated documentation for the frameworks. Content are generates automatically.
+├── fastlane // Configuration of the fastlane] deployment tool used in CI.
 ├── Frameworks // Frameworks data seperated by folders.
 │   └── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
 │       ├── Files // Files that relevant for the framework.
