@@ -72,14 +72,70 @@ Apple Framworks
 	- Add key `folder_path` with value `General path to your framework`.  Example: `./Frameworks/Plugins/Analytics/GoogleAnalytics`
 	- Add key `is_plugin` with value `true/false` in case if it is `Zapp Plugin`.
 - Create `Files` folder in your framework's root folder. Add files that needed for framework.
+	- If files for the framework can be used with `ios` and `tvos` create folder `Universal`
+	- If files for the framework `ios` only create folder `ios`
+	- If files for the framework `tvos` only create folder `tvos`
+	- One framework can have all three types of the folders if it supports `ios` and `tvos`.
 - Create `podspec` file for your plugin in root of the repo folder.
 	- `podspec` name must be same name of the `plugin` or `framework`.
 	- Prepare `podspec` defined files and dependencies if needed.
-	- As example can be taken existing framework's `podspec` file.
+	- Example
+	```ruby
+    Pod::Spec.new do |s|
+      s.name             = "ZappFirebaseAnalytics"
+      s.version          = '0.2.0'
+      s.summary          = "ZappFirebaseAnalytics"
+      s.swift_versions = '5.1'
+      s.description      = <<-DESC
+                          ZappFirebaseAnalytics container.
+                           DESC
+      s.homepage         = "https://applicaster.com"
+      s.license = 'Appache 2.0'
+      s.author           = { "cmps" => "a.kononenko@applicaster.com" }
+      s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '1' }
+      s.platform = :tvos, :ios
+      s.tvos.deployment_target = "10.0"
+      s.ios.deployment_target = '10.0'
+
+      s.dependency 'ZappCore'
+      s.dependency 'Firebase/Analytics', '= 6.14.0'
+
+      s.requires_arc = true
+
+      s.source_files = ['Frameworks/Plugins/Analytics/Firebase/Files/Universal/**/*.{swift}']
+
+      s.xcconfig =  {
+        'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+        'ENABLE_BITCODE' => 'YES',
+        'OTHER_CFLAGS'  => '-fembed-bitcode',
+        'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/Firebase/**',
+        'OTHER_LDFLAGS' => '$(inherited) -objc -framework "FIRAnalyticsConnector" -framework "FirebaseAnalytics" -framework "FirebaseCore" -framework "FirebaseCoreDiagnostics" -framework "FirebaseInstanceID" -framework "GoogleAppMeasurement" -framework "GoogleDataTransport" -framework "GoogleDataTransportCCTSupport" -framework "GoogleUtilities" -framework "nanopb"',
+        'USER_HEADER_SEARCH_PATHS' => '"$(inherited)" "${PODS_ROOT}"/Firebase/**'
+      }
+    end
+	```
 - Create `Project` folder in your framework's root folder.
 	- Create xCode project with your framework's name title.
 	- If the framework has [cocoapods](https://cocoapods.org) dependecies, create `podfile` and configure it for the project. Do not add `Pods` folder to git repo.
 	- Create file `.jazzy.yaml` with configuration of [Jazzy documentation](https://github.com/realm/jazzy). Details configure [Jazzy](https://github.com/realm/jazzy) can be founded in [Jazzy Repo](https://github.com/realm/jazzy) or copied from existing frameworks.
+		- Example:
+		```swift
+		module: ZappFirebaseAnalytics
+        module_version: 0.2.0
+
+        author: "Applicaster ltd."
+        copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
+
+        author_url: https://www.applicaster.com
+        github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/Analytics/Firebase/ZappFirebaseAnalytics
+
+        output: "../../../../../docs/ZappFirebaseAnalytics"
+        clean: true
+        min_acl: "private"
+        sdk: [iphone, appletv]
+        theme: jony
+
+		```
 - If framework is Zapp Plugin. Create `Manifest` folder in your framework's root folder. Next step do only for relevant platforms
 	- Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `ios` plugin if needed and rename it to `ios.json`. As dependency use
     ```ruby
@@ -98,39 +154,37 @@ Apple Framworks
       ],
     ```
     Example:
-    ```
-    ```
+    ```JSON
     {
-  "api": {
-    "require_startup_execution": false,
-    "class_name": "ZappFirebaseAnalytics.FirebaseAnalyticsPluginAdapter",
-    "modules": []
-  },
-  "dependency_repository_url": [],
-  "platform": "ios",
-  "author_name": "Anton Kononenko",
-  "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "<%= version_id %>",
-  "name": "Zapp Firebase Analytics QuickBrick",
-  "description": "Provide Firebase Analytics as agent. Please use this plugin only if you are using quick brick",
-  "type": "analytics",
-  "identifier": "zapp_firebase_analytics",
-  "ui_builder_support": true,
-  "whitelisted_account_ids": ["5ae06cef8fba0f00084bd3c6"],
-  "min_zapp_sdk": "14.0.0-Dev",
-  "deprecated_since_zapp_sdk": "",
-  "unsupported_since_zapp_sdk": "",
-  "react_native": false,
-  "extra_dependencies": [
-    {
-      "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"
-    }
+      "api": {
+        "require_startup_execution": false,
+        "class_name": "ZappFirebaseAnalytics.FirebaseAnalyticsPluginAdapter",
+        "modules": []
+      },
+      "dependency_repository_url": [],
+      "platform": "ios",
+      "author_name": "Anton Kononenko",
+      "author_email": "a.kononenko@applicaster.com",
+      "manifest_version": "<%= version_id %>",
+      "name": "Zapp Firebase Analytics QuickBrick",
+      "description": "Provide Firebase Analytics as agent. Please use this plugin only if you are using quick brick",
+      "type": "analytics",
+      "identifier": "zapp_firebase_analytics",
+      "ui_builder_support": true,
+      "whitelisted_account_ids": ["5ae06cef8fba0f00084bd3c6"],
+      "min_zapp_sdk": "14.0.0-Dev",
+      "deprecated_since_zapp_sdk": "",
+      "unsupported_since_zapp_sdk": "",
+      "react_native": false,
+      "extra_dependencies": [
+        {
+          "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '1.0'"
+        }
   ],
   "custom_configuration_fields": [],
   "targets": ["mobile"]
 }
-
-```
+    ```
 - Create `Templates` folder in your framework's root folder. In this folder will be provided data for automated deployment. Templates files use structure of [ejs](https://ejs.co)
 	- Copy created before `.jazzy.yaml` file and rename it to `.jazzy.yaml.ejs`. In renamed file change field `module_version: "version_number"`to `module_version: "<%= version_id %>"`.
 	- Copy created before `FrameworkName.podspec` file from root repo folderand rename it to `FrameworkName.podspec.ejs`.
