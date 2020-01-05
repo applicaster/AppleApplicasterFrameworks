@@ -10,7 +10,7 @@
 - **License:** [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)
 
 ## Table of contents
-- [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/PluginsList.md)
+- [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
 - [Overview](#overview)
 - [Folder Structure](#folder_structure)
 - [Usage](#usage)
@@ -28,6 +28,7 @@ Repository has predefined structure if you want to add something, please use str
 ```swift
 Apple Framworks
 ├── docs // Contains generated documentation for the frameworks. Content are generates automatically.
+│	└── FrameworksList.md // Framework list documentations file. Contains all added frameworks with provided information.
 ├── fastlane // Configuration of the fastlane] deployment tool used in CI.
 ├── Frameworks // Frameworks data seperated by folders.
 │   └── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
@@ -50,13 +51,14 @@ Apple Framworks
 │       │   │   ├── .tvos.json.ejs // Template manifest for tvos ZAPP PLUGIN structure.
 │       │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that defined to create auto generated docs.
 ├── FrameworksApp // General client app that has defined all availible frameworks.
+├── FrameworksList.md.ejs // Template plugins list documentations file.
 ├── Scripts // Automotization scripts. All scripts defined in JavaScript.
 ├── .versions_automation.json // Automation file, must not be changed by user. Contains JSON with title and version of each framework.
 ├── DrameworksData.plist // Contains information about frameworks: title, version and etc.
 ├── Gemfile // Ruby packages.
 ├── LICENSE // Repo licence type.
 ├── package.json // Java Script packages.
-├── README.md // Git docs file.
+├── README.md // Git documentations file.
 └── *.podspec // Cocoapods dependency files for all frameworks.
 ```
 
