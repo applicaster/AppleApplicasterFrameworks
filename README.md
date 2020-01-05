@@ -121,7 +121,7 @@ Apple Framworks
 		- Example:
 		```swift
 		module: ZappFirebaseAnalytics
-        module_version: 0.2.0
+        module_version: "0.2.0"
 
         author: "Applicaster ltd."
         copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
