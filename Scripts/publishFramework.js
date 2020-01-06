@@ -41,11 +41,11 @@ frameworksList.forEach(model => {
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
   updateRelevantTemplates(itemsToUpdate, newGitTag);
-  generateDocumentation(itemsToUpdate);
+  // generateDocumentation(itemsToUpdate);
   uploadManifestsToZapp(itemsToUpdate);
-  updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
-  updateAutomationVersionsDataJSON(newAutomationObject);
-  commitChangesPushAndTag(itemsToUpdate, newGitTag);
+  // updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
+  // updateAutomationVersionsDataJSON(newAutomationObject);
+  // commitChangesPushAndTag(itemsToUpdate, newGitTag);
 }
 console.log("System update has been finished!");
 
@@ -73,29 +73,29 @@ function updateRelevantTemplates(itemsToUpdate, newGitTag) {
       `${framework}.podspec`
     );
     if (is_plugin) {
-      iosManifestPath = manifestPath({
+      const iosManifestPath = manifestPath({
         model,
         platform: "ios",
         template: false
       });
-      iosTemplatePath = manifestPath({
+      const iosTemplatePath = manifestPath({
         model,
         platform: "ios",
         template: true
       });
-      tvosManifestPath = manifestPath({
+      const tvosManifestPath = manifestPath({
         model,
         platform: "tvos",
         template: false
       });
-      tvosTemplatePath = manifestPath({
+      const tvosTemplatePath = manifestPath({
         model,
         platform: "tvos",
         template: true
       });
       if (
         iosManifestPath &&
-        iosManifestPath &&
+        iosTemplatePath &&
         fs.existsSync(iosManifestPath)
       ) {
         updateTemplate(ejsData, iosTemplatePath, iosManifestPath);
@@ -141,15 +141,14 @@ function uploadManifestsToZapp(itemsToUpdate) {
         platform: "tvos",
         template: false
       });
-      console.log(iosManifestPath);
       if (iosManifestPath && fs.existsSync(iosManifestPath)) {
         execSync(
-          `zappifest publish --manifest ${ios_manifest_path} --access-token ${zappToken}`
+          `zappifest publish --manifest ${iosManifestPath} --access-token ${zappToken}`
         );
       }
       if (tvosManifestPath && fs.existsSync(tvosManifestPath)) {
         execSync(
-          `zappifest publish --manifest ${tvos_manifest_path} --access-token ${zappToken}`
+          `zappifest publish --manifest ${tvosManifestPath} --access-token ${zappToken}`
         );
       }
     }
