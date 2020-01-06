@@ -21,7 +21,7 @@
 
 ## :eyeglasses: Overview
 
-This respository is a main container for general frameworks and plugins for [ZappApple](https://github.com/applicaster/AppleApplicasterFrameworks) project. Each frameworks defined here support `cocoapods` as dependency manager.
+This respository is the main container for general frameworks and plugins for [ZappApple](https://github.com/applicaster/AppleApplicasterFrameworks) project. Each frameworks defined here support `cocoapods` as a dependency manager.
 
 ## :pencil2: Usage
 
@@ -33,16 +33,16 @@ List of all frameworks can be checked [here](https://applicaster.github.io/Apple
 pod 'ZappCore', :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.15.0.20-1-6'
 ```
 ## :file_folder: Folder Structure
-Repository has predefined structure if you want to add something, please use strictly structure
+Repository has predefined structure if you want to add something, please conform to the strict structure rules defined below
 
 ```swift
 Apple Framworks
-├── docs // Contains generated documentation for the frameworks. Content are generates automatically.
+├── docs // Contains generated documentation for the frameworks. Content is generated automatically.
 │   └── FrameworksList.md // Framework list documentations file. Contains all added frameworks with provided information.
-├── fastlane // Configuration of the fastlane] deployment tool used in CI.
+├── fastlane // Configuration of the fastlane deployment tool used in CI.
 ├── Frameworks // Frameworks data seperated by folders.
 │   ├── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
-│   │   ├── Files // Files that relevant for the framework.
+│   │   ├── Files // Files that are relevant for the framework.
 │   │   │   ├── ios // Files that can be used in iOS only
 │   │   │   ├── tvos // Files that can be used in tvOS only
 │   │   │   └── Universal // Files that can be used in iOS and tvOS
@@ -50,19 +50,19 @@ Apple Framworks
 │   │   │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
 │   │   │   └── * // Files relevant to project
 │   │   └── Templates // Template files relevant for framework automation.
-│   │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that defined to create auto generated docs.
+│   │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that is defined to create auto generated docs.
 │   │   │   └── FrameworkName.podpec.ejs  // Cocoapods template dependency.
 │   └── PluginType // Type of the plugin, please check availible plugin list below
-│       ├── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
-│       │   ├── Files // Files that relevant for the framework.
-│       │   ├── Manifest // ZAPP PLUGINS manifests describes plugin.
+│       ├── *FrameworkName // All Frameworks, is part of ZAPP PLUGINS type.
+│       │   ├── Files // Files that are relevant for the framework.
+│       │   ├── Manifest // ZAPP PLUGINS manifest describes plugin created by Zappifest.
 │       │   ├── Project // Xcode Project created to generate documentation.
-│       │   │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
+│       │   │   ├── .jazzy.yaml // Jazzy configuration file that is defined to create auto generated docs
 │       │   │   └── * // Files relevant to project
 │       │   ├── Templates // Template files relevant for framework automation.
 │       │   │   ├── .ios.json.ejs // Template manifest for ios ZAPP PLUGIN structure.
 │       │   │   ├── .tvos.json.ejs // Template manifest for tvos ZAPP PLUGIN structure.
-│       │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that defined to create auto generated docs.
+│       │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that is defined to create auto generated docs.
 │       └── └── └── FrameworkName.podpec.ejs  // Cocoapods template dependency.
 ├── FrameworksApp // General client app that has defined all availible frameworks.
 ├── FrameworksList.md.ejs // Template plugins list documentations file.
@@ -87,17 +87,18 @@ Apple Framworks
 - Open `FrameworksData.plist` file.
 	- Add new value in array of frameworks. Value must be dictionary.
 	- Add key `framework` with value `YourFrameworkName`
-	- Add key `version_id` with value `version number` based on `major/minor/bug` `1.0.0` convension.
+	- Add key `version_id` with value `version number` based on `major/minor/bug` `1.0.0` convention.
 	- Add key `folder_path` with value `General path to your framework`.  Example: `./Frameworks/Plugins/Analytics/GoogleAnalytics`
 	- Add key `is_plugin` with value `true/false` in case if it is `Zapp Plugin`.
-- Create `Files` folder in your framework's root folder. Add files that needed for framework.
+- Create `Files` folder in your framework's root folder. Add files that are needed for framework.
 	- If files for the framework can be used with `ios` and `tvos` add to folder `Universal`
 	- If files for the framework `ios` only add to folder `ios`
 	- If files for the framework `tvos` only add to folder `tvos`
-	- One framework can have all three types of the folders if it supports `ios` and `tvos`.
+	- One framework can have all three types of folders if it supports `ios` and `tvos`.
 - Create `podspec` file for your framework in root of the repo folder.
 	- `podspec` name must be same name of the `plugin` or `framework`.
 	- Prepare `podspec` defined files and dependencies if needed.
+	- If framework supports `tvos` and `ios` dependency must be defined in same `podspec` file. For instructions please refer to [Cocoapods](https://guides.cocoapods.org/) documentation
 	- Example
 	```ruby
     Pod::Spec.new do |s|
@@ -154,12 +155,12 @@ Apple Framworks
         sdk: [iphone, appletv]
         theme: jony
 		```
-- If framework is Zapp Plugin. Create `Manifest` folder in your framework's root folder. Next step do only for relevant platforms.
+- If framework is Zapp Plugin. Create `Manifest` folder in your framework's root folder. Next step should only be done on the relevant platforms.
 	- Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `ios` plugin if needed. Rename it to `ios.json`. As dependency use
     ```ruby
       "extra_dependencies": [
         {
-          "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number'"
+          "FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number'"
         }
       ],
     ```
@@ -167,7 +168,7 @@ Apple Framworks
     ```ruby
       "extra_dependencies": [
         {
-          "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number'"
+          "FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number'"
         }
       ],
     ```
@@ -203,23 +204,23 @@ Apple Framworks
       "targets": ["mobile"]
 	}
     ```
-- Create `Templates` folder in your framework's root folder. In this folder will be provided data for automated deployment. Templates files use structure of [ejs](https://ejs.co).
-	- Copy created before `.jazzy.yaml` file and rename it to `.jazzy.yaml.ejs`. Change filed to `module_version: "<%= version_id %>"`.
-	- Copy created before `FrameworkName.podspec` file from root repo folderand rename it to `FrameworkName.podspec.ejs`.
-		- Change filed to `s.version = '<%= version_id %>'`.
-		- Change filed to `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>' }`
-	- If framework is Zapp Plugin. Next step do only for relevant platforms
-		- Copy created before `ios.json` file from root repo folder and rename it to `ios.json.ejs`.
-			- Change filed to `"manifest_version": "<%= version_id %>"`
-			- Change filed to `:git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
-		- Copy created before `tvos.json` file from root repo folder and rename it to `ios.json.ejs`.
-			- Change filed to `"manifest_version": "<%= version_id %>"`
-			- Change filed to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
+- Create `Templates` folder in your framework's root folder. In this folder you will be provided data for automated deployment. Templates files use structure of [ejs](https://ejs.co).
+	- Copy the `.jazzy.yaml` file created before and rename it to `.jazzy.yaml.ejs`. Change field to `module_version: "<%= version_id %>"`.
+	- Copy `FrameworkName.podspec` file created before from root repo folder and rename it to `FrameworkName.podspec.ejs`.
+		- Change field to `s.version = '<%= version_id %>'`.
+		- Change field to `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>' }`
+	- If framework is Zapp Plugin. Next step should only be used on relevant platforms
+		- Copy `ios.json` file created before from root repo folder and rename it to `ios.json.ejs`.
+			- Change field to `"manifest_version": "<%= version_id %>"`
+			- Change field to `:git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
+		- Copy `tvos.json` file created before from root repo folder and rename it to `ios.json.ejs`.
+			- Change field to `"manifest_version": "<%= version_id %>"`
+			- Change field to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
 - Open `FrameworksList.md.ejs` file:
 	- If Zapp plugin
 		- Find plugin type. Example `### Type: Analytics`
-		- If type not exist under section. `## Zapp Plugins` add new type `### Type: New Type`
-		- Add new framework title with format `#### Framework readable name: <%= framework_id %>`.   Where `framework_id` must be value defined in `FrameworksData.plist`
+		- If type does not exist under section. `## Zapp Plugins` add new type `### Type: New Type`
+		- Add new framework title with format `#### Framework readable name: <%= framework_id %>`.   Where `framework_id` must be a value defined in `FrameworksData.plist`
 		- Add description.
 		- Add link to generated documentation.
 		- Add links to Zapp manifests.
@@ -260,12 +261,12 @@ Apple Framworks
 
 ## :mortar_board: How it works?
 
-- All scripts of the repo automation inside `Scripts` folder
-- Automation contains from two general scripts.
-	- Validate Frameworks: It checks if defined frameworks in `FrameworksData.plist` has all files that needed to support framework. This script called on each commit. If validation failed CI build will be finished with fail
-	- Publish Frameworks: Script check if framework need to be published. Previous frameworks  data saved in `.versions_automation.json`. It compare new data in `FrameworksData.plist` and  `.versions_automation.json` all diffs framework or not existing will be published. This script called on `master` branch only.Script is doing next steps:
-		- Get current data in format `2020.15.0.20-1-6` This string will be used as `git tag`
-		- Go throught all templates in [ejs](https://ejs.co) format for frameworks that need to be updated. It update to new `version number` in `ejs` key `<%= version_id %>` and `git tag` in `ejs` key` <%= new_tag %>`.
+- All of the automation scripts are contained inside of the `Scripts` folder
+- Automation contains two main scripts.
+	- Validate Frameworks: It checks if defined frameworks in `FrameworksData.plist` has all files that needed to support framework. This script is called on each commit. If validation failed CI build will be finished with fail
+	- Publish Frameworks: Script checks if framework needs to be published. Previous frameworks data saved in `.versions_automation.json`. It compares new data in `FrameworksData.plist` and  `.versions_automation.json` all diffs in frameworks or not existing will be published. This script is called on `master` branch only. Script is will do the following:
+		- Get current date in format `2020.15.0.20-1-6` This string will be used as `git tag`
+		- Go throught all templates that are in [ejs](https://ejs.co) format for frameworks that need to be updated. It updates to a new `version number` in `ejs` key `<%= version_id %>` and `git tag` in `ejs` key` <%= new_tag %>`.
 
 		** Template List**
 
