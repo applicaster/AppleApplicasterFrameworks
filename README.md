@@ -41,7 +41,7 @@ Apple Framworks
 │	└── FrameworksList.md // Framework list documentations file. Contains all added frameworks with provided information.
 ├── fastlane // Configuration of the fastlane] deployment tool used in CI.
 ├── Frameworks // Frameworks data seperated by folders.
-│   └── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
+│   ├── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
 │   │   ├── Files // Files that relevant for the framework.
 │   │   ├── Project // Xcode Project created to generate documentation.
 │   │   │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
