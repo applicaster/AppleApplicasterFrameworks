@@ -55,6 +55,9 @@ Apple Framworks
 │   └── PluginType // Type of the plugin, please check availible plugin list below
 │       ├── *FrameworkName // All Frameworks, is part of ZAPP PLUGINS type.
 │       │   ├── Files // Files that are relevant for the framework.
+│       │   │   ├── ios // Files that can be used in iOS only
+│       │   │   ├── tvos // Files that can be used in tvOS only
+│       │   │   └── Universal // Files that can be used in iOS and tvOS
 │       │   ├── Manifest // ZAPP PLUGINS manifest describes plugin created by Zappifest.
 │       │   ├── Project // Xcode Project created to generate documentation.
 │       │   │   ├── .jazzy.yaml // Jazzy configuration file that is defined to create auto generated docs
