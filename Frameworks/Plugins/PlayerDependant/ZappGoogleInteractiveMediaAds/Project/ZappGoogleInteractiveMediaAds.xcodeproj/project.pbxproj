@@ -140,7 +140,7 @@
 				4093C3C323B669D100A98A35 /* GoogleUrlTagData */,
 			);
 			name = Universal;
-			path = ../Universal;
+			path = ../Files/Universal;
 			sourceTree = "<group>";
 		};
 		4093C3BE23B669D100A98A35 /* GoogleInteractiveMediaAdsAdapter */ = {

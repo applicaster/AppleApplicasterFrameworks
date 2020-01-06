@@ -145,7 +145,7 @@
 				4093C37223B6479700A98A35 /* UserInterfaceLayer */,
 			);
 			name = Universal;
-			path = ../Universal;
+			path = ../Files/Universal;
 			sourceTree = "<group>";
 		};
 		4093C35B23B6479700A98A35 /* PluginModel */ = {

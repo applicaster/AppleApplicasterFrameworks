@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.author = { 'a.kononenko@applicaster.com' => 'a.kononenko@applicaster.com' }
   s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "1" }
   
-  s.source_files = 'Frameworks/ZappCore/Universal/**/*.{swift}'
+  s.source_files = 'Frameworks/ZappCore/Files/Universal/**/*.{swift}'
 end

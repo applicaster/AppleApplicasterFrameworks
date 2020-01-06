@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files = ['Frameworks/Plugins/Analytics/Firebase/Universal/**/*.{swift}']
+  s.source_files = ['Frameworks/Plugins/Analytics/Firebase/Files/Universal/**/*.{swift}']
 
   s.xcconfig =  {
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',

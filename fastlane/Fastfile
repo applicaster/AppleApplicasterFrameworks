@@ -4,22 +4,15 @@ Dotenv.load
 default_platform :ios
 
 platform :ios do
-
   lane :test do
     fastlane_require 'dotenv'
     scan(
-      workspace: "#{ENV['PROJECT_NAME']}.xcworkspace",
+      workspace: "FrameworksApp/FrameworksApp.xcworkspace",
       scheme: ENV['SCHEME_NAME'],
       output_directory: "CircleArtifacts/test-results",
       device: "iPhone 7",
       code_coverage: true
     )
-  end
-
-  lane :makeDocs do
-
-    jazzy()
- 
   end
 
 end

@@ -19,10 +19,10 @@ Pod::Spec.new do |s|
   
   s.requires_arc = true
 
-  s.source_files = ['Frameworks/Plugins/Analytics/GoogleAnalytics/Universal/**/*.{swift}']
+  s.source_files = ['Frameworks/Plugins/Analytics/GoogleAnalytics/Files/Universal/**/*.{swift}']
 
   s.resources = [
-    "Frameworks/Plugins/Analytics/GoogleAnalytics/universal/CustomDimensionMapping/CustomDimensionMapping.plist"
+    "Frameworks/Plugins/Analytics/GoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDimensionMapping.plist"
   ]
 
   s.xcconfig =  {

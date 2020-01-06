@@ -110,7 +110,7 @@
 				40C0408A23B67D85006FB32F /* FirebaseAnalyticsPluginAdapter+AnalyticsProviderProtocol.swift */,
 			);
 			name = Universal;
-			path = ../Universal;
+			path = ../Files/Universal;
 			sourceTree = "<group>";
 		};
 		47EBE0858D42F89F48F93932 /* Pods */ = {

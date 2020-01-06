@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.static_framework = true
 	s.swift_versions = '5.1'
 
-  s.source_files = 'Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter/iOS/**/*.swift'
+  s.source_files = 'Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter/Files/iOS/**/*.swift'
 
   s.xcconfig =  { 
                   'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',

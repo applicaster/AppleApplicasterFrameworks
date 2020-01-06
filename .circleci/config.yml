@@ -4,131 +4,131 @@
 #
 version: 2.1
 jobs:
-  swiftlint:
-    docker:
-      - image: dantoml/swiftlint:latest
-    steps:
-      - checkout
-      - run: swiftlint lint --reporter junit | tee result.xml
-      - store_artifacts:
-          path: result.xml
-      - store_test_results:
-          path: result.xml
+    build:
+        # Specify the Xcode version to use
+        macos:
+            xcode: "11.2.1"
+        shell: /bin/bash --login -eo pipefail
+        environment:
+            GENERAL_CACHE_KEY: "AppleApplicasterFrameworks_Cache_1.1.0"
+            PROJECT_NAME: "FrameworksApp"
+            SCHEME_NAME: "FrameworksApp"
+            PROJECT_PATH: "FrameworksApp"
+            HOMEBREW_NO_AUTO_UPDATE: "1"
 
-  build:
-    # Specify the Xcode version to use
-    macos:
-      xcode: "11.2.1"
-    shell: /bin/bash --login -eo pipefail
-    environment:
-      GENERAL_CACHE_KEY: "AppleApplicasterFrameworks_Cache_1.0.0"
-      PROJECT_NAME: "AppleApplicasterFrameworks"
-      SCHEME_NAME: "AppleApplicasterFrameworks"
-      DEPLOY_COMMAND: "~/.scripts-iOS/circleCi/deploySingleFrameworkMultiPlatform.sh"
-    working_directory: ~/AppleApplicasterFrameworks
-    steps:
-      #Hack general caching until circle does not support global env variables
-      - run: echo "$GENERAL_CACHE_KEY" > ~/_caching_file
+        working_directory: ~/AppleApplicasterFrameworks
+        steps:
+            #Hack general caching until circle does not support global env variables
+            - run: echo "$GENERAL_CACHE_KEY" > ~/_caching_file
 
-      - run:
-          name: Ruby - version
-          command: ruby -v
+            - run:
+                  name: Ruby - version
+                  command: ruby -v
 
-      # Prepere Git
-      - restore_cache:
-          keys:
-            - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-            - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
-            - GIT-{{ checksum "~/_caching_file" }}-
+            # Prepere Git
+            - restore_cache:
+                  keys:
+                      - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+                      - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
+                      - GIT-{{ checksum "~/_caching_file" }}-
 
-      - checkout
+            - checkout
 
-      - save_cache:
-          name: Git - save cache
-          key: GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ".git"
+            - save_cache:
+                  name: Git - save cache
+                  key: GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+                  paths:
+                      - ".git"
 
-      # Prepare Bundler
-      - restore_cache:
-          name: Bundler - restore cache
-          key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
+            # Prepare Bundler
+            - restore_cache:
+                  name: Bundler - restore cache
+                  key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
 
-      - run:
-          name: Bundler - update dependencies
-          command: bundle check --path=.bundle || bundle install --path=.bundle
+            - run:
+                  name: Bundler - update dependencies
+                  command: bundle check --path=.bundle || bundle install --path=.bundle
 
-      - save_cache:
-          name: Bundler - save cache
-          key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
-          paths:
-            - /Users/distiller/.rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems
-            - ./.bundle
+            - save_cache:
+                  name: Bundler - save cache
+                  key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
+                  paths:
+                      - /Users/distiller/.rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems
+                      - ./.bundle
 
-      # Restore Cocoapods cache, save cache on lower level, after pod install
-      - restore_cache:
-          keys:
-            - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-            - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
-            - CocoaPods-{{ checksum "~/_caching_file" }}-
+            - restore_cache:
+                  name: Restore npm dependencies
+                  key: YARN-{{ checksum "~/_caching_file" }}-{{ checksum "yarn.lock" }}
 
-      - run:
-          name: CocoaPods - version
-          command: bundle exec pod --version
+            - run:
+                  name: Install npm dependencies
+                  command: yarn
 
-      # Pod update
-      - run:
-          name: CocoaPods - update dependencies
-          command: bundle exec pod install
+            - save_cache:
+                  name: Saving NPM dependencies
+                  key: YARN-{{ checksum "~/_caching_file" }}-{{ checksum "yarn.lock" }}
+                  paths:
+                      - ./node_modules
 
-      # Cache CocoaPods
-      - save_cache:
-          name: CocoaPods - save cache
-          key: CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - "~/.cocoapods/repos/cocoapods-"
+            - run:
+                  name: Homebrew tap Applicaster
+                  command: brew tap applicaster/tap
 
-      # Tests
-      - run:
-          name: Tests - start
-          command: bundle exec fastlane ios test
+            - run:
+                  name: Homebrew Install Zappifest
+                  command: brew install zappifest
 
-      # Deploy
-      # - deploy:
-      #     name: Creating Tag SDK version
-      #     command: |
-      #       if [ "$CIRCLE_BRANCH" = "master" ]];
-      #       then
-      #         echo "Trying to create a tag"
-      #         project_version="`/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"./${PROJECT_NAME}/Info.plist\"`"
+            - run:
+                  name: Zappifest Version
+                  command: zappifest -v
+            # Restore Cocoapods cache, save cache on lower level, after pod install
+            - restore_cache:
+                  keys:
+                      - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+                      - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
+                      - CocoaPods-{{ checksum "~/_caching_file" }}-
 
-      #         # check if tag for this version is exists
-      #         if [ $(git tag -l "$project_version") ]; then
-      #           echo "ERROR: Project version needs to be updated in order to create closed version, tag for this version already exists."
-      #           exit 1
-      #         fi
+            - run:
+                  name: CocoaPods - version
+                  command: bundle exec pod --version
 
-      #         git tag $project_version
-      #         git push origin $project_version
-      #         echo Tag was succesfuly created
+            # Pod update
+            - run:
+                  name: CocoaPods - update dependencies
+                  command: cd $PROJECT_PATH && bundle exec pod install; cd -
 
-      #         sh ./deployItemsIfNeeded.sh $PROJECT_NAME
-      #       else
-      #         echo "Branch is not master, Create tag will be skipped"
-      #       fi
+            # Cache CocoaPods
+            - save_cache:
+                  name: CocoaPods - save cache
+                  key: CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+                  paths:
+                      - "~/.cocoapods/repos/cocoapods-"
 
-      - store_test_results:
-          path: ./CircleArtifacts/test-results
+            # Tests
+            - run:
+                  name: Tests - start
+                  command: bundle exec fastlane ios test
 
-      - store_artifacts:
-          path: ./CircleArtifacts
+            - run:
+                  name: Validate Frameworks
+                  command: node ./Scripts/validateExistingFrameworks.js
 
-      - store_artifacts:
-          path: ~/Library/Logs/scan
-          destination: scan-logs
+            - deploy:
+                  name: Publish new or changed framework
+                  command: node ./Scripts/publishFramework.js
+
+            - store_test_results:
+                  path: ./CircleArtifacts/test-results
+
+            - store_artifacts:
+                  path: ./CircleArtifacts
+
+            - store_artifacts:
+                  path: ~/Library/Logs/scan
+                  destination: scan-logs
 
 workflows:
-  version: 2
-  build:
-    jobs:
-      - build
+    version: 2
+    build:
+        jobs:
+            - build
