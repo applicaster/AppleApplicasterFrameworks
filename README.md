@@ -27,7 +27,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: <%= ZappCore %>
+##### ZappCore: 0.6.0
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
@@ -35,7 +35,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: Crashlogs
 
-##### MS App Center: <%= ZappCrashlogsMsAppCenter %>
+##### MS App Center: 4.1.0
 - **Description:** [App center](https://appcenter.ms) crash logs service.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCrashlogsMsAppCenter/index.html)
 - **Manifest:**
@@ -204,7 +204,7 @@ Apple Framworks
       "platform": "ios",
       "author_name": "Anton Kononenko",
       "author_email": "a.kononenko@applicaster.com",
-      "manifest_version": "<%%= version_id %>",
+      "manifest_version": "<%= version_id %>",
       "name": "Zapp Firebase Analytics QuickBrick",
       "description": "Provide Firebase Analytics as agent. Please use this plugin only if you are using quick brick",
       "type": "analytics",
@@ -225,22 +225,22 @@ Apple Framworks
 	}
     ```
 - Create `Templates` folder in your framework's root folder. In this folder you will be provided data for automated deployment. Templates files use structure of [ejs](https://ejs.co).
-	- Copy the `.jazzy.yaml` file created before and rename it to `.jazzy.yaml.ejs`. Change field to `module_version: "<%%= version_id %>"`.
+	- Copy the `.jazzy.yaml` file created before and rename it to `.jazzy.yaml.ejs`. Change field to `module_version: "<%= version_id %>"`.
 	- Copy `FrameworkName.podspec` file created before from root repo folder and rename it to `FrameworkName.podspec.ejs`.
-		- Change field to `s.version = '<%%= version_id %>'`.
-		- Change field to `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%%= new_tag %>' }`
+		- Change field to `s.version = '<%= version_id %>'`.
+		- Change field to `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>' }`
 	- If framework is Zapp Plugin. Next step should only be used on relevant platforms
 		- Copy `ios.json` file created before from root repo folder and rename it to `ios.json.ejs`.
-			- Change field to `"manifest_version": "<%%= version_id %>"`
-			- Change field to `:git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%%= new_tag %>'"`
+			- Change field to `"manifest_version": "<%= version_id %>"`
+			- Change field to `:git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
 		- Copy `tvos.json` file created before from root repo folder and rename it to `ios.json.ejs`.
-			- Change field to `"manifest_version": "<%%= version_id %>"`
-			- Change field to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%%= new_tag %>'"`
+			- Change field to `"manifest_version": "<%= version_id %>"`
+			- Change field to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
 - Open `Readme.md.ejs` file:
 	- If Zapp plugin
 		- Find plugin type. Example `### Type: Analytics`
 		- If type does not exist under section. `## Zapp Plugins` add new type `### Type: New Type`
-		- Add new framework title with format `#### Framework readable name: <%%= framework_id %>`.   Where `framework_id` must be a value defined in `FrameworksData.plist`
+		- Add new framework title with format `#### Framework readable name: <%= framework_id %>`.   Where `framework_id` must be a value defined in `FrameworksData.plist`
 		- Add description.
 		- Add link to generated documentation.
 		- Add links to Zapp manifests.
@@ -248,7 +248,7 @@ Apple Framworks
 		```swift
 	        ### Type: Analytics
 
-            #### Google Analytics: <%%= ZappGoogleAnalytics %>
+            #### Google Analytics: <%= ZappGoogleAnalytics %>
             - **Description:** Google Analytics provider, deliver passed analytics data to service [Google Analytics](https://analytics.google.com/)
             - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
             - **Manifest:**
@@ -256,7 +256,7 @@ Apple Framworks
                 - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=tvos)
 		```
 	- If not Zapp plugin
-		- Add new framework under `# Frameworks List` title with format `#### Framework readable name: <%%= framework_id %>`.   Where `framework_id` must be value defined in `FrameworksData.plist`
+		- Add new framework under `# Frameworks List` title with format `#### Framework readable name: <%= framework_id %>`.   Where `framework_id` must be value defined in `FrameworksData.plist`
 		- Add description.
 		- Add link to generated documentation.
 		- Add links to Zapp manifests.
@@ -264,7 +264,7 @@ Apple Framworks
 		```swift
 	        # Frameworks List
 
-            #### ZappCore: <%%= ZappCore %>
+            #### ZappCore: <%= ZappCore %>
             - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
             - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 		```
@@ -286,7 +286,7 @@ Apple Framworks
 	- Validate Frameworks: It checks if defined frameworks in `FrameworksData.plist` has all files that needed to support framework. This script is called on each commit. If validation failed CI build will be finished with fail
 	- Publish Frameworks: Script checks if framework needs to be published. Previous frameworks data saved in `.versions_automation.json`. It compares new data in `FrameworksData.plist` and  `.versions_automation.json` all diffs in frameworks or not existing will be published. This script is called on `master` branch only. Script is will do the following:
 		- Get current date in format `2020.15.0.20-1-6` This string will be used as `git tag`
-		- Go throught all templates that are in [ejs](https://ejs.co) format for frameworks that need to be updated. It updates to a new `version number` in `ejs` key `<%%= version_id %>` and `git tag` in `ejs` key` <%%= new_tag %>`.
+		- Go throught all templates that are in [ejs](https://ejs.co) format for frameworks that need to be updated. It updates to a new `version number` in `ejs` key `<%= version_id %>` and `git tag` in `ejs` key` <%= new_tag %>`.
 
 		** Template List**
 
