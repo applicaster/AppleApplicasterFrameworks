@@ -42,13 +42,13 @@ Apple Framworks
 ├── fastlane // Configuration of the fastlane] deployment tool used in CI.
 ├── Frameworks // Frameworks data seperated by folders.
 │   └── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
-│       ├── Files // Files that relevant for the framework.
-│       ├── Project // Xcode Project created to generate documentation.
-│       │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
-│       │   └── * // Files relevant to project
-│       └── Templates // Template files relevant for framework automation.
-│       │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that defined to create auto generated docs.
-│       │   └── FrameworkName.podpec.ejs  // Cocoapods template dependency.
+│   │   ├── Files // Files that relevant for the framework.
+│   │   ├── Project // Xcode Project created to generate documentation.
+│   │   │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
+│   │   │   └── * // Files relevant to project
+│   │   └── Templates // Template files relevant for framework automation.
+│   │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that defined to create auto generated docs.
+│   │   │   └── FrameworkName.podpec.ejs  // Cocoapods template dependency.
 │   └── PluginType // Type of the plugin, please check availible plugin list below
 │       ├── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
 │       │   ├── Files // Files that relevant for the framework.
