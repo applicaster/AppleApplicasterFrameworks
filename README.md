@@ -1,4 +1,4 @@
-# Apple Frameworks
+# :green_apple: Apple Frameworks
 
 ![CircleCI](https://circleci.com/gh/applicaster/AppleApplicasterFrameworks.svg?style=svg&circle-token=8fedcc78af0010cec307b550771857ed27eee835)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%20|%20tvOS-f6b854.svg)
@@ -9,7 +9,7 @@
 - **Tool requirements:** Xcode 11.3, Cocoapods 1.8.3
 - **License:** [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)
 
-## Table of contents
+## :paperclip: Table of contents
 
 - [Overview](#overview)
 - [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
@@ -19,11 +19,11 @@
 - [How to update existing framework?](#how-to-update-existing-framework)
 - [How it works?](#how-it-works)
 
-## Overview
+## :eyeglasses: Overview
 
 This respository is a main container for general frameworks and plugins for [ZappApple](https://github.com/applicaster/AppleApplicasterFrameworks) project. Each frameworks defined here support `cocoapods` as dependency manager.
 
-## Usage
+## :pencil2: Usage
 
 To use any framework availible in this repo add cocoapods dependency in podfile.
 List of all frameworks can be checked [here](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
@@ -32,7 +32,7 @@ List of all frameworks can be checked [here](https://applicaster.github.io/Apple
 ```ruby
 pod 'ZappCore', :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.15.0.20-1-6'
 ```
-## Folder Structure
+## :file_folder: Folder Structure
 Repository has predefined structure if you want to add something, please use strictly structure
 
 ```swift
@@ -76,7 +76,7 @@ Apple Framworks
 └── *.podspec // Cocoapods dependency files for all frameworks.
 ```
 
-## How to add new framework
+## :page_facing_up: How to add new framework
 
 - Create branch `framework_name_new_version_id`
 - Create folder for the new framework
@@ -250,7 +250,7 @@ Apple Framworks
 - Push code and create PR. Fill PR template.
 - After review merge code.
 
-## How to update existing framework
+## :page_with_curl: How to update existing framework
 
 - Create branch `framework_name_update_version_id`
 - Update framework code. Based on rules described in [creation new framework](#how-to-add-new-framework)
@@ -258,7 +258,7 @@ Apple Framworks
 - Push code and create PR. Fill PR template.
 - After review merge code.
 
-## How it works?
+## :mortar_board: How it works?
 
 - All scripts of the repo automation inside `Scripts` folder
 - Automation contains from two general scripts.
