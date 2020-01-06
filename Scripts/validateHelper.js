@@ -73,7 +73,7 @@ function validateSingleFrameworkPathes(model) {
   const succeedText = `framework: '${framework}':All required files exist`;
   if (
     fs.existsSync(folder_path) &&
-    fs.existsSync(`${folder_path}/Templates/jazzy.yaml.ejs`) &&
+    fs.existsSync(`${folder_path}/Templates/.jazzy.yaml.ejs`) &&
     fs.existsSync(`${folder_path}/Templates/${framework}.podspec.ejs`) &&
     fs.existsSync(`${framework}.podspec`) &&
     fs.existsSync(`${folder_path}/Project/.jazzy.yaml`) &&

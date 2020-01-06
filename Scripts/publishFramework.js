@@ -64,7 +64,7 @@ function updateRelevantTemplates(itemsToUpdate, newGitTag) {
 
     updateTemplate(
       ejsData,
-      `${templatesBasePath}/jazzy.yaml${templateExtension}`,
+      `${templatesBasePath}./jazzy.yaml${templateExtension}`,
       `${projectBasePath}/.jazzy.yaml`
     );
     updateTemplate(
