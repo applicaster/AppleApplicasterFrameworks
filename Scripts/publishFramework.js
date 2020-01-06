@@ -14,10 +14,10 @@ const {
 
 const { updateTemplate, manifestPath } = require("./publishFrameworkHelper");
 
-if (isMasterBranch() == false) {
-  console.log("Step was skipped, 'master' branch required");
-  process.exit(0);
-}
+// if (isMasterBranch() == false) {
+//   console.log("Step was skipped, 'master' branch required");
+//   process.exit(0);
+// }
 
 const frameworksList = readFrameworkDataPlist();
 const frameworksAutomationList = automationVersionsDataJSON();
@@ -142,6 +142,9 @@ function uploadManifestsToZapp(itemsToUpdate) {
         template: false
       });
       if (iosManifestPath && fs.existsSync(iosManifestPath)) {
+        console.log(
+          `zappifest publish --manifest ${ios_manifest_path} --access-token ${zappToken}`
+        );
         execSync(
           `zappifest publish --manifest ${ios_manifest_path} --access-token ${zappToken}`
         );
