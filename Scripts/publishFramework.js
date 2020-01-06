@@ -131,20 +131,17 @@ function uploadManifestsToZapp(itemsToUpdate) {
     const { is_plugin = null } = model;
     const zappToken = process.env["ZappToken"];
     if (is_plugin && zappToken) {
-      iosManifestPath = manifestPath({
+      const iosManifestPath = manifestPath({
         model,
         platform: "ios",
         template: false
       });
-      tvosManifestPath = manifestPath({
+      const tvosManifestPath = manifestPath({
         model,
         platform: "tvos",
         template: false
       });
       if (iosManifestPath && fs.existsSync(iosManifestPath)) {
-        console.log(
-          `zappifest publish --manifest ${ios_manifest_path} --access-token ${zappToken}`
-        );
         execSync(
           `zappifest publish --manifest ${ios_manifest_path} --access-token ${zappToken}`
         );
