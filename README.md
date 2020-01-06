@@ -11,13 +11,13 @@
 
 ## :paperclip: Table of contents
 
-- [Overview](#overview)
+- [Overview](#eyeglasses-overview)
 - [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [How to add new framework?](#how-to-add-new-framework)
-- [How to update existing framework?](#how-to-update-existing-framework)
-- [How it works?](#how-it-works)
+- [Usage](#pencil2-usage)
+- [Folder Structure](#file_folder-folder-structure)
+- [How to add new framework?](#page_facing_up-how-to-add-new-framework)
+- [How to update existing framework?](#page_with_curl-how-to-update-existing-framework)
+- [How it works?](#mortar_board-how-it-works)
 
 ## :eyeglasses: Overview
 
