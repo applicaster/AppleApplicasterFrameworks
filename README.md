@@ -11,13 +11,13 @@
 
 ## Table of contents
 
-- [Overview](##-overview)
+- [Overview](#-overview)
 - [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
-- [Usage](##-usage)
-- [Folder Structure](##-folder-structure)
-- [How to add new framework?](##-how-to-add-new-framework?)
-- [How to update existing framework?](##-how-to-update-existing-framework?)
-- [How it works?](##-how-it-works?)
+- [Usage](#-usage)
+- [Folder Structure](#-folder-structure)
+- [How to add new framework?](#-how-to-add-new-framework?)
+- [How to update existing framework?](#-how-to-update-existing-framework?)
+- [How it works?](#-how-it-works?)
 
 ## Overview
 
