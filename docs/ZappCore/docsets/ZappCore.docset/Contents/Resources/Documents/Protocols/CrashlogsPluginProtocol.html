@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappCore 0.6.0 Docs</a>
+          <a href="../index.html">ZappCore 10.0.0 Docs</a>
           <span class="no-mobile"> (100% documented)</span>
         </p>
     
@@ -53,7 +53,8 @@
 
                   </div>
                 </div>
-              
+              <p>Conforming this protocol allows Zapp Crash logger plugin to support generic analytics system of Zapp App</p>
+
             </section>
             <section class="section task-group-section">
               <div class="task-group">
@@ -95,7 +96,19 @@
                                 </td>
                                 <td>
                                   <div>
-                                    <p>- Completion handler if plugin ready for  usage</p>
+                                    <p>notifies caller  that plugin has beed finished preparation</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>isReady</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>in case plugin ready to use  returns true otherwise false</p>
                                   </div>
                                 </td>
                               </tr>

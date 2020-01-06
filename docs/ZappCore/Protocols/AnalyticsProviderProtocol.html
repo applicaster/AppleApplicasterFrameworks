@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappCore 0.6.0 Docs</a>
+          <a href="../index.html">ZappCore 10.0.0 Docs</a>
           <span class="no-mobile"> (100% documented)</span>
         </p>
     
@@ -53,7 +53,8 @@
 
                   </div>
                 </div>
-              
+              <p>Conforming this protocol allows Zapp Analytics plugin to support generic analytics system of Zapp App</p>
+
             </section>
             <section class="section task-group-section">
               <div class="task-group">
@@ -71,7 +72,8 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>Readable name of the analytics plugin</p>
+
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
@@ -98,7 +100,14 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>Invokation of this function must prepare analytics plugin for use.</p>
+<div class="aside aside-attention">
+    <p class="aside-title">Attention</p>
+    Application will wait completion of this func to present application.
+Completion must be called as soon as  possible
+
+</div>
+
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
@@ -107,6 +116,49 @@
                             <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareProvider</span><span class="p">(</span><span class="n">_</span> <span class="nv">mandatoryDefaultParams</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">isReady</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>mandatoryDefaultParams</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>default parameters for analytics plugins</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completion</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Completion handler that notify app level that component  ready to  be presented or fail</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>isReady</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>notify callback if analytics plugin is ready for use</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -124,7 +176,8 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>Invokation of this function must send event to analytics provider</p>
+
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
@@ -134,6 +187,37 @@
 <span class="kd">func</span> <span class="nf">sendEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">eventName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>eventName</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Unique event name that used as event key</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>parameters</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary that should be passed as values for specific event</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -151,7 +235,13 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>Invokation of this function must send screen event to analytics provider</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If plugin does not support screen events, logic can be passed default event with parameters
+
+</div>
+
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
@@ -161,6 +251,37 @@
 <span class="kd">func</span> <span class="nf">sendScreenEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">screenName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>screenName</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Unique screen name</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>parameters</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary that should be passed as values for specific event</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -178,7 +299,9 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>Invokation of this method will notify analytics plugin that timed event was started
+Plugin should wait until stopObserveTimedEvent: will be called</p>
+
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
@@ -188,6 +311,37 @@
 <span class="kd">optional</span> <span class="kd">func</span> <span class="nf">startObserveTimedEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">eventName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>eventName</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Unique event name that used as event key</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>parameters</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary that should be passed as values for specific event</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -205,7 +359,9 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>Invokation of this method will notify analytics plugin that timed event was finished
+Call of this method should send timed event to analytics provider</p>
+
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
@@ -215,6 +371,37 @@
 <span class="kd">optional</span> <span class="kd">func</span> <span class="nf">stopObserveTimedEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">eventName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>eventName</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Unique event name that used as event key</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>parameters</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary that should be passed as values for specific event</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>

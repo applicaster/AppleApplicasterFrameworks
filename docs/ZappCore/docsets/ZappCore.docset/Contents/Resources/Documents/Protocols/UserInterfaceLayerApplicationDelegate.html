@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappCore 0.6.0 Docs</a>
+          <a href="../index.html">ZappCore 10.0.0 Docs</a>
           <span class="no-mobile"> (100% documented)</span>
         </p>
     
@@ -48,11 +48,13 @@
               <h1>UserInterfaceLayerApplicationDelegate</h1>
                 <div class="declaration">
                   <div class="language">
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">UserInterfaceLayerApplicationDelegate</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">UserInterfaceLayerApplicationDelegate</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                   </div>
                 </div>
-              
+              <p>The protocol allows to support messaging that comes from <code>UIApplicationDelegate</code>
+This maybe relevant to inform UILayer Plugin in cases url schme comes to application</p>
+
             </section>
             <section class="section task-group-section">
               <div class="task-group">
@@ -70,7 +72,8 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>Delegate instance that conoforms implemented <code>UIApplicationDelegate</code> functions</p>
+
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>

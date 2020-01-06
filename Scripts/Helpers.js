@@ -26,7 +26,7 @@ function circleBranch() {
 }
 
 function isMasterBranch() {
-  return circleBranch == "master";
+  return circleBranch() == "master";
 }
 
 function compareVersion(ver1, ver2) {
@@ -42,9 +42,12 @@ function automationVersionsDataJSON() {
   }
 }
 
-function updateAutomationVersionsDataJSON(data) {
+async function updateAutomationVersionsDataJSON(data) {
   const json = JSON.stringify(data);
-  fs.writeFileSync(".versions_automation.json", json, { encoding: "utf8" });
+  fs.writeFileSync(".versions_automation.json", json, {
+    encoding: "utf8"
+  });
+  return true;
 }
 
 function gitTagDate() {

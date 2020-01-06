@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="index.html">ZappCore 0.6.0 Docs</a>
+          <a href="index.html">ZappCore 10.0.0 Docs</a>
           <span class="no-mobile"> (100% documented)</span>
         </p>
     
@@ -64,7 +64,8 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>The UserInterfaceLayerProtocol protocol defines methods that allow you to implement UI Layer plugin inside Zapp infrustrature .
+                          <p>The UserInterfaceLayerProtocol protocol defines methods that allow you
+to implement UI Layer plugin inside Zapp infrustrature .
 The methods of this protocol are mandatory.</p>
 
                           <a href="Protocols/UserInterfaceLayerProtocol.html" class="slightly-smaller">See more</a>
@@ -93,14 +94,16 @@ The methods of this protocol are mandatory.</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>The protocol allows to support messaging that comes from <code>UIApplicationDelegate</code>
+This maybe relevant to inform UILayer Plugin in cases url schme comes to application</p>
+
                           <a href="Protocols/UserInterfaceLayerApplicationDelegate.html" class="slightly-smaller">See more</a>
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">UserInterfaceLayerApplicationDelegate</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">UserInterfaceLayerApplicationDelegate</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                           </div>
                         </div>

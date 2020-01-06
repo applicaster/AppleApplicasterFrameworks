@@ -8,7 +8,8 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/applicaster/AppleApplicasterFrameworks.git"
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
-  s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "1"  }
+  s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', 
+                         :tag => '2020.28.1.17-1-1'  }
   s.platform         = :ios, '10.0'
   s.requires_arc = true
   s.static_framework = true

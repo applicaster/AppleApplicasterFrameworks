@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappCore 0.6.0 Docs</a>
+          <a href="../index.html">ZappCore 10.0.0 Docs</a>
           <span class="no-mobile"> (100% documented)</span>
         </p>
     
@@ -52,7 +52,8 @@
 
                   </div>
                 </div>
-              <p>The UserInterfaceLayerProtocol protocol defines methods that allow you to implement UI Layer plugin inside Zapp infrustrature .
+              <p>The UserInterfaceLayerProtocol protocol defines methods that allow you
+to implement UI Layer plugin inside Zapp infrustrature .
 The methods of this protocol are mandatory.</p>
 
             </section>
@@ -100,7 +101,9 @@ The methods of this protocol are mandatory.</p>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>A dictionary indicating the reason the app was launched (if any). The contents of this dictionary may be empty in situations where the user launched the app directly. For information about the possible keys in this dictionary and how to handle them, see Launch Options Keys.</p>
+                                    <p>A dictionary indicating the reason the app was launched (if any).
+The contents of this dictionary may be empty in situations where the user launched the app directly.
+For information about the possible keys in this dictionary and how to handle them, see Launch Options Keys.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -112,7 +115,8 @@ The methods of this protocol are mandatory.</p>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>Dictionary of general configuration of the application that  may  needed to initialization or usage  UI Layer  plugin</p>
+                                    <p>Dictionary of general configuration of the application that
+may needed to initialization or usage  UI Layer  plugin</p>
                                   </div>
                                 </td>
                               </tr>
@@ -138,12 +142,14 @@ The methods of this protocol are mandatory.</p>
                           <p>Invokation of this method must prepare UI Layer plugin for use.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    Plugin in this method must called logic that needs to be done before UI Layer plugin will be presented. Like load <code>River.json</code> that has information about screens to present.
+    Plugin in this method must called logic that needs to be done before UI Layer plugin will be presented.
+Like load <code>River.json</code> that has information about screens to present.
 Do not use in this func any loaders that may be called later.
 
 </div><div class="aside aside-attention">
     <p class="aside-title">Attention</p>
-    Application will wait completion of this func to present application. Completion must be called as soon as  possible
+    Application will wait completion of this func to present application.
+Completion must be called as soon as  possible
 
 </div>
 
@@ -180,7 +186,8 @@ Do not use in this func any loaders that may be called later.
                                 </td>
                                 <td>
                                   <div>
-                                    <p>ViewController instance of root view  controller of the UI Layer plugin, in case plugin failed to present must call nil</p>
+                                    <p>ViewController instance of root view  controller of the UI Layer plugin,
+in case plugin failed to present must call nil</p>
                                   </div>
                                 </td>
                               </tr>
@@ -192,7 +199,8 @@ Do not use in this func any loaders that may be called later.
                                 </td>
                                 <td>
                                   <div>
-                                    <p>Error handler in case plugin can not be presented for some reason, Error must  be provided  in case fail, otherwise nil</p>
+                                    <p>Error handler in case plugin can not be presented for some reason,
+Error must  be provided  in case fail, otherwise nil</p>
                                   </div>
                                 </td>
                               </tr>
