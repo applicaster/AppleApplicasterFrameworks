@@ -201,8 +201,38 @@ Apple Framworks
 		- Copy created before `tvos.json` file from root repo folder and rename it to `ios.json.ejs`.
 			- Change filed to `"manifest_version": "<%= version_id %>"`
 			- Change filed to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
+- Open `FrameworksList.md.ejs` file:
+	- If Zapp plugin
+		- Find plugin type. Example `### Type: Analytics`
+		- If type not exist under section. `## Zapp Plugins` add new type `### Type: New Type`
+		- Add new framework title with format `#### Framework readable name: <%= framework_id %>`.   Where `framework_id` must be value defined in `FrameworksData.plist`
+		- Add description.
+		- Add link to generated documentation.
+		- Add links to Zapp manifests.
+		- Example:
+		```swift
+	        ### Type: Analytics
 
+            #### Google Analytics: <%= ZappGoogleAnalytics %>
+            - **Description:** Google Analytics provider, deliver passed analytics data to service [Google Analytics](https://analytics.google.com/)
+            - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
+            - **Manifest:**
+                - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=ios)
+                - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=tvos)
+		```
+	- If not Zapp plugin
+		- Add new framework under `# Frameworks List` title with format `#### Framework readable name: <%= framework_id %>`.   Where `framework_id` must be value defined in `FrameworksData.plist`
+		- Add description.
+		- Add link to generated documentation.
+		- Add links to Zapp manifests.
+		- Example:
+		```swift
+	        # Frameworks List
 
+            #### ZappCore: <%= ZappCore %>
+            - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
+            - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
+		```
 
 
 
