@@ -259,7 +259,7 @@ Apple Framworks
 - All scripts of the repo automation inside `Scripts` folder
 - Automation contains from two general scripts.
 	- Validate Frameworks: It checks if defined frameworks in `FrameworksData.plist` has all files that needed to support framework. This script called on each commit. If validation failed CI build will be finished with fail
-	- Publish Frameworks: Script check if framework need to be published. Previous frameworks  data saved in `.versions_automation.json`. It compare new data in `FrameworksData.plist` and  `.versions_automation.json` all diffs framework or not existing will be published. Script is doing next steps:
+	- Publish Frameworks: Script check if framework need to be published. Previous frameworks  data saved in `.versions_automation.json`. It compare new data in `FrameworksData.plist` and  `.versions_automation.json` all diffs framework or not existing will be published. This script called on `master` branch only.Script is doing next steps:
 		- Get current data in format `2020.15.0.20-1-6` This string will be used as `git tag`
 		- Go throught all templates in [ejs](https://ejs.co) format for frameworks that need to be updated. It update to new `version number` in `ejs` key `<%= version_id %>` and `git tag` in `ejs` key` <%= new_tag %>`.
 
