@@ -14,36 +14,6 @@
 	</dict>
 	<dict>
 		<key>framework</key>
-		<string>ZappGoogleAnalytics</string>
-		<key>version_id</key>
-		<string>0.4.0</string>
-		<key>folder_path</key>
-		<string>Frameworks/Plugins/Analytics/GoogleAnalytics</string>
-		<key>is_plugin</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>framework</key>
-		<string>ZappGoogleInteractiveMediaAds</string>
-		<key>version_id</key>
-		<string>0.4.0</string>
-		<key>folder_path</key>
-		<string>Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds</string>
-		<key>is_plugin</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>framework</key>
-		<string>ZappFirebaseAnalytics</string>
-		<key>version_id</key>
-		<string>0.2.0</string>
-		<key>folder_path</key>
-		<string>Frameworks/Plugins/Analytics/Firebase</string>
-		<key>is_plugin</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>framework</key>
 		<string>ZappCrashlogsMsAppCenter</string>
 		<key>version_id</key>
 		<string>4.1.0</string>
