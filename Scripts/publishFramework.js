@@ -184,7 +184,7 @@ async function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
     await shell.exec(`git add ${framework}.podspec`);
     await shell.exec(`git add ${folder_path}`);
   });
-  frameworksList.forEach(model => {
+  itemsToUpdate.forEach(model => {
     const { framework = null, version_id = null } = model;
     commitMessage += `, [${framework}:${version_id}]`;
   });
