@@ -7,7 +7,7 @@
   "dependency_repository_url": [],
   "extra_dependencies": [
     {
-      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 2020.54.1.22-1-4"
+      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 2020.38.1.23-1-1"
     }
   ],
   "platform": "ios",
