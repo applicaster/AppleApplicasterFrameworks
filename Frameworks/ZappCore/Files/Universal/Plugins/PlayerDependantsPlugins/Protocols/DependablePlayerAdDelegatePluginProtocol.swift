@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Ad Delegate keys
 public struct DependablePlayerAdDelegatePluginProtocolKeys {
     public static let playingKey = "advertismentPlaying"
 }

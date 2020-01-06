@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Conforming this protocol allows Zapp Crash logger plugin to support generic analytics system of Zapp App
 @objc public protocol CrashlogsPluginProtocol: ZPAdapterProtocol {
     /// Prepare  plugin for usage
     /// - Parameter completion: notifies caller  that plugin has beed finished preparation

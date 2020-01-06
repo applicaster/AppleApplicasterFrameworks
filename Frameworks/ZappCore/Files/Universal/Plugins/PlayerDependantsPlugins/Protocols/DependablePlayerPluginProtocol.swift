@@ -11,7 +11,10 @@ import Foundation
 
 /// Currently availible types of dependant plugins
 public struct VideoDependantPlugins {
+    /// Video andevertisment type
     public static let VideoAdvertisement = ZPPluginType.VideoAdvertisement.rawValue
+
+    /// Analytics  type
     public static let Analytics = ZPPluginType.Analytics.rawValue
 }
 

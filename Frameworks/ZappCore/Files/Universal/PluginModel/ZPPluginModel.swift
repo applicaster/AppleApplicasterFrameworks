@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// General keys of the Zapp Plugin Model
 public struct ZappPluginModelKeys {
     static let kPlugin = "plugin"
     static let kIdentifier = "identifier"
@@ -21,6 +22,7 @@ public struct ZappPluginModelKeys {
     static let kReactNativePlugin = "react_native"
 }
 
+/// Availible types of ZappPlugins
 public enum ZPPluginType: String {
     case Root = "menu"
     case VideoPlayer = "player"

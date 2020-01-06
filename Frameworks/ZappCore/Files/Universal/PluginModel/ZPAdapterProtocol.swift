@@ -8,11 +8,20 @@
 
 import UIKit
 
+/// Base Zapp Plugin protocol
 @objc public protocol ZPAdapterProtocol: NSObjectProtocol {
+    
+    /// Dictionary with configuration params that passed  from ZPModel
     var configurationJSON: NSDictionary? { get }
+    
+    /// Initialization with configurationJSON
+    /// - Parameter configurationJSON: Dictionary with configuration params that passed  from ZPModel
     init(configurationJSON: NSDictionary?)
     init()
 
+    
+    /// Handle open url scheme by plugin
+    /// - Parameter params: url scheme params
     @objc optional func handleUrlScheme(_ params: NSDictionary)
 
     /**

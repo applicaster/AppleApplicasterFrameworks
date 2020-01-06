@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Implamentation of this protocol allow Player dependant plugins type to observe a player isntance
 @objc public protocol PlayerObserverProtocol {
     /// Player finished play video item
     ///

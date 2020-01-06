@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Conforming this protocol allows Zapp Player plugin to support generic analytics system of Zapp App
 @objc public protocol PlayerProtocol: NSObjectProtocol {
     /// DS raw atom entry format
     @objc var entry: [String: Any]? { get }
