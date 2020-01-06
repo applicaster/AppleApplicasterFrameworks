@@ -11,13 +11,13 @@
 
 ## Table of contents
 
-- [Overview](#overview)
+- [Overview](#-overview)
 - [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
-- [Usage](#usage)
-- [Folder Structure](#folder_structure)
-- [How to add new framework?](#how_to_add_new_framework)
-- [How to update existing framework?](#how_to_update_framework)
-- [How it works?](how_it_works)
+- [Usage](#-usage)
+- [Folder Structure](#-folder-structure)
+- [How to add new framework?](#-how-to-add-new-framework?)
+- [How to update existing framework?](#-how-to-update-existing-framework?)
+- [How it works?](#-how-it-works?)
 
 ## Overview
 
@@ -25,11 +25,11 @@ This respository is a main container for general frameworks and plugins for [Zap
 
 ## Usage
 
-To use any framework availible in this repo add cocoapods dependency in podfile in format `framework_name` repo tag.
-List of all framework can be checked [here](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
+To use any framework availible in this repo add cocoapods dependency in podfile.
+List of all frameworks can be checked [here](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
 ** Example:**
-```podfile
-
+```ruby
+pod 'ZappCore', :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.15.0.20-1-6'
 ```
 ## Folder Structure
 Repository has predefined structure if you want to add something, please use strictly structure
