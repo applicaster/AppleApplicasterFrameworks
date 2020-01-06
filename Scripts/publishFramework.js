@@ -141,6 +141,7 @@ function uploadManifestsToZapp(itemsToUpdate) {
         platform: "tvos",
         template: false
       });
+      console.log(iosManifestPath);
       if (iosManifestPath && fs.existsSync(iosManifestPath)) {
         execSync(
           `zappifest publish --manifest ${ios_manifest_path} --access-token ${zappToken}`
@@ -172,7 +173,7 @@ function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
   let commitMessage = `System update, expected tag:${newGitTag}, frameworks:`;
   itemsToUpdate.forEach(model => {
     const { framework = null, version_id = null } = model;
-    sh("git add #{framework}.podspec");
+    console.log("git add #{framework}.podspec");
     commitMessage += ` <${framework}:${version_id}>`;
   });
   console.log(`Message to commit: ${commitMessage}`);
