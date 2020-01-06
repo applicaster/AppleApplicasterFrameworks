@@ -44,7 +44,6 @@ This respository is the main container for general frameworks and plugins for [Z
 ## :pencil2: Usage
 
 To use any framework availible in this repo add cocoapods dependency in podfile.
-List of all frameworks can be checked [here](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
 
 **Example:**
 ```ruby
