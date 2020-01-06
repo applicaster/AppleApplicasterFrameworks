@@ -43,6 +43,9 @@ Apple Framworks
 ├── Frameworks // Frameworks data seperated by folders.
 │   ├── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
 │   │   ├── Files // Files that relevant for the framework.
+│   │   │   ├── ios // Files that can be used in iOS only
+│   │   │   ├── tvos // Files that can be used in tvOS only
+│   │   │   └── Universal // Files that can be used in iOS and tvOS
 │   │   ├── Project // Xcode Project created to generate documentation.
 │   │   │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
 │   │   │   └── * // Files relevant to project
