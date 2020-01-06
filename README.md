@@ -62,7 +62,8 @@ Apple Framworks
 │       │   ├── Templates // Template files relevant for framework automation.
 │       │   │   ├── .ios.json.ejs // Template manifest for ios ZAPP PLUGIN structure.
 │       │   │   ├── .tvos.json.ejs // Template manifest for tvos ZAPP PLUGIN structure.
-│       └── └── └── .jazzy.yaml.ejs // Jazzy template configuration file that defined to create auto generated docs.
+│       │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that defined to create auto generated docs.
+│       └── └── └── FrameworkName.podpec.ejs  // Cocoapods template dependency.
 ├── FrameworksApp // General client app that has defined all availible frameworks.
 ├── FrameworksList.md.ejs // Template plugins list documentations file.
 ├── Scripts // Automotization scripts. All scripts defined in JavaScript.
