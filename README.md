@@ -10,10 +10,11 @@
 - **License:** [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)
 
 ## Table of contents
-- [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
+
 - [Overview](#overview)
-- [Folder Structure](#folder_structure)
+- [Frameworks List](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
 - [Usage](#usage)
+- [Folder Structure](#folder_structure)
 - [How to add new framework?](#how_to_add_new_framework)
 - [How to update existing framework?](#how_to_update_framework)
 - [How it works?](how_it_works)
@@ -22,6 +23,14 @@
 
 This respository is a main container for general frameworks and plugins for [ZappApple](https://github.com/applicaster/AppleApplicasterFrameworks) project. Each frameworks defined here support `cocoapods` as dependency manager.
 
+## Usage
+
+To use any framework availible in this repo add cocoapods dependency in podfile in format `framework_name` repo tag.
+List of all framework can be checked [here](https://applicaster.github.io/AppleApplicasterFrameworks/FrameworksList.md)
+** Example:**
+```podfile
+
+```
 ## Folder Structure
 Repository has predefined structure if you want to add something, please use strictly structure
 
@@ -233,7 +242,8 @@ Apple Framworks
             - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
             - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 		```
-
+- Push code and create PR. Fill PR template.
+- After review merge code.
 
 
 
