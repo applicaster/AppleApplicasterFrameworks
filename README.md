@@ -273,7 +273,7 @@ Apple Framworks
         | tvos.json.ejs |tvOS Zapp plugin manifest template|YES|
 
         - Generate documentation for framework and saves it to `docs` folder.
-        - Upload manifest to Zapp with [Zappifest](https://github.com/applicaster/zappifest).
+        - Upload manifest to Zapp with [Zappifest](https://github.com/applicaster/zappifest) (Zapp plugins only).
         - Update Frameworks list template `FrameworksList.md.ejs` to update latest availible framework version for documentation.
         - Update file `.versions_automation.json` with latest changes if format `{framework_name:version_id}`
         - Commit, push and create tag git repo
