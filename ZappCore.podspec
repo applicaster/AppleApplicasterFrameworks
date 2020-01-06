@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
   s.license = 'Appache 2.0'
   s.author = { 'a.kononenko@applicaster.com' => 'a.kononenko@applicaster.com' }
-  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.38.1.23-1-1" }
+  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.55.1.23-1-8" }
   
   s.source_files = 'Frameworks/ZappCore/Files/Universal/**/*.{swift}'
 end
