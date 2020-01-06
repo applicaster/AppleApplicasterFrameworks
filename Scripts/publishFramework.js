@@ -14,10 +14,10 @@ const {
 
 const { updateTemplate, manifestPath } = require("./publishFrameworkHelper");
 
-// if (isMasterBranch() == false) {
-//   console.log("Step was skipped, 'master' branch required");
-//   process.exit(0);
-// }
+if (isMasterBranch() == false) {
+  console.log("Step was skipped, 'master' branch required");
+  process.exit(0);
+}
 
 const frameworksList = readFrameworkDataPlist();
 const frameworksAutomationList = automationVersionsDataJSON();
@@ -41,10 +41,10 @@ frameworksList.forEach(model => {
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
   updateRelevantTemplates(itemsToUpdate, newGitTag);
-  // generateDocumentation(itemsToUpdate);
-  // uploadManifestsToZapp(itemsToUpdate);
+  generateDocumentation(itemsToUpdate);
+  uploadManifestsToZapp(itemsToUpdate);
   updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
-  // commitChangesPushAndTag(itemsToUpdate, newGitTag);
+  commitChangesPushAndTag(itemsToUpdate, newGitTag);
 }
 updateAutomationVersionsDataJSON(newAutomationObject);
 console.log("System update has been finished!");
@@ -156,12 +156,13 @@ function uploadManifestsToZapp(itemsToUpdate) {
 }
 
 function updateFrameworksVersionsInGeneralDocs(itemsToUpdate) {
+  let ejsData = {};
+
   itemsToUpdate.forEach(model => {
     const { framework = null, version_id = null } = model;
-    const ejsData = {};
     ejsData[framework] = version_id;
-    updateTemplate(ejsData, `FrameworksList.md.ejs`, `docs/FrameworksList.md`);
   });
+  updateTemplate(ejsData, `FrameworksList.md.ejs`, `docs/FrameworksList.md`);
 }
 
 function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
