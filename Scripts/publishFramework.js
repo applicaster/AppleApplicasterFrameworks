@@ -14,10 +14,10 @@ const {
 
 const { updateTemplate, manifestPath } = require("./publishFrameworkHelper");
 
-// if (isMasterBranch() == false) {
-//   console.log("Step was skipped, 'master' branch required");
-//   process.exit(0);
-// }
+if (isMasterBranch() == false) {
+  console.log("Step was skipped, 'master' branch required");
+  process.exit(0);
+}
 
 const frameworksList = readFrameworkDataPlist();
 const frameworksAutomationList = automationVersionsDataJSON();
@@ -41,12 +41,12 @@ frameworksList.forEach(model => {
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
   updateRelevantTemplates(itemsToUpdate, newGitTag);
-  // generateDocumentation(itemsToUpdate);
-  // uploadManifestsToZapp(itemsToUpdate);
-  // updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
-  // commitChangesPushAndTag(itemsToUpdate, newGitTag);
+  generateDocumentation(itemsToUpdate);
+  uploadManifestsToZapp(itemsToUpdate);
+  updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
+  updateAutomationVersionsDataJSON(newAutomationObject);
+  commitChangesPushAndTag(itemsToUpdate, newGitTag);
 }
-updateAutomationVersionsDataJSON(newAutomationObject);
 console.log("System update has been finished!");
 
 function updateRelevantTemplates(itemsToUpdate, newGitTag) {
@@ -168,6 +168,7 @@ function updateFrameworksVersionsInGeneralDocs(itemsToUpdate) {
 function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
   execSync("git add docs");
   execSync("git add Frameworks");
+  execSync("git add .versions_automation.json");
   let commitMessage = `System update, expected tag:${newGitTag}, frameworks:`;
   itemsToUpdate.forEach(model => {
     const { framework = null, version_id = null } = model;

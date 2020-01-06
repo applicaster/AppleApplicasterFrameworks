@@ -246,14 +246,34 @@ Apple Framworks
 - Push code and create PR. Fill PR template.
 - After review merge code.
 
-
-
 ## How to update existing framework
 
 - Create branch `framework_name_update_version_id`
-- Update framework code. Based on rules described in [creation new framework](how_to_add_new_framework)
+- Update framework code. Based on rules described in [creation new framework](#how-to-add-new-framework)
 - Update version of your framework in `frameworksData.plist` based on `major/minor/bug` `1.0.0` convension.
 - Push code and create PR. Fill PR template.
 - After review merge code.
 
 ## How it works?
+
+- All scripts of the repo automation inside `Scripts` folder
+- Automation contains from two general scripts.
+	- Validate Frameworks: It checks if defined frameworks in `FrameworksData.plist` has all files that needed to support framework. This script called on each commit. If validation failed CI build will be finished with fail
+	- Publish Frameworks: Script check if framework need to be published. Previous frameworks  data saved in `.versions_automation.json`. It compare new data in `FrameworksData.plist` and  `.versions_automation.json` all diffs framework or not existing will be published. Script is doing next steps:
+		- Get current data in format `2020.15.0.20-1-6` This string will be used as `git tag`
+		- Go throught all templates in [ejs](https://ejs.co) format for frameworks that need to be updated. It update to new `version number` in `ejs` key `<%= version_id %>` and `git tag` in `ejs` key` <%= new_tag %>`.
+
+		** Template List**
+
+		| File name | Description | Zapp plugins only |
+        |--------|--------|--------|
+        | .jazzy.yaml.ejs |Documentation generator templte|NO|
+        | framework_name.podspec.ejs |Cocoapods podspec template|NO|
+        | ios.json.ejs |iOS Zapp plugin manifest template|YES|
+        | tvos.json.ejs |tvOS Zapp plugin manifest template|YES|
+
+        - Generate documentation for framework and saves it to `docs` folder.
+        - Upload manifest to Zapp with [Zappifest](https://github.com/applicaster/zappifest).
+        - Update Frameworks list template `FrameworksList.md.ejs` to update latest availible framework version for documentation.
+        - Update file `.versions_automation.json` with latest changes if format `{framework_name:version_id}`
+        - Commit, push and create tag git repo
