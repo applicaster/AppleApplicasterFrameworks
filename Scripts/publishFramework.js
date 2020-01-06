@@ -14,10 +14,10 @@ const {
 
 const { updateTemplate, manifestPath } = require("./publishFrameworkHelper");
 
-// if (isMasterBranch() == false) {
-//   console.log("Step was skipped, 'master' branch required");
-//   process.exit(0);
-// }
+if (isMasterBranch() == false) {
+  console.log("Step was skipped, 'master' branch required");
+  process.exit(0);
+}
 
 const frameworksList = readFrameworkDataPlist();
 const frameworksAutomationList = automationVersionsDataJSON();
@@ -41,11 +41,11 @@ frameworksList.forEach(model => {
 if (itemsToUpdate.length > 0) {
   const newGitTag = gitTagDate();
   updateRelevantTemplates(itemsToUpdate, newGitTag);
-  // generateDocumentation(itemsToUpdate);
+  generateDocumentation(itemsToUpdate);
   uploadManifestsToZapp(itemsToUpdate);
-  // updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
-  // updateAutomationVersionsDataJSON(newAutomationObject);
-  // commitChangesPushAndTag(itemsToUpdate, newGitTag);
+  updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
+  updateAutomationVersionsDataJSON(newAutomationObject);
+  commitChangesPushAndTag(itemsToUpdate, newGitTag);
 }
 console.log("System update has been finished!");
 
