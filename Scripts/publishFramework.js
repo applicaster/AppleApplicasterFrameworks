@@ -54,8 +54,6 @@ async function run() {
 
 async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
   const promises = itemsToUpdate.map(async model => {
-    console.log({ model });
-
     const {
       framework = null,
       version_id = null,
@@ -182,12 +180,14 @@ async function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
   await shell.exec("git add .versions_automation.json");
   let commitMessage = `System update, expected tag:${newGitTag}, frameworks:`;
   const promises = itemsToUpdate.map(async model => {
-    const { framework = null, version_id = null, folder_path = null } = model;
+    const { framework = null, folder_path = null } = model;
     await shell.exec(`git add ${framework}.podspec`);
     await shell.exec(`git add ${folder_path}`);
+  });
+  frameworksList.forEach(model => {
+    const { framework = null, version_id = (null = null) } = model;
     commitMessage += `, [${framework}:${version_id}]`;
   });
-
   console.log(`Message to commit: ${commitMessage}`);
   await shell.exec(`git commit -m "${commitMessage}"`);
   await shell.exec("git push origin master");
