@@ -11,6 +11,7 @@ target 'FrameworksApp' do
   supports_swift_versions '5.1'
   use_frameworks!
   pod 'ZappCore', :path => '../ZappCore.podspec'
+  pod 'ZappApple', :path => '../ZappApple.podspec'
   pod 'ZappGoogleAnalytics', :path => '../ZappGoogleAnalytics.podspec'
   pod 'ZappGoogleInteractiveMediaAds', :path => '../ZappGoogleInteractiveMediaAds.podspec'
   pod 'ZappCrashlogsMsAppCenter', :path => '../ZappCrashlogsMsAppCenter.podspec'

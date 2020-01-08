@@ -44,7 +44,7 @@ async function run() {
     console.log({ itemsToUpdate });
     await updateRelevantTemplates(itemsToUpdate, newGitTag);
     await generateDocumentation(itemsToUpdate);
-    await updateFrameworksVersionsInGeneralDocs(itemsToUpdate);
+    await updateFrameworksVersionsInGeneralDocs(frameworksList);
     await updateAutomationVersionsDataJSON(newAutomationObject);
     await commitChangesPushAndTag(itemsToUpdate, newGitTag);
     await uploadManifestsToZapp(itemsToUpdate);
