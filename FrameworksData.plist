@@ -22,5 +22,15 @@
 		<key>is_plugin</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>framework</key>
+		<string>ZappApple</string>
+		<key>version_id</key>
+		<string>0.1.0</string>
+		<key>folder_path</key>
+		<string>Frameworks/ZappApple</string>
+		<key>is_plugin</key>
+		<false/>
+	</dict>
 </array>
 </plist>

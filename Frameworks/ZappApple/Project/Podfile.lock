@@ -1,0 +1,29 @@
+PODS:
+  - AppCenter/Core (2.3.0)
+  - AppCenter/Distribute (2.3.0):
+    - AppCenter/Core
+  - ReachabilitySwift (4.3.0)
+  - ZappCore (0.6.0)
+
+DEPENDENCIES:
+  - AppCenter/Distribute (= 2.3.0)
+  - ReachabilitySwift (= 4.3.0)
+  - ZappCore (from `../../../ZappCore.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - AppCenter
+    - ReachabilitySwift
+
+EXTERNAL SOURCES:
+  ZappCore:
+    :path: "../../../ZappCore.podspec"
+
+SPEC CHECKSUMS:
+  AppCenter: 9784d2fc998c9bd0b8fbaf4fb9ed69526d12ce1a
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  ZappCore: 313dd00d65aacc4546cb545b351278636ecb9a19
+
+PODFILE CHECKSUM: d82363d1b84523ddb9f566edd7080175cc8ff1f5
+
+COCOAPODS: 1.8.3
