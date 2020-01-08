@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IdentityClientBase Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/IdentityClientBase" class="dashAnchor"></a>
+    <a title="IdentityClientBase Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">ZappApple 0.1.0 Docs</a>
+          <span class="no-mobile"> (100% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/ZappCore">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">ZappApple Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          IdentityClientBase Class Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>IdentityClientBase</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">IdentityClientBase</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                  </div>
+                </div>
+              <p>This class is used to manage identity in various places.
+This identity is used agains the applicaster servers as a de-facto replacement of the Apple identifier parameter.</p>
+
+<p>This identifier is unique identifier supplied by the server and stored in a persistent way in the keychain.</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple18IdentityClientBaseC0cdE4KeysV"></a>
+                      <a name="//apple_ref/swift/Struct/IdentityClientBaseKeys" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple18IdentityClientBaseC0cdE4KeysV">IdentityClientBaseKeys</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>API Keys</p>
+
+                          <a href="../Classes/IdentityClientBase/IdentityClientBaseKeys.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IdentityClientBaseKeys</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple18IdentityClientBaseC0cdE10ServerTypeV"></a>
+                      <a name="//apple_ref/swift/Struct/IdentityClientBaseServerType" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple18IdentityClientBaseC0cdE10ServerTypeV">IdentityClientBaseServerType</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Server type struct keys</p>
+
+                          <a href="../Classes/IdentityClientBase/IdentityClientBaseServerType.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IdentityClientBaseServerType</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple18IdentityClientBaseC10serverTypeAC0cde6ServerG0VvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/serverType" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple18IdentityClientBaseC10serverTypeAC0cde6ServerG0VvpZ">serverType</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>General keys for AIS server</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">serverType</span><span class="p">:</span> <span class="kt">IdentityClientBase</span><span class="o">.</span><span class="kt"><a href="../Classes/IdentityClientBase/IdentityClientBaseServerType.html">IdentityClientBaseServerType</a></span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappApple@objc(cs)IdentityClientBase(py)bucketID"></a>
+                      <a name="//apple_ref/swift/Property/bucketID" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappApple@objc(cs)IdentityClientBase(py)bucketID">bucketID</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The current bucket ID</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">bucketID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappApple@objc(cs)IdentityClientBase(cpy)deviceID"></a>
+                      <a name="//apple_ref/swift/Variable/deviceID" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappApple@objc(cs)IdentityClientBase(cpy)deviceID">deviceID</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The unique identifier for this user.
+The unique identifier if one has been generated. <code>nil</code> otherwise.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">deviceID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappApple@objc(cs)IdentityClientBase(cpy)token"></a>
+                      <a name="//apple_ref/swift/Variable/token" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappApple@objc(cs)IdentityClientBase(cpy)token">token</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The token for this user.
+The token if one has been generated or <code>nil</code> if the latest token has expired or if none have been generated.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple18IdentityClientBaseC8bucketIDACSS_tcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(bucketID:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple18IdentityClientBaseC8bucketIDACSS_tcfc">init(bucketID:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Convinience initialization with bucket ID</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">bucketID</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>bucketID</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>String representaion of device bucket ID</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple18IdentityClientBaseC13createSession10completionyySb_SDySSypGSgAA14HTTPStatusCodeOSgtcSg_tF"></a>
+                      <a name="//apple_ref/swift/Method/createSession(completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple18IdentityClientBaseC13createSession10completionyySb_SDySSypGSgAA14HTTPStatusCodeOSgtcSg_tF">createSession(completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Try to generate a new session token.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">createSession</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">responseObject</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="n">_</span> <span class="nv">responseCode</span><span class="p">:</span> <span class="kt"><a href="../Enums/HTTPStatusCode.html">HTTPStatusCode</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completion</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Completions with creation session result.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple18IdentityClientBaseC16createURLRequest4from6method10Foundation0G0VSgAG3URLVSg_SStF"></a>
+                      <a name="//apple_ref/swift/Method/createURLRequest(from:method:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple18IdentityClientBaseC16createURLRequest4from6method10Foundation0G0VSgAG3URLVSg_SStF">createURLRequest(from:method:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Create URL Request for specific method type</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createURLRequest</span><span class="p">(</span><span class="n">from</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span>
+                             <span class="nv">method</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt"><a href="../Classes/IdentityClientBase/IdentityClientBaseKeys.html">IdentityClientBaseKeys</a></span><span class="o">.</span><span class="kt">PostMethod</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>url</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>URL that Request will use</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>method</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>mehtod type POST/PUT/DELETE</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>URL Request instance if can be created for specific URL</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappApple@objc(cs)IdentityClientBase(im)createDeviceWithCompletion:"></a>
+                      <a name="//apple_ref/swift/Method/createDevice(completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappApple@objc(cs)IdentityClientBase(im)createDeviceWithCompletion:">createDevice(completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Create / Get new device unique identifier and token</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDevice</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completion</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Completions with creation session result.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple18IdentityClientBaseC12dictFromData4dataSDySSypGSg10Foundation0H0VSg_tF"></a>
+                      <a name="//apple_ref/swift/Method/dictFromData(data:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple18IdentityClientBaseC12dictFromData4dataSDySSypGSg10Foundation0H0VSg_tF">dictFromData(data:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Try to serealize data object to dictionary</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dictFromData</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>data</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Data object to parse</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Dictonary if Data can be serealized, otherwise nil</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Zapp%20App%20Root%20View%20Controller.html">Zapp App Root View Controller</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/RootViewController.html">RootViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/AppDelegateProtocol.html">AppDelegateProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Plugins.html">Plugins</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/AnalyticsManager.html">AnalyticsManager</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CrashlogsPluginsManager.html">CrashlogsPluginsManager</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/PlayerDependantPluginsManager.html">PlayerDependantPluginsManager</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../AppLoading.html">AppLoading</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClient.html">IdentityClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClientBase.html">IdentityClientBase</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClientBase/IdentityClientBaseKeys.html">– IdentityClientBaseKeys</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClientBase/IdentityClientBaseServerType.html">– IdentityClientBaseServerType</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../CacheHelper.html">CacheHelper</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/APCachedModel.html">APCachedModel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/APCacheManager.html">APCacheManager</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/APFile.html">APFile</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/JsonSerializableProtocol.html">JsonSerializableProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Keychain.html">Keychain</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/HTTPStatusCode.html">HTTPStatusCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/HTTPStatusCode/ResponseType.html">– ResponseType</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../StateMachine.html">StateMachine</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/LoadingStateMachineDataSource.html">LoadingStateMachineDataSource</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/LoadingStateMachineDelegate.html">LoadingStateMachineDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/LoadingState.html">LoadingState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/LoadingStateMachine.html">LoadingStateMachine</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Storages.html">Storages</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/ZappStorageProtocol.html">ZappStorageProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/LocalStorage.html">LocalStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SessionStorage.html">SessionStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/StorageHelper.html">StorageHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/StorageInitialization.html">StorageInitialization</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Categories.html">Categories</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/AVURLAsset.html">AVURLAsset</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/String.html">String</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIApplication.html">UIApplication</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIColor.html">UIColor</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Classes.html">Other Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/MsAppCenterDistributionHandler.html">MsAppCenterDistributionHandler</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple39kMSAppCenterCheckForUpdatesNotificationSSvp">kMSAppCenterCheckForUpdatesNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple20zappLocalStorageNameSSvp">zappLocalStorageName</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Enums.html">Other Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/LoadingStateTypes.html">LoadingStateTypes</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Extensions.html">Other Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/HTTPURLResponse.html">HTTPURLResponse</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Structs.html">Other Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/ZappStorageKeys.html">ZappStorageKeys</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Typealiases.html">Other Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple36AnalyticManagerPreparationCompletiona">AnalyticManagerPreparationCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple31ProviderSendAnalyticsCompletiona">ProviderSendAnalyticsCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple13StateCallBacka">StateCallBack</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple12StateHandlera">StateHandler</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>© 2019 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTTPStatusCode Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/HTTPStatusCode" class="dashAnchor"></a>
+    <a title="HTTPStatusCode Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">ZappApple 0.1.0 Docs</a>
+          <span class="no-mobile"> (100% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/ZappCore">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">ZappApple Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          HTTPStatusCode Enumeration Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>HTTPStatusCode</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HTTPStatusCode</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
+
+                  </div>
+                </div>
+              <p>This is a list of Hypertext Transfer Protocol (HTTP) response status codes.
+It includes codes from IETF internet standards, other IETF RFCs, other specifications, and some additional commonly used codes.
+The first digit of the status code specifies one of five classes of response; an HTTP client must recognise these five classes at a minimum.</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO12ResponseTypeO"></a>
+                      <a name="//apple_ref/swift/Enum/ResponseType" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO12ResponseTypeO">ResponseType</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The response class representation of status codes, these get grouped by their first digit.</p>
+
+                          <a href="../Enums/HTTPStatusCode/ResponseType.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ResponseType</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO8continueyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/continue" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO8continueyA2CmF">continue</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>continue: The server has received the request headers and the client should proceed to send the request body.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="err">`</span><span class="k">continue</span><span class="err">`</span> <span class="o">=</span> <span class="mi">100</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO18switchingProtocolsyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/switchingProtocols" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO18switchingProtocolsyA2CmF">switchingProtocols</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>switchingProtocols: The requester has asked the server to switch protocols and the server has agreed to do so.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">switchingProtocols</span> <span class="o">=</span> <span class="mi">101</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO10processingyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/processing" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO10processingyA2CmF">processing</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>processing: This code indicates that the server has received and is processing the request, but no response is available yet.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">processing</span> <span class="o">=</span> <span class="mi">102</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO2okyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/ok" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO2okyA2CmF">ok</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>ok: Standard response for successful HTTP requests.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">ok</span> <span class="o">=</span> <span class="mi">200</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO7createdyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/created" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO7createdyA2CmF">created</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>created: The request has been fulfilled, resulting in the creation of a new resource.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">created</span> <span class="o">=</span> <span class="mi">201</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO8acceptedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/accepted" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO8acceptedyA2CmF">accepted</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>accepted: The request has been accepted for processing, but the processing has not been completed.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">accepted</span> <span class="o">=</span> <span class="mi">202</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO27nonAuthoritativeInformationyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/nonAuthoritativeInformation" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO27nonAuthoritativeInformationyA2CmF">nonAuthoritativeInformation</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>nonAuthoritativeInformation: The server is a transforming proxy (e.g. a Web accelerator) that received a 200 OK from its origin, but is returning a modified version of the origin&rsquo;s response.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">nonAuthoritativeInformation</span> <span class="o">=</span> <span class="mi">203</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO9noContentyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/noContent" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO9noContentyA2CmF">noContent</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>noContent: The server successfully processed the request and is not returning any content.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noContent</span> <span class="o">=</span> <span class="mi">204</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO12resetContentyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/resetContent" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO12resetContentyA2CmF">resetContent</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>resetContent: The server successfully processed the request, but is not returning any content.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">resetContent</span> <span class="o">=</span> <span class="mi">205</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO14partialContentyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/partialContent" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO14partialContentyA2CmF">partialContent</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>partialContent: The server is delivering only part of the resource (byte serving) due to a range header sent by the client.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">partialContent</span> <span class="o">=</span> <span class="mi">206</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO11multiStatusyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/multiStatus" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO11multiStatusyA2CmF">multiStatus</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>multiStatus: The message body that follows is an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">multiStatus</span> <span class="o">=</span> <span class="mi">207</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO15alreadyReportedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/alreadyReported" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO15alreadyReportedyA2CmF">alreadyReported</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>alreadyReported: The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">alreadyReported</span> <span class="o">=</span> <span class="mi">208</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO6IMUsedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/IMUsed" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO6IMUsedyA2CmF">IMUsed</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>IMUsed: The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">IMUsed</span> <span class="o">=</span> <span class="mi">226</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO15multipleChoicesyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/multipleChoices" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO15multipleChoicesyA2CmF">multipleChoices</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>multipleChoices: Indicates multiple options for the resource from which the client may choose</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">multipleChoices</span> <span class="o">=</span> <span class="mi">300</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO16movedPermanentlyyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/movedPermanently" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO16movedPermanentlyyA2CmF">movedPermanently</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>movedPermanently: This and all future requests should be directed to the given URI.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">movedPermanently</span> <span class="o">=</span> <span class="mi">301</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO5foundyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/found" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO5foundyA2CmF">found</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>found: The resource was found.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">found</span> <span class="o">=</span> <span class="mi">302</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO8seeOtheryA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/seeOther" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO8seeOtheryA2CmF">seeOther</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>seeOther: The response to the request can be found under another URI using a GET method.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">seeOther</span> <span class="o">=</span> <span class="mi">303</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO11notModifiedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/notModified" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO11notModifiedyA2CmF">notModified</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>notModified: Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notModified</span> <span class="o">=</span> <span class="mi">304</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO8useProxyyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/useProxy" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO8useProxyyA2CmF">useProxy</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>useProxy: The requested resource is available only through a proxy, the address for which is provided in the response.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">useProxy</span> <span class="o">=</span> <span class="mi">305</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO11switchProxyyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/switchProxy" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO11switchProxyyA2CmF">switchProxy</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>switchProxy: No longer used. Originally meant &ldquo;Subsequent requests should use the specified proxy.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">switchProxy</span> <span class="o">=</span> <span class="mi">306</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO17temporaryRedirectyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/temporaryRedirect" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO17temporaryRedirectyA2CmF">temporaryRedirect</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>temporaryRedirect: The request should be repeated with another URI.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">temporaryRedirect</span> <span class="o">=</span> <span class="mi">307</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO17permenantRedirectyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/permenantRedirect" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO17permenantRedirectyA2CmF">permenantRedirect</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>permenantRedirect: The request and all future requests should be repeated using another URI.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">permenantRedirect</span> <span class="o">=</span> <span class="mi">308</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO10badRequestyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/badRequest" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO10badRequestyA2CmF">badRequest</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>badRequest: The server cannot or will not process the request due to an apparent client error.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badRequest</span> <span class="o">=</span> <span class="mi">400</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO12unauthorizedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/unauthorized" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO12unauthorizedyA2CmF">unauthorized</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>unauthorized: Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unauthorized</span> <span class="o">=</span> <span class="mi">401</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO15paymentRequiredyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/paymentRequired" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO15paymentRequiredyA2CmF">paymentRequired</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>paymentRequired: The content available on the server requires payment.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">paymentRequired</span> <span class="o">=</span> <span class="mi">402</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO9forbiddenyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/forbidden" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO9forbiddenyA2CmF">forbidden</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>forbidden: The request was a valid request, but the server is refusing to respond to it.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">forbidden</span> <span class="o">=</span> <span class="mi">403</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO8notFoundyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/notFound" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO8notFoundyA2CmF">notFound</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>notFound: The requested resource could not be found but may be available in the future.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notFound</span> <span class="o">=</span> <span class="mi">404</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO16methodNotAllowedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/methodNotAllowed" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO16methodNotAllowedyA2CmF">methodNotAllowed</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>methodNotAllowed: A request method is not supported for the requested resource. e.g. a GET request on a form which requires data to be presented via POST</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">methodNotAllowed</span> <span class="o">=</span> <span class="mi">405</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO13notAcceptableyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/notAcceptable" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO13notAcceptableyA2CmF">notAcceptable</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>notAcceptable: The requested resource is capable of generating only content not acceptable according to the Accept headers sent in the request.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notAcceptable</span> <span class="o">=</span> <span class="mi">406</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO27proxyAuthenticationRequiredyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/proxyAuthenticationRequired" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO27proxyAuthenticationRequiredyA2CmF">proxyAuthenticationRequired</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>proxyAuthenticationRequired: The client must first authenticate itself with the proxy.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">proxyAuthenticationRequired</span> <span class="o">=</span> <span class="mi">407</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO14requestTimeoutyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/requestTimeout" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO14requestTimeoutyA2CmF">requestTimeout</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>requestTimeout: The server timed out waiting for the request.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">requestTimeout</span> <span class="o">=</span> <span class="mi">408</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO8conflictyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/conflict" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO8conflictyA2CmF">conflict</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>conflict: Indicates that the request could not be processed because of conflict in the request, such as an edit conflict between multiple simultaneous updates.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">conflict</span> <span class="o">=</span> <span class="mi">409</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO4goneyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/gone" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO4goneyA2CmF">gone</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>gone: Indicates that the resource requested is no longer available and will not be available again.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gone</span> <span class="o">=</span> <span class="mi">410</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO14lengthRequiredyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/lengthRequired" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO14lengthRequiredyA2CmF">lengthRequired</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>lengthRequired: The request did not specify the length of its content, which is required by the requested resource.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lengthRequired</span> <span class="o">=</span> <span class="mi">411</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO18preconditionFailedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/preconditionFailed" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO18preconditionFailedyA2CmF">preconditionFailed</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>preconditionFailed: The server does not meet one of the preconditions that the requester put on the request.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">preconditionFailed</span> <span class="o">=</span> <span class="mi">412</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO15payloadTooLargeyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/payloadTooLarge" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO15payloadTooLargeyA2CmF">payloadTooLarge</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>payloadTooLarge: The request is larger than the server is willing or able to process.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">payloadTooLarge</span> <span class="o">=</span> <span class="mi">413</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO10URITooLongyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/URITooLong" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO10URITooLongyA2CmF">URITooLong</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>URITooLong: The URI provided was too long for the server to process.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">URITooLong</span> <span class="o">=</span> <span class="mi">414</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO20unsupportedMediaTypeyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/unsupportedMediaType" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO20unsupportedMediaTypeyA2CmF">unsupportedMediaType</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>unsupportedMediaType: The request entity has a media type which the server or resource does not support.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedMediaType</span> <span class="o">=</span> <span class="mi">415</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO19rangeNotSatisfiableyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/rangeNotSatisfiable" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO19rangeNotSatisfiableyA2CmF">rangeNotSatisfiable</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>rangeNotSatisfiable: The client has asked for a portion of the file (byte serving), but the server cannot supply that portion.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">rangeNotSatisfiable</span> <span class="o">=</span> <span class="mi">416</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO17expectationFailedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/expectationFailed" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO17expectationFailedyA2CmF">expectationFailed</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>expectationFailed: The server cannot meet the requirements of the Expect request-header field.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">expectationFailed</span> <span class="o">=</span> <span class="mi">417</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO6teapotyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/teapot" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO6teapotyA2CmF">teapot</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>teapot: This HTTP status is used as an Easter egg in some websites.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">teapot</span> <span class="o">=</span> <span class="mi">418</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO18misdirectedRequestyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/misdirectedRequest" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO18misdirectedRequestyA2CmF">misdirectedRequest</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>misdirectedRequest: The request was directed at a server that is not able to produce a response.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">misdirectedRequest</span> <span class="o">=</span> <span class="mi">421</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO19unprocessableEntityyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/unprocessableEntity" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO19unprocessableEntityyA2CmF">unprocessableEntity</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>unprocessableEntity: The request was well-formed but was unable to be followed due to semantic errors.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unprocessableEntity</span> <span class="o">=</span> <span class="mi">422</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO6lockedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/locked" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO6lockedyA2CmF">locked</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>locked: The resource that is being accessed is locked.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">locked</span> <span class="o">=</span> <span class="mi">423</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO16failedDependencyyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/failedDependency" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO16failedDependencyyA2CmF">failedDependency</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>failedDependency: The request failed due to failure of a previous request (e.g., a PROPPATCH).</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">failedDependency</span> <span class="o">=</span> <span class="mi">424</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO15upgradeRequiredyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/upgradeRequired" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO15upgradeRequiredyA2CmF">upgradeRequired</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>upgradeRequired: The client should switch to a different protocol such as TLS/1.0, given in the Upgrade header field.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">upgradeRequired</span> <span class="o">=</span> <span class="mi">426</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO20preconditionRequiredyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/preconditionRequired" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO20preconditionRequiredyA2CmF">preconditionRequired</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>preconditionRequired: The origin server requires the request to be conditional.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">preconditionRequired</span> <span class="o">=</span> <span class="mi">428</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO15tooManyRequestsyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/tooManyRequests" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO15tooManyRequestsyA2CmF">tooManyRequests</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>tooManyRequests: The user has sent too many requests in a given amount of time.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tooManyRequests</span> <span class="o">=</span> <span class="mi">429</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO27requestHeaderFieldsTooLargeyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/requestHeaderFieldsTooLarge" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO27requestHeaderFieldsTooLargeyA2CmF">requestHeaderFieldsTooLarge</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>requestHeaderFieldsTooLarge: The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">requestHeaderFieldsTooLarge</span> <span class="o">=</span> <span class="mi">431</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO10noResponseyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/noResponse" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO10noResponseyA2CmF">noResponse</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>noResponse: Used to indicate that the server has returned no information to the client and closed the connection.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noResponse</span> <span class="o">=</span> <span class="mi">444</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO26unavailableForLegalReasonsyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/unavailableForLegalReasons" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO26unavailableForLegalReasonsyA2CmF">unavailableForLegalReasons</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>unavailableForLegalReasons: A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unavailableForLegalReasons</span> <span class="o">=</span> <span class="mi">451</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO19SSLCertificateErroryA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/SSLCertificateError" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO19SSLCertificateErroryA2CmF">SSLCertificateError</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>SSLCertificateError: An expansion of the 400 Bad Request response code, used when the client has provided an invalid client certificate.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">SSLCertificateError</span> <span class="o">=</span> <span class="mi">495</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO22SSLCertificateRequiredyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/SSLCertificateRequired" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO22SSLCertificateRequiredyA2CmF">SSLCertificateRequired</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>SSLCertificateRequired: An expansion of the 400 Bad Request response code, used when a client certificate is required but not provided.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">SSLCertificateRequired</span> <span class="o">=</span> <span class="mi">496</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO26HTTPRequestSentToHTTPSPortyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/HTTPRequestSentToHTTPSPort" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO26HTTPRequestSentToHTTPSPortyA2CmF">HTTPRequestSentToHTTPSPort</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>HTTPRequestSentToHTTPSPort: An expansion of the 400 Bad Request response code, used when the client has made a HTTP request to a port listening for HTTPS requests.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">HTTPRequestSentToHTTPSPort</span> <span class="o">=</span> <span class="mi">497</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO19clientClosedRequestyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/clientClosedRequest" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO19clientClosedRequestyA2CmF">clientClosedRequest</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>clientClosedRequest: Used when the client has closed the request before the server could send a response.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">clientClosedRequest</span> <span class="o">=</span> <span class="mi">499</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO19internalServerErroryA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/internalServerError" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO19internalServerErroryA2CmF">internalServerError</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>internalServerError: A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">internalServerError</span> <span class="o">=</span> <span class="mi">500</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO14notImplementedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/notImplemented" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO14notImplementedyA2CmF">notImplemented</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>notImplemented: The server either does not recognize the request method, or it lacks the ability to fulfill the request.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notImplemented</span> <span class="o">=</span> <span class="mi">501</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO10badGatewayyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/badGateway" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO10badGatewayyA2CmF">badGateway</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>badGateway: The server was acting as a gateway or proxy and received an invalid response from the upstream server.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badGateway</span> <span class="o">=</span> <span class="mi">502</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO18serviceUnavailableyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/serviceUnavailable" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO18serviceUnavailableyA2CmF">serviceUnavailable</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>serviceUnavailable: The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">serviceUnavailable</span> <span class="o">=</span> <span class="mi">503</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO14gatewayTimeoutyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/gatewayTimeout" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO14gatewayTimeoutyA2CmF">gatewayTimeout</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>gatewayTimeout: The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gatewayTimeout</span> <span class="o">=</span> <span class="mi">504</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO23HTTPVersionNotSupportedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/HTTPVersionNotSupported" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO23HTTPVersionNotSupportedyA2CmF">HTTPVersionNotSupported</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>HTTPVersionNotSupported: The server does not support the HTTP protocol version used in the request.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">HTTPVersionNotSupported</span> <span class="o">=</span> <span class="mi">505</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO21variantAlsoNegotiatesyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/variantAlsoNegotiates" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO21variantAlsoNegotiatesyA2CmF">variantAlsoNegotiates</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>variantAlsoNegotiates: Transparent content negotiation for the request results in a circular reference.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">variantAlsoNegotiates</span> <span class="o">=</span> <span class="mi">506</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO19insufficientStorageyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/insufficientStorage" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO19insufficientStorageyA2CmF">insufficientStorage</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>insufficientStorage: The server is unable to store the representation needed to complete the request.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">insufficientStorage</span> <span class="o">=</span> <span class="mi">507</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO12loopDetectedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/loopDetected" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO12loopDetectedyA2CmF">loopDetected</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>loopDetected: The server detected an infinite loop while processing the request.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">loopDetected</span> <span class="o">=</span> <span class="mi">508</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO11notExtendedyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/notExtended" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO11notExtendedyA2CmF">notExtended</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>notExtended: Further extensions to the request are required for the server to fulfill it.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notExtended</span> <span class="o">=</span> <span class="mi">510</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14HTTPStatusCodeO29networkAuthenticationRequiredyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/networkAuthenticationRequired" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14HTTPStatusCodeO29networkAuthenticationRequiredyA2CmF">networkAuthenticationRequired</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+<ul>
+<li>networkAuthenticationRequired: The client needs to authenticate to gain network access.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">networkAuthenticationRequired</span> <span class="o">=</span> <span class="mi">511</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Zapp%20App%20Root%20View%20Controller.html">Zapp App Root View Controller</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/RootViewController.html">RootViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/AppDelegateProtocol.html">AppDelegateProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Plugins.html">Plugins</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/AnalyticsManager.html">AnalyticsManager</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CrashlogsPluginsManager.html">CrashlogsPluginsManager</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/PlayerDependantPluginsManager.html">PlayerDependantPluginsManager</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../AppLoading.html">AppLoading</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClient.html">IdentityClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClientBase.html">IdentityClientBase</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClientBase/IdentityClientBaseKeys.html">– IdentityClientBaseKeys</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClientBase/IdentityClientBaseServerType.html">– IdentityClientBaseServerType</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../CacheHelper.html">CacheHelper</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/APCachedModel.html">APCachedModel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/APCacheManager.html">APCacheManager</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/APFile.html">APFile</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/JsonSerializableProtocol.html">JsonSerializableProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Keychain.html">Keychain</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/HTTPStatusCode.html">HTTPStatusCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/HTTPStatusCode/ResponseType.html">– ResponseType</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../StateMachine.html">StateMachine</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/LoadingStateMachineDataSource.html">LoadingStateMachineDataSource</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/LoadingStateMachineDelegate.html">LoadingStateMachineDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/LoadingState.html">LoadingState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/LoadingStateMachine.html">LoadingStateMachine</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Storages.html">Storages</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/ZappStorageProtocol.html">ZappStorageProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/LocalStorage.html">LocalStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SessionStorage.html">SessionStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/StorageHelper.html">StorageHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/StorageInitialization.html">StorageInitialization</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Categories.html">Categories</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/AVURLAsset.html">AVURLAsset</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/String.html">String</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIApplication.html">UIApplication</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIColor.html">UIColor</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Classes.html">Other Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/MsAppCenterDistributionHandler.html">MsAppCenterDistributionHandler</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple39kMSAppCenterCheckForUpdatesNotificationSSvp">kMSAppCenterCheckForUpdatesNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple20zappLocalStorageNameSSvp">zappLocalStorageName</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Enums.html">Other Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/LoadingStateTypes.html">LoadingStateTypes</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Extensions.html">Other Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/HTTPURLResponse.html">HTTPURLResponse</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Structs.html">Other Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/ZappStorageKeys.html">ZappStorageKeys</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Typealiases.html">Other Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple36AnalyticManagerPreparationCompletiona">AnalyticManagerPreparationCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple31ProviderSendAnalyticsCompletiona">ProviderSendAnalyticsCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple13StateCallBacka">StateCallBack</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple12StateHandlera">StateHandler</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>© 2019 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>
