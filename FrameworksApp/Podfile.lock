@@ -2,6 +2,8 @@ PODS:
   - AppCenter/Core (2.5.3)
   - AppCenter/Crashes (2.5.3):
     - AppCenter/Core
+  - AppCenter/Distribute (2.5.3):
+    - AppCenter/Core
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
   - Firebase/Core (6.14.0):
@@ -68,9 +70,14 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - ReachabilitySwift (4.3.0)
+  - ZappApple (0.1.0):
+    - AppCenter/Distribute (= 2.5.3)
+    - ReachabilitySwift (= 4.3.0)
+    - ZappCore
   - ZappCore (0.6.0)
   - ZappCrashlogsMsAppCenter (4.1.0):
-    - AppCenter/Crashes (~> 2.5.3)
+    - AppCenter/Crashes (= 2.5.3)
     - ZappCore
   - ZappFirebaseAnalytics (0.2.0):
     - Firebase/Analytics (= 6.14.0)
@@ -82,6 +89,7 @@ PODS:
     - ZappCore
 
 DEPENDENCIES:
+  - ZappApple (from `../ZappApple.podspec`)
   - ZappCore (from `../ZappCore.podspec`)
   - ZappCrashlogsMsAppCenter (from `../ZappCrashlogsMsAppCenter.podspec`)
   - ZappFirebaseAnalytics (from `../ZappFirebaseAnalytics.podspec`)
@@ -103,8 +111,11 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
+    - ReachabilitySwift
 
 EXTERNAL SOURCES:
+  ZappApple:
+    :path: "../ZappApple.podspec"
   ZappCore:
     :path: "../ZappCore.podspec"
   ZappCrashlogsMsAppCenter:
@@ -130,12 +141,14 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 202d7cdf9c4a7d81a2bb7f7e7e1ba6faa421b1f2
   GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  ZappCore: eb60883addb73883a184eb646914e03911293048
-  ZappCrashlogsMsAppCenter: 73b52bfd4dd99132c83ad7ed34fbb56e6019cba7
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  ZappApple: f8d196832721da58188641fafc10b5a1d5c31c1e
+  ZappCore: 313dd00d65aacc4546cb545b351278636ecb9a19
+  ZappCrashlogsMsAppCenter: 5fcb57b055a75cad53df9ea79726c360cdbccd7c
   ZappFirebaseAnalytics: 899471ff8cb55a44b45cf2355dccf07de5efa2d3
   ZappGoogleAnalytics: e20dcea17a8813ab14c1097a470016b86939dc48
   ZappGoogleInteractiveMediaAds: 031ea231f2d5855be2683c870c3b3c2c67e5a1c7
 
-PODFILE CHECKSUM: 48396d9233d143f503e685d3e359ea84b326467f
+PODFILE CHECKSUM: 17991cc44c8c4cd5ea6b2bc9a13305e793e0aef6
 
 COCOAPODS: 1.8.3
