@@ -9,13 +9,13 @@
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
   "manifest_version": "<%= version_id %>",
-  "name": "Zapp Google Analytics QuickBrick",
+  "name": "Google Analytics Web Based API",
   "description": "Provide Google Analytics as agent. Please use this plugin only if you are using quick brick",
   "type": "analytics",
   "identifier": "zapp_google_analytics",
   "ui_builder_support": true,
-  "whitelisted_account_ids": ["5ae06cef8fba0f00084bd3c6"],
-  "min_zapp_sdk": "12.2.0.alpha.2",
+  "whitelisted_account_ids": [],
+  "min_zapp_sdk": "20.0.0-Dev",
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",
   "react_native": false,
@@ -25,7 +25,11 @@
     }
   ],
   "custom_configuration_fields": [
-    { "type": "text", "key": "tracker_id", "tooltip_text": "Tracker ID" },
+    {
+      "type": "text",
+      "key": "tracker_id",
+      "tooltip_text": "Tracker ID"
+    },
     {
       "type": "checkbox",
       "key": "screen_views_enabled",
@@ -33,5 +37,7 @@
       "default": 0
     }
   ],
-  "targets": ["mobile"]
+  "targets": [
+    "mobile"
+  ]
 }
