@@ -27,23 +27,41 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: <%= ZappCore %>
+##### ZappCore: *<%= ZappCore %>*
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: <%= ZappApple %>
+##### ZappApple: *<%= ZappApple %>*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
 ### Zapp Plugins
 
+#### Type: Analytics
+
+##### Google Analytics Web Based API: *<%= ZappGoogleAnalytics %>*
+- **Description:** This plugin allow to add Google Analytics as agent.
+- [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
+- **Manifest:**
+  - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=ios)
+  - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=tvos)
+
 #### Type: Crashlogs
 
-##### MS App Center: <%= ZappCrashlogsMsAppCenter %>
+##### MS App Center: *<%= ZappCrashlogsMsAppCenter %>*
 - **Description:** [App center](https://appcenter.ms) crash logs service.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCrashlogsMsAppCenter/index.html)
 - **Manifest:**
-	- [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=crashlogs_appcenter&platform=ios)
+  - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=crashlogs_appcenter&platform=ios)
+  
+#### Type: Player Dependant
+
+##### Google Interactive Media Ads: *<%= ZappGoogleInteractiveMediaAds %>*
+- **Description:** This plugin allow to add Google Interactive Media Ads to supported players.
+- [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleInteractiveMediaAds/index.html)
+- **Manifest:**
+  - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_interactive_media_ads&platform=ios)
+  - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_interactive_media_ads&platform=tvos)
 
 ## :pencil2: Usage
 
@@ -77,6 +95,9 @@ Apple Framworks
 │       │   ├── Files // Files that are relevant for the framework.
 │       │   │   ├── ios // Files that can be used in iOS only
 │       │   │   ├── tvos // Files that can be used in tvOS only
+│       │   │   ├── src // Node dependancy files, in case plugin is node dependency.
+│       │   │   ├── FrameworkName.podspec // Cocoapods dependency files. In case plugin is node dependency podpsec must be here.
+│       │   │   ├── package.json // Node package file, in case plugin is node dependency.
 │       │   │   └── Universal // Files that can be used in iOS and tvOS
 │       │   ├── Manifest // ZAPP PLUGINS manifest describes plugin created by Zappifest.
 │       │   ├── Project // Xcode Project created to generate documentation.
@@ -112,13 +133,18 @@ Apple Framworks
 	- Add key `framework` with value `YourFrameworkName`
 	- Add key `version_id` with value `version number` based on `major/minor/bug` `1.0.0` convention.
 	- Add key `folder_path` with value `General path to your framework`.  Example: `./Frameworks/Plugins/Analytics/GoogleAnalytics`
-	- Add key `is_plugin` with value `true/false` in case if it is `Zapp Plugin`.
+	- Add key `plugin` with value `true` in case if it is `Zapp Plugin`.
+	- Add key `npm_package` with value `true` in case if it is `Zapp Plugin` that has `Node Dependencies`.
 - Create `Files` folder in your framework's root folder. Add files that are needed for framework.
 	- If files for the framework can be used with `ios` and `tvos` add to folder `Universal`
 	- If files for the framework `ios` only add to folder `ios`
 	- If files for the framework `tvos` only add to folder `tvos`
 	- One framework can have all three types of folders if it supports `ios` and `tvos`.
-- Create `podspec` file for your framework in root of the repo folder.
+	- If `Zapp Plugin` has `Node Dependencies`
+		-  Add file `package.json` and fill it.
+		-  Add file `FrameworkName.podspec`
+		-  Create `src` folder and add there files that required by `Node Dependencies`.
+- Create `podspec` file for your framework in root of the repo folder. **If `Zapp Plugin` has `Node Dependencies` this step must be skipped!**
 	- `podspec` name must be same name of the `plugin` or `framework`.
 	- Prepare `podspec` defined files and dependencies if needed.
 	- If framework supports `tvos` and `ios` dependency must be defined in same `podspec` file. For instructions please refer to [Cocoapods](https://guides.cocoapods.org/) documentation

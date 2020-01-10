@@ -1,16 +1,16 @@
 Pod::Spec.new do |s|
 	s.name = "ZappGoogleInteractiveMediaAds"
-	s.version = '<%= version_id %>'
+	s.version = '0.4.1'
 	s.swift_versions = '5.1'
 
 	s.summary = "ZappGoogleInteractiveMediaAds"
-	s.description = "This plugin allow to add Google Interactive Media Ads to supported players."
+	s.description = "Zapp Plugins store Protocol and Managers that relevant for Applicaster Zapp Plugin System"
 	s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
 	s.license = 'Appache 2.0'
 	s.author = "Applicaster LTD."
 	s.source = {
 		 :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-		 :tag => "<%= new_tag %>"
+		 :tag => "2020.1.10.15-1-2"
   }
 
     s.ios.deployment_target = '10.0'

@@ -12,13 +12,13 @@ async function updateTemplate(ejsData, templatePath, outputPath) {
 }
 
 function manifestPath({ model, platform, template }) {
-  const { folder_path = null, is_plugin = null } = model;
+  const { folder_path = null, plugin = null } = model;
 
   iosPath = template == true ? "Templates/ios.json.ejs" : "Manifest/ios.json";
   tvosPath =
     template == true ? "Templates/tvos.json.ejs" : "Manifest/tvos.json";
   if (
-    is_plugin == true &&
+    plugin == true &&
     (platform == "ios" || platform == "tvos") &&
     template != null &&
     folder_path != null

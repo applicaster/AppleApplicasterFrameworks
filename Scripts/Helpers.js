@@ -51,7 +51,7 @@ async function updateAutomationVersionsDataJSON(data) {
 }
 
 function gitTagDate() {
-  return moment().format("Y.m.d.H-M-S");
+  return moment().format("Y.M.D.H-M-S");
 }
 
 module.exports = {

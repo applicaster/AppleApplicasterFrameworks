@@ -6,6 +6,10 @@
       "ZappGoogleInteractiveMediaAds"
     ]
   },
+  "dependency_name": "@applicaster/quick-brick-google-ima-client",
+  "npm_dependencies": [
+    "@applicaster/quick-brick-google-ima-client-tv@<%= version_id %>"
+  ],
   "platform": "tvos",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
@@ -20,7 +24,7 @@
   ],
   "extra_dependencies": [
     {
-      "ZappGoogleInteractiveMediaAds": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"
+      "ZappGoogleInteractiveMediaAds": ":path => './node_modules/@applicaster/quick-brick-google-ima-client-tv/ZappGoogleInteractiveMediaAds.podspec'"
     }
   ],
   "min_zapp_sdk": "10.1.1-Dev",

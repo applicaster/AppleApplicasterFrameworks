@@ -4,131 +4,135 @@
 #
 version: 2.1
 jobs:
-    build:
-        # Specify the Xcode version to use
-        macos:
-            xcode: "11.2.1"
-        shell: /bin/bash --login -eo pipefail
-        environment:
-            GENERAL_CACHE_KEY: "AppleApplicasterFrameworks_Cache_1.1.0"
-            PROJECT_NAME: "FrameworksApp"
-            SCHEME_NAME: "FrameworksApp"
-            PROJECT_PATH: "FrameworksApp"
-            HOMEBREW_NO_AUTO_UPDATE: "1"
+      build:
+            # Specify the Xcode version to use
+            macos:
+                  xcode: "11.2.1"
+            shell: /bin/bash --login -eo pipefail
+            environment:
+                  GENERAL_CACHE_KEY: "AppleApplicasterFrameworks_Cache_1.1.0"
+                  PROJECT_NAME: "FrameworksApp"
+                  SCHEME_NAME: "FrameworksApp"
+                  PROJECT_PATH: "FrameworksApp"
+                  HOMEBREW_NO_AUTO_UPDATE: "1"
 
-        working_directory: ~/AppleApplicasterFrameworks
-        steps:
-            #Hack general caching until circle does not support global env variables
-            - run: echo "$GENERAL_CACHE_KEY" > ~/_caching_file
+            working_directory: ~/AppleApplicasterFrameworks
+            steps:
+                  #Hack general caching until circle does not support global env variables
+                  - run: echo "$GENERAL_CACHE_KEY" > ~/_caching_file
 
-            - run:
-                  name: Ruby - version
-                  command: ruby -v
+                  - run:
+                          name: Ruby - version
+                          command: ruby -v
 
-            # Prepere Git
-            - restore_cache:
-                  keys:
-                      - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-                      - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
-                      - GIT-{{ checksum "~/_caching_file" }}-
+                  # Prepere Git
+                  - restore_cache:
+                          keys:
+                                - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+                                - GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
+                                - GIT-{{ checksum "~/_caching_file" }}-
 
-            - checkout
+                  - checkout
 
-            - save_cache:
-                  name: Git - save cache
-                  key: GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-                  paths:
-                      - ".git"
+                  - save_cache:
+                          name: Git - save cache
+                          key: GIT-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+                          paths:
+                                - ".git"
 
-            # Prepare Bundler
-            - restore_cache:
-                  name: Bundler - restore cache
-                  key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
+                  # Prepare Bundler
+                  - restore_cache:
+                          name: Bundler - restore cache
+                          key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
 
-            - run:
-                  name: Bundler - update dependencies
-                  command: bundle check --path=.bundle || bundle install --path=.bundle
+                  - run:
+                          name: Bundler - update dependencies
+                          command: bundle check --path=.bundle || bundle install --path=.bundle
 
-            - save_cache:
-                  name: Bundler - save cache
-                  key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
-                  paths:
-                      - /Users/distiller/.rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems
-                      - ./.bundle
+                  - save_cache:
+                          name: Bundler - save cache
+                          key: Bundler-{{ checksum "~/_caching_file" }}-{{ checksum "Gemfile.lock" }}
+                          paths:
+                                - /Users/distiller/.rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems
+                                - ./.bundle
 
-            - restore_cache:
-                  name: Restore npm dependencies
-                  key: YARN-{{ checksum "~/_caching_file" }}-{{ checksum "yarn.lock" }}
+                  - restore_cache:
+                          name: Restore npm dependencies
+                          key: YARN-{{ checksum "~/_caching_file" }}-{{ checksum "yarn.lock" }}
 
-            - run:
-                  name: Install npm dependencies
-                  command: yarn
+                  - run:
+                          name: NPM Login
+                          command: npx npm-shell-login
 
-            - save_cache:
-                  name: Saving NPM dependencies
-                  key: YARN-{{ checksum "~/_caching_file" }}-{{ checksum "yarn.lock" }}
-                  paths:
-                      - ./node_modules
+                  - run:
+                          name: Install npm dependencies
+                          command: yarn
 
-            - run:
-                  name: Homebrew tap Applicaster
-                  command: brew tap applicaster/tap
+                  - save_cache:
+                          name: Saving NPM dependencies
+                          key: YARN-{{ checksum "~/_caching_file" }}-{{ checksum "yarn.lock" }}
+                          paths:
+                                - ./node_modules
 
-            - run:
-                  name: Homebrew Install Zappifest
-                  command: brew install zappifest
+                  - run:
+                          name: Homebrew tap Applicaster
+                          command: brew tap applicaster/tap
 
-            - run:
-                  name: Zappifest Version
-                  command: zappifest -v
-            # Restore Cocoapods cache, save cache on lower level, after pod install
-            - restore_cache:
-                  keys:
-                      - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-                      - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
-                      - CocoaPods-{{ checksum "~/_caching_file" }}-
+                  - run:
+                          name: Homebrew Install Zappifest
+                          command: brew install zappifest
 
-            - run:
-                  name: CocoaPods - version
-                  command: bundle exec pod --version
+                  - run:
+                          name: Zappifest Version
+                          command: zappifest -v
+                  # Restore Cocoapods cache, save cache on lower level, after pod install
+                  - restore_cache:
+                          keys:
+                                - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+                                - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
+                                - CocoaPods-{{ checksum "~/_caching_file" }}-
 
-            # Pod update
-            - run:
-                  name: CocoaPods - update dependencies
-                  command: cd $PROJECT_PATH && bundle exec pod install; cd -
+                  - run:
+                          name: CocoaPods - version
+                          command: bundle exec pod --version
 
-            # Cache CocoaPods
-            - save_cache:
-                  name: CocoaPods - save cache
-                  key: CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-                  paths:
-                      - "~/.cocoapods/repos/cocoapods-"
+                  # Pod update
+                  - run:
+                          name: CocoaPods - update dependencies
+                          command: cd $PROJECT_PATH && bundle exec pod install; cd -
 
-            # Tests
-            - run:
-                  name: Tests - start
-                  command: bundle exec fastlane ios test
+                  # Cache CocoaPods
+                  - save_cache:
+                          name: CocoaPods - save cache
+                          key: CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
+                          paths:
+                                - "~/.cocoapods/repos/cocoapods-"
 
-            - run:
-                  name: Validate Frameworks
-                  command: node ./Scripts/validateExistingFrameworks.js
+                  # Tests
+                  - run:
+                          name: Tests - start
+                          command: bundle exec fastlane ios test
 
-            - deploy:
-                  name: Publish new or changed framework
-                  command: node ./Scripts/publishFramework.js
+                  - run:
+                          name: Validate Frameworks
+                          command: node ./Scripts/validateExistingFrameworks.js
 
-            - store_test_results:
-                  path: ./CircleArtifacts/test-results
+                  - deploy:
+                          name: Publish new or changed framework
+                          command: node ./Scripts/publishFramework.js
 
-            - store_artifacts:
-                  path: ./CircleArtifacts
+                  - store_test_results:
+                          path: ./CircleArtifacts/test-results
 
-            - store_artifacts:
-                  path: ~/Library/Logs/scan
-                  destination: scan-logs
+                  - store_artifacts:
+                          path: ./CircleArtifacts
+
+                  - store_artifacts:
+                          path: ~/Library/Logs/scan
+                          destination: scan-logs
 
 workflows:
-    version: 2
-    build:
-        jobs:
-            - build
+      version: 2
+      build:
+            jobs:
+                  - build
