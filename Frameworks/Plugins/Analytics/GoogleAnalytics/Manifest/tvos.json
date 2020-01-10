@@ -8,24 +8,28 @@
   "platform": "tvos",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "0.4.0",
-  "name": "Zapp Google Analytics QuickBrick",
+  "manifest_version": "0.5.0",
+  "name": "Google Analytics Web Based API",
   "description": "Provide Google Analytics as agent",
   "type": "analytics",
   "identifier": "zapp_google_analytics",
   "ui_builder_support": true,
-  "whitelisted_account_ids": ["5ae06cef8fba0f00084bd3c6"],
+  "whitelisted_account_ids": [],
   "min_zapp_sdk": "10.1.1-Dev",
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",
   "react_native": false,
   "extra_dependencies": [
     {
-      "ZappGoogleAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '1'"
+      "ZappGoogleAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.56.5.15-1-5'"
     }
   ],
   "custom_configuration_fields": [
-    { "type": "text", "key": "tracker_id", "tooltip_text": "Tracker ID" },
+    {
+      "type": "text",
+      "key": "tracker_id",
+      "tooltip_text": "Tracker ID"
+    },
     {
       "type": "checkbox",
       "key": "screen_views_enabled",
@@ -33,5 +37,7 @@
       "default": 0
     }
   ],
-  "targets": ["tv"]
+  "targets": [
+    "tv"
+  ]
 }

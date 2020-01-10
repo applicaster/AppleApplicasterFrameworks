@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappCrashlogsMsAppCenter"
-  s.version          = '4.1.0'
+  s.version          = '4.2.0'
   s.summary          = "ZappCrashlogsMsAppCenter"
   s.description      = <<-DESC
   CrashlogsMsAppCenter container.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', 
-                         :tag => '2020.55.1.23-1-8'  }
+                         :tag => '2020.56.5.15-1-5'  }
   s.platform         = :ios, '10.0'
   s.requires_arc = true
   s.static_framework = true

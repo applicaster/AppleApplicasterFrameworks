@@ -7,13 +7,13 @@
   "dependency_repository_url": [],
   "extra_dependencies": [
     {
-      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 2020.55.1.23-1-8"
+      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 2020.56.5.15-1-5"
     }
   ],
   "platform": "ios",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "4.1.0",
+  "manifest_version": "4.2.0",
   "name": "App Center Crashlogs",
   "description": "Zapp Crashlogs Plugin App Center",
   "type": "error_monitoring",

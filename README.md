@@ -39,7 +39,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: Crashlogs
 
-##### MS App Center: 4.1.0
+##### MS App Center: 4.2.0
 - **Description:** [App center](https://appcenter.ms) crash logs service.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCrashlogsMsAppCenter/index.html)
 - **Manifest:**

@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../../index.html">ZappGoogleAnalytics 0.4.0 Docs</a>
+          <a href="../../index.html">ZappGoogleAnalytics 0.5.0 Docs</a>
           <span class="no-mobile"> (100% documented)</span>
         </p>
     
@@ -71,10 +71,18 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#v">The Measurement Protocol version</a> The current value is &ldquo;1&rdquo;. This will only change when there are changes made that are not backwards compatible.</p>
+                          <p>This will only change when there are changes made that are not backwards compatible.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <ul>
+<li><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#v">Documentation</a></li>
+</ul>
 
-<ul>
-<li>Example usage: &ldquo;v=1&rdquo;</li>
+</div><ul>
+<li>Example:
+<code>
+v=1
+</code></li>
 </ul>
 
                         </div>
@@ -102,10 +110,18 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#tid">Tracking ID / Web Property ID</a> The format is UA-XXXX-Y. All collected data is associated by this ID.</p>
+                          <p>The format is UA-XXXX-Y. All collected data is associated by this ID.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <ul>
+<li><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#tid">Tracking ID / Web Property ID</a></li>
+</ul>
 
-<ul>
-<li>Example usage: &ldquo;tid=UA-XXXX-Y&rdquo;</li>
+</div><ul>
+<li>Example:
+<code>
+tid=UA-XXXX-Y
+</code></li>
 </ul>
 
                         </div>
@@ -133,10 +149,20 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#ds">Data Source</a> Indicates the data source of the hit. Hits sent from analytics.js will have data source set to &lsquo;web&rsquo;; hits sent from one of the mobile SDKs will have data source set to &lsquo;app&rsquo;.</p>
+                          <p>Indicates the data source of the hit.
+Hits sent from analytics.js will have data source set to &lsquo;web&rsquo;; hits sent from
+one of the mobile SDKs will have data source set to &lsquo;app&rsquo;.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <ul>
+<li><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#ds">Documentation</a></li>
+</ul>
 
-<ul>
-<li>Example usage: &ldquo;ds=app&rdquo;</li>
+</div><ul>
+<li>Example:
+<code>
+ds=app
+</code></li>
 </ul>
 
                         </div>
@@ -164,10 +190,23 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cid">Client ID</a> This field is required if User ID (uid) is not specified in the request. This anonymously identifies a particular user, device, or browser instance. For the web, this is generally stored as a first-party cookie with a two-year expiration. For mobile apps, this is randomly generated for each particular instance of an application install. The value of this field should be a random UUID (version 4) as described in <a href="http://www.ietf.org/rfc/rfc4122.txt">http://www.ietf.org/rfc/rfc4122.txt</a>.</p>
+                          <p>This field is required if User ID (uid) is not specified in the request.
+This anonymously identifies a particular user, device, or browser instance.
+For the web, this is generally stored as a first-party cookie with a two-year expiration.
+For mobile apps, this is randomly generated for each particular instance of an application install.
+The value of this field should be a random UUID (version 4) as described in documentation</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <ul>
+<li><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cid">Client ID</a></li>
+<li><a href="http://www.ietf.org/rfc/rfc4122.txt">UUID Documentation</a></li>
+</ul>
 
-<ul>
-<li>Example usage: &ldquo;cid=35009a79-1a05-49d7-b876-2b884d0f825b&rdquo;</li>
+</div><ul>
+<li>Example:
+<code>
+cid=35009a79-1a05-49d7-b876-2b884d0f825b
+</code></li>
 </ul>
 
                         </div>
@@ -195,10 +234,16 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#sr">Screen Resolution</a> Specifies the screen resolution.</p>
+                          <p>Specifies the screen resolution.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#sr">Documentation</a>
 
-<ul>
-<li>Example usage: &ldquo;sr=800x600&rdquo;</li>
+</div><ul>
+<li>Example:
+<code>
+sr=800x600
+</code></li>
 </ul>
 
                         </div>
@@ -226,10 +271,16 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#ul">User Language</a> Specifies the language.</p>
+                          <p>Specifies the language.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#ul">Documentation</a>
 
-<ul>
-<li>Example usage: &ldquo;ul=en-us&rdquo;</li>
+</div><ul>
+<li>Example:
+<code>
+ul=en-us
+</code></li>
 </ul>
 
                         </div>
@@ -257,10 +308,16 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#t">Hit type</a> The type of hit.</p>
+                          <p>The type of hit.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#t">Documentation</a>
 
-<ul>
-<li>Example usage: &ldquo;t=pageview&rdquo;</li>
+</div><ul>
+<li>Example:
+<code>
+t=pageview
+</code></li>
 </ul>
 
                         </div>
@@ -315,10 +372,22 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cd">Custom Dimension</a> Each custom dimension has an associated index. There is a maximum of 20 custom dimensions (200 for Analytics 360 accounts). The dimension index must be a positive integer between 1 and 200, inclusive.</p>
+                          <p><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cd">Custom Dimension</a>
+Each custom dimension has an associated index.
+There is a maximum of 20 custom dimensions (200 for Analytics 360 accounts).
+The dimension index must be a positive integer between 1 and 200, inclusive.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <ul>
+<li><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cd">Documentation</a></li>
+</ul>
 
-<ul>
-<li>Example usage: &ldquo;cd1=Sports&rdquo; or &ldquo;cd2=Sports&rdquo;</li>
+</div><ul>
+<li>Example:
+<code>
+cd1=Sports
+cd2=Cooking
+</code></li>
 </ul>
 
                         </div>
@@ -415,7 +484,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>© 2019 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
+          <p>© 2019 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a></p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
