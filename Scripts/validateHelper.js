@@ -30,14 +30,8 @@ function frameworkModelFrom(frameworksList, frameworkToCheck) {
   frameworksList.forEach(model => {
     const { framework = null } = model;
     if (framework == frameworkToCheck) {
-      const {
-        framework = null,
-        version_id = null,
-        folder_path = null,
-        plugin = null
-      } = model;
-      searchedModel =
-        framework && version_id && folder_path && plugin != null ? model : null;
+      const { framework = null, version_id = null, folder_path = null } = model;
+      searchedModel = framework && version_id && folder_path ? model : null;
     }
   });
   searchedModel == null && console.log(failedText);
@@ -46,13 +40,8 @@ function frameworkModelFrom(frameworksList, frameworkToCheck) {
 }
 
 function validateSingleFrameworkDataInPlist(model) {
-  const {
-    framework = null,
-    version_id = null,
-    folder_path = null,
-    plugin = null
-  } = model;
-  if (framework && version_id && folder_path && plugin != null) {
+  const { framework = null, version_id = null, folder_path = null } = model;
+  if (framework && version_id && folder_path) {
     console.log(
       `Framework: '${framework}' All keys was defined in 'FrameworksData.plist'`
     );
