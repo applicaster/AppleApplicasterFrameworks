@@ -40,7 +40,7 @@
 		<key>framework</key>
 		<string>ZappGoogleInteractiveMediaAds</string>
 		<key>version_id</key>
-		<string>0.4.0</string>
+		<string>0.4.1</string>
 		<key>folder_path</key>
 		<string>Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds</string>
 		<key>plugin</key>
