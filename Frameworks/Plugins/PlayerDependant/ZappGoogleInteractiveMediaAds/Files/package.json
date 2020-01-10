@@ -1,6 +1,6 @@
 {
-  "name": "@applicaster/quick-brick-google-ima-client-tv",
-  "version": "1.0.4",
+  "name": "@applicaster/quick-brick-google-ima-client",
+  "version": "0.4.1",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -11,17 +11,17 @@
     "ios",
     "Universal",
     "src",
-    "GoogleInteractiveMediaAdsTvOS.podspec",
+    "ZappGoogleInteractiveMediaAds.podspec"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/applicaster-plugins/Google-IMA-Client-TV.git"
+    "url": "git+https://github.com/applicaster/AppleApplicasterFrameworks"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/applicaster-plugins/Google-IMA-Client-TV/issues"
+    "url": "https://github.com/applicaster/AppleApplicasterFrameworks"
   },
-  "homepage": "https://github.com/applicaster-plugins/Google-IMA-Client-TV#readme"
+  "homepage": "https://github.com/applicaster/AppleApplicasterFrameworks"
 }

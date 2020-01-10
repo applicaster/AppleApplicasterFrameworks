@@ -71,22 +71,12 @@ fastlane/test_output
 Passes for documentation Project
 Frameworks/ZappCore/Project/build
 
-Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Project/build
-Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Project/pods
-Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Project/podfile.lock
+Frameworks/**/build
+Frameworks/**/pods
+Frameworks/**/podfile.lock
+Frameworks/**/yarn-error.log
 
-Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter/Project/build
-Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter/Project/pods
-Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter/Project/podfile.lock
-
-Frameworks/Plugins/Analytics/Firebase/Project/build
-Frameworks/Plugins/Analytics/Firebase/Project/pods
-Frameworks/Plugins/Analytics/Firebase/Project/podfile.lock
-
-Frameworks/Plugins/Analytics/GoogleAnalytics/Project/build
-Frameworks/Plugins/Analytics/GoogleAnalytics/Project/pods
-Frameworks/Plugins/Analytics/GoogleAnalytics/Project/podfile.lock
-
+Fra
 **/default.profraw
 
 node_modules/*

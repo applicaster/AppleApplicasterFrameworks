@@ -6,12 +6,16 @@
       "ZappGoogleInteractiveMediaAds"
     ]
   },
+  "dependency_name": "@applicaster/quick-brick-google-ima-client",
+  "npm_dependencies": [
+    "@applicaster/quick-brick-google-ima-client-tv@<%= version_id %>"
+  ],
   "platform": "ios",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
   "manifest_version": "<%= version_id %>",
   "name": "Google Interactive Media Ads QuickBrick,",
-  "description": "This plugin allow to add Google Interactive Media Ads to supported players. Please use this plugin only for quickBrick",
+  "description": "This plugin allow to add Google Interactive Media Ads to supported players.",
   "type": "video_advertisement",
   "identifier": "zapp_google_interactive_media_ads",
   "ui_builder_support": true,
@@ -20,10 +24,10 @@
   ],
   "extra_dependencies": [
     {
-      "ZappGoogleInteractiveMediaAds": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"
+      "ZappGoogleInteractiveMediaAds": ":path => './node_modules/@applicaster/quick-brick-google-ima-client-tv/ZappGoogleInteractiveMediaAds.podspec'"
     }
   ],
-  "min_zapp_sdk": "12.2.0.alpha.2",
+  "min_zapp_sdk": "20.0.0-Dev",
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",
   "react_native": false,
