@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const shell = require("cli-task-runner/utils/shell");
+const { abort } = require("./Helpers.js");
 
 const {
   compareVersion,
@@ -240,8 +241,6 @@ async function uploadNpmPackages(itemsToUpdate) {
       try {
         await shell.exec(
           `cd ${folder_path}/Files && yarn publish --new-version ${version_id} --no-git-tag-version`
-          // `yarn publish --new-version ${version_id} --no-git-tag-version`,
-          // { cwd: path.resolve(__dirname, folder_path, "Files") }
         );
       } catch (e) {
         abort(e.message);
