@@ -61,7 +61,7 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
         framework = null,
         version_id = null,
         folder_path = null,
-        is_plugin = null,
+        plugin = null,
         npm_package = null
       } = model;
 
@@ -86,7 +86,7 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
         podspecPath
       );
 
-      if (is_plugin) {
+      if (plugin) {
         const iosManifestPath = manifestPath({
           model,
           platform: "ios",
@@ -156,9 +156,9 @@ async function uploadManifestsToZapp(itemsToUpdate) {
   console.log("Uploading manifests to zapp");
   try {
     const promises = itemsToUpdate.map(async model => {
-      const { is_plugin = null } = model;
+      const { plugin = null } = model;
       const zappToken = process.env["ZappToken"];
-      if (is_plugin && zappToken) {
+      if (plugin && zappToken) {
         const iosManifestPath = manifestPath({
           model,
           platform: "ios",

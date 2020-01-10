@@ -9,8 +9,6 @@
 		<string>0.6.0</string>
 		<key>folder_path</key>
 		<string>Frameworks/ZappCore</string>
-		<key>is_plugin</key>
-		<false/>
 	</dict>
 	<dict>
 		<key>framework</key>
@@ -19,8 +17,6 @@
 		<string>4.2.0</string>
 		<key>folder_path</key>
 		<string>Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter</string>
-		<key>is_plugin</key>
-		<true/>
 	</dict>
 	<dict>
 		<key>framework</key>
@@ -29,8 +25,6 @@
 		<string>0.1.0</string>
 		<key>folder_path</key>
 		<string>Frameworks/ZappApple</string>
-		<key>is_plugin</key>
-		<false/>
 	</dict>
 	<dict>
 		<key>framework</key>
@@ -39,7 +33,7 @@
 		<string>0.5.0</string>
 		<key>folder_path</key>
 		<string>Frameworks/Plugins/Analytics/GoogleAnalytics</string>
-		<key>is_plugin</key>
+		<key>plugin</key>
 		<true/>
 	</dict>
 	<dict>
@@ -49,7 +43,7 @@
 		<string>0.4.0</string>
 		<key>folder_path</key>
 		<string>Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds</string>
-		<key>is_plugin</key>
+		<key>plugin</key>
 		<true/>
 		<key>npm_package</key>
 		<true/>

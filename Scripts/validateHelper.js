@@ -34,12 +34,10 @@ function frameworkModelFrom(frameworksList, frameworkToCheck) {
         framework = null,
         version_id = null,
         folder_path = null,
-        is_plugin = null
+        plugin = null
       } = model;
       searchedModel =
-        framework && version_id && folder_path && is_plugin != null
-          ? model
-          : null;
+        framework && version_id && folder_path && plugin != null ? model : null;
     }
   });
   searchedModel == null && console.log(failedText);
@@ -52,9 +50,9 @@ function validateSingleFrameworkDataInPlist(model) {
     framework = null,
     version_id = null,
     folder_path = null,
-    is_plugin = null
+    plugin = null
   } = model;
-  if (framework && version_id && folder_path && is_plugin != null) {
+  if (framework && version_id && folder_path && plugin != null) {
     console.log(
       `Framework: '${framework}' All keys was defined in 'FrameworksData.plist'`
     );
@@ -68,7 +66,7 @@ function validateSingleFrameworkDataInPlist(model) {
 }
 
 function validateSingleFrameworkPathes(model) {
-  const { folder_path, is_plugin, framework } = model;
+  const { folder_path, plugin, framework } = model;
 
   const succeedText = `framework: '${framework}':All required files exist`;
   if (
@@ -80,7 +78,7 @@ function validateSingleFrameworkPathes(model) {
     fs.existsSync(`${folder_path}/Project/README.md`) &&
     fs.existsSync(`${folder_path}/Files`)
   ) {
-    if (is_plugin == true) {
+    if (plugin == true) {
       if (
         ((fs.existsSync(`${folder_path}/Templates/ios.json.ejs`) ||
           fs.existsSync(`${folder_path}/Templates/tvos.json.ejs`)) &&

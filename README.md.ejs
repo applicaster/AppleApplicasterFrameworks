@@ -112,7 +112,7 @@ Apple Framworks
 	- Add key `framework` with value `YourFrameworkName`
 	- Add key `version_id` with value `version number` based on `major/minor/bug` `1.0.0` convention.
 	- Add key `folder_path` with value `General path to your framework`.  Example: `./Frameworks/Plugins/Analytics/GoogleAnalytics`
-	- Add key `is_plugin` with value `true/false` in case if it is `Zapp Plugin`.
+	- Add key `plugin` with value `true` in case if it is `Zapp Plugin`.
 - Create `Files` folder in your framework's root folder. Add files that are needed for framework.
 	- If files for the framework can be used with `ios` and `tvos` add to folder `Universal`
 	- If files for the framework `ios` only add to folder `ios`
