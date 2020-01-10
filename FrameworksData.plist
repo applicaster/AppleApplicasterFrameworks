@@ -42,5 +42,17 @@
 		<key>is_plugin</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>framework</key>
+		<string>ZappGoogleInteractiveMediaAds</string>
+		<key>version_id</key>
+		<string>0.4.0</string>
+		<key>folder_path</key>
+		<string>Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds</string>
+		<key>is_plugin</key>
+		<true/>
+		<key>npm_package</key>
+		<true/>
+	</dict>
 </array>
 </plist>
