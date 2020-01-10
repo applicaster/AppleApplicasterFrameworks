@@ -78,6 +78,10 @@ jobs:
                   name: Homebrew Install Zappifest
                   command: brew install zappifest
 
+            run:
+                  name: NPM Login
+                  command: npx npm-shell-login
+
             - run:
                   name: Zappifest Version
                   command: zappifest -v
