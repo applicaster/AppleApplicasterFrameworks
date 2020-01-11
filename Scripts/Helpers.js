@@ -54,7 +54,19 @@ function gitTagDate() {
   return moment().format("Y.M.D.H-M-S");
 }
 
+function basePathForModel(model) {
+  if (model) {
+    const { framework = null, plugin = null } = model;
+    const frameworkFolder = "Frameworks";
+    return plugin
+      ? `${frameworkFolder}/Plugins/${framework}`
+      : `${frameworkFolder}/${framework}`;
+  }
+  return null;
+}
+
 module.exports = {
+  basePathForModel,
   readFrameworkDataPlist,
   proccessArgs,
   abort,

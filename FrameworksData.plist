@@ -13,6 +13,8 @@
 		<string>ZappCrashlogsMsAppCenter</string>
 		<key>version_id</key>
 		<string>4.2.0</string>
+		<key>plugin</key>
+		<true/>
 	</dict>
 	<dict>
 		<key>framework</key>
