@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-const { readFrameworkDataPlist, abort } = require("./Helpers.js");
+const {
+  readFrameworkDataPlist,
+  abort,
+  basePathForModel
+} = require("./Helpers.js");
 const fs = require("fs");
 
 function validateSingleFramework(frameworkToCheck) {
@@ -29,9 +33,10 @@ function frameworkModelFrom(frameworksList, frameworkToCheck) {
 
   frameworksList.forEach(model => {
     const { framework = null } = model;
+    const baseFolderPath = basePathForModel(model);
     if (framework == frameworkToCheck) {
-      const { framework = null, version_id = null, folder_path = null } = model;
-      searchedModel = framework && version_id && folder_path ? model : null;
+      const { framework = null, version_id = null } = model;
+      searchedModel = framework && version_id && baseFolderPath ? model : null;
     }
   });
   searchedModel == null && console.log(failedText);
@@ -40,8 +45,10 @@ function frameworkModelFrom(frameworksList, frameworkToCheck) {
 }
 
 function validateSingleFrameworkDataInPlist(model) {
-  const { framework = null, version_id = null, folder_path = null } = model;
-  if (framework && version_id && folder_path) {
+  const baseFolderPath = basePathForModel(model);
+
+  const { framework = null, version_id = null } = model;
+  if (framework && version_id && baseFolderPath) {
     console.log(
       `Framework: '${framework}' All keys was defined in 'FrameworksData.plist'`
     );
@@ -55,24 +62,30 @@ function validateSingleFrameworkDataInPlist(model) {
 }
 
 function validateSingleFrameworkPathes(model) {
-  const { folder_path, plugin, framework } = model;
+  const baseFolderPath = basePathForModel(model);
 
+  const { plugin, framework } = model;
+  console.log({ plugin });
+
+  console.log(
+    `Validating requiered pathes for Framework: ${framework}, Plugin:${plugin},  BasePath: '${baseFolderPath}'`
+  );
   const succeedText = `framework: '${framework}':All required files exist`;
   if (
-    fs.existsSync(folder_path) &&
-    fs.existsSync(`${folder_path}/Templates/.jazzy.yaml.ejs`) &&
-    fs.existsSync(`${folder_path}/Templates/${framework}.podspec.ejs`) &&
+    fs.existsSync(baseFolderPath) &&
+    fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
+    fs.existsSync(`${baseFolderPath}/Templates/${framework}.podspec.ejs`) &&
     fs.existsSync(`${framework}.podspec`) &&
-    fs.existsSync(`${folder_path}/Project/.jazzy.yaml`) &&
-    fs.existsSync(`${folder_path}/Project/README.md`) &&
-    fs.existsSync(`${folder_path}/Files`)
+    fs.existsSync(`${baseFolderPath}/Project/.jazzy.yaml`) &&
+    fs.existsSync(`${baseFolderPath}/Project/README.md`) &&
+    fs.existsSync(`${baseFolderPath}/Files`)
   ) {
     if (plugin == true) {
       if (
-        ((fs.existsSync(`${folder_path}/Templates/ios.json.ejs`) ||
-          fs.existsSync(`${folder_path}/Templates/tvos.json.ejs`)) &&
-          fs.existsSync(`${folder_path}/Manifest/ios.json`)) ||
-        fs.existsSync(`${folder_path}/Manifest/tvos.json`)
+        ((fs.existsSync(`${baseFolderPath}/Templates/ios.json.ejs`) ||
+          fs.existsSync(`${baseFolderPath}/Templates/tvos.json.ejs`)) &&
+          fs.existsSync(`${baseFolderPath}/Manifest/ios.json`)) ||
+        fs.existsSync(`${baseFolderPath}/Manifest/tvos.json`)
       ) {
         console.log(succeedText);
         return true;

@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const shell = require("cli-task-runner/utils/shell");
-const { abort } = require("./Helpers.js");
+const { abort, basePathForModel } = require("./Helpers.js");
 
 const {
   compareVersion,
@@ -58,17 +58,18 @@ async function run() {
 async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
   try {
     const promises = itemsToUpdate.map(async model => {
+      const baseFolderPath = basePathForModel(model);
+
       const {
         framework = null,
         version_id = null,
-        folder_path = null,
         plugin = null,
         npm_package = null
       } = model;
 
       const ejsData = { version_id, new_tag: newGitTag };
-      const templatesBasePath = `${folder_path}/Templates`;
-      const projectBasePath = `${folder_path}/Project`;
+      const templatesBasePath = `${baseFolderPath}/Templates`;
+      const projectBasePath = `${baseFolderPath}/Project`;
       const templateExtension = ".ejs";
 
       await updateTemplate(
@@ -78,7 +79,7 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
       );
 
       const podspecPath = npm_package
-        ? `${folder_path}/Files/${framework}.podspec`
+        ? `${baseFolderPath}/Files/${framework}.podspec`
         : `${framework}.podspec`;
 
       await updateTemplate(
@@ -135,16 +136,18 @@ async function generateDocumentation(itemsToUpdate) {
   console.log("Generating documentation\n");
   try {
     const promises = itemsToUpdate.map(async model => {
-      const { framework = null, folder_path = null } = model;
+      const baseFolderPath = basePathForModel(model);
+
+      const { framework = null } = model;
       console.log(`\nGeneration documentation for framework:${framework}`);
-      const isPodfileExist = fs.existsSync(`${folder_path}/Project/Podfile`);
+      const isPodfileExist = fs.existsSync(`${baseFolderPath}/Project/Podfile`);
       if (isPodfileExist) {
         await shell.exec(
-          `cd ${folder_path}/Project && bundle exec pod install`
+          `cd ${baseFolderPath}/Project && bundle exec pod install`
         );
       }
       // Generate documentation
-      await shell.exec(`cd ${folder_path}/Project && bundle exec jazzy`);
+      await shell.exec(`cd ${baseFolderPath}/Project && bundle exec jazzy`);
     });
     await Promise.all(promises);
   } catch (e) {
@@ -213,9 +216,11 @@ async function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
     await shell.exec("git add .versions_automation.json");
     let commitMessage = `System update, expected tag:${newGitTag}, frameworks:`;
     const promises = itemsToUpdate.map(async model => {
-      const { framework = null, folder_path = null } = model;
+      const baseFolderPath = basePathForModel(model);
+
+      const { framework = null } = model;
       await shell.exec(`git add ${framework}.podspec`);
-      await shell.exec(`git add ${folder_path}`);
+      await shell.exec(`git add ${baseFolderPath}`);
     });
     await Promise.all(promises);
     itemsToUpdate.forEach(model => {
@@ -236,11 +241,13 @@ async function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
 
 async function uploadNpmPackages(itemsToUpdate) {
   const promises = itemsToUpdate.map(async model => {
-    const { version_id = null, folder_path = null, npm_package = null } = model;
+    const baseFolderPath = basePathForModel(model);
+
+    const { version_id = null, npm_package = null } = model;
     if (npm_package) {
       try {
         await shell.exec(
-          `cd ${folder_path}/Files && yarn publish --new-version ${version_id} --no-git-tag-version`
+          `cd ${baseFolderPath}/Files && yarn publish --new-version ${version_id} --no-git-tag-version`
         );
       } catch (e) {
         abort(e.message);
