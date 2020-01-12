@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'ZappApple'
-  s.version = '0.1.1'
+  s.version = '0.1.2'
   s.summary = 'Framework that has general logic of the Zapp Apple application'
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
   s.license = 'Appache 2.0'
   s.author = { 'a.kononenko@applicaster.com' => 'a.kononenko@applicaster.com' }
-  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.1.12.13-1-7" }
+  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.1.12.13-1-1" }
 
   s.ios.xcconfig =  {
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'ENABLE_BITCODE' => 'YES',
     'OTHER_CFLAGS'  => '-fembed-bitcode',
-    'OTHER_LDFLAGS' => '$(inherited) -objc -framework "AppCenter" ',
+    'OTHER_LDFLAGS' => '$(inherited) -objc ',
 
   }
 
