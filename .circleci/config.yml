@@ -85,28 +85,10 @@ jobs:
                         - run:
                                   name: Zappifest Version
                                   command: zappifest -v
-                        # Restore Cocoapods cache, save cache on lower level, after pod install
-                        - restore_cache:
-                                  keys:
-                                          - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-                                          - CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-
-                                          - CocoaPods-{{ checksum "~/_caching_file" }}-
 
                         - run:
                                   name: CocoaPods - version
                                   command: bundle exec pod --version
-
-                        # Pod update
-                        - run:
-                                  name: CocoaPods - update dependencies
-                                  command: cd $PROJECT_PATH && bundle exec pod install; cd -
-
-                        # Cache CocoaPods
-                        - save_cache:
-                                  name: CocoaPods - save cache
-                                  key: CocoaPods-{{ checksum "~/_caching_file" }}-{{ .Branch }}-{{ .Revision }}
-                                  paths:
-                                          - "~/.cocoapods/repos/cocoapods-"
 
                         - run:
                                   name: Validate Frameworks
