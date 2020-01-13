@@ -1,37 +1,36 @@
-
 Pod::Spec.new do |s|
-  s.name             = "ZappGoogleAnalytics"
-  s.version          = '<%= version_id %>'
-  s.summary          = "ZappGoogleAnalytics"
-  s.swift_versions = '5.1'
-  s.description      = <<-DESC
-                      ZappAnalyticsPluginGAtvOS container.
-                       DESC
-  s.homepage         = "https://applicaster.com"
-  s.license = 'Appache 2.0'
-  s.author           = { "cmps" => "a.zchut@applicaster.com" }
-  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', 
-               :tag => '<%= new_tag %>' }
-  s.platform = :tvos, :ios
-  s.tvos.deployment_target = "10.0"
-  s.ios.deployment_target = '10.0'
+s.name             = "ZappGoogleAnalytics"
+s.version          = '<%= version_id %>'
+s.summary          = "ZappGoogleAnalytics"
+s.swift_versions = '5.1'
+s.description      = <<-DESC
+ZappAnalyticsPluginGAtvOS container.
+DESC
+s.homepage         = "https://applicaster.com"
+s.license = 'Appache 2.0'
+s.author           = { "cmps" => "a.zchut@applicaster.com" }
+s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
+:tag => '<%= new_tag %>' }
+s.platform = :tvos, :ios
+s.tvos.deployment_target = "10.0"
+s.ios.deployment_target = '10.0'
 
-  s.dependency 'ZappCore'
-  
-  s.requires_arc = true
+s.dependency 'ZappCore'
 
-  s.source_files = ['Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/**/*.{swift}']
+s.requires_arc = true
 
-  s.resources = [
-    "Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDimensionMapping.plist"
-  ]
+s.source_files = ['Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/**/*.{swift}']
 
-  s.xcconfig =  {
-    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
-    'ENABLE_BITCODE' => 'YES',
-  }
+s.resources = [
+"Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDimensionMapping.plist"
+]
 
-  s.test_spec 'UnitTests' do |sp|
-    sp.source_files = 'Frameworks/Plugins/ZappGoogleAnalytics/Files/Tests/**'
-  end
-endw
+s.xcconfig =  {
+'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+'ENABLE_BITCODE' => 'YES',
+}
+
+s.test_spec 'UnitTests' do |sp|
+sp.source_files = 'Frameworks/Plugins/ZappGoogleAnalytics/Files/Tests/**'
+end
+end
