@@ -70,7 +70,6 @@ function validateSingleFrameworkPathes(model) {
     fs.existsSync(`${baseFolderPath}/Podfile`) &&
     fs.existsSync(`${baseFolderPath}/Files`)
   ) {
-    console.log("HERE!");
     if (plugin == true) {
       if (
         ((fs.existsSync(`${baseFolderPath}/Templates/ios.json.ejs`) ||

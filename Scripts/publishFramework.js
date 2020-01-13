@@ -133,34 +133,6 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
   }
   return Promise.resolve();
 }
-async function unitTestAndGenerateDocumentation(itemsToUpdate) {
-  console.log("Unit tests and generation documentation\n");
-  try {
-    const promises = itemsToUpdate.map(async model => {
-      const { framework = null } = model;
-
-      console.log(`\nPreparing framework:${framework}`);
-
-      const baseFolderPath = basePathForModel(model);
-
-      const isPodfileExist = fs.existsSync(`${baseFolderPath}/Podfile`);
-      if (isPodfileExist) {
-        await shell.exec(`cd ${baseFolderPath} && bundle exec pod install`);
-        await shell.exec(`cd ${baseFolderPath} && set -o pipefail && xcodebuild \
-        -workspace ./FrameworksApp.xcworkspace \
-        -scheme ${framework} \
-        -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.3' \
-        clean build test | tee xcodebuild.log | xcpretty --report html --output report.html`);
-        await shell.exec(`cd ${baseFolderPath} && bundle exec jazzy`);
-      }
-    });
-
-    await Promise.all(promises);
-  } catch (e) {
-    abort(e.message);
-  }
-  return Promise.resolve();
-}
 
 async function uploadManifestsToZapp(itemsToUpdate) {
   console.log("Uploading manifests to zapp");
@@ -198,12 +170,47 @@ async function uploadManifestsToZapp(itemsToUpdate) {
   return Promise.resolve();
 }
 
+async function runInSequence(items, asyncFunc) {
+  return items.reduce(async (previous, current) => {
+    await previous;
+    return asyncFunc(current);
+  }, Promise.resolve());
+}
+
+async function unitTestAndGenerateDocumentation(itemsToUpdate) {
+  console.log("Unit tests and generation documentation\n");
+  try {
+    const result = await runInSequence(itemsToUpdate, async model => {
+      const { framework = null } = model;
+      console.log(`\nPreparing framework:${framework}\n`);
+      const baseFolderPath = basePathForModel(model);
+      const isPodfileExist = fs.existsSync(`${baseFolderPath}/Podfile`);
+      if (isPodfileExist) {
+        await shell.exec(`cd ${baseFolderPath} && bundle exec pod install`);
+        await shell.exec(`cd ${baseFolderPath} && set -o pipefail && xcodebuild \
+        -workspace ./FrameworksApp.xcworkspace \
+        -scheme ${framework} \
+        -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.3' \
+        clean build test | tee xcodebuild.log | xcpretty --report html --output report.html`);
+        await shell.exec(`cd ${baseFolderPath} && bundle exec jazzy`);
+      }
+    });
+    return result;
+  } catch (e) {
+    abort(e.message);
+  }
+}
+
 async function updateFrameworksVersionsInGeneralDocs(itemsToUpdate) {
   try {
     let ejsData = {};
 
-    const promises = itemsToUpdate.map(async model => {
-      const { framework = null, version_id = null } = model;
+    const keys = Object.keys(itemsToUpdate);
+
+    const promises = keys.map(async framework => {
+      const model = itemsToUpdate[framework];
+
+      const { version_id = null } = model;
       ejsData[framework] = version_id;
     });
     await updateTemplate(ejsData, "README.md.ejs", `README.md`);
