@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const path = require("path");
 const shell = require("cli-task-runner/utils/shell");
 const { abort, basePathForModel } = require("./Helpers.js");
 
@@ -134,11 +133,12 @@ async function unitTestAndGenerateDocumentation(itemsToUpdate) {
   console.log("Unit tests and generation documentation\n");
   try {
     const promises = itemsToUpdate.map(async model => {
+      const { framework = null } = model;
+
       console.log(`\nPreparing framework:${framework}`);
 
       const baseFolderPath = basePathForModel(model);
 
-      const { framework = null } = model;
       const isPodfileExist = fs.existsSync(`${baseFolderPath}/Podfile`);
       if (isPodfileExist) {
         await shell.exec(`cd ${baseFolderPath} && bundle exec pod install`);
