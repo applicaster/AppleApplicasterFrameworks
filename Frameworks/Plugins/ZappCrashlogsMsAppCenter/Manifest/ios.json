@@ -4,16 +4,19 @@
     "class_name": "ZappCrashlogsMsAppCenter.ZappCrashlogsMsAppCenter",
     "modules": []
   },
-  "dependency_repository_url": [],
+  "dependency_name": "@applicaster/crash-logs-ms-app-center",
+  "npm_dependencies": [
+    "@applicaster/crash-logs-ms-app-center@<%= version_id %>"
+  ],
   "extra_dependencies": [
     {
-      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 2020.56.5.15-1-5"
+      "ZappCrashlogsMsAppCenter": ":path => './node_modules/crash-logs-ms-app-center/ZappCrashlogsMsAppCenter.podspec'"
     }
   ],
   "platform": "ios",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "4.2.0",
+  "manifest_version": "4.2.1",
   "name": "App Center Crashlogs",
   "description": "Zapp Crashlogs Plugin App Center",
   "type": "error_monitoring",
@@ -26,7 +29,5 @@
   "unsupported_since_zapp_sdk": "",
   "react_native": false,
   "custom_configuration_fields": [],
-  "targets": [
-    "mobile"
-  ]
+  "targets": ["mobile"]
 }

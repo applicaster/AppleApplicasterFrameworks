@@ -12,8 +12,8 @@ end
 target 'FrameworksApp' do
   supports_swift_versions '5.1'
   use_frameworks!
-  pod 'ZappCrashlogsMsAppCenter', :path => '../../../ZappCrashlogsMsAppCenter.podspec', :testspecs => ['UnitTests']
-  pod 'ZappCore', :path => '../../../ZappCore.podspec'
+  pod 'ZappCrashlogsMsAppCenter', :path => 'Files/ZappCrashlogsMsAppCenter.podspec', :testspecs => ['UnitTests']
+  pod 'ZappCore', :path => '../ZappCore.podspec'
   pod 'AppCenter/Crashes', '~> 2.5.3'
 
   target 'FrameworksAppTests' do

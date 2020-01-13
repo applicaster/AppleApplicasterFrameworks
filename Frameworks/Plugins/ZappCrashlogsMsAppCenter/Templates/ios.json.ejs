@@ -4,10 +4,13 @@
     "class_name": "ZappCrashlogsMsAppCenter.ZappCrashlogsMsAppCenter",
     "modules": []
   },
-  "dependency_repository_url": [],
+  "dependency_name": "@applicaster/crash-logs-ms-app-center",
+  "npm_dependencies": [
+    "@applicaster/crash-logs-ms-app-center@<%= version_id %>"
+  ],
   "extra_dependencies": [
     {
-      "ZappCrashlogsMsAppCenter": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => <%= new_tag %>"
+      "ZappCrashlogsMsAppCenter": ":path => './node_modules/crash-logs-ms-app-center/ZappCrashlogsMsAppCenter.podspec'"
     }
   ],
   "platform": "ios",

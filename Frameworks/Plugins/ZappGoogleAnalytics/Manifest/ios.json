@@ -8,7 +8,7 @@
   "platform": "ios",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "0.5.0",
+  "manifest_version": "0.5.1",
   "name": "Google Analytics Web Based API",
   "description": "Provide Google Analytics as agent. Please use this plugin only if you are using quick brick",
   "type": "analytics",
@@ -19,9 +19,13 @@
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",
   "react_native": false,
+  "dependency_name": "@applicaster/google-analytics-web-based",
+  "npm_dependencies": [
+    "@applicaster/google-analytics-web-based@<%= version_id %>"
+  ],
   "extra_dependencies": [
     {
-      "ZappGoogleAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.56.5.15-1-5'"
+      "ZappGoogleAnalytics": ":path => './node_modules/google-analytics-web-based/ZappGoogleAnalytics.podspec'"
     }
   ],
   "custom_configuration_fields": [
@@ -37,7 +41,5 @@
       "default": 0
     }
   ],
-  "targets": [
-    "mobile"
-  ]
+  "targets": ["mobile"]
 }

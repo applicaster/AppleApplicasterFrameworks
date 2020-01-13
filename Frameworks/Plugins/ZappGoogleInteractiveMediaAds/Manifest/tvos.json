@@ -2,18 +2,14 @@
   "api": {
     "require_startup_execution": false,
     "class_name": "GoogleInteractiveMediaAdsAdapter",
-    "modules": [
-      "ZappGoogleInteractiveMediaAds"
-    ]
+    "modules": ["ZappGoogleInteractiveMediaAds"]
   },
   "dependency_name": "@applicaster/quick-brick-google-ima-client",
-  "npm_dependencies": [
-    "@applicaster/quick-brick-google-ima-client-tv@0.5.0"
-  ],
+  "npm_dependencies": ["@applicaster/quick-brick-google-ima-client-tv@0.5.2"],
   "platform": "tvos",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "0.5.0",
+  "manifest_version": "0.5.2",
   "name": "Google Interactive Media Ads QuickBrick,",
   "description": "This plugin allow to add Google Interactive Media Ads to supported players.",
   "type": "video_advertisement",
@@ -24,7 +20,7 @@
   ],
   "extra_dependencies": [
     {
-      "ZappGoogleInteractiveMediaAds": ":path => './node_modules/@applicaster/quick-brick-google-ima-client-tv/ZappGoogleInteractiveMediaAds.podspec'"
+      "ZappGoogleInteractiveMediaAds": ":path => './node_modules/quick-brick-google-ima-client-tv/ZappGoogleInteractiveMediaAds.podspec'"
     }
   ],
   "min_zapp_sdk": "10.1.1-Dev",
@@ -63,7 +59,5 @@
       "default": ""
     }
   ],
-  "targets": [
-    "tv"
-  ]
+  "targets": ["tv"]
 }
