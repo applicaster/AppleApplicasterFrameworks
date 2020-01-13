@@ -27,7 +27,11 @@ async function run() {
   let itemsToUpdate = [];
   let newAutomationObject = {};
 
-  frameworksList.forEach(model => {
+  const keys = Object.keys(frameworksList);
+
+  keys.forEach(key => {
+    const model = frameworksList[key];
+    model["framework"] = key;
     const { framework = null, version_id = null } = model;
     const automationFrameworkVersion = frameworksAutomationList[framework];
     if (
