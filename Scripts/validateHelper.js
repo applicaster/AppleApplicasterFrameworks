@@ -64,7 +64,7 @@ function validateSingleFrameworkDataInPlist(model) {
 function validateSingleFrameworkPathes(model) {
   const baseFolderPath = basePathForModel(model);
 
-  const { plugin, framework } = model;
+  const { plugin, framework, npm_package } = model;
   console.log({ plugin });
 
   console.log(
@@ -75,9 +75,8 @@ function validateSingleFrameworkPathes(model) {
     fs.existsSync(baseFolderPath) &&
     fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
     fs.existsSync(`${baseFolderPath}/Templates/${framework}.podspec.ejs`) &&
-    fs.existsSync(`${framework}.podspec`) &&
-    fs.existsSync(`${baseFolderPath}/Project/.jazzy.yaml`) &&
-    fs.existsSync(`${baseFolderPath}/Project/README.md`) &&
+    fs.existsSync(`${baseFolderPath}/.jazzy.yaml`) &&
+    fs.existsSync(`${baseFolderPath}/Podfile`) &&
     fs.existsSync(`${baseFolderPath}/Files`)
   ) {
     if (plugin == true) {
@@ -87,12 +86,20 @@ function validateSingleFrameworkPathes(model) {
           fs.existsSync(`${baseFolderPath}/Manifest/ios.json`)) ||
         fs.existsSync(`${baseFolderPath}/Manifest/tvos.json`)
       ) {
+        if (
+          (npm_package &&
+            fs.existsSync(`${baseFolderPath}/Files/${framework}.podspec`)) ||
+          (!npm_package && fs.existsSync(`${framework}.podspec`))
+        ) {
+          console.log(succeedText);
+          return true;
+        }
+      }
+    } else {
+      if (fs.existsSync(`${framework}.podspec`)) {
         console.log(succeedText);
         return true;
       }
-    } else {
-      console.log(succeedText);
-      return true;
     }
   }
   return false;
