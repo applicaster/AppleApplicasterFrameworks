@@ -16,4 +16,8 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.55.1.23-1-8" }
   
   s.source_files = 'Frameworks/ZappCore/Files/Universal/**/*.{swift}'
+
+  s.test_spec 'UnitTests' do |sp|
+    sp.source_files = 'Frameworks/ZappCore/Files/Tests/**'
+  end
 end
