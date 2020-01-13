@@ -83,4 +83,4 @@ Frameworks/**/xcodebuild.log
 
 node_modules/*
 
-FrameworksApp/FrameworksApp.xcodeproj/project.pbxproj
+FrameworksApp/**
