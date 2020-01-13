@@ -13,7 +13,7 @@ target 'FrameworksApp' do
   supports_swift_versions '5.1'
   use_frameworks!
   pod 'ZappGoogleAnalytics', :path => 'Files/ZappGoogleAnalytics.podspec', :testspecs => ['UnitTests']
-  pod 'ZappCore', :path => '../ZappCore.podspec'
+  pod 'ZappCore', :path => '../../../ZappCore.podspec'
 
   target 'FrameworksAppTests' do
     inherit! :search_paths
