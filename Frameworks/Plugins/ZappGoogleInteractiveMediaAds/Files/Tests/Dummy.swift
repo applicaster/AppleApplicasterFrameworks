@@ -1,16 +1,16 @@
 //
-//  ZappGoogleInteractiveMediaAdsTests.swift
-//  ZappGoogleInteractiveMediaAdsTests
+//  Dummy.swift
+//  MyTest
 //
-//  Created by Anton Kononenko on 12/27/19.
-//  Copyright © 2019 Anton Kononenko. All rights reserved.
+//  Created by Anton Kononenko on 1/9/20.
+//  Copyright © 2020 Applicaster. All rights reserved.
 //
 
+import Foundation
 import XCTest
-@testable import ZappGoogleInteractiveMediaAds
 
-class ZappGoogleInteractiveMediaAdsTests: XCTestCase {
-
+class Dummy:XCTestCase {
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -20,8 +20,6 @@ class ZappGoogleInteractiveMediaAdsTests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testPerformanceExample() {
@@ -30,5 +28,4 @@ class ZappGoogleInteractiveMediaAdsTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
