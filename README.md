@@ -27,11 +27,11 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: *0.6.0*
+##### ZappCore: *0.6.1*
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: *0.1.2*
+##### ZappApple: *0.1.3*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
@@ -39,7 +39,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: Analytics
 
-##### Google Analytics Web Based API: *0.5.0*
+##### Google Analytics Web Based API: *0.5.1*
 - **Description:** This plugin allow to add Google Analytics as agent.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
 - **Manifest:**
@@ -48,7 +48,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: Crashlogs
 
-##### MS App Center: *4.2.0*
+##### MS App Center: *4.2.1*
 - **Description:** [App center](https://appcenter.ms) crash logs service.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCrashlogsMsAppCenter/index.html)
 - **Manifest:**

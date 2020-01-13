@@ -1,13 +1,13 @@
 module: ZappCore
-module_version: 0.6.0
+module_version: 0.6.1
 
 author: "Applicaster ltd."
 copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
 
 author_url: https://www.applicaster.com
 github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/ZappCore
-xcodebuild_arguments: ["-scheme", "ZappCore"]
 
+xcodebuild_arguments: ["-scheme", "ZappCore"]
 output: "../../docs/ZappCore"
 clean: true
 min_acl: "public"

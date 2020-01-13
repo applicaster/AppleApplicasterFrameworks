@@ -1,14 +1,13 @@
 module: ZappCrashlogsMsAppCenter
-module_version: 4.2.0
+module_version: 4.2.1
 
 author: "Applicaster ltd."
 copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
 
-xcodebuild_arguments: ["-scheme", "ZappCrashlogsMsAppCenter"]
-
 author_url: https://www.applicaster.com
 github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/Crashlogs/ZappCrashlogsMsAppCenter
 
+xcodebuild_arguments: ["-scheme", "ZappCrashlogsMsAppCenter"]
 output: "../../../../docs/ZappCrashlogsMsAppCenter"
 clean: true
 min_acl: "private"

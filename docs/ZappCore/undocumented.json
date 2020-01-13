@@ -1,740 +1,740 @@
 {
   "warnings": [
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 12,
       "symbol": "FacadeConnector",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 13,
       "symbol": "FacadeConnector.enterpriseAppPrefix",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 17,
       "symbol": "FacadeConnector.applicationData",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 21,
       "symbol": "FacadeConnector.analytics",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 25,
       "symbol": "FacadeConnector.playerDependant",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 29,
       "symbol": "FacadeConnector.storage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 33,
       "symbol": "FacadeConnector.pluginManager",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 39,
       "symbol": "FacadeConnector.connector",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 47,
       "symbol": "FacadeConnector.init(connectorProvider:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnectorProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnectorProtocol.swift",
       "line": 11,
       "symbol": "FacadeConnectorProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnectorProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnectorProtocol.swift",
       "line": 12,
       "symbol": "FacadeConnectorProtocol.connectorInstance",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
       "line": 12,
       "symbol": "FacadeConnectorAnalyticsProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
       "line": 15,
       "symbol": "FacadeConnectorAnalyticsProtocol.sendEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
       "line": 20,
       "symbol": "FacadeConnectorAnalyticsProtocol.sendScreenEvent(screenTitle:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
       "line": 21,
       "symbol": "FacadeConnectorAnalyticsProtocol.startObserveTimedEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAnalyticsProtocol.swift",
       "line": 23,
       "symbol": "FacadeConnectorAnalyticsProtocol.stopObserveTimedEvent(_:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAppDataProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAppDataProtocol.swift",
       "line": 11,
       "symbol": "FacadeConnectorAppDataProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAppDataProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAppDataProtocol.swift",
       "line": 17,
       "symbol": "FacadeConnectorAppDataProtocol.bundleName()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAppDataProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorAppDataProtocol.swift",
       "line": 18,
       "symbol": "FacadeConnectorAppDataProtocol.appVersion()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPlayerDependantProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPlayerDependantProtocol.swift",
       "line": 12,
       "symbol": "FacadeConnectorPlayerDependantProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
       "line": 11,
       "symbol": "FacadeConnectorPluginManagerProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
       "line": 12,
       "symbol": "FacadeConnectorPluginManagerProtocol.plugin(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
       "line": 13,
       "symbol": "FacadeConnectorPluginManagerProtocol.getAllPlugins()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
       "line": 14,
       "symbol": "FacadeConnectorPluginManagerProtocol.adapterClass(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
       "line": 11,
       "symbol": "FacadeConnectorStorageProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
       "line": 12,
       "symbol": "FacadeConnectorStorageProtocol.sessionStorageValue(for:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
       "line": 13,
       "symbol": "FacadeConnectorStorageProtocol.sessionStorageSetValue(for:value:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
       "line": 14,
       "symbol": "FacadeConnectorStorageProtocol.sessionStorageAllValues(namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
       "line": 16,
       "symbol": "FacadeConnectorStorageProtocol.localStorageValue(for:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
       "line": 17,
       "symbol": "FacadeConnectorStorageProtocol.localStorageSetValue(for:value:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorStorageProtocol.swift",
       "line": 18,
       "symbol": "FacadeConnectorStorageProtocol.localStorageAllValues(namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 11,
       "symbol": "PipesDataModelHelper",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 12,
       "symbol": "PipesDataModelHelper.pipesObject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 13,
       "symbol": "PipesDataModelHelper.init(pipesDataDict:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 17,
       "symbol": "PipesDataModelHelper.identifier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 27,
       "symbol": "PipesDataModelHelper.screenType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 31,
       "symbol": "PipesDataModelHelper.extensions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 35,
       "symbol": "PipesDataModelHelper.title",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 39,
       "symbol": "PipesDataModelHelper.subtitle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 43,
       "symbol": "PipesDataModelHelper.summary",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 47,
       "symbol": "PipesDataModelHelper.updated",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 51,
       "symbol": "PipesDataModelHelper.published",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 55,
       "symbol": "PipesDataModelHelper.link",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 63,
       "symbol": "PipesDataModelHelper.author",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 67,
       "symbol": "PipesDataModelHelper.category",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 71,
       "symbol": "PipesDataModelHelper.content",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 75,
       "symbol": "PipesDataModelHelper.advertisment",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 79,
       "symbol": "PipesDataModelHelper.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 87,
       "symbol": "PipesDataModelHelper.mediaGroups",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
       "line": 11,
       "symbol": "PipesDataModelHelperContent",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
       "line": 12,
       "symbol": "PipesDataModelHelperContent.contentObject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
       "line": 13,
       "symbol": "PipesDataModelHelperContent.init(contentDict:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
       "line": 17,
       "symbol": "PipesDataModelHelperContent.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
       "line": 21,
       "symbol": "PipesDataModelHelperContent.content",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperContent.swift",
       "line": 25,
       "symbol": "PipesDataModelHelperContent.contesrcnt",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
       "line": 11,
       "symbol": "PipesDataModelHelperExtensions",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
       "line": 12,
       "symbol": "PipesDataModelHelperExtensions.extensionsObject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
       "line": 13,
       "symbol": "PipesDataModelHelperExtensions.init(extensionsDict:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
       "line": 17,
       "symbol": "PipesDataModelHelperExtensions.isFree",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperExtensions.swift",
       "line": 27,
       "symbol": "PipesDataModelHelperExtensions.isLive",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 11,
       "symbol": "PipesDataModelHelperMediaGroupsTypes",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 12,
       "symbol": "PipesDataModelHelperMediaGroupsTypes.image",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 13,
       "symbol": "PipesDataModelHelperMediaGroupsTypes.audio",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 14,
       "symbol": "PipesDataModelHelperMediaGroupsTypes.video",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 17,
       "symbol": "PipesDataModelHelperMediaGroups",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 18,
       "symbol": "PipesDataModelHelperMediaGroups.mediaGroupsArray",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 20,
       "symbol": "PipesDataModelHelperMediaGroups.images",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 21,
       "symbol": "PipesDataModelHelperMediaGroups.audios",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 22,
       "symbol": "PipesDataModelHelperMediaGroups.videos",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 24,
       "symbol": "PipesDataModelHelperMediaGroups.init(mediaGroupsArray:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 28,
       "symbol": "PipesDataModelHelperMediaGroups.parseMediaGroups()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaGroups.swift",
       "line": 51,
       "symbol": "PipesDataModelHelperMediaGroups.dataForKey(type:key:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaItem.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaItem.swift",
       "line": 11,
       "symbol": "PipesDataModelHelperMediaItem",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaItem.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaItem.swift",
       "line": 12,
       "symbol": "PipesDataModelHelperMediaItem.src",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaItem.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaItem.swift",
       "line": 13,
       "symbol": "PipesDataModelHelperMediaItem.key",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaItem.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelperMediaItem.swift",
       "line": 15,
       "symbol": "PipesDataModelHelperMediaItem.init(key:src:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPAdapterProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPAdapterProtocol.swift",
       "line": 20,
       "symbol": "ZPAdapterProtocol.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 27,
       "symbol": "ZPPluginType.Root",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 28,
       "symbol": "ZPPluginType.VideoPlayer",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 29,
       "symbol": "ZPPluginType.Analytics",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 30,
       "symbol": "ZPPluginType.BroadcasterPicker",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 31,
       "symbol": "ZPPluginType.Push",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 32,
       "symbol": "ZPPluginType.General",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 33,
       "symbol": "ZPPluginType.Login",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 34,
       "symbol": "ZPPluginType.AuthProvider",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 35,
       "symbol": "ZPPluginType.NavigationBar",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 36,
       "symbol": "ZPPluginType.CellStyleFamily",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 37,
       "symbol": "ZPPluginType.VideoAdvertisement",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 38,
       "symbol": "ZPPluginType.Crashlogs",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 42,
       "symbol": "ZPPluginType.Advertisement",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 45,
       "symbol": "ZPPluginModel",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 46,
       "symbol": "ZPPluginModel.object",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 48,
       "symbol": "ZPPluginModel.api",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 52,
       "symbol": "ZPPluginModel.plugin",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 56,
       "symbol": "ZPPluginModel.identifier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 60,
       "symbol": "ZPPluginModel.pluginRequireStartupExecution",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 64,
       "symbol": "ZPPluginModel.isReactNativePlugin",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 68,
       "symbol": "ZPPluginModel.pluginName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 72,
       "symbol": "ZPPluginModel.pluginType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 79,
       "symbol": "ZPPluginModel.pluginClassName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 83,
       "symbol": "ZPPluginModel.pluginModules",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 87,
       "symbol": "ZPPluginModel.configurationJSON",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 89,
       "symbol": "ZPPluginModel.init(object:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 102,
       "symbol": "ZPPluginModel.configurationValue(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/PlayerDependantsPlugins/Protocols/DependablePlayerAdDelegatePluginProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/PlayerDependantsPlugins/Protocols/DependablePlayerAdDelegatePluginProtocol.swift",
       "line": 13,
       "symbol": "DependablePlayerAdDelegatePluginProtocolKeys.playingKey",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappCore"
+  "source_directory": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappCore"
 }

@@ -1,2504 +1,2504 @@
 {
   "warnings": [
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 10,
       "symbol": "stateMachineLogCategory",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 12,
       "symbol": "DataManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 14,
       "symbol": "DataManager.stylesFileName",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 16,
       "symbol": "DataManager.ApplicationFiles",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 17,
       "symbol": "DataManager.ApplicationFiles.featureCustomization",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 20,
       "symbol": "DataManager.DataKeysExtensions",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 21,
       "symbol": "DataManager.DataKeysExtensions.mp4",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 22,
       "symbol": "DataManager.DataKeysExtensions.json",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 23,
       "symbol": "DataManager.DataKeysExtensions.plist",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 26,
       "symbol": "DataManager.splashVideoPath()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
       "line": 32,
       "symbol": "DataManager.zappStylesPath()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/IdentityClient/IdentityClient.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/IdentityClient/IdentityClient.swift",
       "line": 12,
       "symbol": "IdentityClient",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 12,
       "symbol": "LoadingLoaderTypes",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 13,
       "symbol": "LoadingLoaderTypes.plugins",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 14,
       "symbol": "LoadingLoaderTypes.styles",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 17,
       "symbol": "LoadingManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 18,
       "symbol": "LoadingManager.plugins",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 26,
       "symbol": "LoadingManager.styles",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 34,
       "symbol": "LoadingManager.fileForUrlString(urlString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 45,
       "symbol": "LoadingManager.loadFile(type:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 59,
       "symbol": "LoadingManager.file(type:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheHelper.swift",
       "line": 11,
       "symbol": "APCacheHelper",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheHelper.swift",
       "line": 13,
       "symbol": "APCacheHelper.download(file:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 11,
       "symbol": "APCacheManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 13,
       "symbol": "APCacheManager.urlCache",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 23,
       "symbol": "APCacheManager.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 24,
       "symbol": "APCacheManager.fileCompletions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 28,
       "symbol": "APCacheManager.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 34,
       "symbol": "APCacheManager.saveObjectToCache(_:identifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 39,
       "symbol": "APCacheManager.loadObjectFromCache(forClass:identifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 51,
       "symbol": "APCacheManager.deleteObjectFromCache(_:identifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 56,
       "symbol": "APCacheManager.getLocalPath(forUrlString:useMd5UrlFilename:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 70,
       "symbol": "APCacheManager.getLocalPath(forUrlString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 78,
       "symbol": "APCacheManager.download(urlString:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 87,
       "symbol": "APCacheManager.download(file:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 144,
       "symbol": "APCacheManager.synchronized(lock:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
       "line": 153,
       "symbol": "APCacheManager.getFileCompletionFromArray(file:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 10,
       "symbol": "APCachedModel",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 11,
       "symbol": "APCachedModel.object",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 12,
       "symbol": "APCachedModel.identifier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 13,
       "symbol": "APCachedModel.filename",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 16,
       "symbol": "APCachedModel.className",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 20,
       "symbol": "APCachedModel.init(object:identifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 28,
       "symbol": "APCachedModel.localURLPath()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 52,
       "symbol": "APCachedModel.isInLocalStorage()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 62,
       "symbol": "APCachedModel.saveObjectToStorage()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 83,
       "symbol": "APCachedModel.loadObjectFromStorage()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 101,
       "symbol": "APCachedModel.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCachedModel.swift",
       "line": 105,
       "symbol": "APCachedModel.deleteLocalStorage()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 11,
       "symbol": "APFile",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 12,
       "symbol": "APFile.filename",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 13,
       "symbol": "APFile.url",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 14,
       "symbol": "APFile.request",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 15,
       "symbol": "APFile.searchPathDirectory",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 17,
       "symbol": "APFile.init(filename:url:cachePolicy:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 26,
       "symbol": "APFile.init(filename:url:searchPathDirectory:cachePolicy:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 42,
       "symbol": "APFile.localURLPath()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 60,
       "symbol": "APFile.isInLocalStorage()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 70,
       "symbol": "APFile.saveToStorage(data:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 88,
       "symbol": "APFile.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 92,
       "symbol": "APFile.getCachedData()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFile.swift",
       "line": 99,
       "symbol": "APFile.deleteCachedData()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
       "line": 11,
       "symbol": "APFileLoadingCompletion",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
       "line": 12,
       "symbol": "APFileLoadingCompletion.file",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
       "line": 13,
       "symbol": "APFileLoadingCompletion.completionArray",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
       "line": 14,
       "symbol": "APFileLoadingCompletion.didFinish",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
       "line": 16,
       "symbol": "APFileLoadingCompletion.init(file:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APFileLoadingCompletion.swift",
       "line": 22,
       "symbol": "APFileLoadingCompletion.init(file:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
       "line": 10,
       "symbol": "JsonSerializableProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
       "line": 11,
       "symbol": "JsonSerializableProtocol.dictForJsonSerialization",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
       "line": 12,
       "symbol": "JsonSerializableProtocol.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
       "line": 13,
       "symbol": "JsonSerializableProtocol.init(dictionary:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/JsonSerializableProtocol.swift",
       "line": 16,
       "symbol": "JsonSerializableProtocol",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/AVUrlAsset/AVUrlAsset+Extensions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/AVUrlAsset/AVUrlAsset+Extensions.swift",
       "line": 13,
       "symbol": "AVURLAsset.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 14,
       "symbol": "String.toMd5hash()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 31,
       "symbol": "String.isNotEmptyOrWhitespace(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 35,
       "symbol": "String.isEmptyOrWhitespace()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 41,
       "symbol": "String.isNotEmptyOrWhitespace()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 45,
       "symbol": "String.boolValue()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 51,
       "symbol": "String.replace(_:withString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 58,
       "symbol": "String.isDigits",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 64,
       "symbol": "String.tryAddHost(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 77,
       "symbol": "String.isURLScheme",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/String/String+APAdditions.swift",
       "line": 83,
       "symbol": "String.normalizedZappColorString()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
       "line": 14,
       "symbol": "UIApplication.bundleName()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
       "line": 18,
       "symbol": "UIApplication.appVersion()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
       "line": 22,
       "symbol": "UIApplication.appBuild()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
       "line": 26,
       "symbol": "UIApplication.versionBuild()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIApplication/UIApplication+Extension.swift",
       "line": 32,
       "symbol": "UIApplication.bundleVersion()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIColor/UIColor+Additions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIColor/UIColor+Additions.swift",
       "line": 12,
       "symbol": "UIColor.init(ARGBHex:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIView/UIView+Additions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIView/UIView+Additions.swift",
       "line": 11,
       "symbol": "UIView.matchParent()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIView/UIView+Additions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIView/UIView+Additions.swift",
       "line": 18,
       "symbol": "UIView.setInsetsFromParent(insets:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIView/UIView+Additions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIView/UIView+Additions.swift",
       "line": 73,
       "symbol": "UIView.clearAllConstraintOfAlignment()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIViewController/UIViewController+Additions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIViewController/UIViewController+Additions.swift",
       "line": 12,
       "symbol": "UIViewController.topMostModalViewController()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIViewController/UIViewController+Additions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIViewController/UIViewController+Additions.swift",
       "line": 22,
       "symbol": "UIViewController.addChildViewController(childController:to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIViewController/UIViewController+Additions.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Categories/UIViewController/UIViewController+Additions.swift",
       "line": 29,
       "symbol": "UIViewController.removeViewControllerFromParent()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCusimizationConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCusimizationConsts.swift",
       "line": 11,
       "symbol": "FeaturesCusimizationConsts",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCusimizationConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCusimizationConsts.swift",
       "line": 12,
       "symbol": "FeaturesCusimizationConsts.MSAppCenterAppSecret",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
       "line": 11,
       "symbol": "FeaturesCustomization",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
       "line": 12,
       "symbol": "FeaturesCustomization.featuresCustomizationDict",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
       "line": 14,
       "symbol": "FeaturesCustomization.getPlist()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
       "line": 25,
       "symbol": "FeaturesCustomization.MSAppCenterAppSecret()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/IdentityClient/IdentityClientBase.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/IdentityClient/IdentityClientBase.swift",
       "line": 58,
       "symbol": "IdentityClientBase.IdentityClientBaseServerType.init(serverURL:UUIDKey:tokenKey:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keychain/HTTPStatusCode.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keychain/HTTPStatusCode.swift",
       "line": 269,
       "symbol": "HTTPURLResponse.status",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AnalyticsKeys/AnalyticsKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AnalyticsKeys/AnalyticsKeys.swift",
       "line": 11,
       "symbol": "CoreAnalyticsKeys",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AnalyticsKeys/AnalyticsKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AnalyticsKeys/AnalyticsKeys.swift",
       "line": 12,
       "symbol": "CoreAnalyticsKeys.applicationWasLaunched",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AssetsKeys/AssetsKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AssetsKeys/AssetsKeys.swift",
       "line": 11,
       "symbol": "AssetsKeys",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AssetsKeys/AssetsKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AssetsKeys/AssetsKeys.swift",
       "line": 12,
       "symbol": "AssetsKeys.splashVideoKey",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AssetsKeys/AssetsKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Keys/AssetsKeys/AssetsKeys.swift",
       "line": 13,
       "symbol": "AssetsKeys.splashImageKey",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
       "line": 12,
       "symbol": "ReachabilityManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
       "line": 13,
       "symbol": "ReachabilityManager.reachability",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
       "line": 14,
       "symbol": "ReachabilityManager.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
       "line": 15,
       "symbol": "ReachabilityManager.init(delegate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
       "line": 20,
       "symbol": "ReachabilityManager.startObserve()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
       "line": 31,
       "symbol": "ReachabilityManager.stopObserve()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
       "line": 39,
       "symbol": "ReachabilityManager.reachabilityChanged(note:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManagerDelegate.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManagerDelegate.swift",
       "line": 12,
       "symbol": "ReachabilityManagerDelegate",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManagerDelegate.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManagerDelegate.swift",
       "line": 13,
       "symbol": "ReachabilityManagerDelegate.reachabilityChanged(connection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingState.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingState.swift",
       "line": 12,
       "symbol": "LoadingState",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 11,
       "symbol": "StateCallBack",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 12,
       "symbol": "StateHandler",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 15,
       "symbol": "LoadingStateTypes",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 16,
       "symbol": "LoadingStateTypes.initial",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 17,
       "symbol": "LoadingStateTypes.loading",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 18,
       "symbol": "LoadingStateTypes.success",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 19,
       "symbol": "LoadingStateTypes.failed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 21,
       "symbol": "LoadingStateTypes.isStateFinishedTask()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateConst.swift",
       "line": 25,
       "symbol": "LoadingStateTypes.toString()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 11,
       "symbol": "LoadingStateMachine",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 13,
       "symbol": "LoadingStateMachine.dataSource",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 15,
       "symbol": "LoadingStateMachine.init(dataSource:withStates:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 22,
       "symbol": "LoadingStateMachine.defaultCenter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 24,
       "symbol": "LoadingStateMachine.states",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 25,
       "symbol": "LoadingStateMachine.applicastionLoadingState",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 27,
       "symbol": "LoadingStateMachine.startStatesInvocation()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 32,
       "symbol": "LoadingStateMachine.forceStartAllIndependantsState()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 36,
       "symbol": "LoadingStateMachine.updateAllStates(state:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 40,
       "symbol": "LoadingStateMachine.stateDidUpdated(state:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 57,
       "symbol": "LoadingStateMachine.allStateFinishedTask()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 61,
       "symbol": "LoadingStateMachine.state(by:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
       "line": 65,
       "symbol": "LoadingStateMachine.setSkipingStateAutoInvocation(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDataSource.swift",
       "line": 11,
       "symbol": "LoadingStateMachineDataSource",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDataSource.swift",
       "line": 12,
       "symbol": "LoadingStateMachineDataSource.stateMachineFinishedWork(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDelegate.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDelegate.swift",
       "line": 11,
       "symbol": "LoadingStateMachineDelegate",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDelegate.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDelegate.swift",
       "line": 12,
       "symbol": "LoadingStateMachineDelegate.stateDidUpdated(state:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDelegate.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/Protocols/LoadingStateMachineDelegate.swift",
       "line": 13,
       "symbol": "LoadingStateMachineDelegate.state(by:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
       "line": 11,
       "symbol": "LocalStorage",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
       "line": 12,
       "symbol": "LocalStorage.sharedInstance",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
       "line": 14,
       "symbol": "LocalStorage.userDefaults",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
       "line": 16,
       "symbol": "LocalStorage.storage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/LocalStorage/LocalStorage.swift",
       "line": 26,
       "symbol": "LocalStorage.saveToUserDefaults(storage:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/SessionStorage/SessionStorage.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/SessionStorage/SessionStorage.swift",
       "line": 11,
       "symbol": "SessionStorage",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/SessionStorage/SessionStorage.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/SessionStorage/SessionStorage.swift",
       "line": 12,
       "symbol": "SessionStorage.sharedInstance",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/SessionStorage/SessionStorage.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/SessionStorage/SessionStorage.swift",
       "line": 17,
       "symbol": "SessionStorage.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StorageHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StorageHelper.swift",
       "line": 11,
       "symbol": "StorageHelper",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StorageInitialization.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StorageInitialization.swift",
       "line": 11,
       "symbol": "StorageInitialization",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StorageInitialization.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StorageInitialization.swift",
       "line": 12,
       "symbol": "StorageInitialization.initializeDefaultValues(sessionStorage:localStorage:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StorageInitialization.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StorageInitialization.swift",
       "line": 23,
       "symbol": "StorageInitialization.setDefaultValues(for:defaultValues:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 11,
       "symbol": "zappLocalStorageName",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 13,
       "symbol": "ZappStorageKeys",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 14,
       "symbol": "ZappStorageKeys.applicationName",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 15,
       "symbol": "ZappStorageKeys.bucketId",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 16,
       "symbol": "ZappStorageKeys.versionId",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 17,
       "symbol": "ZappStorageKeys.versionName",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 18,
       "symbol": "ZappStorageKeys.buildVersion",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 19,
       "symbol": "ZappStorageKeys.accountId",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 20,
       "symbol": "ZappStorageKeys.accountsAccountId",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 21,
       "symbol": "ZappStorageKeys.apiSecretKey",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 22,
       "symbol": "ZappStorageKeys.appFamilyId",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 23,
       "symbol": "ZappStorageKeys.broadcasterExtensions",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 24,
       "symbol": "ZappStorageKeys.broadcasterId",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 25,
       "symbol": "ZappStorageKeys.bundleIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 26,
       "symbol": "ZappStorageKeys.languageCode",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 27,
       "symbol": "ZappStorageKeys.locale",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 28,
       "symbol": "ZappStorageKeys.platform",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 29,
       "symbol": "ZappStorageKeys.regionCode",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 30,
       "symbol": "ZappStorageKeys.uuid",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 31,
       "symbol": "ZappStorageKeys.tvOS",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 32,
       "symbol": "ZappStorageKeys.iOS",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 33,
       "symbol": "ZappStorageKeys.idfa",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 34,
       "symbol": "ZappStorageKeys.deviceType",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 35,
       "symbol": "ZappStorageKeys.deviceWidth",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 36,
       "symbol": "ZappStorageKeys.deviceHeight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 38,
       "symbol": "ZappStorageKeys.applicaster",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 39,
       "symbol": "ZappStorageKeys.applicasterVersion",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 40,
       "symbol": "ZappStorageKeys.zapp",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 41,
       "symbol": "ZappStorageKeys.applicasterNamespace",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 43,
       "symbol": "ZappStorageKeys.reactNativePackagerRoot",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 44,
       "symbol": "ZappStorageKeys.riversConfigurationId",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 45,
       "symbol": "ZappStorageKeys.sdkVersion",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 46,
       "symbol": "ZappStorageKeys.isRtl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 48,
       "symbol": "ZappStorageKeys.assetsUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 49,
       "symbol": "ZappStorageKeys.stylesUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 50,
       "symbol": "ZappStorageKeys.remoteConfigurationUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 51,
       "symbol": "ZappStorageKeys.pluginConfigurationUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 52,
       "symbol": "ZappStorageKeys.riversUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/CoreStylesKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/CoreStylesKeys.swift",
       "line": 11,
       "symbol": "CoreStylesKeys",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/CoreStylesKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/CoreStylesKeys.swift",
       "line": 12,
       "symbol": "CoreStylesKeys.backgroundColor",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/CoreStylesKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/CoreStylesKeys.swift",
       "line": 13,
       "symbol": "CoreStylesKeys.loadingSpinnerColor",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/CoreStylesKeys.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/CoreStylesKeys.swift",
       "line": 14,
       "symbol": "CoreStylesKeys.loadingErrorLabel",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 13,
       "symbol": "ZappStyles",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 15,
       "symbol": "StylesHelper",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 16,
       "symbol": "StylesHelper.StylesHelperApi",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 17,
       "symbol": "StylesHelper.StylesHelperApi.universal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 18,
       "symbol": "StylesHelper.StylesHelperApi.UniversalKey",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 19,
       "symbol": "StylesHelper.StylesHelperApi.UniversalKey.color",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 20,
       "symbol": "StylesHelper.StylesHelperApi.UniversalKey.font",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 21,
       "symbol": "StylesHelper.StylesHelperApi.UniversalKey.fontSize",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 25,
       "symbol": "StylesHelper.retriveStyles()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 45,
       "symbol": "StylesHelper.updateZappStyles()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 49,
       "symbol": "StylesHelper.style(forKey:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 57,
       "symbol": "StylesHelper.color(forKey:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 65,
       "symbol": "StylesHelper.updateLabel(forKey:label:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Styles/StylesHelper.swift",
       "line": 81,
       "symbol": "StylesHelper.label(forKey:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 12,
       "symbol": "SpotlightSubscription",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 13,
       "symbol": "SpotlightSubscription.universalSearchPlugin",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 15,
       "symbol": "SpotlightSubscription.isUniversalSearchEnabled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 23,
       "symbol": "SpotlightSubscription.subscriptionInfo",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 32,
       "symbol": "SpotlightSubscription.expirationPeriod",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 36,
       "symbol": "SpotlightSubscription.availabilityType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 40,
       "symbol": "SpotlightSubscription.tiers",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 44,
       "symbol": "SpotlightSubscription.hasNeededEntitlements",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 55,
       "symbol": "SpotlightSubscription.userSubscriptionInfo",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 67,
       "symbol": "SpotlightSubscription.activate()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 82,
       "symbol": "SpotlightSubscription.deactivate(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
       "line": 90,
       "symbol": "SpotlightSubscription.deactivateAll(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UserInterfaceLayerManager/UserInterfaceLayerManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UserInterfaceLayerManager/UserInterfaceLayerManager.swift",
       "line": 12,
       "symbol": "UserInterfaceLayerManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UserInterfaceLayerManager/UserInterfaceLayerManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UserInterfaceLayerManager/UserInterfaceLayerManager.swift",
       "line": 13,
       "symbol": "UserInterfaceLayerManager.layerAdapter(launchOptions:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 12,
       "symbol": "AnalyticManagerPreparationCompletion",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 13,
       "symbol": "ProviderSendAnalyticsCompletion",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 15,
       "symbol": "AnalyticsManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 16,
       "symbol": "AnalyticsManager.analyticsProviders",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 18,
       "symbol": "AnalyticsManager.currentScreenViewTitle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 20,
       "symbol": "AnalyticsManager.clearAnalyticsProviders()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 24,
       "symbol": "AnalyticsManager.prepareManager(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 29,
       "symbol": "AnalyticsManager.createAllAnalyticsProviders()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 48,
       "symbol": "AnalyticsManager.createAnalyticsProviders(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 61,
       "symbol": "AnalyticsManager.mandatoryDefaultParams()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 91,
       "symbol": "AnalyticsManager.sendEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 100,
       "symbol": "AnalyticsManager.startObserveTimedEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 110,
       "symbol": "AnalyticsManager.stopObserveTimedEvent(_:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 118,
       "symbol": "AnalyticsManager.sendScreenEvent(screenTitle:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/CrashLog/CrashlogsPluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/CrashLog/CrashlogsPluginsManager.swift",
       "line": 11,
       "symbol": "CrashlogsPluginsManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/CrashLog/CrashlogsPluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/CrashLog/CrashlogsPluginsManager.swift",
       "line": 12,
       "symbol": "CrashlogsPluginsManager.providers",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/CrashLog/CrashlogsPluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/CrashLog/CrashlogsPluginsManager.swift",
       "line": 14,
       "symbol": "CrashlogsPluginsManager.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/CrashLog/CrashlogsPluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/CrashLog/CrashlogsPluginsManager.swift",
       "line": 18,
       "symbol": "CrashlogsPluginsManager.createСrashlogProviders()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
       "line": 12,
       "symbol": "PlayerDependantPluginsManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
       "line": 12,
       "symbol": "PlayerDependantPluginsManager",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
       "line": 31,
       "symbol": "PlayerDependantPluginsManager.createPlayerDependantProviders(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginManager+LoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginManager+LoadingStateMachineDataSource.swift",
       "line": 13,
       "symbol": "PluginsManager.preapareLoadingPluginStates()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginManager+LoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginManager+LoadingStateMachineDataSource.swift",
       "line": 32,
       "symbol": "PluginsManager.stateMachineFinishedWork(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 33,
       "symbol": "PluginsManager.pluginModels(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 37,
       "symbol": "PluginsManager.pluginModels(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 49,
       "symbol": "PluginsManager.allPluginModels",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 72,
       "symbol": "PluginsManager.parseBasePluginsJson()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 79,
       "symbol": "PluginsManager.parseLatestPluginsJson()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 86,
       "symbol": "PluginsManager.parsePluginsJson(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 103,
       "symbol": "PluginsManager.pluginModels()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 132,
       "symbol": "PluginsManager.pluginsData(from:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 146,
       "symbol": "PluginsManager.adapterClass(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 164,
       "symbol": "PluginsManager.bundleForModelClass(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 198,
       "symbol": "PluginsManager.plugin(model:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
       "line": 211,
       "symbol": "PluginsManager.plugin(withScreenName:model:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 11,
       "symbol": "PluginsManager",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 12,
       "symbol": "PluginsManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 13,
       "symbol": "PluginsManager",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 13,
       "symbol": "PluginsManager.analytics",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 14,
       "symbol": "PluginsManager.playerDependants",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 15,
       "symbol": "PluginsManager.crashlogs",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 17,
       "symbol": "PluginsManager.pluginsStateMachine",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 18,
       "symbol": "PluginsManager.pluginLoaderCompletion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 20,
       "symbol": "PluginsManager.intializePlugins(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 27,
       "symbol": "PluginsManager.loadPluginsGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 35,
       "symbol": "PluginsManager.prepareAnalyticsPlugins(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 42,
       "symbol": "PluginsManager.updatePluginSessionStorageData(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 44,
       "symbol": "PluginsManager.updatePluginSessionStorageData(_:_:).sendConfigurationToSessionStorage(pluginModel:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Protocol/AppDelegateProtocol/AppDelegateProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Protocol/AppDelegateProtocol/AppDelegateProtocol.swift",
       "line": 12,
       "symbol": "AppDelegateProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Protocol/AppDelegateProtocol/AppDelegateProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Protocol/AppDelegateProtocol/AppDelegateProtocol.swift",
       "line": 13,
       "symbol": "AppDelegateProtocol.handleDelayedUrlSchemeCallIfNeeded()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Protocol/AppDelegateProtocol/AppDelegateProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/Protocol/AppDelegateProtocol/AppDelegateProtocol.swift",
       "line": 14,
       "symbol": "AppDelegateProtocol.launchOptions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
       "line": 13,
       "symbol": "RootViewController.sendEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
       "line": 18,
       "symbol": "RootViewController.sendScreenEvent(screenTitle:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
       "line": 23,
       "symbol": "RootViewController.startObserveTimedEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
       "line": 29,
       "symbol": "RootViewController.stopObserveTimedEvent(_:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAppDataProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAppDataProtocol.swift",
       "line": 13,
       "symbol": "RootViewController.bundleName()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAppDataProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAppDataProtocol.swift",
       "line": 17,
       "symbol": "RootViewController.appVersion()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
       "line": 17,
       "symbol": "RootViewController.plugin(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
       "line": 21,
       "symbol": "RootViewController.getAllPlugins()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
       "line": 25,
       "symbol": "RootViewController.adapterClass(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
       "line": 13,
       "symbol": "RootViewController.sessionStorageValue(for:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
       "line": 18,
       "symbol": "RootViewController.sessionStorageSetValue(for:value:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
       "line": 24,
       "symbol": "RootViewController.sessionStorageAllValues(namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
       "line": 28,
       "symbol": "RootViewController.localStorageValue(for:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
       "line": 33,
       "symbol": "RootViewController.localStorageSetValue(for:value:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
       "line": 39,
       "symbol": "RootViewController.localStorageAllValues(namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
       "line": 13,
       "symbol": "kMSAppCenterCheckForUpdatesNotification",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
       "line": 16,
       "symbol": "RootViewController.loadApplicationLoadingGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
       "line": 23,
       "symbol": "RootViewController.loadPluginsGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
       "line": 35,
       "symbol": "RootViewController.loadStylesGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
       "line": 48,
       "symbol": "RootViewController.loadUserInterfaceLayerGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
       "line": 68,
       "symbol": "RootViewController.stateMachineFinishedWork(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
       "line": 89,
       "symbol": "RootViewController.loadAISGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
       "line": 14,
       "symbol": "RootViewController.reachabilityChanged(connection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
       "line": 28,
       "symbol": "RootViewController.showInternetError()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
       "line": 36,
       "symbol": "RootViewController.forceReloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 12,
       "symbol": "RootViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 12,
       "symbol": "RootViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 12,
       "symbol": "RootViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 12,
       "symbol": "RootViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 12,
       "symbol": "RootViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 12,
       "symbol": "RootViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 13,
       "symbol": "RootViewController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 14,
       "symbol": "RootViewController.userInterfaceLayerContainerView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 15,
       "symbol": "RootViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 15,
       "symbol": "RootViewController.splashScreenContainerView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 17,
       "symbol": "RootViewController.appDelegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 18,
       "symbol": "RootViewController.appReadyForUse",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 20,
       "symbol": "RootViewController.reachabilityManger",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 21,
       "symbol": "RootViewController.currentConnection",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 23,
       "symbol": "RootViewController.loadingStateMachine",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 24,
       "symbol": "RootViewController.userInterfaceLayer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 25,
       "symbol": "RootViewController.pluginsManager",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 26,
       "symbol": "RootViewController.identityClient",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 32,
       "symbol": "RootViewController.spotLightSubscription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 34,
       "symbol": "RootViewController.splashViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 38,
       "symbol": "RootViewController.facadeConnector",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 42,
       "symbol": "RootViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 54,
       "symbol": "RootViewController.reloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
       "line": 61,
       "symbol": "RootViewController.preapreLoadingStates()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 13,
       "symbol": "SplashViewController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 14,
       "symbol": "SplashViewController.LoadingCompletion",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 15,
       "symbol": "SplashViewController.playerViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 16,
       "symbol": "SplashViewController.loadingCompletion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 18,
       "symbol": "SplashViewController.imageView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 19,
       "symbol": "SplashViewController.loadingView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 20,
       "symbol": "SplashViewController.playerContainer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 22,
       "symbol": "SplashViewController.errorLabel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 24,
       "symbol": "SplashViewController.videoURL",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 35,
       "symbol": "SplashViewController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 39,
       "symbol": "SplashViewController.awakeFromNib()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 47,
       "symbol": "SplashViewController.startAppLoading(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 64,
       "symbol": "SplashViewController.prepareController()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 79,
       "symbol": "SplashViewController.addSplashImage()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 83,
       "symbol": "SplashViewController.callLoadingCompletion()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 88,
       "symbol": "SplashViewController.hideVideoPlayerContainer()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 92,
       "symbol": "SplashViewController.addVideoObservers()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 114,
       "symbol": "SplashViewController.observeValue(forKeyPath:of:change:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 123,
       "symbol": "SplashViewController.removeVideoObservers()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 129,
       "symbol": "SplashViewController.showErrorMessage(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 135,
       "symbol": "SplashViewController.playerDidFinishTask()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 142,
       "symbol": "SplashViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 143,
       "symbol": "SplashViewController.playerDidFinishPlaying(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 147,
       "symbol": "SplashViewController.willEnterForeground(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 151,
       "symbol": "SplashViewController.didEnterBackground(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
       "line": 160,
       "symbol": "AVPlayer.isPlaying",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
       "line": 14,
       "symbol": "MsAppCenterDistributionHandler",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
       "line": 15,
       "symbol": "MsAppCenterDistributionHandler.configure()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
+      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
       "line": 31,
       "symbol": "MsAppCenterDistributionHandler.checkUpdatesForNewVersions(notification:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/ZappApple"
+  "source_directory": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/ZappApple"
 }

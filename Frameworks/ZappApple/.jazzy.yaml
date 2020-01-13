@@ -1,11 +1,12 @@
 module: ZappApple
-module_version: 0.1.2
+module_version: 0.1.3
 
 author: "Applicaster ltd."
 copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
 
 author_url: https://www.applicaster.com
 github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/ZappCore
+
 xcodebuild_arguments: ["-scheme", "ZappApple"]
 output: "../../docs/ZappApple"
 clean: true
@@ -42,7 +43,7 @@ custom_categories:
     children:
       - AnalyticManagerPreparationCompletion
       - ProviderSendAnalyticsCompletion
-      
+
   - name: CacheHelper
     children:
       - APCachedModel
@@ -90,7 +91,7 @@ custom_categories:
       - ZappStorageKeys
       - ZappStorageProtocol
       - zappLocalStorageName
-      
+
   - name: Styles
     children:
       - CoreStylesKeys
