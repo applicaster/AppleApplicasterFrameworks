@@ -35,6 +35,8 @@ Pod::Spec.new do |s|
 							'FRAMEWORK_SEARCH_PATHS' => '/Applications/Xcode.app/Contents/Developer/Library/Frameworks'
 							 }
 
-
+	s.test_spec 'UnitTests' do |sp|
+		sp.source_files = 'Tests/**'
+	end
 
 end

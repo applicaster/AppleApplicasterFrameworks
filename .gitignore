@@ -76,7 +76,11 @@ Frameworks/**/pods
 Frameworks/**/podfile.lock
 Frameworks/**/yarn-error.log
 
-Fra
+Frameworks/**/report.html
+Frameworks/**/xcodebuild.log
+
 **/default.profraw
 
 node_modules/*
+
+FrameworksApp/FrameworksApp.xcodeproj/project.pbxproj

@@ -7,9 +7,10 @@ copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appac
 author_url: https://www.applicaster.com
 github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/ZappCore
 
-output: "../../../docs/ZappApple"
+xcodebuild_arguments: ["-scheme", "ZappApple"]
+output: "../../docs/ZappApple"
 clean: true
-min_acl: "public"
+min_acl: "private"
 sdk: [iphone, appletv]
 theme: jony
 custom_categories:
@@ -32,6 +33,16 @@ custom_categories:
       - IdentityClient
       - IdentityClientBase
       - LoadingManager
+      - LoadingLoaderTypes
+      - LoadingStateTypes
+      - MsAppCenterDistributionHandler
+      - kMSAppCenterCheckForUpdatesNotification
+      - ZappStyles
+
+  - name: Analytics
+    children:
+      - AnalyticManagerPreparationCompletion
+      - ProviderSendAnalyticsCompletion
 
   - name: CacheHelper
     children:
@@ -47,18 +58,13 @@ custom_categories:
       - FeaturesCusimizationConsts
       - FeaturesCustomization
 
-  - name: FeaturesCustomization
-    children:
-      - FeaturesCusimizationConsts
-      - FeaturesCustomization
-
   - name: Keychain
     children:
       - HTTPStatusCode
 
   - name: Keys
     children:
-      - AnalyticsKeys
+      - CoreAnalyticsKeys
       - AssetsKeys
 
   - name: Reachability
@@ -71,17 +77,20 @@ custom_categories:
       - LoadingStateMachineDataSource
       - LoadingStateMachineDelegate
       - LoadingState
-      - LoadingStateConst
       - LoadingStateMachine
+      - stateMachineLogCategory
+      - StateCallBack
+      - StateHandler
 
   - name: Storages
     children:
-      - StoragesConsts
-      - ZappStorageProtocol
       - LocalStorage
       - SessionStorage
       - StorageHelper
       - StorageInitialization
+      - ZappStorageKeys
+      - ZappStorageProtocol
+      - zappLocalStorageName
 
   - name: Styles
     children:
@@ -98,8 +107,10 @@ custom_categories:
 
   - name: Categories
     children:
+      - AVPlayer
       - AVURLAsset
       - String
+      - HTTPURLResponse
       - UIApplication
       - UIColor
       - UIView

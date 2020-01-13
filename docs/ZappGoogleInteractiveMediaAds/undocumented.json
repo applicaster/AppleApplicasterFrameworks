@@ -1,6 +1,348 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsLoaderDelegate.swift",
+      "line": 16,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.adsLoader(_:adsLoadedWith:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsLoaderDelegate.swift",
+      "line": 32,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.adsLoader(_:failedWith:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsManagerDelegate.swift",
+      "line": 15,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsManagerDelegate.swift",
+      "line": 19,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.adsManager(_:didReceive:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsManagerDelegate.swift",
+      "line": 26,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.adsManagerDidRequestContentPause(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsManagerDelegate.swift",
+      "line": 32,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.adsManager(_:didReceive:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsManagerDelegate.swift",
+      "line": 45,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.adsManagerDidRequestContentResume(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 11,
+      "symbol": "GoogleInteractiveMediaAdsAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 14,
+      "symbol": "GoogleInteractiveMediaAdsAdapter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 14,
+      "symbol": "GoogleInteractiveMediaAdsAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 15,
+      "symbol": "GoogleInteractiveMediaAdsAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 17,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.postrollCompletion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 18,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.adRequest",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 30,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.avPlayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 34,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.urlTagData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 36,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 45,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.containerView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 58,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.prepareGoogleIMA()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 69,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.setupAdsLoader()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 76,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.requestAd(adUrl:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 11,
+      "symbol": "GoogleUrlTagData",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 12,
+      "symbol": "GoogleUrlTagData.vmapUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 13,
+      "symbol": "GoogleUrlTagData.vastPrerrolUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 14,
+      "symbol": "GoogleUrlTagData.vastPostrollUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 15,
+      "symbol": "GoogleUrlTagData.vastMidrollsArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 17,
+      "symbol": "GoogleUrlTagData.isVmapAd",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 21,
+      "symbol": "GoogleUrlTagData.startedAdExist",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 25,
+      "symbol": "GoogleUrlTagData.init(entry:pluginParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 31,
+      "symbol": "GoogleUrlTagData.tryRetrieveFromPluginParams(pluginParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 62,
+      "symbol": "GoogleUrlTagData.prepareAdvertismentData(entry:pluginParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 94,
+      "symbol": "GoogleUrlTagData.requestMiddroll(currentVideoTime:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 111,
+      "symbol": "GoogleUrlTagData.prerollUrlString()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagData.swift",
+      "line": 115,
+      "symbol": "GoogleUrlTagData.postrollUrlString()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 11,
+      "symbol": "extensionsKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 12,
+      "symbol": "videoAdsKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 13,
+      "symbol": "adUrlKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 14,
+      "symbol": "offsetKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 15,
+      "symbol": "prerollTypeKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 16,
+      "symbol": "postrollTypeKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 18,
+      "symbol": "PluginsCustomizationKeys",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 19,
+      "symbol": "PluginsCustomizationKeys.vmapKey",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 20,
+      "symbol": "PluginsCustomizationKeys.prerollUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 21,
+      "symbol": "PluginsCustomizationKeys.postrollUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 22,
+      "symbol": "PluginsCustomizationKeys.midrollUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/GoogleUrlTagDataKeys.swift",
+      "line": 23,
+      "symbol": "PluginsCustomizationKeys.midrollOffset",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/MidrollTagData.swift",
+      "line": 11,
+      "symbol": "MidrollTagData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/MidrollTagData.swift",
+      "line": 12,
+      "symbol": "MidrollTagData.timeOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/MidrollTagData.swift",
+      "line": 13,
+      "symbol": "MidrollTagData.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleUrlTagData/MidrollTagData.swift",
+      "line": 15,
+      "symbol": "MidrollTagData.init(url:timeOffset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/PlayerDependant/ZappGoogleInteractiveMediaAds/Project"
+  "source_directory": "/Users/antonkononenko/Work3/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds"
 }

@@ -11,11 +11,11 @@ import ZappCore
 
 extension RootViewController: FacadeConnectorAppDataProtocol {
     public func bundleName() -> String {
-        UIApplication.bundleName()
+        return UIApplication.bundleName()
     }
 
     public func appVersion() -> String {
-        UIApplication.appVersion()
+        return UIApplication.appVersion()
     }
 
     public func pluginsURLPath() -> URL? {

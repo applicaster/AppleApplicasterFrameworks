@@ -20,14 +20,18 @@ Pod::Spec.new do |s|
   
   s.requires_arc = true
 
-  s.source_files = ['Frameworks/Plugins/Analytics/GoogleAnalytics/Files/Universal/**/*.{swift}']
+  s.source_files = ['Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/**/*.{swift}']
 
   s.resources = [
-    "Frameworks/Plugins/Analytics/GoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDimensionMapping.plist"
+    "Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDimensionMapping.plist"
   ]
 
   s.xcconfig =  {
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'ENABLE_BITCODE' => 'YES',
   }
+
+  s.test_spec 'UnitTests' do |sp|
+    sp.source_files = 'Frameworks/Plugins/ZappGoogleAnalytics/Files/Tests/**'
+  end
 end

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const path = require("path");
 const shell = require("cli-task-runner/utils/shell");
 const { abort, basePathForModel } = require("./Helpers.js");
 
@@ -28,7 +27,11 @@ async function run() {
   let itemsToUpdate = [];
   let newAutomationObject = {};
 
-  frameworksList.forEach(model => {
+  const keys = Object.keys(frameworksList);
+
+  keys.forEach(key => {
+    const model = frameworksList[key];
+    model["framework"] = key;
     const { framework = null, version_id = null } = model;
     const automationFrameworkVersion = frameworksAutomationList[framework];
     if (
@@ -45,7 +48,7 @@ async function run() {
     const newGitTag = gitTagDate();
     console.log({ itemsToUpdate });
     await updateRelevantTemplates(itemsToUpdate, newGitTag);
-    await generateDocumentation(itemsToUpdate);
+    await unitTestAndGenerateDocumentation(itemsToUpdate);
     await updateFrameworksVersionsInGeneralDocs(frameworksList);
     await updateAutomationVersionsDataJSON(newAutomationObject);
     await uploadNpmPackages(itemsToUpdate);
@@ -69,13 +72,12 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
 
       const ejsData = { version_id, new_tag: newGitTag };
       const templatesBasePath = `${baseFolderPath}/Templates`;
-      const projectBasePath = `${baseFolderPath}/Project`;
       const templateExtension = ".ejs";
 
       await updateTemplate(
         ejsData,
         `${templatesBasePath}/.jazzy.yaml${templateExtension}`,
-        `${projectBasePath}/.jazzy.yaml`
+        `${baseFolderPath}/.jazzy.yaml`
       );
 
       const podspecPath = npm_package
@@ -131,24 +133,28 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
   }
   return Promise.resolve();
 }
-
-async function generateDocumentation(itemsToUpdate) {
-  console.log("Generating documentation\n");
+async function unitTestAndGenerateDocumentation(itemsToUpdate) {
+  console.log("Unit tests and generation documentation\n");
   try {
     const promises = itemsToUpdate.map(async model => {
+      const { framework = null } = model;
+
+      console.log(`\nPreparing framework:${framework}`);
+
       const baseFolderPath = basePathForModel(model);
 
-      const { framework = null } = model;
-      console.log(`\nGeneration documentation for framework:${framework}`);
-      const isPodfileExist = fs.existsSync(`${baseFolderPath}/Project/Podfile`);
+      const isPodfileExist = fs.existsSync(`${baseFolderPath}/Podfile`);
       if (isPodfileExist) {
-        await shell.exec(
-          `cd ${baseFolderPath}/Project && bundle exec pod install`
-        );
+        await shell.exec(`cd ${baseFolderPath} && bundle exec pod install`);
+        await shell.exec(`cd ${baseFolderPath} && set -o pipefail && xcodebuild \
+        -workspace ./FrameworksApp.xcworkspace \
+        -scheme ${framework} \
+        -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.3' \
+        clean build test | tee xcodebuild.log | xcpretty --report html --output report.html`);
+        await shell.exec(`cd ${baseFolderPath} && bundle exec jazzy`);
       }
-      // Generate documentation
-      await shell.exec(`cd ${baseFolderPath}/Project && bundle exec jazzy`);
     });
+
     await Promise.all(promises);
   } catch (e) {
     abort(e.message);
