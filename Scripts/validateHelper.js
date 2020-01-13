@@ -10,9 +10,9 @@ const fs = require("fs");
 function validateSingleFramework(frameworkToCheck) {
   const frameworksList = readFrameworkDataPlist();
   console.log(`\nValidating Framework: '${frameworkToCheck}'\n`);
-
-  let pluginData = frameworkModelFrom(frameworksList, frameworkToCheck);
-
+  let pluginData = frameworksList[frameworkToCheck];
+  console.log({ pluginData });
+  pluginData["framework"] = frameworkToCheck;
   if (
     pluginData &&
     validateSingleFrameworkDataInPlist(pluginData) &&
@@ -27,27 +27,10 @@ function validateSingleFramework(frameworkToCheck) {
   }
 }
 
-function frameworkModelFrom(frameworksList, frameworkToCheck) {
-  const failedText = `Framework: '${frameworkToCheck}' does not exist`;
-  let searchedModel = null;
-
-  frameworksList.forEach(model => {
-    const { framework = null } = model;
-    const baseFolderPath = basePathForModel(model);
-    if (framework == frameworkToCheck) {
-      const { framework = null, version_id = null } = model;
-      searchedModel = framework && version_id && baseFolderPath ? model : null;
-    }
-  });
-  searchedModel == null && console.log(failedText);
-
-  return searchedModel;
-}
-
 function validateSingleFrameworkDataInPlist(model) {
   const baseFolderPath = basePathForModel(model);
 
-  const { framework = null, version_id = null } = model;
+  const { version_id = null, framework = null } = model;
   if (framework && version_id && baseFolderPath) {
     console.log(
       `Framework: '${framework}' All keys was defined in 'FrameworksData.plist'`
@@ -64,13 +47,21 @@ function validateSingleFrameworkDataInPlist(model) {
 function validateSingleFrameworkPathes(model) {
   const baseFolderPath = basePathForModel(model);
 
-  const { plugin, framework, npm_package } = model;
-  console.log({ plugin });
+  const { plugin = null, npm_package = null, framework = null } = model;
+  console.log({ model, framework });
 
   console.log(
     `Validating requiered pathes for Framework: ${framework}, Plugin:${plugin},  BasePath: '${baseFolderPath}'`
   );
   const succeedText = `framework: '${framework}':All required files exist`;
+  console.log(
+    fs.existsSync(baseFolderPath) &&
+      fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
+      fs.existsSync(`${baseFolderPath}/Templates/${framework}.podspec.ejs`) &&
+      fs.existsSync(`${baseFolderPath}/.jazzy.yaml`) &&
+      fs.existsSync(`${baseFolderPath}/Podfile`) &&
+      fs.existsSync(`${baseFolderPath}/Files`)
+  );
   if (
     fs.existsSync(baseFolderPath) &&
     fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
@@ -79,6 +70,7 @@ function validateSingleFrameworkPathes(model) {
     fs.existsSync(`${baseFolderPath}/Podfile`) &&
     fs.existsSync(`${baseFolderPath}/Files`)
   ) {
+    console.log("HERE!");
     if (plugin == true) {
       if (
         ((fs.existsSync(`${baseFolderPath}/Templates/ios.json.ejs`) ||

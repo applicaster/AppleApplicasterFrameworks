@@ -4,9 +4,9 @@ const { readFrameworkDataPlist } = require("./Helpers.js");
 const { validateSingleFramework } = require("./validateHelper");
 
 const frameworksList = readFrameworkDataPlist();
+const keys = Object.keys(frameworksList);
 
-frameworksList.forEach(model => {
-  const { framework } = model;
+keys.forEach(framework => {
   if (framework) {
     validateSingleFramework(framework);
   }
