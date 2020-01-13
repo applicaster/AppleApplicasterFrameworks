@@ -56,7 +56,7 @@ This respository is the main container for general frameworks and plugins for [Z
   
 #### Type: Player Dependant
 
-##### Google Interactive Media Ads: *0.5.0*
+##### Google Interactive Media Ads: *0.5.3*
 - **Description:** This plugin allow to add Google Interactive Media Ads to supported players.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleInteractiveMediaAds/index.html)
 - **Manifest:**
