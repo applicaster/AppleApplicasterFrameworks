@@ -6,6 +6,7 @@ copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appac
 
 author_url: https://www.applicaster.com
 github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/ZappCore
+xcodebuild_arguments: ["-scheme", "ZappCore"]
 
 output: "../../docs/ZappCore"
 clean: true
