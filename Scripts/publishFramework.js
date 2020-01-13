@@ -135,11 +135,14 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
 }
 
 async function uploadManifestsToZapp(itemsToUpdate) {
-  console.log("Uploading manifests to zapp");
+  console.log("Uploading manifests to Zapp");
   try {
     const promises = itemsToUpdate.map(async model => {
-      const { plugin = null } = model;
-      const zappToken = process.env["ZappToken"];
+      const { framework = null, plugin = null } = model;
+      console.log(`Uploading manifests for: ${framework}`);
+
+      const zappToken = process.env["ZAPP_TOKEN"];
+      console.log({ zappToken, plugin });
       if (plugin && zappToken) {
         const iosManifestPath = manifestPath({
           model,
@@ -151,6 +154,7 @@ async function uploadManifestsToZapp(itemsToUpdate) {
           platform: "tvos",
           template: false
         });
+
         if (iosManifestPath && fs.existsSync(iosManifestPath)) {
           await shell.exec(
             `zappifest publish --manifest ${iosManifestPath} --access-token ${zappToken}`
@@ -231,14 +235,17 @@ async function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
     const promises = itemsToUpdate.map(async model => {
       const baseFolderPath = basePathForModel(model);
 
-      const { framework = null } = model;
-      await shell.exec(`git add ${framework}.podspec`);
+      const { framework = null, plugin = null } = model;
+      if (!plugin) {
+        await shell.exec(`git add ${framework}.podspec`);
+      }
+
       await shell.exec(`git add ${baseFolderPath}`);
     });
     await Promise.all(promises);
     itemsToUpdate.forEach(model => {
       const { framework = null, version_id = null } = model;
-      commitMessage += `, [${framework}:${version_id}]`;
+      commitMessage += ` [${framework}:${version_id}]`;
     });
     console.log(`Message to commit: ${commitMessage}`);
     await shell.exec(`git commit -m "${commitMessage}"`);

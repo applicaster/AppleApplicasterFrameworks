@@ -12,21 +12,24 @@ async function updateTemplate(ejsData, templatePath, outputPath) {
 }
 
 function manifestPath({ model, platform, template }) {
-  const { folder_path = null, plugin = null } = model;
-
-  iosPath = template == true ? "Templates/ios.json.ejs" : "Manifest/ios.json";
+  const { plugin = null, framework = null } = model;
+  iosPath =
+    template == true
+      ? `Frameworks/Plugins/${framework}/Templates/ios.json.ejs`
+      : `Frameworks/Plugins/${framework}/Manifest/ios.json`;
   tvosPath =
-    template == true ? "Templates/tvos.json.ejs" : "Manifest/tvos.json";
+    template == true
+      ? `Frameworks/Plugins/${framework}/Templates/tvos.json.ejs`
+      : `Frameworks/Plugins/${framework}/Manifest/tvos.json`;
   if (
     plugin == true &&
     (platform == "ios" || platform == "tvos") &&
-    template != null &&
-    folder_path != null
+    template != null
   ) {
     if (platform == "ios") {
-      return `${folder_path}/${iosPath}`;
+      return iosPath;
     } else if (platform == "tvos") {
-      return `${folder_path}/${tvosPath}`;
+      return tvosPath;
     }
   } else {
     return null;
