@@ -1,5 +1,5 @@
 //
-//  TestFramework.swift
+//  Dummy.swift
 //  MyTest
 //
 //  Created by Anton Kononenko on 1/9/20.
@@ -9,8 +9,7 @@
 import Foundation
 import XCTest
 
-
-class TestFramework:XCTestCase {
+class Dummy:XCTestCase {
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,7 +20,6 @@ class TestFramework:XCTestCase {
     }
 
     func testExample() {
-        print("HUY!!")
     }
 
     func testPerformanceExample() {

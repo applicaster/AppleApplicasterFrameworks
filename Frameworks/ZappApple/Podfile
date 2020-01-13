@@ -15,13 +15,11 @@ target 'FrameworksApp' do
   pod 'ZappCore', :path => '../../ZappCore.podspec'
   pod 'ZappApple', :path => '../../ZappApple.podspec', :testspecs => ['UnitTests']
 
-  
   target 'FrameworksAppTests' do
     inherit! :search_paths
   end
 
 end
-
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

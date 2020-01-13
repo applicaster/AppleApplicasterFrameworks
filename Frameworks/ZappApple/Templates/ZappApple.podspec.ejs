@@ -30,4 +30,8 @@ Pod::Spec.new do |s|
   s.source_files = 'Frameworks/ZappApple/Files/Universal/**/*.{h,m,swift}'
   s.ios.source_files = 'Frameworks/ZappApple/Files/ios/**/*.{swift}'
   s.tvos.source_files = 'Frameworks/ZappApple/Files/tvos/**/*.{swift}'
+
+  s.test_spec 'UnitTests' do |sp|
+    sp.source_files = 'Frameworks/ZappApple/Files/Tests/**'
+  end
 end
