@@ -52,8 +52,8 @@ async function run() {
     await updateFrameworksVersionsInGeneralDocs(frameworksList);
     await updateAutomationVersionsDataJSON(newAutomationObject);
     await uploadNpmPackages(itemsToUpdate);
-    await commitChangesPushAndTag(itemsToUpdate, newGitTag);
     await uploadManifestsToZapp(itemsToUpdate);
+    await commitChangesPushAndTag(itemsToUpdate, newGitTag);
   }
   console.log("System update has been finished!");
 }
@@ -155,7 +155,6 @@ async function uploadManifestsToZapp(itemsToUpdate) {
       }
     });
     await Promise.all(promises);
-    await shell.exec(`rm -rf ${iosManifestPath} ${tvosManifestPath}`);
   } catch (e) {
     abort(e.message);
   }
