@@ -106,10 +106,10 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
           platform: "tvos",
           template: true
         });
-        if (iosTemplatePath) {
+        if (fs.existsSync(iosTemplatePath)) {
           await updateTemplate(ejsData, iosTemplatePath, iosManifestPath);
         }
-        if (tvosTemplatePath) {
+        if (fs.existsSync(tvosTemplatePath)) {
           await updateTemplate(ejsData, tvosTemplatePath, tvosManifestPath);
         }
       }
