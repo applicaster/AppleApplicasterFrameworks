@@ -13,11 +13,11 @@ function manifestPath({ model, platform, template }) {
   iosPath =
     template == true
       ? `Frameworks/Plugins/${framework}/Templates/ios.json.ejs`
-      : `Frameworks/Plugins/${framework}/Manifest/ios.json`;
+      : `Frameworks/Plugins/${framework}/Templates/ios.json`;
   tvosPath =
     template == true
       ? `Frameworks/Plugins/${framework}/Templates/tvos.json.ejs`
-      : `Frameworks/Plugins/${framework}/Manifest/tvos.json`;
+      : `Frameworks/Plugins/${framework}/Templates/tvos.json`;
   if (
     plugin == true &&
     (platform == "ios" || platform == "tvos") &&

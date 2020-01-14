@@ -106,18 +106,10 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
           platform: "tvos",
           template: true
         });
-        if (
-          iosManifestPath &&
-          iosTemplatePath &&
-          fs.existsSync(iosManifestPath)
-        ) {
+        if (iosTemplatePath) {
           await updateTemplate(ejsData, iosTemplatePath, iosManifestPath);
         }
-        if (
-          tvosManifestPath &&
-          tvosTemplatePath &&
-          fs.existsSync(tvosManifestPath)
-        ) {
+        if (tvosTemplatePath) {
           await updateTemplate(ejsData, tvosTemplatePath, tvosManifestPath);
         }
       }
@@ -163,6 +155,7 @@ async function uploadManifestsToZapp(itemsToUpdate) {
       }
     });
     await Promise.all(promises);
+    await shell.exec(`rm -rf ${iosManifestPath} ${tvosManifestPath}`);
   } catch (e) {
     abort(e.message);
   }
