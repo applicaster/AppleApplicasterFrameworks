@@ -4,10 +4,7 @@
     "class_name": "GoogleInteractiveMediaAdsAdapter",
     "modules": ["ZappGoogleInteractiveMediaAds"]
   },
-  "dependency_name": "@applicaster/quick-brick-google-ima-client",
-  "npm_dependencies": [
-    "@applicaster/quick-brick-google-ima-client-tv@0.5.3"
-  ],
+ 
   "platform": "ios",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
@@ -20,9 +17,13 @@
   "whitelisted_account_ids": [
     "572a0a65373163000b000000, 5ae06cef8fba0f00084bd3c6"
   ],
+  "dependency_name": "@applicaster/quick-brick-google-ima-client",
+   "npm_dependencies": [
+     "@applicaster/quick-brick-google-ima-client-tv@0.5.3"
+   ],
   "extra_dependencies": [
     {
-      "ZappGoogleInteractiveMediaAds": ":path => './node_modules/quick-brick-google-ima-client-tv/ZappGoogleInteractiveMediaAds.podspec'"
+      "ZappGoogleInteractiveMediaAds": ":path => './node_modules/@applicaster/quick-brick-google-ima-client-tv/ZappGoogleInteractiveMediaAds.podspec'"
     }
   ],
   "min_zapp_sdk": "20.0.0-Dev",
