@@ -17,7 +17,7 @@
 - [Frameworks List](#fax-frameworks-list)
 - [Usage](#pencil2-usage)
 - [Folder Structure](#file_folder-folder-structure)
-- [FrameworksData.plist](#file_folder-frameworksData.plist)
+- [FrameworksData.plist](#pencil2-frameworksData.plist)
 - [How to add new framework?](#page_facing_up-how-to-add-new-framework)
 - [How to update existing framework?](#page_with_curl-how-to-update-existing-framework)
 - [How it works?](#mortar_board-how-it-works)
@@ -125,7 +125,7 @@ Apple Framworks
 └── *.podspec // Cocoapods dependency files for all non plugins frameworks.
 ```
 
-## :file_folder: `FrameworksData.plist`
+## :pencil2: `FrameworksData.plist`
 This file provides information for automation system latest version of availible frameworks or plugins. To update the version of your framework or plugin must be changed in this file. Below will be described plist structure
 
 ```swift
@@ -142,7 +142,7 @@ Dictionary
 - Create branch `new_framework_name`
 - Use [Folder Structure](#file_folder-folder-structure) article to check expected your framework folder structure.
 
-- Open [FrameworksData.plist](file_folder-FrameworksData.plist) file in the root of your repo:
+- Open [FrameworksData.plist]((#pencil2-frameworksData.plist) file in the root of your repo:
 	- Add new value dictionary value. As a key use your `framework_id`
 	- Inside your dictionary add key `version_id` value `version number` based on `major/minor/bug` `1.0.0` convention.
 
@@ -279,15 +279,12 @@ Dictionary
 
 - Use [Folder Structure](#file_folder-folder-structure) article to check expected your framework folder structure.
 
-- Open [FrameworksData.plist](file_folder-FrameworksData.plist) file in the root of your repo:
-	- Add new value dictionary value. As a key use your `framework_id`
-	- Inside your dictionary add key `version_id` value `version number` based on `major/minor/bug` `1.0.0` convention.
-- Open `Frameworks/Plugins` folder in Root of the repo and create with `plugin_id` as folder name. In future mention of this folder will be called as plugin root folder
-- Use [Folder Structure](#folder_structure) article to check expected your plugin folder structure
-- Open `FrameworksData.plist` file in the root of your repo:
+- Open [FrameworksData.plist](#pencil2-frameworksData.plist) file in the root of your repo:
 	- Add new value dictionary value. As a key use your `framework_id`
 	- Inside your dictionary add key `version_id` value `version number` based on `major/minor/bug` `1.0.0` convention.
 	- Add key `plugin` with value `true`.
+- Open `Frameworks/Plugins` folder in Root of the repo and create with `plugin_id` as folder name. In future mention of this folder will be called as plugin root folder
+
 - Create `Files` folder in your framework's root folder
 	- Create folder `iOS` if you have files relevant only for iOS
 	- Create folder `tvOS` if you have files relevant only for tvOS
@@ -375,49 +372,7 @@ Dictionary
         end
     end
             ```
-- Create `Manifest` folder in your framework's root folder.
-	- Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `ios` if plugin support it. Rename it to `ios.json`
-	- Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `tvos` if plugin support it. Rename it to `tvos.json`
-    - Example:
-    ```JSON
-        {
-          "api": {
-            "require_startup_execution": false,
-            "class_name": "GoogleInteractiveMediaAdsAdapter",
-            "modules": ["ZappGoogleInteractiveMediaAds"]
-          },
-          "dependency_name": "@applicaster/quick-brick-google-ima-client",
-          "npm_dependencies": [
-            "@applicaster/quick-brick-google-ima-client-tv@0.5.3"
-          ],
-          "platform": "ios",
-          "author_name": "Anton Kononenko",
-          "author_email": "a.kononenko@applicaster.com",
-          "manifest_version": "0.5.3",
-          "name": "Google Interactive Media Ads QuickBrick,",
-          "description": "This plugin allow to add Google Interactive Media Ads to supported players.",
-          "type": "video_advertisement",
-          "identifier": "zapp_google_interactive_media_ads",
-          "ui_builder_support": true,
-          "whitelisted_account_ids": [
-            "572a0a65373163000b000000, 5ae06cef8fba0f00084bd3c6"
-          ],
-          "extra_dependencies": [
-            {
-              "ZappGoogleInteractiveMediaAds": ":path => './node_modules/quick-brick-google-ima-client-tv/ZappGoogleInteractiveMediaAds.podspec'"
-            }
-          ],
-          "min_zapp_sdk": "20.0.0-Dev",
-          "deprecated_since_zapp_sdk": "",
-          "unsupported_since_zapp_sdk": "",
-          "react_native": false,
-          "custom_configuration_fields": [
-          ],
-          "targets": [
-            "mobile"
-          ]
-    }
-    ```
+
 - Create `Podfile`[cocoapods](https://cocoapods.org) dependecy and configure it for the project in Framework's root folder.
 	- In the `podfile` define all dependancy that may needed for your framework.
 	- Define your framework as develement pod with `testspecs`
@@ -481,11 +436,10 @@ Dictionary
 	- Copy `FrameworkName.podspec` file created before from root repo folder and rename it to `FrameworkName.podspec.ejs`.
 		- Change field to `s.version = '<%%= version_id %>'`.
 		- Change field to `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%%= new_tag %>' }`
-
-    - Copy `ios.json` file created before from root repo folder and rename it to `ios.json.ejs`.
+    - Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `ios` if plugin support it. Rename it to `ios.json.ejs`
         - Change field to `"manifest_version": "<%%= version_id %>"`
-        - Change field to `:git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%%= new_tag %>'"`
-    - Copy `tvos.json` file created before from root repo folder and rename it to `ios.json.ejs`.
+        - Change field to `:git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag
+    - Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `tvos` if plugin support it. Rename it to `tvos.json.ejs`
         - Change field to `"manifest_version": "<%%= version_id %>"`
         - Change field to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%%= new_tag %>'"`
 
