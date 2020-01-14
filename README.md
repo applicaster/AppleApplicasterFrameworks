@@ -17,6 +17,7 @@
 - [Frameworks List](#fax-frameworks-list)
 - [Usage](#pencil2-usage)
 - [Folder Structure](#file_folder-folder-structure)
+- [FrameworksData.plist](#pencil2-frameworksData.plist)
 - [How to add new framework?](#page_facing_up-how-to-add-new-framework)
 - [How to update existing framework?](#page_with_curl-how-to-update-existing-framework)
 - [How it works?](#mortar_board-how-it-works)
@@ -27,11 +28,11 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: *0.6.1*
+##### ZappCore: *0.6.4*
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: *0.1.3*
+##### ZappApple: *0.1.4*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
@@ -39,7 +40,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: Analytics
 
-##### Google Analytics Web Based API: *0.5.1*
+##### Google Analytics Web Based API: *0.6.0*
 - **Description:** This plugin allow to add Google Analytics as agent.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
 - **Manifest:**
@@ -48,15 +49,15 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: Crashlogs
 
-##### MS App Center: *4.2.1*
+##### MS App Center: *4.3.0*
 - **Description:** [App center](https://appcenter.ms) crash logs service.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCrashlogsMsAppCenter/index.html)
 - **Manifest:**
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=crashlogs_appcenter&platform=ios)
-  
+
 #### Type: Player Dependant
 
-##### Google Interactive Media Ads: *0.5.3*
+##### Google Interactive Media Ads: *0.5.4*
 - **Description:** This plugin allow to add Google Interactive Media Ads to supported players.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleInteractiveMediaAds/index.html)
 - **Manifest:**
@@ -65,12 +66,16 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :pencil2: Usage
 
-To use any framework availible in this repo add cocoapods dependency in podfile.
+* To use any framework availible in this repo add cocoapods dependency in podfile.
 
-**Example:**
-```ruby
-pod 'ZappCore', :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.15.0.20-1-6'
-```
+    **Example:**
+    ```ruby
+    pod 'ZappCore', :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.15.0.20-1-6'
+    ```
+
+* To use any plugin availible in this repo please use [UI Builder Environment](https://zapp.applicaster.com). All Plugins use `npm packages` as a package delivery and added in the  application as dev cocoapods dependencies
+
+
 ## :file_folder: Folder Structure
 Repository has predefined structure if you want to add something, please conform to the strict structure rules defined below
 
@@ -79,122 +84,157 @@ Apple Framworks
 ├── docs // Contains generated documentation for the frameworks. Content is generated automatically.
 ├── fastlane // Configuration of the fastlane deployment tool used in CI.
 ├── Frameworks // Frameworks data seperated by folders.
-│   ├── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type.
+│   ├── *FrameworkName // All Frameworks, not part of ZAPP PLUGINS type Contains in the Root.
+│   │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
 │   │   ├── Files // Files that are relevant for the framework.
-│   │   │   ├── ios // Files that can be used in iOS only
-│   │   │   ├── tvos // Files that can be used in tvOS only
+│   │   │   ├── iOS // Files that can be used in iOS only
+│   │   │   ├── tvOS // Files that can be used in tvOS only
+│   │   │   ├── Tests // Unit test files
 │   │   │   └── Universal // Files that can be used in iOS and tvOS
-│   │   ├── Project // Xcode Project created to generate documentation.
-│   │   │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
-│   │   │   └── * // Files relevant to project
 │   │   └── Templates // Template files relevant for framework automation.
 │   │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that is defined to create auto generated docs.
 │   │   │   └── FrameworkName.podpec.ejs  // Cocoapods template dependency.
-│   └── PluginType // Type of the plugin, please check availible plugin list below
+│   └── *FrameworkName // All Frameworks, is part of ZAPP PLUGINS type.
 │       ├── *FrameworkName // All Frameworks, is part of ZAPP PLUGINS type.
+│       │   ├── .jazzy.yaml // Jazzy configuration file that defined to create auto generated docs
 │       │   ├── Files // Files that are relevant for the framework.
-│       │   │   ├── ios // Files that can be used in iOS only
-│       │   │   ├── tvos // Files that can be used in tvOS only
-│       │   │   ├── src // Node dependancy files, in case plugin is node dependency.
-│       │   │   ├── FrameworkName.podspec // Cocoapods dependency files. In case plugin is node dependency podpsec must be here.
-│       │   │   ├── package.json // Node package file, in case plugin is node dependency.
+│       │   │   ├── iOS // Files that can be used in iOS only
+│       │   │   ├── tvOS // Files that can be used in tvOS only
+│       │   │   ├── Tests // Unit test files
+│       │   │   ├── src // Npm package files, any java script code if plugin needed
+│       │   │   ├── FrameworkName.podspec // Cocoapods dependency file
+│       │   │   ├── package.json // Node package file.
 │       │   │   └── Universal // Files that can be used in iOS and tvOS
 │       │   ├── Manifest // ZAPP PLUGINS manifest describes plugin created by Zappifest.
-│       │   ├── Project // Xcode Project created to generate documentation.
-│       │   │   ├── .jazzy.yaml // Jazzy configuration file that is defined to create auto generated docs
-│       │   │   └── * // Files relevant to project
+│       │   │   ├── ios.json // Generated manifest for ios ZAPP PLUGIN structure. All changes must be done in ios.json.ej
+│       │   │   ├── tvos.json // Generated manifest for tvos ZAPP PLUGIN structure. All changes must be done in tvos.json.ej
 │       │   ├── Templates // Template files relevant for framework automation.
-│       │   │   ├── .ios.json.ejs // Template manifest for ios ZAPP PLUGIN structure.
-│       │   │   ├── .tvos.json.ejs // Template manifest for tvos ZAPP PLUGIN structure.
+│       │   │   ├── ios.json.ejs // Template manifest for ios ZAPP PLUGIN structure.
+│       │   │   ├── tvos.json.ejs // Template manifest for tvos ZAPP PLUGIN structure.
 │       │   │   ├── .jazzy.yaml.ejs // Jazzy template configuration file that is defined to create auto generated docs.
 │       └── └── └── FrameworkName.podpec.ejs  // Cocoapods template dependency.
-├── FrameworksApp // General client app that has defined all availible frameworks.
+├── FrameworksApp // General client app that each framework is using to unit test and generate project.
 ├── Scripts // Automotization scripts. All scripts defined in JavaScript.
 ├── .versions_automation.json // Automation file, must not be changed by user. Contains JSON with title and version of each framework.
-├── DrameworksData.plist // Contains information about frameworks: title, version and etc.
+├── FrameworksData.plist // Contains information about frameworks: title, version and etc. Only in this file user must change a version of new framework during update
 ├── Gemfile // Ruby packages.
 ├── LICENSE // Repo licence type.
 ├── package.json // Java Script packages.
-├── README.md // Git documentations file.
+├── README.md // Git documentations file. All changes must be done in README.md.ejs
 ├── README.md.ejs // Git documentations template file.
-└── *.podspec // Cocoapods dependency files for all frameworks.
+└── *.podspec // Cocoapods dependency files for all non plugins frameworks.
+```
+
+## :pencil2: `FrameworksData.plist`
+This file provides information for automation system latest version of availible frameworks or plugins. To update the version of your framework or plugin must be changed in this file. Below will be described plist structure
+
+```swift
+Dictionary
+├── Framework/Plugin Id // Key described identifier of the item.
+│   ├── version_id // Current version of the item based on `major/minor/bug` `1.0.0` convention.
+└── └── plugin // Define if item is a framework or plugin.
 ```
 
 ## :page_facing_up: How to add new framework
 
-- Create branch `framework_name_new_version_id`
-- Create folder for the new framework
-	- If framework: `./Frameworks/YourFrameworkName`.
-	- If it is Zapp plugin: `./Frameworks/Plugin/PluginType/YourFrameworkName`.
-	- Defined folder will be called framework root folder
-- Use [Folder Structure](#folder_structure) article to verify place for your items
-- Open `FrameworksData.plist` file.
-	- Add new value in array of frameworks. Value must be dictionary.
-	- Add key `framework` with value `YourFrameworkName`
-	- Add key `version_id` with value `version number` based on `major/minor/bug` `1.0.0` convention.
-	- Add key `folder_path` with value `General path to your framework`.  Example: `./Frameworks/Plugins/Analytics/GoogleAnalytics`
-	- Add key `plugin` with value `true` in case if it is `Zapp Plugin`.
-	- Add key `npm_package` with value `true` in case if it is `Zapp Plugin` that has `Node Dependencies`.
-- Create `Files` folder in your framework's root folder. Add files that are needed for framework.
-	- If files for the framework can be used with `ios` and `tvos` add to folder `Universal`
-	- If files for the framework `ios` only add to folder `ios`
-	- If files for the framework `tvos` only add to folder `tvos`
-	- One framework can have all three types of folders if it supports `ios` and `tvos`.
-	- If `Zapp Plugin` has `Node Dependencies`
-		-  Add file `package.json` and fill it.
-		-  Add file `FrameworkName.podspec`
-		-  Create `src` folder and add there files that required by `Node Dependencies`.
-- Create `podspec` file for your framework in root of the repo folder. **If `Zapp Plugin` has `Node Dependencies` this step must be skipped!**
-	- `podspec` name must be same name of the `plugin` or `framework`.
-	- Prepare `podspec` defined files and dependencies if needed.
-	- If framework supports `tvos` and `ios` dependency must be defined in same `podspec` file. For instructions please refer to [Cocoapods](https://guides.cocoapods.org/) documentation
+** Create Framework**
+
+- Create branch `new_framework_name`
+- Use [Folder Structure](#file_folder-folder-structure) article to check expected your framework folder structure.
+
+- Open [FrameworksData.plist]((#pencil2-frameworksData.plist) file in the root of your repo:
+	- Add new value dictionary value. As a key use your `framework_id`
+	- Inside your dictionary add key `version_id` value `version number` based on `major/minor/bug` `1.0.0` convention.
+
+- Open `Frameworks` folder in Root of the repo and create with `framework_id` as folder name. In future mention of this folder will be called as framework root folder.
+- Create `Files` folder in your framework's root folder. This folder will be used for the source code of your framework.
+	- Create folder `iOS` if you have files relevant only for iOS
+	- Create folder `tvOS` if you have files relevant only for tvOS
+	- Create folder `Universal` If you have universal file for iOS and tvOS
+	- Note: single framework can have all three types of folders if it supports `ios` and `tvos`.
+	- Create folder `Tests` for unit tests.
+
+- Create [Cocoapods](https://guides.cocoapods.org/) `podspec` file for your framework in root of the repo folder.
+	- `podspec` name must be same name as the `framework_id`.  Example: `MyFramework.podspec`
+	- Prepare `podspec` based of your frameworks needs.
+	- Add `test_spec` and define path to your `Unit test files`
+	- If framework supports `tvos` and `ios` dependency must be defined in same `podspec` file.
 	- Example
 	```ruby
     Pod::Spec.new do |s|
-      s.name             = "ZappFirebaseAnalytics"
-      s.version          = '0.2.0'
-      s.summary          = "ZappFirebaseAnalytics"
-      s.swift_versions = '5.1'
-      s.description      = <<-DESC
-                          ZappFirebaseAnalytics container.
-                           DESC
-      s.homepage         = "https://applicaster.com"
-      s.license = 'Appache 2.0'
-      s.author           = { "cmps" => "a.kononenko@applicaster.com" }
-      s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '1' }
-      s.platform = :tvos, :ios
-      s.tvos.deployment_target = "10.0"
-      s.ios.deployment_target = '10.0'
+          s.name = 'ZappCore'
+          s.version = '0.6.1'
+          s.summary = 'General Applicaster iOS and tvOS framework that provides protocol'
+          s.ios.deployment_target = '10.0'
+          s.tvos.deployment_target = '10.0'
+          s.swift_versions = '5.1'
+          s.description = <<-DESC
+          'General Applicaster iOS and tvOS framework that provides protocol and this lowest hierarchy layer'
+          DESC
 
-      s.dependency 'ZappCore'
-      s.dependency 'Firebase/Analytics', '= 6.14.0'
+          s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
+          s.license = 'Appache 2.0'
+          s.author = { 'a.kononenko@applicaster.com' => 'a.kononenko@applicaster.com' }
+          s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.1.13.16-1-4" }
 
-      s.requires_arc = true
+          s.source_files = 'Frameworks/ZappCore/Files/Universal/**/*.{swift}'
 
-      s.source_files = ['Frameworks/Plugins/Analytics/Firebase/Files/Universal/**/*.{swift}']
+          s.test_spec 'UnitTests' do |sp|
+            sp.source_files = 'Frameworks/ZappCore/Files/Tests/**'
+          end
+	end
+	```
 
-      s.xcconfig =  {
-        'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
-        'ENABLE_BITCODE' => 'YES',
-        'OTHER_CFLAGS'  => '-fembed-bitcode',
-        'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/Firebase/**',
-        'OTHER_LDFLAGS' => '$(inherited) -objc -framework "FIRAnalyticsConnector" -framework "FirebaseAnalytics" -framework "FirebaseCore" -framework "FirebaseCoreDiagnostics" -framework "FirebaseInstanceID" -framework "GoogleAppMeasurement" -framework "GoogleDataTransport" -framework "GoogleDataTransportCCTSupport" -framework "GoogleUtilities" -framework "nanopb"',
-        'USER_HEADER_SEARCH_PATHS' => '"$(inherited)" "${PODS_ROOT}"/Firebase/**'
-      }
+- Create `Podfile`[cocoapods](https://cocoapods.org) dependecy and configure it for the project in Framework's root folder.
+	- In the `podfile` define all dependancy that may needed for your framework.
+	- Define your framework as develement pod with `testspecs`
+	- Make sure that `share_schemes_for_development_pods` will be added, it export `cocoapods` schemes from xsworkspace.
+	- Note: this Podile will be used by automation to unit test your framework and generare jazzy docs
+	- Example:
+	```ruby
+    source 'https://cdn.cocoapods.org/'
+
+    platform :ios, '10.0'
+    install! 'cocoapods', :share_schemes_for_development_pods => true
+    project '../../FrameworksApp/FrameworksApp.xcodeproj'
+
+    pre_install do |installer|
+        # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+        Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+    end
+
+    target 'FrameworksApp' do
+      supports_swift_versions '5.1'
+      use_frameworks!
+      pod 'ZappCore', :path => '../../ZappCore.podspec'
+      pod 'ZappApple', :path => '../../ZappApple.podspec', :testspecs => ['UnitTests']
+
+      target 'FrameworksAppTests' do
+        inherit! :search_paths
+      end
+
+    end
+
+    post_install do |installer|
+      installer.pods_project.targets.each do |target|
+          target.build_configurations.each do |config|
+              config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+              config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+          end
+      end
     end
 	```
-- Create `Project` folder in your framework's root folder.
-	- Create xCode project with your framework's name title.
-	- If the framework has [cocoapods](https://cocoapods.org) dependecies, create `podfile` and configure it for the project. Do not add `Pods` folder to git repo.
-	- Create file `.jazzy.yaml` with configuration of [Jazzy documentation](https://github.com/realm/jazzy). Details configure [Jazzy](https://github.com/realm/jazzy) can be founded in [Jazzy Repo](https://github.com/realm/jazzy) or copied from existing frameworks.
-		- Example:
-		```swift
-		module: ZappFirebaseAnalytics
+- Create file `.jazzy.yaml` with configuration of [Jazzy documentation](https://github.com/realm/jazzy). Details configure [Jazzy](https://github.com/realm/jazzy) can be founded in [Jazzy Repo](https://github.com/realm/jazzy) or copied from existing frameworks.
+	- Make sure that you define in `xcode arguments` your framework scheme.
+    - Example:
+        ```swift
+        module: ZappFirebaseAnalytics
         module_version: "0.2.0"
 
         author: "Applicaster ltd."
         copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
 
+        xcodebuild_arguments: ["-scheme", "ZappCore"]
         author_url: https://www.applicaster.com
         github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/Analytics/Firebase/ZappFirebaseAnalytics
 
@@ -203,92 +243,20 @@ Apple Framworks
         min_acl: "private"
         sdk: [iphone, appletv]
         theme: jony
-		```
-- If framework is Zapp Plugin. Create `Manifest` folder in your framework's root folder. Next step should only be done on the relevant platforms.
-	- Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `ios` plugin if needed. Rename it to `ios.json`. As dependency use
-    ```ruby
-      "extra_dependencies": [
-        {
-          "FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number'"
-        }
-      ],
-    ```
-    - Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `tvos` plugin if needed. Rename it to `tvos.json`. As dependency use
-    ```ruby
-      "extra_dependencies": [
-        {
-          "FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => 'tag_number'"
-        }
-      ],
-    ```
-    Example:
-    ```JSON
-    {
-      "api": {
-        "require_startup_execution": false,
-        "class_name": "ZappFirebaseAnalytics.FirebaseAnalyticsPluginAdapter",
-        "modules": []
-      },
-      "dependency_repository_url": [],
-      "platform": "ios",
-      "author_name": "Anton Kononenko",
-      "author_email": "a.kononenko@applicaster.com",
-      "manifest_version": "<%= version_id %>",
-      "name": "Zapp Firebase Analytics QuickBrick",
-      "description": "Provide Firebase Analytics as agent. Please use this plugin only if you are using quick brick",
-      "type": "analytics",
-      "identifier": "zapp_firebase_analytics",
-      "ui_builder_support": true,
-      "whitelisted_account_ids": ["5ae06cef8fba0f00084bd3c6"],
-      "min_zapp_sdk": "14.0.0-Dev",
-      "deprecated_since_zapp_sdk": "",
-      "unsupported_since_zapp_sdk": "",
-      "react_native": false,
-      "extra_dependencies": [
-        {
-          "ZappFirebaseAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '1.0'"
-        }
-  ],
-      "custom_configuration_fields": [],
-      "targets": ["mobile"]
-	}
-    ```
+        ```
 - Create `Templates` folder in your framework's root folder. In this folder you will be provided data for automated deployment. Templates files use structure of [ejs](https://ejs.co).
-	- Copy the `.jazzy.yaml` file created before and rename it to `.jazzy.yaml.ejs`. Change field to `module_version: "<%= version_id %>"`.
+	- Copy the `.jazzy.yaml` file created before in path and rename it to `.jazzy.yaml.ejs`. Change field to `module_version: "<%= version_id %>"`.
 	- Copy `FrameworkName.podspec` file created before from root repo folder and rename it to `FrameworkName.podspec.ejs`.
 		- Change field to `s.version = '<%= version_id %>'`.
 		- Change field to `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>' }`
-	- If framework is Zapp Plugin. Next step should only be used on relevant platforms
-		- Copy `ios.json` file created before from root repo folder and rename it to `ios.json.ejs`.
-			- Change field to `"manifest_version": "<%= version_id %>"`
-			- Change field to `:git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
-		- Copy `tvos.json` file created before from root repo folder and rename it to `ios.json.ejs`.
-			- Change field to `"manifest_version": "<%= version_id %>"`
-			- Change field to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
-- Open `Readme.md.ejs` file:
-	- If Zapp plugin
-		- Find plugin type. Example `### Type: Analytics`
-		- If type does not exist under section. `## Zapp Plugins` add new type `### Type: New Type`
-		- Add new framework title with format `#### Framework readable name: <%= framework_id %>`.   Where `framework_id` must be a value defined in `FrameworksData.plist`
-		- Add description.
-		- Add link to generated documentation.
-		- Add links to Zapp manifests.
-		- Example:
-		```swift
-	        ### Type: Analytics
 
-            #### Google Analytics: <%= ZappGoogleAnalytics %>
-            - **Description:** Google Analytics provider, deliver passed analytics data to service [Google Analytics](https://analytics.google.com/)
-            - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
-            - **Manifest:**
-                - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=ios)
-                - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=tvos)
-		```
-	- If not Zapp plugin
-		- Add new framework under `# Frameworks List` title with format `#### Framework readable name: <%= framework_id %>`.   Where `framework_id` must be value defined in `FrameworksData.plist`
+- Go to Framework's root folder and call `pod install`.
+	- Cocoapods will generate `FrameworkName`
+	- Open it make sure `FrameworkName` scheme is share and build and start unit tests.
+- Open `README.md.ejs` in the root of the repo.
+	- Add new framework under `# Frameworks List` title with format `#### Framework readable name: *<%= framework_id %>*`. In automation where `framework_id` will be populated value `version_id` from the `FrameworksData.plist`
 		- Add description.
 		- Add link to generated documentation.
-		- Add links to Zapp manifests.
 		- Example:
 		```swift
 	        # Frameworks List
@@ -297,6 +265,212 @@ Apple Framworks
             - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
             - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 		```
+- Final check of you framework.
+	- Go to root Framework's folder and call in terminal `node Scripts/validateExistingFrameworks.js` It will check if you have all `folders` and `FrameworksData.plist` defined properly.
+	- Make sure that generated `xcworkspace` of your `Framework` build and start unit test of your framework's scheme.
+	- Templates are ready.
+	- Readme documentation added in the `README.md.ejs` file
+- Push code and create PR. Fill PR template.
+- After review merge code.
+
+**Create Zapp Plugin**
+
+- Create branch `new_framework_name`
+
+- Use [Folder Structure](#file_folder-folder-structure) article to check expected your framework folder structure.
+
+- Open [FrameworksData.plist](#pencil2-frameworksData.plist) file in the root of your repo:
+	- Add new value dictionary value. As a key use your `framework_id`
+	- Inside your dictionary add key `version_id` value `version number` based on `major/minor/bug` `1.0.0` convention.
+	- Add key `plugin` with value `true`.
+- Open `Frameworks/Plugins` folder in Root of the repo and create with `plugin_id` as folder name. In future mention of this folder will be called as plugin root folder
+
+- Create `Files` folder in your framework's root folder
+	- Create folder `iOS` if you have files relevant only for iOS
+	- Create folder `tvOS` if you have files relevant only for tvOS
+	- Create folder `Universal` If you have universal file for iOS and tvOS
+	- Note: single framework can have all three types of folders if it supports `ios` and `tvos`.
+	- Create `src` folder if you need java script files.
+	- Create folder `Tests` for unit tests.
+	- Add file `package.json` to defined your plugin as npm dependancy.
+		- Example:
+		```JSON
+   		 {
+              "name": "@applicaster/quick-brick-google-ima-client",
+              "version": "0.5.3",
+              "description": "",
+              "main": "src/index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "files": [
+                "tvos",
+                "ios",
+                "Universal",
+                "src",
+                "ZappGoogleInteractiveMediaAds.podspec"
+              ],
+              "repository": {
+                "type": "git",
+                "url": "git+https://github.com/applicaster/AppleApplicasterFrameworks"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC",
+              "bugs": {
+                "url": "https://github.com/applicaster/AppleApplicasterFrameworks"
+              },
+              "homepage": "https://github.com/applicaster/AppleApplicasterFrameworks"
+   		 }
+	```
+	- Add file `podspec` to define cocoapods denendancy
+        - `podspec` name must be same name as the `plugin_id`.  Example: `MyFramework.podspec`
+        - Prepare `podspec` based of your plugins needs.
+        - Add `test_spec` and define path to your `Unit test files`
+        - If framework supports `tvos` and `ios` dependency must be defined in same `podspec` file.
+        - Example
+        ```ruby
+        Pod::Spec.new do |s|
+        s.name = "ZappGoogleInteractiveMediaAds"
+        s.version = '0.5.3'
+        s.swift_versions = '5.1'
+
+        s.summary = "ZappGoogleInteractiveMediaAds"
+        s.description = "This plugin allow to add Google Interactive Media Ads to supported players."
+        s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
+        s.license = 'Appache 2.0'
+        s.author = "Applicaster LTD."
+        s.source = {
+             :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
+             :tag => "2020.1.13.22-1-8"
+      }
+
+        s.ios.deployment_target = '10.0'
+        s.tvos.deployment_target = '10.0'
+        s.tvos.vendored_frameworks = 'tvOS/GoogleInteractiveMediaAds.framework'
+        s.tvos.preserve_paths = 'tvOS/GoogleInteractiveMediaAds.framework'
+
+        s.ios.source_files  = 'Universal/**/*.swift'
+        s.tvos.source_files  = ['Universal/**/*.swift',
+                                'tvOS/**/*.swift'
+        ]
+        s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '= 3.11.1'
+
+        s.dependency 'ZappCore'
+
+        s.xcconfig = { 'ENABLE_BITCODE' => 'YES',
+                                'OTHER_LDFLAGS' => '$(inherited)  -framework "GoogleInteractiveMediaAds"',
+                                'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
+                                'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                                'ENABLE_TESTABILITY' => 'YES',
+                                'OTHER_CFLAGS'  => '-fembed-bitcode',
+                                'FRAMEWORK_SEARCH_PATHS' => '/Applications/Xcode.app/Contents/Developer/Library/Frameworks'
+                                 }
+
+        s.test_spec 'UnitTests' do |sp|
+            sp.source_files = 'Tests/**'
+        end
+    end
+            ```
+
+- Create `Podfile`[cocoapods](https://cocoapods.org) dependecy and configure it for the project in Framework's root folder.
+	- In the `podfile` define all dependancy that may needed for your framework.
+	- Define your framework as develement pod with `testspecs`
+	- Make sure that `share_schemes_for_development_pods` will be added, it export `cocoapods` schemes from xsworkspace.
+	- Note: this Podile will be used by automation to unit test your framework and generare jazzy docs
+	- Example:
+	```ruby
+   source 'https://cdn.cocoapods.org/'
+    platform :ios, '10.0'
+    install! 'cocoapods', :share_schemes_for_development_pods => true
+    project '../../../FrameworksApp/FrameworksApp.xcodeproj'
+
+        pre_install do |installer|
+            # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+            Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+        end
+
+        target 'FrameworksApp' do
+          supports_swift_versions '5.1'
+          use_frameworks!
+          pod 'ZappGoogleInteractiveMediaAds', :path => 'Files/ZappGoogleInteractiveMediaAds.podspec', :testspecs => ['UnitTests']
+          pod 'ZappCore', :path => '../../../ZappCore.podspec'
+
+          target 'FrameworksAppTests' do
+            inherit! :search_paths
+          end
+
+        end
+
+        post_install do |installer|
+          installer.pods_project.targets.each do |target|
+              target.build_configurations.each do |config|
+                  config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+                  config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+              end
+          end
+        end
+	```
+- Create file `.jazzy.yaml` with configuration of [Jazzy documentation](https://github.com/realm/jazzy). Details configure [Jazzy](https://github.com/realm/jazzy) can be founded in [Jazzy Repo](https://github.com/realm/jazzy) or copied from existing frameworks.
+	- Make sure that you define in `xcode arguments` your framework scheme.
+    - Example:
+        ```swift
+        module: ZappFirebaseAnalytics
+        module_version: "0.2.0"
+
+        author: "Applicaster ltd."
+        copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
+
+        xcodebuild_arguments: ["-scheme", "ZappCore"]
+        author_url: https://www.applicaster.com
+        github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/Analytics/Firebase/ZappFirebaseAnalytics
+
+        output: "../../../../../docs/ZappFirebaseAnalytics"
+        clean: true
+        min_acl: "private"
+        sdk: [iphone, appletv]
+        theme: jony
+        ```
+- Create `Templates` folder in your framework's root folder. In this folder you will be provided data for automated deployment. Templates files use structure of [ejs](https://ejs.co).
+	- Copy the `.jazzy.yaml` file created before in path and rename it to `.jazzy.yaml.ejs`. Change field to `module_version: "<%= version_id %>"`.
+	- Copy `FrameworkName.podspec` file created before from root repo folder and rename it to `FrameworkName.podspec.ejs`.
+		- Change field to `s.version = '<%= version_id %>'`.
+		- Change field to `s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>' }`
+    - Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `ios` if plugin support it. Rename it to `ios.json.ejs`
+        - Change field to `"manifest_version": "<%= version_id %>"`
+        - Change field to `:git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag
+    - Create manifest file using [Zappifest](https://github.com/applicaster/zappifest) for `tvos` if plugin support it. Rename it to `tvos.json.ejs`
+        - Change field to `"manifest_version": "<%= version_id %>"`
+        - Change field to `"FrameworkName": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"`
+
+- Go to Framework's root folder and call `pod install`.
+	- Cocoapods will generate `PluginName`
+	- Open it make sure `PluginName` scheme is share and build and start unit tests.
+- Open `README.md.ejs` in the root of the repo.
+	- Add new framework under `# Frameworks List` title with format `#### Framework readable name: *<%= framework_id %>*`. In automation where `framework_id` will be populated value `version_id` from the `FrameworksData.plist`
+		- Find plugin type. Example `### Type: Analytics`
+		- If type does not exist under section. `## Zapp Plugins` add new type `### Type: New Type`
+		- Add new plugin title with format `#### Plugin readable name: <%= framework_id %>`.   Where `framework_id` must be a value defined in `FrameworksData.plist`
+		- Add description.
+		- Add link to generated documentation.
+		- Add links to Zapp manifests.
+		- Example:
+		```swift
+	        ### Type: Analytics
+
+            #### Google Analytics: *<%= ZappGoogleAnalytics %>*
+            - **Description:** Google Analytics provider, deliver passed analytics data to service [Google Analytics](https://analytics.google.com/)
+            - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappGoogleAnalytics/index.html)
+            - **Manifest:**
+                - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=ios)
+                - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_analytics&platform=tvos)
+		```
+- Final check of you framework.
+	- Go to root Framework's folder and call in terminal `node Scripts/validateExistingFrameworks.js` It will check if you have all `folders` and `FrameworksData.plist` defined properly.
+	- Make sure that generated `xcworkspace` of your `Framework` build and start unit test of your framework's scheme.
+	- Manifest prepared
+	- Templates are ready.
+	- Readme documentation added in the `README.md.ejs` file
 - Push code and create PR. Fill PR template.
 - After review merge code.
 
@@ -327,7 +501,9 @@ Apple Framworks
         | tvos.json.ejs |tvOS Zapp plugin manifest template|YES|
 
         - Generate documentation for framework and saves it to `docs` folder.
+        - Srart Unit tests.
         - Upload manifest to Zapp with [Zappifest](https://github.com/applicaster/zappifest) (Zapp plugins only).
+        - Upload npm dependencies (Zapp plugins only)
         - Update Frameworks list template `Readme.md.ejs` to update latest availible framework version for documentation.
         - Update file `.versions_automation.json` with latest changes if format `{framework_name:version_id}`
         - Commit, push and create tag git repo
