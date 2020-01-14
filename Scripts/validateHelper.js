@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// set -e
 
 const {
   readFrameworkDataPlist,
@@ -38,7 +39,7 @@ function validateSingleFrameworkDataInPlist(model) {
     return true;
   } else {
     console.log(
-      "Framework: '${framework}': Required data in 'FrameworksData.plist' does not exists"
+      `Framework: '${framework}': Required data in 'FrameworksData.plist' does not exists`
     );
     return false;
   }
@@ -47,21 +48,13 @@ function validateSingleFrameworkDataInPlist(model) {
 function validateSingleFrameworkPathes(model) {
   const baseFolderPath = basePathForModel(model);
 
-  const { plugin = null, npm_package = null, framework = null } = model;
-  console.log({ model, framework });
+  const { plugin = null, framework = null } = model;
 
   console.log(
     `Validating requiered pathes for Framework: ${framework}, Plugin:${plugin},  BasePath: '${baseFolderPath}'`
   );
   const succeedText = `framework: '${framework}':All required files exist`;
-  console.log(
-    fs.existsSync(baseFolderPath) &&
-      fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
-      fs.existsSync(`${baseFolderPath}/Templates/${framework}.podspec.ejs`) &&
-      fs.existsSync(`${baseFolderPath}/.jazzy.yaml`) &&
-      fs.existsSync(`${baseFolderPath}/Podfile`) &&
-      fs.existsSync(`${baseFolderPath}/Files`)
-  );
+
   if (
     fs.existsSync(baseFolderPath) &&
     fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
@@ -72,25 +65,17 @@ function validateSingleFrameworkPathes(model) {
   ) {
     if (plugin == true) {
       if (
-        ((fs.existsSync(`${baseFolderPath}/Templates/ios.json.ejs`) ||
-          fs.existsSync(`${baseFolderPath}/Templates/tvos.json.ejs`)) &&
-          fs.existsSync(`${baseFolderPath}/Manifest/ios.json`)) ||
-        fs.existsSync(`${baseFolderPath}/Manifest/tvos.json`)
+        fs.existsSync(`${baseFolderPath}/Templates/ios.json.ejs`) ||
+        fs.existsSync(`${baseFolderPath}/Templates/tvos.json.ejs`)
       ) {
-        if (
-          (npm_package &&
-            fs.existsSync(`${baseFolderPath}/Files/${framework}.podspec`)) ||
-          (!npm_package && fs.existsSync(`${framework}.podspec`))
-        ) {
+        if (fs.existsSync(`${baseFolderPath}/Files/${framework}.podspec`)) {
           console.log(succeedText);
           return true;
         }
       }
-    } else {
-      if (fs.existsSync(`${framework}.podspec`)) {
-        console.log(succeedText);
-        return true;
-      }
+    } else if (fs.existsSync(`${framework}.podspec`)) {
+      console.log(succeedText);
+      return true;
     }
   }
   return false;

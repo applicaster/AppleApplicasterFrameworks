@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const shell = require("cli-task-runner/utils/shell");
-const { abort, basePathForModel } = require("./Helpers.js");
+const { abort, basePathForModel, runInSequence } = require("./Helpers.js");
 
 const {
   compareVersion,
@@ -63,12 +63,7 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
     const promises = itemsToUpdate.map(async model => {
       const baseFolderPath = basePathForModel(model);
 
-      const {
-        framework = null,
-        version_id = null,
-        plugin = null,
-        npm_package = null
-      } = model;
+      const { framework = null, version_id = null, plugin = null } = model;
 
       const ejsData = { version_id, new_tag: newGitTag };
       const templatesBasePath = `${baseFolderPath}/Templates`;
@@ -80,7 +75,7 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
         `${baseFolderPath}/.jazzy.yaml`
       );
 
-      const podspecPath = npm_package
+      const podspecPath = plugin
         ? `${baseFolderPath}/Files/${framework}.podspec`
         : `${framework}.podspec`;
 
@@ -111,18 +106,10 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
           platform: "tvos",
           template: true
         });
-        if (
-          iosManifestPath &&
-          iosTemplatePath &&
-          fs.existsSync(iosManifestPath)
-        ) {
+        if (iosTemplatePath) {
           await updateTemplate(ejsData, iosTemplatePath, iosManifestPath);
         }
-        if (
-          tvosManifestPath &&
-          tvosTemplatePath &&
-          fs.existsSync(tvosManifestPath)
-        ) {
+        if (tvosTemplatePath) {
           await updateTemplate(ejsData, tvosTemplatePath, tvosManifestPath);
         }
       }
@@ -168,17 +155,11 @@ async function uploadManifestsToZapp(itemsToUpdate) {
       }
     });
     await Promise.all(promises);
+    await shell.exec(`rm -rf ${iosManifestPath} ${tvosManifestPath}`);
   } catch (e) {
     abort(e.message);
   }
   return Promise.resolve();
-}
-
-async function runInSequence(items, asyncFunc) {
-  return items.reduce(async (previous, current) => {
-    await previous;
-    return asyncFunc(current);
-  }, Promise.resolve());
 }
 
 async function unitTestAndGenerateDocumentation(itemsToUpdate) {
@@ -263,8 +244,8 @@ async function uploadNpmPackages(itemsToUpdate) {
   const promises = itemsToUpdate.map(async model => {
     const baseFolderPath = basePathForModel(model);
 
-    const { version_id = null, npm_package = null } = model;
-    if (npm_package) {
+    const { version_id = null, plugin = null } = model;
+    if (plugin) {
       try {
         await shell.exec(
           `cd ${baseFolderPath}/Files && yarn publish --new-version ${version_id} --no-git-tag-version`

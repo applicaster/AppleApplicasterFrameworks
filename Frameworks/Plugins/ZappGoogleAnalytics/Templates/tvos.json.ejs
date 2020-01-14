@@ -19,9 +19,12 @@
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",
   "react_native": false,
+  "npm_dependencies": [
+    "@applicaster/google-analytics-web-based@<%= version_id %>"
+  ],
   "extra_dependencies": [
     {
-      "ZappGoogleAnalytics": ":git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '<%= new_tag %>'"
+      "ZappGoogleAnalytics": ":path => './node_modules/@applicaster/google-analytics-web-based/ZappGoogleAnalytics.podspec'"
     }
   ],
   "custom_configuration_fields": [

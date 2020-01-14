@@ -83,4 +83,5 @@ Frameworks/**/xcodebuild.log
 
 node_modules/*
 
-FrameworksApp/**
+**/tvos.json
+**/ios.json

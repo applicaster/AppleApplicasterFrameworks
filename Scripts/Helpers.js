@@ -65,6 +65,19 @@ function basePathForModel(model) {
   return null;
 }
 
+async function runInSequence(items, asyncFunc) {
+  return items.reduce(async (previous, current) => {
+    await previous;
+    return asyncFunc(current);
+  }, Promise.resolve());
+}
+
+async function runInParallel(commands) {
+  const promises = commands.map(command => command());
+  const result = await Promise.all(promises);
+  return result;
+}
+
 module.exports = {
   basePathForModel,
   readFrameworkDataPlist,
@@ -75,5 +88,7 @@ module.exports = {
   isMasterBranch,
   automationVersionsDataJSON,
   updateAutomationVersionsDataJSON,
-  gitTagDate
+  gitTagDate,
+  runInSequence,
+  runInParallel
 };

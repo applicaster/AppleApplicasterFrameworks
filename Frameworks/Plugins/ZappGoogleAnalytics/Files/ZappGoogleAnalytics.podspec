@@ -10,7 +10,7 @@ s.homepage         = "https://applicaster.com"
 s.license = 'Appache 2.0'
 s.author           = { "cmps" => "a.zchut@applicaster.com" }
 s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-:tag => '2020.1.13.16-1-4' }
+:tag => '2020.1.13.16-1-3' }
 s.platform = :tvos, :ios
 s.tvos.deployment_target = "10.0"
 s.ios.deployment_target = '10.0'
@@ -19,10 +19,10 @@ s.dependency 'ZappCore'
 
 s.requires_arc = true
 
-s.source_files = ['Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/**/*.{swift}']
+s.source_files = ['Universal/**/*.{swift}']
 
 s.resources = [
-"Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDimensionMapping.plist"
+"Universal/CustomDimensionMapping/CustomDimensionMapping.plist"
 ]
 
 s.xcconfig =  {
@@ -30,7 +30,7 @@ s.xcconfig =  {
 'ENABLE_BITCODE' => 'YES',
 }
 
-s.test_spec 'UnitTests' do |sp|
-sp.source_files = 'Frameworks/Plugins/ZappGoogleAnalytics/Files/Tests/**'
-end
+    s.test_spec 'UnitTests' do |sp|
+        sp.source_files = 'Tests/**'
+    end
 end
