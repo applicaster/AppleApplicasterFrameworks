@@ -126,11 +126,11 @@ async function uploadManifestsToZapp(itemsToUpdate) {
   try {
     const promises = itemsToUpdate.map(async model => {
       const { framework = null, plugin = null } = model;
-      console.log(`Uploading manifests for: ${framework}`);
 
       const zappToken = process.env["ZAPP_TOKEN"];
-      console.log({ zappToken, plugin });
       if (plugin && zappToken) {
+        console.log(`Uploading manifests for: ${framework}`);
+
         const iosManifestPath = manifestPath({
           model,
           platform: "ios",
@@ -243,8 +243,9 @@ async function uploadNpmPackages(itemsToUpdate) {
   const promises = itemsToUpdate.map(async model => {
     const baseFolderPath = basePathForModel(model);
 
-    const { version_id = null, plugin = null } = model;
+    const { version_id = null, plugin = null, framework = null } = model;
     if (plugin) {
+      console.log(`Publishing plugin:${framework}, version:${version_id}`);
       try {
         await shell.exec(
           `cd ${baseFolderPath}/Files && yarn publish --new-version ${version_id} --no-git-tag-version`
