@@ -1,243 +1,243 @@
 {
   "warnings": [
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/Categories/Dictionary/Dictionary+Additions.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/Categories/Dictionary/Dictionary+Additions.swift",
       "line": 13,
       "symbol": "Dictionary.merge(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/Categories/String/String+Additions.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/Categories/String/String+Additions.swift",
       "line": 12,
       "symbol": "String.isNotEmptyOrWhitespace(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/Categories/String/String+Additions.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/Categories/String/String+Additions.swift",
       "line": 16,
       "symbol": "String.isEmptyOrWhitespace()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDemensionMappingHelper.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDemensionMappingHelper.swift",
       "line": 11,
       "symbol": "CustomDemensionMappingHelper",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDemensionMappingHelper.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/CustomDimensionMapping/CustomDemensionMappingHelper.swift",
       "line": 14,
       "symbol": "CustomDemensionMappingHelper.fileExension",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 11,
       "symbol": "baseURL",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 12,
       "symbol": "mesurementProtocolVersion",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 13,
       "symbol": "dataSourceKey",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 100,
       "symbol": "MeasurementProtocolKeys.All.HitType",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 101,
       "symbol": "MeasurementProtocolKeys.All.HitType.pageView",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 102,
       "symbol": "MeasurementProtocolKeys.All.HitType.screenView",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 103,
       "symbol": "MeasurementProtocolKeys.All.HitType.event",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 104,
       "symbol": "MeasurementProtocolKeys.All.HitType.transaction",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 105,
       "symbol": "MeasurementProtocolKeys.All.HitType.item",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 106,
       "symbol": "MeasurementProtocolKeys.All.HitType.social",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 107,
       "symbol": "MeasurementProtocolKeys.All.HitType.exception",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsMeasurementProtocolAPI.swift",
       "line": 108,
       "symbol": "MeasurementProtocolKeys.All.HitType.timing",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 12,
       "symbol": "APTimedEvent",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 13,
       "symbol": "APTimedEvent.eventName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 14,
       "symbol": "APTimedEvent.parameters",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 15,
       "symbol": "APTimedEvent.startTime",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 17,
       "symbol": "APTimedEvent.init(eventName:parameters:startTime:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 26,
       "symbol": "GoogleAnalyticsPluginAdapter",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 30,
       "symbol": "GoogleAnalyticsPluginAdapter.timedEventsDictionary",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 34,
       "symbol": "GoogleAnalyticsPluginAdapter.PluginKeys.trackingID",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 35,
       "symbol": "GoogleAnalyticsPluginAdapter.PluginKeys.screenViewsEsnabled",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 44,
       "symbol": "GoogleAnalyticsPluginAdapter.defaultEventParameters",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 50,
       "symbol": "GoogleAnalyticsPluginAdapter.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 114,
       "symbol": "GoogleAnalyticsPluginAdapter.registerTimedEvent(_:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 125,
       "symbol": "GoogleAnalyticsPluginAdapter.processEndTimedEvent(_:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 140,
       "symbol": "GoogleAnalyticsPluginAdapter",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/GoogleAnalyticsPluginAdapter.swift",
       "line": 192,
       "symbol": "GoogleAnalyticsPluginAdapter.combineProperties(combinedWithEventParams:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/MeasurementProtocolManager.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/MeasurementProtocolManager.swift",
       "line": 12,
       "symbol": "MeasurementProtocolManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/MeasurementProtocolManager.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics/Files/Universal/MeasurementProtocolManager.swift",
       "line": 13,
       "symbol": "MeasurementProtocolManager.dataNotAvailible",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/antonkononenko/Work3/AppleFrameworks/Frameworks/Plugins/ZappGoogleAnalytics"
+  "source_directory": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleAnalytics"
 }
