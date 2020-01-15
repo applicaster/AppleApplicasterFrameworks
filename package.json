@@ -6,6 +6,10 @@
   "directories": {
     "doc": "docs"
   },
+  "private": true,
+  "workspaces": [
+    "Frameworks/Plugins/*",
+  ],
   "dependencies": {
     "plist": "3.0.1",
     "ejs": "3.0.1",
