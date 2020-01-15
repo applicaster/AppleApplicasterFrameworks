@@ -15,7 +15,7 @@
 	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>
 		<key>version_id</key>
-		<string>4.3.2</string>
+		<string>4.3.3</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
