@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappCrashlogsMsAppCenter"
-  s.version          = '4.3.1'
+  s.version          = '4.3.2'
   s.summary          = "ZappCrashlogsMsAppCenter"
   s.description      = <<-DESC
   CrashlogsMsAppCenter container.
