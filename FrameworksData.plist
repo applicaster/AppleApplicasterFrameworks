@@ -15,14 +15,14 @@
 	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>
 		<key>version_id</key>
-		<string>4.3.0</string>
+		<string>4.3.1</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
 	<key>ZappGoogleAnalytics</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.6.0</string>
+		<string>0.6.1</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
