@@ -8,7 +8,7 @@
   },
   "private": true,
   "workspaces": [
-    "Frameworks/Plugins/*",
+    "Frameworks/Plugins/*"
   ],
   "dependencies": {
     "plist": "3.0.1",
