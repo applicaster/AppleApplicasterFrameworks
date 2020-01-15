@@ -22,7 +22,7 @@
 	<key>ZappGoogleAnalytics</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.6.1</string>
+		<string>0.6.2</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
