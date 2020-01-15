@@ -8,7 +8,7 @@
   },
   "files": [
     "ios",
-    "ZappGoogleInteractiveMediaAds.podspec"
+    "ZappCrashlogsMsAppCenter.podspec"
   ],
   "repository": {
     "type": "git",
