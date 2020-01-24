@@ -13,17 +13,29 @@ extension RootViewController: FacadeConnectorPluginManagerProtocol {
     public func pluginModel(_ type: String) -> ZPPluginModel? {
         return PluginsManager.pluginModel(type)
     }
-    
-    @objc public func plugin(for identifier:String) -> ZPPluginModel? {
+
+    @objc public func plugin(for identifier: String) -> ZPPluginModel? {
         return PluginsManager.pluginModelById(identifier)
     }
-    
+
     @objc public func getAllPlugins() -> [ZPPluginModel]? {
         return PluginsManager.allPluginModels
     }
-    
+
     @objc public func adapterClass(_ pluginModel: ZPPluginModel) -> AnyClass? {
         return PluginsManager.adapterClass(pluginModel)
     }
-    
+
+    @objc func disablePlugin(identifier: String) {
+        
+    }
+
+    @objc func disableAllPlugins(pluginType: String) {
+    }
+
+    @objc func enablePlugin(identifier: String) {
+    }
+
+    @objc func enableAllPlugins(pluginType: String) {
+    }
 }

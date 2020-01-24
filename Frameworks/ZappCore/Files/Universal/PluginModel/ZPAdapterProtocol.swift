@@ -11,15 +11,20 @@ import UIKit
 /// Base Zapp Plugin protocol
 @objc public protocol ZPAdapterProtocol: NSObjectProtocol {
     
+    
     /// Dictionary with configuration params that passed  from ZPModel
     var configurationJSON: NSDictionary? { get }
-    
+
     /// Initialization with configurationJSON
     /// - Parameter configurationJSON: Dictionary with configuration params that passed  from ZPModel
     init(configurationJSON: NSDictionary?)
     init()
 
-    
+    /// Notify plugin that plugin must be disabled
+    /// - Note: On this stop plugin must stop any activity, remove observers, stop load data and etc
+    /// - Parameter completion: Notify application that plugin has beed disable
+    @objc optional func disable(completion: (() -> Void)?)
+
     /// Handle open url scheme by plugin
     /// - Parameter params: url scheme params
     @objc optional func handleUrlScheme(_ params: NSDictionary)

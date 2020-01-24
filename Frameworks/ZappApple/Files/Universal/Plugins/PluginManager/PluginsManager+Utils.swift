@@ -208,7 +208,8 @@ extension PluginsManager {
         return PluginsManager.pluginModels()?.first(where: { $0.identifier == pluginId })
     }
 
-    public class func plugin(withScreenName screenName: String?, model: NSDictionary?) -> ZPPluginModel? {
+    public class func plugin(withScreenName screenName: String?,
+                             model: NSDictionary?) -> ZPPluginModel? {
         var plugin: ZPPluginModel?
 
         // We try to find if we defined in our extension the plugin type
@@ -223,4 +224,5 @@ extension PluginsManager {
 
         return plugin
     }
+    
 }
