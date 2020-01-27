@@ -14,28 +14,29 @@ public let kPluginDisabledValue = "false"
 
 extension PluginsManager {
     func disablePlugin(identifier: String) {
-//        guard let pluginManager = pluginManager(identifier: identifier) else {
-//            return
-//        }
+        guard let manager = pluginManager(identifier: identifier) else {
+            return
+        }
+        manager.disablePlugin(identifier: identifier) {
+        }
     }
 
     func disableAllPlugins(pluginType: String) {
         guard let pluginType = ZPPluginType(rawValue: pluginType),
             let manager = pluginManager(type: pluginType) else {
-                return
+            return
         }
-//        manager.providers.forEach { (provider) in
-//            _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: kPluginEnabled,
-//                                                                               value: kPluginDisabledValue,
-//                                                                               namespace: pluginModel.identifier)
-//        }
+        manager.disablePlugins {}
     }
 
     func enablePlugin(identifier: String) {
-//        guard let pluginManager = pluginManager(identifier: identifier) else {
-//            return
-//        }
-//
+        guard let pluginManager = pluginManager(identifier: identifier) else {
+            return
+        }
+
+        pluginManager.createProvider(identifier: identifier,
+                                     forceEnable: true) {
+        }
     }
 
     func enableAllPlugins(pluginType: String) {
@@ -43,14 +44,8 @@ extension PluginsManager {
             let manager = pluginManager(type: pluginType) else {
             return
         }
-        manager.createProviders(pluginType: pluginType,
-                                Protocol:  manager.pluginProtocol) { providers in
-                                    if let providers = providers as? manager.pluginProtocol {
-                                        manager.providers = providers
-                                    } else {
-                                        
-                                    }
-            
+        manager.createProviders(forceEnable: true) {
+            print("enableAllPlugins")
         }
     }
 
@@ -73,5 +68,3 @@ extension PluginsManager {
         }
     }
 }
-
-// PluginManagerBase

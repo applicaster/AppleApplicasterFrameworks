@@ -11,18 +11,21 @@ import ZappCore
 class PushPluginsManager: PluginManagerBase {
     typealias pluginTypeProtocol = PushProviderProtocol
     
+    required init() {
+        super.init()
+        self.pluginType = .Push
+    }
+    
     override func prepareManager(completion: PluginManagerCompletion) {
-        providers = []
-        enableAllProviders(completion: completion)
+        providers = [:]
+        createProviders(completion: completion)
     }
 
-    func enableAllProviders(completion: PluginManagerCompletion) {
-        createProviders(pluginType: .Push,
-                        Protocol: pluginTypeProtocol.self) { createdProviders in
-            if let createdProviders = createdProviders as? [PushProviderProtocol] {
-                providers = createdProviders
-                completion()
-            }
+    public override func providerCreated(provider:PluginAdapterProtocol,
+                                 completion: PluginManagerCompletion) {
+        if let provder = provider as? PushProviderProtocol {
+            
         }
+        completion()
     }
 }

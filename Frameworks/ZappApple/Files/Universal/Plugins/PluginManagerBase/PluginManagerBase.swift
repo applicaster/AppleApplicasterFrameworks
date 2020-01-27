@@ -9,25 +9,34 @@ import Foundation
 import ZappCore
 
 class PluginManagerBase: PluginManagerProtocol {
-    
+    open var pluginType: ZPPluginType
+
+    required init() {
+        pluginType = .Unknown
+    }
+
     open var pluginProtocol: PluginAdapterProtocol.Protocol {
         return pluginTypeProtocol.self
     }
-    
-    
+
     public typealias pluginTypeProtocol = PluginAdapterProtocol
 
-    open var providers: [pluginTypeProtocol] = []
+    open var providers: [String: pluginTypeProtocol] = [:]
 
     func prepareManager(completion: () -> Void) {
-        
+        // Must be implemented on subclass if needed
     }
 
-    public func createProviders(pluginType: ZPPluginType,
-                                Protocol: Protocol,
-                                forceEnable: Bool = false,
-                                completion: (_ finished:Bool) -> Void) {
-        var providers: [PluginAdapterProtocol] = []
+    public func providerCreated(provider: PluginAdapterProtocol,
+                                completion: PluginManagerCompletion) {
+        provider.prepareProvider([:]) { _ in
+            completion()
+        }
+        // Must be implemented on subclass if need
+    }
+
+    public func createProviders(forceEnable: Bool = false,
+                                completion: PluginManagerCompletion) {
         let pluginModels = PluginsManager.pluginModels()?.filter {
             $0.pluginType == pluginType
         }
@@ -36,59 +45,86 @@ class PluginManagerBase: PluginManagerProtocol {
             var counter = pluginModels.count
             for pluginModel in pluginModels {
                 createProvider(pluginModel: pluginModel,
-                               Protocol: Protocol,
-                               forceEnable: forceEnable) { provider in
-
+                               forceEnable: forceEnable) {
                     counter -= 1
-                    if let provider = provider as? PluginAdapterProtocol {
-                        providers.append(provider)
-                    }
-                    if counter == 0,
-                        let providers = providers as? [Protocol] {
-                        completion(providers)
+
+                    if counter == 0 {
+                        completion()
                     }
                 }
             }
         } else {
-            completion([])
+            completion()
         }
     }
 
     public func createProvider(identifier: String,
-                               Protocol: Protocol,
                                forceEnable: Bool = false,
-                               completion: (_ provider: Protocol?) -> Void) {
+                               completion: PluginManagerCompletion) {
         guard let pluginModel = PluginsManager.pluginModelById(identifier) else {
-            completion(nil)
+            completion()
             return
         }
         createProvider(pluginModel: pluginModel,
-                       Protocol: Protocol,
                        forceEnable: forceEnable,
                        completion: completion)
     }
 
     public func createProvider(pluginModel: ZPPluginModel,
-                               Protocol: Protocol,
                                forceEnable: Bool = false,
-                               completion: (_ provider: Protocol?) -> Void) {
+                               completion: PluginManagerCompletion) {
         if let adapterClass = PluginsManager.adapterClass(pluginModel),
-            adapterClass.conforms(to: Protocol),
+            adapterClass.conforms(to: pluginProtocol),
             let classType = adapterClass as? PluginAdapterProtocol.Type,
             isEnabled(pluginModel: pluginModel,
                       forceEnable: forceEnable) {
             let provider = classType.init(pluginModel: pluginModel)
 
+            providers[pluginModel.identifier] = provider
+
             _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: kPluginEnabled,
                                                                            value: kPluginEnabledValue,
                                                                            namespace: pluginModel.identifier)
-            completion(provider as? Protocol)
+
+            providerCreated(provider: provider,
+                            completion: completion)
         } else {
             _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: kPluginEnabled,
                                                                            value: kPluginDisabledValue,
                                                                            namespace: pluginModel.identifier)
         }
-        completion(nil)
+        completion()
+    }
+
+    public func disablePlugin(identifier: String,
+                              completion: @escaping PluginManagerCompletion) {
+        guard let provider = providers[identifier],
+            let pluginModel = provider.model else {
+            completion()
+            return
+        }
+        provider.disable(completion: completion)
+        _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: kPluginEnabled,
+                                                                       value: kPluginDisabledValue,
+                                                                       namespace: pluginModel.identifier)
+        completion()
+    }
+
+    public func disablePlugins(completion: @escaping PluginManagerCompletion) {
+        guard providers.count > 0 else {
+            completion()
+            return
+        }
+
+        var counter = providers.count
+        providers.enumerated().forEach { _, element in
+            element.value.disable {
+                counter -= 1
+                if counter == 0 {
+                    completion()
+                }
+            }
+        }
     }
 
     public func isEnabled(pluginModel: ZPPluginModel,

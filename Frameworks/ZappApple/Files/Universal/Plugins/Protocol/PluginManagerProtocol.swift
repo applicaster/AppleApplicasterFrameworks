@@ -6,14 +6,16 @@
 //
 
 import Foundation
+import ZappCore
 
 public typealias PluginManagerCompletion = () -> Void
 
 protocol PluginManagerProtocol {
     associatedtype pluginTypeProtocol
+    var pluginType: ZPPluginType { get }
+    var pluginProtocol: pluginTypeProtocol.Type { get }
 
-    var providers: [pluginTypeProtocol] { get set }
+    var providers: [String: pluginTypeProtocol] { get set }
 
     func prepareManager(completion: PluginManagerCompletion)
-    var pluginProtocol: pluginTypeProtocol.Type { get }
 }
