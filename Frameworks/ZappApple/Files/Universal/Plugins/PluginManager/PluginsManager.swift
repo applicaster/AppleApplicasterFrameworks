@@ -12,6 +12,8 @@ import ZappCore
 class PluginsManager: NSObject {
     public lazy var analytics = AnalyticsManager()
     public lazy var playerDependants = PlayerDependantPluginsManager()
+    public lazy var push = PushPluginsManager()
+
     public var crashlogs = CrashlogsPluginsManager()
 
     var pluginsStateMachine: LoadingStateMachine!

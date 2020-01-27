@@ -26,16 +26,16 @@ extension RootViewController: FacadeConnectorPluginManagerProtocol {
         return PluginsManager.adapterClass(pluginModel)
     }
 
-    @objc func disablePlugin(identifier: String) {
+    @objc public func disablePlugin(identifier: String) {
         
     }
 
-    @objc func disableAllPlugins(pluginType: String) {
+    @objc public func disableAllPlugins(pluginType: String) {
     }
 
-    @objc func enablePlugin(identifier: String) {
+    @objc public func enablePlugin(identifier: String) {
     }
 
-    @objc func enableAllPlugins(pluginType: String) {
+    @objc public func enableAllPlugins(pluginType: String) {
     }
 }

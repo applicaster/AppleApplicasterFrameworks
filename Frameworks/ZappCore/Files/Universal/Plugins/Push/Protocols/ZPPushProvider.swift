@@ -7,20 +7,32 @@
 //
 
 import UIKit
-// import ZappPlugins
 
 @objc open class ZPPushProvider: NSObject, ZPPushProviderProtocol {
+    // MARK: PluginAdapterProtocol
+
+    public var model: ZPPluginModel?
+
+    public required init(pluginModel: ZPPluginModel) {
+        model = pluginModel
+        configurationJSON = pluginModel.configurationJSON
+    }
+
+    public func disable(completion: (() -> Void)?) {
+        completion?()
+    }
+
     public var providerName: String {
         return getKey()
     }
 
-    public func prepareProvider(_ defaultParams: [String: Any],
+    public func prepareProvider(_ params: [String: Any],
                                 completion: (Bool) -> Void) {
         guard configureProvider() == true else {
             completion(false)
             return
         }
-        defaultParams.forEach { dictionary in
+        params.forEach { dictionary in
             guard let value = dictionary.value as? NSObject else {
                 return
             }
@@ -29,13 +41,7 @@ import UIKit
         completion(true)
     }
 
-    open var providerProperties: [String: NSObject]!
-    open var baseProperties: [String: NSObject] = [String: NSObject]()
-
-    open var configurationJSON: NSDictionary?
-    open var providerKey: String {
-        return getKey()
-    }
+    // MARK: ZPAdapterPtotocol
 
     public required init(configurationJSON: NSDictionary?) {
         super.init()
@@ -44,6 +50,14 @@ import UIKit
 
     public required override init() {
         super.init()
+    }
+
+    open var providerProperties: [String: NSObject]!
+    open var baseProperties: [String: NSObject] = [String: NSObject]()
+
+    open var configurationJSON: NSDictionary?
+    open var providerKey: String {
+        return getKey()
     }
 
     open func getKey() -> String {
@@ -63,3 +77,4 @@ import UIKit
         return false
     }
 }
+
