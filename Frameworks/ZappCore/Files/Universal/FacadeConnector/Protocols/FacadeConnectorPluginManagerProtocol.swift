@@ -20,21 +20,21 @@ import Foundation
     /// Disable plugin by plugin identifier
     /// - Note: Only non ui plugins can be disabled
     /// - Parameter identifier: zapp plugin identifier of the specific plugin
-    @objc func disablePlugin(identifier:String)
+    @objc func disablePlugin(identifier:String, completion: ((_ success: Bool) -> Void)?)
     
     /// Disable all plugins for specific type
     /// - Note: Only  non ui plugins can be disabled
     /// - Parameter pluginType: Type of the zapp Plugin
-    @objc func disableAllPlugins(pluginType:String)
+    @objc func disableAllPlugins(pluginType:String, completion: ((_ success: Bool) -> Void)?)
     
     /// Enable plugin by plugin identifier
      /// - Note: Only non ui plugins can be disabled
      /// - Parameter identifier: zapp plugin identifier of the specific plugin
-     @objc func enablePlugin(identifier:String)
+     @objc func enablePlugin(identifier:String, completion: ((_ success: Bool) -> Void)?)
      
      
      /// Enable all plugins for specific type
      /// - Note: Only non ui plugins can be disabled
      /// - Parameter pluginType: Type of the zapp Plugin
-     @objc func enableAllPlugins(pluginType:String)
+     @objc func enableAllPlugins(pluginType:String, completion: ((_ success: Bool) -> Void)?)
 }

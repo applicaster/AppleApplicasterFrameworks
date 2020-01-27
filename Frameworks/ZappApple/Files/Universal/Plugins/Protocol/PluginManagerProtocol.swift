@@ -8,7 +8,7 @@
 import Foundation
 import ZappCore
 
-public typealias PluginManagerCompletion = () -> Void
+public typealias PluginManagerCompletion = ((_ success:Bool) -> Void)?
 
 protocol PluginManagerProtocol {
     associatedtype pluginTypeProtocol

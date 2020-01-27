@@ -23,14 +23,15 @@ class PluginManagerBase: PluginManagerProtocol {
 
     open var providers: [String: pluginTypeProtocol] = [:]
 
-    func prepareManager(completion: () -> Void) {
-        // Must be implemented on subclass if needed
+    func prepareManager(completion: PluginManagerCompletion) {
+        providers = [:]
+        createProviders(completion: completion)
     }
 
     public func providerCreated(provider: PluginAdapterProtocol,
                                 completion: PluginManagerCompletion) {
         provider.prepareProvider([:]) { _ in
-            completion()
+            completion?(true)
         }
         // Must be implemented on subclass if need
     }
@@ -45,16 +46,16 @@ class PluginManagerBase: PluginManagerProtocol {
             var counter = pluginModels.count
             for pluginModel in pluginModels {
                 createProvider(pluginModel: pluginModel,
-                               forceEnable: forceEnable) {
+                               forceEnable: forceEnable) { _ in
                     counter -= 1
 
                     if counter == 0 {
-                        completion()
+                        completion?(true)
                     }
                 }
             }
         } else {
-            completion()
+            completion?(false)
         }
     }
 
@@ -62,7 +63,7 @@ class PluginManagerBase: PluginManagerProtocol {
                                forceEnable: Bool = false,
                                completion: PluginManagerCompletion) {
         guard let pluginModel = PluginsManager.pluginModelById(identifier) else {
-            completion()
+            completion?(false)
             return
         }
         createProvider(pluginModel: pluginModel,
@@ -92,36 +93,36 @@ class PluginManagerBase: PluginManagerProtocol {
             _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: kPluginEnabled,
                                                                            value: kPluginDisabledValue,
                                                                            namespace: pluginModel.identifier)
+            completion?(true)
         }
-        completion()
     }
 
     public func disablePlugin(identifier: String,
-                              completion: @escaping PluginManagerCompletion) {
+                              completion: PluginManagerCompletion) {
         guard let provider = providers[identifier],
             let pluginModel = provider.model else {
-            completion()
+            completion?(false)
             return
         }
         provider.disable(completion: completion)
         _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: kPluginEnabled,
                                                                        value: kPluginDisabledValue,
                                                                        namespace: pluginModel.identifier)
-        completion()
+        completion?(true)
     }
 
-    public func disablePlugins(completion: @escaping PluginManagerCompletion) {
+    public func disablePlugins(completion: PluginManagerCompletion) {
         guard providers.count > 0 else {
-            completion()
+            completion?(true)
             return
         }
 
         var counter = providers.count
-        providers.enumerated().forEach { _, element in
-            element.value.disable {
+        providers.forEach { element in
+            element.value.disable { _ in
                 counter -= 1
                 if counter == 0 {
-                    completion()
+                    completion?(true)
                 }
             }
         }

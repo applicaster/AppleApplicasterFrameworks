@@ -15,17 +15,12 @@ class PushPluginsManager: PluginManagerBase {
         super.init()
         self.pluginType = .Push
     }
-    
-    override func prepareManager(completion: PluginManagerCompletion) {
-        providers = [:]
-        createProviders(completion: completion)
-    }
 
     public override func providerCreated(provider:PluginAdapterProtocol,
                                  completion: PluginManagerCompletion) {
         if let provder = provider as? PushProviderProtocol {
             
         }
-        completion()
+        completion?(true)
     }
 }
