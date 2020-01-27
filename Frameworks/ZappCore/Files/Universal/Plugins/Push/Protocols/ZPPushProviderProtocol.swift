@@ -40,7 +40,7 @@ import Foundation
     /**
      get device's tag list
      */
-    @objc optional func getDeviceTags() -> [String]?
+    @objc optional func getDeviceTags() -> [String:[String]]
 
     /**
      register Token with push server.

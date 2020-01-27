@@ -10,7 +10,10 @@ import ZappCore
 
 class PushPluginsManager: PluginManagerBase {
     typealias pluginTypeProtocol = PushProviderProtocol
-    
+     var _providers: [String: PushProviderProtocol] {
+        return providers as! [String: PushProviderProtocol]
+    }
+
     required init() {
         super.init()
         self.pluginType = .Push

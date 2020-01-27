@@ -34,6 +34,10 @@ import UIKit
         return connectorProvider as? FacadeConnectorPluginManagerProtocol
     }
 
+    @objc public var push: FacadeConnectorPushProtocol? {
+        return connectorProvider as? FacadeConnectorPushProtocol
+    }
+
     let connectorProvider: NSObject
 
     @objc public static var connector: FacadeConnector? {
