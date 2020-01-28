@@ -22,9 +22,9 @@ public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol {
         "Crashlog MS App Center"
     }
 
-    public func prepareProvider(_ defaultParams: [String: Any], completion: (Bool) -> Void) {
+    public func prepareProvider(_ defaultParams: [String: Any], completion: ((Bool) -> Void)?) {
         MSAppCenter.startService(MSCrashes.self)
-        completion(true)
+        completion?(true)
     }
 
     public func disable(completion: ((Bool) -> Void)?) {

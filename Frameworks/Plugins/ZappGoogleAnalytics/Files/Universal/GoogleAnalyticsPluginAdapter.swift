@@ -146,9 +146,9 @@ extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
     }
 
     public func prepareProvider(_ defaultParams: [String: Any],
-                                completion: (_ isReady: Bool) -> Void) {
+                                completion: ((_ isReady: Bool) -> Void)?) {
         guard let trackingID = self.configurationJSON?[PluginKeys.trackingID] as? String else {
-            completion(false)
+            completion?(false)
             return
         }
 
@@ -157,7 +157,7 @@ extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
         }
         defaultEventParameters = defaultParams
         manager = MeasurementProtocolManager(trackingID: trackingID)
-        completion(true)
+        completion?(true)
     }
 
     @objc public func sendEvent(_ eventName: String,

@@ -12,40 +12,44 @@ public let kPluginEnabled = "enabled"
 public let kPluginEnabledValue = "true"
 public let kPluginDisabledValue = "false"
 
-extension PluginsManager {
-    func disablePlugin(identifier: String, completion: ((_ success: Bool) -> Void)?) {
+extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
+    public func disablePlugin(identifier: String, completion: ((_ success: Bool) -> Void)?) {
         guard let manager = pluginManager(identifier: identifier) else {
             return
         }
 
-        manager.disablePlugin(identifier: identifier, completion: completion)
+        manager.disableProvider(identifier: identifier,
+                                completion: completion)
     }
 
-    func disableAllPlugins(pluginType: String, completion: ((_ success: Bool) -> Void)?) {
+    public func disableAllPlugins(pluginType: String, completion: ((_ success: Bool) -> Void)?) {
         guard let pluginType = ZPPluginType(rawValue: pluginType),
             let manager = pluginManager(type: pluginType) else {
             return
         }
-        manager.disablePlugins(completion: completion)
+        manager.disableProviders(completion: completion)
     }
 
-    func enablePlugin(identifier: String, completion: ((_ success: Bool) -> Void)?) {
+    public func enablePlugin(identifier: String, completion: ((_ success: Bool) -> Void)?) {
         guard let pluginManager = pluginManager(identifier: identifier) else {
             return
         }
 
-        pluginManager.createProvider(identifier: identifier, forceEnable: true, completion: completion)
+        pluginManager.createProvider(identifier: identifier,
+                                     forceEnable: true,
+                                     completion: completion)
     }
 
-    func enableAllPlugins(pluginType: String, completion: ((_ success: Bool) -> Void)?) {
+    public func enableAllPlugins(pluginType: String, completion: ((_ success: Bool) -> Void)?) {
         guard let pluginType = ZPPluginType(rawValue: pluginType),
             let manager = pluginManager(type: pluginType) else {
             return
         }
-        manager.createProviders(forceEnable: true, completion: completion)
+        manager.createProviders(forceEnable: true,
+                                completion: completion)
     }
 
-    func pluginManager(identifier: String) -> PluginManagerBase? {
+    func pluginManager(identifier: String) -> PluginManagerControlFlowProtocol? {
         guard let plugin = PluginsManager.pluginModelById(identifier),
             let pluginType = plugin.pluginType else {
             return nil
@@ -54,11 +58,13 @@ extension PluginsManager {
         return pluginManager(type: pluginType)
     }
 
-    func pluginManager(type: ZPPluginType) -> PluginManagerBase? {
+    func pluginManager(type: ZPPluginType) -> PluginManagerControlFlowProtocol? {
         // In switch defined supported control flow types plugins.
         switch type {
         case .Push:
             return push
+        case .Analytics:
+            return analytics
         default:
             return nil
         }

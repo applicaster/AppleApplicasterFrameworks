@@ -8,7 +8,7 @@
 import Foundation
 import ZappCore
 
-public class PluginManagerBase: PluginManagerProtocol {
+public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowProtocol {
     open var pluginType: ZPPluginType
 
     required init() {
@@ -97,8 +97,8 @@ public class PluginManagerBase: PluginManagerProtocol {
         }
     }
 
-    public func disablePlugin(identifier: String,
-                              completion: PluginManagerCompletion) {
+    public func disableProvider(identifier: String,
+                                completion: PluginManagerCompletion) {
         guard let provider = providers[identifier],
             let pluginModel = provider.model else {
             completion?(false)
@@ -111,7 +111,7 @@ public class PluginManagerBase: PluginManagerProtocol {
         completion?(true)
     }
 
-    public func disablePlugins(completion: PluginManagerCompletion) {
+    public func disableProviders(completion: PluginManagerCompletion) {
         guard providers.count > 0 else {
             completion?(true)
             return
@@ -131,6 +131,7 @@ public class PluginManagerBase: PluginManagerProtocol {
     public func isEnabled(pluginModel: ZPPluginModel,
                           forceEnable: Bool) -> Bool {
         var retVal = true
+
         guard forceEnable == false else {
             return retVal
         }

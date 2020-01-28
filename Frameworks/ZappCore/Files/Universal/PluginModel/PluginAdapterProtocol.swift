@@ -27,7 +27,7 @@ import Foundation
     ///   - completion: Completion handler that notify app level that component  ready to  be presented or fail
     ///   - isReady: notify callback if analytics plugin is ready for use
     func prepareProvider(_ defaultParams: [String: Any],
-                         completion: (_ isReady: Bool) -> Void)
+                         completion: ((_ isReady: Bool) -> Void)?)
 
     /// Notify plugin that plugin must be disabled
     /// - Note: On this stop plugin must stop any activity, remove observers, stop load data and etc

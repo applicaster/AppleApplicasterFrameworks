@@ -27,7 +27,6 @@ extension PushPluginsManager: FacadeConnectorPushProtocol {
                 })
             } else {
                 counter -= 1
-
             }
         }
     }
