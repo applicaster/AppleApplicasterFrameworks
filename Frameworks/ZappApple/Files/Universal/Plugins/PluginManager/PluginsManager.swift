@@ -36,8 +36,8 @@ public class PluginsManager: NSObject {
 
     func prepareAnalyticsPlugins(_ successHandler: @escaping StateCallBack,
                                  _ failHandler: @escaping StateCallBack) {
-        analytics.prepareManager {
-            successHandler()
+        analytics.prepareManager { success in
+            success ? successHandler() : failHandler()
         }
     }
 
@@ -53,8 +53,8 @@ public class PluginsManager: NSObject {
 
                 let (key, value) = arg
                 _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: key,
-                                                                                                    value: value,
-                                                                                                    namespace: pluginModel.identifier)
+                                                                               value: value,
+                                                                               namespace: pluginModel.identifier)
             }
         }
 
