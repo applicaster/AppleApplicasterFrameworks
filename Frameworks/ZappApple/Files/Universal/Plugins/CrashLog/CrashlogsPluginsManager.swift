@@ -8,27 +8,15 @@
 
 import ZappCore
 
-public class CrashlogsPluginsManager {
-    var providers: [CrashlogsPluginProtocol] = []
-
-    init() {
-        createСrashlogProviders()
+public class CrashlogsPluginsManager: PluginManagerBase {
+    typealias pluginTypeProtocol = CrashlogsPluginProtocol
+    var _providers: [String: CrashlogsPluginProtocol] {
+        return providers as! [String: CrashlogsPluginProtocol]
     }
 
-    public func createСrashlogProviders() {
-        let pluginModels = PluginsManager.pluginModels()?.filter { $0.pluginType == .Crashlogs }
-
-        if let models = pluginModels, models.count > 0 {
-            for model in models {
-                if let classType = PluginsManager.adapterClass(model) as? CrashlogsPluginProtocol.Type {
-                    let provider = classType.init(configurationJSON: model.configurationJSON)
-                    provider.prepareProvider { succeed in
-                        if succeed {
-                            providers.append(provider)
-                        }
-                    }
-                }
-            }
-        }
+    required init() {
+        super.init()
+        pluginType = .Crashlogs
     }
 }
+

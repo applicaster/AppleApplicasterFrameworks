@@ -30,10 +30,10 @@ public class PluginManagerBase: PluginManagerProtocol {
 
     public func providerCreated(provider: PluginAdapterProtocol,
                                 completion: PluginManagerCompletion) {
-        provider.prepareProvider([:]) { _ in
-            completion?(true)
+        provider.prepareProvider([:]) { succeed in
+            completion?(succeed)
         }
-        // Must be implemented on subclass if need
+        // Must be implemented on subclass if needed
     }
 
     public func createProviders(forceEnable: Bool = false,

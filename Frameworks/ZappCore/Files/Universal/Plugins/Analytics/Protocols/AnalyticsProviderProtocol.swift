@@ -9,20 +9,7 @@
 import Foundation
 
 /// Conforming this protocol allows Zapp Analytics plugin to support generic analytics system of Zapp App
-@objc public protocol AnalyticsProviderProtocol: ZPAdapterProtocol {
-    /// Readable name of the analytics plugin
-    @objc var providerName: String { get }
-
-    /// Invokation of this function must prepare analytics plugin for use.
-    /// - Attention: Application will wait completion of this func to present application.
-    /// Completion must be called as soon as  possible
-    /// - Parameters:
-    ///   - mandatoryDefaultParams: default parameters for analytics plugins
-    ///   - completion: Completion handler that notify app level that component  ready to  be presented or fail
-    ///   - isReady: notify callback if analytics plugin is ready for use
-    func prepareProvider(_ mandatoryDefaultParams: [String: Any],
-                         completion: (_ isReady: Bool) -> Void)
-
+@objc public protocol AnalyticsProviderProtocol: PluginAdapterProtocol {
     /// Invokation of this function must send event to analytics provider
     /// - Parameters:
     ///   - eventName: Unique event name that used as event key
