@@ -8,7 +8,7 @@
 import Foundation
 import ZappCore
 
-class PluginManagerBase: PluginManagerProtocol {
+public class PluginManagerBase: PluginManagerProtocol {
     open var pluginType: ZPPluginType
 
     required init() {

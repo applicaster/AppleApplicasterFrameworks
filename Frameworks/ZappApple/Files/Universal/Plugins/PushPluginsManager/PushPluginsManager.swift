@@ -8,22 +8,32 @@
 import Foundation
 import ZappCore
 
-class PushPluginsManager: PluginManagerBase {
+public class PushPluginsManager: PluginManagerBase {
     typealias pluginTypeProtocol = PushProviderProtocol
-     var _providers: [String: PushProviderProtocol] {
+    var _providers: [String: PushProviderProtocol] {
         return providers as! [String: PushProviderProtocol]
     }
 
     required init() {
         super.init()
-        self.pluginType = .Push
+        pluginType = .Push
     }
 
-    public override func providerCreated(provider:PluginAdapterProtocol,
-                                 completion: PluginManagerCompletion) {
-        if let provder = provider as? PushProviderProtocol {
-            //ToDO: do specific plugin stuff
+    public override func providerCreated(provider: PluginAdapterProtocol,
+                                         completion: PluginManagerCompletion) {
+        if let provider = provider as? PushProviderProtocol,
+            let deviceId = SessionStorage.sharedInstance.get(key: ZappStorageKeys.uuid,
+                                                             namespace: nil) {
+            provider.prepareProvider(["identity_client_device_id": deviceId]) { succed in
+                completion?(succed)
+            }
         }
-        completion?(true)
+    }
+
+    public func registerDeviceToken(data: Data) {
+        _providers.forEach { providerDict in
+            let provider = providerDict.value
+            provider.didRegisterForRemoteNotificationsWithDeviceToken?(data)
+        }
     }
 }

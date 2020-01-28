@@ -22,8 +22,8 @@ public class RootViewController: UIViewController {
 
     var loadingStateMachine: LoadingStateMachine!
     public var userInterfaceLayer: UserInterfaceLayerProtocol?
-    var pluginsManager = PluginsManager()
-    lazy var identityClient: IdentityClient = {
+    public var pluginsManager = PluginsManager()
+    lazy public var identityClient: IdentityClient = {
         let bucketId = SessionStorage.sharedInstance.get(key: ZappStorageKeys.bucketId,
                                                          namespace: nil)
         return IdentityClient(bucketID: bucketId!)

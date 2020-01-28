@@ -9,7 +9,7 @@
 import Foundation
 import ZappCore
 
-class PluginsManager: NSObject {
+public class PluginsManager: NSObject {
     public lazy var analytics = AnalyticsManager()
     public lazy var playerDependants = PlayerDependantPluginsManager()
     public lazy var push = PushPluginsManager()

@@ -74,7 +74,8 @@ extension RootViewController: LoadingStateMachineDataSource {
             facadeConnector.analytics?.sendEvent?(name: CoreAnalyticsKeys.applicationWasLaunched,
                                                   parameters: [:])
             appDelegate?.handleDelayedUrlSchemeCallIfNeeded()
-
+            appDelegate?.handleDelayedPushNotificationIfNeeded()
+            
             NotificationCenter.default.post(name: Notification.Name(kMSAppCenterCheckForUpdatesNotification),
                                             object: nil)
         } else {

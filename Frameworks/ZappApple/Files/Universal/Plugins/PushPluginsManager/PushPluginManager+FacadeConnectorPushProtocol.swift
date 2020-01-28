@@ -9,7 +9,7 @@ import Foundation
 import ZappCore
 
 extension PushPluginsManager: FacadeConnectorPushProtocol {
-    @objc func addTagsToDevice(_ tags: [String]?,
+    @objc public func addTagsToDevice(_ tags: [String]?,
                                completion: @escaping (_ success: Bool, _ tags: [String]?) -> Void) {
         var counter = _providers.count
         var completionSuccess = true
@@ -32,7 +32,7 @@ extension PushPluginsManager: FacadeConnectorPushProtocol {
         }
     }
 
-    @objc func removeTagsToDevice(_ tags: [String]?,
+    @objc public func removeTagsToDevice(_ tags: [String]?,
                                   completion: @escaping (_ success: Bool, _ tags: [String]?) -> Void) {
         var counter = _providers.count
         var completionSuccess = true
@@ -54,7 +54,7 @@ extension PushPluginsManager: FacadeConnectorPushProtocol {
         }
     }
 
-    @objc func getDeviceTags() -> [String: [String]] {
+    @objc public func getDeviceTags() -> [String: [String]] {
         var retVal: [String: [String]] = [:]
         _providers.forEach { providerDict in
             let provider = providerDict.value

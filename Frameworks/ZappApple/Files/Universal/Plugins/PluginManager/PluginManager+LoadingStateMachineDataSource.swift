@@ -29,7 +29,7 @@ extension PluginsManager: LoadingStateMachineDataSource {
                 pluginsSessionStorageData]
     }
     
-    func stateMachineFinishedWork(with state: LoadingStateTypes) {
+    public func stateMachineFinishedWork(with state: LoadingStateTypes) {
         pluginLoaderCompletion?(state == .success)
         pluginLoaderCompletion = nil
     }

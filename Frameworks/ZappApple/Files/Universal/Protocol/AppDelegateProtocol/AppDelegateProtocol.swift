@@ -11,5 +11,6 @@ import UIKit
 
 public protocol AppDelegateProtocol {
     func handleDelayedUrlSchemeCallIfNeeded()
+    func handleDelayedPushNotificationIfNeeded()
     var launchOptions: [UIApplication.LaunchOptionsKey: Any]? { get }
 }
