@@ -23,8 +23,15 @@ import ZappCore
     }
 }
 
-@objc open class GoogleAnalyticsPluginAdapter: NSObject, ZPAdapterProtocol {
+@objc open class GoogleAnalyticsPluginAdapter: NSObject, PluginAdapterProtocol {
     public var configurationJSON: NSDictionary?
+    public var model: ZPPluginModel?
+    var isDisabled: Bool = false
+
+    public required init(pluginModel: ZPPluginModel) {
+        model = pluginModel
+        configurationJSON = model?.configurationJSON
+    }
 
     // used for optional support for timed events implementation
     var timedEventsDictionary: [String: APTimedEvent] = [:]
@@ -42,14 +49,6 @@ import ZappCore
     var isScreenViewsEnabled: Bool = false
 
     var defaultEventParameters: [String: Any] = [:]
-
-    public required init(configurationJSON: NSDictionary?) {
-        self.configurationJSON = configurationJSON
-    }
-
-    public required override init() {
-        super.init()
-    }
 
     /// Devide event name on category and label
     ///
@@ -138,11 +137,15 @@ import ZappCore
 }
 
 extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
-    public var providerName: String {
-        return "Google Analytics"
+    public func disable(completion: ((Bool) -> Void)?) {
+        isDisabled = true
     }
 
-    public func prepareProvider(_ mandatoryDefaultParams: [String: Any],
+    public var providerName: String {
+        return "GoogleAnalytics"
+    }
+
+    public func prepareProvider(_ defaultParams: [String: Any],
                                 completion: (_ isReady: Bool) -> Void) {
         guard let trackingID = self.configurationJSON?[PluginKeys.trackingID] as? String else {
             completion(false)
@@ -152,13 +155,17 @@ extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
         if let enableScreenViews = self.configurationJSON?[PluginKeys.screenViewsEsnabled] as? Bool {
             isScreenViewsEnabled = enableScreenViews
         }
-        defaultEventParameters = mandatoryDefaultParams
+        defaultEventParameters = defaultParams
         manager = MeasurementProtocolManager(trackingID: trackingID)
         completion(true)
     }
 
     @objc public func sendEvent(_ eventName: String,
                                 parameters: [String: Any]?) {
+        guard isDisabled == false else {
+            return
+        }
+
         let events = separatedEvents(forEventString: eventName)
         let combinedProperties = combineProperties(combinedWithEventParams: parameters)
         let eventLabel = analyticsString(fromParams: combinedProperties)
@@ -171,6 +178,9 @@ extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
 
     @objc public func sendScreenEvent(_ screenName: String,
                                       parameters: [String: Any]?) {
+        guard isDisabled == false else {
+            return
+        }
         guard isScreenViewsEnabled else {
             return
         }
@@ -179,12 +189,18 @@ extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
 
     @objc public func startObserveTimedEvent(_ eventName: String,
                                              parameters: [String: Any]?) {
+        guard isDisabled == false else {
+            return
+        }
         registerTimedEvent(eventName,
                            parameters: parameters)
     }
 
     @objc public func stopObserveTimedEvent(_ eventName: String,
                                             parameters: [String: Any]?) {
+        guard isDisabled == false else {
+            return
+        }
         processEndTimedEvent(eventName,
                              parameters: parameters)
     }

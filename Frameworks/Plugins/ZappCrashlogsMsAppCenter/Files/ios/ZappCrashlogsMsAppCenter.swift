@@ -12,23 +12,23 @@ import UIKit
 import ZappCore
 
 public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol {
-    public func prepareProvider(completion: (_ isReady: Bool) -> Void) {
+    public required init(pluginModel: ZPPluginModel) {
+        model = pluginModel
+    }
+
+    public var model: ZPPluginModel?
+
+    public var providerName: String {
+        "Crashlog MS App Center"
+    }
+
+    public func prepareProvider(_ defaultParams: [String: Any], completion: (Bool) -> Void) {
         MSAppCenter.startService(MSCrashes.self)
         completion(true)
     }
 
-    public required override init() {
-        super.init()
-    }
-
-    public var configurationJSON: NSDictionary?
-
-    public required init(configurationJSON: NSDictionary?) {
-        super.init()
-        self.configurationJSON = configurationJSON
-    }
-
-    public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public func disable(completion: ((Bool) -> Void)?) {
+        MSAppCenter.setEnabled(false)
+        completion?(true)
     }
 }
