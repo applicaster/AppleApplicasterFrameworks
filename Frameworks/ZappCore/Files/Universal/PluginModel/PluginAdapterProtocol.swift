@@ -31,7 +31,7 @@ import Foundation
 
     /// Notify plugin that plugin must be disabled
     /// - Note: On this stop plugin must stop any activity, remove observers, stop load data and etc
-    /// - Parameter completion: Notify application that plugin has beed disable
+    /// - Parameter completion: Notify application that plugin has been disable
     func disable(completion: ((_ success:Bool) -> Void)?)
 }
 

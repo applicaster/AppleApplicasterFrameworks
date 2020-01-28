@@ -22,7 +22,7 @@ class PushPluginsManager: PluginManagerBase {
     public override func providerCreated(provider:PluginAdapterProtocol,
                                  completion: PluginManagerCompletion) {
         if let provder = provider as? PushProviderProtocol {
-            
+            //ToDO: do specific plugin stuff
         }
         completion?(true)
     }

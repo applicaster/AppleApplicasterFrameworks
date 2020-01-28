@@ -11,16 +11,51 @@ import ZappCore
 extension PushPluginsManager: FacadeConnectorPushProtocol {
     @objc func addTagsToDevice(_ tags: [String]?,
                                completion: @escaping (_ success: Bool, _ tags: [String]?) -> Void) {
-        //TODO:
+        var counter = _providers.count
+        var completionSuccess = true
+        _providers.forEach { providerDict in
+            let provider = providerDict.value
+            if provider.addTagsToDevice != nil {
+                provider.addTagsToDevice?(tags, completion: { success, tags in
+                    counter -= 1
+                    if completionSuccess == true && success == false {
+                        completionSuccess = success
+                    }
+                    if counter == 0 {
+                        completion(true, tags)
+                    }
+                })
+            } else {
+                counter -= 1
+
+            }
+        }
     }
 
     @objc func removeTagsToDevice(_ tags: [String]?,
                                   completion: @escaping (_ success: Bool, _ tags: [String]?) -> Void) {
-        //TODO:
+        var counter = _providers.count
+        var completionSuccess = true
+        _providers.forEach { providerDict in
+            let provider = providerDict.value
+            if provider.removeTagsToDevice != nil {
+                provider.removeTagsToDevice?(tags, completion: { success, tags in
+                    counter -= 1
+                    if completionSuccess == true && success == false {
+                        completionSuccess = success
+                    }
+                    if counter == 0 {
+                        completion(true, tags)
+                    }
+                })
+            } else {
+                counter -= 1
+            }
+        }
     }
 
-    @objc func getDeviceTags() -> [String:[String]] {
-        var retVal: [String:[String]] = [:]
+    @objc func getDeviceTags() -> [String: [String]] {
+        var retVal: [String: [String]] = [:]
         _providers.forEach { providerDict in
             let provider = providerDict.value
             if let deviceTags = provider.getDeviceTags?(),
@@ -28,6 +63,6 @@ extension PushPluginsManager: FacadeConnectorPushProtocol {
                 retVal[pluginIdentifier] = deviceTags
             }
         }
-        return  retVal
+        return retVal
     }
 }

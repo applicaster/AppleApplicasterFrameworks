@@ -8,7 +8,11 @@
 
 import UIKit
 
-@objc open class ZPPushProvider: NSObject, ZPPushProviderProtocol {
+@objc open class ZPPushProvider: NSObject, ZPPushProviderProtocol, PushProviderProtocol {
+    public func disable(completion: ((Bool) -> Void)?) {
+        
+    }
+    
     // MARK: PluginAdapterProtocol
 
     public var model: ZPPluginModel?
