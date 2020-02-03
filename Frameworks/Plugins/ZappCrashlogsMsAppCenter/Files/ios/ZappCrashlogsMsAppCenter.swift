@@ -11,7 +11,16 @@ import AppCenterCrashes
 import UIKit
 import ZappCore
 
-public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol {
+public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol, ZPAdapterProtocol {
+    public var configurationJSON: NSDictionary?
+    
+    public required init(configurationJSON: NSDictionary?) {
+        self.configurationJSON = configurationJSON
+    }
+    
+    public required init() {
+    }
+    
     public required init(pluginModel: ZPPluginModel) {
         model = pluginModel
     }
