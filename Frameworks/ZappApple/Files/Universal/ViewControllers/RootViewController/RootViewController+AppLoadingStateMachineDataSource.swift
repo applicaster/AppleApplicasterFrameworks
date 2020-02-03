@@ -70,11 +70,9 @@ extension RootViewController: LoadingStateMachineDataSource {
             appReadyForUse = true
             userInterfaceLayerContainerView.isHidden = false
             splashScreenContainerView.isHidden = true
-
             facadeConnector.analytics?.sendEvent?(name: CoreAnalyticsKeys.applicationWasLaunched,
                                                   parameters: [:])
-            appDelegate?.handleDelayedUrlSchemeCallIfNeeded()
-            appDelegate?.handleDelayedPushNotificationIfNeeded()
+            appDelegate?.handleDelayedEventsIfNeeded()
             
             NotificationCenter.default.post(name: Notification.Name(kMSAppCenterCheckForUpdatesNotification),
                                             object: nil)

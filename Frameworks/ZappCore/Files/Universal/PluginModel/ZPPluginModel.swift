@@ -40,9 +40,8 @@ public enum ZPPluginType: String {
     /// Provides a new screen (view controller) for displaying articles
     case Article = "article"
     case Advertisement = "advertisement"
-    
+
     case Unknown = "unknown"
-    
 }
 
 @objc open class ZPPluginModel: NSObject {

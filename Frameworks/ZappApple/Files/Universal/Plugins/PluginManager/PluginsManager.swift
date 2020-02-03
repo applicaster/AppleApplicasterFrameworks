@@ -41,6 +41,13 @@ public class PluginsManager: NSObject {
         }
     }
 
+    func preparePushPlugins(_ successHandler: @escaping StateCallBack,
+                            _ failHandler: @escaping StateCallBack) {
+        push.prepareManager { success in
+            success ? successHandler() : failHandler()
+        }
+    }
+
     func updatePluginSessionStorageData(_ successHandler: @escaping StateCallBack,
                                         _ failHandler: @escaping StateCallBack) {
         func sendConfigurationToSessionStorage(pluginModel: ZPPluginModel) {

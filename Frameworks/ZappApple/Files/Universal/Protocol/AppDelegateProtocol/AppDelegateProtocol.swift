@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 public protocol AppDelegateProtocol {
-    func handleDelayedUrlSchemeCallIfNeeded()
-    func handleDelayedPushNotificationIfNeeded()
+    func handleDelayedEventsIfNeeded()
     var launchOptions: [UIApplication.LaunchOptionsKey: Any]? { get }
 }
