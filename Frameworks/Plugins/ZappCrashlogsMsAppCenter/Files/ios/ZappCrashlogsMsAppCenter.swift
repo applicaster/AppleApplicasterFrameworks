@@ -23,6 +23,7 @@ public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol, ZPAdap
     
     public required init(pluginModel: ZPPluginModel) {
         model = pluginModel
+        configurationJSON = model?.configurationJSON
     }
 
     public var model: ZPPluginModel?
