@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappApple 0.1.4 Docs</a>
-          <span class="no-mobile"> (33% documented)</span>
+          <a href="../index.html">ZappApple 0.2.0 Docs</a>
+          <span class="no-mobile"> (30% documented)</span>
         </p>
     
         <p class="header-right">
@@ -48,7 +48,7 @@
               <h1>CrashlogsPluginsManager</h1>
                 <div class="declaration">
                   <div class="language">
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CrashlogsPluginsManager</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CrashlogsPluginsManager</span> <span class="p">:</span> <span class="kt"><a href="../Classes/PluginManagerBase.html">PluginManagerBase</a></span></code></pre>
 
                   </div>
                 </div>
@@ -61,9 +61,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:9ZappApple23CrashlogsPluginsManagerC9providersSay0A4Core0C14PluginProtocol_pGvp"></a>
-                      <a name="//apple_ref/swift/Property/providers" class="dashAnchor"></a>
-                      <a class="token" href="#/s:9ZappApple23CrashlogsPluginsManagerC9providersSay0A4Core0C14PluginProtocol_pGvp">providers</a>
+                      <a name="/s:9ZappApple23CrashlogsPluginsManagerC18pluginTypeProtocola"></a>
+                      <a name="//apple_ref/swift/Alias/pluginTypeProtocol" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple23CrashlogsPluginsManagerC18pluginTypeProtocola">pluginTypeProtocol</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -78,7 +78,34 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">providers</span><span class="p">:</span> <span class="p">[</span><span class="kt">CrashlogsPluginProtocol</span><span class="p">]</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="n">pluginTypeProtocol</span> <span class="o">=</span> <span class="kt">CrashlogsPluginProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple23CrashlogsPluginsManagerC10_providersSDySS0A4Core0C14PluginProtocol_pGvp"></a>
+                      <a name="//apple_ref/swift/Property/_providers" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple23CrashlogsPluginsManagerC10_providersSDySS0A4Core0C14PluginProtocol_pGvp">_providers</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">_providers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">CrashlogsPluginProtocol</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -105,34 +132,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="nf">init</span><span class="p">()</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:9ZappApple23CrashlogsPluginsManagerC0026createrashlogProviders_xpryyF"></a>
-                      <a name="//apple_ref/swift/Method/createСrashlogProviders()" class="dashAnchor"></a>
-                      <a class="token" href="#/s:9ZappApple23CrashlogsPluginsManagerC0026createrashlogProviders_xpryyF">createСrashlogProviders()</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createСrashlogProviders</span><span class="p">()</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">required</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                           </div>
                         </div>
@@ -193,6 +193,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/IdentityClient.html">IdentityClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClient/IdentityClientKeys.html">– IdentityClientKeys</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/IdentityClientBase.html">IdentityClientBase</a>
@@ -418,6 +421,50 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Extensions/UIViewController.html">UIViewController</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Classes.html">Other Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/PluginManagerBase.html">PluginManagerBase</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/PushPluginsManager.html">PushPluginsManager</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple20kPluginDisabledValueSSvp">kPluginDisabledValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple14kPluginEnabledSSvp">kPluginEnabled</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple19kPluginEnabledValueSSvp">kPluginEnabledValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Protocols.html">Other Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginManagerControlFlowProtocol.html">PluginManagerControlFlowProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginManagerProtocol.html">PluginManagerProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Typealiases.html">Other Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a>
                 </li>
               </ul>
             </li>

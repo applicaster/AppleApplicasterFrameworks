@@ -79,63 +79,63 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 17,
+      "line": 39,
       "symbol": "GoogleInteractiveMediaAdsAdapter.postrollCompletion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 18,
+      "line": 40,
       "symbol": "GoogleInteractiveMediaAdsAdapter.adRequest",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 30,
+      "line": 41,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.configurationJSON",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 52,
       "symbol": "GoogleInteractiveMediaAdsAdapter.avPlayer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 34,
+      "line": 56,
       "symbol": "GoogleInteractiveMediaAdsAdapter.urlTagData",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 36,
-      "symbol": "GoogleInteractiveMediaAdsAdapter.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 45,
+      "line": 58,
       "symbol": "GoogleInteractiveMediaAdsAdapter.containerView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 58,
+      "line": 71,
       "symbol": "GoogleInteractiveMediaAdsAdapter.prepareGoogleIMA()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 69,
+      "line": 82,
       "symbol": "GoogleInteractiveMediaAdsAdapter.setupAdsLoader()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 76,
+      "line": 89,
       "symbol": "GoogleInteractiveMediaAdsAdapter.requestAd(adUrl:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

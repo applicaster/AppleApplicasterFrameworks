@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappApple 0.1.4 Docs</a>
-          <span class="no-mobile"> (33% documented)</span>
+          <a href="../index.html">ZappApple 0.2.0 Docs</a>
+          <span class="no-mobile"> (30% documented)</span>
         </p>
     
         <p class="header-right">
@@ -49,7 +49,7 @@
                 <div class="declaration">
                   <div class="language">
                     <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PlayerDependantPluginsManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PlayerDependantPluginsManager</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/PluginManagerControlFlowProtocol.html">PluginManagerControlFlowProtocol</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PlayerDependantPluginsManager</span><span class="p">:</span> <span class="kt">PlayerObserverProtocol</span></code></pre>
 
                   </div>
@@ -63,9 +63,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:9ZappApple29PlayerDependantPluginsManagerC9providersSDySSSay0A4Core0cD14PluginProtocol_pGGvp"></a>
+                      <a name="/s:9ZappApple29PlayerDependantPluginsManagerC9providersSDySSSDySS0A4Core0cD14PluginProtocol_pGGvp"></a>
                       <a name="//apple_ref/swift/Property/providers" class="dashAnchor"></a>
-                      <a class="token" href="#/s:9ZappApple29PlayerDependantPluginsManagerC9providersSDySSSay0A4Core0cD14PluginProtocol_pGGvp">providers</a>
+                      <a class="token" href="#/s:9ZappApple29PlayerDependantPluginsManagerC9providersSDySSSDySS0A4Core0cD14PluginProtocol_pGGvp">providers</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -80,7 +80,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">providers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">PlayerDependantPluginProtocol</span><span class="p">]]</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">providers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">PlayerDependantPluginProtocol</span><span class="p">]]</span></code></pre>
 
                           </div>
                         </div>
@@ -124,7 +124,7 @@
                                 </td>
                                 <td>
                                   <div>
-                                    <p>Player plugin that conform ZPDependablePlayerPluginProtocol that uses dependant plugins</p>
+                                    <p>Player plugin that conform PlayerProtocol that uses dependant plugins</p>
                                   </div>
                                 </td>
                               </tr>
@@ -155,7 +155,7 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">providers</span><span class="p">(</span><span class="nv">playerPlugin</span><span class="p">:</span> <span class="kt">PlayerProtocol</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">PlayerDependantPluginProtocol</span><span class="p">]?</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">providers</span><span class="p">(</span><span class="nv">playerPlugin</span><span class="p">:</span> <span class="kt">PlayerProtocol</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">PlayerDependantPluginProtocol</span><span class="p">]?</span></code></pre>
 
                           </div>
                         </div>
@@ -171,7 +171,7 @@
                                 </td>
                                 <td>
                                   <div>
-                                    <p>Player plugin that conform ZPDependablePlayerPluginProtocol that uses dependant plugins</p>
+                                    <p>Player plugin that conform PlayerProtocol that uses dependant plugins</p>
                                   </div>
                                 </td>
                               </tr>
@@ -206,7 +206,115 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createPlayerDependantProviders</span><span class="p">(</span><span class="k">for</span> <span class="nv">player</span><span class="p">:</span> <span class="kt">PlayerProtocol</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">PlayerDependantPluginProtocol</span><span class="p">]</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createPlayerDependantProviders</span><span class="p">(</span><span class="k">for</span> <span class="nv">player</span><span class="p">:</span> <span class="kt">PlayerProtocol</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">PlayerDependantPluginProtocol</span><span class="p">]</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple29PlayerDependantPluginsManagerC15disableProvider10identifier10completionySS_ySbcSgtF"></a>
+                      <a name="//apple_ref/swift/Method/disableProvider(identifier:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple29PlayerDependantPluginsManagerC15disableProvider10identifier10completionySS_ySbcSgtF">disableProvider(identifier:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disableProvider</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple29PlayerDependantPluginsManagerC16disableProviders10completionyySbcSg_tF"></a>
+                      <a name="//apple_ref/swift/Method/disableProviders(completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple29PlayerDependantPluginsManagerC16disableProviders10completionyySbcSg_tF">disableProviders(completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disableProviders</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple29PlayerDependantPluginsManagerC14createProvider10identifier11forceEnable10completionySS_SbySbcSgtF"></a>
+                      <a name="//apple_ref/swift/Method/createProvider(identifier:forceEnable:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple29PlayerDependantPluginsManagerC14createProvider10identifier11forceEnable10completionySS_SbySbcSgtF">createProvider(identifier:forceEnable:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createProvider</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">forceEnable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple29PlayerDependantPluginsManagerC15createProviders11forceEnable10completionySb_ySbcSgtF"></a>
+                      <a name="//apple_ref/swift/Method/createProviders(forceEnable:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple29PlayerDependantPluginsManagerC15createProviders11forceEnable10completionySb_ySbcSgtF">createProviders(forceEnable:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createProviders</span><span class="p">(</span><span class="nv">forceEnable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a></span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -374,6 +482,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/IdentityClient.html">IdentityClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClient/IdentityClientKeys.html">– IdentityClientKeys</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/IdentityClientBase.html">IdentityClientBase</a>
@@ -599,6 +710,50 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Extensions/UIViewController.html">UIViewController</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Classes.html">Other Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/PluginManagerBase.html">PluginManagerBase</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/PushPluginsManager.html">PushPluginsManager</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple20kPluginDisabledValueSSvp">kPluginDisabledValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple14kPluginEnabledSSvp">kPluginEnabled</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple19kPluginEnabledValueSSvp">kPluginEnabledValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Protocols.html">Other Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginManagerControlFlowProtocol.html">PluginManagerControlFlowProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginManagerProtocol.html">PluginManagerProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Typealiases.html">Other Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a>
                 </li>
               </ul>
             </li>

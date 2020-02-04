@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappGoogleAnalytics 0.6.2 Docs</a>
-          <span class="no-mobile"> (66% documented)</span>
+          <a href="../index.html">ZappGoogleAnalytics 0.7.0 Docs</a>
+          <span class="no-mobile"> (65% documented)</span>
         </p>
     
         <p class="header-right">
@@ -49,7 +49,7 @@
                 <div class="declaration">
                   <div class="language">
                     <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">GoogleAnalyticsPluginAdapter</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ZPAdapterProtocol</span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">GoogleAnalyticsPluginAdapter</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">PluginAdapterProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">GoogleAnalyticsPluginAdapter</span><span class="p">:</span> <span class="kt">AnalyticsProviderProtocol</span></code></pre>
 
                   </div>
@@ -63,9 +63,36 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappCore@objc(pl)ZPAdapterProtocol(py)configurationJSON"></a>
+                      <a name="/s:19ZappGoogleAnalytics0bC13PluginAdapterC17configurationJSONSo12NSDictionaryCSgvp"></a>
                       <a name="//apple_ref/swift/Property/configurationJSON" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)ZPAdapterProtocol(py)configurationJSON">configurationJSON</a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics0bC13PluginAdapterC17configurationJSONSo12NSDictionaryCSgvp">configurationJSON</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configurationJSON</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(py)model"></a>
+                      <a name="//apple_ref/swift/Property/model" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(py)model">model</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -79,7 +106,60 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configurationJSON</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">?</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">ZPPluginModel</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19ZappGoogleAnalytics0bC13PluginAdapterC10isDisabledSbvp"></a>
+                      <a name="//apple_ref/swift/Property/isDisabled" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19ZappGoogleAnalytics0bC13PluginAdapterC10isDisabledSbvp">isDisabled</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDisabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)initWithPluginModel:"></a>
+                      <a name="//apple_ref/swift/Method/init(pluginModel:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)initWithPluginModel:">init(pluginModel:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">pluginModel</span><span class="p">:</span> <span class="kt">ZPPluginModel</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -225,9 +305,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappCore@objc(pl)ZPAdapterProtocol(im)initWithConfigurationJSON:"></a>
-                      <a name="//apple_ref/swift/Method/init(configurationJSON:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)ZPAdapterProtocol(im)initWithConfigurationJSON:">init(configurationJSON:)</a>
+                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)disableWithCompletion:"></a>
+                      <a name="//apple_ref/swift/Method/disable(completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)disableWithCompletion:">disable(completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -241,7 +321,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configurationJSON</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">?)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disable</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                           </div>
                         </div>
@@ -251,9 +331,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappGoogleAnalytics@objc(cs)GoogleAnalyticsPluginAdapter(im)init"></a>
-                      <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappGoogleAnalytics@objc(cs)GoogleAnalyticsPluginAdapter(im)init">init()</a>
+                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(py)providerName"></a>
+                      <a name="//apple_ref/swift/Property/providerName" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(py)providerName">providerName</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -261,14 +341,40 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
-
+                          
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">providerName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)prepareProvider:completion:"></a>
+                      <a name="//apple_ref/swift/Method/prepareProvider(_:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)prepareProvider:completion:">prepareProvider(_:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepareProvider</span><span class="p">(</span><span class="n">_</span> <span class="n">defaultParams</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span>
+                            <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">isReady</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                           </div>
                         </div>
@@ -473,59 +579,6 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">processEndTimedEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">eventName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)AnalyticsProviderProtocol(py)providerName"></a>
-                      <a name="//apple_ref/swift/Property/providerName" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AnalyticsProviderProtocol(py)providerName">providerName</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">providerName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)AnalyticsProviderProtocol(im)prepareProvider:completion:"></a>
-                      <a name="//apple_ref/swift/Method/prepareProvider(_:completion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AnalyticsProviderProtocol(im)prepareProvider:completion:">prepareProvider(_:completion:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepareProvider</span><span class="p">(</span><span class="n">_</span> <span class="nv">mandatoryDefaultParams</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span>
-                            <span class="nv">completion</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">isReady</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>

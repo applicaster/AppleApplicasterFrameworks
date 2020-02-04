@@ -51,14 +51,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
-      "line": 39,
+      "line": 37,
+      "symbol": "FacadeConnector.push",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "line": 43,
       "symbol": "FacadeConnector.connector",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
-      "line": 47,
+      "line": 51,
       "symbol": "FacadeConnector.init(connectorProvider:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -143,28 +150,63 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
       "line": 11,
+      "symbol": "FacadeConnectorPluginManagerControlFlow",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
+      "line": 33,
       "symbol": "FacadeConnectorPluginManagerProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
-      "line": 12,
+      "line": 34,
       "symbol": "FacadeConnectorPluginManagerProtocol.plugin(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
-      "line": 13,
+      "line": 35,
       "symbol": "FacadeConnectorPluginManagerProtocol.getAllPlugins()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
-      "line": 14,
+      "line": 36,
       "symbol": "FacadeConnectorPluginManagerProtocol.adapterClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPushProtocol.swift",
+      "line": 12,
+      "symbol": "FacadeConnectorPushProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPushProtocol.swift",
+      "line": 13,
+      "symbol": "FacadeConnectorPushProtocol.addTagsToDevice(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPushProtocol.swift",
+      "line": 16,
+      "symbol": "FacadeConnectorPushProtocol.removeTagsToDevice(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPushProtocol.swift",
+      "line": 19,
+      "symbol": "FacadeConnectorPushProtocol.getDeviceTags()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -632,98 +674,105 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 45,
+      "line": 44,
+      "symbol": "ZPPluginType.Unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "line": 47,
       "symbol": "ZPPluginModel",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 46,
+      "line": 48,
       "symbol": "ZPPluginModel.object",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 48,
+      "line": 50,
       "symbol": "ZPPluginModel.api",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 52,
+      "line": 54,
       "symbol": "ZPPluginModel.plugin",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 56,
+      "line": 58,
       "symbol": "ZPPluginModel.identifier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 60,
+      "line": 62,
       "symbol": "ZPPluginModel.pluginRequireStartupExecution",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 64,
+      "line": 66,
       "symbol": "ZPPluginModel.isReactNativePlugin",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 68,
+      "line": 70,
       "symbol": "ZPPluginModel.pluginName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 72,
+      "line": 74,
       "symbol": "ZPPluginModel.pluginType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 79,
+      "line": 81,
       "symbol": "ZPPluginModel.pluginClassName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 83,
+      "line": 85,
       "symbol": "ZPPluginModel.pluginModules",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 87,
+      "line": 89,
       "symbol": "ZPPluginModel.configurationJSON",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 89,
+      "line": 91,
       "symbol": "ZPPluginModel.init(object:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
-      "line": 102,
+      "line": 104,
       "symbol": "ZPPluginModel.configurationValue(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -733,6 +782,13 @@
       "line": 13,
       "symbol": "DependablePlayerAdDelegatePluginProtocolKeys.playingKey",
       "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/Push/Protocols/PushProviderProtocol.swift",
+      "line": 11,
+      "symbol": "PushProviderProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     }
   ],

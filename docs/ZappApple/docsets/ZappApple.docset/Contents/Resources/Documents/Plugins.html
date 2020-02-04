@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="index.html">ZappApple 0.1.4 Docs</a>
-          <span class="no-mobile"> (33% documented)</span>
+          <a href="index.html">ZappApple 0.2.0 Docs</a>
+          <span class="no-mobile"> (30% documented)</span>
         </p>
     
         <p class="header-right">
@@ -72,7 +72,8 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">PluginsManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PluginsManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PluginsManager</span><span class="p">:</span> <span class="kt">FacadeConnectorPluginManagerControlFlow</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PluginsManager</span><span class="p">:</span> <span class="kt"><a href="Protocols/LoadingStateMachineDataSource.html">LoadingStateMachineDataSource</a></span></code></pre>
 
                           </div>
@@ -83,9 +84,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappApple@objc(cs)AnalyticsManager"></a>
+                      <a name="/s:9ZappApple16AnalyticsManagerC"></a>
                       <a name="//apple_ref/swift/Class/AnalyticsManager" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappApple@objc(cs)AnalyticsManager">AnalyticsManager</a>
+                      <a class="token" href="#/s:9ZappApple16AnalyticsManagerC">AnalyticsManager</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -101,8 +102,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">AnalyticsManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AnalyticsManager</span> <span class="p">:</span> <span class="kt"><a href="Classes/PluginManagerBase.html">PluginManagerBase</a></span></code></pre>
 
                           </div>
                         </div>
@@ -130,7 +130,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CrashlogsPluginsManager</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CrashlogsPluginsManager</span> <span class="p">:</span> <span class="kt"><a href="Classes/PluginManagerBase.html">PluginManagerBase</a></span></code></pre>
 
                           </div>
                         </div>
@@ -159,7 +159,7 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PlayerDependantPluginsManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PlayerDependantPluginsManager</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/PluginManagerControlFlowProtocol.html">PluginManagerControlFlowProtocol</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PlayerDependantPluginsManager</span><span class="p">:</span> <span class="kt">PlayerObserverProtocol</span></code></pre>
 
                           </div>
@@ -221,6 +221,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/IdentityClient.html">IdentityClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/IdentityClient/IdentityClientKeys.html">– IdentityClientKeys</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/IdentityClientBase.html">IdentityClientBase</a>
@@ -446,6 +449,50 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="Extensions/UIViewController.html">UIViewController</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Other%20Classes.html">Other Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Classes/PluginManagerBase.html">PluginManagerBase</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/PushPluginsManager.html">PushPluginsManager</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Other%20Global%20Variables.html">Other Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Other%20Global%20Variables.html#/s:9ZappApple20kPluginDisabledValueSSvp">kPluginDisabledValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Other%20Global%20Variables.html#/s:9ZappApple14kPluginEnabledSSvp">kPluginEnabled</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Other%20Global%20Variables.html#/s:9ZappApple19kPluginEnabledValueSSvp">kPluginEnabledValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Other%20Protocols.html">Other Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Protocols/PluginManagerControlFlowProtocol.html">PluginManagerControlFlowProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/PluginManagerProtocol.html">PluginManagerProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Other%20Typealiases.html">Other Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a>
                 </li>
               </ul>
             </li>

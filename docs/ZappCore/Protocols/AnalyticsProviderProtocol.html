@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappCore 0.6.4 Docs</a>
-          <span class="no-mobile"> (34% documented)</span>
+          <a href="../index.html">ZappCore 0.7.0 Docs</a>
+          <span class="no-mobile"> (35% documented)</span>
         </p>
     
         <p class="header-right">
@@ -49,7 +49,7 @@
                 <div class="declaration">
                   <div class="language">
                     <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AnalyticsProviderProtocol</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ZPAdapterProtocol.html">ZPAdapterProtocol</a></span></code></pre>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AnalyticsProviderProtocol</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PluginAdapterProtocol.html">PluginAdapterProtocol</a></span></code></pre>
 
                   </div>
                 </div>
@@ -59,110 +59,6 @@
             <section class="section task-group-section">
               <div class="task-group">
                 <ul>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)AnalyticsProviderProtocol(py)providerName"></a>
-                      <a name="//apple_ref/swift/Property/providerName" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AnalyticsProviderProtocol(py)providerName">providerName</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Readable name of the analytics plugin</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="k">var</span> <span class="nv">providerName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)AnalyticsProviderProtocol(im)prepareProvider:completion:"></a>
-                      <a name="//apple_ref/swift/Method/prepareProvider(_:completion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AnalyticsProviderProtocol(im)prepareProvider:completion:">prepareProvider(_:completion:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Invokation of this function must prepare analytics plugin for use.</p>
-<div class="aside aside-attention">
-    <p class="aside-title">Attention</p>
-    Application will wait completion of this func to present application.
-Completion must be called as soon as  possible
-
-</div>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareProvider</span><span class="p">(</span><span class="n">_</span> <span class="nv">mandatoryDefaultParams</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">isReady</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Parameters</h4>
-                          <table class="graybox">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>mandatoryDefaultParams</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>default parameters for analytics plugins</p>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>completion</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>Completion handler that notify app level that component  ready to  be presented or fail</p>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>isReady</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>notify callback if analytics plugin is ready for use</p>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
                   <li class="item">
                     <div>
                       <code>
@@ -521,16 +417,10 @@ Call of this method should send timed event to analytics provider</p>
                   <a href="../Protocols/PlayerDependantPluginProtocol.html">PlayerDependantPluginProtocol</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Protocols/DependablePlayerPluginProtocol.html">DependablePlayerPluginProtocol</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="../Protocols/DependablePlayerAdDelegatePluginProtocol.html">DependablePlayerAdDelegatePluginProtocol</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Structs/DependablePlayerAdDelegatePluginProtocolKeys.html">DependablePlayerAdDelegatePluginProtocolKeys</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Structs/VideoDependantPlugins.html">VideoDependantPlugins</a>
                 </li>
               </ul>
             </li>
@@ -538,7 +428,24 @@ Call of this method should send timed event to analytics provider</p>
               <a href="../Plugin%20Type%3A%20Crashlogs.html">Plugin Type: Crashlogs</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="../Protocols/CrashlogsPluginProtocol.html">CrashlogsPluginProtocol</a>
+                  <a href="../Plugin%20Type%3A%20Crashlogs.html#/c:@M@ZappCore@objc(pl)CrashlogsPluginProtocol">CrashlogsPluginProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Protocols.html">Other Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorPluginManagerControlFlow.html">FacadeConnectorPluginManagerControlFlow</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorPushProtocol.html">FacadeConnectorPushProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginAdapterProtocol.html">PluginAdapterProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PushProviderProtocol.html">PushProviderProtocol</a>
                 </li>
               </ul>
             </li>

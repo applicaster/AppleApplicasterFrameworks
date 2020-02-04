@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappApple 0.1.4 Docs</a>
-          <span class="no-mobile"> (33% documented)</span>
+          <a href="../index.html">ZappApple 0.2.0 Docs</a>
+          <span class="no-mobile"> (30% documented)</span>
         </p>
     
         <p class="header-right">
@@ -48,7 +48,8 @@
               <h1>PluginsManager</h1>
                 <div class="declaration">
                   <div class="language">
-                    <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">PluginsManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PluginsManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PluginsManager</span><span class="p">:</span> <span class="kt">FacadeConnectorPluginManagerControlFlow</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PluginsManager</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LoadingStateMachineDataSource.html">LoadingStateMachineDataSource</a></span></code></pre>
 
                   </div>
@@ -116,6 +117,33 @@
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/s:9ZappApple14PluginsManagerC4pushAA04PushcD0Cvp"></a>
+                      <a name="//apple_ref/swift/Property/push" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14PluginsManagerC4pushAA04PushcD0Cvp">push</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">push</span><span class="p">:</span> <span class="kt"><a href="../Classes/PushPluginsManager.html">PushPluginsManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/s:9ZappApple14PluginsManagerC9crashlogsAA09CrashlogscD0Cvp"></a>
                       <a name="//apple_ref/swift/Property/crashlogs" class="dashAnchor"></a>
                       <a class="token" href="#/s:9ZappApple14PluginsManagerC9crashlogsAA09CrashlogscD0Cvp">crashlogs</a>
@@ -133,7 +161,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">crashlogs</span><span class="p">:</span> <span class="kt"><a href="../Classes/CrashlogsPluginsManager.html">CrashlogsPluginsManager</a></span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">crashlogs</span><span class="p">:</span> <span class="kt"><a href="../Classes/CrashlogsPluginsManager.html">CrashlogsPluginsManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -280,6 +308,34 @@
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/s:9ZappApple14PluginsManagerC011preparePushC0yyyyc_yyctF"></a>
+                      <a name="//apple_ref/swift/Method/preparePushPlugins(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14PluginsManagerC011preparePushC0yyyyc_yyctF">preparePushPlugins(_:_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">preparePushPlugins</span><span class="p">(</span><span class="n">_</span> <span class="nv">successHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../StateMachine.html#/s:9ZappApple13StateCallBacka">StateCallBack</a></span><span class="p">,</span>
+                        <span class="n">_</span> <span class="nv">failHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../StateMachine.html#/s:9ZappApple13StateCallBacka">StateCallBack</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/s:9ZappApple14PluginsManagerC30updatePluginSessionStorageDatayyyyc_yyctF"></a>
                       <a name="//apple_ref/swift/Method/updatePluginSessionStorageData(_:_:)" class="dashAnchor"></a>
                       <a class="token" href="#/s:9ZappApple14PluginsManagerC30updatePluginSessionStorageDatayyyyc_yyctF">updatePluginSessionStorageData(_:_:)</a>
@@ -300,6 +356,164 @@
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updatePluginSessionStorageData</span><span class="p">(</span><span class="n">_</span> <span class="nv">successHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../StateMachine.html#/s:9ZappApple13StateCallBacka">StateCallBack</a></span><span class="p">,</span>
                                     <span class="n">_</span> <span class="nv">failHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../StateMachine.html#/s:9ZappApple13StateCallBacka">StateCallBack</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerControlFlow(im)disablePluginWithIdentifier:completion:"></a>
+                      <a name="//apple_ref/swift/Method/disablePlugin(identifier:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerControlFlow(im)disablePluginWithIdentifier:completion:">disablePlugin(identifier:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disablePlugin</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerControlFlow(im)disableAllPluginsWithPluginType:completion:"></a>
+                      <a name="//apple_ref/swift/Method/disableAllPlugins(pluginType:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerControlFlow(im)disableAllPluginsWithPluginType:completion:">disableAllPlugins(pluginType:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disableAllPlugins</span><span class="p">(</span><span class="nv">pluginType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerControlFlow(im)enablePluginWithIdentifier:completion:"></a>
+                      <a name="//apple_ref/swift/Method/enablePlugin(identifier:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerControlFlow(im)enablePluginWithIdentifier:completion:">enablePlugin(identifier:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enablePlugin</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerControlFlow(im)enableAllPluginsWithPluginType:completion:"></a>
+                      <a name="//apple_ref/swift/Method/enableAllPlugins(pluginType:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerControlFlow(im)enableAllPluginsWithPluginType:completion:">enableAllPlugins(pluginType:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableAllPlugins</span><span class="p">(</span><span class="nv">pluginType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14PluginsManagerC06pluginD010identifierAA06PluginD19ControlFlowProtocol_pSgSS_tF"></a>
+                      <a name="//apple_ref/swift/Method/pluginManager(identifier:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14PluginsManagerC06pluginD010identifierAA06PluginD19ControlFlowProtocol_pSgSS_tF">pluginManager(identifier:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pluginManager</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/PluginManagerControlFlowProtocol.html">PluginManagerControlFlowProtocol</a></span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14PluginsManagerC06pluginD04typeAA06PluginD19ControlFlowProtocol_pSg0A4Core12ZPPluginTypeO_tF"></a>
+                      <a name="//apple_ref/swift/Method/pluginManager(type:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14PluginsManagerC06pluginD04typeAA06PluginD19ControlFlowProtocol_pSg0A4Core12ZPPluginTypeO_tF">pluginManager(type:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pluginManager</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">ZPPluginType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/PluginManagerControlFlowProtocol.html">PluginManagerControlFlowProtocol</a></span><span class="p">?</span></code></pre>
 
                           </div>
                         </div>
@@ -353,7 +567,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stateMachineFinishedWork</span><span class="p">(</span><span class="n">with</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoadingStateTypes.html">LoadingStateTypes</a></span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stateMachineFinishedWork</span><span class="p">(</span><span class="n">with</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/LoadingStateTypes.html">LoadingStateTypes</a></span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -984,7 +1198,8 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">plugin</span><span class="p">(</span><span class="n">withScreenName</span> <span class="nv">screenName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ZPPluginModel</span><span class="p">?</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">plugin</span><span class="p">(</span><span class="n">withScreenName</span> <span class="nv">screenName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                         <span class="nv">model</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ZPPluginModel</span><span class="p">?</span></code></pre>
 
                           </div>
                         </div>
@@ -1045,6 +1260,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/IdentityClient.html">IdentityClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/IdentityClient/IdentityClientKeys.html">– IdentityClientKeys</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/IdentityClientBase.html">IdentityClientBase</a>
@@ -1270,6 +1488,50 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Extensions/UIViewController.html">UIViewController</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Classes.html">Other Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/PluginManagerBase.html">PluginManagerBase</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/PushPluginsManager.html">PushPluginsManager</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple20kPluginDisabledValueSSvp">kPluginDisabledValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple14kPluginEnabledSSvp">kPluginEnabled</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple19kPluginEnabledValueSSvp">kPluginEnabledValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Protocols.html">Other Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginManagerControlFlowProtocol.html">PluginManagerControlFlowProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginManagerProtocol.html">PluginManagerProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Typealiases.html">Other Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a>
                 </li>
               </ul>
             </li>

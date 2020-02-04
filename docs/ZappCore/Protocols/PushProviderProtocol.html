@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>VideoDependantPlugins Structure Reference</title>
+    <title>PushProviderProtocol Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,13 +11,13 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/VideoDependantPlugins" class="dashAnchor"></a>
-    <a title="VideoDependantPlugins Structure Reference"></a>
+    <a name="//apple_ref/swift/Protocol/PushProviderProtocol" class="dashAnchor"></a>
+    <a title="PushProviderProtocol Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappCore 0.6.4 Docs</a>
-          <span class="no-mobile"> (34% documented)</span>
+          <a href="../index.html">ZappCore 0.7.0 Docs</a>
+          <span class="no-mobile"> (35% documented)</span>
         </p>
     
         <p class="header-right">
@@ -36,7 +36,7 @@
             <a href="../index.html">ZappCore Reference</a>
             <img id="carat" src="../img/carat.png" />
           </span>
-          VideoDependantPlugins Structure Reference
+          PushProviderProtocol Protocol Reference
         </p>
       </div>
     </div>
@@ -45,14 +45,15 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>VideoDependantPlugins</h1>
+              <h1>PushProviderProtocol</h1>
                 <div class="declaration">
                   <div class="language">
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VideoDependantPlugins</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PushProviderProtocol</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PluginAdapterProtocol.html">PluginAdapterProtocol</a></span></code></pre>
 
                   </div>
                 </div>
-              <p>Currently availible types of dependant plugins</p>
+              <p>Undocumented</p>
 
             </section>
             <section class="section task-group-section">
@@ -61,9 +62,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:8ZappCore21VideoDependantPluginsV0C13AdvertisementSSvpZ"></a>
-                      <a name="//apple_ref/swift/Variable/VideoAdvertisement" class="dashAnchor"></a>
-                      <a class="token" href="#/s:8ZappCore21VideoDependantPluginsV0C13AdvertisementSSvpZ">VideoAdvertisement</a>
+                      <a name="/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)addTagsToDevice:completion:"></a>
+                      <a name="//apple_ref/swift/Method/addTagsToDevice(_:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)addTagsToDevice:completion:">addTagsToDevice(_:completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -71,14 +72,15 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Video andevertisment type</p>
+                          <p>add tags to device</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">VideoAdvertisement</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">addTagsToDevice</span><span class="p">(</span><span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -88,9 +90,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:8ZappCore21VideoDependantPluginsV9AnalyticsSSvpZ"></a>
-                      <a name="//apple_ref/swift/Variable/Analytics" class="dashAnchor"></a>
-                      <a class="token" href="#/s:8ZappCore21VideoDependantPluginsV9AnalyticsSSvpZ">Analytics</a>
+                      <a name="/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)removeTagsToDevice:completion:"></a>
+                      <a name="//apple_ref/swift/Method/removeTagsToDevice(_:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)removeTagsToDevice:completion:">removeTagsToDevice(_:completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -98,14 +100,99 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Analytics  type</p>
+                          <p>remove tags from device</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">Analytics</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">removeTagsToDevice</span><span class="p">(</span><span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)getDeviceTags"></a>
+                      <a name="//apple_ref/swift/Method/getDeviceTags()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)getDeviceTags">getDeviceTags()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>get device&rsquo;s tag list</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getDeviceTags</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)didRegisterForRemoteNotificationsWithDeviceToken:"></a>
+                      <a name="//apple_ref/swift/Method/didRegisterForRemoteNotificationsWithDeviceToken(_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)didRegisterForRemoteNotificationsWithDeviceToken:">didRegisterForRemoteNotificationsWithDeviceToken(_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>register Token with push server.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didRegisterForRemoteNotificationsWithDeviceToken</span><span class="p">(</span><span class="n">_</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)didRegisterUserNotificationSettings:"></a>
+                      <a name="//apple_ref/swift/Method/didRegisterUserNotificationSettings(_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PushProviderProtocol(im)didRegisterUserNotificationSettings:">didRegisterUserNotificationSettings(_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>register userNotificationSettings with push server</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didRegisterUserNotificationSettings</span><span class="p">(</span><span class="n">_</span> <span class="nv">notificationSettings</span><span class="p">:</span> <span class="kt">UNNotificationSettings</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -227,16 +314,10 @@
                   <a href="../Protocols/PlayerDependantPluginProtocol.html">PlayerDependantPluginProtocol</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Protocols/DependablePlayerPluginProtocol.html">DependablePlayerPluginProtocol</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="../Protocols/DependablePlayerAdDelegatePluginProtocol.html">DependablePlayerAdDelegatePluginProtocol</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Structs/DependablePlayerAdDelegatePluginProtocolKeys.html">DependablePlayerAdDelegatePluginProtocolKeys</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Structs/VideoDependantPlugins.html">VideoDependantPlugins</a>
                 </li>
               </ul>
             </li>
@@ -244,7 +325,24 @@
               <a href="../Plugin%20Type%3A%20Crashlogs.html">Plugin Type: Crashlogs</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="../Protocols/CrashlogsPluginProtocol.html">CrashlogsPluginProtocol</a>
+                  <a href="../Plugin%20Type%3A%20Crashlogs.html#/c:@M@ZappCore@objc(pl)CrashlogsPluginProtocol">CrashlogsPluginProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Protocols.html">Other Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorPluginManagerControlFlow.html">FacadeConnectorPluginManagerControlFlow</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorPushProtocol.html">FacadeConnectorPushProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginAdapterProtocol.html">PluginAdapterProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PushProviderProtocol.html">PushProviderProtocol</a>
                 </li>
               </ul>
             </li>

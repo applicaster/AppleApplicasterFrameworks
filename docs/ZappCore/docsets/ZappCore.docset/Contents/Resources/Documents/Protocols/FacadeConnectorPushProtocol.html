@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DependablePlayerPluginProtocol Protocol Reference</title>
+    <title>FacadeConnectorPushProtocol Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,13 +11,13 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/DependablePlayerPluginProtocol" class="dashAnchor"></a>
-    <a title="DependablePlayerPluginProtocol Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/FacadeConnectorPushProtocol" class="dashAnchor"></a>
+    <a title="FacadeConnectorPushProtocol Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappCore 0.6.4 Docs</a>
-          <span class="no-mobile"> (34% documented)</span>
+          <a href="../index.html">ZappCore 0.7.0 Docs</a>
+          <span class="no-mobile"> (35% documented)</span>
         </p>
     
         <p class="header-right">
@@ -36,7 +36,7 @@
             <a href="../index.html">ZappCore Reference</a>
             <img id="carat" src="../img/carat.png" />
           </span>
-          DependablePlayerPluginProtocol Protocol Reference
+          FacadeConnectorPushProtocol Protocol Reference
         </p>
       </div>
     </div>
@@ -45,15 +45,15 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>DependablePlayerPluginProtocol</h1>
+              <h1>FacadeConnectorPushProtocol</h1>
                 <div class="declaration">
                   <div class="language">
                     <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DependablePlayerPluginProtocol</span></code></pre>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FacadeConnectorPushProtocol</span></code></pre>
 
                   </div>
                 </div>
-              <p>Player that wants to use Dependant Player plugins my implement this protocol</p>
+              <p>Undocumented</p>
 
             </section>
             <section class="section task-group-section">
@@ -62,9 +62,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappCore@objc(pl)DependablePlayerPluginProtocol(py)supportedDependantPluginType"></a>
-                      <a name="//apple_ref/swift/Property/supportedDependantPluginType" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)DependablePlayerPluginProtocol(py)supportedDependantPluginType">supportedDependantPluginType</a>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPushProtocol(im)addTagsToDevice:completion:"></a>
+                      <a name="//apple_ref/swift/Method/addTagsToDevice(_:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPushProtocol(im)addTagsToDevice:completion:">addTagsToDevice(_:completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -72,15 +72,71 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Dependant plugins that avalible for this player pluging
-Note: Use list from <code><a href="../Structs/VideoDependantPlugins.html">VideoDependantPlugins</a></code></p>
+                          <p>Undocumented</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">supportedDependantPluginType</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">addTagsToDevice</span><span class="p">(</span><span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPushProtocol(im)removeTagsToDevice:completion:"></a>
+                      <a name="//apple_ref/swift/Method/removeTagsToDevice(_:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPushProtocol(im)removeTagsToDevice:completion:">removeTagsToDevice(_:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">removeTagsToDevice</span><span class="p">(</span><span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPushProtocol(im)getDeviceTags"></a>
+                      <a name="//apple_ref/swift/Method/getDeviceTags()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPushProtocol(im)getDeviceTags">getDeviceTags()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">getDeviceTags</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]</span></code></pre>
 
                           </div>
                         </div>
@@ -202,16 +258,10 @@ Note: Use list from <code><a href="../Structs/VideoDependantPlugins.html">VideoD
                   <a href="../Protocols/PlayerDependantPluginProtocol.html">PlayerDependantPluginProtocol</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Protocols/DependablePlayerPluginProtocol.html">DependablePlayerPluginProtocol</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="../Protocols/DependablePlayerAdDelegatePluginProtocol.html">DependablePlayerAdDelegatePluginProtocol</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Structs/DependablePlayerAdDelegatePluginProtocolKeys.html">DependablePlayerAdDelegatePluginProtocolKeys</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Structs/VideoDependantPlugins.html">VideoDependantPlugins</a>
                 </li>
               </ul>
             </li>
@@ -219,7 +269,24 @@ Note: Use list from <code><a href="../Structs/VideoDependantPlugins.html">VideoD
               <a href="../Plugin%20Type%3A%20Crashlogs.html">Plugin Type: Crashlogs</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="../Protocols/CrashlogsPluginProtocol.html">CrashlogsPluginProtocol</a>
+                  <a href="../Plugin%20Type%3A%20Crashlogs.html#/c:@M@ZappCore@objc(pl)CrashlogsPluginProtocol">CrashlogsPluginProtocol</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Other%20Protocols.html">Other Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorPluginManagerControlFlow.html">FacadeConnectorPluginManagerControlFlow</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/FacadeConnectorPushProtocol.html">FacadeConnectorPushProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PluginAdapterProtocol.html">PluginAdapterProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/PushProviderProtocol.html">PushProviderProtocol</a>
                 </li>
               </ul>
             </li>
