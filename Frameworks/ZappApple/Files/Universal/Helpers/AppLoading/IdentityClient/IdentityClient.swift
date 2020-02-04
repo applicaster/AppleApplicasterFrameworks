@@ -10,7 +10,13 @@ import Foundation
 import ZappCore
 
 public class IdentityClient: IdentityClientBase {
-    override public func createSession(completion: ((Bool, [String: Any]?, HTTPStatusCode?) -> Void)?) {
+    public struct IdentityClientKeys {
+        static let registerPushTokenTemplate = "%@devices/%@.json"
+        static let pushTagForDeviceTemplate = "%@devices/%@/tags/%@.json"
+        static let deviceAPNSToken = "device[apns_token]"
+    }
+
+    public override func createSession(completion: ((Bool, [String: Any]?, HTTPStatusCode?) -> Void)?) {
         super.createSession { _, _, responseCode in
             if responseCode == .forbidden {
                 // In case session generation failed - check if its because of HTTP error 403.

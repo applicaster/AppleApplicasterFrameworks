@@ -1,6 +1,6 @@
 //
 //  ZPAdapterProtocol.swift
-//  Modular-App
+//  ZappApple
 //
 //  Created by Anton Kononenko on 23/02/2016.
 //  Copyright © 2016 Applicaster. All rights reserved.
@@ -19,7 +19,6 @@ import UIKit
     init(configurationJSON: NSDictionary?)
     init()
 
-    
     /// Handle open url scheme by plugin
     /// - Parameter params: url scheme params
     @objc optional func handleUrlScheme(_ params: NSDictionary)

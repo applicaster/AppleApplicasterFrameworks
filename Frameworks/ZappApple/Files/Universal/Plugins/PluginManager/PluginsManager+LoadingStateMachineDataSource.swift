@@ -20,16 +20,22 @@ extension PluginsManager: LoadingStateMachineDataSource {
         analytics.dependantStates = [loadPlugins.name]
         analytics.readableName = "Prepare Analytics Plugins"
 
+        let push = LoadingState()
+        push.stateHandler = preparePushPlugins
+        push.dependantStates = [loadPlugins.name]
+        push.readableName = "Prepare Push Plugins"
+        
         let pluginsSessionStorageData = LoadingState()
         pluginsSessionStorageData.stateHandler = updatePluginSessionStorageData
         pluginsSessionStorageData.readableName = "Plugins Session Storage"
         pluginsSessionStorageData.dependantStates = [loadPlugins.name]
         return [loadPlugins,
                 analytics,
+                push,
                 pluginsSessionStorageData]
     }
     
-    func stateMachineFinishedWork(with state: LoadingStateTypes) {
+    public func stateMachineFinishedWork(with state: LoadingStateTypes) {
         pluginLoaderCompletion?(state == .success)
         pluginLoaderCompletion = nil
     }

@@ -5,31 +5,31 @@
 	<key>ZappApple</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.1.4</string>
+		<string>0.2.0</string>
 	</dict>
 	<key>ZappCore</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.6.4</string>
+		<string>0.7.0</string>
 	</dict>
 	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>
 		<key>version_id</key>
-		<string>4.3.3</string>
+		<string>4.4.0</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
 	<key>ZappGoogleAnalytics</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.6.2</string>
+		<string>0.7.0</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
 	<key>ZappGoogleInteractiveMediaAds</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.6.5</string>
+		<string>0.7.0</string>
 		<key>plugin</key>
 		<true/>
 	</dict>

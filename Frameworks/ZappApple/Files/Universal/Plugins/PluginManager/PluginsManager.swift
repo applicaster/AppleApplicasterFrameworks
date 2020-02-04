@@ -9,10 +9,12 @@
 import Foundation
 import ZappCore
 
-class PluginsManager: NSObject {
+public class PluginsManager: NSObject {
     public lazy var analytics = AnalyticsManager()
     public lazy var playerDependants = PlayerDependantPluginsManager()
-    public var crashlogs = CrashlogsPluginsManager()
+    public lazy var push = PushPluginsManager()
+
+    public lazy var crashlogs = CrashlogsPluginsManager()
 
     var pluginsStateMachine: LoadingStateMachine!
     var pluginLoaderCompletion: ((_ success: Bool) -> Void)?
@@ -34,8 +36,15 @@ class PluginsManager: NSObject {
 
     func prepareAnalyticsPlugins(_ successHandler: @escaping StateCallBack,
                                  _ failHandler: @escaping StateCallBack) {
-        analytics.prepareManager {
-            successHandler()
+        analytics.prepareManager { success in
+            success ? successHandler() : failHandler()
+        }
+    }
+
+    func preparePushPlugins(_ successHandler: @escaping StateCallBack,
+                            _ failHandler: @escaping StateCallBack) {
+        push.prepareManager { success in
+            success ? successHandler() : failHandler()
         }
     }
 
@@ -51,8 +60,8 @@ class PluginsManager: NSObject {
 
                 let (key, value) = arg
                 _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: key,
-                                                                                                    value: value,
-                                                                                                    namespace: pluginModel.identifier)
+                                                                               value: value,
+                                                                               namespace: pluginModel.identifier)
             }
         }
 

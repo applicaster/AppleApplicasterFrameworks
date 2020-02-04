@@ -12,50 +12,26 @@ import ZappCore
 public typealias AnalyticManagerPreparationCompletion = () -> Void
 public typealias ProviderSendAnalyticsCompletion = (_ provider: AnalyticsProviderProtocol,
                                                     _ success: Bool) -> Void
-@objc open class AnalyticsManager: NSObject {
-    @objc public var analyticsProviders: [AnalyticsProviderProtocol] = []
+public class AnalyticsManager: PluginManagerBase {
+    typealias pluginTypeProtocol = AnalyticsProviderProtocol
+    var _providers: [AnalyticsProviderProtocol] {
+        let providersArray = providers.map { $0.value }
+        return providersArray as! [AnalyticsProviderProtocol]
+    }
+
+    public required init() {
+        super.init()
+        pluginType = .Analytics
+    }
 
     @objc public private(set) var currentScreenViewTitle: String?
 
-    public func clearAnalyticsProviders() {
-        analyticsProviders = []
-    }
-
-    public func prepareManager(completion: AnalyticManagerPreparationCompletion) {
-        clearAnalyticsProviders()
-        createAnalyticsProviders(completion: completion)
-    }
-
-    func createAllAnalyticsProviders() -> [AnalyticsProviderProtocol] {
-        var providers = [AnalyticsProviderProtocol]()
-        let pluginModels = PluginsManager.pluginModels()?.filter {
-            $0.pluginType == .Analytics
+    public override func providerCreated(provider: PluginAdapterProtocol,
+                                         completion: PluginManagerCompletion) {
+        provider.prepareProvider(mandatoryDefaultParams()) { succeed in
+            completion?(succeed)
         }
-        if let pluginModels = pluginModels {
-            for pluginModel in pluginModels {
-                if let classType = PluginsManager.adapterClass(pluginModel) as? AnalyticsProviderProtocol.Type {
-                    let provider = classType.init(configurationJSON:
-                        pluginModel.configurationJSON)
-                    provider.setPluginModel?(pluginModel)
-                    providers.append(provider)
-                }
-            }
-        }
-
-        return providers
-    }
-
-    public func createAnalyticsProviders(completion: AnalyticManagerPreparationCompletion) {
-        let pluggableProviders = createAllAnalyticsProviders()
-        pluggableProviders.enumerated().forEach { index, provider in
-            provider.prepareProvider(mandatoryDefaultParams()) { _ in
-                analyticsProviders.append(provider)
-            }
-            if pluggableProviders.count == index {
-                completion()
-            }
-        }
-        completion()
+        // Must be implemented on subclass if needed
     }
 
     func mandatoryDefaultParams() -> [String: Any] {
@@ -90,7 +66,7 @@ public typealias ProviderSendAnalyticsCompletion = (_ provider: AnalyticsProvide
 
     public func sendEvent(name: String,
                           parameters: [String: Any]?) {
-        for provider in analyticsProviders {
+        for provider in _providers {
             let parameters = parameters ?? [:]
             provider.sendEvent(name,
                                parameters: parameters)
@@ -101,7 +77,7 @@ public typealias ProviderSendAnalyticsCompletion = (_ provider: AnalyticsProvide
                                        parameters: Dictionary<String, Any>?) {
         let parameters = parameters ?? [:]
 
-        for provider in analyticsProviders {
+        for provider in _providers {
             provider.startObserveTimedEvent?(name,
                                              parameters: parameters)
         }
@@ -110,7 +86,7 @@ public typealias ProviderSendAnalyticsCompletion = (_ provider: AnalyticsProvide
     @objc open func stopObserveTimedEvent(_ eventName: String,
                                           parameters: [String: Any]?) {
         let parameters = parameters ?? [:]
-        for provider in analyticsProviders {
+        for provider in _providers {
             provider.stopObserveTimedEvent?(eventName, parameters: parameters)
         }
     }
@@ -120,7 +96,7 @@ public typealias ProviderSendAnalyticsCompletion = (_ provider: AnalyticsProvide
         if currentScreenViewTitle != screenTitle {
             var parameters = parameters as? [String: NSObject] ?? [:]
             parameters["Trigger"] = NSString(string: screenTitle)
-            for provider in analyticsProviders {
+            for provider in _providers {
                 provider.sendScreenEvent(screenTitle, parameters: parameters)
             }
             currentScreenViewTitle = screenTitle

@@ -12,8 +12,30 @@ import UIKit
 import ZappCore
 
 @objc public class GoogleInteractiveMediaAdsAdapter: NSObject, PlayerDependantPluginProtocol {
+    public required init(pluginModel: ZPPluginModel) {
+        model = pluginModel
+        configurationJSON = pluginModel.configurationJSON
+    }
+
+    public var model: ZPPluginModel?
+
+    public var providerName: String {
+        return "Google Interactive Media Ads"
+    }
+
+    public func prepareProvider(_ defaultParams: [String: Any],
+                                completion: ((Bool) -> Void)?) {
+        completion?(true)
+    }
+
+    public func disable(completion: ((Bool) -> Void)?) {
+        adsLoader?.delegate = nil
+        adsManager?.delegate = nil
+        completion?(true)
+    }
+
     /// Player plugin instance that currently presented
-    public weak var playerPlugin: (PlayerProtocol & DependablePlayerPluginProtocol)?
+    public weak var playerPlugin: PlayerProtocol?
     var postrollCompletion: ((_ finished: Bool) -> Void)?
     var adRequest: IMAAdsRequest?
     public var configurationJSON: NSDictionary?
@@ -32,15 +54,6 @@ import ZappCore
     }
 
     var urlTagData: GoogleUrlTagData?
-
-    public required override init() {
-        super.init()
-    }
-
-    public required init(configurationJSON: NSDictionary?) {
-        super.init()
-        self.configurationJSON = configurationJSON
-    }
 
     var containerView: UIView? {
         guard let playerPlugin = playerPlugin else {

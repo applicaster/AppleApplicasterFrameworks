@@ -19,7 +19,8 @@ extension PlayerDependantPluginsManager: PlayerObserverProtocol {
             return
         }
         
-        providers.forEach { provider in
+        providers.forEach { providerDict in
+            let provider = providerDict.value
             if let provider = provider as? PlayerObserverProtocol {
                 provider.playerDidFinishPlayItem(player: player, completion: { _ in
                     finishedProviderCount += 1
@@ -40,7 +41,8 @@ extension PlayerDependantPluginsManager: PlayerObserverProtocol {
                                      currentTime: TimeInterval,
                                      duration: TimeInterval) {
         if let providers = providers(playerPlugin: player) {
-            providers.forEach { provider in
+            providers.forEach { providerDict in
+                let provider = providerDict.value
                 if let provider = provider as? PlayerObserverProtocol {
                     provider.playerProgressUpdate(player: player,
                                                   currentTime: currentTime,
@@ -52,7 +54,8 @@ extension PlayerDependantPluginsManager: PlayerObserverProtocol {
 
     public func playerDidDismiss(player: PlayerProtocol) {
         if let providersForPlayer = providers(playerPlugin: player) {
-            providersForPlayer.forEach { provider in
+            providersForPlayer.forEach { providerDict in
+                let provider = providerDict.value
                 if let provider = provider as? PlayerObserverProtocol {
                     provider.playerDidDismiss(player: player)
                 }
@@ -62,15 +65,13 @@ extension PlayerDependantPluginsManager: PlayerObserverProtocol {
     }
 
     public func playerDidCreate(player: PlayerProtocol) {
-        guard let playerPlugin = player as? (PlayerProtocol & DependablePlayerPluginProtocol) else {
-            return
-        }
+
         unRegisterProviders(playerPlugin: player)
 
         let dependantPlayerProviders = createPlayerDependantProviders(for: player)
 
         if dependantPlayerProviders.count > 0 {
-            providers["\(playerPlugin.hash)"] = dependantPlayerProviders
+            providers["\(player.hash)"] = dependantPlayerProviders
         }
     }
 }
