@@ -50,6 +50,29 @@ import ZappCore
 
     var defaultEventParameters: [String: Any] = [:]
 
+    public func disable(completion: ((Bool) -> Void)?) {
+        isDisabled = true
+    }
+
+    public var providerName: String {
+        return "GoogleAnalytics"
+    }
+
+    public func prepareProvider(_ defaultParams: [String: Any],
+                                completion: ((_ isReady: Bool) -> Void)?) {
+        guard let trackingID = self.configurationJSON?[PluginKeys.trackingID] as? String else {
+            completion?(false)
+            return
+        }
+
+        if let enableScreenViews = self.configurationJSON?[PluginKeys.screenViewsEsnabled] as? Bool {
+            isScreenViewsEnabled = enableScreenViews
+        }
+        defaultEventParameters = defaultParams
+        manager = MeasurementProtocolManager(trackingID: trackingID)
+        completion?(true)
+    }
+
     /// Devide event name on category and label
     ///
     /// - Parameter value: value to devide
@@ -137,29 +160,6 @@ import ZappCore
 }
 
 extension GoogleAnalyticsPluginAdapter: AnalyticsProviderProtocol {
-    public func disable(completion: ((Bool) -> Void)?) {
-        isDisabled = true
-    }
-
-    public var providerName: String {
-        return "GoogleAnalytics"
-    }
-
-    public func prepareProvider(_ defaultParams: [String: Any],
-                                completion: ((_ isReady: Bool) -> Void)?) {
-        guard let trackingID = self.configurationJSON?[PluginKeys.trackingID] as? String else {
-            completion?(false)
-            return
-        }
-
-        if let enableScreenViews = self.configurationJSON?[PluginKeys.screenViewsEsnabled] as? Bool {
-            isScreenViewsEnabled = enableScreenViews
-        }
-        defaultEventParameters = defaultParams
-        manager = MeasurementProtocolManager(trackingID: trackingID)
-        completion?(true)
-    }
-
     @objc public func sendEvent(_ eventName: String,
                                 parameters: [String: Any]?) {
         guard isDisabled == false else {

@@ -14,7 +14,7 @@ public class PluginsManager: NSObject {
     public lazy var playerDependants = PlayerDependantPluginsManager()
     public lazy var push = PushPluginsManager()
 
-    public var crashlogs = CrashlogsPluginsManager()
+    public lazy var crashlogs = CrashlogsPluginsManager()
 
     var pluginsStateMachine: LoadingStateMachine!
     var pluginLoaderCompletion: ((_ success: Bool) -> Void)?

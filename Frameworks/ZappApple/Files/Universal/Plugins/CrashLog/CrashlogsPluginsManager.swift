@@ -11,7 +11,7 @@ import ZappCore
 public class CrashlogsPluginsManager: PluginManagerBase {
     typealias pluginTypeProtocol = CrashlogsPluginProtocol
     var _providers: [String: CrashlogsPluginProtocol] {
-        return providers as! [String: CrashlogsPluginProtocol]
+        return providers as? [String: CrashlogsPluginProtocol] ?? [:]
     }
 
     required init() {

@@ -23,7 +23,7 @@ extension PluginsManager: LoadingStateMachineDataSource {
         let push = LoadingState()
         push.stateHandler = preparePushPlugins
         push.dependantStates = [loadPlugins.name]
-        push.readableName = "Prepare Analytics Plugins"
+        push.readableName = "Prepare Push Plugins"
         
         let pluginsSessionStorageData = LoadingState()
         pluginsSessionStorageData.stateHandler = updatePluginSessionStorageData

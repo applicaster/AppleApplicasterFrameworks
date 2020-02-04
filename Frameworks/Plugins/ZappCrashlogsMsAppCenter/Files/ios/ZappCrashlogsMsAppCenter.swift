@@ -18,7 +18,7 @@ public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol, ZPAdap
         self.configurationJSON = configurationJSON
     }
     
-    public required init() {
+    public required override init() {
     }
     
     public required init(pluginModel: ZPPluginModel) {
