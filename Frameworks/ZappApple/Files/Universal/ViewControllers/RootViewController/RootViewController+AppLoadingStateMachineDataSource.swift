@@ -83,15 +83,4 @@ extension RootViewController: LoadingStateMachineDataSource {
             splashViewController?.showErrorMessage("Loading failed. Please try again later")
         }
     }
-
-    func loadAISGroup(_ successHandler: @escaping StateCallBack,
-                      _ failHandler: @escaping StateCallBack) {
-        identityClient.createDevice { success, _ in
-            if success {
-                successHandler()
-            } else {
-                failHandler()
-            }
-        }
-    }
 }

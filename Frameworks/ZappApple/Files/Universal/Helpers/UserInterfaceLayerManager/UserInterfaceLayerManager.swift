@@ -39,7 +39,7 @@ class UserInterfaceLayerManager {
                                       "broadcasterId": broadcasterId as Any,
                                       "apiSecretKey": apiSecretKey as Any,
                                       "os_type": "ios" as Any,
-                                      "uuid": IdentityClient.deviceID as Any,
+                                      "uuid": UUIDManager.deviceID as Any,
                                       "languageLocale": NSLocale.current.languageCode as Any,
                                       "countryLocale": NSLocale.current.regionCode as Any,
                                       "platform": deviceType as Any,

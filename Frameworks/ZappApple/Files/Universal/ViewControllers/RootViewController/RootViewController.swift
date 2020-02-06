@@ -23,11 +23,6 @@ public class RootViewController: UIViewController {
     var loadingStateMachine: LoadingStateMachine!
     public var userInterfaceLayer: UserInterfaceLayerProtocol?
     public var pluginsManager = PluginsManager()
-    lazy public var identityClient: IdentityClient = {
-        let bucketId = SessionStorage.sharedInstance.get(key: ZappStorageKeys.bucketId,
-                                                         namespace: nil)
-        return IdentityClient(bucketID: bucketId!)
-    }()
 
     var splashViewController: SplashViewController? {
         return children.first { ($0 as? SplashViewController) != nil } as? SplashViewController
@@ -69,10 +64,6 @@ public class RootViewController: UIViewController {
         styles.stateHandler = loadStylesGroup
         styles.readableName = "Load Styles"
 
-        let identityClient = LoadingState()
-        identityClient.stateHandler = loadAISGroup
-        identityClient.readableName = "Load Identety Client"
-
         // Dependant states
         let userInterfaceLayer = LoadingState()
         userInterfaceLayer.stateHandler = loadUserInterfaceLayerGroup
@@ -80,7 +71,6 @@ public class RootViewController: UIViewController {
         return [splashState,
                 plugins,
                 styles,
-                identityClient,
                 userInterfaceLayer]
     }
     
