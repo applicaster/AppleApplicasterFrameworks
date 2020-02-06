@@ -90,7 +90,7 @@
 }
 
 + (NSString *)getStringForKey:(NSString *)key {
-    key = [NSString stringWithFormat:@"%@ - %@", [[NSBundle mainBundle] bundleIdentifier], key];
+    key = [NSString stringWithFormat:@"%@ - %@", [Keychain bundleIdentifier], key];
     
 	NSMutableDictionary *existsQueryDictionary = [NSMutableDictionary dictionary];
 	
