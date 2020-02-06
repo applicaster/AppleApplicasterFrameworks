@@ -1,8 +1,8 @@
 source 'https://cdn.cocoapods.org/'
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 install! 'cocoapods', :share_schemes_for_development_pods => true
-project '../../FrameworksApp/FrameworksApp.xcodeproj'
+project '../../../FrameworksApp/FrameworksApp.xcodeproj'
 
 pre_install do |installer|
 	# workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
@@ -12,8 +12,8 @@ end
 target 'FrameworksApp' do
   supports_swift_versions '5.1'
   use_frameworks!
-  pod 'ZappCore', :path => '../../ZappCore.podspec'
-  pod 'ZappApple', :path => '../../ZappApple.podspec', :testspecs => ['UnitTests']
+  pod 'ZappAppleVideoSubscriptionRegistration', :path => 'Files/ZappAppleVideoSubscriptionRegistration.podspec', :testspecs => ['UnitTests']
+  pod 'ZappCore', :path => '../../../ZappCore.podspec'
 
   target 'FrameworksAppTests' do
     inherit! :search_paths

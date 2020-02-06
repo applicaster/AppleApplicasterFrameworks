@@ -13,7 +13,7 @@ public class PluginsManager: NSObject {
     public lazy var analytics = AnalyticsManager()
     public lazy var playerDependants = PlayerDependantPluginsManager()
     public lazy var push = PushPluginsManager()
-
+    public lazy var general = GeneralPluginsManager()
     public lazy var crashlogs = CrashlogsPluginsManager()
 
     var pluginsStateMachine: LoadingStateMachine!
@@ -47,7 +47,14 @@ public class PluginsManager: NSObject {
             success ? successHandler() : failHandler()
         }
     }
-
+    
+    func prepareGeneralPlugins(_ successHandler: @escaping StateCallBack,
+                            _ failHandler: @escaping StateCallBack) {
+        general.prepareManager { success in
+            success ? successHandler() : failHandler()
+        }
+    }
+    
     func updatePluginSessionStorageData(_ successHandler: @escaping StateCallBack,
                                         _ failHandler: @escaping StateCallBack) {
         func sendConfigurationToSessionStorage(pluginModel: ZPPluginModel) {

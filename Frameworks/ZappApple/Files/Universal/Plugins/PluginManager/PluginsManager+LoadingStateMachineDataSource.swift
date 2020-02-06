@@ -9,7 +9,7 @@
 import Foundation
 
 extension PluginsManager: LoadingStateMachineDataSource {
-    
+
     func preapareLoadingPluginStates() -> [LoadingState] {
         let loadPlugins = LoadingState()
         loadPlugins.stateHandler = loadPluginsGroup
@@ -24,7 +24,12 @@ extension PluginsManager: LoadingStateMachineDataSource {
         push.stateHandler = preparePushPlugins
         push.dependantStates = [loadPlugins.name]
         push.readableName = "Prepare Push Plugins"
-        
+
+        let general = LoadingState()
+        general.stateHandler = prepareGeneralPlugins
+        general.dependantStates = [loadPlugins.name]
+        general.readableName = "Prepare General Plugins"
+
         let pluginsSessionStorageData = LoadingState()
         pluginsSessionStorageData.stateHandler = updatePluginSessionStorageData
         pluginsSessionStorageData.readableName = "Plugins Session Storage"
@@ -32,9 +37,10 @@ extension PluginsManager: LoadingStateMachineDataSource {
         return [loadPlugins,
                 analytics,
                 push,
+                general,
                 pluginsSessionStorageData]
     }
-    
+
     public func stateMachineFinishedWork(with state: LoadingStateTypes) {
         pluginLoaderCompletion?(state == .success)
         pluginLoaderCompletion = nil
