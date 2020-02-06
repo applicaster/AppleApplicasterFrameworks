@@ -1,6 +1,6 @@
 {
   "name": "@applicaster/video_subscription_registration_apple",
-  "version": "7.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
