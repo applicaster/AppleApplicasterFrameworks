@@ -15,7 +15,7 @@
 @implementation Keychain
 
 + (NSString *)bundleIdentifier {
-    return FacadeConnector.connector.applicationData.bundleIdentifier;
+    return [[NSBundle mainBundle] bundleIdentifier];
 }
 
 + (BOOL)setString:(NSString *)string forKey:(NSString *)key {
@@ -90,7 +90,7 @@
 }
 
 + (NSString *)getStringForKey:(NSString *)key {
-    key = [NSString stringWithFormat:@"%@ - %@", [Keychain bundleIdentifier], key];
+    key = [NSString stringWithFormat:@"%@ - %@", [[NSBundle mainBundle] bundleIdentifier], key];
     
 	NSMutableDictionary *existsQueryDictionary = [NSMutableDictionary dictionary];
 	

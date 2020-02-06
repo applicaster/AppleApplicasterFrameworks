@@ -226,7 +226,7 @@ import UIKit
         retVal.append(URLQueryItem(name: IdentityClientDefaultParams.deviceBundleVersion,
                                    value: UIApplication.appVersion()))
         retVal.append(URLQueryItem(name: IdentityClientDefaultParams.deviceBundleID,
-                                   value: Keychain.bundleIdentifier()))
+                                   value: Bundle.main.bundleIdentifier))
         return retVal
     }
 
