@@ -33,10 +33,10 @@
 		<key>plugin</key>
 		<true/>
 	</dict>
-	<key>ZappSpotlightSubscription</key>
+	<key>ZappAppleVideoSubscriptionRegistration</key>
 	<dict>
 		<key>version_id</key>
-		<string>7.0.0</string>
+		<string>0.1.0</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
