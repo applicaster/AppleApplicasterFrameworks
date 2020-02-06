@@ -9,13 +9,13 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-                         :tag => '2020.2.4.19-2-2'  }
+                         :tag => '2020.2.6.14-2-7'  }
   s.platform = :tvos, :ios
   s.tvos.deployment_target = '11.0'
   s.ios.deployment_target = '11.0'
   s.requires_arc = true
   s.static_framework = true
-	s.swift_versions = '5.1'
+  s.swift_versions = '5.1'
 
   s.source_files = 'Universal/**/*.swift'
 
@@ -26,6 +26,7 @@ Pod::Spec.new do |s|
                     'ENABLE_BITCODE' => 'YES'
                 }
   s.dependency 'ZappCore'
+
   s.test_spec 'UnitTests' do |sp|
     sp.source_files = 'Tests/**'
   end
