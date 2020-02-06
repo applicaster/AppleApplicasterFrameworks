@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
-  s.name             = "ZappSpotlightSubscription"
-  s.version          = '7.0.0'
-  s.summary          = "ZappSpotlightSubscription"
+  s.name             = "ZappAppleVideoSubscriptionRegistration"
+  s.version          = '0.1.0'
+  s.summary          = "ZappAppleVideoSubscriptionRegistration"
   s.description      = <<-DESC
-  ZappSpotlightSubscription container.
+  ZappAppleVideoSubscriptionRegistration container.
                        DESC
   s.homepage         = "https://github.com/applicaster/AppleApplicasterFrameworks.git"
   s.license          = 'CMPS'
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.static_framework = true
 	s.swift_versions = '5.1'
 
-  s.source_files = 'iOS/**/*.swift'
+  s.source_files = 'Universal/**/*.swift'
 
   s.frameworks = 'VideoSubscriberAccount'
 

@@ -1,9 +1,9 @@
 {
   "api": {
     "require_startup_execution": true,
-    "class_name": "ZPSpotlightSubscription",
+    "class_name": "ZPAppleVideoSubscriptionRegistration",
     "modules": [
-      "ZappSpotlightSubscription"
+      "ZappAppleVideoSubscriptionRegistration"
     ],
     "plist": {
       "UISupportsTVApp": true
@@ -17,18 +17,18 @@
   ],
   "extra_dependencies": [
     {
-      "ZappSpotlightSubscription": ":path => './node_modules/@applicaster/spotlight-subscription-apple/ZappSpotlightSubscription.podspec'"
+      "ZappAppleVideoSubscriptionRegistration": ":path => './node_modules/@applicaster/video_subscription_registration_apple/ZappAppleVideoSubscriptionRegistration.podspec'"
     }
   ],
   "platform": "ios",
   "author_name": "Alex Zchut",
   "author_email": "a.zchut@applicaster.com",
   "manifest_version": "<%= version_id %>",
-  "name": "Spotlight Subscription",
-  "description": "Spotlight Subscription",
+  "name": "Apple Video Subscription Registration",
+  "description": "Apple Video Subscription Registration",
   "type": "general",
   "screen": false,
-  "identifier": "SpotlightSubscription",
+  "identifier": "video_subscription_registration_apple",
   "ui_builder_support": true,
   "whitelisted_account_ids": [],
   "min_zapp_sdk": "20.0.0-Dev",
@@ -40,7 +40,8 @@
       "type": "checkbox",
       "key": "enabled",
       "tooltip_text": "Is plugin enabled on app start",
-      "default": 0
+      "default": 0,
+      "hidden": 1
     }
   ],
   "targets": [

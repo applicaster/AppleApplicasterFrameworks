@@ -9,7 +9,7 @@
 import Foundation
 
 extension PluginsManager: LoadingStateMachineDataSource {
-    
+
     func preapareLoadingPluginStates() -> [LoadingState] {
         let loadPlugins = LoadingState()
         loadPlugins.stateHandler = loadPluginsGroup
@@ -40,7 +40,7 @@ extension PluginsManager: LoadingStateMachineDataSource {
                 general,
                 pluginsSessionStorageData]
     }
-    
+
     public func stateMachineFinishedWork(with state: LoadingStateTypes) {
         pluginLoaderCompletion?(state == .success)
         pluginLoaderCompletion = nil

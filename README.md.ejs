@@ -64,13 +64,22 @@ This respository is the main container for general frameworks and plugins for [Z
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_interactive_media_ads&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=zapp_google_interactive_media_ads&platform=tvos)
 
+#### Type: General
+
+##### Apple Video Subscription Registration: *<%= ZappAppleVideoSubscriptionRegistration %>*
+- **Description:** This plugin subscribe the user to the video subscription in order to get shared content for iOS and tvOS.
+- [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoSubscriptionRegistration/index.html)
+- **Manifest:**
+  - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscription_registration_apple&platform=ios)
+  - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscription_registration_apple&platform=tvos)
+
 ## :pencil2: Usage
 
 * To use any framework availible in this repo add cocoapods dependency in podfile.
 
     **Example:**
     ```ruby
-    pod 'ZappCore', :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.15.0.20-1-6'
+    pod 'ZappCore', :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => '2020.2.4.19-2-2'
     ```
 
 * To use any plugin availible in this repo please use [UI Builder Environment](https://zapp.applicaster.com). All Plugins use `npm packages` as a package delivery and added in the  application as dev cocoapods dependencies

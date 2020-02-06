@@ -2,10 +2,10 @@ module: ZappFirebaseAnalytics
 module_version: 0.2.0
 
 author: "Applicaster ltd."
-copyright: "© 2019 [Applicaster ltd.](http://bustoutsolutions.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
+copyright: "© 2019 [Applicaster ltd.](https://www.applicaster.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
 
 author_url: https://www.applicaster.com
-github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/Analytics/Firebase/ZappFirebaseAnalytics
+github_url: https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/Firebase
 
 output: "../../../../../docs/ZappFirebaseAnalytics"
 clean: true

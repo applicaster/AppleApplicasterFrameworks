@@ -1,5 +1,5 @@
 //
-//  ZPSpotlightSubscription.swift
+//  ZPAppleVideoSubscriptionRegistration.swift
 //  ZappGeneralPlugins
 //
 //  Created by Alex Zchut on 05/02/2020.
@@ -9,7 +9,7 @@
 import ZappCore
 import VideoSubscriberAccount
 
-class ZPSpotlightSubscription: NSObject, GeneralProviderProtocol {
+class ZPAppleVideoSubscriptionRegistration: NSObject, GeneralProviderProtocol {
     public var configurationJSON: NSDictionary?
     public var model: ZPPluginModel?
     var isDisabled: Bool = false
@@ -26,7 +26,7 @@ class ZPSpotlightSubscription: NSObject, GeneralProviderProtocol {
     }
     
     public var providerName: String {
-        return "SpotlightSubscription"
+        return "Apple Video Subscription Registration"
     }
 
     public func prepareProvider(_ defaultParams: [String: Any],
