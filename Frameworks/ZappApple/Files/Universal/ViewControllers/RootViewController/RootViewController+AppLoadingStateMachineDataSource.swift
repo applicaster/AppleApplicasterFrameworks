@@ -24,7 +24,6 @@ extension RootViewController: LoadingStateMachineDataSource {
                           _ failHandler: @escaping StateCallBack) {
         pluginsManager.intializePlugins { success in
             if success == true {
-                self.spotLightSubscription.activate()
                 successHandler()
             } else {
                 failHandler()

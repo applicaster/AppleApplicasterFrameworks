@@ -29,8 +29,6 @@ public class RootViewController: UIViewController {
         return IdentityClient(bucketID: bucketId!)
     }()
 
-    let spotLightSubscription = SpotlightSubscription()
-
     var splashViewController: SplashViewController? {
         return children.first { ($0 as? SplashViewController) != nil } as? SplashViewController
     }
