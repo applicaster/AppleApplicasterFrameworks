@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>IdentityClient Class Reference</title>
+    <title>UUIDManager Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,13 +11,13 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/IdentityClient" class="dashAnchor"></a>
-    <a title="IdentityClient Class Reference"></a>
+    <a name="//apple_ref/swift/Class/UUIDManager" class="dashAnchor"></a>
+    <a title="UUIDManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappApple 0.2.0 Docs</a>
-          <span class="no-mobile"> (30% documented)</span>
+          <a href="../index.html">ZappApple 0.3.0 Docs</a>
+          <span class="no-mobile"> (26% documented)</span>
         </p>
     
         <p class="header-right">
@@ -36,7 +36,7 @@
             <a href="../index.html">ZappApple Reference</a>
             <img id="carat" src="../img/carat.png" />
           </span>
-          IdentityClient Class Reference
+          UUIDManager Class Reference
         </p>
       </div>
     </div>
@@ -45,10 +45,10 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>IdentityClient</h1>
+              <h1>UUIDManager</h1>
                 <div class="declaration">
                   <div class="language">
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">IdentityClient</span> <span class="p">:</span> <span class="kt"><a href="../Classes/IdentityClientBase.html">IdentityClientBase</a></span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UUIDManager</span></code></pre>
 
                   </div>
                 </div>
@@ -61,9 +61,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:9ZappApple14IdentityClientC0cD4KeysV"></a>
-                      <a name="//apple_ref/swift/Struct/IdentityClientKeys" class="dashAnchor"></a>
-                      <a class="token" href="#/s:9ZappApple14IdentityClientC0cD4KeysV">IdentityClientKeys</a>
+                      <a name="/s:9ZappApple11UUIDManagerC8deviceIDSSvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/deviceID" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple11UUIDManagerC8deviceIDSSvpZ">deviceID</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -71,15 +71,15 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>The unique identifier for this user.
+The unique identifier if one has been generated. <code>nil</code> otherwise.</p>
 
-                          <a href="../Classes/IdentityClient/IdentityClientKeys.html" class="slightly-smaller">See more</a>
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IdentityClientKeys</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">deviceID</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -89,9 +89,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:9ZappApple14IdentityClientC13createSession10completionyySb_SDySSypGSgAA14HTTPStatusCodeOSgtcSg_tF"></a>
-                      <a name="//apple_ref/swift/Method/createSession(completion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:9ZappApple14IdentityClientC13createSession10completionyySb_SDySSypGSgAA14HTTPStatusCodeOSgtcSg_tF">createSession(completion:)</a>
+                      <a name="/s:9ZappApple11UUIDManagerC15registerNewUUIDSSyFZ"></a>
+                      <a name="//apple_ref/swift/Method/registerNewUUID()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple11UUIDManagerC15registerNewUUIDSSyFZ">registerNewUUID()</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -99,13 +99,14 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          
+                          <p>Creates new UUID key and save it to Keychain</p>
+
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">createSession</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="kt"><a href="../Enums/HTTPStatusCode.html">HTTPStatusCode</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">registerNewUUID</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                           </div>
                         </div>
@@ -163,30 +164,6 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/DataManager/DataKeysExtensions.html">– DataKeysExtensions</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/IdentityClient.html">IdentityClient</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/IdentityClient/IdentityClientKeys.html">– IdentityClientKeys</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/IdentityClientBase.html">IdentityClientBase</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/IdentityClientBase/IdentityClientBaseKeys.html">– IdentityClientBaseKeys</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/IdentityClientBase/IdentityClientBaseServerType.html">– IdentityClientBaseServerType</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/IdentityClientBase/IdentityClientDefaultParams.html">– IdentityClientDefaultParams</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/IdentityClientBase/IdentityClientSessionParams.html">– IdentityClientSessionParams</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/IdentityClientBase/IdentityClientDeviceParams.html">– IdentityClientDeviceParams</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/LoadingManager.html">LoadingManager</a>
@@ -353,14 +330,6 @@
               </ul>
             </li>
             <li class="nav-group-name">
-              <a href="../UniversalSearch.html">UniversalSearch</a>
-              <ul class="nav-group-tasks">
-                <li class="nav-group-task">
-                  <a href="../Classes/SpotlightSubscription.html">SpotlightSubscription</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-group-name">
               <a href="../UserInterfaceLayerManager.html">UserInterfaceLayerManager</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
@@ -401,16 +370,25 @@
               <a href="../Other%20Classes.html">Other Classes</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="../Classes/GeneralPluginsManager.html">GeneralPluginsManager</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/PluginManagerBase.html">PluginManagerBase</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/PushPluginsManager.html">PushPluginsManager</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/UUIDManager.html">UUIDManager</a>
                 </li>
               </ul>
             </li>
             <li class="nav-group-name">
               <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
               <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Other%20Global%20Variables.html#/s:9ZappApple7UUIDKeySSvp">UUIDKey</a>
+                </li>
                 <li class="nav-group-task">
                   <a href="../Other%20Global%20Variables.html#/s:9ZappApple20kPluginDisabledValueSSvp">kPluginDisabledValue</a>
                 </li>
@@ -437,6 +415,9 @@
               <a href="../Other%20Typealiases.html">Other Type Aliases</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="../Other%20Typealiases.html#/s:9ZappApple35GeneralManagerPreparationCompletiona">GeneralManagerPreparationCompletion</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Other%20Typealiases.html#/s:9ZappApple23PluginManagerCompletiona">PluginManagerCompletion</a>
                 </li>
               </ul>
@@ -446,7 +427,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>© 2019 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
+          <p>© 2019 <a class="link" href="https://www.applicaster.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

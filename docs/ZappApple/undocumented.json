@@ -78,41 +78,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/IdentityClient/IdentityClient.swift",
-      "line": 12,
-      "symbol": "IdentityClient",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/IdentityClient/IdentityClient.swift",
-      "line": 13,
-      "symbol": "IdentityClient.IdentityClientKeys",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/IdentityClient/IdentityClient.swift",
-      "line": 14,
-      "symbol": "IdentityClient.IdentityClientKeys.registerPushTokenTemplate",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/IdentityClient/IdentityClient.swift",
-      "line": 15,
-      "symbol": "IdentityClient.IdentityClientKeys.pushTagForDeviceTemplate",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/IdentityClient/IdentityClient.swift",
-      "line": 16,
-      "symbol": "IdentityClient.IdentityClientKeys.deviceAPNSToken",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/LoadingManager/LoadingManager.swift",
       "line": 12,
       "symbol": "LoadingLoaderTypes",
@@ -176,6 +141,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
+      "line": 10,
+      "symbol": "UUIDKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
+      "line": 12,
+      "symbol": "UUIDManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheHelper.swift",
       "line": 11,
       "symbol": "APCacheHelper",
@@ -198,7 +177,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
-      "line": 18,
+      "line": 13,
       "symbol": "APCacheManager.urlCache",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -740,13 +719,6 @@
       "line": 25,
       "symbol": "FeaturesCustomization.MSAppCenterAppSecret()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/IdentityClient/IdentityClientBase.swift",
-      "line": 58,
-      "symbol": "IdentityClientBase.IdentityClientBaseServerType.init(serverURL:UUIDKey:tokenKey:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1527,90 +1499,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 12,
-      "symbol": "SpotlightSubscription",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 13,
-      "symbol": "SpotlightSubscription.universalSearchPlugin",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 15,
-      "symbol": "SpotlightSubscription.isUniversalSearchEnabled",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 23,
-      "symbol": "SpotlightSubscription.subscriptionInfo",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 32,
-      "symbol": "SpotlightSubscription.expirationPeriod",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 36,
-      "symbol": "SpotlightSubscription.availabilityType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 40,
-      "symbol": "SpotlightSubscription.tiers",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 44,
-      "symbol": "SpotlightSubscription.hasNeededEntitlements",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 55,
-      "symbol": "SpotlightSubscription.userSubscriptionInfo",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 67,
-      "symbol": "SpotlightSubscription.activate()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 82,
-      "symbol": "SpotlightSubscription.deactivate(completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UniversalSearch/SpotlightSubscription.swift",
-      "line": 90,
-      "symbol": "SpotlightSubscription.deactivateAll(completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UserInterfaceLayerManager/UserInterfaceLayerManager.swift",
       "line": 12,
       "symbol": "UserInterfaceLayerManager",
@@ -1744,6 +1632,41 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/General/GeneralPluginsManager.swift",
+      "line": 12,
+      "symbol": "GeneralManagerPreparationCompletion",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/General/GeneralPluginsManager.swift",
+      "line": 14,
+      "symbol": "GeneralPluginsManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/General/GeneralPluginsManager.swift",
+      "line": 15,
+      "symbol": "GeneralPluginsManager.pluginTypeProtocol",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/General/GeneralPluginsManager.swift",
+      "line": 16,
+      "symbol": "GeneralPluginsManager._providers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/General/GeneralPluginsManager.swift",
+      "line": 20,
+      "symbol": "GeneralPluginsManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
       "line": 12,
       "symbol": "PlayerDependantPluginsManager",
@@ -1836,7 +1759,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+LoadingStateMachineDataSource.swift",
-      "line": 38,
+      "line": 44,
       "symbol": "PluginsManager.stateMachineFinishedWork(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1976,6 +1899,13 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "line": 16,
+      "symbol": "PluginsManager.general",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 17,
       "symbol": "PluginsManager.crashlogs",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -2026,13 +1956,20 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 51,
+      "symbol": "PluginsManager.prepareGeneralPlugins(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "line": 58,
       "symbol": "PluginsManager.updatePluginSessionStorageData(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 53,
+      "line": 60,
       "symbol": "PluginsManager.updatePluginSessionStorageData(_:_:).sendConfigurationToSessionStorage(pluginModel:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
@@ -2459,29 +2396,22 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
-      "line": 35,
+      "line": 34,
       "symbol": "RootViewController.loadStylesGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
-      "line": 48,
+      "line": 47,
       "symbol": "RootViewController.loadUserInterfaceLayerGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
-      "line": 68,
+      "line": 67,
       "symbol": "RootViewController.stateMachineFinishedWork(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
-      "line": 88,
-      "symbol": "RootViewController.loadAISGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2634,49 +2564,35 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 26,
-      "symbol": "RootViewController.identityClient",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 32,
-      "symbol": "RootViewController.spotLightSubscription",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 34,
+      "line": 27,
       "symbol": "RootViewController.splashViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 38,
+      "line": 31,
       "symbol": "RootViewController.facadeConnector",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 42,
+      "line": 35,
       "symbol": "RootViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 54,
+      "line": 47,
       "symbol": "RootViewController.reloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 61,
+      "line": 54,
       "symbol": "RootViewController.preapreLoadingStates()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
