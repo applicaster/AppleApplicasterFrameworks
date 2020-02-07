@@ -44,6 +44,12 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
 
         if let pluginModels = pluginModels {
             var counter = pluginModels.count
+
+            guard counter > 0 else {
+                completion?(true)
+                return
+            }
+
             for pluginModel in pluginModels {
                 createProvider(pluginModel: pluginModel,
                                forceEnable: forceEnable) { _ in
