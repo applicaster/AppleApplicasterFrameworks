@@ -1,5 +1,5 @@
 //
-//  RootViewController+ZAAppDelegateConnectorGenericProtocol.swift
+//  RootController+ZAAppDelegateConnectorGenericProtocol.swift
 //  ZappApple
 //
 //  Created by Anton Kononenko on 11/14/18.
@@ -9,7 +9,7 @@
 import Foundation
 import ZappCore
 
-extension RootViewController: FacadeConnectorAppDataProtocol {
+extension RootController: FacadeConnectorAppDataProtocol {
     public func bundleName() -> String {
         return UIApplication.bundleName()
     }

@@ -1,5 +1,5 @@
 //
-//  RootViewController+FacadeConnectorPlayerDependantProtocol.swift
+//  RootController+FacadeConnectorPlayerDependantProtocol.swift
 //  ZappApple
 //
 //  Created by Anton Kononenko on 10/17/19.
@@ -9,7 +9,7 @@
 import Foundation
 import ZappCore
 
-extension RootViewController: FacadeConnectorPlayerDependantProtocol {
+extension RootController: FacadeConnectorPlayerDependantProtocol {
     public func playerDidFinishPlayItem(player: PlayerProtocol,
                                  completion: @escaping (Bool) -> Void) {
         pluginsManager.playerDependants.playerDidFinishPlayItem(player: player,

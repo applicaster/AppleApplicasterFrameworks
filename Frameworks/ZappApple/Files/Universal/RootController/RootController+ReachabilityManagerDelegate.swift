@@ -9,7 +9,7 @@
 import Foundation
 import Reachability
 
-extension RootViewController: ReachabilityManagerDelegate {
+extension RootController: ReachabilityManagerDelegate {
     
     func reachabilityChanged(connection: Reachability.Connection) {
         switch connection {

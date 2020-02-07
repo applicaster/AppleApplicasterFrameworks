@@ -12,7 +12,7 @@ import ZappCore
 
 public let kMSAppCenterCheckForUpdatesNotification = "kMSAppCenterCheckForUpdatesNotification"
 
-extension RootViewController: LoadingStateMachineDataSource {
+extension RootController: LoadingStateMachineDataSource {
     func loadApplicationLoadingGroup(_ successHandler: @escaping StateCallBack,
                                      _ failHandler: @escaping StateCallBack) {
         splashViewController?.startAppLoading(completion: {
@@ -52,6 +52,7 @@ extension RootViewController: LoadingStateMachineDataSource {
         }
         userInterfaceLayer.prepareLayerForUse { [weak self] quickBrickViewController, error in
             if let quickBrickViewController = quickBrickViewController {
+                quickBrickViewController.view.backgroundColor = StylesHelper.color(forKey: CoreStylesKeys.backgroundColor)
                 self?.userInterfaceLayerContainerView.subviews.forEach { $0.removeFromSuperview() }
                 self?.userInterfaceLayerContainerView.addSubview(quickBrickViewController.view)
                 quickBrickViewController.view.matchParent()
