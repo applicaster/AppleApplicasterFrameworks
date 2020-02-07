@@ -15,7 +15,7 @@
 @implementation Keychain
 
 + (NSString *)bundleIdentifier {
-    return FacadeConnector.connector.applicationData.bundleIdentifier;
+    return [[NSBundle mainBundle] bundleIdentifier];
 }
 
 + (BOOL)setString:(NSString *)string forKey:(NSString *)key {
