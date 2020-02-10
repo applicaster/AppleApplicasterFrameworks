@@ -9,7 +9,7 @@
 import Foundation
 import Reachability
 
-extension RootViewController: ReachabilityManagerDelegate {
+extension RootController: ReachabilityManagerDelegate {
     
     func reachabilityChanged(connection: Reachability.Connection) {
         switch connection {
@@ -26,17 +26,11 @@ extension RootViewController: ReachabilityManagerDelegate {
     }
     
     func showInternetError() {
-        userInterfaceLayerContainerView.isHidden = true
-        splashScreenContainerView.isHidden = false
-        
-        //TODO: After will be added multi language support should be take from localization string
-        splashViewController?.showErrorMessage("You are not connected to a network. Please use your device settings to connect to a network and try again.")
+        showErrorMessage(message: "You are not connected to a network. Please use your device settings to connect to a network and try again.")
     }
     
     func forceReloadApplication() {
-        userInterfaceLayerContainerView.isHidden = true
-        splashScreenContainerView.isHidden = false
-        self.userInterfaceLayerContainerView.subviews.forEach{$0.removeFromSuperview()}
+        makeSplashAsRootViewContoroller()
         reloadApplication()
     }
 

@@ -47,19 +47,18 @@ public class PluginsManager: NSObject {
             success ? successHandler() : failHandler()
         }
     }
-    
+
     func prepareGeneralPlugins(_ successHandler: @escaping StateCallBack,
-                            _ failHandler: @escaping StateCallBack) {
+                               _ failHandler: @escaping StateCallBack) {
         general.prepareManager { success in
             success ? successHandler() : failHandler()
         }
     }
-    
+
     func updatePluginSessionStorageData(_ successHandler: @escaping StateCallBack,
                                         _ failHandler: @escaping StateCallBack) {
         func sendConfigurationToSessionStorage(pluginModel: ZPPluginModel) {
             guard let configationJSON = pluginModel.configurationJSON as? [String: String] else {
-                successHandler()
                 return
             }
 

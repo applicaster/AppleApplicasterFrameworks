@@ -1,5 +1,5 @@
 //
-//  RootViewController+ZAAppDelegateConnectorAnalyticsProtocol.swift
+//  RootController+ZAAppDelegateConnectorAnalyticsProtocol.swift
 //  ZappApple
 //
 //  Created by Anton Kononenko on 11/14/18.
@@ -9,7 +9,7 @@
 import Foundation
 import ZappCore
 
-extension RootViewController: FacadeConnectorAnalyticsProtocol {
+extension RootController: FacadeConnectorAnalyticsProtocol {
     public func sendEvent(name: String, parameters: Dictionary<String, Any>) {
         pluginsManager.analytics.sendEvent(name: name,
                                            parameters: parameters)

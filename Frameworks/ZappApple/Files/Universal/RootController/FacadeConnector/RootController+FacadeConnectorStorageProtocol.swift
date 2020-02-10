@@ -1,5 +1,5 @@
 //
-//  RootViewController+FacadeConnectorStorageProtocol.swift
+//  RootController+FacadeConnectorStorageProtocol.swift
 //  ZappApple
 //
 //  Created by Anton Kononenko on 10/8/19.
@@ -9,7 +9,7 @@
 import Foundation
 import ZappCore
 
-extension RootViewController: FacadeConnectorStorageProtocol {
+extension RootController: FacadeConnectorStorageProtocol {
     public func sessionStorageValue(for key: String, namespace: String?) -> String? {
         return SessionStorage.sharedInstance.get(key: key,
                                                  namespace: namespace)

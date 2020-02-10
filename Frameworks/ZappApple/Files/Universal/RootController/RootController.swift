@@ -10,10 +10,7 @@ import Reachability
 import UIKit
 import ZappCore
 
-public class RootViewController: UIViewController {
-    @IBOutlet var userInterfaceLayerContainerView: UIView!
-    @IBOutlet var splashScreenContainerView: UIView!
-
+public class RootController: NSObject {
     public var appDelegate: AppDelegateProtocol?
     public var appReadyForUse: Bool = false
 
@@ -22,23 +19,24 @@ public class RootViewController: UIViewController {
 
     var loadingStateMachine: LoadingStateMachine!
     public var userInterfaceLayer: UserInterfaceLayerProtocol?
+    public var userInterfaceLayerViewController: UIViewController?
+
     public var pluginsManager = PluginsManager()
 
-    var splashViewController: SplashViewController? {
-        return children.first { ($0 as? SplashViewController) != nil } as? SplashViewController
-    }
+    var splashViewController: SplashViewController?
 
     public lazy var facadeConnector: FacadeConnector = {
         FacadeConnector(connectorProvider: self)
     }()
 
-    public override func viewDidLoad() {
-        super.viewDidLoad()
+    public override init() {
+        super.init()
         if let userInterfaceLayer = UserInterfaceLayerManager.layerAdapter(launchOptions: appDelegate?.launchOptions) {
             self.userInterfaceLayer = userInterfaceLayer
         }
 
-        view.backgroundColor = StylesHelper.color(forKey: CoreStylesKeys.backgroundColor)
+        splashViewController = UIApplication.shared.delegate?.window??.rootViewController as? SplashViewController
+
         reachabilityManger = ReachabilityManager(delegate: self)
 
         reloadApplication()
@@ -54,25 +52,43 @@ public class RootViewController: UIViewController {
     func preapreLoadingStates() -> [LoadingState] {
         let splashState = LoadingState()
         splashState.stateHandler = loadApplicationLoadingGroup
-        splashState.readableName = "Show Splash Screen"
+        splashState.readableName = "<app-loader-state-machine> Show Splash Screen"
 
         let plugins = LoadingState()
         plugins.stateHandler = loadPluginsGroup
-        plugins.readableName = "Load plugins"
+        plugins.readableName = "<app-loader-state-machine> Load plugins"
 
         let styles = LoadingState()
         styles.stateHandler = loadStylesGroup
-        styles.readableName = "Load Styles"
+        styles.readableName = "<app-loader-state-machine> Load Styles"
 
         // Dependant states
         let userInterfaceLayer = LoadingState()
         userInterfaceLayer.stateHandler = loadUserInterfaceLayerGroup
-        userInterfaceLayer.readableName = "Prepare User Interface Layer"
+        userInterfaceLayer.readableName = "<app-loader-state-machine> Prepare User Interface Layer"
         return [splashState,
                 plugins,
                 styles,
                 userInterfaceLayer]
     }
-    
-    
+
+    func makeSplashAsRootViewContoroller() {
+        guard let window = UIApplication.shared.delegate?.window else {
+            return
+        }
+        window?.rootViewController = splashViewController
+    }
+
+    func makeInterfaceLayerAsRootViewContoroller() {
+        guard let window = UIApplication.shared.delegate?.window else {
+            return
+        }
+        window?.rootViewController = userInterfaceLayerViewController
+    }
+
+    func showErrorMessage(message: String) {
+        makeSplashAsRootViewContoroller()
+        // TODO: After will be added multi language support should be take from localization string
+        splashViewController?.showErrorMessage(message)
+    }
 }

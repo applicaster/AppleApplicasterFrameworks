@@ -1,5 +1,5 @@
 //
-//  RootViewController+FacadeConnectorPluginManagerProtocol.swift
+//  RootController+FacadeConnectorPluginManagerProtocol.swift
 //  ZappApple
 //
 //  Created by Anton Kononenko on 10/15/19.
@@ -9,7 +9,7 @@
 import Foundation
 import ZappCore
 
-extension RootViewController: FacadeConnectorPluginManagerProtocol {
+extension RootController: FacadeConnectorPluginManagerProtocol {
     public func pluginModel(_ type: String) -> ZPPluginModel? {
         return PluginsManager.pluginModel(type)
     }

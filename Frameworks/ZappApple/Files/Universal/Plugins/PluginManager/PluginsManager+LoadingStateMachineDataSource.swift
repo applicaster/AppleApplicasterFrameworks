@@ -13,26 +13,26 @@ extension PluginsManager: LoadingStateMachineDataSource {
     func preapareLoadingPluginStates() -> [LoadingState] {
         let loadPlugins = LoadingState()
         loadPlugins.stateHandler = loadPluginsGroup
-        loadPlugins.readableName = "Load General Plugins JSON"
+        loadPlugins.readableName = "<plugins-state-machine> Load General Plugins JSON"
 
         let analytics = LoadingState()
         analytics.stateHandler = prepareAnalyticsPlugins
         analytics.dependantStates = [loadPlugins.name]
-        analytics.readableName = "Prepare Analytics Plugins"
+        analytics.readableName = "<plugins-state-machine> Prepare Analytics Plugins"
 
         let push = LoadingState()
         push.stateHandler = preparePushPlugins
         push.dependantStates = [loadPlugins.name]
-        push.readableName = "Prepare Push Plugins"
+        push.readableName = "<plugins-state-machine> Prepare Push Plugins"
 
         let general = LoadingState()
         general.stateHandler = prepareGeneralPlugins
         general.dependantStates = [loadPlugins.name]
-        general.readableName = "Prepare General Plugins"
+        general.readableName = "<plugins-state-machine> Prepare General Plugins"
 
         let pluginsSessionStorageData = LoadingState()
         pluginsSessionStorageData.stateHandler = updatePluginSessionStorageData
-        pluginsSessionStorageData.readableName = "Plugins Session Storage"
+        pluginsSessionStorageData.readableName = "<plugins-state-machine> Plugins Session Storage"
         pluginsSessionStorageData.dependantStates = [loadPlugins.name]
         return [loadPlugins,
                 analytics,
