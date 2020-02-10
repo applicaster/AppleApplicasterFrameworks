@@ -15,10 +15,12 @@ extension RootController: ReachabilityManagerDelegate {
         switch connection {
         case .wifi, .cellular:
             if let currentConnection = currentConnection,
-                currentConnection == .none {
+                currentConnection == .unavailable {
                 forceReloadApplication()
             }
         case .none:
+            showInternetError()
+        case .unavailable:
             showInternetError()
         }
         currentConnection = connection

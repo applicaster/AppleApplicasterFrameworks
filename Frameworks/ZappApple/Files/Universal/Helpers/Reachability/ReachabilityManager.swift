@@ -10,35 +10,41 @@ import Foundation
 import Reachability
 
 class ReachabilityManager {
-    let reachability = Reachability()!
-    var delegate:ReachabilityManagerDelegate
-    init(delegate:ReachabilityManagerDelegate) {
+    var reachability: Reachability?
+    var delegate: ReachabilityManagerDelegate
+    init(delegate: ReachabilityManagerDelegate) {
         self.delegate = delegate
-        startObserve()
+        do {
+            reachability = try Reachability()
+            startObserve()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
-    
+
     func startObserve() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(reachabilityChanged(note:)),
                                                name: .reachabilityChanged,
                                                object: reachability)
-        do{
-            try reachability.startNotifier()
-        }catch{
+        do {
+            try reachability?.startNotifier()
+        } catch {
             print("could not start reachability notifier")
         }
     }
+
     func stopObserve() {
-        reachability.stopNotifier()
+        reachability?.stopNotifier()
 
         NotificationCenter.default.removeObserver(self,
                                                   name: .reachabilityChanged,
                                                   object: reachability)
     }
-    
+
     @objc func reachabilityChanged(note: Notification) {
         guard let reachability = note.object as? Reachability else {
-            return delegate.reachabilityChanged(connection: .none)
+            return delegate.reachabilityChanged(connection: .unavailable)
         }
         delegate.reachabilityChanged(connection: reachability.connection)
     }
