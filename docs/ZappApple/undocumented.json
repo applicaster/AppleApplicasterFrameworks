@@ -793,21 +793,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
-      "line": 20,
+      "line": 25,
       "symbol": "ReachabilityManager.startObserve()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
-      "line": 31,
+      "line": 37,
       "symbol": "ReachabilityManager.stopObserve()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Reachability/ReachabilityManager.swift",
-      "line": 39,
+      "line": 45,
       "symbol": "ReachabilityManager.reachabilityChanged(note:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2424,14 +2424,14 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+ReachabilityManagerDelegate.swift",
-      "line": 28,
+      "line": 30,
       "symbol": "RootController.showInternetError()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+ReachabilityManagerDelegate.swift",
-      "line": 32,
+      "line": 34,
       "symbol": "RootController.forceReloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
