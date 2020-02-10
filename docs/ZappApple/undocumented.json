@@ -2039,35 +2039,35 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 62,
+      "line": 68,
       "symbol": "PluginManagerBase.createProvider(identifier:forceEnable:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 74,
+      "line": 80,
       "symbol": "PluginManagerBase.createProvider(pluginModel:forceEnable:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 100,
+      "line": 106,
       "symbol": "PluginManagerBase.disableProvider(identifier:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 114,
+      "line": 120,
       "symbol": "PluginManagerBase.disableProviders(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 131,
+      "line": 137,
       "symbol": "PluginManagerBase.isEnabled(pluginModel:forceEnable:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2248,352 +2248,366 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorAnalyticsProtocol.swift",
       "line": 13,
-      "symbol": "RootViewController.sendEvent(name:parameters:)",
+      "symbol": "RootController.sendEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorAnalyticsProtocol.swift",
       "line": 18,
-      "symbol": "RootViewController.sendScreenEvent(screenTitle:parameters:)",
+      "symbol": "RootController.sendScreenEvent(screenTitle:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorAnalyticsProtocol.swift",
       "line": 23,
-      "symbol": "RootViewController.startObserveTimedEvent(name:parameters:)",
+      "symbol": "RootController.startObserveTimedEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAnalyticsProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorAnalyticsProtocol.swift",
       "line": 29,
-      "symbol": "RootViewController.stopObserveTimedEvent(_:parameters:)",
+      "symbol": "RootController.stopObserveTimedEvent(_:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAppDataProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorAppDataProtocol.swift",
       "line": 13,
-      "symbol": "RootViewController.bundleName()",
+      "symbol": "RootController.bundleName()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorAppDataProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorAppDataProtocol.swift",
       "line": 17,
-      "symbol": "RootViewController.appVersion()",
+      "symbol": "RootController.appVersion()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorPluginManagerProtocol.swift",
       "line": 17,
-      "symbol": "RootViewController.plugin(for:)",
+      "symbol": "RootController.plugin(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorPluginManagerProtocol.swift",
       "line": 21,
-      "symbol": "RootViewController.getAllPlugins()",
+      "symbol": "RootController.getAllPlugins()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPluginManagerProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorPluginManagerProtocol.swift",
       "line": 25,
-      "symbol": "RootViewController.adapterClass(_:)",
+      "symbol": "RootController.adapterClass(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPushProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorPushProtocol.swift",
       "line": 12,
-      "symbol": "RootViewController.addTagsToDevice(_:completion:)",
+      "symbol": "RootController.addTagsToDevice(_:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPushProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorPushProtocol.swift",
       "line": 17,
-      "symbol": "RootViewController.removeTagsToDevice(_:completion:)",
+      "symbol": "RootController.removeTagsToDevice(_:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorPushProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorPushProtocol.swift",
       "line": 22,
-      "symbol": "RootViewController.getDeviceTags()",
+      "symbol": "RootController.getDeviceTags()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorStorageProtocol.swift",
       "line": 13,
-      "symbol": "RootViewController.sessionStorageValue(for:namespace:)",
+      "symbol": "RootController.sessionStorageValue(for:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorStorageProtocol.swift",
       "line": 18,
-      "symbol": "RootViewController.sessionStorageSetValue(for:value:namespace:)",
+      "symbol": "RootController.sessionStorageSetValue(for:value:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorStorageProtocol.swift",
       "line": 24,
-      "symbol": "RootViewController.sessionStorageAllValues(namespace:)",
+      "symbol": "RootController.sessionStorageAllValues(namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorStorageProtocol.swift",
       "line": 28,
-      "symbol": "RootViewController.localStorageValue(for:namespace:)",
+      "symbol": "RootController.localStorageValue(for:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorStorageProtocol.swift",
       "line": 33,
-      "symbol": "RootViewController.localStorageSetValue(for:value:namespace:)",
+      "symbol": "RootController.localStorageSetValue(for:value:namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/FacadeConnector/RootViewController+FacadeConnectorStorageProtocol.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorStorageProtocol.swift",
       "line": 39,
-      "symbol": "RootViewController.localStorageAllValues(namespace:)",
+      "symbol": "RootController.localStorageAllValues(namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
       "line": 13,
       "symbol": "kMSAppCenterCheckForUpdatesNotification",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
       "line": 16,
-      "symbol": "RootViewController.loadApplicationLoadingGroup(_:_:)",
+      "symbol": "RootController.loadApplicationLoadingGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
       "line": 23,
-      "symbol": "RootViewController.loadPluginsGroup(_:_:)",
+      "symbol": "RootController.loadPluginsGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
       "line": 34,
-      "symbol": "RootViewController.loadStylesGroup(_:_:)",
+      "symbol": "RootController.loadStylesGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
       "line": 47,
-      "symbol": "RootViewController.loadUserInterfaceLayerGroup(_:_:)",
+      "symbol": "RootController.loadUserInterfaceLayerGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+AppLoadingStateMachineDataSource.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
       "line": 67,
-      "symbol": "RootViewController.stateMachineFinishedWork(with:)",
+      "symbol": "RootController.stateMachineFinishedWork(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+ReachabilityManagerDelegate.swift",
       "line": 14,
-      "symbol": "RootViewController.reachabilityChanged(connection:)",
+      "symbol": "RootController.reachabilityChanged(connection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+ReachabilityManagerDelegate.swift",
       "line": 28,
-      "symbol": "RootViewController.showInternetError()",
+      "symbol": "RootController.showInternetError()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController+ReachabilityManagerDelegate.swift",
-      "line": 36,
-      "symbol": "RootViewController.forceReloadApplication()",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+ReachabilityManagerDelegate.swift",
+      "line": 32,
+      "symbol": "RootController.forceReloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 11,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 12,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 12,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 12,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 12,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 12,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 12,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 13,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 14,
-      "symbol": "RootViewController.userInterfaceLayerContainerView",
+      "symbol": "RootController.appDelegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 15,
-      "symbol": "RootViewController",
+      "symbol": "RootController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 15,
-      "symbol": "RootViewController.splashScreenContainerView",
+      "symbol": "RootController.appReadyForUse",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 17,
-      "symbol": "RootViewController.appDelegate",
+      "symbol": "RootController.reachabilityManger",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 18,
-      "symbol": "RootViewController.appReadyForUse",
+      "symbol": "RootController.currentConnection",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 20,
-      "symbol": "RootViewController.reachabilityManger",
+      "symbol": "RootController.loadingStateMachine",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 21,
-      "symbol": "RootViewController.currentConnection",
+      "symbol": "RootController.userInterfaceLayer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 23,
-      "symbol": "RootViewController.loadingStateMachine",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 22,
+      "symbol": "RootController.userInterfaceLayerViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
       "line": 24,
-      "symbol": "RootViewController.userInterfaceLayer",
+      "symbol": "RootController.pluginsManager",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 25,
-      "symbol": "RootViewController.pluginsManager",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 26,
+      "symbol": "RootController.splashViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 27,
-      "symbol": "RootViewController.splashViewController",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 28,
+      "symbol": "RootController.facadeConnector",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 31,
-      "symbol": "RootViewController.facadeConnector",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 35,
-      "symbol": "RootViewController.viewDidLoad()",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 32,
+      "symbol": "RootController.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 47,
-      "symbol": "RootViewController.reloadApplication()",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 45,
+      "symbol": "RootController.reloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/RootViewController/RootViewController.swift",
-      "line": 54,
-      "symbol": "RootViewController.preapreLoadingStates()",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 52,
+      "symbol": "RootController.preapreLoadingStates()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 75,
+      "symbol": "RootController.makeSplashAsRootViewContoroller()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 82,
+      "symbol": "RootController.makeInterfaceLayerAsRootViewContoroller()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 89,
+      "symbol": "RootController.showErrorMessage(message:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
