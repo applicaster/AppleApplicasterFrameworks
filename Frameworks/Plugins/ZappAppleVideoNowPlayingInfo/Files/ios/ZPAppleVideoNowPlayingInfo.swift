@@ -17,6 +17,9 @@ class ZPAppleVideoNowPlayingInfo: ZPAppleVideoNowPlayingInfoBase {
         avPlayer?.removeObserver(self,
                                  forKeyPath: "rate",
                                  context: nil)
+        
+        unregisterForRemoteCommands()
+        
         super.disable(completion: completion)
     }
 
