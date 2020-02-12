@@ -53,7 +53,7 @@ class ZPAppleVideoSubscriptionRegistration: NSObject, GeneralProviderProtocol {
         if self.hasNeededEntitlements {
             let subscription = VSSubscription()
             subscription.expirationDate = Date.distantFuture
-            if #available(iOS 11.3, *) {
+            if #available(iOS 11.3, *), #available(tvOS 11.3, *) {
               if !billingIdentifier.isEmpty {
                   subscription.accessLevel = .paid
                   subscription.billingIdentifier = billingIdentifier
@@ -75,6 +75,7 @@ class ZPAppleVideoSubscriptionRegistration: NSObject, GeneralProviderProtocol {
     public func disable(completion: ((Bool) -> Void)?) {
         let registrationCenter = VSSubscriptionRegistrationCenter.default()
         registrationCenter.setCurrentSubscription(nil)
+        completion?(true)
     }
 
 
