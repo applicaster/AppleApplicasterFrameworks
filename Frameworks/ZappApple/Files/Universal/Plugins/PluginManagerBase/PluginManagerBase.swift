@@ -156,4 +156,17 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
 
         return retVal
     }
+
+    func hooksProviders() -> [AppLoadingHookProtocol] {
+        var retVal: [AppLoadingHookProtocol] = []
+        providers.forEach { _, provider in
+            if let model = provider.model,
+                model.pluginRequireStartupExecution == true,
+                let hookProvider = provider as? AppLoadingHookProtocol {
+                retVal.append(hookProvider)
+            }
+        }
+
+        return retVal
+    }
 }
