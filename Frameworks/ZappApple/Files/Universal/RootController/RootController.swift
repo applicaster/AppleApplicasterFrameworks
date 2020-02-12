@@ -65,7 +65,7 @@ public class RootController: NSObject {
         // Dependant states
         let userInterfaceLayer = LoadingState()
         userInterfaceLayer.stateHandler = loadUserInterfaceLayerGroup
-        userInterfaceLayer.readableName = "Prepare User Interface Layer"
+        userInterfaceLayer.readableName = "<app-loader-state-machine> Prepare User Interface Layer"
 
         let onLaunchHook = LoadingState()
         onLaunchHook.stateHandler = hookOnLaunch
