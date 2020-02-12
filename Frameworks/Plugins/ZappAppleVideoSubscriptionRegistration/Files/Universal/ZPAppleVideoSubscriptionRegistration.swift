@@ -1,6 +1,6 @@
 //
 //  ZPAppleVideoSubscriptionRegistration.swift
-//  ZappGeneralPlugins
+//  ZappAppleVideoSubscriptionRegistration
 //
 //  Created by Alex Zchut on 05/02/2020.
 //  Copyright © 2020 Applicaster Ltd. All rights reserved.
