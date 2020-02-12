@@ -64,13 +64,6 @@ extension RootController: LoadingStateMachineDataSource {
         }
     }
 
-    func hookOnLaunch(_ successHandler: @escaping StateCallBack,
-                      _ failHandler: @escaping StateCallBack) {
-        pluginsManager.hookOnLaunch(hooksPlugins: nil) {
-            successHandler()
-        }
-    }
-
     func hookOnApplicationReady(_ successHandler: @escaping StateCallBack,
                                 _ failHandler: @escaping StateCallBack) {
         pluginsManager.hookOnApplicationReady(displayViewController: splashViewController,

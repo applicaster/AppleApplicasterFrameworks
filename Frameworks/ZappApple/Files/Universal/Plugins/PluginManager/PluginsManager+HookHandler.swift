@@ -10,6 +10,27 @@ import Foundation
 import ZappCore
 
 extension PluginsManager {
+    func createLaunchHooksPlugins(completion: @escaping (() -> Void)) {
+        let plugins = PluginsManager.getHookPlugins()
+        var counter = plugins.count
+        for plugin in plugins {
+            guard let pluginManager = pluginManager(identifier: plugin.identifier) else {
+                counter -= 1
+                return
+            }
+
+            pluginManager.createProvider(identifier: plugin.identifier,
+                                         forceEnable: false,
+                                         completion: { _ in
+                                             counter -= 1
+                                             if counter == 0 {
+                                                 completion()
+                                             }
+
+            })
+        }
+    }
+
     func retrieveHooksPlugins() -> [AppLoadingHookProtocol] {
         var retVal = analytics.hooksProviders()
         retVal += push.hooksProviders()
@@ -135,7 +156,7 @@ extension PluginsManager {
 }
 
 // MARK: ExecuteOnContinuingUserActivity
-
+//TODO: This hook does not implemented on call
 extension PluginsManager {
     func hookAfterOnContinuingUserActivity(userActivity: NSUserActivity,
                                            hooksPlugins: [AppLoadingHookProtocol]?,

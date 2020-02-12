@@ -138,15 +138,26 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
                           forceEnable: Bool) -> Bool {
         var retVal = true
 
+        // Forcing enabled cause when plugin enabled from Control Flow
+        // Control Flow API reenable plugin
         guard forceEnable == false else {
             return retVal
         }
+        
+        // In case plugin not forcing enable, but plugin was already created
+        // Probably plugin was created for Launch hook
+        guard providers[pluginModel.identifier] == nil else {
+            return false
+        }
 
+        // Check if configruration JSON exist
+        // If no we want initialize screen in any casee
         guard let configurationJSON = pluginModel.configurationJSON,
             let pluginEnabled = configurationJSON[kPluginEnabled] else {
             return retVal
         }
 
+        // Check if value bool or string
         if let pluginEnabled = pluginEnabled as? String,
             let pluginEnabledBool = Bool(pluginEnabled) {
             retVal = pluginEnabledBool

@@ -34,6 +34,13 @@ public class PluginsManager: NSObject {
         }
     }
 
+    func crashLogs(_ successHandler: @escaping StateCallBack,
+                   _ failHandler: @escaping StateCallBack) {
+        crashlogs.prepareManager { success in
+            success ? successHandler() : failHandler()
+        }
+    }
+
     func prepareAnalyticsPlugins(_ successHandler: @escaping StateCallBack,
                                  _ failHandler: @escaping StateCallBack) {
         analytics.prepareManager { success in
@@ -63,7 +70,6 @@ public class PluginsManager: NSObject {
             }
 
             configationJSON.forEach { arg in
-
                 let (key, value) = arg
                 _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: key,
                                                                                value: value,
@@ -80,5 +86,14 @@ public class PluginsManager: NSObject {
             sendConfigurationToSessionStorage(pluginModel: model)
         }
         successHandler()
+    }
+
+    func hookOnLaunch(_ successHandler: @escaping StateCallBack,
+                      _ failHandler: @escaping StateCallBack) {
+        createLaunchHooksPlugins { [weak self] in
+            self?.hookOnLaunch(hooksPlugins: nil) {
+                successHandler()
+            }
+        }
     }
 }

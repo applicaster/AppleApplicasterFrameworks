@@ -65,6 +65,10 @@ extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
             return push
         case .Analytics:
             return analytics
+        case .Crashlogs:
+            return crashlogs
+        case .General:
+            return general
         default:
             return nil
         }

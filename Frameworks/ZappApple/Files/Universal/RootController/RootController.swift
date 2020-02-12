@@ -67,11 +67,6 @@ public class RootController: NSObject {
         userInterfaceLayer.stateHandler = loadUserInterfaceLayerGroup
         userInterfaceLayer.readableName = "<app-loader-state-machine> Prepare User Interface Layer"
 
-        let onLaunchHook = LoadingState()
-        onLaunchHook.stateHandler = hookOnLaunch
-        onLaunchHook.readableName = "<app-loader-state-machine> Execute Hook Plugin On Launch"
-        onLaunchHook.dependantStates = [plugins.name]
-
         let onApplicationReadyHook = LoadingState()
         onApplicationReadyHook.stateHandler = hookOnApplicationReady
         onApplicationReadyHook.readableName = "<app-loader-state-machine> Execute Hook Plugin Applicatoion Ready to present"
@@ -79,13 +74,13 @@ public class RootController: NSObject {
                                                   plugins.name,
                                                   styles.name,
                                                   userInterfaceLayer.name,
-                                                  onLaunchHook.name]
+        ]
 
         return [splashState,
                 plugins,
                 styles,
                 userInterfaceLayer,
-                onLaunchHook,
+
                 onApplicationReadyHook]
     }
 

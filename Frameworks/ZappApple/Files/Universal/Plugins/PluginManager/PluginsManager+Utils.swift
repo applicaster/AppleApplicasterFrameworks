@@ -224,5 +224,11 @@ extension PluginsManager {
 
         return plugin
     }
-    
+
+    public class func getHookPlugins() -> [ZPPluginModel] {
+        guard let pluginModels = PluginsManager.pluginModels() else {
+            return []
+        }
+        return pluginModels.filter { $0.pluginRequireStartupExecution == true && (PluginsManager.adapterClass($0) as? AppLoadingHookProtocol.Type) != nil }
+    }
 }
