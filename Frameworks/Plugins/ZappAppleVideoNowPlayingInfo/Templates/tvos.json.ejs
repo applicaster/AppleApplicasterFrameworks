@@ -1,0 +1,46 @@
+{
+  "api": {
+    "require_startup_execution": false,
+    "class_name": "ZPAppleVideoNowPlayingInfo",
+    "modules": [
+      "ZappAppleVideoNowPlayingInfo"
+    ]
+  },
+  "npm_dependencies": [
+    "@applicaster/video_playing_now_apple@<%= version_id %>"
+  ],
+  "extra_dependencies": [
+    {
+      "ZappAppleVideoNowPlayingInfo": ":path => './node_modules/@applicaster/video_playing_now_apple/ZappAppleVideoNowPlayingInfo.podspec'"
+    }
+  ],
+  "platform": "tvos",
+  "author_name": "Alex Zchut",
+  "author_email": "a.zchut@applicaster.com",
+  "manifest_version": "<%= version_id %>",
+  "name": "Apple Video Playing Now Info",
+  "description": "Apple Video Playing Now Info",
+  "type": "general",
+  "screen": false,
+  "identifier": "video_playing_now_apple",
+  "ui_builder_support": true,
+  "whitelisted_account_ids": [
+    "5ae06cef8fba0f00084bd3c6",
+    "5c20970320f1c500088842dd"
+  ],
+  "min_zapp_sdk": "12.0.0-Dev",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "custom_configuration_fields": [
+    {
+      "type": "checkbox",
+      "key": "enabled",
+      "tooltip_text": "Is plugin enabled on app start",
+      "default": 0
+    }
+  ],
+  "targets": [
+    "tv"
+  ]
+}

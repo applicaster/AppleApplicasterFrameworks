@@ -15,7 +15,7 @@
 	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>
 		<key>version_id</key>
-		<string>4.4.1</string>
+		<string>4.4.2</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
@@ -36,7 +36,14 @@
 	<key>ZappAppleVideoSubscriptionRegistration</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.1.3</string>
+		<string>0.1.6</string>
+		<key>plugin</key>
+		<true/>
+	</dict>
+	<key>ZappAppleVideoNowPlayingInfo</key>
+	<dict>
+		<key>version_id</key>
+		<string>0.1.4</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
