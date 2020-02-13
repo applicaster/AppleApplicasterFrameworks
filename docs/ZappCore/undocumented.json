@@ -778,6 +778,48 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/LoadingHook/AppLoadingHookProtocol.swift",
+      "line": 10,
+      "symbol": "AppLoadingHookProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/LoadingHook/AppLoadingHookProtocol.swift",
+      "line": 14,
+      "symbol": "AppLoadingHookProtocol.executeOnFailedLoading(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/LoadingHook/AppLoadingHookProtocol.swift",
+      "line": 19,
+      "symbol": "AppLoadingHookProtocol.executeOnLaunch(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/LoadingHook/AppLoadingHookProtocol.swift",
+      "line": 24,
+      "symbol": "AppLoadingHookProtocol.executeOnApplicationReady(displayViewController:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/LoadingHook/AppLoadingHookProtocol.swift",
+      "line": 29,
+      "symbol": "AppLoadingHookProtocol.executeAfterAppRootPresentation(displayViewController:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/LoadingHook/AppLoadingHookProtocol.swift",
+      "line": 34,
+      "symbol": "AppLoadingHookProtocol.executeOnContinuingUserActivity(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Plugins/PlayerDependantsPlugins/Protocols/DependablePlayerAdDelegatePluginProtocol.swift",
       "line": 13,
       "symbol": "DependablePlayerAdDelegatePluginProtocolKeys.playingKey",

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FacadeConnectorPluginManagerProtocol Protocol Reference</title>
+    <title>AppLoadingHookProtocol Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,8 +11,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/FacadeConnectorPluginManagerProtocol" class="dashAnchor"></a>
-    <a title="FacadeConnectorPluginManagerProtocol Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/AppLoadingHookProtocol" class="dashAnchor"></a>
+    <a title="AppLoadingHookProtocol Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -36,7 +36,7 @@
             <a href="../index.html">ZappCore Reference</a>
             <img id="carat" src="../img/carat.png" />
           </span>
-          FacadeConnectorPluginManagerProtocol Protocol Reference
+          AppLoadingHookProtocol Protocol Reference
         </p>
       </div>
     </div>
@@ -45,11 +45,11 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>FacadeConnectorPluginManagerProtocol</h1>
+              <h1>AppLoadingHookProtocol</h1>
                 <div class="declaration">
                   <div class="language">
                     <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FacadeConnectorPluginManagerProtocol</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/FacadeConnectorPluginManagerControlFlow.html">FacadeConnectorPluginManagerControlFlow</a></span></code></pre>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AppLoadingHookProtocol</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PluginAdapterProtocol.html">PluginAdapterProtocol</a></span></code></pre>
 
                   </div>
                 </div>
@@ -62,9 +62,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerProtocol(im)pluginFor:"></a>
-                      <a name="//apple_ref/swift/Method/plugin(for:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerProtocol(im)pluginFor:">plugin(for:)</a>
+                      <a name="/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeOnFailedLoadingWithCompletion:"></a>
+                      <a name="//apple_ref/swift/Method/executeOnFailedLoading(completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeOnFailedLoadingWithCompletion:">executeOnFailedLoading(completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -80,7 +80,7 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">plugin</span><span class="p">(</span><span class="k">for</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ZPPluginModel.html">ZPPluginModel</a></span><span class="p">?</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">executeOnFailedLoading</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                           </div>
                         </div>
@@ -90,9 +90,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerProtocol(im)getAllPlugins"></a>
-                      <a name="//apple_ref/swift/Method/getAllPlugins()" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerProtocol(im)getAllPlugins">getAllPlugins()</a>
+                      <a name="/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeOnLaunchWithCompletion:"></a>
+                      <a name="//apple_ref/swift/Method/executeOnLaunch(completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeOnLaunchWithCompletion:">executeOnLaunch(completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -108,7 +108,7 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">getAllPlugins</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/ZPPluginModel.html">ZPPluginModel</a></span><span class="p">]?</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">executeOnLaunch</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                           </div>
                         </div>
@@ -118,9 +118,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerProtocol(im)adapterClass:"></a>
-                      <a name="//apple_ref/swift/Method/adapterClass(_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerProtocol(im)adapterClass:">adapterClass(_:)</a>
+                      <a name="/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeOnApplicationReadyWithDisplayViewController:completion:"></a>
+                      <a name="//apple_ref/swift/Method/executeOnApplicationReady(displayViewController:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeOnApplicationReadyWithDisplayViewController:completion:">executeOnApplicationReady(displayViewController:completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -136,7 +136,7 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">adapterClass</span><span class="p">(</span><span class="n">_</span> <span class="nv">pluginModel</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZPPluginModel.html">ZPPluginModel</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyClass</span><span class="p">?</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">executeOnApplicationReady</span><span class="p">(</span><span class="nv">displayViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                           </div>
                         </div>
@@ -146,9 +146,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerProtocol(im)pluginModel:"></a>
-                      <a name="//apple_ref/swift/Method/pluginModel(_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorPluginManagerProtocol(im)pluginModel:">pluginModel(_:)</a>
+                      <a name="/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeAfterAppRootPresentationWithDisplayViewController:completion:"></a>
+                      <a name="//apple_ref/swift/Method/executeAfterAppRootPresentation(displayViewController:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeAfterAppRootPresentationWithDisplayViewController:completion:">executeAfterAppRootPresentation(displayViewController:completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -156,7 +156,7 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Get a plugin by type</p>
+                          <p>Undocumented</p>
 
                         </div>
                         <div class="declaration">
@@ -164,7 +164,35 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">pluginModel</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ZPPluginModel.html">ZPPluginModel</a></span><span class="p">?</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">executeAfterAppRootPresentation</span><span class="p">(</span><span class="nv">displayViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeOnContinuingUserActivity:completion:"></a>
+                      <a name="//apple_ref/swift/Method/executeOnContinuingUserActivity(_:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)AppLoadingHookProtocol(im)executeOnContinuingUserActivity:completion:">executeOnContinuingUserActivity(_:completion:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">executeOnContinuingUserActivity</span><span class="p">(</span><span class="n">_</span> <span class="nv">userActivity</span><span class="p">:</span> <span class="kt">NSUserActivity</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                           </div>
                         </div>

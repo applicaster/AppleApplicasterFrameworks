@@ -1,5 +1,5 @@
 module: ZappApple
-module_version: 0.5.0
+module_version: 0.6.0
 
 author: "Applicaster ltd."
 copyright: "© 2019 [Applicaster ltd.](https://www.applicaster.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
@@ -14,10 +14,10 @@ min_acl: "private"
 sdk: [iphone, appletv]
 theme: jony
 custom_categories:
-  - name: Zapp App Root View Controller
+  - name: Zapp Root Controller
     children:
       - SplashViewController
-      - RootViewController
+      - RootController
       - AppDelegateProtocol
 
   - name: Plugins
@@ -30,8 +30,6 @@ custom_categories:
   - name: AppLoading
     children:
       - DataManager
-      - IdentityClient
-      - IdentityClientBase
       - LoadingManager
       - LoadingLoaderTypes
       - LoadingStateTypes

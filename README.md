@@ -28,11 +28,11 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: *0.7.0*
+##### ZappCore: *0.8.0*
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: *0.5.0*
+##### ZappApple: *0.6.0*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
@@ -81,6 +81,13 @@ This respository is the main container for general frameworks and plugins for [Z
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
 
+##### Firebase Base Settings:
+- **Description:** This plugin provides GoogleService-Info.plist that require for all Firebase plugins. Also plugin make intialization of the Firebase.
+- [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/FirebaseBaseSettings/index.html)
+- **Manifest:**
+  - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=firebase_base_settings&platform=ios)
+  - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=firebase_base_settings&platform=tvos)
+  
 ## :pencil2: Usage
 
 * To use any framework availible in this repo add cocoapods dependency in podfile.
