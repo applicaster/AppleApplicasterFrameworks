@@ -1,0 +1,61 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration/Files/Universal/ZPAppleVideoSubscriptionRegistration.swift",
+      "line": 12,
+      "symbol": "ZPAppleVideoSubscriptionRegistration",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration/Files/Universal/ZPAppleVideoSubscriptionRegistration.swift",
+      "line": 13,
+      "symbol": "ZPAppleVideoSubscriptionRegistration.configurationJSON",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration/Files/Universal/ZPAppleVideoSubscriptionRegistration.swift",
+      "line": 16,
+      "symbol": "ZPAppleVideoSubscriptionRegistration.isInfoPlistSupportEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration/Files/Universal/ZPAppleVideoSubscriptionRegistration.swift",
+      "line": 24,
+      "symbol": "ZPAppleVideoSubscriptionRegistration.hasNeededEntitlements",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration/Files/Universal/ZPAppleVideoSubscriptionRegistration.swift",
+      "line": 37,
+      "symbol": "ZPAppleVideoSubscriptionRegistration.PluginKeys.billingIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration/Files/Universal/ZPAppleVideoSubscriptionRegistration.swift",
+      "line": 38,
+      "symbol": "ZPAppleVideoSubscriptionRegistration.PluginKeys.tierIdentifiers",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration/Files/Universal/ZPAppleVideoSubscriptionRegistration.swift",
+      "line": 82,
+      "symbol": "ZPAppleVideoSubscriptionRegistration.billingIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration/Files/Universal/ZPAppleVideoSubscriptionRegistration.swift",
+      "line": 91,
+      "symbol": "ZPAppleVideoSubscriptionRegistration.tierIdentifiers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriptionRegistration"
+}

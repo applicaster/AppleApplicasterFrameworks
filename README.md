@@ -49,7 +49,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: Crashlogs
 
-##### MS App Center: *4.4.1*
+##### MS App Center: *4.4.2*
 - **Description:** [App center](https://appcenter.ms) crash logs service.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCrashlogsMsAppCenter/index.html)
 - **Manifest:**
@@ -66,14 +66,14 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: General
 
-##### Apple Video Subscription Registration: *0.1.5*
+##### Apple Video Subscription Registration: *0.1.6*
 - **Description:** This plugin subscribe the user to the video subscription in order to get shared content for iOS and tvOS.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoSubscriptionRegistration/index.html)
 - **Manifest:**
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscription_registration_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscription_registration_apple&platform=tvos)
 
-##### Apple Video Now Playing Info: *0.1.3*
+##### Apple Video Now Playing Info: *0.1.4*
 - **Description:** This plugin saves current played item metadata to be accessible on other device (saved on iOS to use on tvOS and vice versa).
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoNowPlayingInfo/index.html)
 - **Manifest:**
