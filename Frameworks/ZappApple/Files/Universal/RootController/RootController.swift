@@ -66,10 +66,22 @@ public class RootController: NSObject {
         let userInterfaceLayer = LoadingState()
         userInterfaceLayer.stateHandler = loadUserInterfaceLayerGroup
         userInterfaceLayer.readableName = "<app-loader-state-machine> Prepare User Interface Layer"
+
+        let onApplicationReadyHook = LoadingState()
+        onApplicationReadyHook.stateHandler = hookOnApplicationReady
+        onApplicationReadyHook.readableName = "<app-loader-state-machine> Execute Hook Plugin Applicatoion Ready to present"
+        onApplicationReadyHook.dependantStates = [splashState.name,
+                                                  plugins.name,
+                                                  styles.name,
+                                                  userInterfaceLayer.name,
+        ]
+
         return [splashState,
                 plugins,
                 styles,
-                userInterfaceLayer]
+                userInterfaceLayer,
+
+                onApplicationReadyHook]
     }
 
     func makeSplashAsRootViewContoroller() {

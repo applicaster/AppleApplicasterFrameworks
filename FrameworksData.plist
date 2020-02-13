@@ -2,15 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ZappApple</key>
-	<dict>
-		<key>version_id</key>
-		<string>0.5.0</string>
-	</dict>
 	<key>ZappCore</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.7.0</string>
+		<string>0.8.0</string>
+	</dict>
+	<key>ZappApple</key>
+	<dict>
+		<key>version_id</key>
+		<string>0.6.0</string>
 	</dict>
 	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>

@@ -64,19 +64,33 @@ extension RootController: LoadingStateMachineDataSource {
         }
     }
 
+    func hookOnApplicationReady(_ successHandler: @escaping StateCallBack,
+                                _ failHandler: @escaping StateCallBack) {
+        pluginsManager.hookOnApplicationReady(displayViewController: splashViewController,
+                                              hooksPlugins: nil) {
+            successHandler()
+        }
+    }
+
     public func stateMachineFinishedWork(with state: LoadingStateTypes) {
         if state == .success {
             appReadyForUse = true
             makeInterfaceLayerAsRootViewContoroller()
+            appDelegate?.handleDelayedEventsIfNeeded()
+
             facadeConnector.analytics?.sendEvent?(name: CoreAnalyticsKeys.applicationWasLaunched,
                                                   parameters: [:])
-            appDelegate?.handleDelayedEventsIfNeeded()
 
             NotificationCenter.default.post(name: Notification.Name(kMSAppCenterCheckForUpdatesNotification),
                                             object: nil)
+            pluginsManager.hookAfterAppRootPresentation(hooksPlugins: nil,
+                                                        completion: {})
+
         } else {
             // TODO: After will be added multi language support should be take from localization string
             showErrorMessage(message: "Loading failed. Please try again later")
+            pluginsManager.hookFailedLoading(hooksPlugins: nil,
+                                             completion: {})
         }
     }
 }
