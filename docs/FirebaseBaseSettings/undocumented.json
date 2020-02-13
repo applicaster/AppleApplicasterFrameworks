@@ -1,0 +1,40 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/FirebaseBaseSettings/Files/Universal/FirebaseBaseSettings+AppLoadingHookProtocol.swift",
+      "line": 13,
+      "symbol": "FirebaseBaseSettings.executeOnLaunch(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/FirebaseBaseSettings/Files/Universal/FirebaseBaseSettings.swift",
+      "line": 12,
+      "symbol": "FirebaseBaseSettings",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/FirebaseBaseSettings/Files/Universal/FirebaseBaseSettings.swift",
+      "line": 13,
+      "symbol": "kGoogleServiceFileName",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/FirebaseBaseSettings/Files/Universal/FirebaseBaseSettings.swift",
+      "line": 14,
+      "symbol": "kGoogleServicePlistExtension",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/FirebaseBaseSettings/Files/Universal/FirebaseBaseSettings.swift",
+      "line": 16,
+      "symbol": "FirebaseBaseSettings",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/FirebaseBaseSettings"
+}
