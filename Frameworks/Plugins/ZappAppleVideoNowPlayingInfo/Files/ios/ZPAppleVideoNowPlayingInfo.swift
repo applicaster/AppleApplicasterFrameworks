@@ -23,26 +23,6 @@ class ZPAppleVideoNowPlayingInfo: ZPAppleVideoNowPlayingInfoBase {
         super.disable(completion: completion)
     }
 
-    override func prepareNowPlayingInfo() {
-
-        //docs https://help.apple.com/itc/tvpumcstyleguide/#/itc0c92df7c9
-
-        //Registering for Remote Commands
-        registerForRemoteCommands()
-
-        //Disable AVKit Now Playing Updates
-        disableNowPlayingUpdates()
-
-        //Send Now Playing Info
-        sendNowPlayingInitial()
-
-        //Register for oobserver for player
-        avPlayer?.addObserver(self,
-                              forKeyPath: "rate",
-                              options: [],
-                              context: nil)
-    }
-
     func registerForRemoteCommands() {
         let commandCenter = MPRemoteCommandCenter.shared()
         commandCenter.pauseCommand.isEnabled = true
@@ -78,9 +58,8 @@ class ZPAppleVideoNowPlayingInfo: ZPAppleVideoNowPlayingInfoBase {
         }
     }
 
-    func sendNowPlayingInitial() {
-        guard let playerPlugin = playerPlugin,
-            let entry = playerPlugin.entry else {
+    func sendNowPlayingInitial(player: PlayerProtocol) {
+        guard let entry = player.entry else {
             return
         }
 
@@ -95,8 +74,8 @@ class ZPAppleVideoNowPlayingInfo: ZPAppleVideoNowPlayingInfoBase {
         let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
         var nowPlayingInfo = [String: Any]()
         nowPlayingInfo[MPMediaItemPropertyTitle] = title
-        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = playerPlugin.playbackDuration()
-        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = playerPlugin.playbackPosition()
+        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = player.playbackDuration()
+        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.playbackPosition()
         nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = 1.0
         nowPlayingInfo[MPNowPlayingInfoPropertyExternalContentIdentifier] = contentId
         nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackProgress] = 0.0

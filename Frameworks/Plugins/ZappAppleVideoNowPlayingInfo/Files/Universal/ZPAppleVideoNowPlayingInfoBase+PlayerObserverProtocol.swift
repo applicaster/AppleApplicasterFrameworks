@@ -10,19 +10,19 @@ import ZappCore
 
 extension ZPAppleVideoNowPlayingInfoBase: PlayerObserverProtocol {
     func playerDidFinishPlayItem(player: PlayerProtocol, completion: @escaping (Bool) -> Void) {
-        //
+        //implement in child classes
     }
     
     func playerDidDismiss(player: PlayerProtocol) {
-        //
+        //implement in child classes
     }
     
     func playerProgressUpdate(player: PlayerProtocol, currentTime: TimeInterval, duration: TimeInterval) {
-        //
+        //implement in child classes
     }
     
     public func playerDidCreate(player: PlayerProtocol) {
-        prepareNowPlayingInfo()
+        //implement in child classes
     }
 }
 

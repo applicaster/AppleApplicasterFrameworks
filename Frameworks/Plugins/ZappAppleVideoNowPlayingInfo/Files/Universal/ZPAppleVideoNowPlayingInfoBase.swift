@@ -42,9 +42,4 @@ class ZPAppleVideoNowPlayingInfoBase: NSObject, PlayerDependantPluginProtocol {
     public func disable(completion: ((Bool) -> Void)?) {
         completion?(true)
     }
-
-    public func prepareNowPlayingInfo() {
-        //implement in child class
-    }
-
 }
