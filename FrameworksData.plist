@@ -19,13 +19,6 @@
 		<key>plugin</key>
 		<true/>
 	</dict>
-	<key>FirebaseBaseSettings</key>
-	<dict>
-		<key>version_id</key>
-		<string>2.0.0</string>
-		<key>plugin</key>
-		<true/>
-	</dict>
 	<key>ZappGoogleAnalytics</key>
 	<dict>
 		<key>version_id</key>
