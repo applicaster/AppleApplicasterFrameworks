@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc public protocol AppLoadingHookProtocol: NSObjectProtocol {
+@objc public protocol AppLoadingHookProtocol: PluginAdapterProtocol {
     /*
      Hook executed after State Machine Failed to Prepare the Application
      */

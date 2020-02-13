@@ -13,6 +13,10 @@ extension PluginsManager {
     func createLaunchHooksPlugins(completion: @escaping (() -> Void)) {
         let plugins = PluginsManager.getHookPlugins()
         var counter = plugins.count
+        guard counter > 0 else {
+            completion()
+            return
+        }
         for plugin in plugins {
             guard let pluginManager = pluginManager(identifier: plugin.identifier) else {
                 counter -= 1

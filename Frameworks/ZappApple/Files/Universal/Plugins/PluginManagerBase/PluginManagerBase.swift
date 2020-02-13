@@ -24,7 +24,6 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
     open var providers: [String: pluginTypeProtocol] = [:]
 
     func prepareManager(completion: PluginManagerCompletion) {
-        providers = [:]
         createProviders(completion: completion)
     }
 

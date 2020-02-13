@@ -30,10 +30,18 @@ extension PluginsManager {
         return pluginModels()?.first(where: { $0.pluginType?.rawValue == type })
     }
 
+    
+    /// Find all plugin models of a given type.
+    /// - parameter type: The type of plugin to search.
+    /// - returns: The first plugin found with the given type.
     @objc public class func pluginModels(_ type: String) -> [ZPPluginModel]? {
         return pluginModels()?.filter({ $0.pluginType?.rawValue == type })
     }
 
+    
+    /// Find all plugin models of a given type.
+    /// - Parameter type: The type of plugin enum to search.
+    /// - Returns: The first plugin found with the given type.
     public class func pluginModels(_ type: ZPPluginType) -> [ZPPluginModel]? {
         return pluginModels()?.filter({ $0.pluginType == type })
     }
@@ -46,6 +54,7 @@ extension PluginsManager {
         return pluginModels()?.first(where: { $0.identifier == pluginID })
     }
 
+    /// All availible plugin models
     static var allPluginModels: [ZPPluginModel]? = {
         var retVal: [ZPPluginModel]?
         guard let basePlugins = parseBasePluginsJson() else {
@@ -225,10 +234,12 @@ extension PluginsManager {
         return plugin
     }
 
+    /// Retrive list of all hooks plugins
     public class func getHookPlugins() -> [ZPPluginModel] {
         guard let pluginModels = PluginsManager.pluginModels() else {
             return []
         }
+
         return pluginModels.filter { $0.pluginRequireStartupExecution == true && (PluginsManager.adapterClass($0) as? AppLoadingHookProtocol.Type) != nil }
     }
 }
