@@ -36,7 +36,7 @@ extension ZPAppleVideoNowPlayingInfo {
 }
 
 extension ZPAppleVideoNowPlayingInfo {
-    
+
     public override func playerDidCreate(player: PlayerProtocol) {
         //docs https://help.apple.com/itc/tvpumcstyleguide/#/itc0c92df7c9
 
@@ -55,10 +55,11 @@ extension ZPAppleVideoNowPlayingInfo {
                               options: [],
                               context: nil)
     }
-    
+
     public override func playerDidDismiss(player: PlayerProtocol) {
         avPlayer?.removeObserver(self,
                                  forKeyPath: "rate",
                                  context: nil)
+        logger?.stop()
     }
 }
