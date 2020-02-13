@@ -14,10 +14,10 @@ min_acl: "private"
 sdk: [iphone, appletv]
 theme: jony
 custom_categories:
-  - name: Zapp App Root View Controller
+  - name: Zapp Root Controller
     children:
       - SplashViewController
-      - RootViewController
+      - RootController
       - AppDelegateProtocol
 
   - name: Plugins
@@ -30,8 +30,6 @@ custom_categories:
   - name: AppLoading
     children:
       - DataManager
-      - IdentityClient
-      - IdentityClientBase
       - LoadingManager
       - LoadingLoaderTypes
       - LoadingStateTypes
