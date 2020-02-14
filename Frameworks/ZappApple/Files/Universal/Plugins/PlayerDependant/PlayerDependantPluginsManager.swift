@@ -46,14 +46,18 @@ import ZappCore
     }
 
     func disableProvider(identifier: String, completion: PluginManagerCompletion) {
+        completion?(true)
     }
 
     func disableProviders(completion: PluginManagerCompletion) {
+        completion?(true)
     }
 
     func createProvider(identifier: String, forceEnable: Bool, completion: PluginManagerCompletion) {
+        completion?(true)
     }
 
     func createProviders(forceEnable: Bool, completion: PluginManagerCompletion) {
+        completion?(true)
     }
 }
