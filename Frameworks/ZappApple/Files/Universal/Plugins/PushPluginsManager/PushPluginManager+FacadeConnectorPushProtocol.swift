@@ -57,9 +57,9 @@ extension PushPluginsManager: FacadeConnectorPushProtocol {
         var retVal: [String: [String]] = [:]
         _providers.forEach { providerDict in
             let provider = providerDict.value
-            if let deviceTags = provider.getDeviceTags?(),
+            if let deviceTags = provider.getDeviceTags,
                 let pluginIdentifier = provider.model?.identifier {
-                retVal[pluginIdentifier] = deviceTags
+                retVal[pluginIdentifier] = deviceTags()
             }
         }
         return retVal

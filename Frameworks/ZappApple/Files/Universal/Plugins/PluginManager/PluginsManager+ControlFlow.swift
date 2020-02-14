@@ -15,6 +15,7 @@ public let kPluginDisabledValue = "false"
 extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
     public func disablePlugin(identifier: String, completion: ((_ success: Bool) -> Void)?) {
         guard let manager = pluginManager(identifier: identifier) else {
+            completion?(false)
             return
         }
 
@@ -22,9 +23,11 @@ extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
                                 completion: completion)
     }
 
-    public func disableAllPlugins(pluginType: String, completion: ((_ success: Bool) -> Void)?) {
+    public func disableAllPlugins(pluginType: String,
+                                  completion: ((_ success: Bool) -> Void)?) {
         guard let pluginType = ZPPluginType(rawValue: pluginType),
             let manager = pluginManager(type: pluginType) else {
+            completion?(false)
             return
         }
         manager.disableProviders(completion: completion)
@@ -32,6 +35,7 @@ extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
 
     public func enablePlugin(identifier: String, completion: ((_ success: Bool) -> Void)?) {
         guard let pluginManager = pluginManager(identifier: identifier) else {
+            completion?(false)
             return
         }
 
@@ -43,6 +47,7 @@ extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
     public func enableAllPlugins(pluginType: String, completion: ((_ success: Bool) -> Void)?) {
         guard let pluginType = ZPPluginType(rawValue: pluginType),
             let manager = pluginManager(type: pluginType) else {
+            completion?(false)
             return
         }
         manager.createProviders(forceEnable: true,

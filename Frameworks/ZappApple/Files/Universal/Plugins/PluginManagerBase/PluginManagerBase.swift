@@ -113,7 +113,6 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
         _ = FacadeConnector.connector?.storage?.sessionStorageSetValue(for: kPluginEnabled,
                                                                        value: kPluginDisabledValue,
                                                                        namespace: pluginModel.identifier)
-        completion?(true)
     }
 
     public func disableProviders(completion: PluginManagerCompletion) {
