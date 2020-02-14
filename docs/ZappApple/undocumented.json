@@ -1696,21 +1696,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
-      "line": 51,
+      "line": 52,
       "symbol": "PlayerDependantPluginsManager.disableProviders(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
-      "line": 54,
+      "line": 56,
       "symbol": "PlayerDependantPluginsManager.createProvider(identifier:forceEnable:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
-      "line": 57,
+      "line": 60,
       "symbol": "PlayerDependantPluginsManager.createProviders(forceEnable:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1738,14 +1738,14 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+ControlFlow.swift",
-      "line": 52,
+      "line": 57,
       "symbol": "PluginsManager.pluginManager(identifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+ControlFlow.swift",
-      "line": 61,
+      "line": 66,
       "symbol": "PluginsManager.pluginManager(type:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2179,21 +2179,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 119,
+      "line": 118,
       "symbol": "PluginManagerBase.disableProviders(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 136,
+      "line": 135,
       "symbol": "PluginManagerBase.isEnabled(pluginModel:forceEnable:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 170,
+      "line": 169,
       "symbol": "PluginManagerBase.hooksProviders()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
