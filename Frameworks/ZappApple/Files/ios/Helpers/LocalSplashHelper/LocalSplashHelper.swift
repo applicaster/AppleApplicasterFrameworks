@@ -50,6 +50,7 @@ public class LocalSplashHelper:NSObject {
     static private let localSplashImageIphone_667 = "LaunchImage-800-667h@2x"
     static private let localSplashImageIphone_736 = "LaunchImage-800-Portrait-736h@3x"
     static private let localSplashImageIphone_812 = "LaunchImage-1100-Portrait-2436h@3x"
+    static private let localSplashImageIphone_896 = "LaunchImage-1200-Portrait-2688h@3x"
     static private let localSplashImageIpadNonRetina_1024  = "LaunchImage-700-Landscape~ipad"
     static private let localSplashImageIpad_1024  = "LaunchImage-700-Landscape@2x~ipad"
     static private let localSplashImageIpad_1366  = "Default-1366h"
@@ -60,6 +61,7 @@ public class LocalSplashHelper:NSObject {
         case iphone667 = "-667h"
         case iphone736 = "-736h"
         case iphone812 = "-812h"
+        case iphone896 = "-896h"
         case ipad1024_1x = "_1x-ipad"
         case ipad1024 = "-ipad"
         case ipad1366 = "-ipad-1366h"
@@ -118,7 +120,12 @@ public class LocalSplashHelper:NSObject {
                     retVal = localSplashImageIphone_667
                 }
             } else if devicePortraitWidth == 414 {
-                retVal = localSplashImageIphone_736
+                if devicePortraitHeight == 896 {
+                    retVal = localSplashImageIphone_896
+                }
+                else {
+                    retVal = localSplashImageIphone_736
+                }
             }
         }
         
@@ -167,7 +174,12 @@ public class LocalSplashHelper:NSObject {
                 }
                 
             } else if devicePortraitWidth == 414 {
-                postix = .iphone736
+                if devicePortraitHeight == 896 {
+                    postix = .iphone896
+                }
+                else {
+                    postix = .iphone736
+                }
             }
             
         }
