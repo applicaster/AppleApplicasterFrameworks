@@ -124,7 +124,7 @@ public class LocalSplashHelper:NSObject {
                 }
             } else if devicePortraitWidth == 414 {
                 if devicePortraitHeight == 896 {
-                    if UIScreen.main.scale == 3 {
+                    if UIScreen.main.scale == 3.0 {
                         retVal = localSplashImageIphone_896_3x
                     }
                     else {
@@ -183,7 +183,7 @@ public class LocalSplashHelper:NSObject {
                 
             } else if devicePortraitWidth == 414 {
                 if devicePortraitHeight == 896 {
-                    if UIScreen.main.scale == 3 {
+                    if UIScreen.main.scale == 3.0 {
                         postix = .iphone896_3x
                     }
                     else {
