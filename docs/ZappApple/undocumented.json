@@ -2927,6 +2927,279 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 46,
+      "symbol": "LocalSplashHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 48,
+      "symbol": "LocalSplashHelper.localSplashImageIphone_480",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 49,
+      "symbol": "LocalSplashHelper.localSplashImageIphone_568",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 50,
+      "symbol": "LocalSplashHelper.localSplashImageIphone_667",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 51,
+      "symbol": "LocalSplashHelper.localSplashImageIphone_736",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 52,
+      "symbol": "LocalSplashHelper.localSplashImageIphone_812",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 53,
+      "symbol": "LocalSplashHelper.localSplashImageIphone_896",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 54,
+      "symbol": "LocalSplashHelper.localSplashImageIpadNonRetina_1024",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 55,
+      "symbol": "LocalSplashHelper.localSplashImageIpad_1024",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 56,
+      "symbol": "LocalSplashHelper.localSplashImageIpad_1366",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 58,
+      "symbol": "LocalSplashHelper.FilePostfixForSize",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 59,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.iphone480",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 59,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 60,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.iphone568",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 61,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.iphone667",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 62,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.iphone736",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 63,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.iphone812",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 64,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.iphone896",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 65,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.ipad1024_1x",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 66,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.ipad1024",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 67,
+      "symbol": "LocalSplashHelper.FilePostfixForSize.ipad1366",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 70,
+      "symbol": "LocalSplashHelper.localSplashImage(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 88,
+      "symbol": "LocalSplashHelper.localSplashImageNameForScreenSize()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 135,
+      "symbol": "LocalSplashHelper.localSplashVideoNameForScreenSize()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 139,
+      "symbol": "LocalSplashHelper.localBackgroundVideoNameForScreenSize(baseFileName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/LocalSplashHelper.swift",
+      "line": 190,
+      "symbol": "LocalSplashHelper.fileExist(fileName:fileExtension:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 12,
+      "symbol": "ScreenMultiplierConverter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 13,
+      "symbol": "ScreenMultiplierConverter.iPhone_667h",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 14,
+      "symbol": "ScreenMultiplierConverter.iPhone_736h",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 15,
+      "symbol": "ScreenMultiplierConverter.iPhone_812h",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 16,
+      "symbol": "ScreenMultiplierConverter.iPad_1366h",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 18,
+      "symbol": "ScreenMultiplierConverter.filesToDisableZoomMode",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 19,
+      "symbol": "ScreenMultiplierConverter.isZoomModeDisabled",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 39,
+      "symbol": "ScreenMultiplierConverter.iPhoneMinPortraitWidth",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 40,
+      "symbol": "ScreenMultiplierConverter.iPadMinPortraitWidth",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 42,
+      "symbol": "ScreenMultiplierConverter.convertedValueForScreenMultiplier(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 47,
+      "symbol": "ScreenMultiplierConverter.screenMultiplier()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 61,
+      "symbol": "ScreenMultiplierConverter.deviceWidth()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/LocalSplashHelper/ScreenMultiplierConverter.swift",
+      "line": 74,
+      "symbol": "ScreenMultiplierConverter.deviceHeight()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
       "line": 14,
       "symbol": "MsAppCenterDistributionHandler",
