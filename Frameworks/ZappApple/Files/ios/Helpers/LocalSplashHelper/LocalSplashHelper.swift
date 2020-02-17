@@ -50,27 +50,30 @@ public class LocalSplashHelper:NSObject {
     static private let localSplashImageIphone_667 = "LaunchImage-800-667h@2x"
     static private let localSplashImageIphone_736 = "LaunchImage-800-Portrait-736h@3x"
     static private let localSplashImageIphone_812 = "LaunchImage-1100-Portrait-2436h@3x"
-    static private let localSplashImageIphone_896 = "LaunchImage-1200-Portrait-2688h@3x"
+    static private let localSplashImageIphone_896_2x = "LaunchImage-1200-Portrait-1792h@2x"
+    static private let localSplashImageIphone_896_3x = "LaunchImage-1200-Portrait-2688h@3x"
     static private let localSplashImageIpadNonRetina_1024  = "LaunchImage-700-Landscape~ipad"
     static private let localSplashImageIpad_1024  = "LaunchImage-700-Landscape@2x~ipad"
     static private let localSplashImageIpad_1366  = "Default-1366h"
-    
+
     enum FilePostfixForSize: String {
         case none, iphone480 = ""
         case iphone568 = "-568h"
         case iphone667 = "-667h"
         case iphone736 = "-736h"
         case iphone812 = "-812h"
-        case iphone896 = "-896h"
+        case iphone896_3x = "-896h-3x"
+        case iphone896_2x = "-896h-2x"
+
         case ipad1024_1x = "_1x-ipad"
         case ipad1024 = "-ipad"
         case ipad1366 = "-ipad-1366h"
     }
-    
+
     public class func localSplashImage(for presentingViewController: UIViewController) -> UIImage? {
         // Rotate the splash image for iPhone
         var image = UIImage(named: LocalSplashHelper.localSplashImageNameForScreenSize())
-        
+
         if UIDevice.current.userInterfaceIdiom == .phone,
             let cgImage = image?.cgImage {
             switch (presentingViewController.preferredInterfaceOrientationForPresentation) {
@@ -121,43 +124,48 @@ public class LocalSplashHelper:NSObject {
                 }
             } else if devicePortraitWidth == 414 {
                 if devicePortraitHeight == 896 {
-                    retVal = localSplashImageIphone_896
+                    if UIScreen.main.scale == 3 {
+                        retVal = localSplashImageIphone_896_3x
+                    }
+                    else {
+                        retVal = localSplashImageIphone_896_2x
+                    }
                 }
                 else {
                     retVal = localSplashImageIphone_736
                 }
             }
         }
-        
+
         return retVal
     }
-    
+
     public class func localSplashVideoNameForScreenSize() -> String {
         return LocalSplashHelper.localBackgroundVideoNameForScreenSize(baseFileName: "local_splash_video")
     }
-    
+
     public class func localBackgroundVideoNameForScreenSize(baseFileName: String) -> String {
         var postix: FilePostfixForSize = .none
-        
+
         let devicePortraitWidth = ScreenMultiplierConverter.deviceWidth()
         let devicePortraitHeight = ScreenMultiplierConverter.deviceHeight()
-        
+
         if UIDevice.current.userInterfaceIdiom == .pad {
             postix = .ipad1024
-            
+
             if devicePortraitWidth == 768 {
                 if UIScreen.main.scale >= 2.0 {
                     postix = .ipad1024
                 } else {
                     postix = .ipad1024_1x
                 }
-                
+
             } else if devicePortraitWidth == 1024 {
                 postix = .ipad1366
             }
         } else if UIDevice.current.userInterfaceIdiom == .phone {
             postix = .iphone568
-            
+
             if devicePortraitWidth == 320 {
                 let size = UIScreen.main.bounds.size
                 if size.width == 568 || size.height == 568 {
@@ -175,18 +183,23 @@ public class LocalSplashHelper:NSObject {
                 
             } else if devicePortraitWidth == 414 {
                 if devicePortraitHeight == 896 {
-                    postix = .iphone896
+                    if UIScreen.main.scale == 3 {
+                        postix = .iphone896_3x
+                    }
+                    else {
+                        postix = .iphone896_2x
+                    }
                 }
                 else {
                     postix = .iphone736
                 }
             }
-            
+
         }
-        
+
         return baseFileName + postix.rawValue
     }
-    
+
     private class func fileExist(fileName:String, fileExtension:String) -> Bool {
         return (Bundle.main.path(forResource: fileName,
                                  ofType: fileExtension) != nil) ? true : false
