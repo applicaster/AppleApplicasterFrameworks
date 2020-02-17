@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'ZappApple'
-  s.version = '0.6.1'
+  s.version = '0.6.2'
   s.summary = 'Framework that has general logic of the Zapp Apple application'
   s.ios.deployment_target = '11.0'
   s.tvos.deployment_target = '11.0'

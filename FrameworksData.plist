@@ -10,7 +10,7 @@
 	<key>ZappApple</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.6.1</string>
+		<string>0.6.2</string>
 	</dict>
 	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>
@@ -36,7 +36,7 @@
 	<key>ZappAppleVideoSubscriptionRegistration</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.1.6</string>
+		<string>0.1.7</string>
 		<key>plugin</key>
 		<true/>
 	</dict>

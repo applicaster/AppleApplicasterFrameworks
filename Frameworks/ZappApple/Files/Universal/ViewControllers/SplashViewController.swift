@@ -77,9 +77,9 @@ class SplashViewController: UIViewController {
     }
     
     func addSplashImage() {
+        
         // Check issue if future - https://stackoverflow.com/questions/19410066/ios-7-xcode-5-access-device-launch-images-programmatically
-        // Need to add APLocalSplashHelper
-        self.imageView?.image = UIImage(named: AssetsKeys.splashImageKey)
+        self.imageView?.image = LocalSplashHelper.localSplashImage(for: self)
     }
     
     func callLoadingCompletion() {
