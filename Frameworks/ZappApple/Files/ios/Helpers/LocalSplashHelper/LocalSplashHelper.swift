@@ -50,8 +50,8 @@ public class LocalSplashHelper:NSObject {
     static private let localSplashImageIphone_667 = "LaunchImage-800-667h@2x"
     static private let localSplashImageIphone_736 = "LaunchImage-800-Portrait-736h@3x"
     static private let localSplashImageIphone_812 = "LaunchImage-1100-Portrait-2436h@3x"
-    static private let localSplashImageIphone_896_2x = "LaunchImage-1200-Portrait-1792h@2x"
-    static private let localSplashImageIphone_896_3x = "LaunchImage-1200-Portrait-2688h@3x"
+    static private let localSplashImageIphone_896 = "LaunchImage-1200-Portrait-1792h@2x"
+    static private let localSplashImageIphone_1242 = "LaunchImage-1200-Portrait-2688h@3x"
     static private let localSplashImageIpadNonRetina_1024  = "LaunchImage-700-Landscape~ipad"
     static private let localSplashImageIpad_1024  = "LaunchImage-700-Landscape@2x~ipad"
     static private let localSplashImageIpad_1366  = "Default-1366h"
@@ -62,8 +62,8 @@ public class LocalSplashHelper:NSObject {
         case iphone667 = "-667h"
         case iphone736 = "-736h"
         case iphone812 = "-812h"
-        case iphone896_3x = "-896h-3x"
-        case iphone896_2x = "-896h-2x"
+        case iphone896 = "-896h"
+        case iphone1242 = "-1242h"
 
         case ipad1024_1x = "_1x-ipad"
         case ipad1024 = "-ipad"
@@ -87,10 +87,10 @@ public class LocalSplashHelper:NSObject {
         }
         return image
     }
-    
+
     public class func localSplashImageNameForScreenSize() -> String {
         var retVal = ""
-     
+
         let devicePortraitWidth = ScreenMultiplierConverter.deviceWidth()
         let devicePortraitHeight = ScreenMultiplierConverter.deviceHeight()
 
@@ -125,10 +125,10 @@ public class LocalSplashHelper:NSObject {
             } else if devicePortraitWidth == 414 {
                 if devicePortraitHeight == 896 {
                     if UIScreen.main.scale == 3.0 {
-                        retVal = localSplashImageIphone_896_3x
+                        retVal = localSplashImageIphone_1242
                     }
                     else {
-                        retVal = localSplashImageIphone_896_2x
+                        retVal = localSplashImageIphone_896
                     }
                 }
                 else {
@@ -180,14 +180,14 @@ public class LocalSplashHelper:NSObject {
                 else {
                     postix = .iphone667
                 }
-                
+
             } else if devicePortraitWidth == 414 {
                 if devicePortraitHeight == 896 {
                     if UIScreen.main.scale == 3.0 {
-                        postix = .iphone896_3x
+                        postix = .iphone1242
                     }
                     else {
-                        postix = .iphone896_2x
+                        postix = .iphone896
                     }
                 }
                 else {

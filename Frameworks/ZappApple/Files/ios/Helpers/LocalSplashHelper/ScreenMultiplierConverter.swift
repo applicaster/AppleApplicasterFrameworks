@@ -13,11 +13,11 @@ open class ScreenMultiplierConverter:NSObject {
     private static let iPhone_667h = "LaunchImage-800-667h"
     private static let iPhone_736h = "LaunchImage-800-Portrait-736h"
     private static let iPhone_812h = "LaunchImage-1100-Portrait-2436h"
-    private static let iPhone_896h_2 = "LaunchImage-1200-Portrait-1792h"
-    private static let iPhone_896h_3 = "LaunchImage-1200-Portrait-2688h"
+    private static let iPhone_896h = "LaunchImage-1200-Portrait-1792h"
+    private static let iPhone_1242h = "LaunchImage-1200-Portrait-2688h"
     private static let iPad_1366h  = "Default-1366h"
 
-    private static let filesToDisableZoomMode = [iPhone_667h, iPhone_736h, iPhone_812h, iPhone_896h, iPhone_896h_2, iPhone_896h_3]
+    private static let filesToDisableZoomMode = [iPhone_667h, iPhone_736h, iPhone_812h, iPhone_896h, iPhone_896h, iPhone_1242h]
     private static var isZoomModeDisabled:Bool = {
         var retVal = true
 
