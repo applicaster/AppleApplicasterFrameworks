@@ -190,7 +190,7 @@ async function uploadFrameworksToCocoaPodsPublic(itemsToUpdate) {
   console.log("Publishing to CocoaPods public repo\n");
   try {
     await shell.exec(
-      `pod cache clean --all && pod repo add ApplicasterSpecs || true`
+      `pod cache clean --all && pod repo add ApplicasterSpecs git@github.com:applicaster/CocoaPods.git || true`
     );
     const result = await runInSequence(itemsToUpdate, async model => {
       const { framework = null, plugin = null } = model;
