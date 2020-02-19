@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'ZappApple'
-  s.version = '0.6.4'
+  s.version = '0.6.5'
   s.summary = 'Framework that has general logic of the Zapp Apple application'
   s.ios.deployment_target = '11.0'
   s.tvos.deployment_target = '11.0'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
   s.license = 'Appache 2.0'
   s.author = { 'a.kononenko@applicaster.com' => 'a.kononenko@applicaster.com' }
-  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.2.19.22-2-2" }
+  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.2.19.23-2-8" }
 
   s.ios.xcconfig =  {
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'ZappCore'
   s.dependency 'ReachabilitySwift', '= 5.0.0'
-  s.ios.dependency 'AppCenter/Distribute', '= 3.0.0'
+  s.ios.dependency 'AppCenter/Distribute', '= 2.5.3'
 
   s.source_files = 'Frameworks/ZappApple/Files/Universal/**/*.{h,m,swift}'
   s.ios.source_files = 'Frameworks/ZappApple/Files/ios/**/*.{swift}'
