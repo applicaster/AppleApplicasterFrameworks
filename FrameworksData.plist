@@ -5,12 +5,12 @@
 	<key>ZappCore</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.8.1</string>
+		<string>0.8.2</string>
 	</dict>
 	<key>ZappApple</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.6.3</string>
+		<string>0.6.4</string>
 	</dict>
 	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>

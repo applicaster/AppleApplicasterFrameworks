@@ -49,6 +49,7 @@ async function run() {
     console.log({ itemsToUpdate });
     await updateRelevantTemplates(itemsToUpdate, newGitTag);
     await unitTestAndGenerateDocumentation(itemsToUpdate);
+    await uploadFrameworksToCocoaPodsPublic(itemsToUpdate);
     await updateFrameworksVersionsInGeneralDocs(frameworksList);
     await updateAutomationVersionsDataJSON(newAutomationObject);
     await uploadNpmPackages(itemsToUpdate);
@@ -177,6 +178,24 @@ async function unitTestAndGenerateDocumentation(itemsToUpdate) {
         -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.3' \
         clean build test | tee xcodebuild.log | xcpretty --report html --output report.html`);
         await shell.exec(`cd ${baseFolderPath} && bundle exec jazzy`);
+      }
+    });
+    return result;
+  } catch (e) {
+    abort(e.message);
+  }
+}
+
+async function uploadFrameworksToCocoaPodsPublic(itemsToUpdate) {
+  console.log("Publishing to CocoaPods public repo\n");
+  try {
+    const result = await runInSequence(itemsToUpdate, async model => {
+      const { framework = null, plugin = null } = model;
+      if (framework && !plugin) {
+        console.log(`\nTrying to push CocoaPods framework:${framework}\n`);
+        await shell.exec(
+          `pod cache clean --all && pod repo push --verbose --no-private --allow-warnings --skip-import-validation --sources=https://github.com/applicaster/CocoaPods.git ${framework.podspec}`
+        );
       }
     });
     return result;
