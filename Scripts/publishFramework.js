@@ -49,12 +49,12 @@ async function run() {
     console.log({ itemsToUpdate });
     await updateRelevantTemplates(itemsToUpdate, newGitTag);
     await unitTestAndGenerateDocumentation(itemsToUpdate);
-    await uploadFrameworksToCocoaPodsPublic(itemsToUpdate);
     await updateFrameworksVersionsInGeneralDocs(frameworksList);
     await updateAutomationVersionsDataJSON(newAutomationObject);
     await uploadNpmPackages(itemsToUpdate);
     await uploadManifestsToZapp(itemsToUpdate);
     await commitChangesPushAndTag(itemsToUpdate, newGitTag);
+    await uploadFrameworksToCocoaPodsPublic(itemsToUpdate);
   }
   console.log("System update has been finished!");
 }
