@@ -193,10 +193,10 @@ async function uploadFrameworksToCocoaPodsPublic(itemsToUpdate) {
       const { framework = null, plugin = null } = model;
       if (framework && !plugin) {
         console.log(`\nTrying to push CocoaPods framework:${framework}\n`);
+        await shell.exec(
+          `pod cache clean --all && pod repo push --verbose --no-private --allow-warnings --skip-import-validation --sources=https://github.com/applicaster/CocoaPods.git ${framework.podspec}`
+        );
       }
-      await shell.exec(
-        `pod cache clean --all && pod repo push --verbose --no-private --allow-warnings --skip-import-validation --sources=https://github.com/applicaster/CocoaPods.git ${framework.podspec}`
-      );
     });
     return result;
   } catch (e) {
