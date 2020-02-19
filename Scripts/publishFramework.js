@@ -189,12 +189,15 @@ async function unitTestAndGenerateDocumentation(itemsToUpdate) {
 async function uploadFrameworksToCocoaPodsPublic(itemsToUpdate) {
   console.log("Publishing to CocoaPods public repo\n");
   try {
+    await shell.exec(
+      `pod cache clean --all && pod repo add ApplicasterSpecs || true`
+    );
     const result = await runInSequence(itemsToUpdate, async model => {
       const { framework = null, plugin = null } = model;
       if (framework && !plugin) {
         console.log(`\nTrying to push CocoaPods framework:${framework}\n`);
         await shell.exec(
-          `pod cache clean --all && pod repo add ApplicasterSpecs git@github.com:applicaster/CocoaPods.git || true && pod repo push --verbose --no-private --allow-warnings --skip-import-validation ApplicasterSpecs ./${framework}.podspec`
+          `pod repo update || true && pod repo push --verbose --no-private --allow-warnings --use-libraries --skip-import-validation ApplicasterSpecs ./${framework}.podspec`
         );
       }
     });
