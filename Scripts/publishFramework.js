@@ -129,6 +129,7 @@ async function uploadManifestsToZapp(itemsToUpdate) {
       const { framework = null, plugin = null } = model;
 
       const zappToken = process.env["ZAPP_TOKEN"];
+      const zappAccount = process.env["ZAPP_ACCOUNT"];
       if (plugin && zappToken) {
         console.log(`Uploading manifests for: ${framework}`);
 
@@ -145,12 +146,12 @@ async function uploadManifestsToZapp(itemsToUpdate) {
 
         if (iosManifestPath && fs.existsSync(iosManifestPath)) {
           await shell.exec(
-            `zappifest publish --manifest ${iosManifestPath} --access-token ${zappToken}`
+            `zappifest publish --manifest ${iosManifestPath} --access-token ${zappToken} --account ${zappAccount}`
           );
         }
         if (tvosManifestPath && fs.existsSync(tvosManifestPath)) {
           await shell.exec(
-            `zappifest publish --manifest ${tvosManifestPath} --access-token ${zappToken}`
+            `zappifest publish --manifest ${tvosManifestPath} --access-token ${zappToken} --account ${zappAccount}`
           );
         }
       }
