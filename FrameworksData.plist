@@ -50,7 +50,7 @@
 	<key>FirebaseBaseSettings</key>
 	<dict>
 		<key>version_id</key>
-		<string>2.0.3</string>
+		<string>2.0.4</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
