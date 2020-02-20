@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "FirebaseBaseSettings"
-  s.version          = '2.0.2'
+  s.version          = '2.0.3'
   s.summary          = "FirebaseBaseSettings"
   s.description      = <<-DESC
   FirebaseBaseSettings container.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', 
-                         :tag => '2020.2.20.19-2-3'  }
+                         :tag => '2020.2.20.22-2-3'  }
   s.platform         = :ios, '11.0'
   s.requires_arc = true
   s.static_framework = true
