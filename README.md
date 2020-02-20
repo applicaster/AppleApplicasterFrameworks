@@ -81,7 +81,7 @@ This respository is the main container for general frameworks and plugins for [Z
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
 
-##### Firebase Base Settings: *2.0.1*
+##### Firebase Base Settings: *2.0.2*
 - **Description:** This plugin provides GoogleService-Info.plist that require for all Firebase plugins. Also plugin make intialization of the Firebase.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/FirebaseBaseSettings/index.html)
 - **Manifest:**
@@ -531,3 +531,4 @@ Dictionary
         - Update Frameworks list template `Readme.md.ejs` to update latest availible framework version for documentation.
         - Update file `.versions_automation.json` with latest changes if format `{framework_name:version_id}`
         - Commit, push and create tag git repo
+	- Push Framework to [Cocoapods-Applicaster public repo](https://github.com/applicaster/CocoaPods) (Frameworks only )
