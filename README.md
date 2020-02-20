@@ -81,7 +81,7 @@ This respository is the main container for general frameworks and plugins for [Z
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
 
-##### Firebase Base Settings: *2.0.3*
+##### Firebase Base Settings: *2.0.4*
 - **Description:** This plugin provides GoogleService-Info.plist that require for all Firebase plugins. Also plugin make intialization of the Firebase.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/FirebaseBaseSettings/index.html)
 - **Manifest:**
