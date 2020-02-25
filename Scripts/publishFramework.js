@@ -54,6 +54,7 @@ async function run() {
     await uploadNpmPackages(itemsToUpdate);
     await uploadManifestsToZapp(itemsToUpdate);
     await commitChangesPushAndTag(itemsToUpdate, newGitTag);
+    await uploadFrameworksToCocoaPodsPublic(itemsToUpdate);
   }
   console.log("System update has been finished!");
 }
@@ -128,6 +129,7 @@ async function uploadManifestsToZapp(itemsToUpdate) {
       const { framework = null, plugin = null } = model;
 
       const zappToken = process.env["ZAPP_TOKEN"];
+      const zappAccount = process.env["ZAPP_ACCOUNT"];
       if (plugin && zappToken) {
         console.log(`Uploading manifests for: ${framework}`);
 
@@ -144,12 +146,12 @@ async function uploadManifestsToZapp(itemsToUpdate) {
 
         if (iosManifestPath && fs.existsSync(iosManifestPath)) {
           await shell.exec(
-            `zappifest publish --manifest ${iosManifestPath} --access-token ${zappToken}`
+            `zappifest publish --manifest ${iosManifestPath} --access-token ${zappToken} --account ${zappAccount}`
           );
         }
         if (tvosManifestPath && fs.existsSync(tvosManifestPath)) {
           await shell.exec(
-            `zappifest publish --manifest ${tvosManifestPath} --access-token ${zappToken}`
+            `zappifest publish --manifest ${tvosManifestPath} --access-token ${zappToken} --account ${zappAccount}`
           );
         }
       }
@@ -177,6 +179,27 @@ async function unitTestAndGenerateDocumentation(itemsToUpdate) {
         -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.3' \
         clean build test | tee xcodebuild.log | xcpretty --report html --output report.html`);
         await shell.exec(`cd ${baseFolderPath} && bundle exec jazzy`);
+      }
+    });
+    return result;
+  } catch (e) {
+    abort(e.message);
+  }
+}
+
+async function uploadFrameworksToCocoaPodsPublic(itemsToUpdate) {
+  console.log("Publishing to CocoaPods public repo\n");
+  try {
+    await shell.exec(
+      `pod cache clean --all && pod repo add ApplicasterSpecs git@github.com:applicaster/CocoaPods.git || true`
+    );
+    const result = await runInSequence(itemsToUpdate, async model => {
+      const { framework = null, plugin = null } = model;
+      if (framework && !plugin) {
+        console.log(`\nTrying to push CocoaPods framework:${framework}\n`);
+        await shell.exec(
+          `pod repo update || true && pod repo push --verbose --no-private --allow-warnings --use-libraries --skip-import-validation ApplicasterSpecs ./${framework}.podspec`
+        );
       }
     });
     return result;
