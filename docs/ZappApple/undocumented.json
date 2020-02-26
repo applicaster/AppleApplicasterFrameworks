@@ -1513,6 +1513,48 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UrlScheme/UrlSchemeHandler+generateNewUUID.swift",
+      "line": 12,
+      "symbol": "UrlSchemeHandler.handleUUIDregeneration(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UrlScheme/UrlSchemeHandler.swift",
+      "line": 10,
+      "symbol": "UrlSchemeHandler",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UrlScheme/UrlSchemeHandler.swift",
+      "line": 11,
+      "symbol": "UrlSchemeHandler",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UrlScheme/UrlSchemeHandler.swift",
+      "line": 12,
+      "symbol": "UrlSchemeHandler.SystemActions",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UrlScheme/UrlSchemeHandler.swift",
+      "line": 13,
+      "symbol": "UrlSchemeHandler.SystemActions.generateNewUUID",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UrlScheme/UrlSchemeHandler.swift",
+      "line": 16,
+      "symbol": "UrlSchemeHandler.handle(with:application:open:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UserInterfaceLayerManager/UserInterfaceLayerManager.swift",
       "line": 12,
       "symbol": "UserInterfaceLayerManager",
