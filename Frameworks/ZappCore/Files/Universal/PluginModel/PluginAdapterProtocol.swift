@@ -10,7 +10,7 @@ import Foundation
 /// Base Zapp Plugin protocol
 @objc public protocol PluginAdapterProtocol: NSObjectProtocol {
     /// Initialize with plugin model
-    /// - Parameter plugin: Dictionary with configuration params that passed  from ZPPluginModel
+    /// - Parameter pluginModel: Dictionary with configuration params that passed  from ZPPluginModel
     init(pluginModel: ZPPluginModel)
 
     /// Zapp Plugin Model
@@ -25,7 +25,7 @@ import Foundation
     /// - Parameters:
     ///   - defaultParams: default parameters of the plugin
     ///   - completion: Completion handler that notify app level that component  ready to  be presented or fail
-    ///   - isReady: notify callback if analytics plugin is ready for use
+    ///     - isReady: notify callback if analytics plugin is ready for use
     func prepareProvider(_ defaultParams: [String: Any],
                          completion: ((_ isReady: Bool) -> Void)?)
 
