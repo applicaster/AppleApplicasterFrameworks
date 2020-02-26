@@ -162,9 +162,9 @@ extension PluginsManager {
 // MARK: ExecuteOnContinuingUserActivity
 //TODO: This hook does not implemented on call
 extension PluginsManager {
-    func hookAfterOnContinuingUserActivity(userActivity: NSUserActivity,
-                                           hooksPlugins: [AppLoadingHookProtocol]?,
-                                           completion: @escaping (() -> Void)) {
+    public func hookOnContinuingUserActivity(userActivity: NSUserActivity,
+                                             hooksPlugins: [AppLoadingHookProtocol]?,
+                                             completion: @escaping (() -> Void)) {
         var plugins = hooksPlugins ?? retrieveHooksPlugins()
         guard plugins.count > 0 else {
             completion()
@@ -173,9 +173,9 @@ extension PluginsManager {
         let adapter = plugins.removeFirst()
         hookAdapterOnContinuingUserActivity(userActivity: userActivity,
                                             adapter: adapter) { [weak self] in
-            self?.hookAfterOnContinuingUserActivity(userActivity: userActivity,
-                                                    hooksPlugins: plugins,
-                                                    completion: completion)
+            self?.hookOnContinuingUserActivity(userActivity: userActivity,
+                                               hooksPlugins: plugins,
+                                               completion: completion)
         }
     }
 
@@ -188,5 +188,15 @@ extension PluginsManager {
         }
         executeOnContinuingUserActivity(userActivity,
                                         completion)
+    }
+    
+    public func hasHooksForContinuingUserActivity() -> Bool {
+        let plugins = retrieveHooksPlugins().filter { (adapter) -> Bool in
+            guard let _ = adapter.executeOnContinuingUserActivity else {
+                return false
+            }
+            return true
+        }
+        return plugins.count > 0
     }
 }

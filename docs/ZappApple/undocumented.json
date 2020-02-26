@@ -142,16 +142,30 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
-      "line": 10,
+      "line": 11,
       "symbol": "UUIDKey",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "UUIDManager",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
+      "line": 39,
+      "symbol": "UUIDManager.fetchOrCreateNewKey()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
+      "line": 43,
+      "symbol": "UUIDManager.regenerateUUID()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
@@ -1823,7 +1837,7 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
       "line": 165,
-      "symbol": "PluginsManager.hookAfterOnContinuingUserActivity(userActivity:hooksPlugins:completion:)",
+      "symbol": "PluginsManager.hookOnContinuingUserActivity(userActivity:hooksPlugins:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1831,6 +1845,13 @@
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
       "line": 182,
       "symbol": "PluginsManager.hookAdapterOnContinuingUserActivity(userActivity:adapter:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
+      "line": 193,
+      "symbol": "PluginsManager.hasHooksForContinuingUserActivity()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
