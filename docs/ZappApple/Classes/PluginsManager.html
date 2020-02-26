@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappApple 0.6.7 Docs</a>
+          <a href="../index.html">ZappApple 0.6.8 Docs</a>
           <span class="no-mobile"> (23% documented)</span>
         </p>
     
@@ -980,9 +980,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:9ZappApple14PluginsManagerC33hookAfterOnContinuingUserActivity04userJ005hooksC010completionySo06NSUserJ0C_Say0A4Core22AppLoadingHookProtocol_pGSgyyctF"></a>
-                      <a name="//apple_ref/swift/Method/hookAfterOnContinuingUserActivity(userActivity:hooksPlugins:completion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:9ZappApple14PluginsManagerC33hookAfterOnContinuingUserActivity04userJ005hooksC010completionySo06NSUserJ0C_Say0A4Core22AppLoadingHookProtocol_pGSgyyctF">hookAfterOnContinuingUserActivity(userActivity:hooksPlugins:completion:)</a>
+                      <a name="/s:9ZappApple14PluginsManagerC28hookOnContinuingUserActivity04userI005hooksC010completionySo06NSUserI0C_Say0A4Core22AppLoadingHookProtocol_pGSgyyctF"></a>
+                      <a name="//apple_ref/swift/Method/hookOnContinuingUserActivity(userActivity:hooksPlugins:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14PluginsManagerC28hookOnContinuingUserActivity04userI005hooksC010completionySo06NSUserI0C_Say0A4Core22AppLoadingHookProtocol_pGSgyyctF">hookOnContinuingUserActivity(userActivity:hooksPlugins:completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -997,9 +997,9 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hookAfterOnContinuingUserActivity</span><span class="p">(</span><span class="nv">userActivity</span><span class="p">:</span> <span class="kt">NSUserActivity</span><span class="p">,</span>
-                                       <span class="nv">hooksPlugins</span><span class="p">:</span> <span class="p">[</span><span class="kt">AppLoadingHookProtocol</span><span class="p">]?,</span>
-                                       <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hookOnContinuingUserActivity</span><span class="p">(</span><span class="nv">userActivity</span><span class="p">:</span> <span class="kt">NSUserActivity</span><span class="p">,</span>
+                                         <span class="nv">hooksPlugins</span><span class="p">:</span> <span class="p">[</span><span class="kt">AppLoadingHookProtocol</span><span class="p">]?,</span>
+                                         <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                           </div>
                         </div>
@@ -1029,6 +1029,33 @@
                             <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hookAdapterOnContinuingUserActivity</span><span class="p">(</span><span class="nv">userActivity</span><span class="p">:</span> <span class="kt">NSUserActivity</span><span class="p">,</span>
                                          <span class="nv">adapter</span><span class="p">:</span> <span class="kt">AppLoadingHookProtocol</span><span class="p">,</span>
                                          <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14PluginsManagerC33hasHooksForContinuingUserActivitySbyF"></a>
+                      <a name="//apple_ref/swift/Method/hasHooksForContinuingUserActivity()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14PluginsManagerC33hasHooksForContinuingUserActivitySbyF">hasHooksForContinuingUserActivity()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasHooksForContinuingUserActivity</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                           </div>
                         </div>

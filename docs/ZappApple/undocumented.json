@@ -1823,7 +1823,7 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
       "line": 165,
-      "symbol": "PluginsManager.hookAfterOnContinuingUserActivity(userActivity:hooksPlugins:completion:)",
+      "symbol": "PluginsManager.hookOnContinuingUserActivity(userActivity:hooksPlugins:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1831,6 +1831,13 @@
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
       "line": 182,
       "symbol": "PluginsManager.hookAdapterOnContinuingUserActivity(userActivity:adapter:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
+      "line": 193,
+      "symbol": "PluginsManager.hasHooksForContinuingUserActivity()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
