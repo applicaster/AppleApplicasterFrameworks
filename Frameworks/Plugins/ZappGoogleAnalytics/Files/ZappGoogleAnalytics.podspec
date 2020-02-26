@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "ZappGoogleAnalytics"
-s.version          = '0.7.0'
+s.version          = '0.7.1'
 s.summary          = "ZappGoogleAnalytics"
 s.swift_versions = '5.1'
 s.description      = <<-DESC
@@ -10,7 +10,7 @@ s.homepage         = "https://applicaster.com"
 s.license = 'Appache 2.0'
 s.author           = { "cmps" => "a.zchut@applicaster.com" }
 s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-:tag => '2020.2.4.19-2-2' }
+:tag => '2020.2.26.21-2-9' }
 s.platform = :tvos, :ios
 s.tvos.deployment_target = "10.0"
 s.ios.deployment_target = '10.0'
@@ -18,6 +18,7 @@ s.ios.deployment_target = '10.0'
 s.dependency 'ZappCore'
 
 s.requires_arc = true
+s.static_framework = true
 
 s.source_files = ['Universal/**/*.{swift}']
 
