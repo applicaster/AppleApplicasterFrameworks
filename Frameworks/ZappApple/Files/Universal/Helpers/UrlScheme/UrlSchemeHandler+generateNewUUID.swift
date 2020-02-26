@@ -9,7 +9,7 @@ import Foundation
 import ZappCore
 
 extension UrlSchemeHandler {
-    class func handleUUIDregeneration() -> Bool {
+    class func handleUUIDregeneration(with rootViewController: RootController?) -> Bool {
         let title = "Do you want to regenerate UUID?"
         let description = "New UUID will replace the old one and the app will be completely reloaded"
         let yesTitle = "Yes"
@@ -23,24 +23,24 @@ extension UrlSchemeHandler {
                                          style: .destructive,
                                          handler: { _ in
                                             UUIDManager.regenerateUUID()
-                                            RootController.currentInstance?.reloadApplication()
+                                            rootViewController?.reloadApplication()
         })
 
         let noButton = UIAlertAction(title: noTitle,
                                          style: .default,
                                          handler: { _ in
                                             alert.dismiss(animated: true, completion: {
-                                                RootController.currentInstance?.makeInterfaceLayerAsRootViewContoroller()
+                                                rootViewController?.makeInterfaceLayerAsRootViewContoroller()
                                             })
         })
 
         alert.addAction(yesButton)
         alert.addAction(noButton)
 
-        RootController.currentInstance?.makeSplashAsRootViewContoroller()
-        RootController.currentInstance?.splashViewController?.present(alert,
-                                                                      animated: true,
-                                                                      completion: nil)
+        rootViewController?.makeSplashAsRootViewContoroller()
+        rootViewController?.splashViewController?.present(alert,
+                                                          animated: true,
+                                                          completion: nil)
 
         return true
     }

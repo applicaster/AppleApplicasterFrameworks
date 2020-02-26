@@ -13,16 +13,19 @@ public class UrlSchemeHandler {
         case generateNewUUID
     }
     
-    public class func handle(_ application: UIApplication,
-                           open url: URL,
-                           options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+    public class func handle(with rootViewController: RootController?,
+                             application: UIApplication,
+                             open url: URL,
+                             options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         
         var retValue = false
-        let systemAction = SystemActions(rawValue: url.host ?? "")
+        //create action with string
+        let action = SystemActions(rawValue: url.host ?? "")
         
-        switch systemAction {
+        //check if action defined anc call its implementation or skip
+        switch action {
         case .generateNewUUID:
-            retValue = self.handleUUIDregeneration()
+            retValue = self.handleUUIDregeneration(with: rootViewController)
         default:
             break
         }

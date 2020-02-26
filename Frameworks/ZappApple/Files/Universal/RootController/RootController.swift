@@ -28,13 +28,6 @@ public class RootController: NSObject {
     public lazy var facadeConnector: FacadeConnector = {
         FacadeConnector(connectorProvider: self)
     }()
-    
-    public static var currentInstance: RootController? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegateProtocol else {
-            return nil
-        }
-        return appDelegate.rootController
-    }
 
     public override init() {
         super.init()
