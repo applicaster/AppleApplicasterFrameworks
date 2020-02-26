@@ -141,7 +141,7 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
         guard forceEnable == false else {
             return retVal
         }
-        
+
         // In case plugin not forcing enable, but plugin was already created
         // Probably plugin was created for Launch hook
         guard providers[pluginModel.identifier] == nil else {
@@ -177,5 +177,15 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
         }
 
         return retVal
+    }
+
+    func isProviderEnabled(provider: PluginAdapterProtocol) -> Bool {
+        guard let identifier = provider.model?.identifier,
+            let enabled = SessionStorage.sharedInstance.get(key: kPluginEnabled,
+                                                            namespace: identifier),
+            let enabledBool = Bool(enabled) else {
+            return true
+        }
+        return enabledBool
     }
 }
