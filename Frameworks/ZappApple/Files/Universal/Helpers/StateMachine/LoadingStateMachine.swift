@@ -48,7 +48,8 @@ public class LoadingStateMachine: LoadingStateMachineDelegate {
             updateAllStates(state: state)
         }
 
-        if allStateFinishedTask() {
+        if applicastionLoadingState != .success,
+            allStateFinishedTask() {
             self.applicastionLoadingState = .success
             self.dataSource?.stateMachineFinishedWork(with: .success)
         }
