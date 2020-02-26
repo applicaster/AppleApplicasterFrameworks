@@ -142,16 +142,30 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
-      "line": 10,
+      "line": 11,
       "symbol": "UUIDKey",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "UUIDManager",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
+      "line": 39,
+      "symbol": "UUIDManager.fetchOrCreateNewKey()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/UUIDManager/UUIDManager.swift",
+      "line": 43,
+      "symbol": "UUIDManager.regenerateUUID()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {

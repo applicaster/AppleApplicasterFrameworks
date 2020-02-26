@@ -32,7 +32,7 @@ This respository is the main container for general frameworks and plugins for [Z
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: *0.6.8*
+##### ZappApple: *0.6.9*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
