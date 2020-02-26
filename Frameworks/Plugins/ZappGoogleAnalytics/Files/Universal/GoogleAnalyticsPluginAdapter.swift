@@ -9,20 +9,6 @@
 import Foundation
 import ZappCore
 
-@objc open class APTimedEvent: NSObject {
-    public var eventName: String
-    public var parameters: [String: Any]?
-    public var startTime: Date
-
-    public init(eventName: String,
-                parameters: [String: Any]?,
-                startTime: Date) {
-        self.eventName = eventName
-        self.parameters = parameters
-        self.startTime = startTime
-    }
-}
-
 @objc open class GoogleAnalyticsPluginAdapter: NSObject, PluginAdapterProtocol {
     public var configurationJSON: NSDictionary?
     public var model: ZPPluginModel?
@@ -137,9 +123,13 @@ import ZappCore
         if let currentEvent = self.timedEventsDictionary[eventName] {
             processEndTimedEvent(currentEvent.eventName, parameters: currentEvent.parameters)
         }
+        var parametersToPass: [String: NSObject] = [:]
+        if let parameters = parameters as? [String: NSObject] {
+            parametersToPass = parameters
+        }
 
         let timedEvent = APTimedEvent(eventName: eventName,
-                                      parameters: parameters,
+                                      parameters: parametersToPass,
                                       startTime: Date())
         timedEventsDictionary[eventName] = timedEvent
     }
@@ -151,7 +141,13 @@ import ZappCore
             let timedEventParameters = timedEvent.parameters ?? [:] as [String: Any]
             var mergedParameters = timedEventParameters.merge(parameters)
             mergedParameters["Event Duration"] = "\(Int(abs(timedEvent.startTime.timeIntervalSinceNow)))" as Any
-            timedEvent.parameters = mergedParameters
+
+            var parametersToPass: [String: NSObject] = [:]
+            if let mergedParameters = mergedParameters as? [String: NSObject] {
+                parametersToPass = mergedParameters
+            }
+
+            timedEvent.parameters = parametersToPass
             sendEvent(timedEvent.eventName,
                       parameters: mergedParameters)
             timedEventsDictionary.removeValue(forKey: eventName)
