@@ -982,21 +982,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
-      "line": 57,
+      "line": 58,
       "symbol": "LoadingStateMachine.allStateFinishedTask()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
-      "line": 61,
+      "line": 62,
       "symbol": "LoadingStateMachine.state(by:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/StateMachine/LoadingStateMachine.swift",
-      "line": 65,
+      "line": 66,
       "symbol": "LoadingStateMachine.setSkipingStateAutoInvocation(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1627,35 +1627,42 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
       "line": 37,
-      "symbol": "AnalyticsManager.mandatoryDefaultParams()",
+      "symbol": "AnalyticsManager.defaultParams()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
-      "line": 67,
+      "line": 71,
       "symbol": "AnalyticsManager.sendEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
-      "line": 76,
+      "line": 82,
       "symbol": "AnalyticsManager.startObserveTimedEvent(name:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
-      "line": 86,
+      "line": 94,
       "symbol": "AnalyticsManager.stopObserveTimedEvent(_:parameters:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
-      "line": 94,
+      "line": 105,
       "symbol": "AnalyticsManager.sendScreenEvent(screenTitle:parameters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Analytics/AnalyticsManager.swift",
+      "line": 119,
+      "symbol": "AnalyticsManager.trackURL(url:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2258,6 +2265,13 @@
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
       "line": 169,
       "symbol": "PluginManagerBase.hooksProviders()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
+      "line": 182,
+      "symbol": "PluginManagerBase.isProviderEnabled(provider:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
