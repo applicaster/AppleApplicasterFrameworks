@@ -22,9 +22,9 @@ public class PushPluginsManager: PluginManagerBase {
     public override func providerCreated(provider: PluginAdapterProtocol,
                                          completion: PluginManagerCompletion) {
         if let provider = provider as? PushProviderProtocol,
-            let deviceId = SessionStorage.sharedInstance.get(key: ZappStorageKeys.uuid,
+            let uuid = SessionStorage.sharedInstance.get(key: ZappStorageKeys.uuid,
                                                              namespace: nil) {
-            provider.prepareProvider(["identity_client_device_id": deviceId]) { succed in
+            provider.prepareProvider(["identity_client_device_id": uuid]) { succed in
                 completion?(succed)
             }
         }

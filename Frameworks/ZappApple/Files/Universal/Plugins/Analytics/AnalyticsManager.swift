@@ -28,20 +28,24 @@ public class AnalyticsManager: PluginManagerBase {
 
     public override func providerCreated(provider: PluginAdapterProtocol,
                                          completion: PluginManagerCompletion) {
-        provider.prepareProvider(mandatoryDefaultParams()) { succeed in
+        provider.prepareProvider(defaultParams()) { succeed in
             completion?(succeed)
         }
         // Must be implemented on subclass if needed
     }
 
-    func mandatoryDefaultParams() -> [String: Any] {
+    func defaultParams() -> [String: Any] {
         var defaultParams: [String: Any] = [:]
 
-        if let uuid = UIDevice.current.identifierForVendor?.uuidString,
+        let sessionStorage = SessionStorage.sharedInstance
+        if let uuid = sessionStorage.get(key: ZappStorageKeys.uuid,
+                                         namespace: nil),
             String.isNotEmptyOrWhitespace(uuid) {
             defaultParams["uuid"] = uuid
+            // Add this key to support backward compatibility
+            defaultParams["identity_client_device_id"] = uuid
         }
-        let sessionStorage = SessionStorage.sharedInstance
+
         if let versionName = sessionStorage.get(key: ZappStorageKeys.versionName,
                                                 namespace: nil),
             String.isNotEmptyOrWhitespace(versionName) {
@@ -68,8 +72,10 @@ public class AnalyticsManager: PluginManagerBase {
                           parameters: [String: Any]?) {
         for provider in _providers {
             let parameters = parameters ?? [:]
-            provider.sendEvent(name,
-                               parameters: parameters)
+            if isProviderEnabled(provider: provider) {
+                provider.sendEvent(name,
+                                   parameters: parameters)
+            }
         }
     }
 
@@ -78,8 +84,10 @@ public class AnalyticsManager: PluginManagerBase {
         let parameters = parameters ?? [:]
 
         for provider in _providers {
-            provider.startObserveTimedEvent?(name,
-                                             parameters: parameters)
+            if isProviderEnabled(provider: provider) {
+                provider.startObserveTimedEvent?(name,
+                                                 parameters: parameters)
+            }
         }
     }
 
@@ -87,7 +95,10 @@ public class AnalyticsManager: PluginManagerBase {
                                           parameters: [String: Any]?) {
         let parameters = parameters ?? [:]
         for provider in _providers {
-            provider.stopObserveTimedEvent?(eventName, parameters: parameters)
+            if isProviderEnabled(provider: provider) {
+                provider.stopObserveTimedEvent?(eventName,
+                                                parameters: parameters)
+            }
         }
     }
 
@@ -97,9 +108,20 @@ public class AnalyticsManager: PluginManagerBase {
             var parameters = parameters as? [String: NSObject] ?? [:]
             parameters["Trigger"] = NSString(string: screenTitle)
             for provider in _providers {
-                provider.sendScreenEvent(screenTitle, parameters: parameters)
+                if isProviderEnabled(provider: provider) {
+                    provider.sendScreenEvent(screenTitle, parameters: parameters)
+                }
             }
             currentScreenViewTitle = screenTitle
+        }
+    }
+
+    public func trackURL(url: URL?) {
+        for provider in _providers {
+            if let url = url as NSURL?,
+                isProviderEnabled(provider: provider) {
+                provider.trackCampaignParamsFromUrl?(url)
+            }
         }
     }
 }

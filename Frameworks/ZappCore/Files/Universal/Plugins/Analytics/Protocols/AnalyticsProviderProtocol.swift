@@ -40,4 +40,8 @@ import Foundation
     ///   - parameters: Dictionary that should be passed as values for specific event
     @objc optional func stopObserveTimedEvent(_ eventName: String,
                                               parameters: [String: Any]?)
+    
+    /// Track campaign from URL
+    /// - Parameter url: url to track campaign
+    @objc optional func trackCampaignParamsFromUrl(_ url:NSURL)
 }
