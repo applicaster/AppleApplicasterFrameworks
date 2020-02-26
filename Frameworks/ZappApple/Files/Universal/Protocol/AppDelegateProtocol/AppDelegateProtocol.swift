@@ -12,4 +12,5 @@ import UIKit
 public protocol AppDelegateProtocol {
     func handleDelayedEventsIfNeeded()
     var launchOptions: [UIApplication.LaunchOptionsKey: Any]? { get }
+    var rootController: RootController? { get set }
 }
