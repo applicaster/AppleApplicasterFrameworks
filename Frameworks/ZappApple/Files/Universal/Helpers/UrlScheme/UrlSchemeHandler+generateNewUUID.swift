@@ -9,7 +9,7 @@ import Foundation
 import ZappCore
 
 extension UrlSchemeHandler {
-    class func handleUUIDregeneration() {
+    class func handleUUIDregeneration() -> Bool {
         let title = "Do you want to regenerate UUID?"
         let description = "New UUID will replace the old one and the app will be completely reloaded"
         let yesTitle = "Yes"
@@ -42,5 +42,6 @@ extension UrlSchemeHandler {
                                                                       animated: true,
                                                                       completion: nil)
 
+        return true
     }
 }

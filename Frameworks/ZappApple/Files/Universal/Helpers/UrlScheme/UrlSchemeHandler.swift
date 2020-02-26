@@ -7,25 +7,26 @@
 
 import Foundation
 
-class UrlSchemeHandler {
+public class UrlSchemeHandler {
     
     enum SystemActions: String {
         case generateNewUUID
     }
-
-    class func handle(_ application: UIApplication,
+    
+    public class func handle(_ application: UIApplication,
                            open url: URL,
-                           options: [UIApplication.OpenURLOptionsKey: Any] = [:],
-                           completion: @escaping (_ success: Bool) -> Void) {
+                           options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         
+        var retValue = false
         let systemAction = SystemActions(rawValue: url.host ?? "")
         
         switch systemAction {
         case .generateNewUUID:
-            self.handleUUIDregeneration()
-            
+            retValue = self.handleUUIDregeneration()
         default:
             break
         }
+        
+       return retValue
     }
 }
