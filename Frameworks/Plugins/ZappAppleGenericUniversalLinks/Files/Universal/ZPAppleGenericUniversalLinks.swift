@@ -12,8 +12,6 @@ class ZPAppleGenericUniversalLinks: NSObject, PluginAdapterProtocol {
     public var configurationJSON: NSDictionary?
     public var model: ZPPluginModel?
     
-    var userActivity:NSUserActivity?
-
     /// Plugin configuration keys
     struct PluginKeys {
         static let mappingUrl = "mapping_url"
