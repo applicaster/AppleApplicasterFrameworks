@@ -14,33 +14,37 @@ public class UUIDManager {
     /// The unique identifier for this user.
     /// The unique identifier if one has been generated. <code>nil</code> otherwise.
     public static var deviceID: String {
-        var retValue = ""
-                
+        return self.fetchExistingKey()?.value ?? registerNewUUID()
+    }
+    
+    static func fetchExistingKey() -> (key: String, value: String)? {
+        var retValue:(key: String, value: String)?
         guard let bundleIdentifier = FacadeConnector.connector?.storage?.sessionStorageValue(for: ZappStorageKeys.bundleIdentifier, namespace: nil),
         let deviceType = FacadeConnector.connector?.storage?.sessionStorageValue(for: ZappStorageKeys.deviceType, namespace: nil) else {
-            return fetchOrCreateNewKey()
+            return retValue
         }
         
         let uuidType1 = "\(bundleIdentifier) - APUUID"
         let uuidType2 = "\(bundleIdentifier)-\(deviceType)-APUUID"
         
         if let value = Keychain.getStringForKey(uuidType1) {
-            retValue = value
-        } else if let value = Keychain.getStringForKey(uuidType2) {
-            retValue = value
+            retValue = (uuidType1, value)
         }
-        
-        if retValue.isEmpty {
-            retValue = fetchOrCreateNewKey()
+        else if let value = Keychain.getStringForKey(uuidType2) {
+            retValue = (uuidType2, value)
+        }
+        else if let value = Keychain.getStringForKey(UUIDKey) {
+            retValue = (UUIDKey, value)
         }
         return retValue
     }
     
-    static func fetchOrCreateNewKey() -> String {
-        return Keychain.getStringForKey(UUIDKey) ?? registerNewUUID()
-    }
-    
     public class func regenerateUUID() {
+        //delete existing key
+        if let existingKeyData = fetchExistingKey() {
+            Keychain.deleteString(forKey: existingKeyData.key)
+        }
+        //create new key
         _ = self.registerNewUUID()
     }
     
