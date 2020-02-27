@@ -47,6 +47,13 @@
 		<key>plugin</key>
 		<true/>
 	</dict>
+	<key>ZappAppleGenericUniversalLinks</key>
+	<dict>
+		<key>version_id</key>
+		<string>0.1.0</string>
+		<key>plugin</key>
+		<true/>
+	</dict>
 	<key>FirebaseBaseSettings</key>
 	<dict>
 		<key>version_id</key>
