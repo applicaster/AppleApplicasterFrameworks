@@ -10,7 +10,7 @@
 	<key>ZappApple</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.6.12</string>
+		<string>0.6.13</string>
 	</dict>
 	<key>ZappCrashlogsMsAppCenter</key>
 	<dict>
@@ -44,6 +44,20 @@
 	<dict>
 		<key>version_id</key>
 		<string>0.1.4</string>
+		<key>plugin</key>
+		<true/>
+	</dict>
+	<key>ZappAppleGenericUniversalLinks</key>
+	<dict>
+		<key>version_id</key>
+		<string>0.1.0</string>
+		<key>plugin</key>
+		<true/>
+	</dict>
+	<key>FirebaseBaseSettings</key>
+	<dict>
+		<key>version_id</key>
+		<string>2.0.4</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
