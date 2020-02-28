@@ -7,17 +7,31 @@
 //
 
 import AppCenter
+import AppCenterAnalytics
 import AppCenterDistribute
 import Foundation
 
+#if canImport(AppCenterCrashes)
+    import AppCenterCrashes
+#endif
 
-public class MsAppCenterDistributionHandler: NSObject {
+public class MsAppCenterHandler: NSObject {
     public func configure() {
         guard let appSecret = FeaturesCustomization.MSAppCenterAppSecret() else {
             return
         }
 
-        MSAppCenter.start(appSecret, withServices: [MSDistribute.self])
+        var services: [MSServiceAbstract.Type] = [MSDistribute.self,
+                                                  MSAnalytics.self]
+        if let crashes = crashesSerice() {
+            services.append(crashes)
+        }
+        MSAppCenter.start(appSecret,
+                          withServices: services)
+        configureDistribution()
+    }
+
+    func configureDistribution() {
         // disable until app fully loaded
         MSDistribute.setEnabled(false)
 
@@ -26,6 +40,14 @@ public class MsAppCenterDistributionHandler: NSObject {
             selector: #selector(checkUpdatesForNewVersions),
             name: NSNotification.Name(kMSAppCenterCheckForUpdatesNotification),
             object: nil)
+    }
+
+    func crashesSerice() -> MSServiceAbstract.Type? {
+        #if canImport(AppCenterCrashes)
+            return MSCrashes.self
+        #else
+            return nil
+        #endif
     }
 
     @objc func checkUpdatesForNewVersions(notification: Notification) {
