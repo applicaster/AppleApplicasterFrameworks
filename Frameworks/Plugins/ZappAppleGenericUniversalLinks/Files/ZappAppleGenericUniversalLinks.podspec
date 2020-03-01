@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappAppleGenericUniversalLinks"
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = "ZappAppleGenericUniversalLinks"
   s.description      = <<-DESC
   ZappAppleGenericUniversalLinks container.
@@ -10,14 +10,13 @@ Pod::Spec.new do |s|
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
                          :tag => '2020.2.27.16-2-2'  }
-  s.platform = :tvos, :ios
-  s.tvos.deployment_target = '11.0'
+  s.platform = :ios
   s.ios.deployment_target = '11.0'
   s.requires_arc = true
   s.static_framework = true
   s.swift_versions = '5.1'
 
-  s.source_files = 'Universal/**/*.swift'
+  s.source_files = 'ios/**/*.swift'
 
   s.xcconfig =  {
                   'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
