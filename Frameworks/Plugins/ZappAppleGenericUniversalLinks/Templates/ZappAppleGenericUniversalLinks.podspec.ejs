@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
                          :tag => '<%= new_tag %>'  }
-  s.platform = :ios
+  s.platform = :tvos, :ios
+  s.tvos.deployment_target = '11.0'
   s.ios.deployment_target = '11.0'
   s.requires_arc = true
   s.static_framework = true
