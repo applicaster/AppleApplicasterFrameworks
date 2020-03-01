@@ -11,6 +11,7 @@ import ZappCore
 extension ZPAppleVideoNowPlayingInfoBase: PlayerObserverProtocol {
     func playerDidFinishPlayItem(player: PlayerProtocol, completion: @escaping (Bool) -> Void) {
         //implement in child classes
+        completion(true)
     }
     
     func playerDidDismiss(player: PlayerProtocol) {
