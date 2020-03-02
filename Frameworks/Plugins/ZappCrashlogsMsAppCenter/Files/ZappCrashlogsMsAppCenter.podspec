@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappCrashlogsMsAppCenter"
-  s.version          = '4.4.2'
+  s.version          = '4.5.0'
   s.summary          = "ZappCrashlogsMsAppCenter"
   s.description      = <<-DESC
   CrashlogsMsAppCenter container.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', 
-                         :tag => '2020.2.13.19-2-2'  }
+                         :tag => '2020.3.2.16-3-3'  }
   s.platform         = :ios, '10.0'
   s.requires_arc = true
   s.static_framework = true
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
                     'ENABLE_BITCODE' => 'YES'
                 }
   s.dependency 'ZappCore'
-  s.dependency 'AppCenter/Crashes'
+  s.dependency 'AppCenter/Crashes', '= 2.5.3'
   s.test_spec 'UnitTests' do |sp|
     sp.source_files = 'Tests/**'
   end

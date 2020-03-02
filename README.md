@@ -49,7 +49,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: Crashlogs
 
-##### MS App Center: *4.4.2*
+##### MS App Center: *4.5.0*
 - **Description:** [App center](https://appcenter.ms) crash logs service.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCrashlogsMsAppCenter/index.html)
 - **Manifest:**
@@ -80,14 +80,6 @@ This respository is the main container for general frameworks and plugins for [Z
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
-
-##### Firebase Base Settings: *2.0.4*
-- **Description:** This plugin provides GoogleService-Info.plist that require for all Firebase plugins. Also plugin make intialization of the Firebase.
-- [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/FirebaseBaseSettings/index.html)
-- **Manifest:**
-  - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=firebase_base_settings&platform=ios)
-  - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=firebase_base_settings&platform=tvos)
-  
 ## :pencil2: Usage
 
 * To use any framework availible in this repo add cocoapods dependency in podfile.
