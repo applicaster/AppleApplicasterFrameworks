@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-                         :tag => '2020.2.27.16-2-2'  }
+                         :tag => '2020.3.2.15-3-1'  }
   s.platform = :ios
   s.ios.deployment_target = '11.0'
   s.requires_arc = true
