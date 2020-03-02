@@ -3305,23 +3305,37 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
-      "line": 14,
-      "symbol": "MsAppCenterDistributionHandler",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterHandler/MsAppCenterHandler.swift",
+      "line": 18,
+      "symbol": "MsAppCenterHandler",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
-      "line": 15,
-      "symbol": "MsAppCenterDistributionHandler.configure()",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterHandler/MsAppCenterHandler.swift",
+      "line": 19,
+      "symbol": "MsAppCenterHandler.configure()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterDistributionHandler/MsAppCenterDistributionHandler.swift",
-      "line": 31,
-      "symbol": "MsAppCenterDistributionHandler.checkUpdatesForNewVersions(notification:)",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterHandler/MsAppCenterHandler.swift",
+      "line": 34,
+      "symbol": "MsAppCenterHandler.configureDistribution()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterHandler/MsAppCenterHandler.swift",
+      "line": 45,
+      "symbol": "MsAppCenterHandler.crashesSerice()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/ios/Helpers/MsAppCenterHandler/MsAppCenterHandler.swift",
+      "line": 53,
+      "symbol": "MsAppCenterHandler.checkUpdatesForNewVersions(notification:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
