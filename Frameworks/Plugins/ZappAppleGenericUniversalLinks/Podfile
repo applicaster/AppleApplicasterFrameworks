@@ -10,7 +10,6 @@ pre_install do |installer|
 end
 
 target 'FrameworksApp' do
-  supports_swift_versions '5.1'
   use_frameworks!
   pod 'ZappAppleGenericUniversalLinks', :path => 'Files/ZappAppleGenericUniversalLinks.podspec', :testspecs => ['UnitTests']
   pod 'ZappCore', :path => '../../../ZappCore.podspec'
