@@ -1,49 +1,49 @@
 {
   "warnings": [
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/Universal/ZPAppleGenericUniversalLinks.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/ios/ZPAppleGenericUniversalLinks.swift",
       "line": 11,
       "symbol": "ZPAppleGenericUniversalLinks",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/Universal/ZPAppleGenericUniversalLinks.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/ios/ZPAppleGenericUniversalLinks.swift",
       "line": 12,
       "symbol": "ZPAppleGenericUniversalLinks.configurationJSON",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/Universal/ZPAppleGenericUniversalLinks.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/ios/ZPAppleGenericUniversalLinks.swift",
       "line": 17,
       "symbol": "ZPAppleGenericUniversalLinks.PluginKeys.mappingUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/Universal/ZPAppleGenericUniversalLinks.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/ios/ZPAppleGenericUniversalLinks.swift",
       "line": 39,
       "symbol": "ZPAppleGenericUniversalLinks.fetchAppMappedUrl(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/Universal/ZPAppleGenericUniversalLinks.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/ios/ZPAppleGenericUniversalLinks.swift",
       "line": 69,
       "symbol": "ZPAppleGenericUniversalLinks.openApp(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/Universal/ZPAppleGenericUniversalLinks.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/ios/ZPAppleGenericUniversalLinks.swift",
       "line": 79,
       "symbol": "ZPAppleGenericUniversalLinks",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/Universal/ZPAppleGenericUniversalLinks.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleGenericUniversalLinks/Files/ios/ZPAppleGenericUniversalLinks.swift",
       "line": 80,
       "symbol": "ZPAppleGenericUniversalLinks.executeOnContinuingUserActivity(_:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
