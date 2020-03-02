@@ -13,14 +13,14 @@ import ZappCore
 
 public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol, ZPAdapterProtocol {
     public var configurationJSON: NSDictionary?
-    
+
     public required init(configurationJSON: NSDictionary?) {
         self.configurationJSON = configurationJSON
     }
-    
+
     public required override init() {
     }
-    
+
     public required init(pluginModel: ZPPluginModel) {
         model = pluginModel
         configurationJSON = model?.configurationJSON
@@ -33,12 +33,14 @@ public class ZappCrashlogsMsAppCenter: NSObject, CrashlogsPluginProtocol, ZPAdap
     }
 
     public func prepareProvider(_ defaultParams: [String: Any], completion: ((Bool) -> Void)?) {
-        MSAppCenter.startService(MSCrashes.self)
+        if MSCrashes.isEnabled() == false {
+            MSAppCenter.startService(MSCrashes.self)
+        }
         completion?(true)
     }
 
     public func disable(completion: ((Bool) -> Void)?) {
-        MSAppCenter.setEnabled(false)
+        MSCrashes.setEnabled(false)
         completion?(true)
     }
 }

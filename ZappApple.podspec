@@ -34,7 +34,8 @@ Pod::Spec.new do |s|
 
   s.dependency 'ZappCore'
   s.dependency 'ReachabilitySwift', '= 5.0.0'
-  s.ios.dependency 'AppCenter/Distribute', '= 2.5.3'
+  s.ios.dependency 'AppCenter/Distribute', '= 3.0.0'
+  s.ios.dependency 'AppCenter/Analytics', '= 3.0.0'
 
   s.source_files = 'Frameworks/ZappApple/Files/Universal/**/*.{h,m,swift}'
   s.ios.source_files = 'Frameworks/ZappApple/Files/ios/**/*.{swift}'
