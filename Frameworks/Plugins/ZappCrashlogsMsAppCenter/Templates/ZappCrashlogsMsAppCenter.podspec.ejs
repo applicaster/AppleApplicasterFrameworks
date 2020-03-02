@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
                     'ENABLE_BITCODE' => 'YES'
                 }
   s.dependency 'ZappCore'
-  s.dependency 'AppCenter/Crashes', '= 2.5.3'
+  s.dependency 'AppCenter/Crashes'
   s.test_spec 'UnitTests' do |sp|
     sp.source_files = 'Tests/**'
   end
