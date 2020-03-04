@@ -1513,6 +1513,216 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 10,
+      "symbol": "TrackingManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 11,
+      "symbol": "TrackingManager.endPoint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 13,
+      "symbol": "TrackingManager.PlatformType",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 14,
+      "symbol": "TrackingManager.PlatformType.mobile",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 15,
+      "symbol": "TrackingManager.PlatformType.tv",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 18,
+      "symbol": "TrackingManager.EventTypes",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 19,
+      "symbol": "TrackingManager.EventTypes.appPresented",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 20,
+      "symbol": "TrackingManager.EventTypes.willEnterForeground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 23,
+      "symbol": "TrackingManager.EventParameters",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 24,
+      "symbol": "TrackingManager.EventParameters.eventName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 25,
+      "symbol": "TrackingManager.EventParameters.eventTime",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 26,
+      "symbol": "TrackingManager.EventParameters.accountId",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 27,
+      "symbol": "TrackingManager.EventParameters.versionId",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 28,
+      "symbol": "TrackingManager.EventParameters.appFamily",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 29,
+      "symbol": "TrackingManager.EventParameters.appName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 30,
+      "symbol": "TrackingManager.EventParameters.appVersion",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 31,
+      "symbol": "TrackingManager.EventParameters.sdkVersion",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 32,
+      "symbol": "TrackingManager.EventParameters.zappPlatform",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 33,
+      "symbol": "TrackingManager.EventParameters.deviceName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 34,
+      "symbol": "TrackingManager.EventParameters.deviceId",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 35,
+      "symbol": "TrackingManager.EventParameters.os",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 36,
+      "symbol": "TrackingManager.EventParameters.osVersion",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 37,
+      "symbol": "TrackingManager.EventParameters.eventUuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 40,
+      "symbol": "TrackingManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 45,
+      "symbol": "TrackingManager.track(for:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 54,
+      "symbol": "TrackingManager.gatherBaseEventParameters()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 108,
+      "symbol": "TrackingManager.send(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 138,
+      "symbol": "TrackingManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 139,
+      "symbol": "TrackingManager.registerObservers()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/TrackingManager/TrackingManager.swift",
+      "line": 146,
+      "symbol": "TrackingManager.willEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/UrlScheme/UrlSchemeHandler+generateNewUUID.swift",
       "line": 12,
       "symbol": "UrlSchemeHandler.handleUUIDregeneration(with:)",
@@ -2614,13 +2824,20 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
       "line": 67,
+      "symbol": "RootController.trackAudience(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
+      "line": 74,
       "symbol": "RootController.hookOnApplicationReady(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController+AppLoadingStateMachineDataSource.swift",
-      "line": 75,
+      "line": 82,
       "symbol": "RootController.stateMachineFinishedWork(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2767,56 +2984,63 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
-      "line": 26,
+      "line": 25,
+      "symbol": "RootController.audienceManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 27,
       "symbol": "RootController.splashViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
-      "line": 28,
+      "line": 29,
       "symbol": "RootController.facadeConnector",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
-      "line": 32,
+      "line": 33,
       "symbol": "RootController.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
-      "line": 45,
+      "line": 46,
       "symbol": "RootController.reloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
-      "line": 52,
+      "line": 53,
       "symbol": "RootController.preapreLoadingStates()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
-      "line": 87,
+      "line": 93,
       "symbol": "RootController.makeSplashAsRootViewContoroller()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
-      "line": 94,
+      "line": 102,
       "symbol": "RootController.makeInterfaceLayerAsRootViewContoroller()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
-      "line": 101,
+      "line": 111,
       "symbol": "RootController.showErrorMessage(message:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2921,49 +3145,49 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
-      "line": 85,
+      "line": 84,
       "symbol": "SplashViewController.callLoadingCompletion()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
-      "line": 90,
+      "line": 89,
       "symbol": "SplashViewController.hideVideoPlayerContainer()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
-      "line": 94,
+      "line": 93,
       "symbol": "SplashViewController.addVideoObservers()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
-      "line": 116,
+      "line": 113,
       "symbol": "SplashViewController.observeValue(forKeyPath:of:change:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
-      "line": 125,
+      "line": 122,
       "symbol": "SplashViewController.removeVideoObservers()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
-      "line": 131,
+      "line": 128,
       "symbol": "SplashViewController.showErrorMessage(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
-      "line": 137,
+      "line": 136,
       "symbol": "SplashViewController.playerDidFinishTask()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2998,7 +3222,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/ViewControllers/SplashViewController.swift",
-      "line": 162,
+      "line": 161,
       "symbol": "AVPlayer.isPlaying",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
