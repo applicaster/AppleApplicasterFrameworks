@@ -64,6 +64,13 @@ extension RootController: LoadingStateMachineDataSource {
         }
     }
 
+    func trackAudience(_ successHandler: @escaping StateCallBack,
+                       _ failHandler: @escaping StateCallBack) {
+        audienceManager.track(for: TrackingManager.EventTypes.appPresented) { succeed in
+            succeed ? successHandler() : failHandler()
+        }
+    }
+
     func hookOnApplicationReady(_ successHandler: @escaping StateCallBack,
                                 _ failHandler: @escaping StateCallBack) {
         pluginsManager.hookOnApplicationReady(displayViewController: splashViewController,
