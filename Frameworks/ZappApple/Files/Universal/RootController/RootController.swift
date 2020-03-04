@@ -22,6 +22,7 @@ public class RootController: NSObject {
     public var userInterfaceLayerViewController: UIViewController?
 
     public var pluginsManager = PluginsManager()
+    public let audienceManager = TrackingManager()
 
     var splashViewController: SplashViewController?
 
@@ -67,6 +68,10 @@ public class RootController: NSObject {
         userInterfaceLayer.stateHandler = loadUserInterfaceLayerGroup
         userInterfaceLayer.readableName = "<app-loader-state-machine> Prepare User Interface Layer"
 
+        let audience = LoadingState()
+        audience.stateHandler = trackAudience
+        audience.readableName = "<app-loader-state-machine> Track Audience"
+
         let onApplicationReadyHook = LoadingState()
         onApplicationReadyHook.stateHandler = hookOnApplicationReady
         onApplicationReadyHook.readableName = "<app-loader-state-machine> Execute Hook Plugin Applicatoion Ready to present"
@@ -79,23 +84,28 @@ public class RootController: NSObject {
         return [splashState,
                 plugins,
                 styles,
+                audience,
                 userInterfaceLayer,
 
                 onApplicationReadyHook]
     }
 
     func makeSplashAsRootViewContoroller() {
-        guard let window = UIApplication.shared.delegate?.window else {
-            return
+        DispatchQueue.main.async { [weak self] in
+            guard let window = UIApplication.shared.delegate?.window else {
+                return
+            }
+            window?.rootViewController = self?.splashViewController
         }
-        window?.rootViewController = splashViewController
     }
 
     func makeInterfaceLayerAsRootViewContoroller() {
-        guard let window = UIApplication.shared.delegate?.window else {
-            return
+        DispatchQueue.main.async { [weak self] in
+            guard let window = UIApplication.shared.delegate?.window else {
+                return
+            }
+            window?.rootViewController = self?.userInterfaceLayerViewController
         }
-        window?.rootViewController = userInterfaceLayerViewController
     }
 
     func showErrorMessage(message: String) {
