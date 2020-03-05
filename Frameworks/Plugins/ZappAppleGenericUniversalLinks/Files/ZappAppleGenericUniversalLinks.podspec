@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappAppleGenericUniversalLinks"
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = "ZappAppleGenericUniversalLinks"
   s.description      = <<-DESC
   ZappAppleGenericUniversalLinks container.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-                         :tag => '2020.3.2.15-3-1'  }
+                         :tag => '2020.3.5.16-3-1'  }
   s.platform = :ios
   s.ios.deployment_target = '11.0'
   s.requires_arc = true
