@@ -66,7 +66,7 @@ This respository is the main container for general frameworks and plugins for [Z
 
 #### Type: General
 
-##### Apple Video Subscription Registration: *0.1.8*
+##### Apple Video Subscription Registration: *0.1.9*
 - **Description:** This plugin subscribe the user to the video subscription in order to get shared content for iOS and tvOS.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoSubscriptionRegistration/index.html)
 - **Manifest:**
