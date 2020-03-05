@@ -53,9 +53,9 @@ class ZPAppleVideoSubscriptionRegistration: NSObject, GeneralProviderProtocol {
         if self.hasNeededEntitlements {
             let subscription = VSSubscription()
             subscription.expirationDate = Date.distantFuture
+            subscription.accessLevel = .paid
             if #available(iOS 11.3, tvOS 11.3, *) {
               if !billingIdentifier.isEmpty {
-                  subscription.accessLevel = .paid
                   subscription.billingIdentifier = billingIdentifier
                   subscription.tierIdentifiers = tierIdentifiers
               }
