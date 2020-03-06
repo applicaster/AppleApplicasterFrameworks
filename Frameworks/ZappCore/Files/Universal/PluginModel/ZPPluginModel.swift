@@ -97,7 +97,7 @@ public enum ZPPluginType: String {
         configurationJSON = objectDictionary[ZappPluginModelKeys.kConfigurationJSON] as? NSDictionary
     }
 
-    static func == (lhs: ZPPluginModel, rhs: ZPPluginModel) -> Bool {
+    static public func == (lhs: ZPPluginModel, rhs: ZPPluginModel) -> Bool {
         return lhs.identifier == rhs.identifier
     }
 
