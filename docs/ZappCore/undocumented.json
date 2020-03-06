@@ -772,6 +772,13 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
+      "line": 100,
+      "symbol": "ZPPluginModel.==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PluginModel/ZPPluginModel.swift",
       "line": 104,
       "symbol": "ZPPluginModel.configurationValue(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
