@@ -23,7 +23,8 @@ public class RootController: NSObject {
 
     public var pluginsManager = PluginsManager()
     public let audienceManager = TrackingManager()
-
+    public let localNotificationManager = LocalNotificationManager()
+    
     var splashViewController: SplashViewController?
 
     public lazy var facadeConnector: FacadeConnector = {
