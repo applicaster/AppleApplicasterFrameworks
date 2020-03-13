@@ -8,6 +8,7 @@
 
 import Foundation
 import UserNotifications
+import ZappCore
 
 extension UNMutableNotificationContent {
     convenience init(payload: [AnyHashable: Any]) { self.init()
@@ -15,7 +16,7 @@ extension UNMutableNotificationContent {
         subtitle = payload[LocalNotificationPayloadConst.subtitle] as? String ?? ""
         body = payload[LocalNotificationPayloadConst.body] as? String ?? ""
         badge = payload[LocalNotificationPayloadConst.badge] as? NSNumber
-        userInfo = payload[LocalNotificationPayloadConst.userInfo] as? [AnyHashable: Any] ?? [:]
+        userInfo = payload
         if let soundName = payload[LocalNotificationPayloadConst.sound] as? String {
             let notificationSoundName = UNNotificationSoundName(rawValue: soundName)
             sound = UNNotificationSound(named: notificationSoundName)

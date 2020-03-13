@@ -8,6 +8,7 @@
 
 import Foundation
 import UserNotifications
+import ZappCore
 
 public class LocalNotificationManager: NSObject {
     let notificationCenter = UNUserNotificationCenter.current()
@@ -15,27 +16,30 @@ public class LocalNotificationManager: NSObject {
                                            .sound,
                                            .badge]
 
-    func scheduleLocalNotification(identifier: String,
-                                   payload: [AnyHashable: Any],
-                                   completion: @escaping (_ scheduled: Bool) -> Void) {
+    func requestLocalNotification(payload: [AnyHashable: Any],
+                                  fireNow: Bool = false,
+                                  completion: @escaping (_ scheduled: Bool, _ error: Error?) -> Void) {
+        guard let identifier = payload[LocalNotificationPayloadConst.identifier] as? String else {
+            completion(false, nil) // TODO: Add error
+            return
+        }
         requestPermission { isGranted in
             if isGranted {
                 self.addLocalNotification(identifier: identifier,
                                           payload: payload,
+                                          fireNow: fireNow,
                                           completion: completion)
             }
         }
     }
 
-    func clearLocalNotifications(identifiers: [String]) {
-        notificationCenter.removePendingNotificationRequests(withIdentifiers: identifiers)
-    }
-
     func addLocalNotification(identifier: String,
                               payload: [AnyHashable: Any],
-                              completion: @escaping (_ scheduled: Bool) -> Void) {
-        guard let trigger = UNNotificationTrigger.trigger(payload: payload) else {
-            completion(false)
+                              fireNow: Bool = false,
+                              completion: @escaping (_ scheduled: Bool, _ error: Error?) -> Void) {
+        guard let trigger = UNNotificationTrigger.trigger(payload: payload,
+                                                          fireNow: fireNow) else {
+            completion(false, nil) // TODO: Add error
             return
         }
 
@@ -44,7 +48,7 @@ public class LocalNotificationManager: NSObject {
                                             content: content,
                                             trigger: trigger)
         notificationCenter.add(request) { error in
-            completion(error == nil)
+            completion(error == nil, error)
             if let error = error {
                 print("Error \(error.localizedDescription)")
             }
@@ -74,7 +78,7 @@ public class LocalNotificationManager: NSObject {
     }
 
     func testLocalNotification() {
-        //TODO: Decide if needed to be implemented categories with buttons
+        // TODO: Decide if needed to be implemented categories with buttons
         let content = UNMutableNotificationContent()
 
         let userActions = "User_Actions"
@@ -91,7 +95,6 @@ public class LocalNotificationManager: NSObject {
                                               options: [])
 
         notificationCenter.setNotificationCategories([category])
-
     }
 }
 
@@ -102,7 +105,7 @@ extension LocalNotificationManager: UNUserNotificationCenterDelegate {
         completionHandler([.alert, .sound])
     }
 
-    //TODO: Implement sender to ui plugin
+    // TODO: Implement sender to ui plugin
     public func userNotificationCenter(_ center: UNUserNotificationCenter,
                                        didReceive response: UNNotificationResponse,
                                        withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -124,5 +127,27 @@ extension LocalNotificationManager: UNUserNotificationCenterDelegate {
             print("Unknown action")
         }
         completionHandler()
+    }
+}
+
+extension LocalNotificationManager: FacadeConnectorLocalNotificationProtocol {
+    public func cancelLocalNotification(_ identifiers: [String]?) {
+        guard let identifiers = identifiers else {
+            return
+        }
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+
+    public func scheduleLocalNotification(_ payload: [AnyHashable: Any],
+                                          completion: @escaping (Bool, Error?) -> Void) {
+        requestLocalNotification(payload: payload,
+                                 completion: completion)
+    }
+
+    public func presentLocalNotification(_ payload: [AnyHashable: Any],
+                                         completion: @escaping (Bool, Error?) -> Void) {
+        requestLocalNotification(payload: payload,
+                                 fireNow: true,
+                                 completion: completion)
     }
 }

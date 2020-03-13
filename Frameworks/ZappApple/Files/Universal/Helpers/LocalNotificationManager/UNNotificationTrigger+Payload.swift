@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import ZappCore
 
 extension UNNotificationTrigger {
-    class func trigger(payload: [AnyHashable: Any]) -> UNNotificationTrigger? {
+    class func trigger(payload: [AnyHashable: Any],
+                       fireNow: Bool) -> UNNotificationTrigger? {
         let repeats = payload[LocalNotificationPayloadConst.repeats] as? Bool ?? false
-        if let offset = payload[LocalNotificationPayloadConst.offset] as? Int {
-            return UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(offset),
+        if fireNow {
+            return UNTimeIntervalNotificationTrigger(timeInterval: 0,
                                                      repeats: repeats)
         } else if let unixTimestamp = payload[LocalNotificationPayloadConst.unixTimestamp] as? Int {
             let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp))
