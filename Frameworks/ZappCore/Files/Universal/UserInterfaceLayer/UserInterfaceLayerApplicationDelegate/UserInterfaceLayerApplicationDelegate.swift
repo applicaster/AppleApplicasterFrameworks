@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-/// The protocol allows to support messaging that comes from `UIApplicationDelegate`
+/// The protocol allows to support messaging that comes from `UIApplicationDelegate` and rest iOS API
 /// This maybe relevant to inform UILayer Plugin in cases url schme comes to application
-public protocol UserInterfaceLayerApplicationDelegate: AnyObject {
-    /// Delegate instance that conoforms implemented `UIApplicationDelegate` functions
+public protocol UserInterfaceLayerDelegate: AnyObject {
+    /// Delegate instance that conforms implemented `UIApplicationDelegate` functions
     var applicationDelegate: UIApplicationDelegate? { get set }
+    var userNotificationCenterDelegate: UNUserNotificationCenterDelegate? { get set }
 }

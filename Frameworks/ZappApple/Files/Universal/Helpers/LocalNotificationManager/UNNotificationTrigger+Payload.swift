@@ -9,17 +9,24 @@ import Foundation
 import ZappCore
 
 extension UNNotificationTrigger {
-    class func trigger(payload: [AnyHashable: Any],
-                       fireNow: Bool) -> UNNotificationTrigger? {
-        let repeats = payload[LocalNotificationPayloadConst.repeats] as? Bool ?? false
-        if fireNow {
-            return UNTimeIntervalNotificationTrigger(timeInterval: 0,
-                                                     repeats: repeats)
-        } else if let unixTimestamp = payload[LocalNotificationPayloadConst.unixTimestamp] as? Int {
+    class func trigger(payload: [AnyHashable: Any]) -> UNNotificationTrigger? {
+        if let unixTimestamp = retrieveUnixTimeStamp(payload: payload) {
             let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp))
             let timeInterval = date.timeIntervalSinceNow
             return timeInterval > 0 ? UNTimeIntervalNotificationTrigger(timeInterval: timeInterval,
-                                                                        repeats: repeats) : nil
+                                                                        repeats: false) : nil
+        } else {
+            return UNTimeIntervalNotificationTrigger(timeInterval: 1,
+                                                     repeats: false)
+        }
+    }
+
+    class func retrieveUnixTimeStamp(payload: [AnyHashable: Any]) -> Double? {
+        if let retVal = payload[LocalNotificationPayloadConst.unixTimestamp] as? NSNumber {
+            return retVal.doubleValue
+        } else if let timestampString = payload[LocalNotificationPayloadConst.unixTimestamp] as? String,
+            let retVal = Double(timestampString) {
+            return retVal
         }
         return nil
     }

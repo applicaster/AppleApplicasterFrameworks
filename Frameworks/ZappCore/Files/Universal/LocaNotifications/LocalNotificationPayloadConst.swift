@@ -6,6 +6,33 @@
 //
 
 import Foundation
+/*
+ Local notification payload example
+ {
+    identifier:String,
+    title: String,
+    body: String,
+    unixTimestamp: Double,
+    actions:[
+        {
+            identifier: String,
+            title: String,
+            textInput: Bool,
+            buttonType: String,
+            url:String
+        }
+    ],
+    attachments: [{
+        image_uri: String,
+        iosOverrideImageUri: String,
+        androidOverrideImageUri: String,
+    }]
+ }
+ */
+
+public extension Notification.Name {
+    static let kLocalNotificationRecievedNotification = Notification.Name("LOCAL_NOTIFICATION_RECIEVED_NOTIFICATION")
+}
 
 public struct LocalNotificationPayloadConst {
     /// Uniquie identifier of the local notification
@@ -14,44 +41,52 @@ public struct LocalNotificationPayloadConst {
     /// Title of the local notification
     public static let title = "title"
 
-    /// Subtitle of the local notification
-    public static let subtitle = "subtitle"
-
     /// Body of the local notification
     public static let body = "body"
-
-    /// Defines number of the badge that willl be shown in circle near the app logo, can be empty
-    public static let badge = "badge"
-
-    /// User Info that stores additionall information passed with local notification
-    public static let userInfo = "userInfo"
-
-    /// Sound name that willl be used when local notification fired, in case empty will be used default
-    public static let sound = "sound"
-
-    /// Defines if local notification must schedule repetative
-    public static let repeats = "repeats"
 
     /// Defines unix timestamp date when local notification will be fired
     public static let unixTimestamp = "unixTimestamp"
 
-    /// Date in readable format yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ
-    public static let date = "date"
-
-    /// Date format
-    public static let dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
-    
-    /// Category identifier
-    public static let category = "category"
-    
-    /// response of the local notification
-    public static let response = "response"
-    
     /// Dictionary of the buttons provided for local notification, use `dismiss` to select distuctive red button
     public static let actions = "actions"
+
+    /// Dictionary of the avail atachments for the local notification
+    public static let attachments = "attachments"
+    
+    /// Url of the default action
+    public static let defaultActionUrl = "defaultActionUrl"
+    
+    /// Url of the dismiss action
+    public static let dismissActionUrl = "dismissActionUrl"
 }
 
-public struct LocalNotificationResponse {
-    public static let defaultButton = "default"
-    public static let dismissButton = "dismiss"
+public struct LocalNotificationPayloadActions {
+    /// Uniquie identifier of the local notification
+    public static let identifier = "identifier"
+
+    /// Title of the local notification
+    public static let title = "title"
+
+    /// Button type for action buttons
+    public static let buttonType = "buttonType"
+
+    /// Attached URL
+    public static let url = "url"
+    
+    public struct ButtonType {
+        /// Whether this action should be indicated as destructive.
+        public static let danger = "danger"
+
+        /// Regular button
+        public static let `default` = "default"
+    }
+}
+
+public struct LocalNotificationPayloadAttachments {
+    /// Uri of the attachments file
+    public static let imageUri = "imageUri"
+    
+    /// Uri of the ios attachments file
+    public static let iosOverrideImageUri = "iosOverrideImageUri"
+    
 }

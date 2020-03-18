@@ -13,12 +13,6 @@ extension RootController: FacadeConnectorLocalNotificationProtocol {
         localNotificationManager.cancelLocalNotification(identifiers)
     }
 
-    public func scheduleLocalNotification(_ payload: [AnyHashable: Any],
-                                          completion: @escaping (Bool, Error?) -> Void) {
-        localNotificationManager.scheduleLocalNotification(payload,
-                                                           completion: completion)
-    }
-
     public func presentLocalNotification(_ payload: [AnyHashable: Any],
                                          completion: @escaping (Bool, Error?) -> Void) {
         localNotificationManager.presentLocalNotification(payload,
