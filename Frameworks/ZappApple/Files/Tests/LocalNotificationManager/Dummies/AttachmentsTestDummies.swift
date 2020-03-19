@@ -6,46 +6,36 @@
 //
 
 import Foundation
+import ZappCore
 
-let attachment_dummy_empty: [AnyHashable: Any] = [:]
+let payload_empty: [AnyHashable: Any] = [:]
+let payload_attachmetns = [LocalNotificationPayloadConst.attachments: [[LocalNotificationPayloadAttachments.imageUri: "baran.png"]]]
+let payload_attachmetns_empty_array = [LocalNotificationPayloadConst.attachments: []]
+let payload_attachmetns_wrong_array = [1: [[LocalNotificationPayloadAttachments.imageUri: "baran.png"]]]
+let payload_attachmetns_two_items = [LocalNotificationPayloadConst.attachments: [[LocalNotificationPayloadAttachments.imageUri: "baran.png"],
+                                                                                 [LocalNotificationPayloadAttachments.imageUri: "baran2.png"]]]
 
-let attachment_dummy_empty_attachments: [AnyHashable: Any] = [
-    "attachments": [],
+let attachmetns_dummy_empty: [[AnyHashable: String]] = []
+
+let attachmetns_dummy: [[AnyHashable: String]] = [[LocalNotificationPayloadAttachments.imageUri: "baran.png"]]
+
+let attachmetns_dummy_two_items: [[AnyHashable: String]] = [
+    [LocalNotificationPayloadAttachments.imageUri: "baran.png"],
+    [LocalNotificationPayloadAttachments.imageUri: "baran2.png"],
 ]
 
-let attachment_dummy_data: [AnyHashable: Any] = [
-    "attachments": [
-        ["uri": "image.png"],
-    ],
+let attachmetns_dummy_firstCorrupted: [[AnyHashable: String]] = [
+    [LocalNotificationPayloadAttachments.imageUri: "some.png"],
+    [LocalNotificationPayloadAttachments.imageUri: "baran2.png"],
 ]
 
-let attachment_dummy_data_two_items: [AnyHashable: Any] = [
-    "attachments": [
-        ["uri": "image.png"],
-        ["uri": "video.mp4"],
-    ],
-]
+let dict_dummy_empty: [AnyHashable: String] = [:]
 
-let attachment_dummy_data_no_items: [AnyHashable: Any] = [
-    "attachments": [
-        [],
-    ],
-]
+let dict_dummy: [AnyHashable: String] = [LocalNotificationPayloadAttachments.imageUri: "baran.png"]
 
-let attachment_dummy_data_uri_number: [AnyHashable: Any] = [
-    "attachments": [
-        ["uri": 123],
-    ],
-]
+let dict_dummy_two_images: [AnyHashable: String] = [LocalNotificationPayloadAttachments.imageUri: "baran.png",
+                                                    LocalNotificationPayloadAttachments.iosOverrideImageUri: "baran2.png"]
 
-let attachment_dummy_data_no_extension: [AnyHashable: Any] = [
-    "attachments": [
-        ["uri": "image"],
-    ],
-]
+let dict_dummy_image_uri_empty: [AnyHashable: String] = [LocalNotificationPayloadAttachments.iosOverrideImageUri: "baran2.png"]
 
-let attachment_dummy_data_url: [AnyHashable: Any] = [
-    "attachments": [
-        ["uri": "https://www.google.com/images/test.png"],
-    ],
-]
+let dict_dummy_image_uri_ios_empty: [AnyHashable: String] = [LocalNotificationPayloadAttachments.imageUri: "baran.png"]

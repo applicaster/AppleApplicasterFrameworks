@@ -16,6 +16,7 @@ class UNMutableNotificationContentPayloadTests: XCTestCase {
         XCTAssertTrue(content.title == "Title")
         XCTAssertTrue(content.body == "Body")
         XCTAssertTrue(content.badge == 1)
+        XCTAssertTrue(content.userInfo.keys.count == 2)
         XCTAssertTrue(content.sound == UNNotificationSound.default)
     }
 
@@ -24,6 +25,7 @@ class UNMutableNotificationContentPayloadTests: XCTestCase {
         XCTAssertTrue(content.title == "")
         XCTAssertTrue(content.body == "")
         XCTAssertTrue(content.badge == 1)
+        XCTAssertTrue(content.userInfo.keys.count == 2)
         XCTAssertTrue(content.sound == UNNotificationSound.default)
     }
 
@@ -40,6 +42,7 @@ class UNMutableNotificationContentPayloadTests: XCTestCase {
         XCTAssertTrue(content.title == "")
         XCTAssertTrue(content.body == "")
         XCTAssertTrue(content.badge == 1)
+        XCTAssertTrue(content.userInfo.keys.count == 2)
         XCTAssertTrue(content.sound == UNNotificationSound.default)
     }
 
@@ -47,6 +50,7 @@ class UNMutableNotificationContentPayloadTests: XCTestCase {
         let content: UNMutableNotificationContent = UNMutableNotificationContent(payload: content_dummy_no_data_string)
         XCTAssertTrue(content.title == "")
         XCTAssertTrue(content.body == "")
+        XCTAssertTrue(content.userInfo.keys.count == 2)
         XCTAssertTrue(content.badge == 1)
         XCTAssertTrue(content.sound == UNNotificationSound.default)
     }
@@ -55,7 +59,9 @@ class UNMutableNotificationContentPayloadTests: XCTestCase {
         let content: UNMutableNotificationContent = UNMutableNotificationContent(payload: content_dummy_no_data_string)
         XCTAssertTrue(content.title == "")
         XCTAssertTrue(content.body == "")
+        XCTAssertTrue(content.userInfo.keys.count == 2)
         XCTAssertTrue(content.badge == 1)
         XCTAssertTrue(content.sound == UNNotificationSound.default)
     }
 }
+

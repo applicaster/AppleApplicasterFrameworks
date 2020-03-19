@@ -11,7 +11,11 @@ import UserNotifications
 import ZappCore
 
 public class LocalNotificationManager: NSObject {
-    var foo = false
+    let errorDomainNoIdentifier = "LOCAL_NOTIFICATION_MANAGER_NO_IDENTIFIER"
+    let errorDomainNoTrigger = "LOCAL_NOTIFICATION_MANAGER_UNABLE_CREATE_TRIGGER"
+
+    var foo = false //TODO: Delete
+    
     let notificationCenter = UNUserNotificationCenter.current()
     let options: UNAuthorizationOptions = [.alert,
                                            .sound,
@@ -19,8 +23,11 @@ public class LocalNotificationManager: NSObject {
 
     func requestLocalNotification(payload: [AnyHashable: Any],
                                   completion: @escaping (_ scheduled: Bool, _ error: Error?) -> Void) {
+        let error = NSError(domain: errorDomainNoIdentifier,
+                            code: 0,
+                            userInfo: (payload as? [String: Any]) ?? [:])
         guard let identifier = payload[LocalNotificationPayloadConst.identifier] as? String else {
-            completion(false, nil) // TODO: Add error
+            completion(false, error)
             return
         }
         requestScheduleLocalNotifications { isGranted in
@@ -41,8 +48,11 @@ public class LocalNotificationManager: NSObject {
                               payload: [AnyHashable: Any],
                               currentCategories: Set<UNNotificationCategory>,
                               completion: @escaping (_ scheduled: Bool, _ error: Error?) -> Void) {
+        let error = NSError(domain: errorDomainNoTrigger,
+                            code: 0,
+                            userInfo: (payload as? [String: Any]) ?? [:])
         guard let trigger = UNNotificationTrigger.trigger(payload: payload) else {
-            completion(false, nil) // TODO: Add error
+            completion(false, error)
             return
         }
 

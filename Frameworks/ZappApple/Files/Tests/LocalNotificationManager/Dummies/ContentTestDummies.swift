@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import ZappCore
 
 let content_dummy: [AnyHashable: Any] = [
-    "title": "Title",
-    "body": "Body",
+    LocalNotificationPayloadConst.title: "Title",
+    LocalNotificationPayloadConst.body: "Body",
 ]
 
 let content_dummy_headlined_keys: [AnyHashable: Any] = [
@@ -20,16 +21,16 @@ let content_dummy_headlined_keys: [AnyHashable: Any] = [
 let content_dummy_no_data: [AnyHashable: Any] = [:]
 
 let content_dummy_no_data_string: [AnyHashable: Any] = [
-    "title": "",
-    "body": "",
+    LocalNotificationPayloadConst.title: "",
+    LocalNotificationPayloadConst.body: "",
 ]
 
 let content_dummy_numers: [AnyHashable: Any] = [
-    "title": 12345,
-    "body": 12345,
+    LocalNotificationPayloadConst.title: 12345,
+    LocalNotificationPayloadConst.body: 12345,
 ]
 
 let content_dummy_bool: [AnyHashable: Any] = [
-    "title": true,
-    "body": true,
+    LocalNotificationPayloadConst.title: true,
+    LocalNotificationPayloadConst.body: true,
 ]
