@@ -1,5 +1,5 @@
 module: ZappAppleVideoSubscriptionRegistration
-module_version: 0.1.9
+module_version: 0.1.10
 
 author: "Applicaster ltd."
 copyright: "© 2020 [Applicaster ltd.](https://www.applicaster.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."
