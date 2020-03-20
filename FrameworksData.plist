@@ -54,5 +54,12 @@
 		<key>plugin</key>
 		<true/>
 	</dict>
+	<key>ZappLocalNotifications</key>
+	<dict>
+		<key>version_id</key>
+		<string>0.1.0</string>
+		<key>plugin</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
