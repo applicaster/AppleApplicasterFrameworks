@@ -15,6 +15,9 @@ public class LocalNotificationResponseParser {
         if let url = urlFromActionPayload(payload: payload,
                                           actionIdentifier: actionIdentifier) {
             return url
+        } else if let url = urlForDefaultActionsPayload(payload: payload,
+                                                        actionIdentifier: actionIdentifier) {
+            return url
         }
         return nil
     }
