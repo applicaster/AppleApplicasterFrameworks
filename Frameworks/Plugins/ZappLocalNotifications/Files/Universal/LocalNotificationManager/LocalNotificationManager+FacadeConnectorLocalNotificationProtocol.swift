@@ -20,10 +20,7 @@ extension LocalNotificationManager: FacadeConnectorLocalNotificationProtocol {
 
     public func presentLocalNotification(_ payload: [AnyHashable: Any],
                                          completion: @escaping (Bool, Error?) -> Void) {
-        if foo == false {
-            requestLocalNotification(payload: payload,
-                                     completion: completion)
-        }
-        foo = true
+        requestLocalNotification(payload: payload,
+                                 completion: completion)
     }
 }

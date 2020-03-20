@@ -1,6 +1,6 @@
 //
 //  UNNotificationTrigger+Payload.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 3/12/20.
 //

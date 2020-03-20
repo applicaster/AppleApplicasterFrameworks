@@ -1,6 +1,6 @@
 //
 // UNNotificationAttachment+PayloadTests.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 1/9/20.
 //  Copyright © 2020 Applicaster. All rights reserved.
@@ -8,12 +8,12 @@
 
 import Foundation
 import XCTest
-@testable import ZappApple
+@testable import ZappLocalNotifications
 import ZappCore
 
 class UNNotificationAttachmentPayloadTests: XCTestCase {
     override func setUp() {
-        UNNotificationAttachmentResourceBundle = Bundle(for: LocalNotificationManagerTest.self)
+        UNNotificationAttachmentResourceBundle = Bundle(for: ZappLocalNotifications.self)
     }
 
     func testUrlFromUri() {

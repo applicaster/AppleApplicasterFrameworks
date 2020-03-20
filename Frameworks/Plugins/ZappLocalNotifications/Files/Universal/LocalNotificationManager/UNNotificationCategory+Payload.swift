@@ -1,6 +1,6 @@
 //
 //  UNNotificationCategory+Payload.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 3/16/20.
 //
@@ -65,7 +65,8 @@ extension UNNotificationCategory {
             return nil
         }
 
-        var options: UNNotificationActionOptions = []
+        var options: UNNotificationActionOptions = [.foreground,
+                                                    .authenticationRequired]
         if isButtonDestructive(actionButtonData: actionButtonData) {
             options.insert(.destructive)
         }

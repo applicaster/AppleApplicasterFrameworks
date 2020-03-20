@@ -1,6 +1,6 @@
 //
 // UNNotificationAttachment+PayloadTests.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 1/9/20.
 //  Copyright © 2020 Applicaster. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-@testable import ZappApple
+@testable import ZappLocalNotifications
 import ZappCore
 
 class UNNotificationCategoryPayloadTests: XCTestCase {
@@ -32,6 +32,8 @@ class UNNotificationCategoryPayloadTests: XCTestCase {
 
         result = UNNotificationCategory.actionFromActionButtonData(actionButtonData: action_button_data)
         XCTAssertNotNil(result)
+        XCTAssertTrue(result?.options.contains(.authenticationRequired) ?? false)
+        XCTAssertTrue(result?.options.contains(.foreground) ?? false)
 
         result = UNNotificationCategory.actionFromActionButtonData(actionButtonData: action_button_data_no_title)
         XCTAssertNil(result)
@@ -50,6 +52,8 @@ class UNNotificationCategoryPayloadTests: XCTestCase {
 
         result = UNNotificationCategory.actionFromActionButtonData(actionButtonData: action_button_data_destructive)
         XCTAssertTrue(result?.options.contains(.destructive) ?? false)
+        XCTAssertTrue(result?.options.contains(.authenticationRequired) ?? false)
+        XCTAssertTrue(result?.options.contains(.foreground) ?? false)
     }
 
     func testActionsButtonForCategory() {

@@ -1,6 +1,6 @@
 //
 //  LocalNotificationManager.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 3/11/20.
 //  Copyright © 2020 Applicaster. All rights reserved.
@@ -10,7 +10,7 @@ import Foundation
 import UserNotifications
 import ZappCore
 
-public class LocalNotificationManager: NSObject, PluginAdapterProtocol {
+public class LocalNotificationManager: NSObject, PluginAdapterProtocol, GeneralProviderProtocol {
     var disabled = false
 
     public required init(pluginModel: ZPPluginModel) {
@@ -36,8 +36,6 @@ public class LocalNotificationManager: NSObject, PluginAdapterProtocol {
 
     let errorDomainNoIdentifier = "LOCAL_NOTIFICATION_MANAGER_NO_IDENTIFIER"
     let errorDomainNoTrigger = "LOCAL_NOTIFICATION_MANAGER_UNABLE_CREATE_TRIGGER"
-
-    var foo = false // TODO: Delete
 
     let notificationCenter = UNUserNotificationCenter.current()
     let options: UNAuthorizationOptions = [.alert,

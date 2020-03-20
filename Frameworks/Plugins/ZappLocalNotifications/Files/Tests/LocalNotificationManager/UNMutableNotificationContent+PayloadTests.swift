@@ -1,6 +1,6 @@
 //
 //  UNMutableNotificationContent+PayloadTests.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 1/9/20.
 //  Copyright © 2020 Applicaster. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-@testable import ZappApple
+@testable import ZappLocalNotifications
 
 class UNMutableNotificationContentPayloadTests: XCTestCase {
     func testContent() {

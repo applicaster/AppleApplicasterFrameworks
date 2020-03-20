@@ -1,6 +1,6 @@
 //
 //  TriggerTestDummies.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 3/18/20.
 //

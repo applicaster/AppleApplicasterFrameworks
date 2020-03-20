@@ -1,6 +1,6 @@
 //
 //  UNNotificationAttachment+Payload.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 3/16/20.
 //
@@ -83,8 +83,7 @@ extension UNNotificationAttachment {
     /// Create url by URI object
     /// - Parameter uri: file name of the expected item
     class func urlFromUri(uri: String) -> URL? {
-        let fileNameNoWhiteSpaces = uri.replace(" ",
-                                                withString: "")
+        let fileNameNoWhiteSpaces = uri.replacingOccurrences(of: " ", with: "")
         if let url = UNNotificationAttachmentResourceBundle.url(forResource: fileNameNoWhiteSpaces,
                                                                 withExtension: ""),
             FileManager().fileExists(atPath: url.path) {

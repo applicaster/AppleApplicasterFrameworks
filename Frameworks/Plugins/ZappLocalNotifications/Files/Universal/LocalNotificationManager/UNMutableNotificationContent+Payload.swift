@@ -1,6 +1,6 @@
 //
 //  UNMutableNotificationContent+Payload.swift
-//  ZappApple
+//  ZappLocalNotifications
 //
 //  Created by Anton Kononenko on 3/11/20.
 //  Copyright © 2020 Applicaster. All rights reserved.
