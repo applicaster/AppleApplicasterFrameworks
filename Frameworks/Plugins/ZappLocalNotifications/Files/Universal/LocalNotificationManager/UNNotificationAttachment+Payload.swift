@@ -13,7 +13,7 @@ var UNNotificationAttachmentResourceBundle = Bundle.main
 
 extension UNNotificationAttachment {
     /// Create attachments array by payload dictionary
-    /// - Parameter payload: Dictionary payload to create local notification
+    /// - Parameter payload: Dictionary that contains data for creation Local Notification
     class func attachments(payload: [AnyHashable: Any]) -> [UNNotificationAttachment] {
         var retVal: [UNNotificationAttachment] = []
         guard let attachments = attachmentsFromPayload(payload: payload) else {

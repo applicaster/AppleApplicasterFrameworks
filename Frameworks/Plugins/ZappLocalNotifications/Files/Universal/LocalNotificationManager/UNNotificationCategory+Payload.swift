@@ -13,7 +13,7 @@ extension UNNotificationCategory {
     static let baseCategoryIdentifier = "Default-Category"
 
     /// Cretate Category for local notification by payload dictionary
-    /// - Parameter payload: Dictionary payload to create local notification
+    /// - Parameter payload: Dictionary that contains data for creation Local Notification
     class func category(payload: [AnyHashable: Any]) -> UNNotificationCategory? {
         guard let actionsTuple = actionsButtonsFromPayload(payload: payload) else {
             return nil
@@ -26,7 +26,7 @@ extension UNNotificationCategory {
     }
 
     /// Retrieves tuple of actions and category identifier from payload dictionary
-    /// - Parameter payload: Dictionary payload to create local notification
+    /// - Parameter payload: Dictionary that contains data for creation Local Notification
     class func actionsButtonsFromPayload(payload: [AnyHashable: Any]) -> (actionsButton: [UNNotificationAction], categoryIdentifier: String)? {
         guard let actions = payload[LocalNotificationPayloadConst.actions] as? [[AnyHashable: Any]] else {
             return nil

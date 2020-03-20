@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041F6A387BE8477DFC50073C /* Pods-FrameworksApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworksApp.release.xcconfig"; path = "../../Frameworks/ZappApple/Pods/Target Support Files/Pods-FrameworksApp/Pods-FrameworksApp.release.xcconfig"; sourceTree = "<group>"; };
+		041F6A387BE8477DFC50073C /* Pods-FrameworksApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworksApp.release.xcconfig"; path = "../../Frameworks/ZappCore/Pods/Target Support Files/Pods-FrameworksApp/Pods-FrameworksApp.release.xcconfig"; sourceTree = "<group>"; };
 		1EE912D39F001556FF471E7C /* Pods_FrameworksApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrameworksApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2784FE0014A122DAF6C9ADF8 /* Pods-FrameworksApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworksApp.debug.xcconfig"; path = "../../Frameworks/ZappApple/Pods/Target Support Files/Pods-FrameworksApp/Pods-FrameworksApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2784FE0014A122DAF6C9ADF8 /* Pods-FrameworksApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworksApp.debug.xcconfig"; path = "../../Frameworks/ZappCore/Pods/Target Support Files/Pods-FrameworksApp/Pods-FrameworksApp.debug.xcconfig"; sourceTree = "<group>"; };
 		402FF58B23BA3B6600469430 /* FrameworksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		402FF58E23BA3B6600469430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		402FF59223BA3B6600469430 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,8 +42,8 @@
 		402FF5A523BA3B6800469430 /* FrameworksAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksAppTests.swift; sourceTree = "<group>"; };
 		402FF5A723BA3B6800469430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		953B39070E8820E8215B9E77 /* Pods_FrameworksAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrameworksAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		989FD4B75C509B5299545AD6 /* Pods-FrameworksAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworksAppTests.release.xcconfig"; path = "../../Frameworks/ZappApple/Pods/Target Support Files/Pods-FrameworksAppTests/Pods-FrameworksAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		E37ADDED5CFB8C30921464BA /* Pods-FrameworksAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworksAppTests.debug.xcconfig"; path = "../../Frameworks/ZappApple/Pods/Target Support Files/Pods-FrameworksAppTests/Pods-FrameworksAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		989FD4B75C509B5299545AD6 /* Pods-FrameworksAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworksAppTests.release.xcconfig"; path = "../../Frameworks/ZappCore/Pods/Target Support Files/Pods-FrameworksAppTests/Pods-FrameworksAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		E37ADDED5CFB8C30921464BA /* Pods-FrameworksAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworksAppTests.debug.xcconfig"; path = "../../Frameworks/ZappCore/Pods/Target Support Files/Pods-FrameworksAppTests/Pods-FrameworksAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,6 @@
 				402FF58823BA3B6600469430 /* Frameworks */,
 				402FF58923BA3B6600469430 /* Resources */,
 				6E7A8F3F79454250F7D7289B /* [CP] Embed Pods Frameworks */,
-				1B8751153E2AA7164C359F73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,23 +228,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B8751153E2AA7164C359F73 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FrameworksApp/Pods-FrameworksApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FrameworksApp/Pods-FrameworksApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrameworksApp/Pods-FrameworksApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6E7A8F3F79454250F7D7289B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

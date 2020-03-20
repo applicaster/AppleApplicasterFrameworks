@@ -13,7 +13,7 @@ extension UNNotificationTrigger {
     static let kMinimumTriggerTimeInterval:TimeInterval = 1
 
     /// Cretate Trigger for local notification by payload dictionary
-    /// - Parameter payload: Dictionary payload to create local notification
+    /// - Parameter payload: Dictionary that contains data for creation Local Notification
     class func trigger(payload: [AnyHashable: Any]) -> UNNotificationTrigger? {
         if let unixTimestamp = retrieveUnixTimeStamp(payload: payload) {
             let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp))
@@ -27,7 +27,7 @@ extension UNNotificationTrigger {
     }
 
     /// Retrieves unix timestamp from payload
-    /// - Parameter payload: Dictionary payload to create local notification
+    /// - Parameter payload: Dictionary that contains data for creation Local Notification
     class func retrieveUnixTimeStamp(payload: [AnyHashable: Any]) -> Double? {
         if let retVal = payload[LocalNotificationPayloadConst.unixTimestamp] as? NSNumber {
             return retVal.doubleValue
