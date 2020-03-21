@@ -36,7 +36,6 @@ class ZPAppleVideoSubscriberSSO: NSObject {
     var model: ZPPluginModel?
     var managerInfo = VideoSubscriberAccountManagerInfo()
     var vsaAccessOperationCompletion:((_ success: Bool) -> Void)?
-    var presentationViewController: UIViewController?
     
     lazy var videoSubscriberAccountManager: VSAccountManager = {
         return VSAccountManager()

@@ -7,11 +7,12 @@
 //
 
 import VideoSubscriberAccount
+import ZappCore
 
 extension ZPAppleVideoSubscriberSSO: VSAccountManagerDelegate {
     func accountManager(_ accountManager: VSAccountManager, present viewController: UIViewController) {
         DispatchQueue.main.async {
-            self.presentationViewController?.present(viewController, animated: true, completion: nil)
+            UIApplication.shared.keyWindow?.rootViewController?.present(viewController, animated: true, completion: nil)
         }
     }
     

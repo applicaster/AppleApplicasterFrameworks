@@ -9,9 +9,8 @@
 import ZappCore
 
 extension ZPAppleVideoSubscriberSSO: PlayerDependantPluginPrehookProtocol {
-    func perform(on presentationViewController: UIViewController?, completion: @escaping (_ success: Bool) -> Void) {
+    func performPrehook(_ completion: @escaping (_ success: Bool) -> Void) {
         self.vsaAccessOperationCompletion = completion
-        self.presentationViewController = presentationViewController
         
         self.askForAccessIfNeeded(prompt: false) { (status) in
             if self.managerInfo.isAuthorized {
