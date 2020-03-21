@@ -43,18 +43,27 @@ class ZPAppleVideoSubscriberSSO: NSObject {
     }()
     
     lazy var verificationToken: String? = {
-        return configurationJSON?["verification_token"] as? String
+        guard let token = configurationJSON?["verification_token"] as? String,
+            !token.isEmpty else {
+                return nil
+        }
+        return token
     }()
     
     lazy var channelIdentifier: String? = {
-        return configurationJSON?["channel_identifier"] as? String
+        guard let identifier = configurationJSON?["channel_identifier"] as? String,
+            !identifier.isEmpty else {
+                return nil
+        }
+        return identifier
     }()
     
     lazy var attributeNames: [String] = {
-        guard let value = configurationJSON?["attribute_names"] as? String else {
+        guard let names = configurationJSON?["attribute_names"] as? String,
+            !names.isEmpty else {
             return []
         }
-        return value.components(separatedBy: ",")
+        return names.components(separatedBy: ",")
     }()
     
     
