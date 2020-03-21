@@ -7,89 +7,62 @@
 //
 
 import ZappCore
-import AVKit
+import VideoSubscriberAccount
+
+struct VideoSubscriberAccountManagerInfo {
+    var isAuthorized: Bool = false // do we have access to the framework?
+    var isAuthenticated: Bool = false // are we logged in?
+}
+
+struct VideoSubscriberAccountManagerResult {
+    var accountProviderID: String?
+    var authExpirationDate: Date?
+    var verificationData: Data?
+        
+    static func createFromMetadata(_ metadata: VSAccountMetadata) -> VideoSubscriberAccountManagerResult {
+        var result = VideoSubscriberAccountManagerResult()
+        
+        result.accountProviderID = metadata.accountProviderIdentifier
+        result.authExpirationDate = metadata.authenticationExpirationDate
+        result.verificationData = metadata.verificationData
+        
+        return result
+    }
+}
 
 class ZPAppleVideoSubscriberSSO: NSObject {
-
-    override func disable(completion: ((Bool) -> Void)?) {
-        avPlayer?.removeObserver(self,
-                                 forKeyPath: "rate",
-                                 context: nil)
-
-        unregisterForRemoteCommands()
-
-        super.disable(completion: completion)
-    }
-
-    func registerForRemoteCommands() {
-        let commandCenter = MPRemoteCommandCenter.shared()
-        commandCenter.pauseCommand.isEnabled = true
-        commandCenter.pauseCommand.addTarget { (event) -> MPRemoteCommandHandlerStatus in
-             // pause your player
-             return .success
+    var playerPlugin: PlayerProtocol?
+    var configurationJSON: NSDictionary?
+    var model: ZPPluginModel?
+    var managerInfo = VideoSubscriberAccountManagerInfo()
+    var vsaAccessOperationCompletion:((_ success: Bool) -> Void)?
+    var presentationViewController: UIViewController?
+    
+    lazy var videoSubscriberAccountManager: VSAccountManager = {
+        return VSAccountManager()
+    }()
+    
+    lazy var verificationToken: String? = {
+        return configurationJSON?["verification_token"] as? String
+    }()
+    
+    lazy var channelIdentifier: String? = {
+        return configurationJSON?["channel_identifier"] as? String
+    }()
+    
+    lazy var attributeNames: [String] = {
+        guard let value = configurationJSON?["attribute_names"] as? String else {
+            return []
         }
-        commandCenter.seekForwardCommand.isEnabled = true
-        commandCenter.seekForwardCommand.addTarget { (event) -> MPRemoteCommandHandlerStatus in
-             // seek forward
-             return .success
-        }
-        commandCenter.seekBackwardCommand.isEnabled = true
-        commandCenter.seekBackwardCommand.addTarget { (event) -> MPRemoteCommandHandlerStatus in
-             // seek backward
-             return .success
-        }
-    }
-
-    func unregisterForRemoteCommands() {
-        let commandCenter = MPRemoteCommandCenter.shared()
-        commandCenter.pauseCommand.isEnabled = false
-        commandCenter.pauseCommand.removeTarget(nil)
-        commandCenter.seekBackwardCommand.isEnabled = false
-        commandCenter.seekBackwardCommand.removeTarget(nil)
-        commandCenter.seekForwardCommand.isEnabled = false
-        commandCenter.seekForwardCommand.removeTarget(nil)
-    }
-
-    func disableNowPlayingUpdates() {
-        if let avPlayerViewController = self.playerPlugin?.pluginPlayerViewController as? AVPlayerViewController {
-            avPlayerViewController.updatesNowPlayingInfoCenter = false
-        }
-    }
-
-    func sendNowPlayingInitial(player: PlayerProtocol) {
-        guard let entry = player.entry else {
-            return
-        }
-
-        guard let title = entry[ItemMetadata.title] as? (NSCopying & NSObjectProtocol),
-            let contentId = entry[ItemMetadata.contentId] as? (NSCopying & NSObjectProtocol) else {
-                return
-        }
-
-        logger = NowPlayingLogger()
-        logger?.start()
-
-        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
-        var nowPlayingInfo = [String: Any]()
-        nowPlayingInfo[MPMediaItemPropertyTitle] = title
-        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = player.playbackDuration()
-        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.playbackPosition()
-        nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = 1.0
-        nowPlayingInfo[MPNowPlayingInfoPropertyExternalContentIdentifier] = contentId
-        nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackProgress] = 0.0
-
-        nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
-    }
-
-    func sendNowPlayingOnPause() {
-        guard let playerPlugin = playerPlugin else {
-            return
-        }
-
-        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
-        var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo
-        nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = playerPlugin.playbackPosition()
-        nowPlayingInfo?[MPNowPlayingInfoPropertyPlaybackRate] = 0.0
-        nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
+        return value.components(separatedBy: ",")
+    }()
+    
+    
+    required init(pluginModel: ZPPluginModel) {
+        super.init()
+        model = pluginModel
+        configurationJSON = model?.configurationJSON
+        
+        videoSubscriberAccountManager.delegate = self
     }
 }

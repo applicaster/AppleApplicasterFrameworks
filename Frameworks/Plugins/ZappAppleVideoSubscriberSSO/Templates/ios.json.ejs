@@ -4,7 +4,13 @@
     "class_name": "ZPAppleVideoSubscriberSSO",
     "modules": [
       "ZappAppleVideoSubscriberSSO"
-    ]
+    ],
+    "plist": {
+      "NSVideoSubscriberAccountUsageDescription": "We need to access you TV Provider for Single Sign-On to work."
+    },
+    "entitlements": {
+      "com.apple.developer.video-subscriber-single-sign-on": true
+    }
   },
   "npm_dependencies": [
     "@applicaster/video_subscriber_sso_apple@<%= version_id %>"
