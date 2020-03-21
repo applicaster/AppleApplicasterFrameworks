@@ -18,15 +18,15 @@ extension ZPAppleVideoSubscriberSSO: PlayerDependantPluginPrehookProtocol {
                     if let authResult = authResult {
                         if let id = authResult.accountProviderID {
                             if id.isEmpty {
-                                self.showVSALogin()
+                                self.vsaLogin()
                             } else {
                                 self.processResult()
                             }
                         } else {
-                            self.showVSALogin()
+                            self.vsaLogin()
                         }
                     } else {
-                        self.showVSALogin()
+                        self.vsaLogin()
                     }
                 }
             } else {
@@ -35,7 +35,7 @@ extension ZPAppleVideoSubscriberSSO: PlayerDependantPluginPrehookProtocol {
         }
     }
         
-    fileprivate func showVSALogin() {
+    fileprivate func vsaLogin() {
         self.requestDeviceAuthenticationIfNotAuthenticated { (deviceAuthResult, error) in
             if let deviceAuthResult = deviceAuthResult {
                 if let id = deviceAuthResult.accountProviderID {

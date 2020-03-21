@@ -5,7 +5,6 @@
 //  Created by Alex Zchut on 20/03/2020.
 //
 
-import Foundation
 import VideoSubscriberAccount
 
 extension ZPAppleVideoSubscriberSSO: VSAccountManagerDelegate {

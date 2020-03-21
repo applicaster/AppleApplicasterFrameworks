@@ -8,7 +8,6 @@
 import VideoSubscriberAccount
 
 extension ZPAppleVideoSubscriberSSO {
-    
     func askForAccessIfNeeded(prompt: Bool, _ completion: @escaping (_ result: Bool) -> Void) {
         self.videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.prompt : NSNumber(booleanLiteral: prompt)]) { (status, error) in
             if prompt {
