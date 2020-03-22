@@ -116,7 +116,7 @@ extension ZPAppleVideoSubscriberSSO {
         }
     }
     
-    func getVerificationToken(_ completion : @escaping (_ status:Bool, _ token:String?, _ message: String?) -> Swift.Void) {
+    func getVerificationToken(_ completion : @escaping (_ status:Bool, _ verificationToken:String?, _ message: String?) -> Swift.Void) {
         guard let providerName = self.vsProviderName?.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed),
             let endpointForVerificationToken = self.vsVerificationTokenEndpoint else {
                 completion(false, nil, nil)
@@ -140,12 +140,13 @@ extension ZPAppleVideoSubscriberSSO {
             
             let httpResponse = response as? HTTPURLResponse
             
-            if httpResponse?.statusCode == 200 {
-                token = String(bytes: data!, encoding: String.Encoding.utf8)
+            if httpResponse?.statusCode == 200,
+                let data = data {
+                token = String(bytes: data, encoding: String.Encoding.utf8)
                 status = true
             }else{
                 if response != nil {
-                    message = "HTTP Error Code: " + (httpResponse?.statusCode.description)! + " " + HTTPURLResponse.localizedString(forStatusCode: (httpResponse?.statusCode)!)
+                    message = "HTTP Error Code: " + (httpResponse?.statusCode.description ?? "")  + " " + HTTPURLResponse.localizedString(forStatusCode: (httpResponse?.statusCode)!)
                 }else{
                     message = "SP Server is unreachable"
                 }
@@ -161,6 +162,7 @@ extension ZPAppleVideoSubscriberSSO {
         guard let postString = authResult?.samlAttributeQueryResponse,
             let urlString = self.vsAuthenticationEndpoint,
             let url = URL(string: urlString) else {
+                completion(false, nil, nil)
                 return
         }
         

@@ -38,6 +38,15 @@ class ZPAppleVideoSubscriberSSO: NSObject {
         return endpoint
     }()
     
+    lazy var vsAuthorizationEndpoint: String? = {
+        guard let endpoint = configurationJSON?["authorization_endpoint"] as? String,
+            !endpoint.isEmpty else {
+                return nil
+        }
+        return endpoint
+    }()
+    
+    
     lazy var vsSupportedProviderIdentifiers: [String] = {
         guard let identifiers = configurationJSON?["provider_identifiers"] as? String,
             !identifiers.isEmpty else {

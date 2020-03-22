@@ -36,12 +36,12 @@ extension ZPAppleVideoSubscriberSSO: PlayerDependantPluginPrehookProtocol {
             //reset authentication status
             self.managerInfo.isAuthenticated = false
             
-            self.getVerificationToken { (status, token, message) in
-                if status, let token = token {
+            self.getVerificationToken { (status, verificationToken, message) in
+                if status, let verificationToken = verificationToken {
                     /*
                     Once the customer is authenticated to a TV provider, the next step is to request information from your service provider for the specific app using the customer’s TV provider. This information includes the verificationToken used to authenticate at the app-level and attributesNames in the metadata request. Along with this request, you are required to request at least one attribute.
                     */
-                    self.requestAppLevelAuthentication(verificationToken: token) { (authResult, error) in
+                    self.requestAppLevelAuthentication(verificationToken: verificationToken) { (authResult, error) in
                         self.getServiceProviderToken(for: authResult) { (success, token, message) in
                             self.managerInfo.isAuthenticated = success
                             self.processResult()
