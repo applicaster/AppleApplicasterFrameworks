@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappAppleVideoSubscriberSSO"
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = "ZappAppleVideoSubscriberSSO"
   s.description      = <<-DESC
   ZappAppleVideoSubscriberSSO container.
@@ -17,11 +17,10 @@ Pod::Spec.new do |s|
   s.static_framework = true
   s.swift_versions = '5.1'
 
-  s.frameworks = 'AVKit'
-  s.ios.frameworks = 'VideoSubscriberAccount'
+  s.frameworks = 'VideoSubscriberAccount'
 
-  s.ios.source_files  = [
-    'ios/**/*.swift'
+  s.source_files  = [
+    'Universal/**/*.swift'
   ]
 
   s.xcconfig =  {

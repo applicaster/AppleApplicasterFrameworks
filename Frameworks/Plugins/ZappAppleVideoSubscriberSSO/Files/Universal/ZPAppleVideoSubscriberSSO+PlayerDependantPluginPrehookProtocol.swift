@@ -16,12 +16,9 @@ extension ZPAppleVideoSubscriberSSO: PlayerDependantPluginPrehookProtocol {
             if self.managerInfo.isAuthorized {
                 self.requestAuthenticationStatus { (authResult, error) in
                     if let authResult = authResult {
-                        if let id = authResult.accountProviderID {
-                            if id.isEmpty {
-                                self.vsaLogin()
-                            } else {
-                                self.processResult()
-                            }
+                        self.managerInfo.isAuthenticated = authResult.verify(for: self.providerIdentifier)
+                        if self.managerInfo.isAuthenticated {
+                            self.processResult()
                         } else {
                             self.vsaLogin()
                         }
@@ -38,13 +35,10 @@ extension ZPAppleVideoSubscriberSSO: PlayerDependantPluginPrehookProtocol {
     fileprivate func vsaLogin() {
         self.requestDeviceAuthenticationIfNotAuthenticated { (deviceAuthResult, error) in
             if let deviceAuthResult = deviceAuthResult {
-                if let id = deviceAuthResult.accountProviderID {
-                    self.managerInfo.isAuthenticated = !id.isEmpty
-                }
-                self.processResult()
-            } else {
-                self.processResult()
+                self.managerInfo.isAuthenticated = deviceAuthResult.verify(for: self.providerIdentifier)
             }
+            self.processResult()
+
         }
     }
     
@@ -54,5 +48,28 @@ extension ZPAppleVideoSubscriberSSO: PlayerDependantPluginPrehookProtocol {
         DispatchQueue.main.async {
             self.vsaAccessOperationCompletion?(success)
         }
+    }
+}
+
+extension ZPAppleVideoSubscriberSSO: PlayerObserverProtocol {
+    func playerDidFinishPlayItem(player: PlayerProtocol,
+                                 completion: @escaping (_ finished: Bool) -> Void) {
+        
+    }
+
+    func playerDidCreate(player: PlayerProtocol) {
+        
+    }
+
+    func playerDidDismiss(player: PlayerProtocol) {
+        self.performPrehook( { (success) in
+            print("SSO result: \(success)")
+        })
+    }
+
+    func playerProgressUpdate(player: PlayerProtocol,
+                              currentTime: TimeInterval,
+                              duration: TimeInterval) {
+        
     }
 }

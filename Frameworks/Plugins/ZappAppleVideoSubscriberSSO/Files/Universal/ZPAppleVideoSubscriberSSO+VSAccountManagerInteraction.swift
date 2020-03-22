@@ -8,6 +8,36 @@
 
 import VideoSubscriberAccount
 
+struct VideoSubscriberAccountManagerInfo {
+    var isAuthorized: Bool = false // do we have access to the framework?
+    var isAuthenticated: Bool = false // are we logged in?
+}
+
+struct VideoSubscriberAccountManagerResult {
+    var accountProviderID: String?
+    var authExpirationDate: Date?
+    var verificationData: Data?
+        
+    static func createFromMetadata(_ metadata: VSAccountMetadata) -> VideoSubscriberAccountManagerResult {
+        var result = VideoSubscriberAccountManagerResult()
+        
+        result.accountProviderID = metadata.accountProviderIdentifier
+        result.authExpirationDate = metadata.authenticationExpirationDate
+        result.verificationData = metadata.verificationData
+        
+        return result
+    }
+    
+    func verify(for providerId: String) -> Bool {
+        guard let accountProviderID = accountProviderID, providerId == accountProviderID,
+            let authExpirationDate = authExpirationDate, authExpirationDate > Date(),
+            let _ = verificationData else {
+                return false
+        }
+        return true
+    }
+}
+
 extension ZPAppleVideoSubscriberSSO {
     func askForAccessIfNeeded(prompt: Bool, _ completion: @escaping (_ result: Bool) -> Void) {
         self.videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.prompt : NSNumber(booleanLiteral: prompt)]) { (status, error) in
@@ -71,10 +101,7 @@ extension ZPAppleVideoSubscriberSSO {
     
     func requestAppLevelAuthentication(_ completion : @escaping (_ result: VideoSubscriberAccountManagerResult?, _ error: VSError?) -> Void) {
         let request = VSAccountMetadataRequest()
-        //request.verificationToken = token
-        //request.channelIdentifier = channelIdentifier
         request.isInterruptionAllowed = true
-        //request.attributeNames = requestedAttributes
         
         self.videoSubscriberAccountManager.enqueue(request) { (userMetadata, error) in
             if let data = userMetadata {

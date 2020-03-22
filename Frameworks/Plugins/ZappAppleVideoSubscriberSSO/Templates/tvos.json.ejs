@@ -1,0 +1,57 @@
+{
+  "api": {
+    "require_startup_execution": false,
+    "class_name": "ZPAppleVideoSubscriberSSO",
+    "modules": [
+      "ZappAppleVideoSubscriberSSO"
+    ],
+    "plist": {
+      "NSVideoSubscriberAccountUsageDescription": "We need to access you TV Provider for Single Sign-On to work."
+    },
+    "entitlements": {
+      "com.apple.developer.video-subscriber-single-sign-on": true
+    }
+  },
+  "npm_dependencies": [
+    "@applicaster/video_subscriber_sso_apple@<%= version_id %>"
+  ],
+  "extra_dependencies": [
+    {
+      "ZappAppleVideoSubscriberSSO": ":path => './node_modules/@applicaster/video_subscriber_sso_apple/ZappAppleVideoSubscriberSSO.podspec'"
+    }
+  ],
+  "platform": "tvos",
+  "author_name": "Alex Zchut",
+  "author_email": "a.zchut@applicaster.com",
+  "manifest_version": "<%= version_id %>",
+  "name": "Apple Video Subscriber SSO",
+  "description": "Apple Video Subscriber SSO",
+  "type": "general",
+  "screen": false,
+  "identifier": "video_subscriber_sso_apple",
+  "ui_builder_support": true,
+  "whitelisted_account_ids": [
+    "5ae06cef8fba0f00084bd3c6",
+    "5c20970320f1c500088842dd"
+  ],
+  "min_zapp_sdk": "12.0.0-Dev",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "custom_configuration_fields": [
+    {
+      "type": "checkbox",
+      "key": "enabled",
+      "tooltip_text": "Is plugin enabled on app start",
+      "default": 0
+    },
+    {
+      "type": "text",
+      "key": "provider_identifier",
+      "tooltip_text": "Verification token"
+    }
+  ],
+  "targets": [
+    "tv"
+  ]
+}
