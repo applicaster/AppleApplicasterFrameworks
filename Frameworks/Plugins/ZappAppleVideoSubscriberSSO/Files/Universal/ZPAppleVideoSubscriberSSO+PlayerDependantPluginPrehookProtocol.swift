@@ -65,26 +65,3 @@ extension ZPAppleVideoSubscriberSSO: PlayerDependantPluginPrehookProtocol {
         }
     }
 }
-
-extension ZPAppleVideoSubscriberSSO: PlayerObserverProtocol {
-    func playerDidFinishPlayItem(player: PlayerProtocol,
-                                 completion: @escaping (_ finished: Bool) -> Void) {
-        
-    }
-
-    func playerDidCreate(player: PlayerProtocol) {
-        
-    }
-
-    func playerDidDismiss(player: PlayerProtocol) {
-        self.performPrehook( { (success) in
-            print("SSO result: \(success)")
-        })
-    }
-
-    func playerProgressUpdate(player: PlayerProtocol,
-                              currentTime: TimeInterval,
-                              duration: TimeInterval) {
-        
-    }
-}
