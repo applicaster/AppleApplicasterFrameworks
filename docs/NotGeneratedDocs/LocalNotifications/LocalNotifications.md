@@ -16,7 +16,7 @@ In order to create local notification item inside a plugin on native and react n
 
 ```JSON
  {
- 	identifier: String,
+	identifier: String,
     title: String,
     body: String,
     unixTimestamp: Long,]
