@@ -38,6 +38,10 @@ import UIKit
         return connectorProvider as? FacadeConnectorPushProtocol
     }
 
+    @objc public var localNotification: FacadeConnectorLocalNotificationProtocol? {
+        return connectorProvider as? FacadeConnectorLocalNotificationProtocol
+    }
+
     let connectorProvider: NSObject
 
     @objc public static var connector: FacadeConnector? {
