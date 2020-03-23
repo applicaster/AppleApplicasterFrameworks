@@ -2264,41 +2264,48 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
       "line": 19,
+      "symbol": "PluginsManager.localNotificationManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
+      "line": 24,
       "symbol": "PluginsManager.pluginsStateMachine",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 20,
+      "line": 25,
       "symbol": "PluginsManager.pluginLoaderCompletion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 22,
+      "line": 27,
       "symbol": "PluginsManager.intializePlugins(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 29,
+      "line": 34,
       "symbol": "PluginsManager.loadPluginsGroup(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 37,
+      "line": 42,
       "symbol": "PluginsManager.crashLogs(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 44,
+      "line": 49,
       "symbol": "PluginsManager.prepareAnalyticsPlugins(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2312,28 +2319,28 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 51,
+      "line": 56,
       "symbol": "PluginsManager.preparePushPlugins(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 58,
+      "line": 63,
       "symbol": "PluginsManager.prepareGeneralPlugins(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 65,
+      "line": 70,
       "symbol": "PluginsManager.updatePluginSessionStorageData(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 67,
+      "line": 72,
       "symbol": "PluginsManager.updatePluginSessionStorageData(_:_:).sendConfigurationToSessionStorage(pluginModel:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
@@ -2347,7 +2354,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 91,
+      "line": 96,
       "symbol": "PluginsManager.hookOnLaunch(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2703,6 +2710,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorLocalNotificationProtocol.swift",
+      "line": 12,
+      "symbol": "RootController.errorDomainNoPluginExist",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorPluginManagerProtocol.swift",
       "line": 17,
       "symbol": "RootController.plugin(for:)",
@@ -2861,6 +2875,13 @@
       "line": 34,
       "symbol": "RootController.forceReloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 11,
+      "symbol": "RootController",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
