@@ -23,7 +23,7 @@ Red icon badge will be shown if user not inside application.
 
 ```JSON
  {
-	identifier: String,
+    identifier: String,
     unixTimestamp: Long,
  }
 ```
@@ -36,7 +36,7 @@ Local Notifications for iOS provide rich notificaiton settings all availible fea
 
 ```JSON
  {
-	identifier: String,
+    identifier: String,
     title: String,
     body: String,
     unixTimestamp: Long,
