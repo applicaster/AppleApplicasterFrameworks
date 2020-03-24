@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.tvos.source_files = 'Frameworks/ZappCore/Files/tvOS/**/*.{swift}'
   
   s.test_spec 'UnitTests' do |sp|
-    sp.source_files = 'Frameworks/ZappCore/Files/Tests/**/*.{swift}'
+    sp.ios.source_files = 'Frameworks/ZappCore/Files/Tests/iOS/**/*.{swift}'
+    sp.tvos.source_files = 'Frameworks/ZappCore/Files/Tests/Dummy.swift'
   end
 end
