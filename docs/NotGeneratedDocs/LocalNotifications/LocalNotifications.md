@@ -1,12 +1,12 @@
 ## Local Notification API
 
-This document explain API of the Local Notification
+This document explain API of the Local Notification.
 
 ### General Information
 
-In order to create local notification item inside a native and react native plugin you need:
+In order to create local notification item  native or react native plugin you have to:
 
-* Add `Generic Local Notifications` plugin to your project
+* Add `Generic Local Notifications` plugin to your Zapp project
 * In your plugin call open API methods:
 	* __Native__: Use `FacadeConnector.connector?.localNotification` this delegate object provides shared to control local notification.
 [API Reference](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorLocalNotificationProtocol.swift)
@@ -91,7 +91,7 @@ __Attachments__
 
 Maximun attachment image size can be checked [Apple Docs](https://developer.apple.com/documentation/usernotifications/unnotificationattachment)
 
-Currently supported only 1 attachments more items will be ignored.
+Currently supported only 1 attachment image, more items will be ignored.
 
 | Key | Type | Description | Optional
 |--------|--------|--------|--------|
