@@ -14,7 +14,7 @@ struct ItemMetadata {
     static let contentId = "id"
 }
 
-class ZPAppleVideoNowPlayingInfoBase: NSObject, PlayerDependantPluginProtocol {
+class ZPAppleVideoNowPlayingInfoBase: NSObject, GeneralProviderProtocol, PlayerDependantPluginProtocol {
     var playerPlugin: PlayerProtocol?
     var playbackStalled: Bool = false
 
