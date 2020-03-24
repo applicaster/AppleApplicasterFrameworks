@@ -13,17 +13,16 @@ extension RootController: FacadeConnectorLocalNotificationProtocol {
         return "LOCAL_NOTIFICATION_PLUGIN_NOT_EXISTS"
     }
 
-    public func cancelLocalNotification(_ identifiers: [String]?,
-                                        completion: @escaping (Bool, Error?) -> Void) {
+    public func cancelLocalNotifications(_ identifiers: [String]?,
+                                         completion: @escaping (Bool, Error?) -> Void) {
         guard let localNotificationManager = pluginsManager.localNotificationManager else {
             completion(false, NSError(domain: errorDomainNoPluginExist,
                                       code: 0,
                                       userInfo: nil))
             return
         }
-        localNotificationManager.cancelLocalNotification(identifiers,
-                                                         completion: completion)
-        
+        localNotificationManager.cancelLocalNotifications(identifiers,
+                                                          completion: completion)
     }
 
     public func presentLocalNotification(_ payload: [AnyHashable: Any],

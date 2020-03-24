@@ -9,8 +9,8 @@ import Foundation
 import ZappCore
 
 extension LocalNotificationManager: FacadeConnectorLocalNotificationProtocol {
-    public func cancelLocalNotification(_ identifiers: [String]?,
-                                        completion: @escaping (Bool, Error?) -> Void) {
+    public func cancelLocalNotifications(_ identifiers: [String]?,
+                                         completion: @escaping (Bool, Error?) -> Void) {
         guard let identifiers = identifiers else {
             return
         }
