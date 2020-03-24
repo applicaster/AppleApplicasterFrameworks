@@ -79,13 +79,67 @@ class ZPAppleVideoSubscriberSSO: NSObject {
         return attributes.components(separatedBy: ",")
     }()
     
-    
-    
     required init(pluginModel: ZPPluginModel) {
         super.init()
         model = pluginModel
         configurationJSON = model?.configurationJSON
         
         videoSubscriberAccountManager.delegate = self
+    }
+    
+    func performPrehook(_ completion: @escaping (_ success: Bool) -> Void) {
+        self.vsaAccessOperationCompletion = completion
+        
+        self.askForAccessIfNeeded(prompt: false) { (status) in
+            //update authorization status
+            self.managerInfo.isAuthorized = status
+        
+            if self.managerInfo.isAuthorized {
+                self.requestAuthenticationStatus { (authResult, error) in
+                    if let authResult = authResult {
+                        //update authentication status
+                        self.managerInfo.isAuthenticated = authResult.success
+                    }
+                    self.performApplevelAuthenticationIfNeeded()
+                }
+            } else {
+                self.processResult()
+            }
+        }
+    }
+    
+    fileprivate func performApplevelAuthenticationIfNeeded() {
+        //check and perform app level authentication if required
+        if self.vsApplevelAuthenticationEndpoint?.isEmpty == false && self.vsApplevelAuthenticationAttributes.count > 0 {
+            //reset authentication status
+            self.managerInfo.isAuthenticated = false
+            
+            self.getVerificationToken { (status, verificationToken, message) in
+                if status, let verificationToken = verificationToken {
+                    /*
+                    Once the customer is authenticated to a TV provider, the next step is to request information from your service provider for the specific app using the customer’s TV provider. This information includes the verificationToken used to authenticate at the app-level and attributesNames in the metadata request. Along with this request, you are required to request at least one attribute.
+                    */
+                    self.requestAppLevelAuthentication(verificationToken: verificationToken) { (authResult, error) in
+                        self.getServiceProviderToken(for: authResult) { (success, token, message) in
+                            self.managerInfo.isAuthenticated = success
+                            self.processResult()
+                        }
+                    }
+                }
+                else {
+                    self.processResult()
+                }
+            }
+        }
+        else {
+            self.processResult()
+        }
+    }
+    
+    fileprivate func processResult() {
+        let success = self.managerInfo.isAuthorized && self.managerInfo.isAuthenticated
+        DispatchQueue.main.async {
+            self.vsaAccessOperationCompletion?(success)
+        }
     }
 }

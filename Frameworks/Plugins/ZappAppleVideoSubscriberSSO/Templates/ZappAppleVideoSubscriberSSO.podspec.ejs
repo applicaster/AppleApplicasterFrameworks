@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'VideoSubscriberAccount'
 
   s.source_files  = [
-    'Universal/**/*.swift'
+    'Universal/**/*.{m,swift}'
   ]
 
   s.xcconfig =  {
@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
                 }
 
   s.dependency 'ZappCore'
+  s.dependency 'React'
 
   s.test_spec 'UnitTests' do |sp|
     sp.source_files = 'Tests/**'
