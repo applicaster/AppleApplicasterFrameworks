@@ -89,7 +89,8 @@ __Action Button Data__
 
 __Attachments__
 
-Maximun attachment image size can be checked [Here](https://developer.apple.com/documentation/usernotifications/unnotificationattachment)
+Maximun attachment image size can be checked [Apple Docs](https://developer.apple.com/documentation/usernotifications/unnotificationattachment)
+
 Currently supported only 1 attachments more items will be ignored.
 
 | Key | Type | Description | Optional
