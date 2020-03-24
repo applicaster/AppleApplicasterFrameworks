@@ -21,7 +21,7 @@ Red icon badge will be shown if user not inside application.
 
 ###### Payload API
 
-```JSON
+```
  {
     identifier: String,
     unixTimestamp: Long,
@@ -34,7 +34,7 @@ Local Notifications for iOS provide rich notificaiton settings all availible fea
 
 ###### Payload API
 
-```JSON
+```
  {
     identifier: String,
     title: String,
@@ -52,7 +52,7 @@ Local Notifications for iOS provide rich notificaiton settings all availible fea
     ],
     attachments: [
         {
-            imageUri: String
+            imageUri: String,
             iosOverrideImageUri: String,
             androidOverrideImageUri: String,
         }
