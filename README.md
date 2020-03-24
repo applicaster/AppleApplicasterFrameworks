@@ -28,11 +28,11 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: *0.9.0*
+##### ZappCore: *0.9.1*
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: *0.7.0*
+##### ZappApple: *0.7.1*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
@@ -80,7 +80,7 @@ This respository is the main container for general frameworks and plugins for [Z
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
-##### General Local Notification: *0.1.0*
+##### General Local Notification: *0.1.1*
   - **Description:** This plugin allow to control Local Notification events for iOS and tvOS.
   - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappLocalNotifications/index.html)
   - [**API**](https://applicaster.github.io/AppleApplicasterFrameworks/NotGeneratedDocs/LocalNotifications/LocalNotifications.html)

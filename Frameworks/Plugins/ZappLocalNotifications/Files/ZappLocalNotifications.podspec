@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappLocalNotifications"
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.version          = '0.1.0'
   s.ios.deployment_target = '11.0'
   s.tvos.deployment_target = '11.0'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-                         :tag => '2020.3.23.14-3-9'  }
+                         :tag => '2020.3.24.11-3-9'  }
 
   s.requires_arc = true
   s.static_framework = true

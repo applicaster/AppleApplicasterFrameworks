@@ -309,13 +309,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/LocaNotifications/LocalNotificationResponseParser.swift",
-      "line": 10,
-      "symbol": "LocalNotificationResponseParser",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/PipesDataModelHelper/PipesDataModelHelper.swift",
       "line": 11,
       "symbol": "PipesDataModelHelper",
@@ -901,6 +894,13 @@
       "line": 16,
       "symbol": "UserInterfaceLayerDelegate.userNotificationCenterDelegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Universal/LocaNotifications/LocalNotificationResponseParser.swift",
+      "line": 10,
+      "symbol": "LocalNotificationResponseParser",
+      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     }
   ],
