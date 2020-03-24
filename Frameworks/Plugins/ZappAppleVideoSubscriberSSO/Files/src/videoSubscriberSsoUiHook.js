@@ -16,11 +16,11 @@ export class SsoUiHook extends React.Component<Props> {
   }
 
   componentDidMount() {
-      // Will be called once, when component finish logic
-      SsoBridge.requestSso(callback) => {
-        callback();
-      }
-      //Request
+    const {callback} = this.props
+    // Will be called once, when component finish logic
+    SsoBridge.requestSso(callback).then((result, error) => {
+      callback({ success:result , error: error});
+    }
   }
 
   render() {
