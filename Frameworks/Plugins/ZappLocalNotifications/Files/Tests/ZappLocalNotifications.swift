@@ -1,16 +1,14 @@
 //
-//  Dummy.swift
-//  MyTest
+//  ZappLocalNotifications.swift
+//  ZappLocalNotifications-Unit-UnitTests
 //
-//  Created by Anton Kononenko on 1/9/20.
-//  Copyright © 2020 Applicaster. All rights reserved.
+//  Created by Anton Kononenko on 3/20/20.
 //
 
-import Foundation
 import XCTest
 
-class Dummy:XCTestCase {
-    
+class ZappLocalNotifications: XCTestCase {
+
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -20,6 +18,8 @@ class Dummy:XCTestCase {
     }
 
     func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testPerformanceExample() {
@@ -28,4 +28,5 @@ class Dummy:XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
 }

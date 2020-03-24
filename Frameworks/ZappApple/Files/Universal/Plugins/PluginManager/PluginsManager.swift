@@ -16,6 +16,11 @@ public class PluginsManager: NSObject {
     public lazy var general = GeneralPluginsManager()
     public lazy var crashlogs = CrashlogsPluginsManager()
 
+    public lazy var localNotificationManager: FacadeConnectorLocalNotificationProtocol? = {
+        let retVal = general._providers.first(where: { ($0.value as? FacadeConnectorLocalNotificationProtocol) != nil })
+        return retVal?.value as? FacadeConnectorLocalNotificationProtocol
+    }()
+
     var pluginsStateMachine: LoadingStateMachine!
     var pluginLoaderCompletion: ((_ success: Bool) -> Void)?
 

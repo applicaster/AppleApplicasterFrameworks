@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Frameworks/ZappCore/Files/Universal/**/*.{swift}'
 
   s.test_spec 'UnitTests' do |sp|
-    sp.source_files = 'Frameworks/ZappCore/Files/Tests/**'
+    sp.source_files = 'Frameworks/ZappCore/Files/Tests/**/*.{swift}'
   end
 end

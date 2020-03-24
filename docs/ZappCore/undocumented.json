@@ -58,14 +58,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
-      "line": 43,
+      "line": 41,
+      "symbol": "FacadeConnector.localNotification",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "line": 47,
       "symbol": "FacadeConnector.connector",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
-      "line": 51,
+      "line": 55,
       "symbol": "FacadeConnector.init(connectorProvider:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -138,6 +145,13 @@
       "line": 18,
       "symbol": "FacadeConnectorAppDataProtocol.appVersion()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorLocalNotificationProtocol.swift",
+      "line": 10,
+      "symbol": "FacadeConnectorLocalNotificationProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
@@ -257,6 +271,48 @@
       "line": 18,
       "symbol": "FacadeConnectorStorageProtocol.localStorageAllValues(namespace:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/LocaNotifications/LocalNotificationPayloadConst.swift",
+      "line": 34,
+      "symbol": "Notification.Name.kLocalNotificationRecievedNotification",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/LocaNotifications/LocalNotificationPayloadConst.swift",
+      "line": 37,
+      "symbol": "LocalNotificationPayloadConst",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/LocaNotifications/LocalNotificationPayloadConst.swift",
+      "line": 63,
+      "symbol": "LocalNotificationPayloadActions",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/LocaNotifications/LocalNotificationPayloadConst.swift",
+      "line": 76,
+      "symbol": "LocalNotificationPayloadActions.ButtonType",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/LocaNotifications/LocalNotificationPayloadConst.swift",
+      "line": 85,
+      "symbol": "LocalNotificationPayloadAttachments",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/LocaNotifications/LocalNotificationResponseParser.swift",
+      "line": 10,
+      "symbol": "LocalNotificationResponseParser",
+      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
@@ -838,6 +894,13 @@
       "line": 11,
       "symbol": "PushProviderProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/UserInterfaceLayer/UserInterfaceLayerApplicationDelegate/UserInterfaceLayerApplicationDelegate.swift",
+      "line": 16,
+      "symbol": "UserInterfaceLayerDelegate.userNotificationCenterDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],

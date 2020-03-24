@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UNNotificationAttachment Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/UNNotificationAttachment" class="dashAnchor"></a>
+    <a title="UNNotificationAttachment Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">ZappLocalNotifications 0.1.0 Docs</a>
+          <span class="no-mobile"> (65% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/applicaster/AppleApplicasterFrameworks/tree/master/Frameworks/Plugins/ZappLocalNotifications">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">ZappLocalNotifications Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          UNNotificationAttachment Extension Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>UNNotificationAttachment</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UNNotificationAttachment</span></code></pre>
+
+                  </div>
+                </div>
+              
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE11attachments7payloadSayABGSDys11AnyHashableVypG_tFZ"></a>
+                      <a name="//apple_ref/swift/Method/attachments(payload:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE11attachments7payloadSayABGSDys11AnyHashableVypG_tFZ">attachments(payload:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Create attachments array by payload dictionary</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">attachments</span><span class="p">(</span><span class="nv">payload</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UNNotificationAttachment</span><span class="p">]</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>payload</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary that contains data for creation Local Notification</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE22attachmentsFromPayload7payloadSaySDys11AnyHashableVSSGGSgSDyAGypG_tFZ"></a>
+                      <a name="//apple_ref/swift/Method/attachmentsFromPayload(payload:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE22attachmentsFromPayload7payloadSaySDys11AnyHashableVSSGGSgSDyAGypG_tFZ">attachmentsFromPayload(payload:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Rretrieve attachments from payload</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">attachmentsFromPayload</span><span class="p">(</span><span class="nv">payload</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]]?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>payload</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary payload to create local notification</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE14attachmentItem11attachmentsABSgSaySDys11AnyHashableVSSGG_tFZ"></a>
+                      <a name="//apple_ref/swift/Method/attachmentItem(attachments:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE14attachmentItem11attachmentsABSgSaySDys11AnyHashableVSSGG_tFZ">attachmentItem(attachments:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Create attachment item</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">attachmentItem</span><span class="p">(</span><span class="nv">attachments</span><span class="p">:</span> <span class="p">[[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kt">UNNotificationAttachment</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>attachments</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary that represents attachments objects from payload</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE06urlForB010attachment10Foundation3URLVSgSDys11AnyHashableVSSG_tFZ"></a>
+                      <a name="//apple_ref/swift/Method/urlForAttachment(attachment:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE06urlForB010attachment10Foundation3URLVSgSDys11AnyHashableVSSG_tFZ">urlForAttachment(attachment:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Retrieve URL by attachment dictionary from options</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">urlForAttachment</span><span class="p">(</span><span class="nv">attachment</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>attachment</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary that represents attachments objects from payload</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE06urlForB7FromKey10attachment3key10Foundation3URLVSgSDys11AnyHashableVSSG_SStFZ"></a>
+                      <a name="//apple_ref/swift/Method/urlForAttachmentFromKey(attachment:key:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE06urlForB7FromKey10attachment3key10Foundation3URLVSgSDys11AnyHashableVSSG_SStFZ">urlForAttachmentFromKey(attachment:key:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Retrieve URL by attachment dictionary for specific key</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">urlForAttachmentFromKey</span><span class="p">(</span><span class="nv">attachment</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span><span class="p">:</span> <span class="kt">String</span><span class="p">],</span>
+                                   <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>attachment</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Dictionary that represents attachments objects from payload</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>key</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>key to search item</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE10urlFromUri3uri10Foundation3URLVSgSS_tFZ"></a>
+                      <a name="//apple_ref/swift/Method/urlFromUri(uri:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:So24UNNotificationAttachmentC22ZappLocalNotificationsE10urlFromUri3uri10Foundation3URLVSgSS_tFZ">urlFromUri(uri:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Create url by URI object</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">urlFromUri</span><span class="p">(</span><span class="nv">uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>uri</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>file name of the expected item</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/LocalNotificationManager.html">LocalNotificationManager</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Global%20Variables.html">Global Variables</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Global%20Variables.html#/s:22ZappLocalNotifications38UNNotificationAttachmentResourceBundleSo8NSBundleCvp">UNNotificationAttachmentResourceBundle</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/UNMutableNotificationContent.html">UNMutableNotificationContent</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UNNotificationAttachment.html">UNNotificationAttachment</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UNNotificationCategory.html">UNNotificationCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UNNotificationTrigger.html">UNNotificationTrigger</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>© 2020 <a class="link" href="https://www.applicaster.com" target="_blank" rel="external">Applicaster ltd.</a> under <a class="link" href="https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE" target="_blank" rel="external">Appache 2.0</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>
