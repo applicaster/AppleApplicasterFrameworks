@@ -11,7 +11,7 @@ type Props = {
 };
 
 export class SsoUiHook extends React.Component<Props> {
-  construcstor(props) {
+  constructor(props) {
     super(props);
   }
 
@@ -20,7 +20,7 @@ export class SsoUiHook extends React.Component<Props> {
     // Will be called once, when component finish logic
     SsoBridge.requestSso(callback).then((result, error) => {
       callback({ success:result , error: error});
-    }
+    })
   }
 
   render() {

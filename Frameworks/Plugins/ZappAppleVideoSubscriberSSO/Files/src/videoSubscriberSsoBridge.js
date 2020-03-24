@@ -1,10 +1,10 @@
 import { NativeModules } from "react-native";
 // eslint-disable-next-line prefer-promise-reject-errors
 const nullPromise = () => Promise.reject("SSO module is Null");
-const videoSubscriberSSO = {
+const defautVideoSubscriberSSO = {
   requestSso: nullPromise,
 };
-const { VideoSubscriberSSO = videoSubscriberSSO } = NativeModules;
+const { VideoSubscriberSSO = defautVideoSubscriberSSO } = NativeModules;
 export const videoSubscriberSSO = {
   /**
  * Request SSO procedure
