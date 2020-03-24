@@ -8,7 +8,9 @@
   },
   "files": [
     "Universal",
-    "ZappLocalNotifications.podspec"
+    "ZappLocalNotifications.podspec",
+    "iOS",
+    "tvOS"
   ],
   "repository": {
     "type": "git",
