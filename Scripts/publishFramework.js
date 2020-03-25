@@ -172,8 +172,8 @@ async function unitTestAndGenerateDocumentation(itemsToUpdate) {
       const baseFolderPath = basePathForModel(model);
       const isPodfileExist = fs.existsSync(`${baseFolderPath}/Podfile`);
       if (isPodfileExist) {
-        await shell.exec(`cd ${baseFolderPath} && bundle exec pod install`);
         await shell.exec(`cd ${baseFolderPath} && yarn`);
+        await shell.exec(`cd ${baseFolderPath} && bundle exec pod install`);
         await shell.exec(`cd ${baseFolderPath} && set -o pipefail && xcodebuild \
         -workspace ./FrameworksApp.xcworkspace \
         -scheme ${framework} \
