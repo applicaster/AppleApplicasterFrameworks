@@ -85,7 +85,7 @@ class ZPAppleVideoSubscriberSSO: NSObject {
         videoSubscriberAccountManager.delegate = self
     }
 
-    func performPrehook(_ completion: @escaping (_ success: Bool) -> Void) {
+    func performSsoOperation(_ completion: @escaping (_ success: Bool) -> Void) {
         vsaAccessOperationCompletion = completion
 
         askForAccessIfNeeded(prompt: false) { status in

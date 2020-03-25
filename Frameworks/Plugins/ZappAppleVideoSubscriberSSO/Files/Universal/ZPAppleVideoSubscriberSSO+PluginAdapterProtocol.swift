@@ -15,7 +15,7 @@ extension ZPAppleVideoSubscriberSSO: PluginAdapterProtocol {
     }
 
     public func prepareProvider(_ defaultParams: [String: Any], completion: ((Bool) -> Void)?) {
-        performPrehook({ success in
+        performSsoOperation({ success in
             completion?(success)
         })
     }
