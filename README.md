@@ -80,7 +80,7 @@ This respository is the main container for general frameworks and plugins for [Z
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
-##### Apple Video Subscriber SSO: *0.1.4*
+##### Apple Video Subscriber SSO: *0.1.5*
 - **Description:** This plugin performs as player prehook to login to the TV Provider before player starts.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoSubscriberSSO/index.html)
 - **Manifest:**
