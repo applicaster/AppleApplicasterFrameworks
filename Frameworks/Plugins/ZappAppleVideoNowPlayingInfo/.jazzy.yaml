@@ -1,5 +1,5 @@
 module: ZappAppleVideoNowPlayingInfo
-module_version: 0.1.5
+module_version: 0.1.6
 
 author: "Applicaster ltd."
 copyright: "© 2020 [Applicaster ltd.](https://www.applicaster.com) under [Appache 2.0](https://github.com/applicaster/AppleApplicasterFrameworks/blob/master/LICENSE)."

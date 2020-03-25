@@ -73,7 +73,7 @@ This respository is the main container for general frameworks and plugins for [Z
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscription_registration_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscription_registration_apple&platform=tvos)
 
-##### Apple Video Now Playing Info: *0.1.5*
+##### Apple Video Now Playing Info: *0.1.6*
 - **Description:** This plugin saves current played item metadata to be accessible on other device (saved on iOS to use on tvOS and vice versa).
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoNowPlayingInfo/index.html)
 - **Manifest:**
