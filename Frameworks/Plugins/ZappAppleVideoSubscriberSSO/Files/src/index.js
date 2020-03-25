@@ -1,10 +1,10 @@
 import { SsoUiHook as Component } from "./videoSubscriberSsoUiHook";
 
-const VideoSubscriberSSOHook = {
+const VideoSubscriberSsoUiHook = {
   Component,
   hasPlayerHook: true,
-  presentFullScreen: false,
+  presentFullScreen: true,
   isFlowBlocker: true,
 };
 
-export default VideoSubscriberSSOHook;
+export default VideoSubscriberSsoUiHook;

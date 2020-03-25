@@ -4,7 +4,7 @@ const nullPromise = () => Promise.reject("SSO module is Null");
 const defautVideoSubscriberSSO = {
   requestSso: nullPromise,
 };
-const { VideoSubscriberSSO = defautVideoSubscriberSSO } = NativeModules;
+const { AppleVideoSubscriberSSO = defautVideoSubscriberSSO } = NativeModules;
 export const videoSubscriberSSO = {
   /**
  * Request SSO procedure
@@ -12,7 +12,7 @@ export const videoSubscriberSSO = {
  */
   async requestSso() {
     try {
-      return VideoSubscriberSSO.requestSso();
+      return AppleVideoSubscriberSSO.requestSso();
     } catch (e) {
       throw e;
     }
