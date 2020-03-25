@@ -174,7 +174,7 @@ async function unitTestAndGenerateDocumentation(itemsToUpdate) {
       const isPackageJsonExist = fs.existsSync(`${baseFolderPath}/package.json`);
       if (isPodfileExist) {
         if (isPackageJsonExist) {
-          await shell.exec(`cd ${baseFolderPath} && yarn`);
+          await shell.exec(`cd ${baseFolderPath} && npm install`);
         }
         await shell.exec(`cd ${baseFolderPath} && bundle exec pod install`);
         await shell.exec(`cd ${baseFolderPath} && set -o pipefail && xcodebuild \
