@@ -15,15 +15,14 @@ extension ZPAppleVideoSubscriberSSO: VSAccountManagerDelegate {
             UIApplication.shared.keyWindow?.rootViewController?.present(viewController, animated: true, completion: nil)
         }
     }
-    
+
     func accountManager(_ accountManager: VSAccountManager, dismiss viewController: UIViewController) {
         DispatchQueue.main.async {
             viewController.dismiss(animated: true, completion: nil)
         }
     }
-    
+
     func accountManager(_ accountManager: VSAccountManager, shouldAuthenticateAccountProviderWithIdentifier accountProviderIdentifier: String) -> Bool {
         return !managerInfo.isAuthenticated
     }
-
 }

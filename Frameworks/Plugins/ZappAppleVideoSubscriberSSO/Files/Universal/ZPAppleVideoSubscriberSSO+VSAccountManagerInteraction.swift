@@ -19,24 +19,24 @@ struct VideoSubscriberAccountManagerResult {
     var verificationData: Data?
     var samlAttributeQueryResponse: String?
     var accountProviderResponseBody: String?
-    
+
     static func createFromMetadata(_ metadata: VSAccountMetadata) -> VideoSubscriberAccountManagerResult {
         var result = VideoSubscriberAccountManagerResult()
-        
+
         result.accountProviderID = metadata.accountProviderIdentifier
         result.authExpirationDate = metadata.authenticationExpirationDate
         result.verificationData = metadata.verificationData
         result.samlAttributeQueryResponse = metadata.samlAttributeQueryResponse
         result.accountProviderResponseBody = metadata.accountProviderResponse?.body
-        
+
         return result
     }
-    
-    var success:Bool {
+
+    var success: Bool {
         guard let _ = accountProviderID,
             let authExpirationDate = authExpirationDate, authExpirationDate > Date(),
             let _ = verificationData else {
-                return false
+            return false
         }
         return true
     }
@@ -44,7 +44,7 @@ struct VideoSubscriberAccountManagerResult {
 
 extension ZPAppleVideoSubscriberSSO {
     func askForAccessIfNeeded(prompt: Bool, _ completion: @escaping (_ result: Bool) -> Void) {
-        self.videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.prompt : NSNumber(booleanLiteral: prompt)]) { (status, error) in
+        videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.prompt: NSNumber(booleanLiteral: prompt)]) { status, _ in
             if prompt {
                 DispatchQueue.main.async {
                     completion(status == .granted)
@@ -60,8 +60,8 @@ extension ZPAppleVideoSubscriberSSO {
             }
         }
     }
-    
-    func requestAuthenticationStatus(interrruption:Bool = false, completion : @escaping (_ result: VideoSubscriberAccountManagerResult?, _ error: VSError?) -> Void) {
+
+    func requestAuthenticationStatus(interrruption: Bool = false, completion: @escaping (_ result: VideoSubscriberAccountManagerResult?, _ error: VSError?) -> Void) {
         let request = VSAccountMetadataRequest()
         request.includeAccountProviderIdentifier = true
         request.includeAuthenticationExpirationDate = true
@@ -70,10 +70,10 @@ extension ZPAppleVideoSubscriberSSO {
             /*
              When requesting authentication, you should set the supportedAccountProviderIdentifiers property to a list of TV providers supported by your application. This limits the TV providers presented to the customer and establishes the order in which they will be displayed.
              */
-            request.supportedAccountProviderIdentifiers = self.vsSupportedProviderIdentifiers
+            request.supportedAccountProviderIdentifiers = vsSupportedProviderIdentifiers
         }
-        
-        self.videoSubscriberAccountManager.enqueue(request) { (userMetadata, error) in
+
+        videoSubscriberAccountManager.enqueue(request) { userMetadata, error in
             if let data = userMetadata {
                 DispatchQueue.main.async {
                     completion(VideoSubscriberAccountManagerResult.createFromMetadata(data), error as? VSError)
@@ -92,18 +92,18 @@ extension ZPAppleVideoSubscriberSSO {
             }
         }
     }
-    
-    func requestAppLevelAuthentication(verificationToken: String, _ completion : @escaping (_ result: VideoSubscriberAccountManagerResult?, _ error: VSError?) -> Void) {
+
+    func requestAppLevelAuthentication(verificationToken: String, _ completion: @escaping (_ result: VideoSubscriberAccountManagerResult?, _ error: VSError?) -> Void) {
         let request = VSAccountMetadataRequest()
         request.includeAccountProviderIdentifier = true
         request.includeAuthenticationExpirationDate = true
         request.isInterruptionAllowed = true
         request.verificationToken = verificationToken
-        request.channelIdentifier = self.vsApplevelAuthenticationEndpoint
-        request.attributeNames = self.vsApplevelAuthenticationAttributes
+        request.channelIdentifier = vsApplevelAuthenticationEndpoint
+        request.attributeNames = vsApplevelAuthenticationAttributes
         request.supportedAuthenticationSchemes = [VSAccountProviderAuthenticationScheme(rawValue: "OAuth")]
-        
-        self.videoSubscriberAccountManager.enqueue(request) { (userMetadata, error) in
+
+        videoSubscriberAccountManager.enqueue(request) { userMetadata, error in
             if let data = userMetadata {
                 DispatchQueue.main.async {
                     completion(VideoSubscriberAccountManagerResult.createFromMetadata(data), error as? VSError)
@@ -115,72 +115,72 @@ extension ZPAppleVideoSubscriberSSO {
             }
         }
     }
-    
-    func getVerificationToken(_ completion : @escaping (_ status:Bool, _ verificationToken:String?, _ message: String?) -> Swift.Void) {
+
+    func getVerificationToken(_ completion: @escaping (_ status: Bool, _ verificationToken: String?, _ message: String?) -> Swift.Void) {
         guard let providerName = self.vsProviderName?.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed),
             let endpointForVerificationToken = self.vsVerificationTokenEndpoint else {
-                completion(false, nil, nil)
-                return
+            completion(false, nil, nil)
+            return
         }
-        
+
         let urlString = endpointForVerificationToken + providerName
         guard let url = URL(string: urlString) else {
             completion(false, nil, nil)
-                return
+            return
         }
-        
-        let sessionTask = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            var token : String?
-            var status : Bool = false
-            var message : String?
-            
+
+        let sessionTask = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+            var token: String?
+            var status: Bool = false
+            var message: String?
+
             if let error = error {
                 message = error.localizedDescription
             }
-            
+
             let httpResponse = response as? HTTPURLResponse
-            
+
             if httpResponse?.statusCode == 200,
                 let data = data {
                 token = String(bytes: data, encoding: String.Encoding.utf8)
                 status = true
-            }else{
+            } else {
                 if response != nil {
-                    message = "HTTP Error Code: " + (httpResponse?.statusCode.description ?? "")  + " " + HTTPURLResponse.localizedString(forStatusCode: (httpResponse?.statusCode)!)
-                }else{
+                    message = "HTTP Error Code: " + (httpResponse?.statusCode.description ?? "") + " " + HTTPURLResponse.localizedString(forStatusCode: (httpResponse?.statusCode)!)
+                } else {
                     message = "SP Server is unreachable"
                 }
             }
-            
+
             completion(status, token, message)
         })
-        
+
         sessionTask.resume()
     }
-    
-    func getServiceProviderToken(for authResult: VideoSubscriberAccountManagerResult?, completion : @escaping (_ success: Bool, _ token: String?, _ message: String?) -> Void) {
+
+    func getServiceProviderToken(for authResult: VideoSubscriberAccountManagerResult?, completion: @escaping (_ success: Bool, _ token: String?, _ message: String?) -> Void) {
         guard let postString = authResult?.samlAttributeQueryResponse,
             let urlString = self.vsAuthenticationEndpoint,
             let url = URL(string: urlString) else {
-                completion(false, nil, nil)
-                return
+            completion(false, nil, nil)
+            return
         }
-        
-        var token : String?
-        var status : Bool = false
-        var message : String?
-        
+
+        var token: String?
+        var status: Bool = false
+        var message: String?
+
         var request = URLRequest(url: url)
 
         request.httpMethod = "POST"
         request.httpBody = "response=\(postString)".data(using: String.Encoding.utf8)
-        
-        let tokenSession = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if(error != nil){
+
+        let tokenSession = URLSession.shared.dataTask(with: request) { data, _, error in
+
+            if error != nil {
                 message = "Error: \(String(describing: error?.localizedDescription))"
             } else {
-                let jsonResponse : Dictionary<String,AnyObject>
+                let jsonResponse: Dictionary<String, AnyObject>
                 do {
                     jsonResponse = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary
                     if let authToken = jsonResponse["authN"] as? String {
@@ -191,10 +191,10 @@ extension ZPAppleVideoSubscriberSSO {
                     message = "Error parsing JSON Response"
                 }
             }
-            
+
             completion(status, token, message)
         }
-        
+
         tokenSession.resume()
     }
 }

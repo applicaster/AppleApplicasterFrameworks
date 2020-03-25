@@ -10,33 +10,30 @@ import Foundation
 import React
 import ZappCore
 
-@objc (AppleVideoSubscriberSSO)
+@objc(AppleVideoSubscriberSSO)
 class ZPAppleVideoSubscriberSSOBridge: NSObject, RCTBridgeModule {
     let pluginIdentifier = "video_subscriber_sso_apple"
     var bridge: RCTBridge!
-    
+
     static func moduleName() -> String! {
         return "AppleVideoSubscriberSSO"
     }
-    
+
     public class func requiresMainQueueSetup() -> Bool {
         return true
     }
-        
+
     @objc public func requestSso(_ resolver: @escaping RCTPromiseResolveBlock,
-                                 rejecter: @escaping RCTPromiseRejectBlock) -> Void {
-    
+                                 rejecter: @escaping RCTPromiseRejectBlock) {
         DispatchQueue.main.async {
             FacadeConnector.connector?.pluginManager?.enablePlugin(identifier: self.pluginIdentifier,
                                                                    completion: { success in
-                if success {
-                   resolver(true)
-                }
-                else {
-                   rejecter("0", "Not Authorized", nil)
-                }
+                                                                       if success {
+                                                                           resolver(true)
+                                                                       } else {
+                                                                           rejecter("0", "Not Authorized", nil)
+                                                                       }
             })
         }
     }
 }
-

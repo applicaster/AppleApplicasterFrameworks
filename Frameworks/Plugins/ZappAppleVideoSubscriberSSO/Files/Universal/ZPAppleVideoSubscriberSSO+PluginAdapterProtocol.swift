@@ -13,13 +13,13 @@ extension ZPAppleVideoSubscriberSSO: PluginAdapterProtocol {
     public var providerName: String {
         return "Apple Video Subscriber SSO"
     }
-    
-    public func prepareProvider(_ defaultParams: [String : Any], completion: ((Bool) -> Void)?) {
-        self.performPrehook( { (success) in
+
+    public func prepareProvider(_ defaultParams: [String: Any], completion: ((Bool) -> Void)?) {
+        performPrehook({ success in
             completion?(success)
         })
     }
-    
+
     public func disable(completion: ((Bool) -> Void)?) {
         completion?(true)
     }
