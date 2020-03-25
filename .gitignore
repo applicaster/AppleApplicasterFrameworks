@@ -85,3 +85,4 @@ node_modules/*
 
 **/tvos.json
 **/ios.json
+Frameworks/Plugins/ZappAppleVideoSubscriberSSO/node_modules
