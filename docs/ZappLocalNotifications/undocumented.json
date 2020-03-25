@@ -1,84 +1,91 @@
 {
   "warnings": [
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManagerBase.swift",
+      "line": 13,
+      "symbol": "LocalNotificationManagerBase",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManagerBase.swift",
+      "line": 14,
+      "symbol": "LocalNotificationManagerBase.disabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManagerBase.swift",
+      "line": 37,
+      "symbol": "LocalNotificationManagerBase.errorDomainNoIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManagerBase.swift",
+      "line": 38,
+      "symbol": "LocalNotificationManagerBase.errorDomainNoTrigger",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManagerBase.swift",
+      "line": 40,
+      "symbol": "LocalNotificationManagerBase.notificationCenter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManagerBase.swift",
+      "line": 41,
+      "symbol": "LocalNotificationManagerBase.options",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManagerBase.swift",
+      "line": 45,
+      "symbol": "LocalNotificationManagerBase.requestScheduleLocalNotifications(competion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManagerBase.swift",
+      "line": 59,
+      "symbol": "LocalNotificationManagerBase.requestPermission(competion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/iOS/LocalNotificationManager/LocalNotificationManager.swift",
       "line": 11,
       "symbol": "LocalNotificationManager",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/iOS/LocalNotificationManager/LocalNotificationManager.swift",
       "line": 13,
       "symbol": "LocalNotificationManager",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 14,
-      "symbol": "LocalNotificationManager.disabled",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 37,
-      "symbol": "LocalNotificationManager.errorDomainNoIdentifier",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 38,
-      "symbol": "LocalNotificationManager.errorDomainNoTrigger",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 40,
-      "symbol": "LocalNotificationManager.notificationCenter",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 41,
-      "symbol": "LocalNotificationManager.options",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 45,
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/iOS/LocalNotificationManager/LocalNotificationManager.swift",
+      "line": 15,
       "symbol": "LocalNotificationManager.requestLocalNotification(payload:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 69,
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/iOS/LocalNotificationManager/LocalNotificationManager.swift",
+      "line": 39,
       "symbol": "LocalNotificationManager.addLocalNotification(identifier:payload:currentCategories:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 104,
-      "symbol": "LocalNotificationManager.requestScheduleLocalNotifications(competion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/LocalNotificationManager.swift",
-      "line": 118,
-      "symbol": "LocalNotificationManager.requestPermission(competion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/Universal/LocalNotificationManager/UNMutableNotificationContent+Payload.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappLocalNotifications/Files/iOS/LocalNotificationManager/UNMutableNotificationContent+Payload.swift",
       "line": 14,
       "symbol": "UNMutableNotificationContent.init(payload:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",

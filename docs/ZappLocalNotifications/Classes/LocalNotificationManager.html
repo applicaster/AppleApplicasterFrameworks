@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappLocalNotifications 0.1.0 Docs</a>
-          <span class="no-mobile"> (65% documented)</span>
+          <a href="../index.html">ZappLocalNotifications 0.1.3 Docs</a>
+          <span class="no-mobile"> (63% documented)</span>
         </p>
     
         <p class="header-right">
@@ -48,7 +48,7 @@
               <h1>LocalNotificationManager</h1>
                 <div class="declaration">
                   <div class="language">
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LocalNotificationManager</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">PluginAdapterProtocol</span><span class="p">,</span> <span class="kt">GeneralProviderProtocol</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LocalNotificationManager</span> <span class="p">:</span> <span class="kt"><a href="../Classes/LocalNotificationManagerBase.html">LocalNotificationManagerBase</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">LocalNotificationManager</span><span class="p">:</span> <span class="kt">FacadeConnectorLocalNotificationProtocol</span></code></pre>
 
                   </div>
@@ -59,272 +59,6 @@
             <section class="section task-group-section">
               <div class="task-group">
                 <ul>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:22ZappLocalNotifications0B19NotificationManagerC8disabledSbvp"></a>
-                      <a name="//apple_ref/swift/Property/disabled" class="dashAnchor"></a>
-                      <a class="token" href="#/s:22ZappLocalNotifications0B19NotificationManagerC8disabledSbvp">disabled</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">disabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)initWithPluginModel:"></a>
-                      <a name="//apple_ref/swift/Method/init(pluginModel:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)initWithPluginModel:">init(pluginModel:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">pluginModel</span><span class="p">:</span> <span class="kt">ZPPluginModel</span><span class="p">)</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(py)model"></a>
-                      <a name="//apple_ref/swift/Property/model" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(py)model">model</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">ZPPluginModel</span><span class="p">?</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(py)providerName"></a>
-                      <a name="//apple_ref/swift/Property/providerName" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(py)providerName">providerName</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">providerName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)prepareProvider:completion:"></a>
-                      <a name="//apple_ref/swift/Method/prepareProvider(_:completion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)prepareProvider:completion:">prepareProvider(_:completion:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepareProvider</span><span class="p">(</span><span class="n">_</span> <span class="n">defaultParams</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span>
-                            <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)disableWithCompletion:"></a>
-                      <a name="//apple_ref/swift/Method/disable(completion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)PluginAdapterProtocol(im)disableWithCompletion:">disable(completion:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disable</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:22ZappLocalNotifications0B19NotificationManagerC23errorDomainNoIdentifierSSvp"></a>
-                      <a name="//apple_ref/swift/Property/errorDomainNoIdentifier" class="dashAnchor"></a>
-                      <a class="token" href="#/s:22ZappLocalNotifications0B19NotificationManagerC23errorDomainNoIdentifierSSvp">errorDomainNoIdentifier</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">errorDomainNoIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:22ZappLocalNotifications0B19NotificationManagerC20errorDomainNoTriggerSSvp"></a>
-                      <a name="//apple_ref/swift/Property/errorDomainNoTrigger" class="dashAnchor"></a>
-                      <a class="token" href="#/s:22ZappLocalNotifications0B19NotificationManagerC20errorDomainNoTriggerSSvp">errorDomainNoTrigger</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">errorDomainNoTrigger</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:22ZappLocalNotifications0B19NotificationManagerC18notificationCenterSo06UNUserdG0Cvp"></a>
-                      <a name="//apple_ref/swift/Property/notificationCenter" class="dashAnchor"></a>
-                      <a class="token" href="#/s:22ZappLocalNotifications0B19NotificationManagerC18notificationCenterSo06UNUserdG0Cvp">notificationCenter</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">notificationCenter</span><span class="p">:</span> <span class="kt">UNUserNotificationCenter</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:22ZappLocalNotifications0B19NotificationManagerC7optionsSo22UNAuthorizationOptionsVvp"></a>
-                      <a name="//apple_ref/swift/Property/options" class="dashAnchor"></a>
-                      <a class="token" href="#/s:22ZappLocalNotifications0B19NotificationManagerC7optionsSo22UNAuthorizationOptionsVvp">options</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">UNAuthorizationOptions</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
                   <li class="item">
                     <div>
                       <code>
@@ -386,63 +120,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:22ZappLocalNotifications0B19NotificationManagerC015requestSchedulebC09competionyySbc_tF"></a>
-                      <a name="//apple_ref/swift/Method/requestScheduleLocalNotifications(competion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:22ZappLocalNotifications0B19NotificationManagerC015requestSchedulebC09competionyySbc_tF">requestScheduleLocalNotifications(competion:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">requestScheduleLocalNotifications</span><span class="p">(</span><span class="nv">competion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">isGranted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:22ZappLocalNotifications0B19NotificationManagerC17requestPermission9competionyySbc_tF"></a>
-                      <a name="//apple_ref/swift/Method/requestPermission(competion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:22ZappLocalNotifications0B19NotificationManagerC17requestPermission9competionyySbc_tF">requestPermission(competion:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">requestPermission</span><span class="p">(</span><span class="nv">competion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">isGranted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorLocalNotificationProtocol(im)cancelLocalNotification:completion:"></a>
-                      <a name="//apple_ref/swift/Method/cancelLocalNotification(_:completion:)" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorLocalNotificationProtocol(im)cancelLocalNotification:completion:">cancelLocalNotification(_:completion:)</a>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorLocalNotificationProtocol(im)cancelLocalNotifications:completion:"></a>
+                      <a name="//apple_ref/swift/Method/cancelLocalNotifications(_:completion:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorLocalNotificationProtocol(im)cancelLocalNotifications:completion:">cancelLocalNotifications(_:completion:)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -456,8 +136,8 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cancelLocalNotification</span><span class="p">(</span><span class="n">_</span> <span class="nv">identifiers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?,</span>
-                                    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cancelLocalNotifications</span><span class="p">(</span><span class="n">_</span> <span class="nv">identifiers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?,</span>
+                                     <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -505,6 +185,9 @@
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
                   <a href="../Classes/LocalNotificationManager.html">LocalNotificationManager</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/LocalNotificationManagerBase.html">LocalNotificationManagerBase</a>
                 </li>
               </ul>
             </li>

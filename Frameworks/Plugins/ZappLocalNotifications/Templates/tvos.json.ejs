@@ -1,0 +1,37 @@
+{
+  "api": {
+    "class_name": "LocalNotificationManager",
+    "modules": [
+      "ZappLocalNotifications"
+    ]
+  },
+  "npm_dependencies": [
+    "@applicaster/zapp_local_notifications@<%= version_id %>"
+  ],
+  "extra_dependencies": [
+    {
+      "ZappLocalNotifications": ":path => './node_modules/@applicaster/zapp_local_notifications/ZappLocalNotifications.podspec'"
+    }
+  ],
+  "platform": "tvos",
+  "author_name": "Anton Kononenko",
+  "author_email": "anton.kononenko@applicaster.com",
+  "manifest_version": "<%= version_id %>",
+  "name": "Generic Local Notifications",
+  "description": "Generic Local Notifications",
+  "type": "general",
+  "screen": false,
+  "identifier": "generic_local_notifications",
+  "ui_builder_support": true,
+  "whitelisted_account_ids": [
+    "5e39259919785a0008225336"
+  ],
+  "min_zapp_sdk": "12.1.0-Dev",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "custom_configuration_fields": [],
+  "targets": [
+    "tv"
+  ]
+}
