@@ -2480,14 +2480,14 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 169,
+      "line": 173,
       "symbol": "PluginManagerBase.hooksProviders()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 182,
+      "line": 186,
       "symbol": "PluginManagerBase.isProviderEnabled(provider:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
