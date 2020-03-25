@@ -57,7 +57,7 @@
 	<key>ZappAppleVideoSubscriberSSO</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.1.2</string>
+		<string>0.1.3</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
