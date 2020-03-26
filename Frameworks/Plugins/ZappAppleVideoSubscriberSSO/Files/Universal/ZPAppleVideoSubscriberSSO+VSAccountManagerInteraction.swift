@@ -197,4 +197,44 @@ extension ZPAppleVideoSubscriberSSO {
 
         tokenSession.resume()
     }
+    
+    func getServiceProviderAuthorization(for authenticationToken: String?, completion: @escaping (_ success: Bool) -> Void) {
+        guard let authToken = authenticationToken?.addingPercentEncoding(withAllowedCharacters: self.authTokenCharacterSet),
+            let channelID = self.vsProviderChannelID,
+            let authorizationEndpoint = self.vsAuthorizationEndpoint,
+            let url = URL(string: authorizationEndpoint) else {
+                completion(false)
+            return
+        }
+        let postBody = ("authToken=\(authToken)&channelID=\(channelID)")
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.httpBody = postBody.data(using: String.Encoding.utf8)
+        
+        let sessionTask = URLSession.shared.dataTask(with:urlRequest, completionHandler: { (data, response, error) in
+            if let err = error {
+                print("Error: " + err.localizedDescription)
+            }
+            
+            var isAuthed : String = "false"
+            let jsonResponse : Dictionary<String,AnyObject>
+            do {
+                jsonResponse = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary
+                if let authed = jsonResponse["authZ"] as? String {
+                    isAuthed = authed
+                }
+            } catch {
+                print("Error parsing JSON Response")
+            }
+            
+            if(isAuthed == "true"){
+                completion(true)
+            }else{
+                completion(false)
+            }
+        })
+        
+        sessionTask.resume()
+    }
 }

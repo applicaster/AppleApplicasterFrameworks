@@ -60,6 +60,15 @@ class ZPAppleVideoSubscriberSSO: NSObject {
         }
         return identifier
     }()
+    
+    lazy var vsProviderChannelID: String? = {
+        guard let channelID = configurationJSON?["provider_channe_id"] as? String,
+            !channelID.isEmpty else {
+            return nil
+        }
+        return channelID
+    }()
+    
 
     lazy var vsApplevelAuthenticationEndpoint: String? = {
         guard let endpoint = configurationJSON?["app_level_authentication_endpoint"] as? String,
@@ -118,9 +127,11 @@ class ZPAppleVideoSubscriberSSO: NSObject {
                      Once the customer is authenticated to a TV provider, the next step is to request information from your service provider for the specific app using the customer’s TV provider. This information includes the verificationToken used to authenticate at the app-level and attributesNames in the metadata request. Along with this request, you are required to request at least one attribute.
                      */
                     self.requestAppLevelAuthentication(verificationToken: verificationToken) { authResult, _ in
-                        self.getServiceProviderToken(for: authResult) { success, _, _ in
-                            self.managerInfo.isAuthenticated = success
-                            self.processResult()
+                        self.getServiceProviderToken(for: authResult) { success, token, message in
+                            self.getServiceProviderAuthorization(for: token) { (success) in
+                                self.managerInfo.isAuthenticated = success
+                                self.processResult()
+                            }
                         }
                     }
                 } else {
