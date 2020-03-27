@@ -48,7 +48,7 @@ dependencies {
     if (devSDK != null) {
         implementation project(':applicaster-android-sdk')
     } else {
-        api('com.applicaster:applicaster-android-sdk-core:5.0.4')
+        api('com.applicaster:applicaster-android-sdk:5.0.3')
     }
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
