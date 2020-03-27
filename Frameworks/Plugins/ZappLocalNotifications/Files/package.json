@@ -10,7 +10,8 @@
     "Universal",
     "ZappLocalNotifications.podspec",
     "iOS",
-    "tvOS"
+    "tvOS",
+    "Android"
   ],
   "repository": {
     "type": "git",
