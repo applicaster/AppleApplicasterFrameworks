@@ -28,10 +28,10 @@ extension RootController: FacadeConnectorConnnectivityProtocol {
     }
     
     public func getCurrentConnectivityState() -> ConnectivityState {
-        var retValue:ConnectivityState = .offline
+        var retValue:ConnectivityState = .cellular
         
         guard let connection = self.currentConnection else {
-            return .cellular
+            return retValue
         }
         
         switch connection {
