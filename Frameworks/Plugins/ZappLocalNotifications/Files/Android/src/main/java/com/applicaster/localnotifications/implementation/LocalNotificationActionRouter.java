@@ -17,6 +17,8 @@ public class LocalNotificationActionRouter extends BroadcastReceiver {
             // hack to dismiss notification when action button is clicked
             NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
             manager.cancel(notificationId);
+            // Close the notifications drawer
+            context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
         }
         Intent routedIntent = intent.getParcelableExtra(NotificationBuilder.WRAPPED_INTENT_EXTRA);
         if(null == routedIntent) {
