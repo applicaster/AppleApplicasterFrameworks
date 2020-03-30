@@ -14,7 +14,7 @@ import Foundation
 }
 
 @objc public protocol ConnectivityListener {
-    @objc func connectivityStateChanged(_ updatedStatus: ConnectivityState)
+    @objc func connectivityStateChanged(_ state: ConnectivityState)
 }
 
 @objc public protocol FacadeConnectorConnnectivityProtocol {
