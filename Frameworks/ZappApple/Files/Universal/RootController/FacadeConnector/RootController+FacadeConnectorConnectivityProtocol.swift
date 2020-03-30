@@ -27,16 +27,38 @@ extension RootController: FacadeConnectorConnnectivityProtocol {
         return !isOnline()
     }
     
-    public func isOnlineViaWifi() -> Bool {
-        var revValue = false
+    public func getCurrentConnectivityState() -> ConnectivityState {
+        var retValue:ConnectivityState = .offline
         
-        switch self.currentConnection {
-        case .wifi:
-            revValue = true
-        default:
-            break
+        guard let connection = self.currentConnection else {
+            return .cellular
         }
         
-        return revValue
+        switch connection {
+            case .cellular:
+                retValue = .cellular
+            case .wifi:
+                retValue = .wifi
+            case .unavailable, .none:
+                retValue = .offline
+        }
+        return retValue
+    }
+    
+    public func addConnectivityListener(_ listener: ConnectivityListener) {
+        self.connectivityListeners.add(listener)
+    }
+    
+    public func removeConnectivityListener(_ listener: ConnectivityListener) {
+        self.connectivityListeners.remove(listener)
+    }
+    
+    func updateConnectivityListeners() {
+        let currentConnectionState = getCurrentConnectivityState()
+        for listener in self.connectivityListeners {
+            if let connectivityListener = listener as? ConnectivityListener {
+                connectivityListener.connectivityStateChanged(currentConnectionState)
+            }
+        }
     }
 }
