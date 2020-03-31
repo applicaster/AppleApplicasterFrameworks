@@ -131,6 +131,13 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
             }
         }
     }
+    
+    func getProviderInstance(identifier: String) -> PluginAdapterProtocol? {
+        guard let provider = providers[identifier] else {
+            return nil
+        }
+        return provider
+    }
 
     public func isEnabled(pluginModel: ZPPluginModel,
                           forceEnable: Bool) -> Bool {
