@@ -19,6 +19,7 @@ protocol PluginManagerControlFlowProtocol {
                         completion: PluginManagerCompletion)
     func createProviders(forceEnable: Bool,
                          completion: PluginManagerCompletion)
+    func getProviderInstance(identifier: String) -> PluginAdapterProtocol?
 }
 
 protocol PluginManagerProtocol: PluginManagerControlFlowProtocol {
