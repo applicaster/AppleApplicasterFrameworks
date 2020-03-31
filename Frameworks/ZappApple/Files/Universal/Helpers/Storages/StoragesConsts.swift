@@ -26,6 +26,7 @@ public struct ZappStorageKeys {
     public static let languageCode = "languageCode"
     public static let locale = "locale"
     public static let platform = "platform"
+    public static let store = "store"
     public static let regionCode = "regionCode"
     public static let uuid = "uuid"
     public static let tvOS = "tvOS"
