@@ -25,6 +25,7 @@ extension RootController: ReachabilityManagerDelegate {
         }
         currentConnection = connection
 
+        updateConnectivityListeners()
     }
     
     func showInternetError() {
