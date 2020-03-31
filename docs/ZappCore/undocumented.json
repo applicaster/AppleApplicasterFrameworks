@@ -65,14 +65,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
-      "line": 47,
+      "line": 45,
+      "symbol": "FacadeConnector.connectivity",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
+      "line": 51,
       "symbol": "FacadeConnector.connector",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
-      "line": 55,
+      "line": 59,
       "symbol": "FacadeConnector.init(connectorProvider:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -145,6 +152,55 @@
       "line": 18,
       "symbol": "FacadeConnectorAppDataProtocol.appVersion()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorConnnectivityProtocol.swift",
+      "line": 10,
+      "symbol": "ConnectivityState",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorConnnectivityProtocol.swift",
+      "line": 11,
+      "symbol": "ConnectivityState.offline",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorConnnectivityProtocol.swift",
+      "line": 12,
+      "symbol": "ConnectivityState.cellular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorConnnectivityProtocol.swift",
+      "line": 13,
+      "symbol": "ConnectivityState.wifi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorConnnectivityProtocol.swift",
+      "line": 16,
+      "symbol": "ConnectivityListener",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorConnnectivityProtocol.swift",
+      "line": 17,
+      "symbol": "ConnectivityListener.connectivityStateChanged(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorConnnectivityProtocol.swift",
+      "line": 20,
+      "symbol": "FacadeConnectorConnnectivityProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {

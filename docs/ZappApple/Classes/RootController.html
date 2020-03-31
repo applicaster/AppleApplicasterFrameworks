@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappApple 0.7.5 Docs</a>
+          <a href="../index.html">ZappApple 0.7.6 Docs</a>
           <span class="no-mobile"> (22% documented)</span>
         </p>
     
@@ -51,6 +51,7 @@
                     <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RootController</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorAnalyticsProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorAppDataProtocol</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorConnnectivityProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorLocalNotificationProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorPlayerDependantProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorPluginManagerProtocol</span></code></pre>
@@ -124,9 +125,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:9ZappApple14RootControllerC18reachabilityMangerAA19ReachabilityManagerCSgvp"></a>
-                      <a name="//apple_ref/swift/Property/reachabilityManger" class="dashAnchor"></a>
-                      <a class="token" href="#/s:9ZappApple14RootControllerC18reachabilityMangerAA19ReachabilityManagerCSgvp">reachabilityManger</a>
+                      <a name="/s:9ZappApple14RootControllerC21connectivityListenersSo14NSMutableArrayCvp"></a>
+                      <a name="//apple_ref/swift/Property/connectivityListeners" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14RootControllerC21connectivityListenersSo14NSMutableArrayCvp">connectivityListeners</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -141,7 +142,34 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reachabilityManger</span><span class="p">:</span> <span class="kt"><a href="../Classes/ReachabilityManager.html">ReachabilityManager</a></span><span class="p">?</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">connectivityListeners</span><span class="p">:</span> <span class="kt">NSMutableArray</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14RootControllerC19reachabilityManagerAA012ReachabilityF0CSgvp"></a>
+                      <a name="//apple_ref/swift/Property/reachabilityManager" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14RootControllerC19reachabilityManagerAA012ReachabilityF0CSgvp">reachabilityManager</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reachabilityManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ReachabilityManager.html">ReachabilityManager</a></span><span class="p">?</span></code></pre>
 
                           </div>
                         </div>
@@ -736,6 +764,163 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">bundleIdentifier</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)isOnline"></a>
+                      <a name="//apple_ref/swift/Method/isOnline()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)isOnline">isOnline()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isOnline</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)isOffline"></a>
+                      <a name="//apple_ref/swift/Method/isOffline()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)isOffline">isOffline()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isOffline</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)getCurrentConnectivityState"></a>
+                      <a name="//apple_ref/swift/Method/getCurrentConnectivityState()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)getCurrentConnectivityState">getCurrentConnectivityState()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCurrentConnectivityState</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">ConnectivityState</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)addConnectivityListener:"></a>
+                      <a name="//apple_ref/swift/Method/addConnectivityListener(_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)addConnectivityListener:">addConnectivityListener(_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addConnectivityListener</span><span class="p">(</span><span class="n">_</span> <span class="nv">listener</span><span class="p">:</span> <span class="kt">ConnectivityListener</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)removeConnectivityListener:"></a>
+                      <a name="//apple_ref/swift/Method/removeConnectivityListener(_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@ZappCore@objc(pl)FacadeConnectorConnnectivityProtocol(im)removeConnectivityListener:">removeConnectivityListener(_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeConnectivityListener</span><span class="p">(</span><span class="n">_</span> <span class="nv">listener</span><span class="p">:</span> <span class="kt">ConnectivityListener</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14RootControllerC27updateConnectivityListenersyyF"></a>
+                      <a name="//apple_ref/swift/Method/updateConnectivityListeners()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14RootControllerC27updateConnectivityListenersyyF">updateConnectivityListeners()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateConnectivityListeners</span><span class="p">()</span></code></pre>
 
                           </div>
                         </div>
