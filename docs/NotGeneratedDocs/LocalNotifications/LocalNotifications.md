@@ -65,7 +65,7 @@ Local Notifications for iOS provide rich notificaiton settings all availible fea
 |identifier|String|Unique Identifier of the Local Notification Item|-|
 |title|String|Title of the Item|-|
 |body|String|Item's body text|YES|
-|unixTimestamp|Long|Unix Timestamp date, defines when notification should fire|YES|
+|unixTimestamp|Long|Unix Timestamp date in seconds, defines when notification should fire|YES|
 |defaultActionUrl|String|URL that will be called, if user tap on local notification|YES|
 |dismissActionUrl|String|URL that will be called, if use erased local notification|YES|
 |actions|Array|Contains Array of dictionaries that represents Action Button|YES|

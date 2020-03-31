@@ -30,28 +30,56 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/Universal/ZPAppleVideoNowPlayingInfoBase.swift",
+      "line": 15,
+      "symbol": "ItemMetadata.media_group",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/Universal/ZPAppleVideoNowPlayingInfoBase.swift",
+      "line": 16,
+      "symbol": "ItemMetadata.media_item",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/Universal/ZPAppleVideoNowPlayingInfoBase.swift",
       "line": 17,
+      "symbol": "ItemMetadata.summary",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/Universal/ZPAppleVideoNowPlayingInfoBase.swift",
+      "line": 18,
+      "symbol": "ItemMetadata.src",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/Universal/ZPAppleVideoNowPlayingInfoBase.swift",
+      "line": 21,
       "symbol": "ZPAppleVideoNowPlayingInfoBase",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/Universal/ZPAppleVideoNowPlayingInfoBase.swift",
-      "line": 19,
+      "line": 23,
       "symbol": "ZPAppleVideoNowPlayingInfoBase.playbackStalled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/Universal/ZPAppleVideoNowPlayingInfoBase.swift",
-      "line": 21,
+      "line": 25,
       "symbol": "ZPAppleVideoNowPlayingInfoBase.avPlayer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/Universal/ZPAppleVideoNowPlayingInfoBase.swift",
-      "line": 25,
+      "line": 29,
       "symbol": "ZPAppleVideoNowPlayingInfoBase.configurationJSON",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -198,7 +226,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoNowPlayingInfo/Files/ios/ZPAppleVideoNowPlayingInfo.swift",
-      "line": 86,
+      "line": 107,
       "symbol": "ZPAppleVideoNowPlayingInfo.sendNowPlayingOnPause()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

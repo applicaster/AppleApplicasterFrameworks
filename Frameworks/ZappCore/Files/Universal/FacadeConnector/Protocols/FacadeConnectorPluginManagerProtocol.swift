@@ -28,6 +28,10 @@ import Foundation
     /// - Note: Only non ui plugins can be disabled
     /// - Parameter pluginType: Type of the zapp Plugin
     @objc func enableAllPlugins(pluginType: String, completion: ((_ success: Bool) -> Void)?)
+    
+    /// Get plugin instance  by plugin identifier
+    /// - Parameter identifier: zapp plugin identifier of the specific plugin
+    @objc func getProviderInstance(identifier: String) -> PluginAdapterProtocol?
 }
 
 @objc public protocol FacadeConnectorPluginManagerProtocol: FacadeConnectorPluginManagerControlFlow {
@@ -37,4 +41,5 @@ import Foundation
 
     /// Get a plugin by type
     @objc func pluginModel(_ type: String) -> ZPPluginModel?
+    
 }

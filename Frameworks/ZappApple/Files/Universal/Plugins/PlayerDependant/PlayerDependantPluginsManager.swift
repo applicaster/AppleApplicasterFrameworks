@@ -60,4 +60,8 @@ import ZappCore
     func createProviders(forceEnable: Bool, completion: PluginManagerCompletion) {
         completion?(true)
     }
+    
+    func getProviderInstance(identifier: String) -> PluginAdapterProtocol? {
+        return nil
+    }
 }

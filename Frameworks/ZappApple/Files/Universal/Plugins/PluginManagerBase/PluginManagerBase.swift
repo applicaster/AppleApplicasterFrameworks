@@ -131,6 +131,13 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
             }
         }
     }
+    
+    func getProviderInstance(identifier: String) -> PluginAdapterProtocol? {
+        guard let provider = providers[identifier] else {
+            return nil
+        }
+        return provider
+    }
 
     public func isEnabled(pluginModel: ZPPluginModel,
                           forceEnable: Bool) -> Bool {
@@ -156,13 +163,17 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
         }
 
         // Check if value bool or string
-        if let pluginEnabled = pluginEnabled as? String,
-            let pluginEnabledBool = Bool(pluginEnabled) {
-            retVal = pluginEnabledBool
+        if let pluginEnabled = pluginEnabled as? String {
+            if let pluginEnabledBool = Bool(pluginEnabled) {
+                retVal = pluginEnabledBool
+            }
+            else if let pluginEnabledInt = Int(pluginEnabled) {
+                retVal = Bool(truncating: pluginEnabledInt as NSNumber)
+            }
         } else if let pluginEnabled = pluginEnabled as? Bool {
             retVal = pluginEnabled
         }
-
+        
         return retVal
     }
 

@@ -14,7 +14,10 @@ public class RootController: NSObject {
     public var appDelegate: AppDelegateProtocol?
     public var appReadyForUse: Bool = false
 
-    var reachabilityManger: ReachabilityManager?
+    // Properties for managing connectivity listeners
+    lazy var connectivityListeners:NSMutableArray = []
+    
+    var reachabilityManager: ReachabilityManager?
     var currentConnection: Reachability.Connection?
 
     var loadingStateMachine: LoadingStateMachine!
@@ -38,7 +41,7 @@ public class RootController: NSObject {
 
         splashViewController = UIApplication.shared.delegate?.window??.rootViewController as? SplashViewController
 
-        reachabilityManger = ReachabilityManager(delegate: self)
+        reachabilityManager = ReachabilityManager(delegate: self)
 
         reloadApplication()
     }

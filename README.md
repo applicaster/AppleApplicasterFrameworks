@@ -28,11 +28,11 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: *0.9.3*
+##### ZappCore: *0.9.5*
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: *0.7.4*
+##### ZappApple: *0.7.7*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
@@ -73,14 +73,22 @@ This respository is the main container for general frameworks and plugins for [Z
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscription_registration_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscription_registration_apple&platform=tvos)
 
-##### Apple Video Now Playing Info: *0.1.5*
+##### Apple Video Now Playing Info: *0.1.7*
 - **Description:** This plugin saves current played item metadata to be accessible on other device (saved on iOS to use on tvOS and vice versa).
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoNowPlayingInfo/index.html)
 - **Manifest:**
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
-##### General Local Notification: *0.1.3*
+##### Apple Video Subscriber SSO: *0.1.9*
+- **Description:** This plugin performs as player prehook to login to the TV Provider before player starts.
+- [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoSubscriberSSO/index.html)
+- **Manifest:**
+  - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscriber_sso_apple&platform=ios)
+  - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_subscriber_sso_apple&platform=tvos)
+
+
+##### General Local Notification: *0.1.4*
   - **Description:** This plugin allow to control Local Notification events for iOS and tvOS.
   - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappLocalNotifications/index.html)
   - [**API**](https://applicaster.github.io/AppleApplicasterFrameworks/NotGeneratedDocs/LocalNotifications/LocalNotifications.html)
