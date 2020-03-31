@@ -78,4 +78,12 @@ extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
             return nil
         }
     }
+    
+    public func getProviderInstance(identifier: String) -> PluginAdapterProtocol? {
+        guard let pluginManager = pluginManager(identifier: identifier) else {
+            return nil
+        }
+
+        return pluginManager.getProviderInstance(identifier: identifier)
+    }
 }
