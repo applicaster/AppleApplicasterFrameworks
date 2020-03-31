@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappAppleVideoNowPlayingInfo"
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = "ZappAppleVideoNowPlayingInfo"
   s.description      = <<-DESC
   ZappAppleVideoNowPlayingInfo container.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-                         :tag => '2020.3.25.14-3-2'  }
+                         :tag => '2020.3.31.14-3-7'  }
   s.platform = :tvos, :ios
   s.tvos.deployment_target = '11.0'
   s.ios.deployment_target = '11.0'
