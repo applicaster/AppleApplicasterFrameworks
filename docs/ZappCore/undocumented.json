@@ -226,28 +226,28 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
-      "line": 33,
+      "line": 37,
       "symbol": "FacadeConnectorPluginManagerProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
-      "line": 34,
+      "line": 38,
       "symbol": "FacadeConnectorPluginManagerProtocol.plugin(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
-      "line": 35,
+      "line": 39,
       "symbol": "FacadeConnectorPluginManagerProtocol.getAllPlugins()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorPluginManagerProtocol.swift",
-      "line": 36,
+      "line": 40,
       "symbol": "FacadeConnectorPluginManagerProtocol.adapterClass(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
