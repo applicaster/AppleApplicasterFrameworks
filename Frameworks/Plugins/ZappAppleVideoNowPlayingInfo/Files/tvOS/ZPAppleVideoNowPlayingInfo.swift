@@ -18,4 +18,14 @@ class ZPAppleVideoNowPlayingInfo: ZPAppleVideoNowPlayingInfoBase {
         item.extendedLanguageTag = "und" // undefined (wildcard) language
         return item
     }
+    
+    func metadataArtworkItem(image: UIImage) -> AVMetadataItem {
+        let item = AVMutableMetadataItem()
+        // Choose PNG or JPEG
+        item.value = image.pngData() as (NSCopying & NSObjectProtocol)?
+        item.dataType = kCMMetadataBaseDataType_PNG as String
+        item.identifier = AVMetadataIdentifier.commonIdentifierArtwork
+        item.extendedLanguageTag = "und"
+        return item
+    }
 }

@@ -79,6 +79,27 @@ class ZPAppleVideoNowPlayingInfo: ZPAppleVideoNowPlayingInfoBase {
         nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = 1.0
         nowPlayingInfo[MPNowPlayingInfoPropertyExternalContentIdentifier] = contentId
         nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackProgress] = 0.0
+        
+        //image
+        if let mediaGroup = entry[ItemMetadata.media_group] as? [[AnyHashable: Any]],
+            let mediaItem = mediaGroup.first?[ItemMetadata.media_item] as? [[AnyHashable: Any]],
+            let src = mediaItem.first?[ItemMetadata.src] as? String,
+            let key = mediaItem.first?["key"] as? String, key == "image_base",
+            let url = URL(string: src) {
+            
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    nowPlayingInfo[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(boundsSize: image.size) { sz in
+                        return image
+                    }
+                }
+            }
+        }
+        
+        //description
+        if let summary = entry[ItemMetadata.summary] as? String {
+            nowPlayingInfo[MPMediaItemPropertyComments] = summary
+        }
 
         nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
     }

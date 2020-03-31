@@ -12,6 +12,10 @@ import ZappCore
 struct ItemMetadata {
     static let title = "title"
     static let contentId = "id"
+    static let media_group = "media_group"
+    static let media_item = "media_item"
+    static let summary = "summary"
+    static let src = "src"
 }
 
 class ZPAppleVideoNowPlayingInfoBase: NSObject, GeneralProviderProtocol, PlayerDependantPluginProtocol {
