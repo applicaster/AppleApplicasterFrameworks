@@ -7,7 +7,7 @@ platform :ios do
   lane :test do
     fastlane_require 'dotenv'
     scan(
-      workspace: "FrameworksApp/FrameworksApp.xcworkspace",
+      workspace: "LocalProject/Apple/FrameworksApp/FrameworksApp.xcworkspace",
       scheme: ENV['SCHEME_NAME'],
       output_directory: "CircleArtifacts/test-results",
       device: "iPhone 7",
