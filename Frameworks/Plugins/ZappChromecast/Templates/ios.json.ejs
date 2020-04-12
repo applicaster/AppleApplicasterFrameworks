@@ -1,0 +1,46 @@
+{
+  "api": {
+    "require_startup_execution": true,
+    "class_name": "ZPAppleGenericUniversalLinks",
+    "modules": [
+      "ZappChromecast"
+    ]
+  },
+  "npm_dependencies": [
+    "@applicaster/zapp_generic_cromecast@<%= version_id %>"
+  ],
+  "extra_dependencies": [
+    {
+      "ZappChromecast": ":path => './node_modules/@applicaster/zapp_generic_cromecast/ZappChromecast.podspec'"
+    }
+  ],
+  "platform": "ios",
+  "author_name": "Alex Zchut",
+  "author_email": "a.zchut@applicaster.com",
+  "manifest_version": "<%= version_id %>",
+  "name": "Generic Universal Links",
+  "description": "Generic Universal Links plugin",
+  "type": "general",
+  "screen": false,
+  "identifier": "zapp_generic_cromecast",
+  "ui_builder_support": true,
+  "whitelisted_account_ids": [
+    "5ae06cef8fba0f00084bd3c6",
+    "5c20970320f1c500088842dd",
+    "57c997a8373538000b000000"
+  ],
+  "min_zapp_sdk": "20.0.0-Dev",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "custom_configuration_fields": [
+    {
+      "type": "text",
+      "key": "mapping_url",
+      "tooltip_text": "Mapping Url"
+    }
+  ],
+  "targets": [
+    "mobile"
+  ]
+}

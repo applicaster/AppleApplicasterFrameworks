@@ -1,0 +1,73 @@
+//
+//  ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift
+//  ZappChromecast
+//
+//  Created by Alex Zchut on 4/12/2020
+//  Copyright © 2020 Applicaster. All rights reserved.
+//
+
+import Foundation
+import GoogleCast
+import ZappCore
+
+extension ChromecastAdapter : ChromecastExtendedPlayerControlsProtocol {
+    public func getMiniPlayerControlsViewController() -> UIViewController? {
+        guard let castViewExtender = castViewExtender  else {
+            return miniMediaControlsViewController
+        }
+        return castViewExtender.getMiniPlayerNavigation()
+    }
+    
+    public func getExpandedPlayerControlsViewController() -> UIViewController {
+        guard let castViewExtender = castViewExtender  else {
+            return ChromecastExpandedMediaControlsViewController(adapter: self)
+        }
+        
+        return castViewExtender.getPlayerNavigation()
+    }
+    
+    public func getInlinePlayerControlsViewController() -> UIViewController {
+        guard let castViewExtender = castViewExtender  else {
+            let defaultVC = UIViewController()
+            defaultVC.view.backgroundColor = UIColor.black
+            return defaultVC
+        }
+        
+        return castViewExtender.getPlayerNavigation()
+    }
+
+    public func play(playableItems: NSArray,  playPosition: TimeInterval) {
+        let playerDelegate = self as PlayerProtocol
+        playerDelegate.prepareToPlay(playableItems: playableItems, playPosition: playPosition)
+    }
+
+    public func presentExtendedPlayerControls() {
+        let chromecastExpandedVC = ChromecastExpandedMediaControlsViewController(adapter: self)
+        
+        guard chromecastExpandedVC.isExpandedMediaControlsViewControllerAvailable(),
+            let rootVC = UIApplication.shared.keyWindow?.rootViewController else {
+            return
+        }
+
+        rootVC.present(chromecastExpandedVC, animated: true, completion: nil)
+    }
+
+    public func extendedPlayerControlsOrientationMask() -> UIInterfaceOrientationMask {
+        return .all
+    }
+
+    public func hasAvailableChromecastDevices() -> Bool {
+        guard GCKCastContext.isSharedInstanceInitialized() else {
+            return false
+        }
+        
+        return GCKCastContext.sharedInstance().castState != .noDevicesAvailable
+    }
+    
+    public func canShowPlayerBeforeCastSync() -> Bool {
+        guard let _ = castViewExtender else {
+            return false
+        }
+        return true
+    }
+}
