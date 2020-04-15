@@ -138,6 +138,15 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
         }
         return provider
     }
+    
+    func getProviderInstance(conformsTo: (Any) -> Any?) -> PluginAdapterProtocol? {
+        guard let provider = providers.first(where: { (key, value) -> Bool in
+            return conformsTo(value) != nil
+        }) else {
+            return nil
+        }
+        return provider.value
+    }
 
     public func isEnabled(pluginModel: ZPPluginModel,
                           forceEnable: Bool) -> Bool {

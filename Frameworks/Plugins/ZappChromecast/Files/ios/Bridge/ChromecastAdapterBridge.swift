@@ -13,7 +13,7 @@ import ZappCore
 @objc(ChromecastButton)
 public class ChromecastButton: RCTViewManager {
     static let chromecastModuleName = "ChromecastButton"
-    let pluginIdentifier = "chromecast_generic"
+    let pluginIdentifier = "zapp_generic_cromecast"
 
     override public static func moduleName() -> String? {
         return ChromecastButton.chromecastModuleName

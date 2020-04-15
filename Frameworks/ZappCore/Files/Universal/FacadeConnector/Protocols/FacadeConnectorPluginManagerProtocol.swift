@@ -32,6 +32,11 @@ import Foundation
     /// Get plugin instance  by plugin identifier
     /// - Parameter identifier: zapp plugin identifier of the specific plugin
     @objc func getProviderInstance(identifier: String) -> PluginAdapterProtocol?
+    
+    /// Get plugin instance  by plugin identifier
+    /// - Parameter type: zapp plugin type of the specific plugin
+    /// - Parameter conforms: specific protocol to confirms to
+    @objc func getProviderInstance(pluginType: String, conformsTo: (Any) -> Any?) -> PluginAdapterProtocol?
 }
 
 @objc public protocol FacadeConnectorPluginManagerProtocol: FacadeConnectorPluginManagerControlFlow {
