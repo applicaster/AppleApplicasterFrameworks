@@ -51,7 +51,7 @@ extension RootController: FacadeConnectorChromecastProtocol {
     
     fileprivate var pluginInstance: ChromecastProtocol? {
         guard let chromecastPlugin = FacadeConnector.connector?.pluginManager?.getProviderInstance(pluginType: ZPPluginType.General.rawValue,
-                                                                                                   condition: { $0 as? ChromecastProtocol.Type }) else {
+                                                                                                   condition: { $0 as? ChromecastProtocol }) else {
                 return nil
         }
         return chromecastPlugin as? ChromecastProtocol
