@@ -8,6 +8,7 @@
 
 import Foundation
 import GoogleCast
+import ZappCore
 
 extension ChromecastAdapter: GCKSessionManagerListener {
 

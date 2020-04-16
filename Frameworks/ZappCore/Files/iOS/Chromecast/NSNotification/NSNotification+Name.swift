@@ -5,7 +5,7 @@
 //  Created by Alex Zchut on 11/04/2020.
 //
 
-extension NSNotification.Name {
+public extension NSNotification.Name {
     static let chromecastSessionWillStart = Notification.Name("ChromecastSessionWillStart")
     static let chromecastSessionDidStart = Notification.Name("ChromecastSessionDidStart")
     static let chromecastCastSessionDidStart = Notification.Name("ChromecastCastSessionDidStart")
