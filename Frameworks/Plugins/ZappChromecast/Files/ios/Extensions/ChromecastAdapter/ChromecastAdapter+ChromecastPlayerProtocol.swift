@@ -1,5 +1,5 @@
 //
-//  ChromecastAdapter+GAChromecastPlayerProtocol.swift
+//  ChromecastAdapter+ChromecastPlayerProtocol.swift
 //  ZappChromecast
 //
 //  Created by Alex Zchut on 4/12/2020
@@ -12,13 +12,13 @@ import GoogleCast
 
 public let kChromecastPosterDefaultKey = "image_base"
 
-public protocol PlayerProtocol {
-    func prepareToPlay(playableItems: NSArray,  playPosition: TimeInterval)
+public protocol ChromecastPlayerProtocol {
+    func prepareToPlay(playableItems: [NSObject],  playPosition: TimeInterval)
 }
 
-extension ChromecastAdapter: PlayerProtocol {
-    public func prepareToPlay(playableItems: NSArray,  playPosition: TimeInterval) {
-        guard let playableItem = playableItems.firstObject as? [String: Any] else {
+extension ChromecastAdapter: ChromecastPlayerProtocol {
+    public func prepareToPlay(playableItems: [NSObject],  playPosition: TimeInterval) {
+        guard let playableItem = playableItems.first as? [String: Any] else {
             return
         }
         

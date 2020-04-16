@@ -10,46 +10,54 @@ import ZappCore
 
 extension RootController: FacadeConnectorChromecastProtocol {
     public var isSynced: Bool {
-        return false
+        return pluginInstance?.hasConnectedCastSession() ?? false
     }
     
     public var isReachableViaWiFi: Bool {
-        return false
+        let value = FacadeConnector.connector?.connectivity?.getCurrentConnectivityState() ?? .offline
+        return value == .wifi
     }
     
     public var canShowPlayerBeforeCastSync: Bool {
-        return false
+        return pluginInstanceExtendedPlayerControls?.canShowPlayerBeforeCastSync() ?? false
     }
     
     public var extendedPlayerViewController: UIViewController? {
-        return nil
+        return pluginInstanceExtendedPlayerControls?.getExpandedPlayerControlsViewController()
     }
     
     public var inlinePlayerViewController: UIViewController? {
-        return nil
+        return pluginInstanceExtendedPlayerControls?.getInlinePlayerControlsViewController()
     }
     
     public var miniPlayerViewController: UIViewController? {
-        return nil
+        return pluginInstanceExtendedPlayerControls?.getMiniPlayerControlsViewController()
     }
     
-    public func play(with playableItems: [NSObject], currentPosition: TimeInterval) {
-        
+    public func play(with playableItems: [NSObject], playPosition: TimeInterval) {
+        pluginInstanceExtendedPlayerControls?.play(playableItems: playableItems, playPosition: playPosition)
     }
     
     public func showExtendedPlayer() {
-        
+        pluginInstanceExtendedPlayerControls?.presentExtendedPlayerControls()
     }
     
     public func setNotificationsDelegate(_ delegate: NSObject?) {
-        
+        guard var plugin = pluginInstance else {
+            return
+        }
+        plugin.containerViewEventsDelegate = delegate
     }
     
     fileprivate var pluginInstance: ChromecastProtocol? {
         guard let chromecastPlugin = FacadeConnector.connector?.pluginManager?.getProviderInstance(pluginType: ZPPluginType.General.rawValue,
-                                                                                                   conformsTo: { $0 as? ChromecastProtocol.Type }) else {
+                                                                                                   condition: { $0 as? ChromecastProtocol.Type }) else {
                 return nil
         }
         return chromecastPlugin as? ChromecastProtocol
+    }
+    
+    fileprivate var pluginInstanceExtendedPlayerControls: ChromecastExtendedPlayerControlsProtocol? {
+        return pluginInstance as? ChromecastExtendedPlayerControlsProtocol
     }
 }

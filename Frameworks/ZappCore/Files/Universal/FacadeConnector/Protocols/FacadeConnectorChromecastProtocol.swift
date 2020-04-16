@@ -16,7 +16,7 @@ import Foundation
     var inlinePlayerViewController: UIViewController? { get}
     var miniPlayerViewController: UIViewController? { get}
 
-    func play(with playableItems: [NSObject], currentPosition: TimeInterval)
+    func play(with playableItems: [NSObject], playPosition: TimeInterval)
     func showExtendedPlayer()
     func setNotificationsDelegate(_ delegate:NSObject?)
 }

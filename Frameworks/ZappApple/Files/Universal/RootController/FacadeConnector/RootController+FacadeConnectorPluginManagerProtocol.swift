@@ -50,7 +50,7 @@ extension RootController: FacadeConnectorPluginManagerProtocol {
         return pluginsManager.getProviderInstance(identifier: identifier)
     }
     
-    @objc public func getProviderInstance(pluginType: String, conformsTo: (Any) -> Any?) -> PluginAdapterProtocol? {
-        return pluginsManager.getProviderInstance(pluginType: pluginType, conformsTo: conformsTo)
+    @objc public func getProviderInstance(pluginType: String, condition: (Any) -> Any?) -> PluginAdapterProtocol? {
+        return pluginsManager.getProviderInstance(pluginType: pluginType, condition: condition)
     }
 }

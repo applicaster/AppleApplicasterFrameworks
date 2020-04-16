@@ -87,13 +87,13 @@ extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
         return pluginManager.getProviderInstance(identifier: identifier)
     }
     
-    public func getProviderInstance(pluginType: String, conformsTo: (Any) -> Any?) -> PluginAdapterProtocol? {
+    public func getProviderInstance(pluginType: String, condition: (Any) -> Any?) -> PluginAdapterProtocol? {
         let type:ZPPluginType = ZPPluginType(rawValue: pluginType) ?? .General
         guard let pluginManager = pluginManager(type: type) else {
             return nil
         }
         
-        return pluginManager.getProviderInstance(conformsTo: conformsTo)
+        return pluginManager.getProviderInstance(condition: condition)
         
     }
 

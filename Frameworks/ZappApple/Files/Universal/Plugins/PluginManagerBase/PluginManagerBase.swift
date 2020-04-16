@@ -139,9 +139,9 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
         return provider
     }
     
-    func getProviderInstance(conformsTo: (Any) -> Any?) -> PluginAdapterProtocol? {
+    func getProviderInstance(condition: (Any) -> Any?) -> PluginAdapterProtocol? {
         guard let provider = providers.first(where: { (key, value) -> Bool in
-            return conformsTo(value) != nil
+            return condition(value) != nil
         }) else {
             return nil
         }
