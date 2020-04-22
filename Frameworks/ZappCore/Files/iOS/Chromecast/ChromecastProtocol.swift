@@ -38,7 +38,8 @@ public protocol ChromecastProtocol {
     var lastActiveChromecastButton: ChromecastButtonOrigin? {get set}
     var triggerdChromecastButton: ChromecastButtonOrigin? {get set}
     var containerViewEventsDelegate: Any? {get set}
-    
+    var isEnabled: Bool { get }
+    func addButton(to container: UIView?, key: String, color: UIColor?)
     func prepareChromecastForUse() -> Bool
     func hasConnectedCastSession() -> Bool
     func createChromecastButton(frame:CGRect, customIcons: [String: [UIImage]]?) -> UIButton

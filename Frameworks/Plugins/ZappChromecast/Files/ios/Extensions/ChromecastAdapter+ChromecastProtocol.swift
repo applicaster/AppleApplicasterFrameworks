@@ -7,11 +7,14 @@
 //
 
 import Foundation
-import ZappCore
 import GoogleCast
+import ZappCore
 
 extension ChromecastAdapter: ChromecastProtocol {
-    
+    public var isEnabled: Bool {
+        return enabled
+    }
+
     public var containerViewEventsDelegate: Any? {
         get {
             return localContainerViewEventsDelegate
@@ -43,14 +46,14 @@ extension ChromecastAdapter: ChromecastProtocol {
         guard let chromecastAppId = chromecastAppId else {
             return false
         }
-        
+
         let discoveryCriteria = GCKDiscoveryCriteria(applicationID: chromecastAppId)
         let options = GCKCastOptions(discoveryCriteria: discoveryCriteria)
-        
+
         if GCKCastContext.setSharedInstanceWith(options, error: nil) {
             GCKCastContext.sharedInstance().useDefaultExpandedMediaControls = false
-            
-            //set logger
+
+            // set logger
             let logFilter: GCKLoggerFilter = GCKLoggerFilter()
             let classes = ["GCKDeviceScanner",
                            "GCKDeviceProvider",
@@ -61,38 +64,36 @@ extension ChromecastAdapter: ChromecastProtocol {
                            "GCKUIMediaController",
                            "NSMutableDictionary"]
             logFilter.setLoggingLevel(.error, forClasses: classes)
-            
+
             GCKLogger.sharedInstance().filter = logFilter
             GCKLogger.sharedInstance().delegate = self
-            
-            self.addObservers()
-                    
+
+            addObservers()
+
             return true
         } else {
             return false
         }
-        
     }
 
     public func hasConnectedCastSession() -> Bool {
         guard GCKCastContext.isSharedInstanceInitialized() else {
             return false
         }
-        
+
         return GCKCastContext.sharedInstance().sessionManager.hasConnectedCastSession()
     }
-    
+
     public func getConnectedDeviceName() -> String? {
         if !hasConnectedCastSession() {
             return nil
         }
-        
+
         return GCKCastContext.sharedInstance().sessionManager.currentSession?.device.friendlyName
     }
 
-    public func createChromecastButton(frame:CGRect,
+    public func createChromecastButton(frame: CGRect,
                                        customIcons: [String: [UIImage]]?) -> UIButton {
-
         let castButton = GCKUICastButton(frame: frame)
 //        if let customIcons = customIcons,
 //            let activeIcon = customIcons[ChromecastButtonIcons.active]?.first,
@@ -104,8 +105,8 @@ extension ChromecastAdapter: ChromecastProtocol {
 //                                       animationIcons: animationIcons)
 //        }
 
-        //Check if the we want handle the chromecast devices dialog window
-        //Otherwise, use Google's default devices dialog
+        // Check if the we want handle the chromecast devices dialog window
+        // Otherwise, use Google's default devices dialog
         if castViewExtender != nil {
             castButton.triggersDefaultCastDialog = false
             castButton.addTarget(self, action: #selector(showCustomDevicesDialog), for: .touchUpInside)
@@ -114,37 +115,108 @@ extension ChromecastAdapter: ChromecastProtocol {
         return castButton
     }
 
-    public func createChromecastButton(frame:CGRect) -> UIButton {
-        return self.createChromecastButton(frame: frame,
-                                    customIcons: nil)
+    public func createChromecastButton(frame: CGRect) -> UIButton {
+        return createChromecastButton(frame: frame,
+                                      customIcons: nil)
     }
-    
-    public func presentCastInstructionsViewControllerOnce(with castButton:UIButton) {
-        
+
+    public func presentCastInstructionsViewControllerOnce(with castButton: UIButton) {
         guard GCKCastContext.isSharedInstanceInitialized() else {
             return
         }
-        
+
         guard let castButton = castButton as? GCKUICastButton else {
             return
         }
-        
+
         GCKCastContext.sharedInstance().presentCastInstructionsViewControllerOnce(with: castButton)
     }
-    
+
     public func defaultExpandedMediaControlsViewController() -> UIViewController? {
         guard GCKCastContext.isSharedInstanceInitialized() else {
             return nil
         }
-        
+
         return GCKCastContext.sharedInstance().defaultExpandedMediaControlsViewController
     }
 
     public func getShouldPresentIntroductionScreen() -> Bool {
-        return self.shouldPresentIntroductionScreen
+        return shouldPresentIntroductionScreen
     }
-    
+
     @objc func showCustomDevicesDialog(_ sender: UIButton) {
         castViewExtender?.showDialog()
+    }
+
+    @objc open func addButton(to container: UIView?,
+                              key: String,
+                              color: UIColor?) {
+        if enabled {
+            guard let container = container else {
+                return
+            }
+
+            // create button with container bounds
+            var frame = container.bounds
+            if frame == CGRect.zero {
+                frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 60, height: 47))
+            }
+            createButtonIfNeeded(frame: frame)
+
+            guard let button = castButton else {
+                return
+            }
+
+            // customize button color
+            if let buttonColor = color {
+                button.tintColor = buttonColor
+            }
+
+            // set button tag for analytics reasons
+            if let tag = kChromecastButtonTag[key] {
+                button.tag = tag
+            }
+
+            // add subview
+            container.addSubview(button)
+
+            button.translatesAutoresizingMaskIntoConstraints = false
+            let views = ["button": button]
+            let metrics: [String: AnyObject] = ["width": frame.size.width as AnyObject, "height": frame.size.height as AnyObject]
+            container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[button(height)]|", options: .alignAllCenterY, metrics: metrics, views: views))
+            container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[button(width)]|", options: .alignAllCenterX, metrics: metrics, views: views))
+
+            // create mini player
+            createMiniPlayerViewController()
+        }
+    }
+
+    fileprivate func createButtonIfNeeded(frame: CGRect) {
+        guard castButton == nil else {
+            return
+        }
+
+        let button = createChromecastButton(frame: frame)
+
+        // catch tap event for analytics
+        button.addTarget(self, action: #selector(chromecastButtonTapped(_:)), for: .touchUpInside)
+
+        // assign cast button
+        castButton = button
+    }
+
+    @objc private func chromecastButtonTapped(_ sender: UIButton?) {
+        guard let chromecastButton = sender else {
+            return
+        }
+
+        switch chromecastButton.tag {
+        case 0:
+            lastActiveChromecastButton = .appNavbar
+        case 1:
+            lastActiveChromecastButton = .playerNavbar
+        default:
+            print("Chromecast button was pressed without a configured tag, please be aware")
+        }
     }
 }

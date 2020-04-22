@@ -9,6 +9,10 @@ import Foundation
 import ZappCore
 
 extension RootController: FacadeConnectorChromecastProtocol {
+    public var isEnabled: Bool {
+        return pluginInstance?.isEnabled ?? false
+    }
+    
     public var isSynced: Bool {
         return pluginInstance?.hasConnectedCastSession() ?? false
     }
@@ -47,6 +51,10 @@ extension RootController: FacadeConnectorChromecastProtocol {
             return
         }
         plugin.containerViewEventsDelegate = delegate
+    }
+    
+    public func addButton(to container: UIView?, key: String, color: UIColor?) {
+        pluginInstance?.addButton(to: container, key: key, color: color)
     }
     
     fileprivate var pluginInstance: ChromecastProtocol? {

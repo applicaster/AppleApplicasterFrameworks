@@ -1,7 +1,7 @@
 {
   "api": {
     "require_startup_execution": true,
-    "class_name": "ZPAppleGenericUniversalLinks",
+    "class_name": "ChromecastAdapter",
     "modules": [
       "ZappChromecast"
     ]
@@ -18,8 +18,8 @@
   "author_name": "Alex Zchut",
   "author_email": "a.zchut@applicaster.com",
   "manifest_version": "<%= version_id %>",
-  "name": "Generic Universal Links",
-  "description": "Generic Universal Links plugin",
+  "name": "Generic Chromecast Adapter",
+  "description": "Generic Chromecast Adapter",
   "type": "general",
   "screen": false,
   "identifier": "zapp_generic_cromecast",
@@ -29,15 +29,25 @@
     "5c20970320f1c500088842dd",
     "57c997a8373538000b000000"
   ],
-  "min_zapp_sdk": "20.0.0-Dev",
+  "min_zapp_sdk": "20.1.0-Dev",
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",
   "react_native": false,
   "custom_configuration_fields": [
     {
       "type": "text",
-      "key": "mapping_url",
-      "tooltip_text": "Mapping Url"
+      "key": "app_id",
+      "tooltip_text": "App Id"
+    },
+    {
+      "type": "text",
+      "key": "poster_url",
+      "tooltip_text": "Poster Url"
+    },
+    {
+      "type": "checkbox",
+      "key": "show_mini_controls",
+      "tooltip_text": "Show Mini controls"
     }
   ],
   "targets": [
