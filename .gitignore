@@ -86,3 +86,4 @@ node_modules/*
 **/tvos.json
 **/ios.json
 Frameworks/Plugins/ZappAppleVideoSubscriberSSO/node_modules
+Frameworks/Plugins/ZappChromecast/Files/node_modules

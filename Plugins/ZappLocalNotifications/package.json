@@ -15,13 +15,21 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/applicaster/AppleApplicasterFrameworks"
+    "url": "git+https://github.com/applicaster/ApplicasterFrameworks"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/applicaster/AppleApplicasterFrameworks"
+    "url": "https://github.com/applicaster/ApplicasterFrameworks"
   },
-  "homepage": "https://github.com/applicaster/AppleApplicasterFrameworks"
+  "homepage": "https://github.com/applicaster/ApplicasterFrameworks",
+  "applicaster": {
+    "supportedPlatforms": [
+      "ios",
+      "tvos",
+      "android"
+    ],
+    "zappOwnerAccountId": "5e12fac7666333000ec0f8ab"
+  }
 }
