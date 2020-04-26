@@ -10,4 +10,5 @@ import Foundation
 
 struct FeaturesCusimizationConsts {
     static let MSAppCenterAppSecret = "MSAppCenterAppSecret"
+    static let S3Hostname = "S3Hostname"
 }
