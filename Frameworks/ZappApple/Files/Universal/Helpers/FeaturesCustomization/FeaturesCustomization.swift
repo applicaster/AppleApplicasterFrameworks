@@ -26,8 +26,10 @@ public class FeaturesCustomization {
         return featuresCustomizationDict?[FeaturesCusimizationConsts.MSAppCenterAppSecret] as? String
     }
  
-    public class func s3Hostname() -> String? {
-        return featuresCustomizationDict?[FeaturesCusimizationConsts.S3Hostname] as? String
+    public class func s3Hostname() -> String {
+        guard let hostname = featuresCustomizationDict?[FeaturesCusimizationConsts.S3Hostname] as? String else { return "assets-secure.applicaster.com"
+        }
+        return hostname
     }
 }
 
