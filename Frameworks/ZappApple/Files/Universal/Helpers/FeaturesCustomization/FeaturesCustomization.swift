@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FeaturesCustomization {
+public class FeaturesCustomization {
     static var featuresCustomizationDict:[AnyHashable:Any]? = getPlist()
     
     class func getPlist() -> [AnyHashable:Any]? {
@@ -22,9 +22,14 @@ class FeaturesCustomization {
         return (try? PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil)) as? [AnyHashable:Any]
     }
     
-    class func MSAppCenterAppSecret() -> String? {
+    class func msAppCenterAppSecret() -> String? {
         return featuresCustomizationDict?[FeaturesCusimizationConsts.MSAppCenterAppSecret] as? String
     }
  
+    public class func s3Hostname() -> String {
+        guard let hostname = featuresCustomizationDict?[FeaturesCusimizationConsts.S3Hostname] as? String else { return "assets-secure.applicaster.com"
+        }
+        return hostname
+    }
 }
 
