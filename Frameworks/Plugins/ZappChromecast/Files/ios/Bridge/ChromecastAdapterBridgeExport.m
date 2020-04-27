@@ -13,6 +13,5 @@
 
 RCT_EXPORT_VIEW_PROPERTY(key, NSString);
 RCT_EXPORT_VIEW_PROPERTY(color, UIColor);
-RCT_EXPORT_VIEW_PROPERTY(width, float);
 
 @end
