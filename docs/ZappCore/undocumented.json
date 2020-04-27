@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Extensions/String/String+Extension.swift",
+      "line": 11,
+      "symbol": "String.replaceUrlHost(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 12,
       "symbol": "FacadeConnector",

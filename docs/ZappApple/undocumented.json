@@ -708,6 +708,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCusimizationConsts.swift",
+      "line": 13,
+      "symbol": "FeaturesCusimizationConsts.S3Hostname",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
       "line": 11,
       "symbol": "FeaturesCustomization",
@@ -731,7 +738,14 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
       "line": 25,
-      "symbol": "FeaturesCustomization.MSAppCenterAppSecret()",
+      "symbol": "FeaturesCustomization.msAppCenterAppSecret()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/FeaturesCustomization/FeaturesCustomization.swift",
+      "line": 29,
+      "symbol": "FeaturesCustomization.s3Hostname()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
