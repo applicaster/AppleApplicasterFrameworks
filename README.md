@@ -28,11 +28,11 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: *0.9.5*
+##### ZappCore: *0.9.6*
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: *0.7.8*
+##### ZappApple: *0.7.9*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
@@ -80,7 +80,7 @@ This respository is the main container for general frameworks and plugins for [Z
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
-##### Apple Video Subscriber SSO: *0.1.9*
+##### Apple Video Subscriber SSO: *0.1.10*
 - **Description:** This plugin performs as player prehook to login to the TV Provider before player starts.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoSubscriberSSO/index.html)
 - **Manifest:**

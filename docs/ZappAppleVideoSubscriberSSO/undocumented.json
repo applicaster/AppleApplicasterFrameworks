@@ -176,6 +176,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriberSSO/Files/Universal/ZPAppleVideoSubscriberSSO+VSAccountManagerInteraction.swift",
+      "line": 201,
+      "symbol": "ZPAppleVideoSubscriberSSO.getServiceProviderAuthorization(for:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriberSSO/Files/Universal/ZPAppleVideoSubscriberSSO.swift",
       "line": 12,
       "symbol": "ZPAppleVideoSubscriberSSO",
@@ -283,34 +290,41 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriberSSO/Files/Universal/ZPAppleVideoSubscriberSSO.swift",
       "line": 64,
+      "symbol": "ZPAppleVideoSubscriberSSO.vsProviderChannelID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriberSSO/Files/Universal/ZPAppleVideoSubscriberSSO.swift",
+      "line": 73,
       "symbol": "ZPAppleVideoSubscriberSSO.vsApplevelAuthenticationEndpoint",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriberSSO/Files/Universal/ZPAppleVideoSubscriberSSO.swift",
-      "line": 72,
+      "line": 81,
       "symbol": "ZPAppleVideoSubscriberSSO.vsApplevelAuthenticationAttributes",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriberSSO/Files/Universal/ZPAppleVideoSubscriberSSO.swift",
-      "line": 88,
+      "line": 97,
       "symbol": "ZPAppleVideoSubscriberSSO.performSsoOperation(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriberSSO/Files/Universal/ZPAppleVideoSubscriberSSO.swift",
-      "line": 109,
+      "line": 118,
       "symbol": "ZPAppleVideoSubscriberSSO.performApplevelAuthenticationIfNeeded()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappAppleVideoSubscriberSSO/Files/Universal/ZPAppleVideoSubscriberSSO.swift",
-      "line": 135,
+      "line": 146,
       "symbol": "ZPAppleVideoSubscriberSSO.processResult()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

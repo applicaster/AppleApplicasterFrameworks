@@ -17,7 +17,7 @@ import Foundation
 
 public class MsAppCenterHandler: NSObject {
     public func configure() {
-        guard let appSecret = FeaturesCustomization.MSAppCenterAppSecret() else {
+        guard let appSecret = FeaturesCustomization.msAppCenterAppSecret() else {
             return
         }
 
