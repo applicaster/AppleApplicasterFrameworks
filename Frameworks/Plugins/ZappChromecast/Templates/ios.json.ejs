@@ -1,56 +1,18 @@
-{
-  "api": {
-    "require_startup_execution": true,
-    "class_name": "ChromecastAdapter",
-    "modules": [
-      "ZappChromecast"
-    ]
-  },
-  "npm_dependencies": [
-    "@applicaster/zapp_generic_cromecast@<%= version_id %>"
-  ],
-  "extra_dependencies": [
-    {
-      "ZappChromecast": ":path => './node_modules/@applicaster/zapp_generic_cromecast/ZappChromecast.podspec'"
-    }
-  ],
-  "platform": "ios",
-  "author_name": "Alex Zchut",
-  "author_email": "a.zchut@applicaster.com",
-  "manifest_version": "<%= version_id %>",
-  "name": "Generic Chromecast Adapter",
-  "description": "Generic Chromecast Adapter",
-  "type": "general",
-  "screen": false,
-  "identifier": "zapp_generic_cromecast",
-  "ui_builder_support": true,
-  "whitelisted_account_ids": [
-    "5ae06cef8fba0f00084bd3c6",
-    "5c20970320f1c500088842dd",
-    "57c997a8373538000b000000"
-  ],
-  "min_zapp_sdk": "20.1.0-Dev",
-  "deprecated_since_zapp_sdk": "",
-  "unsupported_since_zapp_sdk": "",
-  "react_native": false,
-  "custom_configuration_fields": [
-    {
-      "type": "text",
-      "key": "app_id",
-      "tooltip_text": "App Id"
-    },
-    {
-      "type": "text",
-      "key": "poster_url",
-      "tooltip_text": "Poster Url"
-    },
-    {
-      "type": "checkbox",
-      "key": "show_mini_controls",
-      "tooltip_text": "Show Mini controls"
-    }
-  ],
-  "targets": [
-    "mobile"
-  ]
-}
+{ "api": { "require_startup_execution": true, "class_name": "ChromecastAdapter",
+"modules": [ "ZappChromecast" ] }, "npm_dependencies": [
+"@applicaster/zapp-generic-chromecast@<%= version_id %>" ],
+"extra_dependencies": [ { "ZappChromecast": ":path =>
+'./node_modules/@applicaster/zapp-generic-chromecast/ZappChromecast.podspec'" }
+], "platform": "ios", "author_name": "Alex Zchut", "author_email":
+"a.zchut@applicaster.com", "manifest_version": "<%= version_id %>", "name":
+"Generic Chromecast Adapter", "description": "Generic Chromecast Adapter",
+"type": "general", "screen": false, "identifier": "zapp-generic-chromecast",
+"ui_builder_support": true, "whitelisted_account_ids": [
+"5ae06cef8fba0f00084bd3c6", "5c20970320f1c500088842dd",
+"57c997a8373538000b000000" ], "min_zapp_sdk": "20.1.0-Dev",
+"deprecated_since_zapp_sdk": "", "unsupported_since_zapp_sdk": "",
+"react_native": false, "custom_configuration_fields": [ { "type": "text", "key":
+"app_id", "tooltip_text": "App Id" }, { "type": "text", "key": "poster_url",
+"tooltip_text": "Poster Url" }, { "type": "checkbox", "key":
+"show_mini_controls", "tooltip_text": "Show Mini controls" } ], "targets": [
+"mobile" ] }
