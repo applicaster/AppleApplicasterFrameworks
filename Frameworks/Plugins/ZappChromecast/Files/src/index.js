@@ -1,27 +1,17 @@
 /* @flow */
 
 import React from "react";
-import {
-  Button,
-  FlatList,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  Platform,
-  ToolbarAndroid,
-  TouchableOpacity,
-} from "react-native";
+import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 import GoogleCast from "./Cast";
-import CastButton from "./CastButton";
-console.log("Google", { GoogleCast, CastButton });
+import CastButtonComponent from "./CastButton";
 
-class Main extends React.Component {
+export default class Main extends React.Component {
   constructor(props) {
     super(props);
 
     this.cast = this.cast.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
     this.renderVideo = this.renderVideo.bind(this);
     this.subtitlesEnabled = false;
 
@@ -31,35 +21,16 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
+    console.log("Cast component mounted");
     this.registerListeners();
 
     GoogleCast.getCastState().then(console.log);
     // GoogleCast.showIntroductoryOverlay();
-
-    const CAST_VIDEOS_URL =
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/f.json";
-    fetch(CAST_VIDEOS_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        const mp4Url = data.categories[0].mp4;
-        const imagesUrl = data.categories[0].images;
-
-        this.setState({
-          videos: data.categories[0].videos.map((video) => ({
-            title: video.title,
-            subtitle: video.subtitle,
-            studio: video.studio,
-            duration: video.duration,
-            mediaUrl: mp4Url + video.sources[2].url,
-            imageUrl: imagesUrl + video["image-480x270"],
-            posterUrl: imagesUrl + video["image-780x1200"],
-          })),
-        });
-      })
-      .catch(console.error);
   }
 
   cast(video) {
+    console.log("Cast video", video);
+
     GoogleCast.getCastDevice().then(console.log);
     GoogleCast.castMedia(video);
     GoogleCast.launchExpandedControls();
@@ -67,6 +38,8 @@ class Main extends React.Component {
   }
 
   onActionSelected = (position) => {
+    console.log("Cast onActionSelected");
+
     switch (position) {
       case 0:
         GoogleCast.play();
@@ -85,43 +58,18 @@ class Main extends React.Component {
   };
 
   render() {
+    console.log("Cast render");
+
     return (
       <View style={styles.container}>
-        {Platform.OS === "android" ? (
-          <ToolbarAndroid
-            contentInsetStart={4}
-            actions={[
-              { title: "Play", show: "always" },
-              { title: "Pause", show: "always" },
-              { title: "Stop", show: "always" },
-              { title: "CC (en)", show: "always" },
-            ]}
-            onActionSelected={this.onActionSelected}
-            style={styles.toolbarAndroid}
-          >
-            <CastButton style={styles.castButtonAndroid} />
-          </ToolbarAndroid>
-        ) : (
-          <View style={styles.toolbarIOS}>
-            <Button
-              title="Stop"
-              onPress={() => GoogleCast.endSession()}
-              style={styles.stopButton}
-            />
-            <CastButton style={styles.castButtonIOS} />
-          </View>
-        )}
-        <FlatList
-          data={this.state.videos}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={this.renderVideo}
-          style={{ width: "100%", alignSelf: "stretch" }}
-        />
+        <CastButtonComponent style={styles.CastButtonComponent} />
       </View>
     );
   }
 
   renderVideo({ item }) {
+    console.log("Cast render video");
+
     const video = item;
 
     return (
@@ -143,6 +91,8 @@ class Main extends React.Component {
   }
 
   registerListeners() {
+    console.log("Cast registerListeners");
+
     const events = `
       SESSION_STARTING SESSION_STARTED SESSION_START_FAILED SESSION_SUSPENDED
       SESSION_RESUMING SESSION_RESUMED SESSION_ENDING SESSION_ENDED
@@ -153,7 +103,6 @@ class Main extends React.Component {
     `
       .trim()
       .split(/\s+/);
-    console.log(events);
 
     events.forEach((event) => {
       GoogleCast.EventEmitter.addListener(GoogleCast[event], function () {
@@ -163,6 +112,7 @@ class Main extends React.Component {
   }
 
   sendMessage() {
+    console.log("Cast sendMessage");
     const channel = "urn:x-cast:com.reactnative.googlecast.example";
 
     GoogleCast.initChannel(channel).then(() => {
@@ -171,35 +121,17 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "stretch",
-    backgroundColor: "#F5FCFF",
   },
-  toolbarAndroid: {
-    backgroundColor: "#E9EAED",
-    height: 56,
-  },
-  toolbarIOS: {
-    marginTop: 20,
-    height: 56,
-  },
-  castButtonAndroid: {
+  CastButtonComponent: {
     height: 24,
     width: 24,
     alignSelf: "flex-end",
-    tintColor: "black",
-  },
-  castButtonIOS: {
-    height: 24,
-    width: 24,
-    marginRight: 10,
-    alignSelf: "flex-end",
-    tintColor: "black",
+    tintColor: "white",
   },
   stopButton: {
     alignSelf: "flex-end",
@@ -215,7 +147,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
   },
-  chromecastButton: {
+  chromeCastButtonComponent: {
     backgroundColor: "#EC407A",
     marginVertical: 10,
   },
