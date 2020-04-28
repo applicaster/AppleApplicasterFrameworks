@@ -31,14 +31,17 @@
     }
   ],
   "styles": {},
-  "targets": ["mobile"],
-  "ui_frameworks": ["quickbrick"],
+  "targets": [
+    "mobile"
+  ],
+  "ui_frameworks": [
+    "quickbrick"
+  ],
   "platform": "android_for_quickbrick",
-  "dependency_version": "0.0.6",
-  "manifest_version": "0.0.6",
+  "dependency_version": "0.0.7",
+  "manifest_version": "0.0.7",
   "min_zapp_sdk": "0.1.0-alpha1",
   "npm_dependencies": [
-    "react-native-google-cast@3.3.0",
-    "@applicaster/zapp-generic-chromecast@0.0.6"
+    "@applicaster/zapp-generic-chromecast@0.0.7"
   ]
 }
