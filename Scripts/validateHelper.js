@@ -66,7 +66,9 @@ function validateSingleFrameworkPathes(model) {
     if (plugin == true) {
       if (
         fs.existsSync(`${baseFolderPath}/Templates/ios.json.ejs`) ||
-        fs.existsSync(`${baseFolderPath}/Templates/tvos.json.ejs`)
+        fs.existsSync(`${baseFolderPath}/Templates/tvos.json.ejs`) ||
+        fs.existsSync(`${baseFolderPath}/Templates/android.json.ejs`)
+
       ) {
         if (
           fs.existsSync(`${baseFolderPath}/Files/${framework}.podspec`) &&

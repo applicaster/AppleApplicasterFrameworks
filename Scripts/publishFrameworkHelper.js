@@ -18,15 +18,21 @@ function manifestPath({ model, platform, template }) {
     template == true
       ? `Frameworks/Plugins/${framework}/Templates/tvos.json.ejs`
       : `Frameworks/Plugins/${framework}/Templates/tvos.json`;
+  androidPath =
+    template == true
+      ? `Frameworks/Plugins/${framework}/Templates/android.json.ejs`
+      : `Frameworks/Plugins/${framework}/Templates/android.json`;
   if (
     plugin == true &&
-    (platform == "ios" || platform == "tvos") &&
+    (platform == "ios" || platform == "tvos" || platform == "android") &&
     template != null
   ) {
     if (platform == "ios") {
       return iosPath;
     } else if (platform == "tvos") {
       return tvosPath;
+    } else if (platform == "android") {
+      return androidPath;
     }
   } else {
     return null;
