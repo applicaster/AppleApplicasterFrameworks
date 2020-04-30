@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-public protocol ChromecastProtocol {
-    var lastActiveChromecastButton: ChromecastButtonOrigin? {get set}
-    var triggerdChromecastButton: ChromecastButtonOrigin? {get set}
+@objc public protocol ChromecastProtocol {
+    var lastActiveChromecastButton: String? {get set}
+    var triggerdChromecastButton: String? {get set}
     var containerViewEventsDelegate: Any? {get set}
     var isEnabled: Bool { get }
     func addButton(to container: UIView?, key: String, color: UIColor?)

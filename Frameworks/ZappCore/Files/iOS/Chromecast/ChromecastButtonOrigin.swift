@@ -5,8 +5,10 @@
 //  Created by Alex Zchut on 30/04/2020.
 //
 
-public enum ChromecastButtonOrigin: String {
-    case appNavbar = "Navbar"
-    case playerNavbar = "Fullscreen Player"
-    case expendedNavbar = "Chromecast Intermediate Screen"
+import Foundation
+
+public struct ChromecastButtonOrigin {
+    public static let appNavbar = "Navbar"
+    public static let playerNavbar = "Fullscreen Player"
+    public static let expendedNavbar = "Chromecast Intermediate Screen"
 }

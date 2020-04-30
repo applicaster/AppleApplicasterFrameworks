@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol ChromecastExtendedPlayerControlsProtocol: ChromecastProtocol {
+@objc public protocol ChromecastExtendedPlayerControlsProtocol: ChromecastProtocol {
     func play(playableItems: [NSObject],  playPosition: TimeInterval)
     func extendedPlayerControlsOrientationMask() -> UIInterfaceOrientationMask
     func getExpandedPlayerControlsViewController() -> UIViewController
