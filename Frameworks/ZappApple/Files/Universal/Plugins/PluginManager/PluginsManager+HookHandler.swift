@@ -160,7 +160,8 @@ extension PluginsManager {
 }
 
 // MARK: ExecuteOnContinuingUserActivity
-//TODO: This hook does not implemented on call
+
+// TODO: This hook does not implemented on call
 extension PluginsManager {
     public func hookOnContinuingUserActivity(userActivity: NSUserActivity,
                                              hooksPlugins: [AppLoadingHookProtocol]?,
@@ -189,7 +190,7 @@ extension PluginsManager {
         executeOnContinuingUserActivity(userActivity,
                                         completion)
     }
-    
+
     public func hasHooksForContinuingUserActivity() -> Bool {
         let plugins = retrieveHooksPlugins().filter { (adapter) -> Bool in
             guard let _ = adapter.executeOnContinuingUserActivity else {
