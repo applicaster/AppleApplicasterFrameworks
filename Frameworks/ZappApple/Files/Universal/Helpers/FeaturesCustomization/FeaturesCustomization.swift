@@ -27,7 +27,9 @@ public class FeaturesCustomization {
     }
  
     public class func s3Hostname() -> String {
-        guard let hostname = featuresCustomizationDict?[FeaturesCusimizationConsts.S3Hostname] as? String else { return "assets-secure.applicaster.com"
+        guard let hostname = featuresCustomizationDict?[FeaturesCusimizationConsts.S3Hostname] as? String,
+            hostname.isEmpty == false else {
+            return "assets-secure.applicaster.com"
         }
         return hostname
     }
