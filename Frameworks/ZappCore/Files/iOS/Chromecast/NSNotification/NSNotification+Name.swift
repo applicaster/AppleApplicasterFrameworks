@@ -1,6 +1,6 @@
 //
 //  NSNotification+Name.swift
-//  ZappChromecast
+//  ZappCore
 //
 //  Created by Alex Zchut on 11/04/2020.
 //
