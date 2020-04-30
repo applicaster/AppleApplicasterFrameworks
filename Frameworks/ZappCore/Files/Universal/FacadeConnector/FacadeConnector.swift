@@ -46,6 +46,11 @@ import UIKit
         return connectorProvider as? FacadeConnectorConnnectivityProtocol
     }
     
+    @objc public var chromecast: FacadeConnectorChromecastProtocol? {
+        return connectorProvider as? FacadeConnectorChromecastProtocol
+    }
+    
+    
     let connectorProvider: NSObject
 
     @objc public static var connector: FacadeConnector? {
