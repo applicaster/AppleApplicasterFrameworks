@@ -64,4 +64,8 @@ import ZappCore
     func getProviderInstance(identifier: String) -> PluginAdapterProtocol? {
         return nil
     }
+    
+    func getProviderInstance(condition: (Any) -> Any?) -> PluginAdapterProtocol? {
+        return nil
+    }
 }
