@@ -37,6 +37,11 @@ const baseManifest = {
       key: "chromecast_poster",
       tooltip_text: "Chromecast poster URL",
     },
+    {
+      type: "checkbox",
+      key: "show_mini_controls",
+      tooltip_text: "Show Mini controls",
+    },
   ],
   styles: {},
   targets: ["mobile"],
@@ -78,6 +83,12 @@ function createManifest({ version, platform }) {
           ":path =\u003e './node_modules/@applicaster/zapp-generic-chromecast/ZappChromecast.podspec'",
       },
     ];
+
+    manifest.api = {
+      require_startup_execution: true,
+      class_name: "ChromecastAdapter",
+      modules: ["ZappChromecast"],
+    };
   }
 
   return manifest;
