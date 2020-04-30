@@ -15,16 +15,16 @@ open class ChromecastAdapter: NSObject {
     public var model: ZPPluginModel?
     public var enabled: Bool = false
     public var initialized: Bool = false
-    
+
     public required init(pluginModel: ZPPluginModel) {
         model = pluginModel
         configurationJSON = model?.configurationJSON
     }
-    
+
     /// Plugin configuration keys
     struct PluginKeys {
-        static let applicationID = "app_id"
-        static let posterUrl = "poster_url"
+        static let applicationID = "chromecast_app_id"
+        static let posterUrl = "chromecast_poster"
         static let showMiniControls = "show_mini_controls"
     }
 
@@ -35,7 +35,7 @@ open class ChromecastAdapter: NSObject {
         }
         return value
     }
-    
+
     var pluginPosterURL:String? {
         guard let value = configurationJSON?[PluginKeys.posterUrl] as? String,
             value.isEmpty == false else {
@@ -43,7 +43,7 @@ open class ChromecastAdapter: NSObject {
         }
         return value
     }
-    
+
     var shouldShowMiniControls: Bool {
         var show = false
         if let stringValue = configurationJSON?[PluginKeys.showMiniControls] as? String {
@@ -56,10 +56,10 @@ open class ChromecastAdapter: NSObject {
         } else if let boolValue = configurationJSON?[PluginKeys.showMiniControls] as? Bool {
             show = boolValue
         }
-        
+
         return show
     }
-    
+
     lazy var castViewExtender: ChromecastCustomDialogProtocol? = {
         var retVal:ChromecastCustomDialogProtocol?
 
@@ -75,8 +75,8 @@ open class ChromecastAdapter: NSObject {
 //        }
         return retVal
     }()
-    
-    
+
+
     // Where the icon was tapped from that lead to the CastDialog
     var localLastActiveChromecastButton: ChromecastButtonOrigin?
 
@@ -118,14 +118,14 @@ open class ChromecastAdapter: NSObject {
         // perform the deinitialization
         self.removeObservers()
     }
-    
+
     @objc open func presentIntroductionScreenIfNeeded() {
         if getShouldPresentIntroductionScreen(),
             let castButton = self.castButton {
             presentCastInstructionsViewControllerOnce(with: castButton)
         }
     }
-    
+
     func updateManagerState(enabled: Bool, initialized: Bool) {
         self.initialized = initialized
         self.enabled = enabled
