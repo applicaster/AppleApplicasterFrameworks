@@ -17,6 +17,7 @@ const baseManifest = {
   unsupported_since_zapp_sdk: "",
   preload: true,
   custom_configuration_fields: [],
+  npm_dependencies:[],
   targets: ["mobile"],
   ui_frameworks: ["quickbrick"]
 };
@@ -29,18 +30,63 @@ function createManifest({ version, platform }) {
     manifest_version: version,
     min_zapp_sdk: min_zapp_sdk[platform],
     extra_dependencies: extra_dependencies[platform],
+    api: api[platform],
+    npm_dependencies: npm_dependencies[platform]
   };
   return manifest;
 }
 const min_zapp_sdk = {
-  tvos: "12.2.0-Dev",
-  ios: "20.2.0-Dev",
-  android: "20.0.0-Dev",
+  tvos_for_quickbrick: "0.1.0-alpha1",
+  ios_for_quickbrick: "0.1.0-alpha1",
+  android_for_quickbrick: "0.1.0-alpha1",
 };
 const extra_dependencies = {
-  ios: [
+  ios_for_quickbrick: [
     {
       "ZappLocalNotifications": ":path => './node_modules/@applicaster/zapp_local_notifications/ZappLocalNotifications.podspec'",
+    },
+  ],
+  tvos_for_quickbrick: [
+    {
+      "ZappLocalNotifications": ":path => './node_modules/@applicaster/zapp_local_notifications/ZappLocalNotifications.podspec'",
+    },
+  ],
+};
+const api = {
+  ios_for_quickbrick: [
+    {
+      "class_name": "LocalNotificationManager",
+      "modules": [
+        "ZappLocalNotifications"
+      ]
+    },
+  ],
+  tvos_for_quickbrick: [
+    {
+      "class_name": "LocalNotificationManager",
+      "modules": [
+        "ZappLocalNotifications"
+      ]
+    },
+  ],
+  android_for_quickbrick: [
+    {
+      "class_name": "com.applicaster.reactnative.plugins.APReactNativeAdapter",
+      "react_packages": [
+        "com.applicaster.localnotifications.reactnative.LocalNotificationPackage"
+      ]
+    },
+  ],
+};
+const npm_dependencies = {
+  ios_for_quickbrick: [
+    {
+      "@applicaster/zapp_local_notifications@<%= version_id %>"
+    },
+  ],
+  tvos_for_quickbrick: [
+    {
+      "@applicaster/zapp_local_notifications@<%= version_id %>"
     },
   ],
 };
