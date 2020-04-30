@@ -2,9 +2,10 @@ package com.reactnative.googlecast;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
+import android.view.ContextThemeWrapper;
 
 import androidx.annotation.NonNull;
 import androidx.core.graphics.drawable.DrawableCompat;
@@ -14,82 +15,97 @@ import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.google.android.gms.cast.framework.CastButtonFactory;
-import com.google.android.gms.cast.framework.CastContext;
-import com.google.android.gms.cast.framework.CastState;
+
+import javax.annotation.Nonnull;
 
 
 public class GoogleCastButtonManager
         extends SimpleViewManager<MediaRouteButton> {
 
-  private static final String REACT_CLASS = "RNGoogleCastButton";
-  private Integer mColor = null;
-  private static MediaRouteButton googleCastButtonManagerInstance;
+    private static final String REACT_CLASS = "RNGoogleCastButton";
+    private Integer mColor = null;
+    private static MediaRouteButton googleCastButtonManagerInstance;
 
-  @NonNull
-  @Override
-  public String getName() {
-    return REACT_CLASS;
-  }
-
-  @NonNull
-  @Override
-  public MediaRouteButton createViewInstance(@NonNull ThemedReactContext context) {
-    CastContext castContext = CastContext.getSharedInstance(context);
-    Activity currentActivity = context.getCurrentActivity();
-    final MediaRouteButton button = new ColorableMediaRouteButton(currentActivity);
-    googleCastButtonManagerInstance = button;
-    CastButtonFactory.setUpMediaRouteButton(context, button);
-    updateButtonState(button, castContext.getCastState());
-    castContext.addCastStateListener(newState -> GoogleCastButtonManager.this.updateButtonState(button, newState));
-
-    return button;
-  }
-
-  public static MediaRouteButton getGoogleCastButtonManagerInstance() {
-    return googleCastButtonManagerInstance;
-  }
-
-  @ReactProp(name = "tintColor", customType = "Color")
-  public void setTintColor(ColorableMediaRouteButton button, Integer color) {
-    if (color == null)
-      return;
-    button.applyTint(color);
-    mColor = color;
-  }
-
-  private void updateButtonState(MediaRouteButton button, int state) {
-    Log.d(REACT_CLASS, "ChromeCast state changed to " + state);
-  }
-
-  // https://stackoverflow.com/a/41496796/384349
-  private class ColorableMediaRouteButton extends MediaRouteButton {
-    protected Drawable mRemoteIndicatorDrawable;
-
-    public ColorableMediaRouteButton(Context context) { super(context); }
-
-    public ColorableMediaRouteButton(Context context, AttributeSet attrs) {
-      super(context, attrs);
-    }
-
-    public ColorableMediaRouteButton(Context context, AttributeSet attrs,
-                                     int defStyleAttr) {
-      super(context, attrs, defStyleAttr);
-    }
-
+    @NonNull
     @Override
-    public void setRemoteIndicatorDrawable(Drawable d) {
-      mRemoteIndicatorDrawable = d;
-      super.setRemoteIndicatorDrawable(d);
-      if (mColor != null)
-        applyTint(mColor);
+    public String getName() {
+        return REACT_CLASS;
     }
 
-    public void applyTint(Integer color) {
-      if (mRemoteIndicatorDrawable == null)
-        return;
-
-      Drawable wrapDrawable = DrawableCompat.wrap(mRemoteIndicatorDrawable);
-      DrawableCompat.setTint(wrapDrawable, color);
+    @NonNull
+    @Override
+    public MediaRouteButton createViewInstance(@NonNull ThemedReactContext context) {
+        Activity currentActivity = context.getCurrentActivity();
+        final MediaRouteButton button = new ColorableMediaRouteButton(currentActivity);
+        googleCastButtonManagerInstance = button;
+        button.setAlwaysVisible(false);
+        CastButtonFactory.setUpMediaRouteButton(context, button);
+        return button;
     }
-  }
+
+    public void onDropViewInstance(@Nonnull MediaRouteButton view) {
+        if (googleCastButtonManagerInstance == view) {
+            googleCastButtonManagerInstance = null;
+        }
+    }
+
+    public static MediaRouteButton getGoogleCastButtonManagerInstance() {
+        return googleCastButtonManagerInstance;
+    }
+
+    @ReactProp(name = "tintColor", customType = "Color")
+    public void setTintColor(ColorableMediaRouteButton button, Integer color) {
+        if (color == null)
+            return;
+        button.applyTint(color);
+        mColor = color;
+    }
+
+    private class ColorableMediaRouteButton extends MediaRouteButton {
+
+        protected Drawable mRemoteIndicatorDrawable;
+
+        public ColorableMediaRouteButton(Context context) {
+            super(context);
+            initDrawable(context);
+        }
+
+        public ColorableMediaRouteButton(Context context, AttributeSet attrs) {
+            super(context, attrs);
+            initDrawable(context);
+        }
+
+        public ColorableMediaRouteButton(Context context, AttributeSet attrs, int defStyleAttr) {
+            super(context, attrs, defStyleAttr);
+            initDrawable(context);
+        }
+
+        @Override
+        public void setRemoteIndicatorDrawable(Drawable d) {
+            mRemoteIndicatorDrawable = DrawableCompat.wrap(d);
+            super.setRemoteIndicatorDrawable(mRemoteIndicatorDrawable);
+            if (mColor != null)
+                applyTint(mColor);
+        }
+
+        public void applyTint(Integer color) {
+            if (mRemoteIndicatorDrawable == null) {
+                return;
+            }
+            DrawableCompat.setTint(mRemoteIndicatorDrawable, color);
+        }
+
+        private void initDrawable(Context context) {
+            Context castContext = new ContextThemeWrapper(context, androidx.mediarouter.R.style.Theme_MediaRouter);
+            TypedArray a = castContext.obtainStyledAttributes(null,
+                    androidx.mediarouter.R.styleable.MediaRouteButton,
+                    androidx.mediarouter.R.attr.mediaRouteButtonStyle, 0);
+            Drawable drawable = a.getDrawable(androidx.mediarouter.R.styleable.MediaRouteButton_externalRouteEnabledDrawable);
+            a.recycle();
+            if (null != drawable) {
+                setRemoteIndicatorDrawable(drawable);
+            }
+        }
+
+    }
 }

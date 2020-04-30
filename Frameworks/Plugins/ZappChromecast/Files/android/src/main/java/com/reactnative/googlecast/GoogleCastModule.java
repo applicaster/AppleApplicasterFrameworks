@@ -2,12 +2,14 @@ package com.reactnative.googlecast;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.mediarouter.app.MediaRouteButton;
+import androidx.mediarouter.media.MediaControlIntent;
+import androidx.mediarouter.media.MediaRouteSelector;
+import androidx.mediarouter.media.MediaRouter;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
@@ -25,6 +27,7 @@ import com.google.android.gms.cast.MediaStatus;
 import com.google.android.gms.cast.MediaTrack;
 import com.google.android.gms.cast.framework.CastContext;
 import com.google.android.gms.cast.framework.CastSession;
+import com.google.android.gms.cast.framework.CastStateListener;
 import com.google.android.gms.cast.framework.IntroductoryOverlay;
 import com.google.android.gms.cast.framework.SessionManager;
 import com.google.android.gms.cast.framework.SessionManagerListener;
@@ -37,7 +40,7 @@ import java.util.Locale;
 import java.util.Map;
 
 public class GoogleCastModule
-        extends ReactContextBaseJavaModule implements LifecycleEventListener {
+        extends ReactContextBaseJavaModule implements LifecycleEventListener, CastStateListener {
 
     @VisibleForTesting
     public static final String REACT_CLASS = "RNGoogleCast";
@@ -67,6 +70,13 @@ public class GoogleCastModule
     protected static final String E_CAST_NOT_AVAILABLE = "E_CAST_NOT_AVAILABLE";
     protected static final String GOOGLE_CAST_NOT_AVAILABLE_MESSAGE = "Google Cast not available";
     protected static final String DEFAULT_SUBTITLES_LANGUAGE = Locale.ENGLISH.getLanguage();
+    private MediaRouteSelector mSelector;
+    private final MediaRouter.Callback mScanCallback = new MediaRouter.Callback() {
+        @Override
+        public void onRouteSelected(MediaRouter router, MediaRouter.RouteInfo route) {
+            super.onRouteSelected(router, route);
+        }
+    };
 
     private CastSession mCastSession;
     private SessionManagerListener<CastSession> mSessionManagerListener;
@@ -83,6 +93,10 @@ public class GoogleCastModule
         if (CAST_AVAILABLE) {
             reactContext.addLifecycleEventListener(this);
             setupCastListener();
+            mSelector = new MediaRouteSelector.Builder()
+                    // These are the framework-supported intents
+                    .addControlCategory(MediaControlIntent.CATEGORY_REMOTE_PLAYBACK)
+                    .build();
         }
     }
 
@@ -125,7 +139,7 @@ public class GoogleCastModule
 
     @ReactMethod
     public void showCastPicker() {
-        getReactApplicationContext().runOnUiQueueThread(() -> {
+        runOnUiQueueThread(() -> {
             GoogleCastButtonManager.getGoogleCastButtonManagerInstance().performClick();
             Log.e(REACT_CLASS, "showCastPicker... ");
         });
@@ -136,8 +150,7 @@ public class GoogleCastModule
         if (mCastSession == null) {
             return;
         }
-
-        getReactApplicationContext().runOnUiQueueThread(() -> {
+        runOnUiQueueThread(() -> {
             RemoteMediaClient remoteMediaClient = mCastSession.getRemoteMediaClient();
             if (remoteMediaClient == null) {
                 return;
@@ -168,7 +181,7 @@ public class GoogleCastModule
 
     @ReactMethod
     public void getCastDevice(final Promise promise) {
-        getReactApplicationContext().runOnUiQueueThread(() -> {
+        runOnUiQueueThread(() -> {
             if (mCastSession == null) {
                 promise.resolve(null);
                 return;
@@ -186,25 +199,20 @@ public class GoogleCastModule
 
     @ReactMethod
     public void getCastState(final Promise promise) {
-        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-            @Override
-            public void run() {
-                if (CAST_AVAILABLE) {
-                    CastContext castContext =
-                        CastContext.getSharedInstance(getReactApplicationContext());
-                    promise.resolve(castContext.getCastState() - 1);
-                } else {
-                    promise.reject(E_CAST_NOT_AVAILABLE, GOOGLE_CAST_NOT_AVAILABLE_MESSAGE);
-                }
+        runOnUiQueueThread(() -> {
+            if (CAST_AVAILABLE) {
+                CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
+                promise.resolve(castContext.getCastState() - 1);
+            } else {
+                promise.reject(E_CAST_NOT_AVAILABLE, GOOGLE_CAST_NOT_AVAILABLE_MESSAGE);
             }
         });
     }
 
-
     @ReactMethod
     public void initChannel(final String namespace, final Promise promise) {
         if (mCastSession != null) {
-            getReactApplicationContext().runOnUiQueueThread(() -> {
+            runOnUiQueueThread(() -> {
                 try {
                     mCastSession.setMessageReceivedCallbacks(namespace, (castDevice, channelNameSpace, message) -> {
                         WritableMap map = Arguments.createMap();
@@ -224,7 +232,7 @@ public class GoogleCastModule
     @ReactMethod
     public void sendMessage(final String message, final String namespace, final Promise promise) {
         if(mCastSession != null){
-            getReactApplicationContext().runOnUiQueueThread(() -> {
+            runOnUiQueueThread(() -> {
                 try {
                     mCastSession.sendMessage(namespace, message)
                             .setResultCallback(status -> {
@@ -246,16 +254,13 @@ public class GoogleCastModule
     @ReactMethod
     public void play() {
         if (mCastSession != null) {
-            getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-                @Override
-                public void run() {
-                    RemoteMediaClient client = mCastSession.getRemoteMediaClient();
-                    if (client == null) {
-                        return;
-                    }
-
-                    client.play();
+            runOnUiQueueThread(() -> {
+                RemoteMediaClient client = mCastSession.getRemoteMediaClient();
+                if (client == null) {
+                    return;
                 }
+
+                client.play();
             });
         }
     }
@@ -263,16 +268,13 @@ public class GoogleCastModule
     @ReactMethod
     public void pause() {
         if (mCastSession != null) {
-            getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-                @Override
-                public void run() {
-                    RemoteMediaClient client = mCastSession.getRemoteMediaClient();
-                    if (client == null) {
-                        return;
-                    }
-
-                    client.pause();
+            runOnUiQueueThread(() -> {
+                RemoteMediaClient client = mCastSession.getRemoteMediaClient();
+                if (client == null) {
+                    return;
                 }
+
+                client.pause();
             });
         }
     }
@@ -280,16 +282,13 @@ public class GoogleCastModule
     @ReactMethod
     public void stop() {
         if (mCastSession != null) {
-            getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-                @Override
-                public void run() {
-                    RemoteMediaClient client = mCastSession.getRemoteMediaClient();
-                    if (client == null) {
-                        return;
-                    }
-
-                    client.stop();
+            runOnUiQueueThread(() -> {
+                RemoteMediaClient client = mCastSession.getRemoteMediaClient();
+                if (client == null) {
+                    return;
                 }
+
+                client.stop();
             });
         }
     }
@@ -297,16 +296,12 @@ public class GoogleCastModule
     @ReactMethod
     public void seek(final int position) {
         if (mCastSession != null) {
-            getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-                @Override
-                public void run() {
-                    RemoteMediaClient client = mCastSession.getRemoteMediaClient();
-                    if (client == null) {
-                        return;
-                    }
-
-                    client.seek(position * 1000);
+            runOnUiQueueThread(() -> {
+                RemoteMediaClient client = mCastSession.getRemoteMediaClient();
+                if (client == null) {
+                    return;
                 }
+                client.seek(position * 1000);
             });
         }
     }
@@ -314,34 +309,28 @@ public class GoogleCastModule
     @ReactMethod
     public void setVolume(final double volume) {
         if (mCastSession != null) {
-            getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-                @Override
-                public void run() {
-                  RemoteMediaClient client = mCastSession.getRemoteMediaClient();
-                  if (client == null) {
-                    return;
-                  }
+            runOnUiQueueThread(() -> {
+              RemoteMediaClient client = mCastSession.getRemoteMediaClient();
+              if (client == null) {
+                return;
+              }
 
-                  client.setStreamVolume(volume);
-                }
+              client.setStreamVolume(volume);
             });
         }
     }
 
     @ReactMethod
     public void endSession(final boolean stopCasting, final Promise promise) {
-        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-            @Override
-            public void run() {
-                if (CAST_AVAILABLE) {
-                    SessionManager sessionManager =
-                        CastContext.getSharedInstance(getReactApplicationContext())
-                                .getSessionManager();
-                    sessionManager.endCurrentSession(stopCasting);
-                    promise.resolve(true);
-                } else {
-                    promise.reject(E_CAST_NOT_AVAILABLE, GOOGLE_CAST_NOT_AVAILABLE_MESSAGE);
-                }
+        runOnUiQueueThread(() -> {
+            if (CAST_AVAILABLE) {
+                SessionManager sessionManager =
+                    CastContext.getSharedInstance(getReactApplicationContext())
+                            .getSessionManager();
+                sessionManager.endCurrentSession(stopCasting);
+                promise.resolve(true);
+            } else {
+                promise.reject(E_CAST_NOT_AVAILABLE, GOOGLE_CAST_NOT_AVAILABLE_MESSAGE);
             }
         });
     }
@@ -364,50 +353,46 @@ public class GoogleCastModule
         if (mCastSession == null) {
             return;
         }
+        runOnUiQueueThread(() -> {
+            if (mCastSession == null) {
+                return;
+            }
 
-        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-            @Override
-            public void run() {
-                if (mCastSession == null) {
+            RemoteMediaClient client = mCastSession.getRemoteMediaClient();
+            if (client == null) {
+                return;
+            }
+
+            if (!enabled) {
+                client.setActiveMediaTracks(new long[] {});
+                return;
+            }
+
+            MediaInfo mediaInfo = client.getMediaInfo();
+            if (mediaInfo == null) {
+                return;
+            }
+
+
+            List<MediaTrack> tracks = mediaInfo.getMediaTracks();
+            if (tracks == null || tracks.isEmpty()) {
+                return;
+            }
+
+            String languageToSelect = languageCode != null ? languageCode : DEFAULT_SUBTITLES_LANGUAGE;
+            for (MediaTrack track : tracks) {
+                if (
+                    track != null &&
+                    track.getType() == MediaTrack.TYPE_TEXT &&
+                    (
+                        track.getSubtype() == MediaTrack.SUBTYPE_NONE || // Sometimes not provided.
+                        track.getSubtype() == MediaTrack.SUBTYPE_SUBTITLES ||
+                        track.getSubtype() == MediaTrack.SUBTYPE_CAPTIONS
+                    ) &&
+                    track.getLanguage().equals(languageToSelect)
+                ) {
+                    client.setActiveMediaTracks(new long[]{ track.getId() });
                     return;
-                }
-
-                RemoteMediaClient client = mCastSession.getRemoteMediaClient();
-                if (client == null) {
-                    return;
-                }
-
-                if (!enabled) {
-                    client.setActiveMediaTracks(new long[] {});
-                    return;
-                }
-
-                MediaInfo mediaInfo = client.getMediaInfo();
-                if (mediaInfo == null) {
-                    return;
-                }
-
-
-                List<MediaTrack> tracks = mediaInfo.getMediaTracks();
-                if (tracks == null || tracks.isEmpty()) {
-                    return;
-                }
-
-                String languageToSelect = languageCode != null ? languageCode : DEFAULT_SUBTITLES_LANGUAGE;
-                for (MediaTrack track : tracks) {
-                    if (
-                        track != null &&
-                        track.getType() == MediaTrack.TYPE_TEXT &&
-                        (
-                            track.getSubtype() == MediaTrack.SUBTYPE_NONE || // Sometimes not provided.
-                            track.getSubtype() == MediaTrack.SUBTYPE_SUBTITLES ||
-                            track.getSubtype() == MediaTrack.SUBTYPE_CAPTIONS
-                        ) &&
-                        track.getLanguage().equals(languageToSelect)
-                    ) {
-                        client.setActiveMediaTracks(new long[]{ track.getId() });
-                        return;
-                    }
                 }
             }
         });
@@ -439,23 +424,31 @@ public class GoogleCastModule
 
     @Override
     public void onHostResume() {
-        getReactApplicationContext().runOnUiQueueThread(() -> {
+        runOnUiQueueThread(() -> {
             SessionManager sessionManager =
                     CastContext.getSharedInstance(getReactApplicationContext())
                             .getSessionManager();
             sessionManager.addSessionManagerListener(mSessionManagerListener,
                     CastSession.class);
+            CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
+            castContext.addCastStateListener(this);
+            MediaRouter.getInstance(getReactApplicationContext())
+                    .addCallback(mSelector, mScanCallback, MediaRouter.CALLBACK_FLAG_REQUEST_DISCOVERY);
         });
     }
 
     @Override
     public void onHostPause() {
-        getReactApplicationContext().runOnUiQueueThread(() -> {
+        runOnUiQueueThread(() -> {
             SessionManager sessionManager =
                     CastContext.getSharedInstance(getReactApplicationContext())
                             .getSessionManager();
             sessionManager.removeSessionManagerListener(mSessionManagerListener,
                     CastSession.class);
+            CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
+            castContext.removeCastStateListener(this);
+            MediaRouter.getInstance(getReactApplicationContext())
+                    .removeCallback(mScanCallback);
         });
     }
 
@@ -471,7 +464,8 @@ public class GoogleCastModule
         return mCastSession;
     }
 
-    protected @Nullable MediaStatus getMediaStatus() {
+    @Nullable
+    protected MediaStatus getMediaStatus() {
         if (mCastSession == null) {
             return null;
         }
@@ -486,5 +480,10 @@ public class GoogleCastModule
 
     protected void runOnUiQueueThread(Runnable runnable) {
         getReactApplicationContext().runOnUiQueueThread(runnable);
+    }
+
+    @Override
+    public void onCastStateChanged(int state) {
+        Log.d(REACT_CLASS, "ChromeCast state changed to " + state);
     }
 }

@@ -34,7 +34,7 @@ export default class Main extends React.Component {
     GoogleCast.getCastDevice().then(console.log);
     GoogleCast.castMedia(video);
     GoogleCast.launchExpandedControls();
-    this.sendMessage();
+    // this.sendMessage();
   }
 
   onActionSelected = (position) => {

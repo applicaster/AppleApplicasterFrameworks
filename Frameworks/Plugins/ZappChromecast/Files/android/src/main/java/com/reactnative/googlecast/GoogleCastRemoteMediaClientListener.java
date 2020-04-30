@@ -10,7 +10,8 @@ import com.google.android.gms.cast.MediaStatus;
 import com.google.android.gms.cast.framework.media.RemoteMediaClient;
 
 public class GoogleCastRemoteMediaClientListener
-    implements RemoteMediaClient.Listener, RemoteMediaClient.ProgressListener {
+        implements RemoteMediaClient.Listener, RemoteMediaClient.ProgressListener {
+
   private GoogleCastModule module;
   private boolean playbackStarted;
   private boolean playbackEnded;
@@ -22,37 +23,34 @@ public class GoogleCastRemoteMediaClientListener
 
   @Override
   public void onStatusUpdated() {
-    module.runOnUiQueueThread(new Runnable() {
-      @Override
-      public void run() {
-        MediaStatus mediaStatus = module.getMediaStatus();
-        if (mediaStatus == null) {
-          return;
-        }
+    module.runOnUiQueueThread(() -> {
+      MediaStatus mediaStatus = module.getMediaStatus();
+      if (mediaStatus == null) {
+        return;
+      }
 
-        if (currentItemId != mediaStatus.getCurrentItemId()) {
-          // reset item status
-          currentItemId = mediaStatus.getCurrentItemId();
-          playbackStarted = false;
-          playbackEnded = false;
-        }
+      if (currentItemId != mediaStatus.getCurrentItemId()) {
+        // reset item status
+        currentItemId = mediaStatus.getCurrentItemId();
+        playbackStarted = false;
+        playbackEnded = false;
+      }
 
-        module.emitMessageToRN(GoogleCastModule.MEDIA_STATUS_UPDATED,
-                               prepareMessage(mediaStatus));
+      module.emitMessageToRN(GoogleCastModule.MEDIA_STATUS_UPDATED,
+              prepareMessage(mediaStatus));
 
-        if (!playbackStarted &&
-            mediaStatus.getPlayerState() == MediaStatus.PLAYER_STATE_PLAYING) {
-          module.emitMessageToRN(GoogleCastModule.MEDIA_PLAYBACK_STARTED,
-                                 prepareMessage(mediaStatus));
-          playbackStarted = true;
-        }
+      if (!playbackStarted &&
+              mediaStatus.getPlayerState() == MediaStatus.PLAYER_STATE_PLAYING) {
+        module.emitMessageToRN(GoogleCastModule.MEDIA_PLAYBACK_STARTED,
+                prepareMessage(mediaStatus));
+        playbackStarted = true;
+      }
 
-        if (!playbackEnded &&
-            mediaStatus.getIdleReason() == MediaStatus.IDLE_REASON_FINISHED) {
-          module.emitMessageToRN(GoogleCastModule.MEDIA_PLAYBACK_ENDED,
-                                 prepareMessage(mediaStatus));
-          playbackEnded = true;
-        }
+      if (!playbackEnded &&
+              mediaStatus.getIdleReason() == MediaStatus.IDLE_REASON_FINISHED) {
+        module.emitMessageToRN(GoogleCastModule.MEDIA_PLAYBACK_ENDED,
+                prepareMessage(mediaStatus));
+        playbackEnded = true;
       }
     });
   }
@@ -94,19 +92,16 @@ public class GoogleCastRemoteMediaClientListener
 
   @Override
   public void onProgressUpdated(final long progressMs, final long durationMs) {
-    module.runOnUiQueueThread(new Runnable() {
-      @Override
-      public void run() {
-        MediaStatus mediaStatus = module.getMediaStatus();
-        if (mediaStatus == null) {
-          return;
-        }
+    module.runOnUiQueueThread(() -> {
+      MediaStatus mediaStatus = module.getMediaStatus();
+      if (mediaStatus == null) {
+        return;
+      }
 
-        if (mediaStatus.getPlayerState() == MediaStatus.PLAYER_STATE_PLAYING) {
-          module.emitMessageToRN(
-              GoogleCastModule.MEDIA_PROGRESS_UPDATED,
-              prepareProgressMessage(progressMs, durationMs));
-        }
+      if (mediaStatus.getPlayerState() == MediaStatus.PLAYER_STATE_PLAYING) {
+        module.emitMessageToRN(
+                GoogleCastModule.MEDIA_PROGRESS_UPDATED,
+                prepareProgressMessage(progressMs, durationMs));
       }
     });
   }
