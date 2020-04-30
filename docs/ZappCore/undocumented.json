@@ -1101,30 +1101,30 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
-      "line": 10,
+      "line": 8,
       "symbol": "ChromecastButtonOrigin",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
+      "line": 9,
+      "symbol": "ChromecastButtonOrigin.appNavbar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
+      "line": 10,
+      "symbol": "ChromecastButtonOrigin.playerNavbar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
       "line": 11,
-      "symbol": "ChromecastButtonOrigin.appNavbar",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
-      "line": 12,
-      "symbol": "ChromecastButtonOrigin.playerNavbar",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
-      "line": 13,
       "symbol": "ChromecastButtonOrigin.expendedNavbar",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
@@ -1188,6 +1188,125 @@
       "line": 13,
       "symbol": "kChromecastButtonTag",
       "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 12,
+      "symbol": "ChromecastExtendedPlayerControlsProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 13,
+      "symbol": "ChromecastExtendedPlayerControlsProtocol.play(playableItems:playPosition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 14,
+      "symbol": "ChromecastExtendedPlayerControlsProtocol.extendedPlayerControlsOrientationMask()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 15,
+      "symbol": "ChromecastExtendedPlayerControlsProtocol.getExpandedPlayerControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 16,
+      "symbol": "ChromecastExtendedPlayerControlsProtocol.getInlinePlayerControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 17,
+      "symbol": "ChromecastExtendedPlayerControlsProtocol.getMiniPlayerControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 18,
+      "symbol": "ChromecastExtendedPlayerControlsProtocol.presentExtendedPlayerControls()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 19,
+      "symbol": "ChromecastExtendedPlayerControlsProtocol.canShowPlayerBeforeCastSync()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 12,
+      "symbol": "ChromecastMiniPlayerViewControllerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 13,
+      "symbol": "ChromecastMiniPlayerViewControllerProtocol.createMiniPlayerViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 14,
+      "symbol": "ChromecastMiniPlayerViewControllerProtocol.getMiniMediaControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 15,
+      "symbol": "ChromecastMiniPlayerViewControllerProtocol.uninstallMiniPlayerViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 16,
+      "symbol": "ChromecastMiniPlayerViewControllerProtocol.updateVisibilityOfMiniPlayerViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastNotificationsProtocol.swift",
+      "line": 12,
+      "symbol": "ChromecastNotificationsProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastNotificationsProtocol.swift",
+      "line": 13,
+      "symbol": "ChromecastNotificationsProtocol.chromecastContainerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastNotificationsProtocol.swift",
+      "line": 14,
+      "symbol": "ChromecastNotificationsProtocol.chromecastContainerViewHeightConstraint()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastProtocol+ChromecastNotificationsProtocol.swift",
+      "line": 15,
+      "symbol": "ChromecastNotificationsProtocol.chromecastContainerParentViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1289,182 +1408,63 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
-      "line": 12,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
-      "line": 13,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol.play(playableItems:playPosition:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
-      "line": 14,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol.extendedPlayerControlsOrientationMask()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
-      "line": 15,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol.getExpandedPlayerControlsViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
-      "line": 16,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol.getInlinePlayerControlsViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
-      "line": 17,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol.getMiniPlayerControlsViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
-      "line": 18,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol.presentExtendedPlayerControls()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
-      "line": 19,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol.canShowPlayerBeforeCastSync()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
-      "line": 12,
-      "symbol": "ChromecastMiniPlayerViewControllerProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
-      "line": 13,
-      "symbol": "ChromecastMiniPlayerViewControllerProtocol.createMiniPlayerViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
-      "line": 14,
-      "symbol": "ChromecastMiniPlayerViewControllerProtocol.getMiniMediaControlsViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
-      "line": 15,
-      "symbol": "ChromecastMiniPlayerViewControllerProtocol.uninstallMiniPlayerViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastMiniPlayerViewControllerProtocol.swift",
-      "line": 16,
-      "symbol": "ChromecastMiniPlayerViewControllerProtocol.updateVisibilityOfMiniPlayerViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastNotificationsProtocol.swift",
-      "line": 12,
-      "symbol": "ChromecastNotificationsProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastNotificationsProtocol.swift",
-      "line": 13,
-      "symbol": "ChromecastNotificationsProtocol.chromecastContainerView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastNotificationsProtocol.swift",
-      "line": 14,
-      "symbol": "ChromecastNotificationsProtocol.chromecastContainerViewHeightConstraint()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/ChromecastProtocol+ChromecastNotificationsProtocol.swift",
-      "line": 15,
-      "symbol": "ChromecastNotificationsProtocol.chromecastContainerParentViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 9,
       "symbol": "NSNotification.Name.chromecastSessionWillStart",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 10,
       "symbol": "NSNotification.Name.chromecastSessionDidStart",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 11,
       "symbol": "NSNotification.Name.chromecastCastSessionDidStart",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 12,
       "symbol": "NSNotification.Name.chromecastSessionDidEnd",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 13,
       "symbol": "NSNotification.Name.chromecastSessionWillEnd",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 14,
       "symbol": "NSNotification.Name.chromecastStartedPlaying",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 15,
       "symbol": "NSNotification.Name.chromecastPlayingError",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 16,
       "symbol": "NSNotification.Name.chromecastPlayerWasMinimized",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/Extensions/NSNotification/NSNotification+Name.swift",
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/NSNotification/NSNotification+Name.swift",
       "line": 17,
       "symbol": "NSNotification.Name.chromecastManagerMiniPlayerVisibilityChange",
       "symbol_kind": "source.lang.swift.decl.var.static",
