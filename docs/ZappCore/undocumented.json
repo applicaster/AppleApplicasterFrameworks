@@ -1101,30 +1101,30 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
-      "line": 8,
-      "symbol": "ChromecastButtonOrigin",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
-      "line": 9,
-      "symbol": "ChromecastButtonOrigin.appNavbar",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
       "line": 10,
-      "symbol": "ChromecastButtonOrigin.playerNavbar",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "symbol": "ChromecastButtonOrigin",
+      "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
       "line": 11,
+      "symbol": "ChromecastButtonOrigin.appNavbar",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
+      "line": 12,
+      "symbol": "ChromecastButtonOrigin.playerNavbar",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/iOS/Chromecast/ChromecastButtonOrigin.swift",
+      "line": 13,
       "symbol": "ChromecastButtonOrigin.expendedNavbar",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
