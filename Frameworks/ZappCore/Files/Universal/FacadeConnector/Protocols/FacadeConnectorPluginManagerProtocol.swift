@@ -34,8 +34,8 @@ import Foundation
     @objc func getProviderInstance(identifier: String) -> PluginAdapterProtocol?
     
     /// Get plugin instance  by plugin identifier
-    /// - Parameter type: zapp plugin type of the specific plugin
-    /// - Parameter conforms: specific protocol to confirms to
+    /// - Parameter pluginType: zapp plugin type of the specific plugin
+    /// - Parameter condition: specific protocol to confirms to
     @objc func getProviderInstance(pluginType: String, condition: (Any) -> Any?) -> PluginAdapterProtocol?
 }
 

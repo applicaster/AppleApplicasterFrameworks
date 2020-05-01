@@ -94,7 +94,5 @@ extension PluginsManager: FacadeConnectorPluginManagerControlFlow {
         }
         
         return pluginManager.getProviderInstance(condition: condition)
-        
     }
-
 }
