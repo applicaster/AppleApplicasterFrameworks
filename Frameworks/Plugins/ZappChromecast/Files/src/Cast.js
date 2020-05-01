@@ -5,58 +5,56 @@ import {
   NativeEventEmitter,
   NativeModules,
   Platform,
-} from 'react-native'
+} from "react-native";
 
-const { RNGoogleCast: GoogleCast } = NativeModules
+const { RNGoogleCast: GoogleCast } = NativeModules;
 
-import CastButton from './CastButton'
-export { CastButton }
+import { Component } from "./CastButton";
 
 type CastDevice = {
   id: string,
   version: string,
   name: string,
   model: string,
-}
+};
 
 type CastState =
-  | 'NoDevicesAvailable'
-  | 'NotConnected'
-  | 'Connecting'
-  | 'Connected'
+  | "NoDevicesAvailable"
+  | "NotConnected"
+  | "Connecting"
+  | "Connected";
 
 type TextTrackStyle = {
   backgroundColor?: string,
   edgeColor?: string,
-  edgeType?: 'depressed' | 'dropShadow' | 'none' | 'outline' | 'raised',
+  edgeType?: "depressed" | "dropShadow" | "none" | "outline" | "raised",
   fontFamily?: string,
   fontGenericFamily?:
-    | 'casual'
-    | 'cursive'
-    | 'monoSansSerif'
-    | 'monoSerif'
-    | 'sansSerif'
-    | 'serif'
-    | 'smallCaps',
+    | "casual"
+    | "cursive"
+    | "monoSansSerif"
+    | "monoSerif"
+    | "sansSerif"
+    | "serif"
+    | "smallCaps",
   fontScale?: number,
-  fontStyle?: 'bold' | 'boldItalic' | 'italic' | 'normal',
+  fontStyle?: "bold" | "boldItalic" | "italic" | "normal",
   foregroundColor?: string,
   windowColor?: string,
   windowCornerRadius?: number,
-  windowType?: 'none' | 'normal' | 'rounded',
-}
+  windowType?: "none" | "normal" | "rounded",
+};
 
 export default {
+  Component,
   getCastDevice(): Promise<CastDevice> {
-    return GoogleCast.getCastDevice()
+    return GoogleCast.getCastDevice();
   },
   getCastState(): Promise<CastState> {
     return GoogleCast.getCastState().then(
-      state =>
-        ['NoDevicesAvailable', 'NotConnected', 'Connecting', 'Connected'][
-          state
-        ],
-    )
+      (state) =>
+        ["NoDevicesAvailable", "NotConnected", "Connecting", "Connected"][state]
+    );
   },
   castMedia(params: {
     mediaUrl: string,
@@ -72,7 +70,7 @@ export default {
     customData?: Object,
     textTrackStyle?: TextTrackStyle,
   }) {
-    return GoogleCast.castMedia(params)
+    return GoogleCast.castMedia(params);
   },
   /**
    * Ends the current session.
@@ -85,7 +83,7 @@ export default {
    * @returns {Promise}
    */
   endSession(stopCasting: Boolean = false): Promise {
-    return GoogleCast.endSession(stopCasting)
+    return GoogleCast.endSession(stopCasting);
   },
   /**
    * Begins (or resumes) playback of the current media item.
@@ -105,21 +103,21 @@ export default {
    * @param {number} playPosition
    */
   seek(playPosition: number) {
-    return GoogleCast.seek(playPosition)
+    return GoogleCast.seek(playPosition);
   },
   launchExpandedControls: GoogleCast.launchExpandedControls,
   showIntroductoryOverlay: GoogleCast.showIntroductoryOverlay,
   setVolume(volume: number) {
-    return GoogleCast.setVolume(volume)
+    return GoogleCast.setVolume(volume);
   },
   initChannel(namespace: string) {
-    return GoogleCast.initChannel(namespace)
+    return GoogleCast.initChannel(namespace);
   },
   sendMessage(namespace: string, message: string) {
-    return GoogleCast.sendMessage(message, namespace)
+    return GoogleCast.sendMessage(message, namespace);
   },
-  showCastPicker(){
-    GoogleCast.showCastPicker()
+  showCastPicker() {
+    GoogleCast.showCastPicker();
   },
 
   /**
@@ -129,12 +127,12 @@ export default {
    * @param {boolean} languageCode
    */
   toggleSubtitles(enabled: boolean, languageCode?: string) {
-    return GoogleCast.toggleSubtitles(enabled, languageCode)
+    return GoogleCast.toggleSubtitles(enabled, languageCode);
   },
 
   // TODO use the same native event interface instead of hacking it here
   EventEmitter:
-    Platform.OS === 'ios'
+    Platform.OS === "ios"
       ? new NativeEventEmitter(GoogleCast)
       : DeviceEventEmitter,
 
@@ -155,4 +153,4 @@ export default {
   CHANNEL_CONNECTED: GoogleCast.CHANNEL_CONNECTED,
   CHANNEL_DISCONNECTED: GoogleCast.CHANNEL_DISCONNECTED,
   CHANNEL_MESSAGE_RECEIVED: GoogleCast.CHANNEL_MESSAGE_RECEIVED,
-}
+};
