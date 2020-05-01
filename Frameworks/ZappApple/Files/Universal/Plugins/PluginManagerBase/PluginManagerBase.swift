@@ -138,15 +138,6 @@ public class PluginManagerBase: PluginManagerProtocol, PluginManagerControlFlowP
         }
         return provider
     }
-    
-    func getProviderInstance(condition: (Any) -> Any?) -> PluginAdapterProtocol? {
-        guard let provider = providers.first(where: { (key, value) -> Bool in
-            return condition(value) != nil
-        }) else {
-            return nil
-        }
-        return provider.value
-    }
 
     func getProviderInstance(condition: (Any) -> Any?) -> PluginAdapterProtocol? {
         guard let provider = providers.first(where: { (_, value) -> Bool in
