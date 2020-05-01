@@ -33,7 +33,7 @@ public class ChromecastButton: RCTViewManager {
             return nil
         }
         
-        let container = ChromecastButtonContainer()
+        let container = ChromecastButtonContainer(frame: CGRect(x: 0, y: 0, width: 48, height: 48))
         chromecastPlugin.addButton(to: container,
                                    key: container.key,
                                    color: container.color)

@@ -30,7 +30,6 @@ extension PluginsManager {
         return pluginModels()?.first(where: { $0.pluginType?.rawValue == type })
     }
 
-    
     /// Find all plugin models of a given type.
     /// - parameter type: The type of plugin to search.
     /// - returns: The first plugin found with the given type.
@@ -38,7 +37,6 @@ extension PluginsManager {
         return pluginModels()?.filter({ $0.pluginType?.rawValue == type })
     }
 
-    
     /// Find all plugin models of a given type.
     /// - Parameter type: The type of plugin enum to search.
     /// - Returns: The first plugin found with the given type.

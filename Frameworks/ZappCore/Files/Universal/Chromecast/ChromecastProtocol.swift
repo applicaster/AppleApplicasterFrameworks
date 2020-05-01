@@ -7,32 +7,7 @@
 //
 
 import Foundation
-
-public enum ChromecastButtonOrigin:String {
-    case appNavbar = "Navbar"
-    case playerNavbar = "Fullscreen Player"
-    case expendedNavbar = "Chromecast Intermediate Screen"
-}
-
-public struct ChromecastIconColorKeys {
-    public static let navbar = "chromecast_icon_color"
-    public static let player = "player_chromecast_icon_color"
-}
-
-public struct ChromecastAnalyticsParams {
-    public static let playable = "playableAnalyticsParams"
-    public static let customPlayable = "customPlayableAnalyticsParams"
-}
-
-public struct ChromecastButtonIcons {
-    public static let active = "chromecast_custom_icon_active"
-    public static let inactive = "chromecast_custom_icon_inactive"
-    public static let animation = "chromecast_custom_icon_animation"
-}
-
-public let kChromecastButtonTag = [ChromecastIconColorKeys.navbar: 0,
-                                   ChromecastIconColorKeys.player: 1]
-
+import UIKit
 
 public protocol ChromecastProtocol {
     var lastActiveChromecastButton: ChromecastButtonOrigin? {get set}

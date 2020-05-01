@@ -1,6 +1,6 @@
 //
 //  NSNotification+Name.swift
-//  ZappChromecast
+//  ZappCore
 //
 //  Created by Alex Zchut on 11/04/2020.
 //
@@ -15,5 +15,4 @@ public extension NSNotification.Name {
     static let chromecastPlayingError = Notification.Name("chromecastPlayingError")
     static let chromecastPlayerWasMinimized = Notification.Name("chromecastPlayerWasMinimized")
     static let chromecastManagerMiniPlayerVisibilityChange = Notification.Name("kChromecastManagerMiniPlayerVisibilityChangeNotification")
-
 }

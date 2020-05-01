@@ -191,7 +191,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
-      "line": 13,
+      "line": 18,
       "symbol": "APCacheManager.urlCache",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -2017,6 +2017,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PlayerDependant/PlayerDependantPluginsManager.swift",
+      "line": 68,
+      "symbol": "PlayerDependantPluginsManager.getProviderInstance(condition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+ControlFlow.swift",
       "line": 11,
       "symbol": "kPluginEnabled",
@@ -2123,21 +2130,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
-      "line": 165,
+      "line": 166,
       "symbol": "PluginsManager.hookOnContinuingUserActivity(userActivity:hooksPlugins:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
-      "line": 182,
+      "line": 183,
       "symbol": "PluginsManager.hookAdapterOnContinuingUserActivity(userActivity:adapter:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+HookHandler.swift",
-      "line": 193,
+      "line": 194,
       "symbol": "PluginsManager.hasHooksForContinuingUserActivity()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2158,63 +2165,63 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 81,
+      "line": 79,
       "symbol": "PluginsManager.parseBasePluginsJson()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 88,
+      "line": 86,
       "symbol": "PluginsManager.parseLatestPluginsJson()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 95,
+      "line": 93,
       "symbol": "PluginsManager.parsePluginsJson(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 112,
+      "line": 110,
       "symbol": "PluginsManager.pluginModels()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 141,
+      "line": 139,
       "symbol": "PluginsManager.pluginsData(from:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 155,
+      "line": 153,
       "symbol": "PluginsManager.adapterClass(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 173,
+      "line": 171,
       "symbol": "PluginsManager.bundleForModelClass(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 207,
+      "line": 205,
       "symbol": "PluginsManager.plugin(model:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager+Utils.swift",
-      "line": 220,
+      "line": 218,
       "symbol": "PluginsManager.plugin(withScreenName:model:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
@@ -2403,7 +2410,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManager/PluginsManager.swift",
-      "line": 164,
+      "line": 165,
       "symbol": "PluginsManager",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -2509,20 +2516,27 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
       "line": 142,
+      "symbol": "PluginManagerBase.getProviderInstance(condition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
+      "line": 151,
       "symbol": "PluginManagerBase.isEnabled(pluginModel:forceEnable:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 180,
+      "line": 188,
       "symbol": "PluginManagerBase.hooksProviders()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/PluginManagerBase/PluginManagerBase.swift",
-      "line": 193,
+      "line": 201,
       "symbol": "PluginManagerBase.isProviderEnabled(provider:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2578,42 +2592,49 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Protocol/PluginManagerProtocol.swift",
-      "line": 25,
+      "line": 23,
+      "symbol": "PluginManagerControlFlowProtocol.getProviderInstance(condition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Protocol/PluginManagerProtocol.swift",
+      "line": 26,
       "symbol": "PluginManagerProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Protocol/PluginManagerProtocol.swift",
-      "line": 26,
+      "line": 27,
       "symbol": "PluginManagerProtocol.pluginTypeProtocol",
       "symbol_kind": "source.lang.swift.decl.associatedtype",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Protocol/PluginManagerProtocol.swift",
-      "line": 27,
+      "line": 28,
       "symbol": "PluginManagerProtocol.pluginType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Protocol/PluginManagerProtocol.swift",
-      "line": 28,
+      "line": 29,
       "symbol": "PluginManagerProtocol.pluginProtocol",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Protocol/PluginManagerProtocol.swift",
-      "line": 30,
+      "line": 31,
       "symbol": "PluginManagerProtocol.providers",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Plugins/Protocol/PluginManagerProtocol.swift",
-      "line": 31,
+      "line": 32,
       "symbol": "PluginManagerProtocol.prepareManager(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2749,6 +2770,97 @@
       "line": 17,
       "symbol": "RootController.appVersion()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 12,
+      "symbol": "RootController.isEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 16,
+      "symbol": "RootController.isSynced",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 20,
+      "symbol": "RootController.isReachableViaWiFi",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 25,
+      "symbol": "RootController.canShowPlayerBeforeCastSync",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 29,
+      "symbol": "RootController.extendedPlayerViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 33,
+      "symbol": "RootController.inlinePlayerViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 37,
+      "symbol": "RootController.miniPlayerViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 41,
+      "symbol": "RootController.play(with:playPosition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 45,
+      "symbol": "RootController.showExtendedPlayer()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 49,
+      "symbol": "RootController.setNotificationsDelegate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 56,
+      "symbol": "RootController.addButton(to:key:color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 60,
+      "symbol": "RootController.pluginInstance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
+      "line": 68,
+      "symbol": "RootController.pluginInstanceExtendedPlayerControls",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -2924,6 +3036,13 @@
       "line": 35,
       "symbol": "RootController.forceReloadApplication()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/RootController.swift",
+      "line": 11,
+      "symbol": "RootController",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
