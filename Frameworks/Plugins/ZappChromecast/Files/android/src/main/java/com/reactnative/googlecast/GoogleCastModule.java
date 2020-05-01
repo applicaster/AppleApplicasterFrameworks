@@ -1,16 +1,15 @@
 package com.reactnative.googlecast;
 
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.mediarouter.app.MediaRouteButton;
-import androidx.mediarouter.media.MediaControlIntent;
-import androidx.mediarouter.media.MediaRouteSelector;
-import androidx.mediarouter.media.MediaRouter;
 
+import com.applicaster.chromecast.ChromeCastPlugin;
+import com.applicaster.chromecast.GoogleCastExpandedControlsActivity;
+import com.applicaster.chromecast.analytics.Analytics;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.Promise;
@@ -47,37 +46,25 @@ public class GoogleCastModule
 
     protected static final String SESSION_STARTING = "GoogleCast:SessionStarting";
     protected static final String SESSION_STARTED = "GoogleCast:SessionStarted";
-    protected static final String SESSION_START_FAILED =
-            "GoogleCast:SessionStartFailed";
-    protected static final String SESSION_SUSPENDED =
-            "GoogleCast:SessionSuspended";
+    protected static final String SESSION_SUSPENDED = "GoogleCast:SessionSuspended";
+    protected static final String SESSION_START_FAILED = "GoogleCast:SessionStartFailed";
     protected static final String SESSION_RESUMING = "GoogleCast:SessionResuming";
     protected static final String SESSION_RESUMED = "GoogleCast:SessionResumed";
     protected static final String SESSION_ENDING = "GoogleCast:SessionEnding";
     protected static final String SESSION_ENDED = "GoogleCast:SessionEnded";
 
-    protected static final String MEDIA_STATUS_UPDATED =
-            "GoogleCast:MediaStatusUpdated";
-    protected static final String MEDIA_PLAYBACK_STARTED =
-            "GoogleCast:MediaPlaybackStarted";
-    protected static final String MEDIA_PLAYBACK_ENDED =
-            "GoogleCast:MediaPlaybackEnded";
-    protected static final String MEDIA_PROGRESS_UPDATED =
-            "GoogleCast:MediaProgressUpdated";
+    protected static final String MEDIA_STATUS_UPDATED = "GoogleCast:MediaStatusUpdated";
+    protected static final String MEDIA_PLAYBACK_ENDED = "GoogleCast:MediaPlaybackEnded";
+    protected static final String MEDIA_PLAYBACK_STARTED = "GoogleCast:MediaPlaybackStarted";
+    protected static final String MEDIA_PROGRESS_UPDATED = "GoogleCast:MediaProgressUpdated";
 
     protected static final  String CHANNEL_MESSAGE_RECEIVED = "GoogleCast:ChannelMessageReceived";
 
     protected static final String E_CAST_NOT_AVAILABLE = "E_CAST_NOT_AVAILABLE";
     protected static final String GOOGLE_CAST_NOT_AVAILABLE_MESSAGE = "Google Cast not available";
     protected static final String DEFAULT_SUBTITLES_LANGUAGE = Locale.ENGLISH.getLanguage();
-    private MediaRouteSelector mSelector;
-    private final MediaRouter.Callback mScanCallback = new MediaRouter.Callback() {
-        @Override
-        public void onRouteSelected(MediaRouter router, MediaRouter.RouteInfo route) {
-            super.onRouteSelected(router, route);
-        }
-    };
 
+    private final ChromeCastPlugin mPlugin;
     private CastSession mCastSession;
     private SessionManagerListener<CastSession> mSessionManagerListener;
 
@@ -90,13 +77,11 @@ public class GoogleCastModule
 
     public GoogleCastModule(ReactApplicationContext reactContext) {
         super(reactContext);
+        mPlugin = ChromeCastPlugin.getInstance();
+        CAST_AVAILABLE = null != mPlugin;
         if (CAST_AVAILABLE) {
             reactContext.addLifecycleEventListener(this);
             setupCastListener();
-            mSelector = new MediaRouteSelector.Builder()
-                    // These are the framework-supported intents
-                    .addControlCategory(MediaControlIntent.CATEGORY_REMOTE_PLAYBACK)
-                    .build();
         }
     }
 
@@ -141,7 +126,7 @@ public class GoogleCastModule
     public void showCastPicker() {
         runOnUiQueueThread(() -> {
             GoogleCastButtonManager.getGoogleCastButtonManagerInstance().performClick();
-            Log.e(REACT_CLASS, "showCastPicker... ");
+            Log.d(REACT_CLASS, "showCastPicker... ");
         });
     }
 
@@ -167,16 +152,15 @@ public class GoogleCastModule
             MediaInfo mediaInfo = MediaInfoBuilder.buildMediaInfo(params);
             remoteMediaClient.load(mediaInfo, true, seconds * 1000);
 
-            Log.e(REACT_CLASS, "Casting media... ");
-        });
-    }
+            Analytics analytics = mPlugin.getAnalytics();
+            if(null != analytics) {
+                ReadableMap map = ReadableMapUtils.getReadableMap(params, "analytics");
+                Map<String, String> movieData = AnalyticsBuilder.convert(map);
+                analytics.onCastRequest(movieData);
+            }
 
-    public static void initializeCast(Context context){
-        try {
-            CastContext.getSharedInstance(context);
-        } catch(RuntimeException e) {
-            CAST_AVAILABLE = false;
-        }
+            Log.d(REACT_CLASS, "Casting media... ");
+        });
     }
 
     @ReactMethod
@@ -340,6 +324,7 @@ public class GoogleCastModule
         if (CAST_AVAILABLE) {
             ReactApplicationContext context = getReactApplicationContext();
             Intent intent = new Intent(context, GoogleCastExpandedControlsActivity.class);
+            intent.putExtra(GoogleCastExpandedControlsActivity.EXTRA_TRIGGER, "ReactNative");
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
         } else {
@@ -424,21 +409,23 @@ public class GoogleCastModule
 
     @Override
     public void onHostResume() {
+        if(!CAST_AVAILABLE){
+            return;
+        }
         runOnUiQueueThread(() -> {
-            SessionManager sessionManager =
-                    CastContext.getSharedInstance(getReactApplicationContext())
-                            .getSessionManager();
-            sessionManager.addSessionManagerListener(mSessionManagerListener,
-                    CastSession.class);
             CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
+            SessionManager sessionManager = castContext.getSessionManager();
+            sessionManager.addSessionManagerListener(mSessionManagerListener, CastSession.class);
             castContext.addCastStateListener(this);
-            MediaRouter.getInstance(getReactApplicationContext())
-                    .addCallback(mSelector, mScanCallback, MediaRouter.CALLBACK_FLAG_REQUEST_DISCOVERY);
+            mPlugin.onResume();
         });
     }
 
     @Override
     public void onHostPause() {
+        if(!CAST_AVAILABLE){
+            return;
+        }
         runOnUiQueueThread(() -> {
             SessionManager sessionManager =
                     CastContext.getSharedInstance(getReactApplicationContext())
@@ -447,8 +434,7 @@ public class GoogleCastModule
                     CastSession.class);
             CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
             castContext.removeCastStateListener(this);
-            MediaRouter.getInstance(getReactApplicationContext())
-                    .removeCallback(mScanCallback);
+            mPlugin.onPause();
         });
     }
 

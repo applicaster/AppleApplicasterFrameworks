@@ -61,7 +61,7 @@ function createManifest({ version, platform }) {
   if (platform === "android") {
     manifest.api = {
       require_startup_execution: false,
-      class_name: "com.reactnative.googlecast.GoogleCastPackage",
+      class_name: "com.applicaster.chromecast.ChromeCastPlugin",
       react_packages: ["com.reactnative.googlecast.GoogleCastPackage"],
       proguard_rules: "-keep public class com.reactnative.googlecast.** {*;}",
     };

@@ -65,18 +65,15 @@ public class GoogleCastSessionManagerListener
 
   private void onApplicationConnected(final CastSession castSession) {
     module.setCastSession(castSession);
-    module.runOnUiQueueThread(new Runnable() {
-      @Override
-      public void run() {
-        RemoteMediaClient client = castSession.getRemoteMediaClient();
-        if (client == null) {
-          return;
-        }
-
-        remoteMediaClientListener = new GoogleCastRemoteMediaClientListener(module);
-        client.addListener(remoteMediaClientListener);
-        client.addProgressListener(remoteMediaClientListener, 1000);
+    module.runOnUiQueueThread(() -> {
+      RemoteMediaClient client = castSession.getRemoteMediaClient();
+      if (client == null) {
+        return;
       }
+
+      remoteMediaClientListener = new GoogleCastRemoteMediaClientListener(module);
+      client.addListener(remoteMediaClientListener);
+      client.addProgressListener(remoteMediaClientListener, 1000);
     });
   }
 

@@ -1,4 +1,4 @@
-package com.reactnative.googlecast;
+package com.applicaster.chromecast;
 
 import android.content.Context;
 
@@ -41,8 +41,15 @@ public class GoogleCastOptionsProvider implements OptionsProvider {
                     .setExpandedControllerActivityClassName(GoogleCastExpandedControlsActivity.class.getName())
                     .build();
 
+    String chromecastAppId = CastMediaControlIntent.DEFAULT_MEDIA_RECEIVER_APPLICATION_ID;
+
+    ChromeCastPlugin plugin = ChromeCastPlugin.getInstance();
+    if(null != plugin && plugin.getAppId() != null) {
+      chromecastAppId = plugin.getAppId();
+    }
+
     return new CastOptions.Builder()
-            .setReceiverApplicationId(CastMediaControlIntent.DEFAULT_MEDIA_RECEIVER_APPLICATION_ID)
+            .setReceiverApplicationId(chromecastAppId)
             .setCastMediaOptions(mediaOptions)
             .build();
   }

@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.mediarouter.app.MediaRouteButton;
 
+import com.applicaster.chromecast.ChromeCastPlugin;
+import com.applicaster.chromecast.analytics.Analytics;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
@@ -78,6 +80,19 @@ public class GoogleCastButtonManager
         public ColorableMediaRouteButton(Context context, AttributeSet attrs, int defStyleAttr) {
             super(context, attrs, defStyleAttr);
             initDrawable(context);
+        }
+
+        @Override
+        public boolean performClick() {
+            ChromeCastPlugin instance = ChromeCastPlugin.getInstance();
+            if (instance != null) {
+                Analytics analytics = instance.getAnalytics();
+                if (analytics != null) {
+                    //todo: use some special property
+                    analytics.onIconTapped("NavBar");
+                }
+            }
+            return super.performClick();
         }
 
         @Override

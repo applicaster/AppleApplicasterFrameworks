@@ -7,7 +7,6 @@ type Props = {
 };
 
 function Component(props: Props) {
-  console.log("CastButtonIos", { props, CastButtonComponent, NativeModules });
   if (CastButtonComponent) {
     return <CastButtonComponent {...props} />;
   } else {
