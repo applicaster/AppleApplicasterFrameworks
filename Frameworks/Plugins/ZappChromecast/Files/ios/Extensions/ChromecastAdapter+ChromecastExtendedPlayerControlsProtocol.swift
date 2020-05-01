@@ -11,6 +11,10 @@ import GoogleCast
 import ZappCore
 
 extension ChromecastAdapter : ChromecastExtendedPlayerControlsProtocol {
+    public func extendedPlayerControlsOrientationMask() -> UInt {
+        return UIInterfaceOrientationMask.all.rawValue
+    }
+    
     public func getMiniPlayerControlsViewController() -> UIViewController? {
         guard let castViewExtender = castViewExtender  else {
             return miniMediaControlsViewController
@@ -50,10 +54,6 @@ extension ChromecastAdapter : ChromecastExtendedPlayerControlsProtocol {
         }
 
         rootVC.present(chromecastExpandedVC, animated: true, completion: nil)
-    }
-
-    public func extendedPlayerControlsOrientationMask() -> UIInterfaceOrientationMask {
-        return .all
     }
 
     public func hasAvailableChromecastDevices() -> Bool {
