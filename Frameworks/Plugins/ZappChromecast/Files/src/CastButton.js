@@ -19,8 +19,9 @@ type Props = {
  * @see [CastButtonFactory](https://developers.google.com/android/reference/com/google/android/gms/cast/framework/CastButtonFactory) & [MediaRouteButton](https://developer.android.com/reference/android/support/v7/app/MediaRouteButton.html) (Android)
  */
 function Component(props: Props) {
+  const styles = { flex: 1 };
   if (GoogleCast.CAST_AVAILABLE) {
-    return <CastButtonComponent {...props} />;
+    return <CastButtonComponent style={styles} {...props} />;
   } else {
     return null;
   }

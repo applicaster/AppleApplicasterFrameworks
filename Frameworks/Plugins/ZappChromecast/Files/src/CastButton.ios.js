@@ -7,8 +7,9 @@ type Props = {
 };
 
 function Component(props: Props) {
+  const styles = { flex: 1 };
   if (CastButtonComponent) {
-    return <CastButtonComponent {...props} />;
+    return <CastButtonComponent style={styles} {...props} />;
   } else {
     return null;
   }
