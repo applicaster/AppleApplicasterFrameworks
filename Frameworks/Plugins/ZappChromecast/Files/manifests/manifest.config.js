@@ -1,6 +1,6 @@
 const min_zapp_sdk = {
   ios: "20.0.0-Dev",
-  android: "11.3.3",
+  android: "20.0.0-Dev",
   ios_for_quickbrick: "0.1.0-alpha1",
   android_for_quickbrick: "0.1.0-alpha1",
 };

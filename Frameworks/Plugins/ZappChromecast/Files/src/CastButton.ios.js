@@ -1,5 +1,5 @@
 import React from "react";
-import { requireNativeComponent, NativeModules } from "react-native";
+import { requireNativeComponent } from "react-native";
 
 type Props = {
   key: string,
