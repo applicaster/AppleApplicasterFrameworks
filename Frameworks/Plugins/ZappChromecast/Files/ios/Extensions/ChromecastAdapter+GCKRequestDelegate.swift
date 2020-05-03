@@ -26,8 +26,8 @@ extension ChromecastAdapter: GCKRequestDelegate {
         //close mini player view controller
         self.updateVisibilityOfMiniPlayerViewController()
         
-        if let triggerdChromecastButton = self.triggerdChromecastButton {
-            ChromecastAnalytics.sendChromecastErrorReportEvent(triggerdChromecastButton: triggerdChromecastButton,
+        if let triggeredChromecastButton = self.triggeredChromecastButton {
+            ChromecastAnalytics.sendChromecastErrorReportEvent(triggeredChromecastButton: triggeredChromecastButton,
                                                                request: request,
                                                                error: error)
         }

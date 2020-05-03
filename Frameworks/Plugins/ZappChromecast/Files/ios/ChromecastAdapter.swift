@@ -81,7 +81,7 @@ open class ChromecastAdapter: NSObject {
     var localLastActiveChromecastButton: ChromecastButtonOrigin?
 
     // What the "Icon Location" was that the tap which lead to the casting came from.
-    var localTriggerdChromecastButton: ChromecastButtonOrigin?
+    var localTriggeredChromecastButton: ChromecastButtonOrigin?
 
     var localContainerViewEventsDelegate: ChromecastNotificationsProtocol? {
         willSet {

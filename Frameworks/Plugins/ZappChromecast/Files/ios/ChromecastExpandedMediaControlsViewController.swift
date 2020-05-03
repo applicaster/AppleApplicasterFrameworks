@@ -42,16 +42,16 @@ open class ChromecastExpandedMediaControlsViewController: UIViewController {
             chromecastAdapter?.lastActiveChromecastButton = .expendedNavbar
             
             //Send event when expanded controls going to be shown on screen
-            if let triggedChromecastButton = chromecastAdapter?.triggerdChromecastButton {
-                ChromecastAnalytics.sendOpenExpandedControlsEvent(triggerdChromecastButton: triggedChromecastButton)
+            if let triggedChromecastButton = chromecastAdapter?.triggeredChromecastButton {
+                ChromecastAnalytics.sendOpenExpandedControlsEvent(triggeredChromecastButton: triggedChromecastButton)
             }
         }
     }
     
     open override func viewDidDisappear(_ animated: Bool) {
         //Send event when expanded controls going to be dismiss from the screen
-        if let triggedChromecastButton = chromecastAdapter?.triggerdChromecastButton {
-            ChromecastAnalytics.sendCloseExpandedControlsEvent(triggerdChromecastButton: triggedChromecastButton)
+        if let triggedChromecastButton = chromecastAdapter?.triggeredChromecastButton {
+            ChromecastAnalytics.sendCloseExpandedControlsEvent(triggeredChromecastButton: triggedChromecastButton)
         }
         
         super.viewDidDisappear(animated)

@@ -109,8 +109,8 @@ open class ChromecastAnalytics: NSObject {
         return String(format: "%0.2d:%0.2d:%0.2d", hours, minutes, seconds)
     }
     
-    static func getViewType(triggerdChromecastButton: ChromecastButtonOrigin, isStreaming: Bool) -> controlType {
-        if triggerdChromecastButton == .expendedNavbar {
+    static func getViewType(triggeredChromecastButton: ChromecastButtonOrigin, isStreaming: Bool) -> controlType {
+        if triggeredChromecastButton == .expendedNavbar {
             return .expanded
         } else if isStreaming {
             return .mini
@@ -158,13 +158,13 @@ open class ChromecastAnalytics: NSObject {
     }
     
     // Triggered when user maximizes the chromecast player in the app while still casting
-    static func sendOpenExpandedControlsEvent(triggerdChromecastButton: ChromecastButtonOrigin) {
+    static func sendOpenExpandedControlsEvent(triggeredChromecastButton: ChromecastButtonOrigin) {
         DispatchQueue.global(qos: .background).async {
             
             var eventDictionary = [String: Any]()
             
             // What the "Icon Location" was that the tap which lead to the casting came from
-            eventDictionary[ChromecastEventProperties.Trigger] = triggerdChromecastButton.rawValue
+            eventDictionary[ChromecastEventProperties.Trigger] = triggeredChromecastButton.rawValue
             
             if isChromecastStreaming() {
                 
@@ -192,12 +192,12 @@ open class ChromecastAnalytics: NSObject {
     }
     
     // Triggered when user minimizes the chromecast player's expanded view in the app while still casting
-    static func sendCloseExpandedControlsEvent(triggerdChromecastButton: ChromecastButtonOrigin) {
+    static func sendCloseExpandedControlsEvent(triggeredChromecastButton: ChromecastButtonOrigin) {
         DispatchQueue.global(qos: .background).async {
             var eventDictionary = [String: Any]()
             
             // What the "Icon Location" was that the tap which lead to the casting came from
-            eventDictionary[ChromecastEventProperties.Trigger] = triggerdChromecastButton.rawValue
+            eventDictionary[ChromecastEventProperties.Trigger] = triggeredChromecastButton.rawValue
             
             if isChromecastStreaming() {
                 
@@ -225,7 +225,7 @@ open class ChromecastAnalytics: NSObject {
     }
     
     // Triggered when the casting successfully occurs
-    static func sendStartCastingEvent(triggerdChromecastButton: ChromecastButtonOrigin) {
+    static func sendStartCastingEvent(triggeredChromecastButton: ChromecastButtonOrigin) {
         DispatchQueue.global(qos: .background).async {
             var eventDictionary = [String: Any]()
             
@@ -236,7 +236,7 @@ open class ChromecastAnalytics: NSObject {
             eventDictionary[ChromecastEventProperties.InVideo] = isStreaming
             
             // What the "Icon Location" was that the tap which lead to the casting came from
-            eventDictionary[ChromecastEventProperties.Trigger] = triggerdChromecastButton.rawValue
+            eventDictionary[ChromecastEventProperties.Trigger] = triggeredChromecastButton.rawValue
             
             if isStreaming {
                 /* If "In Video" = Yes, use the Video Model Dictionary to display data
@@ -262,7 +262,7 @@ open class ChromecastAnalytics: NSObject {
     }
     
     // Triggered when user actively cancels the casting process
-    static func sendStopCastingEvent(triggerdChromecastButton: ChromecastButtonOrigin) {
+    static func sendStopCastingEvent(triggeredChromecastButton: ChromecastButtonOrigin) {
         DispatchQueue.global(qos: .background).async {
             
             var eventDictionary = [String: Any]()
@@ -274,7 +274,7 @@ open class ChromecastAnalytics: NSObject {
             eventDictionary[ChromecastEventProperties.InVideo] = isStreaming
             
             // What the "Icon Location" was that the tap which lead to the casting came from
-            eventDictionary[ChromecastEventProperties.Trigger] = triggerdChromecastButton.rawValue
+            eventDictionary[ChromecastEventProperties.Trigger] = triggeredChromecastButton.rawValue
             
             if isStreaming {
                 /* If "In Video" = Yes, use the Video Model Dictionary to display data
@@ -300,14 +300,14 @@ open class ChromecastAnalytics: NSObject {
     }
     
     // Triggered when the casting does not occur successfully and Chromecast returns an error
-    static func sendChromecastErrorReportEvent(triggerdChromecastButton: ChromecastButtonOrigin,
+    static func sendChromecastErrorReportEvent(triggeredChromecastButton: ChromecastButtonOrigin,
                                                request: GCKRequest,
                                                error: GCKError) {
         DispatchQueue.global(qos: .background).async {
             var eventDictionary = [String: Any]()
             
             // What the "Icon Location" was that the tap which lead to the casting came from
-            eventDictionary[ChromecastEventProperties.Trigger] = triggerdChromecastButton.rawValue
+            eventDictionary[ChromecastEventProperties.Trigger] = triggeredChromecastButton.rawValue
             
             /* Whether or not a video is loaded (playing or paused)
              * when the user taps the Chromecast icon

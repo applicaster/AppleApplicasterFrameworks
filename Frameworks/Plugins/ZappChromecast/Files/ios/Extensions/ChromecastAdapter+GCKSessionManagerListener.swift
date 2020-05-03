@@ -31,11 +31,11 @@ extension ChromecastAdapter: GCKSessionManagerListener {
         self.castSession = session
 
         //What the "Icon Location" was that the tap which lead to the casting came from.
-        self.triggerdChromecastButton = self.lastActiveChromecastButton
+        self.triggeredChromecastButton = self.lastActiveChromecastButton
 
         //Send event on start casting
-        if let triggerdChromecastButton = self.triggerdChromecastButton {
-            ChromecastAnalytics.sendStartCastingEvent(triggerdChromecastButton: triggerdChromecastButton)
+        if let triggeredChromecastButton = self.triggeredChromecastButton {
+            ChromecastAnalytics.sendStartCastingEvent(triggeredChromecastButton: triggeredChromecastButton)
         }
 
         //Send that the session did started notifecation
@@ -46,8 +46,8 @@ extension ChromecastAdapter: GCKSessionManagerListener {
                                willEnd session: GCKSession) {
 
         //Send event on stop casting
-        if let triggerdChromecastButton = self.triggerdChromecastButton {
-            ChromecastAnalytics.sendStopCastingEvent(triggerdChromecastButton: triggerdChromecastButton)
+        if let triggeredChromecastButton = self.triggeredChromecastButton {
+            ChromecastAnalytics.sendStopCastingEvent(triggeredChromecastButton: triggeredChromecastButton)
         }
         
         //Send that the session did started notifecation

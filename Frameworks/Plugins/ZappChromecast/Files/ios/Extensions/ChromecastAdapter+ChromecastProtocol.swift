@@ -24,12 +24,12 @@ extension ChromecastAdapter: ChromecastProtocol {
         }
     }
 
-    public var triggerdChromecastButton: ChromecastButtonOrigin? {
+    public var triggeredChromecastButton: ChromecastButtonOrigin? {
         get {
-            return localTriggerdChromecastButton
+            return localTriggeredChromecastButton
         }
         set(newValue) {
-            localTriggerdChromecastButton = newValue
+            localTriggeredChromecastButton = newValue
         }
     }
 
