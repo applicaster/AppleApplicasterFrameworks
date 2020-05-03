@@ -288,6 +288,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Extensions/UIColor/UIColor+Extension.swift",
+      "line": 11,
+      "symbol": "UIColor.init(hexColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/FacadeConnector.swift",
       "line": 12,
       "symbol": "FacadeConnector",
