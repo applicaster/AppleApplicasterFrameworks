@@ -9,12 +9,12 @@
 import Foundation
 import React
 
-@objc(ChromecastButton)
-public class ChromecastButtonModule: RCTViewManager {
+@objc(ChromecastButtonManager)
+public class ChromecastButtonManager: RCTViewManager {
     static let chromecastModuleName = "ChromecastButton"
 
     override public static func moduleName() -> String? {
-        return ChromecastButtonModule.chromecastModuleName
+        return ChromecastButtonManager.chromecastModuleName
     }
     
     override public class func requiresMainQueueSetup() -> Bool {
@@ -29,6 +29,6 @@ public class ChromecastButtonModule: RCTViewManager {
         guard let eventDispatcher = bridge?.eventDispatcher() else {
             return nil
         }
-        return ChromecastButtonContainer(eventDispatcher: eventDispatcher)
+        return ChromecastButton(eventDispatcher: eventDispatcher)
     }
 }

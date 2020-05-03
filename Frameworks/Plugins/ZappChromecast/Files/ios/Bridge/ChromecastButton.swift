@@ -9,7 +9,7 @@
 import React
 import ZappCore
 
-@objc public class ChromecastButtonContainer: RCTView {
+@objc public class ChromecastButton: UIView {
     @objc public var originKey: NSString?
     @objc public var colorKey: NSString?
 
@@ -32,14 +32,14 @@ import ZappCore
     public init(eventDispatcher: RCTEventDispatcher) {
         super.init(frame: .zero)
         
-        addChromecastButton()
+        addButton()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addChromecastButton() {
+    func addButton() {
         guard let chromecastPlugin = FacadeConnector.connector?.pluginManager?.getProviderInstance(identifier: pluginIdentifier) as? ChromecastAdapter else {
             return
         }

@@ -9,7 +9,7 @@
 @import React;
 #import <React/RCTViewManager.h>
 
-@interface RCT_EXTERN_MODULE(ChromecastButton, RCTViewManager)
+@interface RCT_EXTERN_MODULE(ChromecastButtonManager, RCTViewManager)
 
 RCT_EXPORT_VIEW_PROPERTY(originKey, NSString);
 RCT_EXPORT_VIEW_PROPERTY(colorKey, NSString);
