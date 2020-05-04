@@ -121,11 +121,8 @@ extension ChromecastAdapter: ChromecastProtocol {
     }
 
     public func presentCastInstructionsViewControllerOnce(with castButton: UIButton) {
-        guard GCKCastContext.isSharedInstanceInitialized() else {
-            return
-        }
-
-        guard let castButton = castButton as? GCKUICastButton else {
+        guard GCKCastContext.isSharedInstanceInitialized(),
+            let castButton = castButton as? GCKUICastButton else {
             return
         }
 
