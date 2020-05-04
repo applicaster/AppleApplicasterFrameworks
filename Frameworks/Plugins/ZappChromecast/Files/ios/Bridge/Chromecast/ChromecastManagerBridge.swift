@@ -69,7 +69,7 @@ class ChromecastManager: NSObject, RCTBridgeModule {
     }
     
     @objc public func hasConnectedCastSession(_ resolver: @escaping RCTPromiseResolveBlock,
-                                   rejecter: @escaping RCTPromiseRejectBlock) {
+                                              rejecter: @escaping RCTPromiseRejectBlock) {
         DispatchQueue.main.async {
             guard let pluginInstance = self.pluginInstance else {
                 rejecter("0", "plugin not available", nil)
@@ -77,6 +77,18 @@ class ChromecastManager: NSObject, RCTBridgeModule {
             }
             
             resolver(pluginInstance.hasConnectedCastSession())
+        }
+    }
+    
+    @objc public func getCastState(_ resolver: @escaping RCTPromiseResolveBlock,
+                                   rejecter: @escaping RCTPromiseRejectBlock) {
+        DispatchQueue.main.async {
+            guard let pluginInstance = self.pluginInstance else {
+                rejecter("0", "plugin not available", nil)
+                return
+            }
+            
+            resolver(pluginInstance.getCurrentCastState())
         }
     }
     

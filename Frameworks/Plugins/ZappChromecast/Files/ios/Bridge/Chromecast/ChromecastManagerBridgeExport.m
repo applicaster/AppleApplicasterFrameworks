@@ -18,6 +18,7 @@ RCT_EXTERN_METHOD(setVolume: (float)volume)
 RCT_EXTERN_METHOD(launchExpandedControls)
 RCT_EXTERN_METHOD(castMedia:(NSDictionary *)params);
 RCT_EXTERN_METHOD(hasConnectedCastSession:(RCTPromiseResolveBlock)resolve rejecter: (RCTPromiseRejectBlock) reject);
+RCT_EXTERN_METHOD(getCastState:(RCTPromiseResolveBlock)resolve rejecter: (RCTPromiseRejectBlock) reject);
 
 @end
 
