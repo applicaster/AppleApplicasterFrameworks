@@ -66,7 +66,7 @@ open class ChromecastExpandedMediaControlsViewController: UIViewController {
     }
     
     override open func addChild(_ childController: UIViewController) {
-        self.addChild(childController)
+        super.addChild(childController)
         self.view.addSubview(childController.view)
         childController.view.frame = self.view.bounds
         childController.didMove(toParent: self)

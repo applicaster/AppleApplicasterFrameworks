@@ -99,14 +99,6 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
             let imageBaseUrl = URL.init(string: pluginPosterURL) {
             metadata.addImage(GCKImage(url: imageBaseUrl, width: Int(screenBounds.width), height: Int(screenBounds.height)))
         }
-        
-        //Add extra analytics params info for analytics reasons extensionsDictionary analyticsExtraParams
-        if let analyticsExtraParams = item.analytics_extra_params,
-            let jsonData = try? JSONSerialization.data( withJSONObject: analyticsExtraParams, options: []),
-            let jsonText = String(data: jsonData, encoding: .utf8) {
-
-            metadata.setString(jsonText, forKey: ChromecastAnalyticsParams.customPlayable)
-        }
 
         //Add analytics params info for analytics reasons
         if let analyticsParams = item.analytics,
@@ -133,7 +125,7 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
     }
 
     fileprivate func getContentID(item: ChromecastPlayableItem) -> String {
-        return item.contentId ?? ""
+        return item.src ?? ""
     }
     
     fileprivate func getContentSource(item: ChromecastPlayableItem) -> String {
@@ -145,7 +137,7 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
     }
 
     fileprivate func getContentType(item: ChromecastPlayableItem) -> String {
-        return item.contentType ?? ""
+        return ""
     }
 
     /**

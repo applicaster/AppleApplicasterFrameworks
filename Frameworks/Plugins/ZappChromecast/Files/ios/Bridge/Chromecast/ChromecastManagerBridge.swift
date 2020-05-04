@@ -56,9 +56,9 @@ class ChromecastManager: NSObject, RCTBridgeModule {
     
     
     @objc public func launchExpandedControls() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
             self.pluginInstance?.presentExtendedPlayerControls()
-        }
+        })
     }
     
     @objc public func castMedia(_ params: NSDictionary) {
