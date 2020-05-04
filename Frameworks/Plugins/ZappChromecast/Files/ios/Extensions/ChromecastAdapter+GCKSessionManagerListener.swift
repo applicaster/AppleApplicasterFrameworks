@@ -38,6 +38,7 @@ extension ChromecastAdapter: GCKSessionManagerListener {
             ChromecastAnalytics.sendStartCastingEvent(triggeredChromecastButton: triggeredChromecastButton)
         }
 
+        attachMediaClient(to: session)
         //Send that the session did started notifecation
         NotificationCenter.default.post(name: .chromecastCastSessionDidStart, object: nil)
     }
@@ -65,7 +66,8 @@ extension ChromecastAdapter: GCKSessionManagerListener {
                                withError error: Error?) {
 
         self.castSession = nil
-
+        detachMediaClient()
+        
         //uninstall  mini player container
         self.updateVisibilityOfMiniPlayerViewController(needUpdateAppearance: true) {
             //do nothing on completion
@@ -77,5 +79,28 @@ extension ChromecastAdapter: GCKSessionManagerListener {
         //Send that the session did end notifecation
         NotificationCenter.default.post(name: .chromecastSessionDidEnd, object: nil)
     }
+    
+    func attachMediaClient(to castSession: GCKCastSession) {
+        guard let mediaClient = castSession.remoteMediaClient else {
+            return
+        }
+        mediaClient.add(self)
+        castMediaClient = mediaClient
+    }
 
+    func detachMediaClient() {
+        guard let castMediaClient = castMediaClient else {
+            return
+        }
+        castMediaClient.remove(self)
+        self.castMediaClient = nil
+    }
+}
+
+extension ChromecastAdapter : GCKRemoteMediaClientListener {
+    public func remoteMediaClient(_ client: GCKRemoteMediaClient, didStartMediaSessionWithID sessionID: Int) {
+        if let triggedChromecastButton = self.triggeredChromecastButton {
+            ChromecastAnalytics.sendStartCastingEvent(triggeredChromecastButton: triggedChromecastButton)
+        }
+    }
 }

@@ -98,7 +98,8 @@ open class ChromecastAdapter: NSObject {
     }
 
     //private  properties
-    var castSession:GCKCastSession?
+    var castMediaClient: GCKRemoteMediaClient?
+    var castSession: GCKCastSession?
     var castButton: UIButton?
     var connectivityState: ConnectivityState = .cellular {
         didSet {

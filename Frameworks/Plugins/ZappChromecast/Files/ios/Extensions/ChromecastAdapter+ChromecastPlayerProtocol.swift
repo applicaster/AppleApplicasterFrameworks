@@ -30,7 +30,7 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
 
         if let remoteMediaClient = GCKCastContext.sharedInstance().sessionManager.currentCastSession?.remoteMediaClient,
             let remoteCastCurrentStreamUrl = remoteMediaClient.mediaStatus?.mediaInformation?.contentID,
-            self.getContentID(item: chromecastPlayableItem) == remoteCastCurrentStreamUrl {
+            self.getContentSource(item: chromecastPlayableItem) == remoteCastCurrentStreamUrl {
             //Do noting, we already cast the this playable
             NotificationCenter.default.post(name: .chromecastStartedPlaying, object: nil)
         } else {
@@ -43,6 +43,7 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
 
     fileprivate func parsePlayableToGCKMediaInformation(item: ChromecastPlayableItem) -> GCKMediaInformation? {
         let contentId = getContentID(item: item)
+        let contentSource = getContentSource(item: item)
         let streamType = getStreamType(item: item)
         let contentType = getContentType(item: item)
         let metadata = getGCKMediaMetadata(item: item)
@@ -50,11 +51,12 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
         let duration = getDuration(item: item)
         let trackStyle = getTrackStyle(item: item)
 
-        guard let contentUrl = URL(string: contentId) else {
+        guard let contentUrl = URL(string: contentSource) else {
             return nil
         }
         
         let mediaInfoBuilder = GCKMediaInformationBuilder(contentURL: contentUrl)
+        mediaInfoBuilder.contentID = contentId
         mediaInfoBuilder.streamType = streamType
         mediaInfoBuilder.contentType = contentType
         mediaInfoBuilder.metadata = metadata
@@ -107,7 +109,7 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
         }
 
         //Add analytics params info for analytics reasons
-        if let analyticsParams = item.analytics_custom_params,
+        if let analyticsParams = item.analytics,
             let jsonData = try? JSONSerialization.data( withJSONObject: analyticsParams, options: []),
             let jsonText = String(data: jsonData, encoding: .utf8) {
 
@@ -131,6 +133,10 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
     }
 
     fileprivate func getContentID(item: ChromecastPlayableItem) -> String {
+        return item.contentId ?? ""
+    }
+    
+    fileprivate func getContentSource(item: ChromecastPlayableItem) -> String {
         return item.src ?? ""
     }
 
@@ -139,7 +145,7 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
     }
 
     fileprivate func getContentType(item: ChromecastPlayableItem) -> String {
-        return ""
+        return item.contentType ?? ""
     }
 
     /**
@@ -149,6 +155,8 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
      * there is no queue, a new queue containing only the selected item is created.
      */
     public func loadSelectedItem(byAppending appending: Bool, playPosition:TimeInterval) {
+        print("enqueue item \(String(describing: self.mediaInfo))")
+
         if let remoteMediaClient = GCKCastContext.sharedInstance().sessionManager.currentCastSession?.remoteMediaClient {
             let builder = GCKMediaQueueItemBuilder()
             builder.mediaInformation = self.mediaInfo
