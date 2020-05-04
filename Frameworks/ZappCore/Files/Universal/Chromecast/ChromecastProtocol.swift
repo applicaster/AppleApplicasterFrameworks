@@ -23,4 +23,9 @@ public protocol ChromecastProtocol {
     func defaultExpandedMediaControlsViewController() -> UIViewController?
     func getShouldPresentIntroductionScreen() -> Bool
     func hasAvailableChromecastDevices() -> Bool
+    func play()
+    func stop()
+    func pause()
+    func seek(_ playPosition: Int)
+    func setVolume(_ volume: Float)
 }
