@@ -281,51 +281,9 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Chromecast/ChromecastProtocol.swift",
-      "line": 26,
-      "symbol": "ChromecastProtocol.play()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Chromecast/ChromecastProtocol.swift",
-      "line": 27,
-      "symbol": "ChromecastProtocol.stop()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Chromecast/ChromecastProtocol.swift",
-      "line": 28,
-      "symbol": "ChromecastProtocol.pause()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Chromecast/ChromecastProtocol.swift",
-      "line": 29,
-      "symbol": "ChromecastProtocol.seek(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Chromecast/ChromecastProtocol.swift",
-      "line": 30,
-      "symbol": "ChromecastProtocol.setVolume(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Extensions/String/String+Extension.swift",
       "line": 11,
       "symbol": "String.replaceUrlHost(to:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Extensions/UIColor/UIColor+Extension.swift",
-      "line": 11,
-      "symbol": "UIColor.init(hexColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
