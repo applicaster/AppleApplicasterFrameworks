@@ -64,14 +64,6 @@ extension ChromecastAdapter : ChromecastExtendedPlayerControlsProtocol {
         return GCKCastContext.sharedInstance().castState != .noDevicesAvailable
     }
     
-    public func getCurrentCastState() -> UInt {
-        guard GCKCastContext.isSharedInstanceInitialized() else {
-            return 0
-        }
-        
-        return GCKCastContext.sharedInstance().castState.rawValue
-    }
-    
     public func canShowPlayerBeforeCastSync() -> Bool {
         guard let _ = castViewExtender else {
             return false

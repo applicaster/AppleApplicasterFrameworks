@@ -22,14 +22,39 @@ class ChromecastManager: NSObject, RCTBridgeModule {
     public class func requiresMainQueueSetup() -> Bool {
         return true
     }
-
-    @objc public func showIntroductoryOverlay() {
+   
+    @objc public func play() {
         DispatchQueue.main.async {
-            self.pluginInstance?.shouldPresentIntroductionScreen = true
-            self.pluginInstance?.presentIntroductionScreenIfNeeded()
+            self.pluginInstance?.play()
         }
     }
-   
+    
+    @objc public func stop() {
+        DispatchQueue.main.async {
+            self.pluginInstance?.stop()
+        }
+    }
+    
+    @objc public func pause() {
+        DispatchQueue.main.async {
+            self.pluginInstance?.pause()
+        }
+    }
+    
+    @objc public func seek(_ playPosition: Int) {
+        DispatchQueue.main.async {
+            self.pluginInstance?.seek(playPosition)
+
+        }
+    }
+    
+    @objc public func setVolume(_ volume: CGFloat) {
+        DispatchQueue.main.async {
+            self.pluginInstance?.setVolume(Float(volume))
+        }
+    }
+    
+    
     @objc public func launchExpandedControls() {
         DispatchQueue.main.async {
             self.pluginInstance?.presentExtendedPlayerControls()
@@ -43,7 +68,7 @@ class ChromecastManager: NSObject, RCTBridgeModule {
         }
     }
     
-    @objc public func getCastState(_ resolver: @escaping RCTPromiseResolveBlock,
+    @objc public func hasConnectedCastSession(_ resolver: @escaping RCTPromiseResolveBlock,
                                    rejecter: @escaping RCTPromiseRejectBlock) {
         DispatchQueue.main.async {
             guard let pluginInstance = self.pluginInstance else {
@@ -51,7 +76,7 @@ class ChromecastManager: NSObject, RCTBridgeModule {
                 return
             }
             
-            resolver(pluginInstance.getCurrentCastState())
+            resolver(pluginInstance.hasConnectedCastSession())
         }
     }
     

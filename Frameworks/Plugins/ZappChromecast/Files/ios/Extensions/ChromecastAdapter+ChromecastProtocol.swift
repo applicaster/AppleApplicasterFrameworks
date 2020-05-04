@@ -131,6 +131,53 @@ extension ChromecastAdapter: ChromecastProtocol {
 
         GCKCastContext.sharedInstance().presentCastInstructionsViewControllerOnce(with: castButton)
     }
+    
+    public func play() {
+        guard GCKCastContext.isSharedInstanceInitialized(),
+            let remoteMediaClient = GCKCastContext.sharedInstance().sessionManager.currentCastSession?.remoteMediaClient else {
+            return
+        }
+        
+        remoteMediaClient.play()
+    }
+    
+    public func stop() {
+        guard GCKCastContext.isSharedInstanceInitialized(),
+            let remoteMediaClient = GCKCastContext.sharedInstance().sessionManager.currentCastSession?.remoteMediaClient else {
+            return
+        }
+        
+        remoteMediaClient.stop()
+    }
+    
+    public func pause() {
+        guard GCKCastContext.isSharedInstanceInitialized(),
+            let remoteMediaClient = GCKCastContext.sharedInstance().sessionManager.currentCastSession?.remoteMediaClient else {
+            return
+        }
+        
+        remoteMediaClient.pause()
+    }
+    
+    public func seek(_ playPosition: Int) {
+        guard GCKCastContext.isSharedInstanceInitialized(),
+            let remoteMediaClient = GCKCastContext.sharedInstance().sessionManager.currentCastSession?.remoteMediaClient else {
+            return
+        }
+        
+        let options = GCKMediaSeekOptions()
+        options.interval = TimeInterval(playPosition)
+        options.resumeState = .play
+        remoteMediaClient.seek(with: options)
+    }
+    
+    public func setVolume(_ volume: Float) {
+        guard GCKCastContext.isSharedInstanceInitialized(),
+            let remoteMediaClient = GCKCastContext.sharedInstance().sessionManager.currentCastSession?.remoteMediaClient else {
+            return
+        }
+        remoteMediaClient.setStreamVolume(volume)
+    }
 
     public func defaultExpandedMediaControlsViewController() -> UIViewController? {
         guard GCKCastContext.isSharedInstanceInitialized() else {

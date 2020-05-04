@@ -10,10 +10,14 @@
 
 @interface RCT_EXTERN_MODULE(RNGoogleCast, NSObject)
 
-RCT_EXTERN_METHOD(showIntroductoryOverlay)
+RCT_EXTERN_METHOD(play)
+RCT_EXTERN_METHOD(stop)
+RCT_EXTERN_METHOD(pause)
+RCT_EXTERN_METHOD(seek: (int)playPosition)
+RCT_EXTERN_METHOD(setVolume: (float)volume)
 RCT_EXTERN_METHOD(launchExpandedControls)
 RCT_EXTERN_METHOD(castMedia:(NSDictionary *)params);
-RCT_EXTERN_METHOD(getCastState:(RCTPromiseResolveBlock)resolve rejecter: (RCTPromiseRejectBlock) reject);
+RCT_EXTERN_METHOD(hasConnectedCastSession:(RCTPromiseResolveBlock)resolve rejecter: (RCTPromiseRejectBlock) reject);
 
 @end
 
