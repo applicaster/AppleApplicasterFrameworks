@@ -63,6 +63,11 @@ public class GoogleCastButtonManager
         mColor = color;
     }
 
+    @ReactProp(name = "origin")
+    public void setOrigin(ColorableMediaRouteButton button, String origin) {
+        button.setTag(R.id.origin_tag, origin);
+    }
+
     private class ColorableMediaRouteButton extends MediaRouteButton {
 
         protected Drawable mRemoteIndicatorDrawable;
@@ -88,8 +93,9 @@ public class GoogleCastButtonManager
             if (instance != null) {
                 Analytics analytics = instance.getAnalytics();
                 if (analytics != null) {
-                    //todo: use some special property
-                    analytics.onIconTapped("NavBar");
+                    Object tag = this.getTag(R.id.origin_tag);
+                    String origin = tag instanceof String ? (String) tag : "NavBar";
+                    analytics.onIconTapped(origin);
                 }
             }
             return super.performClick();

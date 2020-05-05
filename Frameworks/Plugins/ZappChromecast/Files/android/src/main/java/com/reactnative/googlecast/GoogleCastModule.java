@@ -26,6 +26,7 @@ import com.google.android.gms.cast.MediaStatus;
 import com.google.android.gms.cast.MediaTrack;
 import com.google.android.gms.cast.framework.CastContext;
 import com.google.android.gms.cast.framework.CastSession;
+import com.google.android.gms.cast.framework.CastState;
 import com.google.android.gms.cast.framework.CastStateListener;
 import com.google.android.gms.cast.framework.IntroductoryOverlay;
 import com.google.android.gms.cast.framework.SessionManager;
@@ -187,6 +188,18 @@ public class GoogleCastModule
             if (CAST_AVAILABLE) {
                 CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
                 promise.resolve(castContext.getCastState() - 1);
+            } else {
+                promise.reject(E_CAST_NOT_AVAILABLE, GOOGLE_CAST_NOT_AVAILABLE_MESSAGE);
+            }
+        });
+    }
+
+    @ReactMethod
+    public void hasConnectedCastSession(final Promise promise) {
+        runOnUiQueueThread(() -> {
+            if (CAST_AVAILABLE) {
+                CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
+                promise.resolve(CastState.CONNECTED == castContext.getCastState());
             } else {
                 promise.reject(E_CAST_NOT_AVAILABLE, GOOGLE_CAST_NOT_AVAILABLE_MESSAGE);
             }

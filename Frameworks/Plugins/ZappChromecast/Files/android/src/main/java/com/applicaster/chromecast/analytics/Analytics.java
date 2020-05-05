@@ -1,6 +1,7 @@
 package com.applicaster.chromecast.analytics;
 
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.applicaster.analytics.AnalyticsAgentUtil;
 import com.applicaster.util.APLogger;
@@ -48,7 +49,7 @@ public class Analytics {
     // Hack to obtain video progress if session has ended already
     private long mLastSeenProgress = -1;
 
-    public void onIconTapped(String source) {
+    public void onIconTapped(@Nullable String source) {
         postEvent(EventTapChromecastIcon,
                 addVideoParameters(toMap(EventParamOrigin, source)));
     }
@@ -56,7 +57,7 @@ public class Analytics {
     public void openedChromecastExpandedView(String trigger) {
         Map<String, String> parameters = addVideoParameters(new HashMap<>());
         if(mLastSeenProgress >= 0) {
-            parameters.put(EventParamVideoTimecode, toTimecode(mLastSeenProgress));
+            parameters.put(EventParamVideoTimecode, formatTimecode(mLastSeenProgress));
         }
         parameters.put(EventParamTrigger, trigger);
         postEvent(EventOpenChromecastExpandedView, parameters);
@@ -65,7 +66,7 @@ public class Analytics {
     public void closedChromecastExpandedView() {
         Map<String, String> parameters = addVideoParameters(new HashMap<>());
         if(mLastSeenProgress >= 0) {
-            parameters.put(EventParamVideoTimecode, toTimecode(mLastSeenProgress));
+            parameters.put(EventParamVideoTimecode, formatTimecode(mLastSeenProgress));
         }
         postEvent(EventCloseChromecastExpandedView, parameters);
     }
@@ -140,7 +141,7 @@ public class Analytics {
         }
     };
 
-    public Analytics(CastContext castContext) {
+    public Analytics(@NonNull CastContext castContext) {
         mCastContext = castContext;
         mCastContext.addCastStateListener(mCastStateListener);
         attach();
@@ -175,12 +176,12 @@ public class Analytics {
             MediaStatus mediaStatus = mRemoteMediaClient.getMediaStatus();
             if(null == mediaStatus) {
                 if(playbackStarted) {
-                    parameters.put(EventParamVideoTimecode, toTimecode(mLastSeenProgress));
+                    parameters.put(EventParamVideoTimecode, formatTimecode(mLastSeenProgress));
                 }
                 return parameters;
             }
             long s = mediaStatus.getStreamPosition() / 1000;
-            parameters.put(EventParamVideoTimecode, toTimecode(s));
+            parameters.put(EventParamVideoTimecode, formatTimecode(s));
             return parameters;
         }
 
@@ -277,20 +278,12 @@ public class Analytics {
     public void hostPause() {
     }
 
-    private void postEvent(String eventName, Map<String, String> properties) {
-        Map<String, String> eventToSend = new HashMap<>();
-        AnalyticsAgentUtil.logEvent(eventName, eventToSend);
-        StringBuilder builder = new StringBuilder();
-        if(null !=properties) {
-            for (Map.Entry<String, String> stringStringEntry : properties.entrySet()) {
-                builder.append(stringStringEntry.getKey()).append("=")
-                        .append(stringStringEntry.getValue()).append("\n");
-            }
-        }
-        Log.e(TAG, eventName + " " + builder.toString());
+    private void postEvent(@NonNull String eventName, @Nullable Map<String, String> properties) {
+        AnalyticsAgentUtil.logEvent(eventName, properties);
     }
 
-    private Map<String, String> addVideoParameters(Map<String, String> parameters) {
+    @NonNull
+    private Map<String, String> addVideoParameters(@NonNull Map<String, String> parameters) {
         parameters.put(EventParamInVideo, null != mCurrentVideoInfo ? "true" : "false");
         if(null != mCurrentVideoInfo) {
             parameters.putAll(mCurrentVideoInfo);
@@ -311,7 +304,7 @@ public class Analytics {
     }
 
     @NotNull
-    private static String toTimecode(long seconds) {
+    private static String formatTimecode(long seconds) {
         return String.format(
                 Locale.ENGLISH,
                 "%d:%02d:%02d",
