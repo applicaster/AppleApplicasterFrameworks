@@ -54,7 +54,13 @@ class ChromecastManager: NSObject, RCTBridgeModule {
         }
     }
     
-    
+    @objc public func showIntroductoryOverlay() {
+        DispatchQueue.main.async {
+            self.pluginInstance?.shouldPresentIntroductionScreen = true
+            self.pluginInstance?.presentIntroductionScreenIfNeeded()
+        }
+    }
+
     @objc public func launchExpandedControls() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
             self.pluginInstance?.presentExtendedPlayerControls()
