@@ -45,6 +45,8 @@ public class GoogleCastModule
     @VisibleForTesting
     public static final String REACT_CLASS = "RNGoogleCast";
 
+    protected static final String CAST_STATE_CHANGED = "GoogleCast:CastStateChanged";
+
     protected static final String SESSION_STARTING = "GoogleCast:SessionStarting";
     protected static final String SESSION_STARTED = "GoogleCast:SessionStarted";
     protected static final String SESSION_SUSPENDED = "GoogleCast:SessionSuspended";
@@ -95,6 +97,8 @@ public class GoogleCastModule
     @Override
     public Map<String, Object> getConstants() {
         final Map<String, Object> constants = new HashMap<>();
+
+        constants.put("CAST_STATE_CHANGED", CAST_STATE_CHANGED);
 
         constants.put("SESSION_STARTING", SESSION_STARTING);
         constants.put("SESSION_STARTED", SESSION_STARTED);
@@ -406,7 +410,7 @@ public class GoogleCastModule
             mediaRouteMenuItem.postDelayed(() -> {
                 mIntroductoryOverlay = new IntroductoryOverlay
                         .Builder(getCurrentActivity(), mediaRouteMenuItem)
-                        .setTitleText("Introducing Cast")
+                        //.setTitleText("Introducing Cast")
                         .setSingleTime()
                         .setOnOverlayDismissedListener(
                                 () -> mIntroductoryOverlay = null)
@@ -483,6 +487,8 @@ public class GoogleCastModule
 
     @Override
     public void onCastStateChanged(int state) {
-        Log.d(REACT_CLASS, "ChromeCast state changed to " + state);
+        getReactApplicationContext()
+                .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                .emit(CAST_STATE_CHANGED, state - 1);
     }
 }

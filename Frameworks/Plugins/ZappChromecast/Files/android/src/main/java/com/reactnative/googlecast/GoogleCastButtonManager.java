@@ -24,7 +24,7 @@ import javax.annotation.Nonnull;
 public class GoogleCastButtonManager
         extends SimpleViewManager<MediaRouteButton> {
 
-    private static final String REACT_CLASS = "RNGoogleCastButton";
+    private static final String REACT_CLASS = "ChromecastButton";
     private Integer mColor = null;
     private static MediaRouteButton googleCastButtonManagerInstance;
 
@@ -94,7 +94,7 @@ public class GoogleCastButtonManager
                 Analytics analytics = instance.getAnalytics();
                 if (analytics != null) {
                     Object tag = this.getTag(R.id.origin_tag);
-                    String origin = tag instanceof String ? (String) tag : "NavBar";
+                    String origin = tag instanceof String ? (String) tag : "Navbar";
                     analytics.onIconTapped(origin);
                 }
             }
