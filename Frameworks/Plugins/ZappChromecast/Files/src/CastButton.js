@@ -20,11 +20,10 @@ type Props = {
  */
 function Component({ originKey, colorKey, ...otherProps }: Props) {
   const styles = { flex: 1 };
-  const origin = originKey;
-  const tintColor = colorKey;
+  const props = { origin: originKey, tintColor: colorKey, ...otherProps };
 
   if (GoogleCast.CAST_AVAILABLE) {
-    return <CastButtonComponent style={styles} {...otherProps, origin, tintColor} />;
+    return <CastButtonComponent style={styles} {...props} />;
   } else {
     return null;
   }
