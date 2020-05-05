@@ -55,7 +55,7 @@ public class GoogleCastButtonManager
         return googleCastButtonManagerInstance;
     }
 
-    @ReactProp(name = "tintColor", customType = "Color")
+    @ReactProp(name = "colorKey", customType = "Color")
     public void setTintColor(ColorableMediaRouteButton button, Integer color) {
         if (color == null)
             return;
@@ -63,9 +63,9 @@ public class GoogleCastButtonManager
         mColor = color;
     }
 
-    @ReactProp(name = "origin")
-    public void setOrigin(ColorableMediaRouteButton button, String origin) {
-        button.setTag(R.id.origin_tag, origin);
+    @ReactProp(name = "originKey")
+    public void setOrigin(ColorableMediaRouteButton button, String originKey) {
+        button.setTag(R.id.originKey_tag, originKey);
     }
 
     private class ColorableMediaRouteButton extends MediaRouteButton {
@@ -93,9 +93,9 @@ public class GoogleCastButtonManager
             if (instance != null) {
                 Analytics analytics = instance.getAnalytics();
                 if (analytics != null) {
-                    Object tag = this.getTag(R.id.origin_tag);
-                    String origin = tag instanceof String ? (String) tag : "NavBar";
-                    analytics.onIconTapped(origin);
+                    Object tag = this.getTag(R.id.originKey_tag);
+                    String originKey = tag instanceof String ? (String) tag : "NavBar";
+                    analytics.onIconTapped(originKey);
                 }
             }
             return super.performClick();
