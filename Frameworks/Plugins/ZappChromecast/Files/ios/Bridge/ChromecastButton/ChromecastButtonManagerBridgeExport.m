@@ -11,7 +11,7 @@
 
 @interface RCT_EXTERN_MODULE(ChromecastButtonManager, RCTViewManager)
 
-RCT_EXPORT_VIEW_PROPERTY(originKey, NSString);
-RCT_EXPORT_VIEW_PROPERTY(colorKey, NSString);
+RCT_EXPORT_VIEW_PROPERTY(origin, NSString);
+RCT_EXPORT_VIEW_PROPERTY(tintColor, UIColor);
 
 @end
