@@ -191,7 +191,7 @@ public class GoogleCastModule
         runOnUiQueueThread(() -> {
             if (CAST_AVAILABLE) {
                 CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
-                promise.resolve(castContext.getCastState() - 1);
+                promise.resolve(castContext.getCastState());
             } else {
                 promise.reject(E_CAST_NOT_AVAILABLE, GOOGLE_CAST_NOT_AVAILABLE_MESSAGE);
             }
@@ -489,6 +489,6 @@ public class GoogleCastModule
     public void onCastStateChanged(int state) {
         getReactApplicationContext()
                 .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                .emit(CAST_STATE_CHANGED, state - 1);
+                .emit(CAST_STATE_CHANGED, state);
     }
 }
