@@ -23,3 +23,6 @@ RCT_EXTERN_METHOD(getCastState:(RCTPromiseResolveBlock)resolve rejecter: (RCTPro
 
 @end
 
+@interface RCT_EXTERN_MODULE(RNEventEmitter, RCTEventEmitter)
+  RCT_EXTERN_METHOD(supportedEvents)
+@end

@@ -76,6 +76,9 @@ extension ChromecastAdapter {
         default:
             break
         }
+        
+        RNEventEmitter.emitter.sendEvent(withName: RNEventEmitter.Events.CAST_STATE_CHANGED, body: self.getCurrentCastState())
+
     }
 
     @objc func presentExpandedMediaControls(_ notification:Notification) {
