@@ -1,9 +1,5 @@
-// @flow
-
 import React from "react";
-import { requireNativeComponent, NativeModules } from "react-native";
-
-const { RNGoogleCast: GoogleCast } = NativeModules;
+import { requireNativeComponent } from "react-native";
 
 type Props = {
   originKey: string,
@@ -18,11 +14,10 @@ type Props = {
  * @see [GCKUICastButton](https://developers.google.com/cast/docs/reference/ios/interface_g_c_k_u_i_cast_button) (iOS)
  * @see [CastButtonFactory](https://developers.google.com/android/reference/com/google/android/gms/cast/framework/CastButtonFactory) & [MediaRouteButton](https://developer.android.com/reference/android/support/v7/app/MediaRouteButton.html) (Android)
  */
-function Component({ originKey, colorKey, ...otherProps }: Props) {
-  const styles = { flex: 1 };
-  const props = { origin: originKey, tintColor: colorKey, ...otherProps };
+function Component(props: Props) {
+  const styles = { flex: 1, width: 60, height: 47 };
 
-  if (GoogleCast.CAST_AVAILABLE) {
+  if (CastButtonComponent) {
     return <CastButtonComponent style={styles} {...props} />;
   } else {
     return null;
@@ -40,7 +35,7 @@ Component.propTypes = {
 };
 
 var CastButtonComponent = requireNativeComponent(
-  "RNGoogleCastButton",
+  "ChromecastButton",
   Component,
   {
     nativeOnly: {
