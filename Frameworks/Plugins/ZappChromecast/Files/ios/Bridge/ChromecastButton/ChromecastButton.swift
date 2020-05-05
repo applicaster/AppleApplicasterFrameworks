@@ -46,7 +46,6 @@ import ZappCore
     func updateButtonTintColor() {
         guard let chromecastPlugin = FacadeConnector.connector?.pluginManager?.getProviderInstance(identifier: pluginIdentifier) as? ChromecastAdapter,
             let color = tintColor else {
-//            let color = UIColor(hexColor: colorString as String) else {
             return
         }
 
