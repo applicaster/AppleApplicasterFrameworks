@@ -50,11 +50,11 @@
     "quickbrick"
   ],
   "platform": "android",
-  "dependency_version": "0.0.20",
-  "manifest_version": "0.0.20",
+  "dependency_version": "0.0.22",
+  "manifest_version": "0.0.22",
   "min_zapp_sdk": "20.0.0-Dev",
   "npm_dependencies": [
-    "@applicaster/zapp-generic-chromecast@0.0.20"
+    "@applicaster/zapp-generic-chromecast@0.0.22"
   ],
   "project_dependencies": [
     {
