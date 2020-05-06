@@ -30,28 +30,35 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsManagerDelegate.swift",
-      "line": 26,
+      "line": 33,
       "symbol": "GoogleInteractiveMediaAdsAdapter.adsManagerDidRequestContentPause(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsManagerDelegate.swift",
-      "line": 32,
+      "line": 41,
       "symbol": "GoogleInteractiveMediaAdsAdapter.adsManager(_:didReceive:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+IMAAdsManagerDelegate.swift",
-      "line": 45,
+      "line": 55,
       "symbol": "GoogleInteractiveMediaAdsAdapter.adsManagerDidRequestContentResume(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter+QBPlayerObserverProtocol.swift",
+      "line": 26,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.handlePlayerFinish(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 11,
+      "line": 12,
       "symbol": "GoogleInteractiveMediaAdsAdapter",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -79,65 +86,128 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 39,
+      "line": 37,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.isVMAPAdsCompleted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 38,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.isPlaybackPaused",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 42,
       "symbol": "GoogleInteractiveMediaAdsAdapter.postrollCompletion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 40,
+      "line": 43,
       "symbol": "GoogleInteractiveMediaAdsAdapter.adRequest",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 41,
+      "line": 44,
       "symbol": "GoogleInteractiveMediaAdsAdapter.configurationJSON",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 52,
+      "line": 55,
       "symbol": "GoogleInteractiveMediaAdsAdapter.avPlayer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 56,
+      "line": 59,
       "symbol": "GoogleInteractiveMediaAdsAdapter.urlTagData",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 58,
+      "line": 61,
       "symbol": "GoogleInteractiveMediaAdsAdapter.containerView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 71,
+      "line": 74,
       "symbol": "GoogleInteractiveMediaAdsAdapter.prepareGoogleIMA()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 82,
+      "line": 90,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.addNotificationsObserver()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 104,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.applicationWillResignActive(notification:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 108,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.applicationDidBecomeActive(notification:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 112,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.addRateObserver()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 116,
+      "symbol": "GoogleInteractiveMediaAdsAdapter.observeValue(forKeyPath:of:change:context:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
+      "line": 124,
       "symbol": "GoogleInteractiveMediaAdsAdapter.setupAdsLoader()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/GoogleInteractiveMediaAdsAdapter.swift",
-      "line": 89,
+      "line": 131,
       "symbol": "GoogleInteractiveMediaAdsAdapter.requestAd(adUrl:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/MediaAdsConstants.swift",
+      "line": 10,
+      "symbol": "MediaAdsConstants",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappGoogleInteractiveMediaAds/Files/Universal/GoogleInteractiveMediaAdsAdapter/MediaAdsConstants.swift",
+      "line": 11,
+      "symbol": "MediaAdsConstants.playerPlaybackRate",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
