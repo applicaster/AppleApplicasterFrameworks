@@ -93,7 +93,7 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
         }
         else if let defaultImageUrl = item.defaultImageUrl,
             let url = URL.init(string: defaultImageUrl) {
-            metadata.addImage(GCKImage(url: url, width: Int(screenBounds.width), height: Int(screenBounds.height)))
+            metadata.addImage(GCKImage(url: url, width: 480, height: 360))
         }
         
         //Default post URL can be set in the CMS advertising screen of the relevant app

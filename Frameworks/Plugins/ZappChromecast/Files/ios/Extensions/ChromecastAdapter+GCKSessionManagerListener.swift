@@ -11,50 +11,48 @@ import GoogleCast
 import ZappCore
 
 extension ChromecastAdapter: GCKSessionManagerListener {
-
     public func sessionManager(_ sessionManager: GCKSessionManager, willStart session: GCKSession) {
-        //Send that the session did started notifecation
+        // Send that the session did started notifecation
         NotificationCenter.default.post(name: .chromecastSessionWillStart, object: nil)
-        
-        //Close dialog screen
+
+        // Close dialog screen
         castViewExtender?.dismissDialog()
     }
-    
+
     public func sessionManager(_ sessionManager: GCKSessionManager,
                                didStart session: GCKSession) {
-        //Send that the session did started notifecation
+        // Send that the session did started notifecation
         NotificationCenter.default.post(name: .chromecastSessionDidStart, object: nil)
     }
-    
+
     public func sessionManager(_ sessionManager: GCKSessionManager,
                                didStart session: GCKCastSession) {
-        self.castSession = session
+        castSession = session
 
-        //What the "Icon Location" was that the tap which lead to the casting came from.
-        self.triggeredChromecastButton = self.lastActiveChromecastButton
+        // What the "Icon Location" was that the tap which lead to the casting came from.
+        triggeredChromecastButton = lastActiveChromecastButton
 
-        //Send event on start casting
+        // Send event on start casting
         if let triggeredChromecastButton = self.triggeredChromecastButton {
             ChromecastAnalytics.sendStartCastingEvent(triggeredChromecastButton: triggeredChromecastButton)
         }
 
         attachMediaClient(to: session)
-        //Send that the session did started notifecation
+        // Send that the session did started notifecation
         NotificationCenter.default.post(name: .chromecastCastSessionDidStart, object: nil)
     }
 
     public func sessionManager(_ sessionManager: GCKSessionManager,
                                willEnd session: GCKSession) {
-
-        //Send event on stop casting
+        // Send event on stop casting
         if let triggeredChromecastButton = self.triggeredChromecastButton {
             ChromecastAnalytics.sendStopCastingEvent(triggeredChromecastButton: triggeredChromecastButton)
         }
-        
-        //Send that the session did started notifecation
+
+        // Send that the session did started notifecation
         var streamInfo: [String: Any] = [:]
         if let streamPosition = GCKCastContext.sharedInstance().sessionManager.currentCastSession?.remoteMediaClient?.mediaStatus?.streamPosition {
-            //The current stream position, as an NSTimeInterval from the start of the stream.
+            // The current stream position, as an NSTimeInterval from the start of the stream.
             streamInfo["streamPosition"] = streamPosition
         }
 
@@ -64,22 +62,21 @@ extension ChromecastAdapter: GCKSessionManagerListener {
     public func sessionManager(_ sessionManager: GCKSessionManager,
                                didEnd session: GCKSession,
                                withError error: Error?) {
-
-        self.castSession = nil
+        castSession = nil
         detachMediaClient()
-        
-        //uninstall  mini player container
-        self.updateVisibilityOfMiniPlayerViewController(needUpdateAppearance: true) {
-            //do nothing on completion
+
+        // uninstall  mini player container
+        updateVisibilityOfMiniPlayerViewController(needUpdateAppearance: true) {
+            // do nothing on completion
         }
-        
-        //Close dialog screen
+
+        // Close dialog screen
         castViewExtender?.dismissDialog()
-        
-        //Send that the session did end notifecation
+
+        // Send that the session did end notifecation
         NotificationCenter.default.post(name: .chromecastSessionDidEnd, object: nil)
     }
-    
+
     func attachMediaClient(to castSession: GCKCastSession) {
         guard let mediaClient = castSession.remoteMediaClient else {
             return
@@ -97,15 +94,15 @@ extension ChromecastAdapter: GCKSessionManagerListener {
     }
 }
 
-extension ChromecastAdapter : GCKRemoteMediaClientListener {
+extension ChromecastAdapter: GCKRemoteMediaClientListener {
     public func remoteMediaClient(_ client: GCKRemoteMediaClient, didStartMediaSessionWithID sessionID: Int) {
         if let triggedChromecastButton = self.triggeredChromecastButton {
             ChromecastAnalytics.sendStartCastingEvent(triggeredChromecastButton: triggedChromecastButton)
-            
-            if let castDidStartMediaSession = castDidStartMediaSession {
-                castDidStartMediaSession()
-                self.castDidStartMediaSession = nil
-            }
+        }
+        
+        if let castDidStartMediaSession = castDidStartMediaSession {
+            castDidStartMediaSession()
+            self.castDidStartMediaSession = nil
         }
     }
 }
