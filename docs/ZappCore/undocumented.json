@@ -73,7 +73,7 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/Chromecast/ChromecastProtocol+ChromecastExtendedPlayerControlsProtocol.swift",
       "line": 13,
-      "symbol": "ChromecastExtendedPlayerControlsProtocol.play(playableItems:playPosition:)",
+      "symbol": "ChromecastExtendedPlayerControlsProtocol.play(playableItems:playPosition:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -556,7 +556,7 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappCore/Files/Universal/FacadeConnector/Protocols/FacadeConnectorChromecastProtocol.swift",
       "line": 20,
-      "symbol": "FacadeConnectorChromecastProtocol.play(with:playPosition:)",
+      "symbol": "FacadeConnectorChromecastProtocol.play(with:playPosition:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
