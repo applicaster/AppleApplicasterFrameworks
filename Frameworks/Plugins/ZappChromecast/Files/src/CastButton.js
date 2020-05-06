@@ -1,5 +1,5 @@
 import React from "react";
-import { requireNativeComponent } from "react-native";
+import { requireNativeComponent, DeviceEventEmitter } from "react-native";
 
 type Props = {
   origin: string,
@@ -16,6 +16,24 @@ type Props = {
  */
 function Component(props: Props) {
   const styles = { flex: 1, width: 60, height: 47 };
+
+  React.useEffect(() => {
+    // eslint-disable-next-line no-console
+    console.log("You have reached btn-useeffect-registerListener");
+    DeviceEventEmitter.addListener("CastStateChanged", (state) => {
+      // eslint-disable-next-line no-console
+      console.log("You have reached btn-registerListener", { state, props });
+    });
+
+    return () => {
+      // eslint-disable-next-line no-console
+      console.log("unmount-button, and remove listener");
+      DeviceEventEmitter.removeListener("CastStateChanged", (state) => {
+        // eslint-disable-next-line no-console
+        console.log("removeListener", { state });
+      });
+    };
+  }, []);
 
   if (CastButtonComponent) {
     return <CastButtonComponent style={styles} {...props} />;

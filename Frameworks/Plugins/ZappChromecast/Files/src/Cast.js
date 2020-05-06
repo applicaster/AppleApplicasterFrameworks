@@ -45,9 +45,9 @@ export default {
   /**
    * Sends a media item to be casted to the native module.
    * @param {object} Media
-   * @returns {*}
+   * @returns {Promise} resolves with a boolean, rejects with error.
    */
-  castMedia(params: Media): Promise<void> {
+  castMedia(params: Media): Promise<any> {
     return GoogleCast.castMedia(params);
   },
 
