@@ -111,6 +111,8 @@ open class ChromecastAdapter: NSObject {
 
     // The media object to play
     var mediaInfo: GCKMediaInformation?
+    // casting starting callback
+    var castDidStartMediaSession: (() -> Void)?
 
     //public properties
     open var miniMediaControlsViewController: GCKUIMiniMediaControlsViewController?
