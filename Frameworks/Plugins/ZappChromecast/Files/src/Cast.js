@@ -21,7 +21,6 @@ type Media = {
   posterUrl: string,
   analytics: {
     feedId: string,
-    feedUrl: string,
     feedTitle: string,
     entryId: string,
     itemName: string,
@@ -48,7 +47,7 @@ export default {
    * @param {object} Media
    * @returns {*}
    */
-  castMedia(params: Media) {
+  castMedia(params: Media): Promise<void> {
     return GoogleCast.castMedia(params);
   },
 
@@ -64,14 +63,30 @@ export default {
 
   /**
    * Returns whether the device is connected and ready to cast from native module.
-   * Sets the value of this.casting
+   * Sets the value of this.castingState
    * @returns {boolean}
    */
-  isCasting(): boolean {
+  hasConnectedCastSession(): boolean {
     GoogleCast.hasConnectedCastSession().then((casting) => {
-      return casting;
+      this.castingState = casting;
     });
+    return this.castingState;
   },
+
+  /**
+   * Returns whether the value of this.castingState which determines if device is connected.
+   * Triggers hasConnectedCastSession method to retreive this data from the native.
+   * @returns {boolean} this.castingState
+   */
+  get isCasting(): boolean {
+    this.hasConnectedCastSession();
+    return this.castingState;
+  },
+
+  /**
+   * Stores the last known cast state of the device.
+   */
+  castingState: false,
 
   /**
    * Begins (or resumes) playback of the current media item.

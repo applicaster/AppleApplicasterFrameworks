@@ -2,8 +2,8 @@ import React from "react";
 import { requireNativeComponent } from "react-native";
 
 type Props = {
-  originKey: string,
-  colorKey: string,
+  origin: string,
+  tintColor: string,
 };
 
 /**

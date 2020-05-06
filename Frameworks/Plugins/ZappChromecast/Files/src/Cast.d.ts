@@ -1,6 +1,5 @@
 declare module "react-native-google-cast" {
   import * as React from "react";
-  import { ViewProps } from "react-native";
 
   export type CastState =
     | "NoDevicesAvailable"
@@ -18,7 +17,6 @@ declare module "react-native-google-cast" {
     posterUrl: string;
     analytics: {
       feedId: string;
-      feedUrl: string;
       feedTitle: string;
       entryId: string;
       itemName: string;
@@ -28,14 +26,15 @@ declare module "react-native-google-cast" {
   };
 
   export type Props = {
-    originKey: string;
-    colorKey: string;
+    origin: string;
+    tintColor: string;
   };
 
   const GoogleCast: {
+    castMedia(params: Media): Promise<any>;
     getCastState(): Promise<CastState>;
-    castMedia(params: Media): void;
-    hasConnectedCastSession(): Promise<boolean>;
+    isCasting(): boolean;
+    hasConnectedCastSession(): boolean;
     play(): void;
     pause(): void;
     stop(): void;
