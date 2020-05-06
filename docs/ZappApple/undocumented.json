@@ -2824,7 +2824,7 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/RootController/FacadeConnector/RootController+FacadeConnectorChromecastProtocol.swift",
       "line": 41,
-      "symbol": "RootController.play(with:playPosition:)",
+      "symbol": "RootController.play(with:playPosition:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
