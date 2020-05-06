@@ -101,12 +101,12 @@ open class ChromecastAdapter: NSObject {
     var castMediaClient: GCKRemoteMediaClient?
     var castSession: GCKCastSession?
     var castButton: UIButton?
+
     var connectivityState: ConnectivityState = .cellular {
         didSet {
             updateCastButtonVisibility()
         }
     }
-    var noReachabilityStatusPresented: Bool = false
     var shouldPresentIntroductionScreen: Bool = false
 
     // The media object to play
