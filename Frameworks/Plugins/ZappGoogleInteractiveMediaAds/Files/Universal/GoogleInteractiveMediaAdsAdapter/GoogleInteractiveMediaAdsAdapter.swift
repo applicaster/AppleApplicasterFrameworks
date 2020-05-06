@@ -34,6 +34,9 @@ import ZappCore
         completion?(true)
     }
 
+    var isVMAPAdsCompleted = false
+    var isPlaybackPaused = false
+    
     /// Player plugin instance that currently presented
     public weak var playerPlugin: PlayerProtocol?
     var postrollCompletion: ((_ finished: Bool) -> Void)?
@@ -69,7 +72,11 @@ import ZappCore
     }
 
     func prepareGoogleIMA() {
+        isPlaybackPaused = false
+        isVMAPAdsCompleted = false
         guard let player = avPlayer else { return }
+        addNotificationsObserver()
+        addRateObserver()
         urlTagData = GoogleUrlTagData(entry: playerPlugin?.entry,
                                       pluginParams: configurationJSON)
         contentPlayhead = IMAAVPlayerContentPlayhead(avPlayer: player)
@@ -77,8 +84,43 @@ import ZappCore
         if let urlToPresent = urlTagData?.prerollUrlString() {
             requestAd(adUrl: urlToPresent)
         }
+        
     }
 
+    func addNotificationsObserver() {
+        let defaultCenter = NotificationCenter.default
+        
+        defaultCenter.addObserver(self,
+                                  selector: #selector(self.applicationWillResignActive(notification:)),
+                                  name: UIApplication.willResignActiveNotification,
+                                  object: nil)
+        
+        defaultCenter.addObserver(self,
+                                  selector: #selector(self.applicationDidBecomeActive(notification:)),
+                                  name: UIApplication.didBecomeActiveNotification,
+                                  object: nil)
+    }
+    
+    @objc func applicationWillResignActive(notification:Notification) {
+        adsManager?.pause()
+    }
+    
+    @objc func applicationDidBecomeActive(notification:Notification) {
+        adsManager?.resume()
+    }
+
+    func addRateObserver() {
+        avPlayer?.addObserver(self, forKeyPath: MediaAdsConstants.playerPlaybackRate, options: NSKeyValueObservingOptions.new, context: nil)
+    }
+    
+    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == MediaAdsConstants.playerPlaybackRate {
+            if let player = avPlayer, player.rate > 0 && isPlaybackPaused {
+                avPlayer?.pause()
+            }
+        }
+    }
+    
     func setupAdsLoader() {
         let settings = IMASettings()
         settings.enableDebugMode = false
