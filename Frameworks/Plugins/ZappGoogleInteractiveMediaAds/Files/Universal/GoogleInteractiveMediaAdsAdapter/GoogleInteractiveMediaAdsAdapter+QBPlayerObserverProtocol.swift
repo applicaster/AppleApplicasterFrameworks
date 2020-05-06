@@ -8,17 +8,12 @@
 
 import Foundation
 import ZappCore
+
 extension GoogleInteractiveMediaAdsAdapter: PlayerObserverProtocol {
     public func playerDidFinishPlayItem(player: PlayerProtocol,
                                         completion: @escaping (_ finished: Bool) -> Void) {
-        guard let postrollUrl = urlTagData?.postrollUrlString() else {
-            adsLoader?.contentComplete()
-            completion(true)
-            return
-        }
-        postrollCompletion = completion
-
-        requestAd(adUrl: postrollUrl)
+        adsLoader?.contentComplete()
+        handlePlayerFinish(completion: completion)
         Timer.scheduledTimer(withTimeInterval: 1,
                              repeats: false) { [weak self] _ in
             if ((self?.postrollCompletion) != nil) && self?.adsManager == nil {
@@ -28,6 +23,26 @@ extension GoogleInteractiveMediaAdsAdapter: PlayerObserverProtocol {
         }
     }
 
+    private func handlePlayerFinish(completion: @escaping (_ finished: Bool) -> Void) {
+        guard let urlTagData = urlTagData else {
+            return
+        }
+        if urlTagData.isVmapAd {
+            if isVMAPAdsCompleted {
+                completion(true)
+                return
+            }
+            postrollCompletion = completion
+        } else {
+            guard let postrollUrl = urlTagData.postrollUrlString() else {
+                completion(true)
+                return
+            }
+            postrollCompletion = completion
+            requestAd(adUrl: postrollUrl)
+        }
+    }
+    
     public func playerProgressUpdate(player: PlayerProtocol,
                                      currentTime: TimeInterval,
                                      duration: TimeInterval) {
@@ -38,6 +53,7 @@ extension GoogleInteractiveMediaAdsAdapter: PlayerObserverProtocol {
     }
 
     public func playerDidDismiss(player: PlayerProtocol) {
+        avPlayer?.removeObserver(self, forKeyPath: "rate")
         playerPlugin = nil
         adsLoader?.delegate = nil
         adsLoader = nil
