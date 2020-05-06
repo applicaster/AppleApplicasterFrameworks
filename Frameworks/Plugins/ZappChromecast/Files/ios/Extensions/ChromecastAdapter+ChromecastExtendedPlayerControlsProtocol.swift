@@ -40,9 +40,11 @@ extension ChromecastAdapter : ChromecastExtendedPlayerControlsProtocol {
         return castViewExtender.getPlayerNavigation()
     }
 
-    public func play(playableItems: [NSObject],  playPosition: TimeInterval) {
+    public func play(playableItems: [NSObject],  playPosition: TimeInterval, completion: (() -> Void)?) {
         let playerDelegate = self as ChromecastPlayerProtocol
-        playerDelegate.prepareToPlay(playableItems: playableItems, playPosition: playPosition)
+        playerDelegate.prepareToPlay(playableItems: playableItems,
+                                     playPosition: playPosition,
+                                     completion: completion)
     }
 
     public func presentExtendedPlayerControls() {

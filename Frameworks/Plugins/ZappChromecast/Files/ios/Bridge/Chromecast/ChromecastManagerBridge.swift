@@ -14,7 +14,8 @@ import ZappCore
 class ChromecastManager: NSObject, RCTBridgeModule {
     fileprivate let pluginIdentifier = "chromecast_qb"
     var bridge: RCTBridge!
-
+    var castMediaStartedCompletion: (() -> Void)?
+    
     static func moduleName() -> String! {
         return "ChromecastManager"
     }
@@ -65,10 +66,18 @@ class ChromecastManager: NSObject, RCTBridgeModule {
         })
     }
 
-    @objc public func castMedia(_ params: NSDictionary) {
+    @objc public func castMedia(_ params: NSDictionary,
+                                resolver: @escaping RCTPromiseResolveBlock,
+                                rejecter: @escaping RCTPromiseRejectBlock) {
         DispatchQueue.main.async {
-            self.pluginInstance?.prepareToPlay(playableItems: [params],
-                                               playPosition: 0)
+            guard let pluginInstance = self.pluginInstance else {
+                rejecter("0", "plugin not available", nil)
+                return
+            }
+            
+            pluginInstance.prepareToPlay(playableItems: [params], playPosition: 0) {
+                resolver(1)
+            }
         }
     }
 
