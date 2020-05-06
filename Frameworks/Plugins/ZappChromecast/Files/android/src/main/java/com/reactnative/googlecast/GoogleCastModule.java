@@ -21,7 +21,9 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.common.annotations.VisibleForTesting;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.google.android.gms.cast.CastDevice;
+import com.google.android.gms.cast.MediaError;
 import com.google.android.gms.cast.MediaInfo;
+import com.google.android.gms.cast.MediaLoadOptions;
 import com.google.android.gms.cast.MediaStatus;
 import com.google.android.gms.cast.MediaTrack;
 import com.google.android.gms.cast.framework.CastContext;
@@ -32,6 +34,7 @@ import com.google.android.gms.cast.framework.IntroductoryOverlay;
 import com.google.android.gms.cast.framework.SessionManager;
 import com.google.android.gms.cast.framework.SessionManagerListener;
 import com.google.android.gms.cast.framework.media.RemoteMediaClient;
+import com.google.android.gms.common.api.PendingResult;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -136,7 +139,7 @@ public class GoogleCastModule
     }
 
     @ReactMethod
-    public void castMedia(final ReadableMap params) {
+    public void castMedia(final ReadableMap params, Promise promise) {
         if (mCastSession == null) {
             return;
         }
@@ -144,6 +147,21 @@ public class GoogleCastModule
             RemoteMediaClient remoteMediaClient = mCastSession.getRemoteMediaClient();
             if (remoteMediaClient == null) {
                 return;
+            }
+            MediaInfo mediaInfo;
+            try {
+                mediaInfo = MediaInfoBuilder.buildMediaInfo(params);
+            }
+            catch(IllegalArgumentException e){
+                promise.reject("buildMediaInfo failed", e);
+                return;
+            }
+
+            Analytics analytics = mPlugin.getAnalytics();
+            if(null != analytics) {
+                ReadableMap map = ReadableMapUtils.getReadableMap(params, "analytics");
+                Map<String, String> movieData = AnalyticsBuilder.convert(map);
+                analytics.onCastRequest(movieData);
             }
 
             Integer seconds = null;
@@ -153,17 +171,21 @@ public class GoogleCastModule
             if (seconds == null) {
                 seconds = 0;
             }
+            MediaLoadOptions options = new MediaLoadOptions.Builder()
+                    .setAutoplay(true)
+                    .setPlayPosition(seconds * 1000)
+                    .build();
 
-            MediaInfo mediaInfo = MediaInfoBuilder.buildMediaInfo(params);
-            remoteMediaClient.load(mediaInfo, true, seconds * 1000);
-
-            Analytics analytics = mPlugin.getAnalytics();
-            if(null != analytics) {
-                ReadableMap map = ReadableMapUtils.getReadableMap(params, "analytics");
-                Map<String, String> movieData = AnalyticsBuilder.convert(map);
-                analytics.onCastRequest(movieData);
-            }
-
+            PendingResult<RemoteMediaClient.MediaChannelResult> result = remoteMediaClient.load(mediaInfo, options);
+            result.setResultCallback(mediaChannelResult -> {
+                        MediaError mediaError = mediaChannelResult.getMediaError();
+                        if (null == mediaError) {
+                            promise.resolve(true);
+                        } else {
+                            promise.reject("Cast failed", mediaError.getReason());
+                        }
+                    }
+            );
             Log.d(REACT_CLASS, "Casting media... ");
         });
     }
@@ -191,7 +213,7 @@ public class GoogleCastModule
         runOnUiQueueThread(() -> {
             if (CAST_AVAILABLE) {
                 CastContext castContext = CastContext.getSharedInstance(getReactApplicationContext());
-                promise.resolve(castContext.getCastState());
+                promise.resolve(castContext.getCastState() - 1);
             } else {
                 promise.reject(E_CAST_NOT_AVAILABLE, GOOGLE_CAST_NOT_AVAILABLE_MESSAGE);
             }
@@ -489,6 +511,6 @@ public class GoogleCastModule
     public void onCastStateChanged(int state) {
         getReactApplicationContext()
                 .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                .emit(CAST_STATE_CHANGED, state);
+                .emit(CAST_STATE_CHANGED, state - 1);
     }
 }
