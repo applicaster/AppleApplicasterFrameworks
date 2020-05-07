@@ -10,11 +10,6 @@ import {
 import { Component } from "./CastButton";
 const { RNGoogleCast: GoogleCast, RNGoogleCastEventEmitter } = NativeModules;
 
-const EventClass =
-  Platform.OS === "ios" ? RNGoogleCastEventEmitter : GoogleCast;
-
-console.log({ EventClass, RNGoogleCastEventEmitter, GoogleCast });
-
 type CastState =
   | "NoDevicesAvailable"
   | "NotConnected"
@@ -77,10 +72,7 @@ export default {
    * @returns {boolean}
    */
   hasConnectedCastSession(): boolean {
-    console.log("checkIf-hasConnectedCastSession");
     GoogleCast.hasConnectedCastSession().then((casting) => {
-      console.log("responseFrom-hasConnectedCastSession", casting);
-
       this.castingState = casting;
     });
     return this.castingState;
@@ -152,21 +144,21 @@ export default {
    */
   EventEmitter:
     Platform.OS === "ios"
-      ? new NativeEventEmitter(EventClass)
+      ? new NativeEventEmitter(RNGoogleCastEventEmitter)
       : DeviceEventEmitter,
-  CAST_STATE_CHANGED: EventClass.CAST_STATE_CHANGED,
-  SESSION_STARTED: EventClass.SESSION_STARTED,
-  SESSION_START_FAILED: EventClass.SESSION_START_FAILED,
-  SESSION_SUSPENDED: EventClass.SESSION_SUSPENDED,
-  SESSION_RESUMING: EventClass.SESSION_RESUMING,
-  SESSION_RESUMED: EventClass.SESSION_RESUMED,
-  SESSION_ENDING: EventClass.SESSION_ENDING,
-  SESSION_ENDED: EventClass.SESSION_ENDED,
-  MEDIA_STATUS_UPDATED: EventClass.MEDIA_STATUS_UPDATED,
-  MEDIA_PLAYBACK_STARTED: EventClass.MEDIA_PLAYBACK_STARTED,
-  MEDIA_PLAYBACK_ENDED: EventClass.MEDIA_PLAYBACK_ENDED,
-  MEDIA_PROGRESS_UPDATED: EventClass.MEDIA_PROGRESS_UPDATED,
-  CHANNEL_CONNECTED: EventClass.CHANNEL_CONNECTED,
-  CHANNEL_DISCONNECTED: EventClass.CHANNEL_DISCONNECTED,
-  CHANNEL_MESSAGE_RECEIVED: EventClass.CHANNEL_MESSAGE_RECEIVED,
+  CAST_STATE_CHANGED: GoogleCast.CAST_STATE_CHANGED,
+  SESSION_STARTED: GoogleCast.SESSION_STARTED,
+  SESSION_START_FAILED: GoogleCast.SESSION_START_FAILED,
+  SESSION_SUSPENDED: GoogleCast.SESSION_SUSPENDED,
+  SESSION_RESUMING: GoogleCast.SESSION_RESUMING,
+  SESSION_RESUMED: GoogleCast.SESSION_RESUMED,
+  SESSION_ENDING: GoogleCast.SESSION_ENDING,
+  SESSION_ENDED: GoogleCast.SESSION_ENDED,
+  MEDIA_STATUS_UPDATED: GoogleCast.MEDIA_STATUS_UPDATED,
+  MEDIA_PLAYBACK_STARTED: GoogleCast.MEDIA_PLAYBACK_STARTED,
+  MEDIA_PLAYBACK_ENDED: GoogleCast.MEDIA_PLAYBACK_ENDED,
+  MEDIA_PROGRESS_UPDATED: GoogleCast.MEDIA_PROGRESS_UPDATED,
+  CHANNEL_CONNECTED: GoogleCast.CHANNEL_CONNECTED,
+  CHANNEL_DISCONNECTED: GoogleCast.CHANNEL_DISCONNECTED,
+  CHANNEL_MESSAGE_RECEIVED: GoogleCast.CHANNEL_MESSAGE_RECEIVED,
 };

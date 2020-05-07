@@ -13,8 +13,6 @@ function registerListeners() {
 
   events.forEach((event) => {
     EventEmitter.addListener(GoogleCast[event], function () {
-      // eslint-disable-next-line no-console
-      console.log(event, arguments);
       GoogleCast.hasConnectedCastSession();
     });
   });
@@ -24,8 +22,6 @@ function unregisterListeners() {
   const EventEmitter = GoogleCast?.EventEmitter;
   events.forEach((event) => {
     EventEmitter.removeListener(GoogleCast[event], function () {
-      // eslint-disable-next-line no-console
-      console.log(event, arguments);
       GoogleCast.hasConnectedCastSession();
     });
   });
@@ -78,12 +74,12 @@ var CastButtonComponent = requireNativeComponent(
 // List of events that need we would like to register to
 const events = [
   "CAST_STATE_CHANGED",
-  // "SESSION_STARTED",
-  // "SESSION_START_FAILED",
-  // "SESSION_SUSPENDED",
-  // "SESSION_RESUMING",
-  // "SESSION_RESUMED",
-  // "SESSION_ENDING",
+  "SESSION_STARTED",
+  "SESSION_START_FAILED",
+  "SESSION_SUSPENDED",
+  "SESSION_RESUMING",
+  "SESSION_RESUMED",
+  "SESSION_ENDING",
 ];
 
 export { Component };
