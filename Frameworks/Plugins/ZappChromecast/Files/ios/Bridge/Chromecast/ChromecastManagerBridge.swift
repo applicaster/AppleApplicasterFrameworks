@@ -22,7 +22,7 @@ class ChromecastManager: NSObject, RCTBridgeModule {
     
     @objc public func constantsToExport() -> [AnyHashable : Any] {
         return RNEventEmitter.Events.allCases.reduce(into: [String:String]()) {
-            $0[String(reflecting: $1)] = $1.rawValue
+            $0[String(describing: $1)] = $1.rawValue
             }
     }
     
