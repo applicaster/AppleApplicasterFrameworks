@@ -10,13 +10,12 @@ type Props = {
 
 function registerListeners() {
   const EventEmitter = GoogleCast?.EventEmitter;
-  // eslint-disable-next-line no-console
-  console.log({ EventEmitter });
 
   events.forEach((event) => {
     EventEmitter.addListener(GoogleCast[event], function () {
       // eslint-disable-next-line no-console
       console.log(event, arguments);
+      GoogleCast.hasConnectedCastSession();
     });
   });
 }
@@ -27,6 +26,7 @@ function unregisterListeners() {
     EventEmitter.removeListener(GoogleCast[event], function () {
       // eslint-disable-next-line no-console
       console.log(event, arguments);
+      GoogleCast.hasConnectedCastSession();
     });
   });
 }
