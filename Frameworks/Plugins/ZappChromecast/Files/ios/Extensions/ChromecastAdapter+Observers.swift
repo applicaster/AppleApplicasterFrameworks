@@ -77,7 +77,7 @@ extension ChromecastAdapter {
             break
         }
         
-        RNEventEmitter.emitter.sendEvent(withName: RNEventEmitter.Events.CAST_STATE_CHANGED, body: self.getCurrentCastState())
+        RNEventEmitter.sendEvent(for: .CAST_STATE_CHANGED, with: self.getCurrentCastState())
 
     }
 
