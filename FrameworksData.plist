@@ -29,7 +29,7 @@
 	<key>ZappGoogleInteractiveMediaAds</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.8.0</string>
+		<string>0.9.0</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
