@@ -19,7 +19,28 @@ class ChromecastManager: NSObject, RCTBridgeModule {
     static func moduleName() -> String! {
         return "ChromecastManager"
     }
-
+    
+    @objc public func constantsToExport() -> [AnyHashable : Any] {
+      return [
+        "CAST_STATE_CHANGED": "CAST_STATE_CHANGED",
+        "SESSION_STARTING" : "SESSION_STARTING",
+        "SESSION_STARTED" : "SESSION_STARTED",
+        "SESSION_START_FAILED" : "SESSION_START_FAILED",
+        "SESSION_SUSPENDED" : "SESSION_SUSPENDED",
+        "SESSION_RESUMING" : "SESSION_RESUMING",
+        "SESSION_RESUMED" : "SESSION_RESUMED",
+        "SESSION_ENDING" : "SESSION_ENDING",
+        "SESSION_ENDED" : "SESSION_ENDED",
+        "MEDIA_STATUS_UPDATED" : "MEDIA_STATUS_UPDATED",
+        "MEDIA_PLAYBACK_STARTED" : "MEDIA_PLAYBACK_STARTED",
+        "MEDIA_PLAYBACK_ENDED" : "MEDIA_PLAYBACK_ENDED",
+        "MEDIA_PROGRESS_UPDATED" : "MEDIA_PROGRESS_UPDATED",
+        "CHANNEL_CONNECTED" : "CHANNEL_CONNECTED",
+        "CHANNEL_MESSAGE_RECEIVED" : "CHANNEL_MESSAGE_RECEIVED",
+        "CHANNEL_DISCONNECTED" : "CHANNEL_DISCONNECTED",
+        ]
+    }
+    
     public class func requiresMainQueueSetup() -> Bool {
         return true
     }

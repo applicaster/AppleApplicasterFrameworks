@@ -1,5 +1,5 @@
 import React from "react";
-import { requireNativeComponent, DeviceEventEmitter } from "react-native";
+import { requireNativeComponent } from "react-native";
 
 import GoogleCast from "./Cast";
 
@@ -9,8 +9,12 @@ type Props = {
 };
 
 function registerListeners() {
+  const EventEmitter = GoogleCast?.EventEmitter;
+  // eslint-disable-next-line no-console
+  console.log({ EventEmitter });
+
   events.forEach((event) => {
-    DeviceEventEmitter.addListener(GoogleCast[event], function () {
+    EventEmitter.addListener(GoogleCast[event], function () {
       // eslint-disable-next-line no-console
       console.log(event, arguments);
     });
@@ -18,8 +22,9 @@ function registerListeners() {
 }
 
 function unregisterListeners() {
+  const EventEmitter = GoogleCast?.EventEmitter;
   events.forEach((event) => {
-    DeviceEventEmitter.removeListener(GoogleCast[event], function () {
+    EventEmitter.removeListener(GoogleCast[event], function () {
       // eslint-disable-next-line no-console
       console.log(event, arguments);
     });
@@ -73,12 +78,12 @@ var CastButtonComponent = requireNativeComponent(
 // List of events that need we would like to register to
 const events = [
   "CAST_STATE_CHANGED",
-  "SESSION_STARTED",
-  "SESSION_START_FAILED",
-  "SESSION_SUSPENDED",
-  "SESSION_RESUMING",
-  "SESSION_RESUMED",
-  "SESSION_ENDING",
+  // "SESSION_STARTED",
+  // "SESSION_START_FAILED",
+  // "SESSION_SUSPENDED",
+  // "SESSION_RESUMING",
+  // "SESSION_RESUMED",
+  // "SESSION_ENDING",
 ];
 
 export { Component };

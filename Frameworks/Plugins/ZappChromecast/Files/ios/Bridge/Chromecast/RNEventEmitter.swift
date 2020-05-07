@@ -8,7 +8,7 @@
 import Foundation
 import React
 
-@objc(RNEventEmitter)
+@objc(RNGoogleCastEventEmitter)
 open class RNEventEmitter: RCTEventEmitter {
     public static var emitter: RCTEventEmitter!
     
@@ -20,8 +20,8 @@ open class RNEventEmitter: RCTEventEmitter {
         super.init()
         RNEventEmitter.emitter = self
     }
-
+    
     open override func supportedEvents() -> [String] {
-        [RNEventEmitter.Events.CAST_STATE_CHANGED]
+        return ["GoogleCast:CastStateChanged"]
     }
 }

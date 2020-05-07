@@ -1,9 +1,14 @@
 // @flow
 
-import { NativeModules } from "react-native";
+import {
+  NativeModules,
+  Platform,
+  DeviceEventEmitter,
+  NativeEventEmitter,
+} from "react-native";
 
 import { Component } from "./CastButton";
-const { RNGoogleCast: GoogleCast } = NativeModules;
+const { RNGoogleCast: GoogleCast, RNGoogleCastEventEmitter } = NativeModules;
 
 type CastState =
   | "NoDevicesAvailable"
@@ -137,6 +142,10 @@ export default {
   /**
    * Events
    */
+  EventEmitter:
+    Platform.OS === "ios"
+      ? new NativeEventEmitter(RNGoogleCastEventEmitter)
+      : DeviceEventEmitter,
   CAST_STATE_CHANGED: GoogleCast.CAST_STATE_CHANGED,
   SESSION_STARTED: GoogleCast.SESSION_STARTED,
   SESSION_START_FAILED: GoogleCast.SESSION_START_FAILED,
