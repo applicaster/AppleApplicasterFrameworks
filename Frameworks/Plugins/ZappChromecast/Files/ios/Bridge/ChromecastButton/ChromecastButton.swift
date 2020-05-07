@@ -33,31 +33,32 @@ import ZappCore
         fatalError("init(coder:) has not been implemented")
     }
 
-    func addButton() {
-        guard let chromecastPlugin = FacadeConnector.connector?.pluginManager?.getProviderInstance(identifier: pluginIdentifier) as? ChromecastAdapter else {
-            return
-        }
-
-        chromecastPlugin.addButton(to: self,
+    public func addButton() {
+        pluginInstance?.addButton(to: self,
                                    key: buttonIconColorKey,
                                    color: nil)
     }
     
     func updateButtonTintColor() {
-        guard let chromecastPlugin = FacadeConnector.connector?.pluginManager?.getProviderInstance(identifier: pluginIdentifier) as? ChromecastAdapter,
-            let color = tintColor else {
+        guard let color = tintColor else {
             return
         }
 
-        chromecastPlugin.castButton?.tintColor = color
+        pluginInstance?.castButton?.tintColor = color
     }
     
     func updateButtonOrigin() {
-        guard let chromecastPlugin = FacadeConnector.connector?.pluginManager?.getProviderInstance(identifier: pluginIdentifier) as? ChromecastAdapter,
-            let origin = origin as String? else {
+        guard let origin = origin as String? else {
             return
         }
 
-        chromecastPlugin.localLastActiveChromecastButton = ChromecastButtonOrigin(rawValue: origin)
+        pluginInstance?.localLastActiveChromecastButton = ChromecastButtonOrigin(rawValue: origin)
+    }
+    
+    fileprivate var pluginInstance:ChromecastAdapter? {
+        guard let chromecastPlugin = FacadeConnector.connector?.pluginManager?.getProviderInstance(identifier: pluginIdentifier) as? ChromecastAdapter else {
+            return nil
+        }
+        return chromecastPlugin
     }
 }

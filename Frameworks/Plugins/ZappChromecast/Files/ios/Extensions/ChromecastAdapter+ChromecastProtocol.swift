@@ -226,9 +226,9 @@ extension ChromecastAdapter: ChromecastProtocol {
 
             button.translatesAutoresizingMaskIntoConstraints = false
             let views = ["button": button]
-            let metrics: [String: AnyObject] = ["width": frame.size.width as AnyObject, "height": frame.size.height as AnyObject]
-            container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[button(height)]|", options: .alignAllCenterY, metrics: metrics, views: views))
-            container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[button(width)]|", options: .alignAllCenterX, metrics: metrics, views: views))
+            let metrics: [String: AnyObject] = [:]
+            container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[button]|", options: .alignAllCenterY, metrics: metrics, views: views))
+            container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[button]|", options: .alignAllCenterX, metrics: metrics, views: views))
 
             // create mini player
             createMiniPlayerViewController()
