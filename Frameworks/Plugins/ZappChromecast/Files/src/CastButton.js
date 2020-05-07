@@ -1,10 +1,28 @@
 import React from "react";
 import { requireNativeComponent, DeviceEventEmitter } from "react-native";
 
+import GoogleCast from "./Cast";
+
 type Props = {
   origin: string,
   tintColor: string,
 };
+
+function registerListeners() {
+  events.forEach((event) => {
+    DeviceEventEmitter.addListener(GoogleCast[event], function () {
+      console.log(event, arguments);
+    });
+  });
+}
+
+function unregisterListeners() {
+  events.forEach((event) => {
+    DeviceEventEmitter.removeListener(GoogleCast[event], function () {
+      console.log(event, arguments);
+    });
+  });
+}
 
 /**
  * Button that presents the Cast icon.
@@ -18,20 +36,10 @@ function Component(props: Props) {
   const styles = { flex: 1, width: 60, height: 47 };
 
   React.useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log("You have reached btn-useeffect-registerListener");
-    DeviceEventEmitter.addListener("CastStateChanged", (state) => {
-      // eslint-disable-next-line no-console
-      console.log("You have reached btn-registerListener", { state, props });
-    });
+    registerListeners();
 
     return () => {
-      // eslint-disable-next-line no-console
-      console.log("unmount-button, and remove listener");
-      DeviceEventEmitter.removeListener("CastStateChanged", (state) => {
-        // eslint-disable-next-line no-console
-        console.log("removeListener", { state });
-      });
+      unregisterListeners();
     };
   }, []);
 
@@ -68,5 +76,7 @@ var CastButtonComponent = requireNativeComponent(
     },
   }
 );
+
+const events = [CAST_STATE_CHANGED];
 
 export { Component };
