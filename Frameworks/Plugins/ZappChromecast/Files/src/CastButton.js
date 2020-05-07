@@ -11,6 +11,7 @@ type Props = {
 function registerListeners() {
   events.forEach((event) => {
     DeviceEventEmitter.addListener(GoogleCast[event], function () {
+      // eslint-disable-next-line no-console
       console.log(event, arguments);
     });
   });
@@ -19,6 +20,7 @@ function registerListeners() {
 function unregisterListeners() {
   events.forEach((event) => {
     DeviceEventEmitter.removeListener(GoogleCast[event], function () {
+      // eslint-disable-next-line no-console
       console.log(event, arguments);
     });
   });
@@ -37,6 +39,7 @@ function Component(props: Props) {
 
   React.useEffect(() => {
     registerListeners();
+    GoogleCast.hasConnectedCastSession();
 
     return () => {
       unregisterListeners();
@@ -49,16 +52,6 @@ function Component(props: Props) {
     return null;
   }
 }
-
-Component.propTypes = {
-  /**
-   * A flag that indicates whether a touch event on this button will trigger the display of the Cast dialog that is provided by the framework.
-   *
-   * By default this property is set to YES. If an application wishes to handle touch events itself, it should set the property to NO and register an appropriate target and action for the touch event.
-   * */
-  // triggersDefaultCastDialog: PropTypes.bool
-  // accessibilityLabel: PropTypes.string
-};
 
 var CastButtonComponent = requireNativeComponent(
   "ChromecastButton",
@@ -77,6 +70,15 @@ var CastButtonComponent = requireNativeComponent(
   }
 );
 
-const events = [CAST_STATE_CHANGED];
+// List of events that need we would like to register to
+const events = [
+  "CAST_STATE_CHANGED",
+  "SESSION_STARTED",
+  "SESSION_START_FAILED",
+  "SESSION_SUSPENDED",
+  "SESSION_RESUMING",
+  "SESSION_RESUMED",
+  "SESSION_ENDING",
+];
 
 export { Component };
