@@ -46,7 +46,7 @@ export default {
    * Native chromecast button component
    */
   Component,
-
+  CastHandler,
   /**
    * Sends a media item to be casted to the native module.
    * @param {object} Media
