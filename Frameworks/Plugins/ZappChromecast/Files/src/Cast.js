@@ -8,6 +8,7 @@ import {
 } from "react-native";
 
 import { Component } from "./CastButton";
+import { CastHandler } from "./CastHandler";
 const { RNGoogleCast: GoogleCast, RNGoogleCastEventEmitter } = NativeModules;
 
 type CastState =
@@ -46,7 +47,7 @@ export default {
    * Native chromecast button component
    */
   Component,
-
+  CastHandler,
   /**
    * Sends a media item to be casted to the native module.
    * @param {object} Media
