@@ -14,6 +14,7 @@ function registerListeners() {
   events.forEach((event) => {
     EventEmitter.addListener(GoogleCast[event], function () {
       GoogleCast.hasConnectedCastSession();
+      GoogleCast.getCastState();
     });
   });
 }
@@ -23,6 +24,7 @@ function unregisterListeners() {
   events.forEach((event) => {
     EventEmitter.removeListener(GoogleCast[event], function () {
       GoogleCast.hasConnectedCastSession();
+      GoogleCast.getCastState();
     });
   });
 }
@@ -41,6 +43,7 @@ function Component(props: Props) {
   React.useEffect(() => {
     registerListeners();
     GoogleCast.hasConnectedCastSession();
+    GoogleCast.getCastState();
 
     return () => {
       unregisterListeners();

@@ -43,11 +43,9 @@ const CAST_STATES = [
 ];
 
 export default {
-  /**
-   * Native chromecast button component
-   */
   Component,
   CastHandler,
+
   /**
    * Sends a media item to be casted to the native module.
    * @param {object} Media
@@ -63,36 +61,48 @@ export default {
    */
   getCastState(): CastState {
     return GoogleCast.getCastState().then((state) => {
+      this.castState = CAST_STATES[state];
       return CAST_STATES[state];
     });
   },
 
   /**
    * Returns whether the device is connected and ready to cast from native module.
-   * Sets the value of this.castingState
+   * Sets the value of this.readyToCast
    * @returns {boolean}
    */
   hasConnectedCastSession(): boolean {
     GoogleCast.hasConnectedCastSession().then((casting) => {
-      this.castingState = casting;
+      this.readyToCast = casting;
     });
-    return this.castingState;
+    return this.readyToCast;
   },
 
   /**
-   * Returns whether the value of this.castingState which determines if device is connected.
-   * Triggers hasConnectedCastSession method to retreive this data from the native.
-   * @returns {boolean} this.castingState
+   * Returns whether the value of this.readyToCast which determines if device is connected.
+   * @returns {boolean} this.readyToCast
    */
   get isCasting(): boolean {
-    this.hasConnectedCastSession();
-    return this.castingState;
+    return this.readyToCast;
   },
+
+  /**
+   * Returns whether the value of this.castState which has the last known cast state.
+   * @returns {string} this.castState
+   */
+  get status(): CastState {
+    return this.castState;
+  },
+
+  /**
+   * Resturns whether the device is connected and ready to cast.
+   */
+  readyToCast: false,
 
   /**
    * Stores the last known cast state of the device.
    */
-  castingState: false,
+  castState: null,
 
   /**
    * Begins (or resumes) playback of the current media item.
@@ -113,7 +123,6 @@ export default {
    * Seeks to a new position within the current media item.
    *
    * @param {number} playPosition
-   * @returns {*}
    */
   seek(playPosition: number) {
     return GoogleCast.seek(playPosition);
@@ -123,7 +132,6 @@ export default {
    * Sets playback volume on the device.
    *
    * @param {number} volume
-   * @returns {*}
    */
   setVolume(volume: number) {
     return GoogleCast.setVolume(volume);
