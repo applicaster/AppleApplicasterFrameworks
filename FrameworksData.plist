@@ -68,5 +68,12 @@
 		<key>plugin</key>
 		<true/>
 	</dict>
+	<key>ZappChromecast</key>
+	<dict>
+		<key>version_id</key>
+		<string>0.1.1</string>
+		<key>plugin</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

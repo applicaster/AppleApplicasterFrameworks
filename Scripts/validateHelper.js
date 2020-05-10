@@ -66,8 +66,11 @@ function validateSingleFrameworkPathes(model) {
     if (plugin == true) {
       if (
         fs.existsSync(`${baseFolderPath}/Templates/ios.json.ejs`) ||
+        fs.existsSync(`${baseFolderPath}/Templates/ios_for_quickbrick.json.ejs`) ||
         fs.existsSync(`${baseFolderPath}/Templates/tvos.json.ejs`) ||
-        fs.existsSync(`${baseFolderPath}/Templates/android.json.ejs`)
+        fs.existsSync(`${baseFolderPath}/Templates/tvos_for_quickbrick.json.ejs`) ||
+        fs.existsSync(`${baseFolderPath}/Templates/android.json.ejs`) ||
+        fs.existsSync(`${baseFolderPath}/Templates/android_for_quickbrick.json.ejs`)
 
       ) {
         if (
