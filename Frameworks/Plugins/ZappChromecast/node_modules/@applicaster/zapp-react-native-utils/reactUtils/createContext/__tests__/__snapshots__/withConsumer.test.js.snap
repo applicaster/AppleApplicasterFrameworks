@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createConsumer creates a context consumer function 1`] = `
+<Child
+  context="foo"
+  setContext={[MockFunction]}
+/>
+`;

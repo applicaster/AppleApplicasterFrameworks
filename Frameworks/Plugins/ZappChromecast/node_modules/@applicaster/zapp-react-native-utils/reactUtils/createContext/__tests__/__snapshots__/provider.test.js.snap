@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createProvider creates a context Provider component 1`] = `
+<mockConstructor
+  value={
+    Object {
+      "context": "initialValue",
+      "otherContext": "otherValue",
+      "setContext": [Function],
+      "setOtherContext": [Function],
+    }
+  }
+>
+  <MockChild
+    context="context"
+  />
+</mockConstructor>
+`;
+
+exports[`createProvider creates a context Provider component 2`] = `
+Object {
+  "children": <MockChild
+    context="context"
+  />,
+  "value": Object {
+    "context": "initialValue",
+    "otherContext": "otherValue",
+    "setContext": [Function],
+    "setOtherContext": [Function],
+  },
+}
+`;

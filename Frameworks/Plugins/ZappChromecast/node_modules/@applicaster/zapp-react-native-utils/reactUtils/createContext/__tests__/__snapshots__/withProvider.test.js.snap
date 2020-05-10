@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withProvider decorates a component with the provider 1`] = `
+<Provider>
+  <Component />
+</Provider>
+`;
