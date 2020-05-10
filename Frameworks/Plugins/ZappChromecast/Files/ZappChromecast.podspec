@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ZappChromecast"
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = "ZappChromecast"
   s.description      = <<-DESC
   ZappChromecast container.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'CMPS'
 	s.author           = "Applicaster LTD."
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-                         :tag => '2020.5.10.9-5-9'  }
+                         :tag => '2020.5.10.10-5-7'  }
   s.platform = :ios
   s.ios.deployment_target = '11.0'
   s.requires_arc = true
