@@ -65,6 +65,9 @@ jobs:
                                   command: npx npm-shell-login
 
                         - run:
+                                  name: Install node version 12.0.0
+                                  command: nvm install 12.0.0
+                        - run:
                                   name: Install npm dependencies
                                   command: yarn
 
