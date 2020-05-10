@@ -168,7 +168,7 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
         if (fs.existsSync(androidTemplatePath)) {
           await updateTemplate(ejsData, androidTemplatePath, androidManifestPath);
         }
-        if (fs.existsSync(tvosQBTemplatePath)) {
+        if (fs.existsSync(androidQBTemplatePath)) {
           await updateTemplate(ejsData, androidQBTemplatePath, androidQBManifestPath);
         }
       }
