@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createContext - when React has the new context API returns the components and the decorators 1`] = `
+Object {
+  "Consumer": [MockFunction],
+  "Provider": [MockFunction],
+  "withConsumer": [MockFunction],
+  "withProvider": [MockFunction],
+}
+`;

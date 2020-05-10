@@ -1,0 +1,1671 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 14,
+      "symbol": "ChromecastManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 15,
+      "symbol": "ChromecastManager.pluginIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 16,
+      "symbol": "ChromecastManager.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 17,
+      "symbol": "ChromecastManager.castMediaStartedCompletion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 19,
+      "symbol": "ChromecastManager.moduleName()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 23,
+      "symbol": "ChromecastManager.constantsToExport()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 29,
+      "symbol": "ChromecastManager.requiresMainQueueSetup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 33,
+      "symbol": "ChromecastManager.play()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 39,
+      "symbol": "ChromecastManager.stop()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 45,
+      "symbol": "ChromecastManager.pause()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 51,
+      "symbol": "ChromecastManager.seek(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 57,
+      "symbol": "ChromecastManager.setVolume(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 63,
+      "symbol": "ChromecastManager.showIntroductoryOverlay()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 69,
+      "symbol": "ChromecastManager.launchExpandedControls()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 75,
+      "symbol": "ChromecastManager.castMedia(_:resolver:rejecter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 90,
+      "symbol": "ChromecastManager.hasConnectedCastSession(_:rejecter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 102,
+      "symbol": "ChromecastManager.getCastState(_:rejecter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
+      "line": 114,
+      "symbol": "ChromecastManager.pluginInstance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 12,
+      "symbol": "RNEventEmitter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 13,
+      "symbol": "RNEventEmitter.emitter",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 15,
+      "symbol": "RNEventEmitter.Events",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 17,
+      "symbol": "RNEventEmitter.Events.CAST_STATE_CHANGED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 18,
+      "symbol": "RNEventEmitter.Events.SESSION_STARTED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 19,
+      "symbol": "RNEventEmitter.Events.SESSION_START_FAILED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 20,
+      "symbol": "RNEventEmitter.Events.SESSION_SUSPENDED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 21,
+      "symbol": "RNEventEmitter.Events.SESSION_RESUMING",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 22,
+      "symbol": "RNEventEmitter.Events.SESSION_RESUMED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 23,
+      "symbol": "RNEventEmitter.Events.SESSION_ENDING",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 24,
+      "symbol": "RNEventEmitter.Events.MEDIA_STATUS_UPDATED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 25,
+      "symbol": "RNEventEmitter.Events.MEDIA_PLAYBACK_STARTED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 26,
+      "symbol": "RNEventEmitter.Events.MEDIA_PLAYBACK_ENDED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 27,
+      "symbol": "RNEventEmitter.Events.MEDIA_PROGRESS_UPDATED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 28,
+      "symbol": "RNEventEmitter.Events.CHANNEL_CONNECTED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 29,
+      "symbol": "RNEventEmitter.Events.CHANNEL_DISCONNECTED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 30,
+      "symbol": "RNEventEmitter.Events.CHANNEL_MESSAGE_RECEIVED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 33,
+      "symbol": "RNEventEmitter.sendEvent(for:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 37,
+      "symbol": "RNEventEmitter.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/RNEventEmitter.swift",
+      "line": 42,
+      "symbol": "RNEventEmitter.supportedEvents()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 12,
+      "symbol": "ChromecastButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 13,
+      "symbol": "ChromecastButton.origin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 18,
+      "symbol": "ChromecastButton.tintColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 24,
+      "symbol": "ChromecastButton.pluginIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 25,
+      "symbol": "ChromecastButton.buttonIconColorKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 27,
+      "symbol": "ChromecastButton.init(eventDispatcher:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 32,
+      "symbol": "ChromecastButton.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 36,
+      "symbol": "ChromecastButton.addButton()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 42,
+      "symbol": "ChromecastButton.updateButtonTintColor()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 50,
+      "symbol": "ChromecastButton.updateButtonOrigin()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButton.swift",
+      "line": 58,
+      "symbol": "ChromecastButton.pluginInstance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButtonManagerBridge.swift",
+      "line": 13,
+      "symbol": "ChromecastButtonManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButtonManagerBridge.swift",
+      "line": 14,
+      "symbol": "ChromecastButtonManager.chromecastModuleName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButtonManagerBridge.swift",
+      "line": 16,
+      "symbol": "ChromecastButtonManager.moduleName()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButtonManagerBridge.swift",
+      "line": 20,
+      "symbol": "ChromecastButtonManager.requiresMainQueueSetup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButtonManagerBridge.swift",
+      "line": 24,
+      "symbol": "ChromecastButtonManager.methodQueue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/ChromecastButton/ChromecastButtonManagerBridge.swift",
+      "line": 28,
+      "symbol": "ChromecastButtonManager.view()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 11,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 12,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 13,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 13,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 13,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 13,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 13,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 13,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 13,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 13,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 14,
+      "symbol": "ChromecastAdapter.configurationJSON",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 16,
+      "symbol": "ChromecastAdapter.enabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 17,
+      "symbol": "ChromecastAdapter.initialized",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 19,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 19,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 26,
+      "symbol": "ChromecastAdapter.PluginKeys.applicationID",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 27,
+      "symbol": "ChromecastAdapter.PluginKeys.posterUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 28,
+      "symbol": "ChromecastAdapter.PluginKeys.showMiniControls",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 31,
+      "symbol": "ChromecastAdapter.chromecastAppId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 39,
+      "symbol": "ChromecastAdapter.pluginPosterURL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 47,
+      "symbol": "ChromecastAdapter.shouldShowMiniControls",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 60,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 63,
+      "symbol": "ChromecastAdapter.castViewExtender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 81,
+      "symbol": "ChromecastAdapter.localLastActiveChromecastButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 84,
+      "symbol": "ChromecastAdapter.localTriggeredChromecastButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 86,
+      "symbol": "ChromecastAdapter.localContainerViewEventsDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 97,
+      "symbol": "ChromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 101,
+      "symbol": "ChromecastAdapter.castMediaClient",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 102,
+      "symbol": "ChromecastAdapter.castSession",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 103,
+      "symbol": "ChromecastAdapter.castButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 105,
+      "symbol": "ChromecastAdapter.connectivityState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 110,
+      "symbol": "ChromecastAdapter.shouldPresentIntroductionScreen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 113,
+      "symbol": "ChromecastAdapter.mediaInfo",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 115,
+      "symbol": "ChromecastAdapter.castDidStartMediaSession",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 118,
+      "symbol": "ChromecastAdapter.miniMediaControlsViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 120,
+      "symbol": "ChromecastAdapter.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 125,
+      "symbol": "ChromecastAdapter.presentIntroductionScreenIfNeeded()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
+      "line": 132,
+      "symbol": "ChromecastAdapter.updateManagerState(enabled:initialized:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 13,
+      "symbol": "ChromecastAnalytics",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 15,
+      "symbol": "ChromecastAnalytics.ChromecastEventName",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 16,
+      "symbol": "ChromecastAnalytics.ChromecastEventName.IconTapped",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 17,
+      "symbol": "ChromecastAnalytics.ChromecastEventName.openExpandedControl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 18,
+      "symbol": "ChromecastAnalytics.ChromecastEventName.closeExpandedControl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 19,
+      "symbol": "ChromecastAnalytics.ChromecastEventName.startCasting",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 20,
+      "symbol": "ChromecastAnalytics.ChromecastEventName.stopCasting",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 21,
+      "symbol": "ChromecastAnalytics.ChromecastEventName.castingError",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 24,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 25,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties.IconLocation",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 26,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties.InVideo",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 27,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties.VideoProperties",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 28,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties.Trigger",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 29,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties.VideoTimecode",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 30,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties.ErrorID",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 31,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties.ChromecastFrameworkVersion",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 32,
+      "symbol": "ChromecastAnalytics.ChromecastEventProperties.CustomProperties",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 35,
+      "symbol": "ChromecastAnalytics.controlType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 36,
+      "symbol": "ChromecastAnalytics.controlType.mini",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 37,
+      "symbol": "ChromecastAnalytics.controlType.expanded",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 38,
+      "symbol": "ChromecastAnalytics.controlType.noting",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 41,
+      "symbol": "ChromecastAnalytics.getVideoPropertiesFromMetadata(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 57,
+      "symbol": "ChromecastAnalytics.isChromecastStreaming()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 68,
+      "symbol": "ChromecastAnalytics.videoTimecode()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 79,
+      "symbol": "ChromecastAnalytics.stringFromTimeInterval(interval:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 88,
+      "symbol": "ChromecastAnalytics.getViewType(triggeredChromecastButton:isStreaming:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 98,
+      "symbol": "ChromecastAnalytics.getChromecastSDKVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 103,
+      "symbol": "ChromecastAnalytics.sendChromecastButtonDidTappedEvent(lastActiveChromecastButton:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 130,
+      "symbol": "ChromecastAnalytics.sendOpenExpandedControlsEvent(triggeredChromecastButton:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 148,
+      "symbol": "ChromecastAnalytics.sendCloseExpandedControlsEvent(triggeredChromecastButton:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 164,
+      "symbol": "ChromecastAnalytics.fillStreamingParams(to:shouldAddTimeCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 188,
+      "symbol": "ChromecastAnalytics.sendStartCastingEvent(triggeredChromecastButton:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 211,
+      "symbol": "ChromecastAnalytics.sendStopCastingEvent(triggeredChromecastButton:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAnalytics.swift",
+      "line": 235,
+      "symbol": "ChromecastAnalytics.sendChromecastErrorReportEvent(triggeredChromecastButton:request:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 12,
+      "symbol": "ChromecastExpandedMediaControlsViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 14,
+      "symbol": "ChromecastExpandedMediaControlsViewController.chromecastAdapter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 16,
+      "symbol": "ChromecastExpandedMediaControlsViewController.init(adapter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 21,
+      "symbol": "ChromecastExpandedMediaControlsViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 25,
+      "symbol": "ChromecastExpandedMediaControlsViewController.isExpandedMediaControlsViewControllerAvailable()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 33,
+      "symbol": "ChromecastExpandedMediaControlsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 51,
+      "symbol": "ChromecastExpandedMediaControlsViewController.viewDidDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 60,
+      "symbol": "ChromecastExpandedMediaControlsViewController.shouldAutorotate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 64,
+      "symbol": "ChromecastExpandedMediaControlsViewController.supportedInterfaceOrientations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastExpandedMediaControlsViewController.swift",
+      "line": 68,
+      "symbol": "ChromecastExpandedMediaControlsViewController.addChild(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 11,
+      "symbol": "ChromecastPlayableItem",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 12,
+      "symbol": "ChromecastPlayableItem.Metadata",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 13,
+      "symbol": "ChromecastPlayableItem.Metadata.title",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 14,
+      "symbol": "ChromecastPlayableItem.Metadata.summary",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 15,
+      "symbol": "ChromecastPlayableItem.Metadata.duration",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 16,
+      "symbol": "ChromecastPlayableItem.Metadata.mediaUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 17,
+      "symbol": "ChromecastPlayableItem.Metadata.content_type",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 18,
+      "symbol": "ChromecastPlayableItem.Metadata.analytics",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 19,
+      "symbol": "ChromecastPlayableItem.Metadata.imageUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 20,
+      "symbol": "ChromecastPlayableItem.Metadata.posterUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 24,
+      "symbol": "ChromecastPlayableItem.entry",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 26,
+      "symbol": "ChromecastPlayableItem.init(entry:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 31,
+      "symbol": "ChromecastPlayableItem.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 35,
+      "symbol": "ChromecastPlayableItem.summary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 39,
+      "symbol": "ChromecastPlayableItem.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 43,
+      "symbol": "ChromecastPlayableItem.src",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 47,
+      "symbol": "ChromecastPlayableItem.analytics",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 51,
+      "symbol": "ChromecastPlayableItem.isLive",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 55,
+      "symbol": "ChromecastPlayableItem.defaultImageUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastPlayableItem.swift",
+      "line": 59,
+      "symbol": "ChromecastPlayableItem.chromecastPosterImageUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 14,
+      "symbol": "ChromecastAdapter.extendedPlayerControlsOrientationMask()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 18,
+      "symbol": "ChromecastAdapter.getMiniPlayerControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 25,
+      "symbol": "ChromecastAdapter.getExpandedPlayerControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 33,
+      "symbol": "ChromecastAdapter.getInlinePlayerControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 43,
+      "symbol": "ChromecastAdapter.play(playableItems:playPosition:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 50,
+      "symbol": "ChromecastAdapter.presentExtendedPlayerControls()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 61,
+      "symbol": "ChromecastAdapter.hasAvailableChromecastDevices()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 69,
+      "symbol": "ChromecastAdapter.getCurrentCastState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastExtendedPlayerControlsProtocol.swift",
+      "line": 77,
+      "symbol": "ChromecastAdapter.canShowPlayerBeforeCastSync()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 14,
+      "symbol": "ChromecastAdapter.createMiniPlayerViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 25,
+      "symbol": "ChromecastAdapter.getMiniMediaControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 29,
+      "symbol": "ChromecastAdapter.uninstallMiniPlayerViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 46,
+      "symbol": "ChromecastAdapter.updateVisibilityOfMiniPlayerViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 50,
+      "symbol": "ChromecastAdapter.installMiniPlayerViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 77,
+      "symbol": "ChromecastAdapter.updateVisibilityOfMiniPlayerViewController(needUpdateAppearance:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 81,
+      "symbol": "ChromecastAdapter.updateVisibilityOfMiniPlayerViewController(needUpdateAppearance:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastMiniPlayerViewControllerProtocol.swift",
+      "line": 122,
+      "symbol": "ChromecastAdapter.updateParentViewControllerLayout(_:needToNotifyListeners:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 13,
+      "symbol": "kChromecastPosterDefaultKey",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 15,
+      "symbol": "ChromecastPlayerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 16,
+      "symbol": "ChromecastPlayerProtocol.prepareToPlay(playableItems:playPosition:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 20,
+      "symbol": "ChromecastAdapter.prepareToPlay(playableItems:playPosition:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 46,
+      "symbol": "ChromecastAdapter.parsePlayableToGCKMediaInformation(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 71,
+      "symbol": "ChromecastAdapter.getStreamType(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 75,
+      "symbol": "ChromecastAdapter.getGCKMediaMetadata(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 116,
+      "symbol": "ChromecastAdapter.getGCKMediaTracks(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 121,
+      "symbol": "ChromecastAdapter.getDuration(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 129,
+      "symbol": "ChromecastAdapter.getContentID(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 133,
+      "symbol": "ChromecastAdapter.getContentSource(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 137,
+      "symbol": "ChromecastAdapter.getTrackStyle(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastPlayerProtocol.swift",
+      "line": 141,
+      "symbol": "ChromecastAdapter.getContentType(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 14,
+      "symbol": "ChromecastAdapter.isEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 18,
+      "symbol": "ChromecastAdapter.containerViewEventsDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 27,
+      "symbol": "ChromecastAdapter.triggeredChromecastButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 36,
+      "symbol": "ChromecastAdapter.lastActiveChromecastButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 45,
+      "symbol": "ChromecastAdapter.prepareChromecastForUse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 79,
+      "symbol": "ChromecastAdapter.hasConnectedCastSession()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 87,
+      "symbol": "ChromecastAdapter.getConnectedDeviceName()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 95,
+      "symbol": "ChromecastAdapter.createChromecastButton(frame:customIcons:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 118,
+      "symbol": "ChromecastAdapter.createChromecastButton(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 123,
+      "symbol": "ChromecastAdapter.presentCastInstructionsViewControllerOnce(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 132,
+      "symbol": "ChromecastAdapter.play()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 141,
+      "symbol": "ChromecastAdapter.stop()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 150,
+      "symbol": "ChromecastAdapter.pause()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 159,
+      "symbol": "ChromecastAdapter.seek(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 171,
+      "symbol": "ChromecastAdapter.setVolume(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 179,
+      "symbol": "ChromecastAdapter.defaultExpandedMediaControlsViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 187,
+      "symbol": "ChromecastAdapter.getShouldPresentIntroductionScreen()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 191,
+      "symbol": "ChromecastAdapter.showCustomDevicesDialog(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 195,
+      "symbol": "ChromecastAdapter.addButton(to:key:color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 236,
+      "symbol": "ChromecastAdapter.createButtonIfNeeded(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ChromecastProtocol.swift",
+      "line": 250,
+      "symbol": "ChromecastAdapter.chromecastButtonTapped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 11,
+      "symbol": "ConnectivityProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 12,
+      "symbol": "ConnectivityProtocol.isCastSessionConnected()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 13,
+      "symbol": "ConnectivityProtocol.isReachableViaWiFi()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 14,
+      "symbol": "ConnectivityProtocol.addConnectivityListener()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 15,
+      "symbol": "ConnectivityProtocol.removeConnectivityListener()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 16,
+      "symbol": "ConnectivityProtocol.updateCastButtonVisibility()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 22,
+      "symbol": "ChromecastAdapter.isCastSessionConnected()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 26,
+      "symbol": "ChromecastAdapter.isReachableViaWiFi()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 31,
+      "symbol": "ChromecastAdapter.addConnectivityListener()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 35,
+      "symbol": "ChromecastAdapter.removeConnectivityListener()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 39,
+      "symbol": "ChromecastAdapter.updateCastButtonVisibility()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
+      "line": 61,
+      "symbol": "ChromecastAdapter.connectivityStateChanged(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKLoggerDelegate.swift",
+      "line": 14,
+      "symbol": "ChromecastAdapter.logMessage(_:fromFunction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKRequestDelegate.swift",
+      "line": 15,
+      "symbol": "ChromecastAdapter.requestDidComplete(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKRequestDelegate.swift",
+      "line": 22,
+      "symbol": "ChromecastAdapter.request(_:didFailWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKSessionManagerListener.swift",
+      "line": 14,
+      "symbol": "ChromecastAdapter.sessionManager(_:willStart:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKSessionManagerListener.swift",
+      "line": 22,
+      "symbol": "ChromecastAdapter.sessionManager(_:didStart:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKSessionManagerListener.swift",
+      "line": 28,
+      "symbol": "ChromecastAdapter.sessionManager(_:didStart:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKSessionManagerListener.swift",
+      "line": 45,
+      "symbol": "ChromecastAdapter.sessionManager(_:willEnd:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKSessionManagerListener.swift",
+      "line": 62,
+      "symbol": "ChromecastAdapter.sessionManager(_:didEnd:withError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKSessionManagerListener.swift",
+      "line": 80,
+      "symbol": "ChromecastAdapter.attachMediaClient(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKSessionManagerListener.swift",
+      "line": 88,
+      "symbol": "ChromecastAdapter.detachMediaClient()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKSessionManagerListener.swift",
+      "line": 98,
+      "symbol": "ChromecastAdapter.remoteMediaClient(_:didStartMediaSessionWithID:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKUIMiniMediaControlsViewControllerDelegate.swift",
+      "line": 14,
+      "symbol": "ChromecastAdapter.miniMediaControlsViewController(_:shouldAppear:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+Observers.swift",
+      "line": 16,
+      "symbol": "ChromecastAdapter.addObservers()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+Observers.swift",
+      "line": 46,
+      "symbol": "ChromecastAdapter.removeObservers()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+Observers.swift",
+      "line": 62,
+      "symbol": "ChromecastAdapter.appDidBecomeActive()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+Observers.swift",
+      "line": 66,
+      "symbol": "ChromecastAdapter.castDeviceDidChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+Observers.swift",
+      "line": 84,
+      "symbol": "ChromecastAdapter.presentExpandedMediaControls(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+Observers.swift",
+      "line": 88,
+      "symbol": "ChromecastAdapter.castDialogWillShow(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast"
+}
