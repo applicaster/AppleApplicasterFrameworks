@@ -97,6 +97,18 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
           platform: "ios",
           template: true
         });
+
+        const iosQBManifestPath = manifestPath({
+          model,
+          platform: "ios_for_quickbrick",
+          template: false
+        });
+        const iosQBTemplatePath = manifestPath({
+          model,
+          platform: "ios_for_quickbrick",
+          template: true
+        });
+
         const tvosManifestPath = manifestPath({
           model,
           platform: "tvos",
@@ -107,11 +119,57 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
           platform: "tvos",
           template: true
         });
+
+        const tvosQBManifestPath = manifestPath({
+          model,
+          platform: "tvos_for_quickbrick",
+          template: false
+        });
+        const tvosQBTemplatePath = manifestPath({
+          model,
+          platform: "tvos_for_quickbrick",
+          template: true
+        });
+
+        const androidManifestPath = manifestPath({
+          model,
+          platform: "android",
+          template: false
+        });
+        const androidTemplatePath = manifestPath({
+          model,
+          platform: "android",
+          template: true
+        });
+
+        const androidQBManifestPath = manifestPath({
+          model,
+          platform: "android_for_quickbrick",
+          template: false
+        });
+        const androidQBTemplatePath = manifestPath({
+          model,
+          platform: "android_for_quickbrick",
+          template: true
+        });
+
         if (fs.existsSync(iosTemplatePath)) {
           await updateTemplate(ejsData, iosTemplatePath, iosManifestPath);
         }
+        if (fs.existsSync(iosQBTemplatePath)) {
+          await updateTemplate(ejsData, iosQBTemplatePath, iosQBManifestPath);
+        }
         if (fs.existsSync(tvosTemplatePath)) {
           await updateTemplate(ejsData, tvosTemplatePath, tvosManifestPath);
+        }
+        if (fs.existsSync(tvosQBTemplatePath)) {
+          await updateTemplate(ejsData, tvosQBTemplatePath, tvosQBManifestPath);
+        }
+        if (fs.existsSync(androidTemplatePath)) {
+          await updateTemplate(ejsData, androidTemplatePath, androidManifestPath);
+        }
+        if (fs.existsSync(tvosQBTemplatePath)) {
+          await updateTemplate(ejsData, androidQBTemplatePath, androidQBManifestPath);
         }
       }
     });
@@ -138,9 +196,29 @@ async function uploadManifestsToZapp(itemsToUpdate) {
           platform: "ios",
           template: false
         });
+        const iosQBManifestPath = manifestPath({
+          model,
+          platform: "ios_for_quickbrick",
+          template: false
+        });
         const tvosManifestPath = manifestPath({
           model,
           platform: "tvos",
+          template: false
+        });
+        const tvosQBManifestPath = manifestPath({
+          model,
+          platform: "tvos_for_quickbrick",
+          template: false
+        });
+        const androidManifestPath = manifestPath({
+          model,
+          platform: "android",
+          template: false
+        });
+        const androidQBManifestPath = manifestPath({
+          model,
+          platform: "android_for_quickbrick",
           template: false
         });
 
@@ -149,9 +227,29 @@ async function uploadManifestsToZapp(itemsToUpdate) {
             `zappifest publish --manifest ${iosManifestPath} --access-token ${zappToken} --account ${zappAccount}`
           );
         }
+        if (iosQBManifestPath && fs.existsSync(iosQBManifestPath)) {
+          await shell.exec(
+            `zappifest publish --manifest ${iosQBManifestPath} --access-token ${zappToken} --account ${zappAccount}`
+          );
+        }
         if (tvosManifestPath && fs.existsSync(tvosManifestPath)) {
           await shell.exec(
             `zappifest publish --manifest ${tvosManifestPath} --access-token ${zappToken} --account ${zappAccount}`
+          );
+        }
+        if (tvosQBManifestPath && fs.existsSync(tvosQBManifestPath)) {
+          await shell.exec(
+            `zappifest publish --manifest ${tvosQBManifestPath} --access-token ${zappToken} --account ${zappAccount}`
+          );
+        }
+        if (androidManifestPath && fs.existsSync(androidManifestPath)) {
+          await shell.exec(
+            `zappifest publish --manifest ${androidManifestPath} --access-token ${zappToken} --account ${zappAccount}`
+          );
+        }
+        if (androidQBManifestPath && fs.existsSync(androidQBManifestPath)) {
+          await shell.exec(
+            `zappifest publish --manifest ${androidQBManifestPath} --access-token ${zappToken} --account ${zappAccount}`
           );
         }
       }
