@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
-const { readFrameworkDataPlist } = require("./Helpers.js");
-const { validateSingleFramework } = require("./validateHelper");
+const { readPluginsList } = require("./Helpers.js");
+const { validateSinglePlugin } = require("./validateHelper");
 
-const frameworksList = readFrameworkDataPlist();
-const keys = Object.keys(frameworksList);
-
-keys.forEach(framework => {
-  if (framework) {
-    validateSingleFramework(framework);
+const pluginsList = readPluginsList();
+pluginsList.forEach(plugin => {
+  if (plugin) {
+    validateSinglePlugin(plugin);
   }
 });
 
-console.log("\nAll Frameworks are valid!!!");
+console.log("\nAll Frameworks are valid!!!\n");

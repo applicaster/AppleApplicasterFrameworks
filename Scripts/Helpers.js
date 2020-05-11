@@ -1,14 +1,38 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const plist = require("plist");
 const semver = require("semver");
 const moment = require("moment");
+const { readdirSync, statSync } = require('fs')
+const { join } = require('path')
 
-function readFrameworkDataPlist() {
-  const plistData = fs.readFileSync("./FrameworksData.plist", "utf8");
-  const parsedData = plist.parse(plistData);
+const dirs = p => readdirSync(p).filter(f => statSync(join(p, f)).isDirectory())
+
+function readPluginsList() {
+  const path = './plugins/';
+  return dirs(path)
+}
+
+function readPluginConfig(plugin) {
+  const package = fs.readFileSync(`./plugins/${plugin}/Files/package.json`, "utf8");
+  const parsedData = JSON.parse(package);
   return parsedData;
+}
+
+function supportsApple(plugin) {
+  const pluginConfig = readPluginConfig(plugin)
+  return (pluginConfig.applicaster.supportedPlatforms.indexOf(searchStr) > -1)
+}
+
+function readAppleFrameworkName(plugin) {
+  fs.readdir(dirpath, function(err, files) {
+    const podspec = files.filter(el => /\.podspec$/.test(el))
+    console.log(podspec);
+  })
+}
+
+function updateVersion(string, version) {
+  return string.replace("##version##", version)
 }
 
 function proccessArgs() {
@@ -54,17 +78,6 @@ function gitTagDate() {
   return moment().format("Y.M.D.H-M-S");
 }
 
-function basePathForModel(model) {
-  if (model) {
-    const { framework = null, plugin = null } = model;
-    const frameworkFolder = "Frameworks";
-    return plugin
-      ? `${frameworkFolder}/Plugins/${framework}`
-      : `${frameworkFolder}/${framework}`;
-  }
-  return null;
-}
-
 async function runInSequence(items, asyncFunc) {
   return items.reduce(async (previous, current) => {
     await previous;
@@ -79,8 +92,11 @@ async function runInParallel(commands) {
 }
 
 module.exports = {
-  basePathForModel,
-  readFrameworkDataPlist,
+  readPluginConfig,
+  readPluginsList,
+  supportsApple,
+  readAppleFrameworkName,
+  updateVersion
   proccessArgs,
   abort,
   circleBranch,

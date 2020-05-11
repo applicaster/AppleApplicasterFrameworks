@@ -2,81 +2,77 @@
 // set -e
 
 const {
-  readFrameworkDataPlist,
-  abort,
-  basePathForModel
+  readPluginConfig,
+  supportsApple,
+  readAppleFrameworkName,
+  abort
 } = require("./Helpers.js");
 const fs = require("fs");
 
-function validateSingleFramework(frameworkToCheck) {
-  const frameworksList = readFrameworkDataPlist();
-  console.log(`\nValidating Framework: '${frameworkToCheck}'\n`);
-  let pluginData = frameworksList[frameworkToCheck];
-  console.log({ pluginData });
-  pluginData["framework"] = frameworkToCheck;
+function validateSinglePlugin(plugin) {
+  // const frameworksList = readFrameworkDataPlist();
+  console.log(`\nValidating plugin: '${plugin}'\n`);
   if (
-    pluginData &&
-    validateSingleFrameworkDataInPlist(pluginData) &&
-    validateSingleFrameworkPathes(pluginData)
+    validateSinglePluginData(plugin) &&
+    validateSinglePluginPathes(plugin)
   ) {
-    console.log(`\n'${frameworkToCheck}' is Valid`);
+    console.log(`\n'${plugin}' is Valid`);
   } else {
     abort(
-      `\nError: Framework: '${frameworkToCheck}' Validation failed. \
+      `\nError: Framework: '${plugin}' Validation failed. \
       \nPlease check documentation in project repo and add missed items.`
     );
   }
 }
 
-function validateSingleFrameworkDataInPlist(model) {
-  const baseFolderPath = basePathForModel(model);
+function validateSinglePluginData(plugin) {
+  const { name = null, version = null } = config = readPluginConfig(plugin);
 
-  const { version_id = null, framework = null } = model;
-  if (framework && version_id && baseFolderPath) {
+  if (config.name && config.version) {
     console.log(
-      `Framework: '${framework}' All keys was defined in 'FrameworksData.plist'`
+      `Plugin: '${plugin}' - All keys fetched correctly from 'package.json'`
     );
     return true;
   } else {
     console.log(
-      `Framework: '${framework}': Required data in 'FrameworksData.plist' does not exists`
+      `Plugin: '${plugin}': - 'package.json' does not exists`
     );
     return false;
   }
 }
 
-function validateSingleFrameworkPathes(model) {
-  const baseFolderPath = basePathForModel(model);
-
-  const { plugin = null, framework = null } = model;
-
+function validateSinglePluginPathes(plugin) {
+  const { name = null, version = null, applicaster = null } = config = readPluginConfig(plugin);
+  const baseFolderPath = `./${plugin}`
   console.log(
-    `Validating requiered pathes for Framework: ${framework}, Plugin:${plugin},  BasePath: '${baseFolderPath}'`
+    `Validating required pathes for: ${plugin}'`
   );
-  const succeedText = `framework: '${framework}':All required files exist`;
+  const succeedText = `framework: '${plugin}':All required files exist`;
+  const isPlugin = fs.existsSync(`${baseFolderPath}/Templates/manifest.config.js`)
+  const supportedPlatforms = config.applicaster.supportedPlatforms
+  console.log(`is plugin: ${isPlugin}`)
 
   if (
-    fs.existsSync(baseFolderPath) &&
     fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
-    fs.existsSync(`${baseFolderPath}/Templates/${framework}.podspec.ejs`) &&
     fs.existsSync(`${baseFolderPath}/.jazzy.yaml`) &&
-    fs.existsSync(`${baseFolderPath}/Podfile`) &&
     fs.existsSync(`${baseFolderPath}/Files`)
   ) {
-    if (plugin == true) {
-      if (
-        fs.existsSync(`${baseFolderPath}/Templates/ios.json.ejs`) ||
-        fs.existsSync(`${baseFolderPath}/Templates/tvos.json.ejs`)
-      ) {
+    if (isPlugin == true) {
         if (
-          fs.existsSync(`${baseFolderPath}/Files/${framework}.podspec`) &&
-          fs.existsSync(`${baseFolderPath}/Files/package.json`)
+          supportsApple(plugin) &&
+          readAppleFrameworkName(plugin)
         ) {
           console.log(succeedText);
           return true;
         }
-      }
-    } else if (fs.existsSync(`${framework}.podspec`)) {
+        else {
+          console.log(succeedText);
+          return true;
+        }
+    } else if (
+      supportsApple(plugin) &&
+      readAppleFrameworkName(plugin)
+    ) {
       console.log(succeedText);
       return true;
     }
@@ -84,4 +80,4 @@ function validateSingleFrameworkPathes(model) {
   return false;
 }
 
-module.exports = { validateSingleFramework };
+module.exports = { validateSinglePlugin };
