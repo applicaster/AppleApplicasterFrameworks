@@ -136,68 +136,67 @@ public class GoogleCastModule
     public void showCastPicker() {
         runOnUiQueueThread(() -> {
             GoogleCastButtonManager.getGoogleCastButtonManagerInstance().performClick();
-                            Log.d(REACT_CLASS, "showCastPicker... ");
-                        });
+            Log.d(REACT_CLASS, "showCastPicker... ");
+        });
+    }
+
+    @ReactMethod
+    public void castMedia(final ReadableMap params, Promise promise) {
+        if (mCastSession == null) {
+            return;
+        }
+        runOnUiQueueThread(() -> {
+            RemoteMediaClient remoteMediaClient = mCastSession.getRemoteMediaClient();
+            if (remoteMediaClient == null) {
+                return;
+            }
+            MediaInfo mediaInfo;
+            try {
+                mediaInfo = MediaInfoBuilder.buildMediaInfo(params);
+            } catch (IllegalArgumentException e) {
+                APLogger.error("CastManager", "buildMediaInfo failed", e);
+                promise.reject("buildMediaInfo failed", e);
+                return;
             }
 
-            @ReactMethod
-            public void castMedia(final ReadableMap params, Promise promise) {
-                if (mCastSession == null) {
-                    return;
-                }
-                runOnUiQueueThread(() -> {
-                    RemoteMediaClient remoteMediaClient = mCastSession.getRemoteMediaClient();
-                    if (remoteMediaClient == null) {
-                        return;
-                    }
-                    MediaInfo mediaInfo;
-                    try {
-                        mediaInfo = MediaInfoBuilder.buildMediaInfo(params);
-                    }
-                    catch(IllegalArgumentException e){
-                        APLogger.error("CastManager", "buildMediaInfo failed", e);
-                        promise.reject("buildMediaInfo failed", e);
-                        return;
-                    }
+            Analytics analytics = mPlugin.getAnalytics();
+            if (null != analytics) {
+                ReadableMap map = ReadableMapUtils.getReadableMap(params, "analytics");
+                Map<String, String> movieData = AnalyticsBuilder.convert(map);
+                analytics.onCastRequest(movieData);
+            }
 
-                    Analytics analytics = mPlugin.getAnalytics();
-                    if(null != analytics) {
-                        ReadableMap map = ReadableMapUtils.getReadableMap(params, "analytics");
-                        Map<String, String> movieData = AnalyticsBuilder.convert(map);
-                        analytics.onCastRequest(movieData);
-                    }
+            Integer seconds = null;
+            if (params.hasKey("playPosition")) {
+                seconds = params.getInt("playPosition");
+            }
+            if (seconds == null) {
+                seconds = 0;
+            }
+            MediaLoadOptions options = new MediaLoadOptions.Builder()
+                    .setAutoplay(true)
+                    .setPlayPosition(seconds * 1000)
+                    .build();
 
-                    Integer seconds = null;
-                    if (params.hasKey("playPosition")) {
-                        seconds = params.getInt("playPosition");
-                    }
-                    if (seconds == null) {
-                        seconds = 0;
-                    }
-                    MediaLoadOptions options = new MediaLoadOptions.Builder()
-                            .setAutoplay(true)
-                            .setPlayPosition(seconds * 1000)
-                            .build();
-
-                    PendingResult<RemoteMediaClient.MediaChannelResult> result = remoteMediaClient.load(mediaInfo, options);
-                    result.setResultCallback(mediaChannelResult -> {
+            PendingResult<RemoteMediaClient.MediaChannelResult> result = remoteMediaClient.load(mediaInfo, options);
+            result.setResultCallback(mediaChannelResult -> {
                         MediaError mediaError = mediaChannelResult.getMediaError();
                         if (null == mediaError) {
                             promise.resolve(true);
                         } else {
                             String errorMessage = "";
                             Integer detailedErrorCode = mediaError.getDetailedErrorCode();
-                            if(null != detailedErrorCode) {
+                            if (null != detailedErrorCode) {
                                 errorMessage += " error code: " + detailedErrorCode;
                                 errorMessage += " error string: " + CastStatusCodes.getStatusCodeString(detailedErrorCode);
                             }
                             String reason = mediaError.getReason();
-                            if(reason != null) {
+                            if (reason != null) {
                                 errorMessage += " reason: " + reason;
                             }
                             APLogger.error("CastManager", errorMessage);
                             promise.reject("Cast failed", errorMessage);
-                            if(null != analytics) {
+                            if (null != analytics) {
                                 analytics.reportCastFailure(mediaError);
                             }
                         }
