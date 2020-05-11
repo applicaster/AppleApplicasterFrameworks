@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import com.applicaster.analytics.AnalyticsAgentUtil;
 import com.applicaster.util.APLogger;
 import com.google.android.gms.cast.CastStatusCodes;
+import com.google.android.gms.cast.MediaError;
 import com.google.android.gms.cast.MediaStatus;
 import com.google.android.gms.cast.framework.CastContext;
 import com.google.android.gms.cast.framework.CastSession;
@@ -158,8 +159,20 @@ public class Analytics {
         sessionManager.removeSessionManagerListener(mSessionManagerListener, CastSession.class);
     }
 
-    public void onCastRequest(Map<String, String> params) {
+    public void onCastRequest(@NotNull Map<String, String> params) {
         mCurrentVideoInfo = params;
+    }
+
+    public void reportCastFailure(@NotNull MediaError mediaError) {
+        Integer detailedErrorCode = mediaError.getDetailedErrorCode();
+        String errorString = "Cast media failed.";
+        String reason = mediaError.getReason();
+        if(reason != null) {
+            errorString += " reason: " + reason;
+        }
+        Map<String,String> parameters = new HashMap<>();
+        addVideoParameters(parameters);
+        postErrorEvent(null != detailedErrorCode ? detailedErrorCode : 0, parameters, errorString);
     }
 
     private class RemoteMediaClientListener
@@ -260,16 +273,20 @@ public class Analytics {
         private void postError(int error) {
             Map<String, String> parameters = getParameters();
             String codeString = CastStatusCodes.getStatusCodeString(error);
-            parameters.put(EventParamErrorID, "" + error);
-            parameters.put(EventParamErrorMessage, codeString);
-            parameters.put(EventParamCastFrameworkVersion, BuildConfig.castFrameworkVersion);
-            postEvent(EventChromecastReturnsError, parameters);
+            postErrorEvent(error, parameters, codeString);
         }
 
         @Override
         public void onProgressUpdated(long progressMs, long durationMs) {
             mLastSeenProgress = progressMs / 1000;
         }
+    }
+
+    private void postErrorEvent(int error, Map<String, String> parameters, String codeString) {
+        parameters.put(EventParamErrorID, "" + error);
+        parameters.put(EventParamErrorMessage, codeString);
+        parameters.put(EventParamCastFrameworkVersion, BuildConfig.castFrameworkVersion);
+        postEvent(EventChromecastReturnsError, parameters);
     }
 
     public void hostResume() {
