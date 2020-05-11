@@ -9,7 +9,7 @@
   "files": [
     "tvos",
     "ios",
-    "Universal",
+    "universal",
     "src",
     "ZappGoogleInteractiveMediaAds.podspec"
   ],

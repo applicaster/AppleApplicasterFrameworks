@@ -21,7 +21,7 @@ const baseManifest = {
   targets: ["mobile"]
 };
 
-function createManifest({ identifier, version, platform }) {
+function createManifest({ identifier, version, platform, appleFrameworkName }) {
   const manifest = {
     ...baseManifest,
     platform,

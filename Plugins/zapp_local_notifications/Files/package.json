@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "Universal",
+    "universal",
     "ZappLocalNotifications.podspec",
-    "iOS",
-    "tvOS",
-    "Android"
+    "ios",
+    "tvos",
+    "android"
   ],
   "repository": {
     "type": "git",

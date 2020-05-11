@@ -28,7 +28,7 @@ function supportsApple(supportedPlatforms) {
 }
 
 function readAppleFrameworkName (plugin) {
-  var baseFolder = `./plugins/${plugin}/Files/Apple/`
+  var baseFolder = `./plugins/${plugin}/Files/`
   var path = require('path');
   var EXTENSION = '.podspec';
   var podspecFile= fs.readdirSync(`${baseFolder}`).filter(function(x) {

@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "Universal",
+    "universal",
     "ios",
-    "tvOS",
+    "tvos",
     "ZappAppleVideoNowPlayingInfo.podspec"
   ],
   "repository": {

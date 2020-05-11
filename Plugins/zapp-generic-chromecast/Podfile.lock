@@ -1,0 +1,126 @@
+PODS:
+  - boost-for-react-native (1.63.0)
+  - DoubleConversion (1.1.5)
+  - Folly (2018.10.22.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.4)
+  - google-cast-sdk-no-bluetooth (4.4.6):
+    - google-cast-sdk-no-bluetooth/Core (= 4.4.6)
+    - Protobuf (~> 3.0)
+  - google-cast-sdk-no-bluetooth/Core (4.4.6):
+    - Protobuf (~> 3.0)
+  - Protobuf (3.11.4)
+  - React (0.59.10):
+    - React/Core (= 0.59.10)
+  - React/Core (0.59.10):
+    - yoga (= 0.59.10.React)
+  - React/CxxBridge (0.59.10):
+    - Folly (= 2018.10.22.00)
+    - React/Core
+    - React/cxxreact
+    - React/jsiexecutor
+  - React/cxxreact (0.59.10):
+    - boost-for-react-native (= 1.63.0)
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+    - React/jsinspector
+  - React/DevSupport (0.59.10):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.59.10)
+  - React/jsi (0.59.10):
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+  - React/jsiexecutor (0.59.10):
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+    - React/cxxreact
+    - React/jsi
+  - React/jsinspector (0.59.10)
+  - React/RCTActionSheet (0.59.10):
+    - React/Core
+  - React/RCTAnimation (0.59.10):
+    - React/Core
+  - React/RCTBlob (0.59.10):
+    - React/Core
+  - React/RCTImage (0.59.10):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.59.10):
+    - React/Core
+  - React/RCTNetwork (0.59.10):
+    - React/Core
+  - React/RCTText (0.59.10):
+    - React/Core
+  - React/RCTWebSocket (0.59.10):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - yoga (0.59.10.React)
+  - ZappChromecast (0.1.0):
+    - google-cast-sdk-no-bluetooth (= 4.4.6)
+    - React
+    - ZappCore
+  - ZappChromecast/UnitTests (0.1.0):
+    - google-cast-sdk-no-bluetooth (= 4.4.6)
+    - React
+    - ZappCore
+  - ZappCore (0.9.11)
+
+DEPENDENCIES:
+  - Folly (from `./Files/node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - React/Core (from `./Files/node_modules/react-native`)
+  - React/CxxBridge (from `./Files/node_modules/react-native`)
+  - React/DevSupport (from `./Files/node_modules/react-native`)
+  - React/RCTActionSheet (from `./Files/node_modules/react-native`)
+  - React/RCTAnimation (from `./Files/node_modules/react-native`)
+  - React/RCTImage (from `./Files/node_modules/react-native`)
+  - React/RCTLinkingIOS (from `./Files/node_modules/react-native`)
+  - React/RCTNetwork (from `./Files/node_modules/react-native`)
+  - React/RCTText (from `./Files/node_modules/react-native`)
+  - React/RCTWebSocket (from `./Files/node_modules/react-native`)
+  - yoga (from `./Files/node_modules/react-native/ReactCommon/yoga`)
+  - ZappChromecast (from `Files/ZappChromecast.podspec`)
+  - ZappChromecast/UnitTests (from `Files/ZappChromecast.podspec`)
+  - ZappCore (from `../../../ZappCore.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+    - google-cast-sdk-no-bluetooth
+    - Protobuf
+
+EXTERNAL SOURCES:
+  Folly:
+    :podspec: "./Files/node_modules/react-native/third-party-podspecs/Folly.podspec"
+  React:
+    :path: "./Files/node_modules/react-native"
+  yoga:
+    :path: "./Files/node_modules/react-native/ReactCommon/yoga"
+  ZappChromecast:
+    :path: Files/ZappChromecast.podspec
+  ZappCore:
+    :path: "../../../ZappCore.podspec"
+
+SPEC CHECKSUMS:
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
+  Folly: de497beb10f102453a1afa9edbf8cf8a251890de
+  glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
+  google-cast-sdk-no-bluetooth: 0b2f106f07592fe08bb78851bfd20a89e1cb613b
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+  React: 36d0768f9e93be2473b37e7fa64f92c1d5341eef
+  yoga: 684513b14b03201579ba3cee20218c9d1298b0cc
+  ZappChromecast: fd1ebd020928fb7e157fc3a1687946d4ba86b7eb
+  ZappCore: 0eb8eaa9ca2923849b8f99520161118adbfb0c18
+
+PODFILE CHECKSUM: d7e989c96f4699c3dd5ddb10a535a20b0420c879
+
+COCOAPODS: 1.8.3

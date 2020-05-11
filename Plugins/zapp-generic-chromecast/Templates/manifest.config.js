@@ -5,14 +5,16 @@ const baseManifest = {
   dependency_repository_url: [],
   author_name: "Applicaster",
   author_email: "zapp@applicaster.com",
-  name: "Generic Local Notifications",
-  description: "Generic Local Notifications",
+  name: "Chromecast (QB)",
+  description: "A react native plugin that allows you to add chromecast support to a QuickBrick based project",
   type: "general",
-  screen: false,
-  react_native: false,
-  identifier: "generic_local_notifications",
+  screen: true,
+  react_native: true,
   ui_builder_support: true,
-  whitelisted_account_ids: ["5e39259919785a0008225336"],
+  whitelisted_account_ids: [
+    "5ae06cef8fba0f00084bd3c6",
+    "572a0a65373163000b000000"
+  ],
   min_zapp_sdk: "0.0.1",
   deprecated_since_zapp_sdk: "",
   unsupported_since_zapp_sdk: "",
@@ -23,10 +25,12 @@ const baseManifest = {
   ui_frameworks: ["quickbrick"]
 };
 
-function createManifest({ identifier, version, platform, appleFrameworkName }) {
+function createManifest({ version, platform }) {
   const manifest = {
     ...baseManifest,
     platform,
+    dependency_name: identifier,
+    dependency_version: version,
     manifest_version: version,
     min_zapp_sdk: min_zapp_sdk[platform],
     extra_dependencies: extra_dependencies[platform],

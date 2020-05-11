@@ -36,8 +36,6 @@ function createManifest({ identifier, version, platform, appleFrameworkName }) {
     ...baseManifest,
     platform,
     identifier,
-    dependency_name: identifier,
-    dependency_version: version,
     manifest_version: version,
     min_zapp_sdk: min_zapp_sdk[platform],
     extra_dependencies: updateParams({identifier, appleFrameworkName}, extra_dependencies[platform]),
