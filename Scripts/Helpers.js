@@ -5,7 +5,6 @@ const semver = require("semver");
 const moment = require("moment");
 const { readdirSync, statSync } = require('fs')
 const { join } = require('path')
-
 const dirs = p => readdirSync(p).filter(f => statSync(join(p, f)).isDirectory())
 
 function readPluginsList() {
@@ -19,16 +18,24 @@ function readPluginConfig(plugin) {
   return parsedData;
 }
 
-function supportsApple(plugin) {
-  const pluginConfig = readPluginConfig(plugin)
-  return (pluginConfig.applicaster.supportedPlatforms.indexOf(searchStr) > -1)
+function supportsApple(supportedPlatforms) {
+  const applePlatforms = ["ios","ios_for_quickbrick", "tvos", "tvos_for_quickbrick"]
+  return supportedPlatforms.some(r=> applePlatforms.includes(r))
 }
 
-function readAppleFrameworkName(plugin) {
-  fs.readdir(dirpath, function(err, files) {
-    const podspec = files.filter(el => /\.podspec$/.test(el))
-    console.log(podspec);
-  })
+function readAppleFrameworkName (plugin) {
+  var baseFolder = `./plugins/${plugin}/Files/Apple/`
+  var path = require('path');
+  var EXTENSION = '.podspec';
+  var podspecFile= fs.readdirSync(`${baseFolder}`).filter(function(x) {
+    return path.extname(x).toLowerCase() === EXTENSION;
+  });
+
+  var appleFrameworkName;
+  if (podspecFile != null) {
+    appleFrameworkName = path.basename(`${baseFolder+podspecFile}`, EXTENSION);
+  }
+  return appleFrameworkName
 }
 
 function updateVersion(string, version) {
@@ -96,7 +103,6 @@ module.exports = {
   readPluginsList,
   supportsApple,
   readAppleFrameworkName,
-  updateVersion
   proccessArgs,
   abort,
   circleBranch,

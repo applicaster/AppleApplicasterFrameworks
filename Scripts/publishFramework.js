@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const shell = require("cli-task-runner/utils/shell");
-const { abort, basePathForModel, runInSequence } = require("./Helpers.js");
+const { abort, basePathForModel, runInSequence } = require("./helpers.js");
 
 const {
   compareVersion,

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { validateSingleFramework } = require("./validateHelper");
-const { proccessArgs } = require("./Helpers");
+const { proccessArgs } = require("./helpers");
 
 const args = proccessArgs();
 if (args.length == 0) {

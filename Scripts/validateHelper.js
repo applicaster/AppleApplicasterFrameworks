@@ -16,7 +16,7 @@ function validateSinglePlugin(plugin) {
     validateSinglePluginData(plugin) &&
     validateSinglePluginPathes(plugin)
   ) {
-    console.log(`\n'${plugin}' is Valid`);
+    //valid
   } else {
     abort(
       `\nError: Framework: '${plugin}' Validation failed. \
@@ -43,14 +43,13 @@ function validateSinglePluginData(plugin) {
 
 function validateSinglePluginPathes(plugin) {
   const { name = null, version = null, applicaster = null } = config = readPluginConfig(plugin);
-  const baseFolderPath = `./${plugin}`
+  const supportedPlatforms = config.applicaster.supportedPlatforms
+  const baseFolderPath = `./plugins/${plugin}`
   console.log(
     `Validating required pathes for: ${plugin}'`
   );
   const succeedText = `framework: '${plugin}':All required files exist`;
   const isPlugin = fs.existsSync(`${baseFolderPath}/Templates/manifest.config.js`)
-  const supportedPlatforms = config.applicaster.supportedPlatforms
-  console.log(`is plugin: ${isPlugin}`)
 
   if (
     fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
@@ -59,7 +58,7 @@ function validateSinglePluginPathes(plugin) {
   ) {
     if (isPlugin == true) {
         if (
-          supportsApple(plugin) &&
+          supportsApple(supportedPlatforms) &&
           readAppleFrameworkName(plugin)
         ) {
           console.log(succeedText);
@@ -70,7 +69,7 @@ function validateSinglePluginPathes(plugin) {
           return true;
         }
     } else if (
-      supportsApple(plugin) &&
+      supportsApple(supportedPlatforms) &&
       readAppleFrameworkName(plugin)
     ) {
       console.log(succeedText);
