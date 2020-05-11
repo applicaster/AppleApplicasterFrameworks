@@ -91,12 +91,12 @@ jobs:
                                   command: bundle exec pod --version
 
                         - run:
-                                  name: Validate Frameworks
-                                  command: node ./Scripts/validateExistingFrameworks.js
+                                  name: Validate plugins
+                                  command: node ./Scripts/validatePlugins.js
 
                         - deploy:
-                                  name: Publish new or changed framework
-                                  command: node ./Scripts/publishFramework.js
+                                  name: Publish new or changed pliugins
+                                  command: node ./Scripts/publishPlugins.js
 
                         - store_test_results:
                                   path: ./CircleArtifacts/test-results

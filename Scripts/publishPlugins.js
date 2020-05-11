@@ -2,61 +2,87 @@
 
 const fs = require("fs");
 const shell = require("cli-task-runner/utils/shell");
-const { abort, basePathForModel, runInSequence } = require("./helpers.js");
+const util = require("util");
+const exec = util.promisify(require('child_process').exec);
 
 const {
+  readPluginsList,
+  readPluginConfig,
+  readJsonFile,
+  abort,
+  basePathForModel,
+  runInSequence,
   compareVersion,
   readFrameworkDataPlist,
   isMasterBranch,
   automationVersionsDataJSON,
   updateAutomationVersionsDataJSON,
   gitTagDate
-} = require("./Helpers");
+} = require("./helpers.js");
 
-const { updateTemplate, manifestPath } = require("./publishFrameworkHelper");
+const {
+  updateTemplate,
+  manifestPath,
+  saveCurrentPackagesVersion,
+  packageVersionsInfoFile
+} = require("./publishPluginsHelper");
+
 run();
 async function run() {
-  if (isMasterBranch() == false) {
-    console.log("Step was skipped, 'master' branch required");
-    process.exit(0);
-  }
+  // if (isMasterBranch() == false) {
+  //   console.log("Step was skipped, 'master' branch required");
+  //   process.exit(0);
+  // }
 
-  const frameworksList = readFrameworkDataPlist();
-  const frameworksAutomationList = automationVersionsDataJSON();
+  const pluginsList = readPluginsList();
+  await saveCurrentPackagesVersion(pluginsList)
 
-  let itemsToUpdate = [];
-  let newAutomationObject = {};
+  pluginsList.forEach(plugin => {
+    if (plugin) {
+      console.log(`readJsonFile filePath: ${packageVersionsInfoFile(plugin)}`);
 
-  const keys = Object.keys(frameworksList);
-
-  keys.forEach(key => {
-    const model = frameworksList[key];
-    model["framework"] = key;
-    const { framework = null, version_id = null } = model;
-    const automationFrameworkVersion = frameworksAutomationList[framework];
-    if (
-      !automationFrameworkVersion ||
-      compareVersion(version_id, automationFrameworkVersion)
-    ) {
-      console.log(`Adding framework to update list: ${framework}`);
-      itemsToUpdate.push(model);
+      const { name = null, version = null } = config = readPluginConfig(plugin);
+      const {} = currentVersions = readJsonFile(packageVersionsInfoFile(plugin))
+      if (config.name) {
+        console.log(`config.name: ${config.name}, currentVersions: ${currentVersions}`)
+      }
     }
-    newAutomationObject[framework] = version_id;
   });
 
-  if (itemsToUpdate.length > 0) {
-    const newGitTag = gitTagDate();
-    console.log({ itemsToUpdate });
-    await updateRelevantTemplates(itemsToUpdate, newGitTag);
-    await unitTestAndGenerateDocumentation(itemsToUpdate);
-    await updateFrameworksVersionsInGeneralDocs(frameworksList);
-    await updateAutomationVersionsDataJSON(newAutomationObject);
-    await uploadNpmPackages(itemsToUpdate);
-    await uploadManifestsToZapp(itemsToUpdate);
-    await commitChangesPushAndTag(itemsToUpdate, newGitTag);
-    await uploadFrameworksToCocoaPodsPublic(itemsToUpdate);
-  }
-  console.log("System update has been finished!");
+  //
+  // let itemsToUpdate = [];
+  // let newAutomationObject = {};
+  //
+  // const keys = Object.keys(frameworksList);
+  //
+  // keys.forEach(key => {
+  //   const model = frameworksList[key];
+  //   model["framework"] = key;
+  //   const { framework = null, version_id = null } = model;
+  //   const automationFrameworkVersion = frameworksAutomationList[framework];
+  //   if (
+  //     !automationFrameworkVersion ||
+  //     compareVersion(version_id, automationFrameworkVersion)
+  //   ) {
+  //     console.log(`Adding framework to update list: ${framework}`);
+  //     itemsToUpdate.push(model);
+  //   }
+  //   newAutomationObject[framework] = version_id;
+  // });
+  //
+  // if (itemsToUpdate.length > 0) {
+  //   const newGitTag = gitTagDate();
+  //   console.log({ itemsToUpdate });
+  //   await updateRelevantTemplates(itemsToUpdate, newGitTag);
+  //   await unitTestAndGenerateDocumentation(itemsToUpdate);
+  //   await updateFrameworksVersionsInGeneralDocs(frameworksList);
+  //   await updateAutomationVersionsDataJSON(newAutomationObject);
+  //   await uploadNpmPackages(itemsToUpdate);
+  //   await uploadManifestsToZapp(itemsToUpdate);
+  //   await commitChangesPushAndTag(itemsToUpdate, newGitTag);
+  //   await uploadFrameworksToCocoaPodsPublic(itemsToUpdate);
+  // }
+  // console.log("System update has been finished!");
 }
 
 async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
@@ -190,6 +216,7 @@ async function unitTestAndGenerateDocumentation(itemsToUpdate) {
     abort(e.message);
   }
 }
+
 
 async function uploadFrameworksToCocoaPodsPublic(itemsToUpdate) {
   console.log("Publishing to CocoaPods public repo\n");

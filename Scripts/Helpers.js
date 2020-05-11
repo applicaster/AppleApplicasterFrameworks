@@ -13,8 +13,12 @@ function readPluginsList() {
 }
 
 function readPluginConfig(plugin) {
-  const package = fs.readFileSync(`./plugins/${plugin}/Files/package.json`, "utf8");
-  const parsedData = JSON.parse(package);
+  return readJsonFile(`./plugins/${plugin}/Files/package.json`)
+}
+
+function readJsonFile(filePath) {
+  const data = fs.readFileSync(`${filePath}`, "utf8");
+  const parsedData = JSON.parse(data);
   return parsedData;
 }
 
@@ -101,6 +105,7 @@ async function runInParallel(commands) {
 module.exports = {
   readPluginConfig,
   readPluginsList,
+  readJsonFile,
   supportsApple,
   readAppleFrameworkName,
   proccessArgs,
