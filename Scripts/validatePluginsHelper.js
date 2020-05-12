@@ -1,82 +1,51 @@
 #!/usr/bin/env node
 // set -e
-
+const fs = require("fs");
 const {
   readPluginConfig,
-  supportsApple,
-  readAppleFrameworkName,
-  abort
-} = require("./Helpers.js");
-const fs = require("fs");
+  readAppleFrameworkName
+} = require("./helpers.js");
 
-function validateSinglePlugin(plugin) {
-  // const frameworksList = readFrameworkDataPlist();
-  console.log(`\nValidating plugin: '${plugin}'\n`);
-  if (
-    validateSinglePluginData(plugin) &&
-    validateSinglePluginPathes(plugin)
-  ) {
-    //valid
-  } else {
-    abort(
-      `\nError: Framework: '${plugin}' Validation failed. \
-      \nPlease check documentation in project repo and add missed items.`
-    );
-  }
-}
-
-function validateSinglePluginData(plugin) {
-  const { name = null, version = null } = config = readPluginConfig(plugin);
-
-  if (config.name && config.version) {
-    console.log(
-      `Plugin: '${plugin}' - All keys fetched correctly from 'package.json'`
-    );
-    return true;
-  } else {
-    console.log(
-      `Plugin: '${plugin}': - 'package.json' does not exists`
-    );
-    return false;
-  }
-}
-
-function validateSinglePluginPathes(plugin) {
-  const { name = null, version = null, applicaster = null } = config = readPluginConfig(plugin);
-  const supportedPlatforms = config.applicaster.supportedPlatforms
+function validateSupportedPlatforms(plugin) {
+  const { applicaster = null } = config = readPluginConfig(plugin);
   const baseFolderPath = `./plugins/${plugin}`
-  console.log(
-    `Validating required pathes for: ${plugin}'`
-  );
-  const succeedText = `framework: '${plugin}':All required files exist`;
-  const isPlugin = fs.existsSync(`${baseFolderPath}/Templates/manifest.config.js`)
+  const supportedPlatforms = config.applicaster.supportedPlatforms
 
-  if (
-    fs.existsSync(`${baseFolderPath}/Templates/.jazzy.yaml.ejs`) &&
-    fs.existsSync(`${baseFolderPath}/.jazzy.yaml`) &&
-    fs.existsSync(`${baseFolderPath}/Files`)
-  ) {
-    if (isPlugin == true) {
-        if (
-          supportsApple(supportedPlatforms) &&
-          readAppleFrameworkName(plugin)
-        ) {
-          console.log(succeedText);
-          return true;
+    var result = false
+    if (supportsApple(supportedPlatforms)) {
+        if (fs.existsSync(`${baseFolderPath}/Files/apple`) && readAppleFrameworkName(plugin)) {
+          console.log(`--> plugin "${plugin}" supports Apple`);
+          result = true
         }
-        else {
-          console.log(succeedText);
-          return true;
-        }
-    } else if (
-      supportsApple(supportedPlatforms) &&
-      readAppleFrameworkName(plugin)
-    ) {
-      console.log(succeedText);
-      return true;
     }
-  }
-  return false;
+
+    if (supportsAndroid(supportedPlatforms)) {
+      if (fs.existsSync(`${baseFolderPath}/Files/android`)) {
+        console.log(`--> plugin "${plugin}" supports Android`);
+        result = true
+      }
+    }
+    return result
 }
 
-module.exports = { validateSinglePlugin };
+function supportsApple(supportedPlatforms) {
+  const platforms = [
+    "ios",
+    "ios_for_quickbrick",
+    "tvos",
+    "tvos_for_quickbrick"
+  ]
+  return supportedPlatforms.some(r=> platforms.includes(r))
+}
+
+function supportsAndroid(supportedPlatforms) {
+  const platforms = [
+    "android",
+    "android_for_quickbrick"
+  ]
+  return supportedPlatforms.some(r=> platforms.includes(r))
+}
+
+module.exports = {
+  validateSupportedPlatforms
+};

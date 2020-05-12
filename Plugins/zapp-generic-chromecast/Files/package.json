@@ -7,12 +7,6 @@
     "publish:plugin": "node_modules/.bin/zapplicaster-cli publish_plugin -y",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "files": [
-    "android",
-    "ios",
-    "src",
-    "ZappChromecast.podspec"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/applicaster/AppleApplicasterFrameworks"
@@ -41,6 +35,7 @@
     "react-native": "0.59.10"
   },
   "applicaster": {
+    "isPlugin": true,
     "supportedPlatforms": [
       "ios_for_quickbrick",
       "android_for_quickbrick",

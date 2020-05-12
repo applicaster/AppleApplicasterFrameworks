@@ -29,10 +29,10 @@ function createManifest({ identifier, version, platform, appleFrameworkName }) {
     platform,
     manifest_version: version,
     min_zapp_sdk: min_zapp_sdk[platform],
-    extra_dependencies: extra_dependencies[platform],
+    extra_dependencies: updateParams({identifier, appleFrameworkName}, extra_dependencies[platform]),
     api: api[platform],
-    npm_dependencies: updateVersion(npm_dependencies[platform], version),
-    project_dependencies: project_dependencies[platform],
+    npm_dependencies: updateParams({identifier, version}, npm_dependencies[platform]),
+    project_dependencies: updateParams({identifier}, project_dependencies[platform]),
     targets: targets[platform]
   };
   return manifest;
@@ -65,7 +65,7 @@ const extra_dependencies = {
 };
 
 const project_dependencies_android = {
-  "##appleFrameworkName##": "node_modules/@applicaster/##identifier##/Android"
+  "generic_local_notifications": "node_modules/@applicaster/##identifier##/Android"
 };
 const project_dependencies = {
   android: [

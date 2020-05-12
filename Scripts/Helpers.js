@@ -22,13 +22,8 @@ function readJsonFile(filePath) {
   return parsedData;
 }
 
-function supportsApple(supportedPlatforms) {
-  const applePlatforms = ["ios","ios_for_quickbrick", "tvos", "tvos_for_quickbrick"]
-  return supportedPlatforms.some(r=> applePlatforms.includes(r))
-}
-
-function readAppleFrameworkName (plugin) {
-  var baseFolder = `./plugins/${plugin}/Files/`
+function readAppleFrameworkName(plugin) {
+  var baseFolder = `./plugins/${plugin}/Files/apple`
   var path = require('path');
   var EXTENSION = '.podspec';
   var podspecFile= fs.readdirSync(`${baseFolder}`).filter(function(x) {
@@ -40,10 +35,6 @@ function readAppleFrameworkName (plugin) {
     appleFrameworkName = path.basename(`${baseFolder+podspecFile}`, EXTENSION);
   }
   return appleFrameworkName
-}
-
-function updateVersion(string, version) {
-  return string.replace("##version##", version)
 }
 
 function proccessArgs() {
@@ -68,23 +59,6 @@ function compareVersion(ver1, ver2) {
   return semver.gt(ver1, ver2);
 }
 
-function automationVersionsDataJSON() {
-  const json = fs.readFileSync(".versions_automation.json", "utf8");
-  try {
-    return JSON.parse(json);
-  } catch (e) {
-    return {};
-  }
-}
-
-async function updateAutomationVersionsDataJSON(data) {
-  const json = JSON.stringify(data);
-  fs.writeFileSync(".versions_automation.json", json, {
-    encoding: "utf8"
-  });
-  return true;
-}
-
 function gitTagDate() {
   return moment().format("Y.M.D.H-M-S");
 }
@@ -106,15 +80,12 @@ module.exports = {
   readPluginConfig,
   readPluginsList,
   readJsonFile,
-  supportsApple,
   readAppleFrameworkName,
   proccessArgs,
   abort,
   circleBranch,
   compareVersion,
   isMasterBranch,
-  automationVersionsDataJSON,
-  updateAutomationVersionsDataJSON,
   gitTagDate,
   runInSequence,
   runInParallel
