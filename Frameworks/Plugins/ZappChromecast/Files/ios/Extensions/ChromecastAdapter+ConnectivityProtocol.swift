@@ -38,19 +38,24 @@ extension ChromecastAdapter: ConnectivityProtocol {
     
     func updateCastButtonVisibility() {
         switch self.connectivityState {
-        case .offline:
-            //hide cc button if no network and the button is presented
+        case .offline, .cellular:
             if let button = self.castButton,
                 button.isHidden == false {
                 button.isHidden = true
             }
+            //send event of no devices
+            RNEventEmitter.sendEvent(for: .CAST_STATE_CHANGED, with: 0)
             break
         default:
-            //show cc button if hidden and devices are available and network is ok
-            //hide cc button if no devices are available after network change
-            if let button = self.castButton,
-                button.isHidden == self.hasAvailableChromecastDevices() {
-                button.isHidden = !self.hasAvailableChromecastDevices()
+            if let _ = self.castButton {
+                //show cc button if hidden and devices are available and network is ok
+                //hide cc button if no devices are available after network change
+                if let button = self.castButton,
+                    button.isHidden == self.hasAvailableChromecastDevices() {
+                    button.isHidden = !self.hasAvailableChromecastDevices()
+                }
+                //send event of availanle devices
+                RNEventEmitter.sendEvent(for: .CAST_STATE_CHANGED, with: self.getCurrentCastState())
             }
             break
         }

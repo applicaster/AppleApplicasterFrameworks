@@ -38,6 +38,10 @@ open class RNEventEmitter: RCTEventEmitter {
         super.init()
         RNEventEmitter.emitter = self
     }
+    
+    override public class func requiresMainQueueSetup() -> Bool {
+        return true
+    }
 
     open override func supportedEvents() -> [String] {
         return Events.allCases.map { $0.rawValue}

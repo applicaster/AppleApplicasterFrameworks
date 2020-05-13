@@ -18,7 +18,7 @@ open class ChromecastAdapter: NSObject {
 
     public required init(pluginModel: ZPPluginModel) {
         model = pluginModel
-        configurationJSON = model?.configurationJSON
+        configurationJSON = model?.configurationJSON        
     }
 
     /// Plugin configuration keys
