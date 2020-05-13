@@ -13,11 +13,11 @@ import GoogleCast
 public let kChromecastPosterDefaultKey = "image_base"
 
 public protocol ChromecastPlayerProtocol {
-    func prepareToPlay(playableItems: [NSObject],  playPosition: TimeInterval, completion: (() -> Void)?)
+    func prepareToPlay(playableItems: [NSObject],  playPosition: TimeInterval, completion: ((_ success: Bool) -> Void)?)
 }
 
 extension ChromecastAdapter: ChromecastPlayerProtocol {
-    public func prepareToPlay(playableItems: [NSObject],  playPosition: TimeInterval, completion: (() -> Void)?) {
+    public func prepareToPlay(playableItems: [NSObject],  playPosition: TimeInterval, completion: ((_ success: Bool) -> Void)?) {
         guard let playableItem = playableItems.first as? [String: Any] else {
             return
         }
@@ -33,7 +33,7 @@ extension ChromecastAdapter: ChromecastPlayerProtocol {
             self.getContentSource(item: chromecastPlayableItem) == remoteCastCurrentStreamUrl {
             //Do noting, we already cast the this playable
             NotificationCenter.default.post(name: .chromecastStartedPlaying, object: nil)
-            completion?()
+            completion?(true)
         } else {
             if let mediaInfo = parsePlayableToGCKMediaInformation(item: chromecastPlayableItem) {
                 self.mediaInfo = mediaInfo

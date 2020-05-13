@@ -10,6 +10,7 @@ import androidx.mediarouter.app.MediaRouteButton;
 import com.applicaster.chromecast.ChromeCastPlugin;
 import com.applicaster.chromecast.GoogleCastExpandedControlsActivity;
 import com.applicaster.chromecast.analytics.Analytics;
+import com.applicaster.util.APLogger;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.Promise;
@@ -21,6 +22,7 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.common.annotations.VisibleForTesting;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.google.android.gms.cast.CastDevice;
+import com.google.android.gms.cast.CastStatusCodes;
 import com.google.android.gms.cast.MediaError;
 import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaLoadOptions;
@@ -151,14 +153,14 @@ public class GoogleCastModule
             MediaInfo mediaInfo;
             try {
                 mediaInfo = MediaInfoBuilder.buildMediaInfo(params);
-            }
-            catch(IllegalArgumentException e){
+            } catch (IllegalArgumentException e) {
+                APLogger.error("CastManager", "buildMediaInfo failed", e);
                 promise.reject("buildMediaInfo failed", e);
                 return;
             }
 
             Analytics analytics = mPlugin.getAnalytics();
-            if(null != analytics) {
+            if (null != analytics) {
                 ReadableMap map = ReadableMapUtils.getReadableMap(params, "analytics");
                 Map<String, String> movieData = AnalyticsBuilder.convert(map);
                 analytics.onCastRequest(movieData);
@@ -182,7 +184,21 @@ public class GoogleCastModule
                         if (null == mediaError) {
                             promise.resolve(true);
                         } else {
-                            promise.reject("Cast failed", mediaError.getReason());
+                            String errorMessage = "";
+                            Integer detailedErrorCode = mediaError.getDetailedErrorCode();
+                            if (null != detailedErrorCode) {
+                                errorMessage += " error code: " + detailedErrorCode;
+                                errorMessage += " error string: " + CastStatusCodes.getStatusCodeString(detailedErrorCode);
+                            }
+                            String reason = mediaError.getReason();
+                            if (reason != null) {
+                                errorMessage += " reason: " + reason;
+                            }
+                            APLogger.error("CastManager", errorMessage);
+                            promise.reject("Cast failed", errorMessage);
+                            if (null != analytics) {
+                                analytics.reportCastFailure(mediaError);
+                            }
                         }
                     }
             );

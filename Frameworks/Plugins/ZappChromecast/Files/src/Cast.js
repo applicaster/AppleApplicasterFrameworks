@@ -60,10 +60,12 @@ export default {
    * @returns {string} CastState
    */
   getCastState(): CastState {
-    return GoogleCast.getCastState().then((state) => {
-      this.castState = CAST_STATES[state];
-      return CAST_STATES[state];
-    });
+    return GoogleCast.getCastState()
+      .then((state) => {
+        this.castState = CAST_STATES[state];
+        return CAST_STATES[state];
+      })
+      .catch((error) => console.warn({ error }));
   },
 
   /**
@@ -72,9 +74,11 @@ export default {
    * @returns {boolean}
    */
   hasConnectedCastSession(): boolean {
-    GoogleCast.hasConnectedCastSession().then((casting) => {
-      this.readyToCast = casting;
-    });
+    GoogleCast.hasConnectedCastSession()
+      .then((casting) => {
+        this.readyToCast = casting;
+      })
+      .catch((error) => console.warn({ error }));
     return this.readyToCast;
   },
 

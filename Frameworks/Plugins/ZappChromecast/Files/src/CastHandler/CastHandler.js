@@ -1,7 +1,7 @@
 import * as React from "react";
-import { View, ActivityIndicator } from "react-native";
 import { useNavigation } from "@applicaster/zapp-react-native-utils/reactHooks/navigation";
-import { imageSrcFromMediaItem } from "@applicaster/zapp-react-native-utils/cellUtils";
+import { imageSrcFromMediaItem } from "@applicaster/zapp-react-native-ui-components/Components/MasterCell/MappingFunctions";
+import { BufferAnimation } from "@applicaster/zapp-react-native-ui-components/Components/PlayerController/BufferAnimation";
 
 type Item = {
   id: string | number,
@@ -9,25 +9,25 @@ type Item = {
 };
 
 type Props = {
-  entry: Item,
+  item: Item,
   plugin: {},
   feedId: ?string,
   feedTitle: ?string,
 };
 
 export function CastHandler(props: Props) {
-  const entry = props?.entry;
+  const item = props?.item;
   const Cast = props?.plugin;
   const navigator = useNavigation();
 
-  const poster = imageSrcFromMediaItem(entry, ["chromecast_poster"]);
-  const image = imageSrcFromMediaItem(entry, ["image_base"]);
+  const poster = imageSrcFromMediaItem(item, ["chromecast_poster"]);
+  const image = imageSrcFromMediaItem(item, ["image_base"]);
   const media = {
-    title: entry?.title,
-    subtitle: entry?.summary,
-    studio: entry?.author?.name,
-    duration: entry?.extensions?.duration,
-    mediaUrl: entry?.content?.src,
+    title: item?.title,
+    subtitle: item?.summary,
+    studio: item?.author?.name,
+    duration: item?.extensions?.duration,
+    mediaUrl: item?.content?.src,
     imageUrl: image,
     posterUrl: poster,
   };
@@ -36,27 +36,27 @@ export function CastHandler(props: Props) {
   const analytics = {
     feedId: props?.feedId,
     feedTitle: props?.feedTitle,
-    entryId: entry?.id,
-    itemName: entry?.title,
-    vodType: entry?.content?.type,
-    free: entry?.extensions?.free,
-  };
-
-  const loadingStyle = {
-    flex: 1,
-    backgroundColor: "transparent",
+    entryId: item?.id,
+    itemName: item?.title,
+    vodType: item?.content?.type,
+    free: item?.extensions?.free,
   };
 
   React.useEffect(() => {
-    Cast.castMedia({ ...media, analytics }).then((e) => {
-      Cast.launchExpandedControls();
-      navigator.goBack();
-    });
+    Cast.castMedia({ ...media, analytics })
+      .then(() => {
+        Cast.launchExpandedControls();
+        navigator.goBack();
+        // TODO: See why we have to navigate back twice to remove arrow:
+        // https://drive.google.com/file/d/130FmmyREKxJ5jZL3c6_3G34-r1IYrdv7/view?usp=sharing
+        navigator.goBack();
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.warn({ error });
+        navigator?.goHome();
+      });
   }, []);
 
-  return (
-    <View style={loadingStyle}>
-      <ActivityIndicator style={loadingStyle} size="large" color="#aaa" />
-    </View>
-  );
+  return <BufferAnimation />;
 }

@@ -1,5 +1,9 @@
 package com.reactnative.googlecast;
 
+import androidx.annotation.NonNull;
+
+import com.applicaster.util.APLogger;
+import com.google.android.gms.cast.CastStatusCodes;
 import com.google.android.gms.cast.framework.CastSession;
 import com.google.android.gms.cast.framework.SessionManagerListener;
 import com.google.android.gms.cast.framework.media.RemoteMediaClient;
@@ -28,7 +32,7 @@ public class GoogleCastSessionManagerListener
   @Override
   public void onSessionResumeFailed(CastSession session, int error) {
     onApplicationDisconnected();
-    // TODO: find corresponding iOS event
+    logError("onSessionResumeFailed", error);
   }
 
   @Override
@@ -40,6 +44,7 @@ public class GoogleCastSessionManagerListener
   @Override
   public void onSessionStartFailed(CastSession session, int error) {
     onApplicationDisconnected();
+    logError("onSessionStartFailed", error);
     module.emitMessageToRN(GoogleCastModule.SESSION_START_FAILED, null);
   }
 
@@ -78,4 +83,9 @@ public class GoogleCastSessionManagerListener
   }
 
   private void onApplicationDisconnected() { module.setCastSession(null); }
+
+  private void logError(@NonNull String source, int error) {
+    APLogger.error("CastManager",
+            source + " failed: " + error + " " + CastStatusCodes.getStatusCodeString(error));
+  }
 }
