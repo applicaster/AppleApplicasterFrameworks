@@ -81,8 +81,13 @@ class ChromecastManager: NSObject, RCTBridgeModule {
                 return
             }
             
-            pluginInstance.prepareToPlay(playableItems: [params], playPosition: 0) {
-                resolver(1)
+            pluginInstance.prepareToPlay(playableItems: [params], playPosition: 0) { (success) in
+                if success {
+                    resolver(1)
+                }
+                else {
+                    rejecter("0", "item playback failed", nil)
+                }
             }
         }
     }
