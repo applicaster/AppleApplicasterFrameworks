@@ -99,10 +99,5 @@ extension ChromecastAdapter: GCKRemoteMediaClientListener {
         if let triggedChromecastButton = self.triggeredChromecastButton {
             ChromecastAnalytics.sendStartCastingEvent(triggeredChromecastButton: triggedChromecastButton)
         }
-        
-        if let castDidStartMediaSession = castDidStartMediaSession {
-            castDidStartMediaSession()
-            self.castDidStartMediaSession = nil
-        }
     }
 }
