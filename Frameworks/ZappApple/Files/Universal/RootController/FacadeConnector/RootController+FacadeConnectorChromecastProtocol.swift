@@ -38,7 +38,7 @@ extension RootController: FacadeConnectorChromecastProtocol {
         return pluginInstanceExtendedPlayerControls?.getMiniPlayerControlsViewController()
     }
     
-    public func play(with playableItems: [NSObject], playPosition: TimeInterval, completion: (() -> Void)?) {
+    public func play(with playableItems: [NSObject], playPosition: TimeInterval, completion: ((_ success:Bool) -> Void)?) {
         pluginInstanceExtendedPlayerControls?.play(playableItems: playableItems, playPosition: playPosition, completion: completion)
     }
     
