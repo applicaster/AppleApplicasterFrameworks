@@ -17,7 +17,7 @@ import Foundation
     var inlinePlayerViewController: UIViewController? { get}
     var miniPlayerViewController: UIViewController? { get}
     func addButton(to container: UIView?, key: String, color: UIColor?)
-    func play(with playableItems: [NSObject], playPosition: TimeInterval, completion: (() -> Void)?)
+    func play(with playableItems: [NSObject], playPosition: TimeInterval, completion: ((_ success:Bool) -> Void)?)
     func showExtendedPlayer()
     func setNotificationsDelegate(_ delegate:NSObject?)
 }
