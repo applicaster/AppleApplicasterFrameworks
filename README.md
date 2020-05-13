@@ -28,11 +28,11 @@ This respository is the main container for general frameworks and plugins for [Z
 
 ## :fax: Frameworks List
 
-##### ZappCore: *0.9.15*
+##### ZappCore: *0.9.16*
 - **Description:** Contain plugin protocols, helper methods that can be used by any Zapp plugin or framework
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappCore/index.html)
 
-##### ZappApple: *0.7.17*
+##### ZappApple: *0.7.18*
 - **Description:** Contain data stucture to start Zapp application.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappApple/index.html)
 
@@ -96,7 +96,7 @@ This respository is the main container for general frameworks and plugins for [Z
     - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=generic_local_notifications&platform=ios)
     - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=generic_local_notifications&platform=tvos)
 
-##### Chromecast: *0.1.5*
+##### Chromecast: *0.1.7*
   - **Description:** This plugin allow to add Chromecast functionality for iOS and Android.
   - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappChromecast/index.html)
   - [**API**](https://applicaster.github.io/AppleApplicasterFrameworks/NotGeneratedDocs/ZappChromecast/ZappChromecast.html)

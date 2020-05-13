@@ -107,21 +107,21 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
-      "line": 90,
+      "line": 95,
       "symbol": "ChromecastManager.hasConnectedCastSession(_:rejecter:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
-      "line": 102,
+      "line": 107,
       "symbol": "ChromecastManager.getCastState(_:rejecter:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
-      "line": 114,
+      "line": 119,
       "symbol": "ChromecastManager.pluginInstance",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -401,16 +401,16 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
-      "line": 13,
+      "line": 12,
       "symbol": "ChromecastAdapter",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
       "line": 13,
       "symbol": "ChromecastAdapter",
-      "symbol_kind": "source.lang.swift.decl.extension",
+      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
@@ -1549,14 +1549,14 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKRequestDelegate.swift",
-      "line": 15,
+      "line": 13,
       "symbol": "ChromecastAdapter.requestDidComplete(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+GCKRequestDelegate.swift",
-      "line": 22,
+      "line": 25,
       "symbol": "ChromecastAdapter.request(_:didFailWithError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

@@ -2,9 +2,9 @@ import React from "react";
 import { TouchableHighlight } from "react-native";
 import PropTypes from "prop-types";
 
-import { __RouterContext as RouterContext } from "react-router";
+import { __HistoryContext as HistoryContext } from "react-router";
 
-class Link extends React.Component {
+export default class Link extends React.Component {
   static defaultProps = {
     component: TouchableHighlight,
     replace: false
@@ -28,14 +28,14 @@ class Link extends React.Component {
     const { component: Component, to, replace, ...rest } = this.props;
 
     return (
-      <RouterContext.Consumer>
-        {context => (
+      <HistoryContext.Consumer>
+        {history => (
           <Component
             {...rest}
-            onPress={event => this.handlePress(event, context.history)}
+            onPress={event => this.handlePress(event, history)}
           />
         )}
-      </RouterContext.Consumer>
+      </HistoryContext.Consumer>
     );
   }
 }
@@ -45,10 +45,8 @@ const __DEV__ = true; // TODO
 if (__DEV__) {
   Link.propTypes = {
     onPress: PropTypes.func,
-    component: PropTypes.func,
+    component: PropTypes.elementType,
     replace: PropTypes.bool,
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
   };
 }
-
-export default Link;

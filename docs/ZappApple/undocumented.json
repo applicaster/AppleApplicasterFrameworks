@@ -191,7 +191,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/CacheHelper/APCacheManager.swift",
-      "line": 18,
+      "line": 13,
       "symbol": "APCacheManager.urlCache",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
