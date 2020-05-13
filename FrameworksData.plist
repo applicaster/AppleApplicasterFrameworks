@@ -71,7 +71,7 @@
 	<key>ZappChromecast</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.1.5</string>
+		<string>0.1.7</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
