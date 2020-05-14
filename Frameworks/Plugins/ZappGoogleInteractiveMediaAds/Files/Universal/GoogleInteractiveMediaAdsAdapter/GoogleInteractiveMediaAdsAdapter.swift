@@ -34,9 +34,14 @@ import ZappCore
         completion?(true)
     }
 
+    var activityIndicator = UIActivityIndicatorView()
     var isVMAPAdsCompleted = false
     var isPlaybackPaused = false
-    
+    var isPrerollAdLoading = false {
+        didSet {
+            showActivityIndicator(isPrerollAdLoading)
+        }
+    }
     /// Player plugin instance that currently presented
     public weak var playerPlugin: PlayerProtocol?
     var postrollCompletion: ((_ finished: Bool) -> Void)?
@@ -74,6 +79,7 @@ import ZappCore
     func prepareGoogleIMA() {
         isPlaybackPaused = false
         isVMAPAdsCompleted = false
+        isPrerollAdLoading = false
         guard let player = avPlayer else { return }
         addNotificationsObserver()
         addRateObserver()
@@ -82,6 +88,8 @@ import ZappCore
         contentPlayhead = IMAAVPlayerContentPlayhead(avPlayer: player)
 
         if let urlToPresent = urlTagData?.prerollUrlString() {
+            isPrerollAdLoading = true
+            pausePlayback()
             requestAd(adUrl: urlToPresent)
         }
         
@@ -118,6 +126,33 @@ import ZappCore
             if let player = avPlayer, player.rate > 0 && isPlaybackPaused {
                 avPlayer?.pause()
             }
+        }
+    }
+    
+    func resumePlayback() {
+        isPlaybackPaused = false
+        playerPlugin?.pluggablePlayerResume()
+    }
+    
+    func pausePlayback() {
+        isPlaybackPaused = true
+        playerPlugin?.pluggablePlayerPause()
+    }
+    
+    func showActivityIndicator(_ show: Bool) {
+        if show {
+            guard let contentOverlay = (playerPlugin?.pluginPlayerViewController as? AVPlayerViewController)?.contentOverlayView else {
+                return
+            }
+            contentOverlay.addSubview(activityIndicator)
+            activityIndicator.startAnimating()
+            activityIndicator.color = .gray
+            activityIndicator.backgroundColor = .black
+            activityIndicator.widthAnchor.constraint(equalTo: contentOverlay.widthAnchor, multiplier: 1.0).isActive = true
+            activityIndicator.heightAnchor.constraint(equalTo: contentOverlay.heightAnchor, multiplier: 1.0).isActive = true
+            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        } else {
+            activityIndicator.removeFromSuperview()
         }
     }
     

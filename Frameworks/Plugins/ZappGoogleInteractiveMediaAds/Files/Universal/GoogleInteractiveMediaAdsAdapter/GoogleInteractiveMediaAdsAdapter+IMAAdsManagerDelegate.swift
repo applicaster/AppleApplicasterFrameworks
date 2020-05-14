@@ -20,6 +20,7 @@ extension GoogleInteractiveMediaAdsAdapter: IMAAdsManagerDelegate {
         switch event?.type {
         case .LOADED:
             adsManager?.start()
+            isPrerollAdLoading = false
         case .ALL_ADS_COMPLETED:
             if let urlTagData = urlTagData, urlTagData.isVmapAd {
                 isVMAPAdsCompleted = true
@@ -33,29 +34,26 @@ extension GoogleInteractiveMediaAdsAdapter: IMAAdsManagerDelegate {
     public func adsManagerDidRequestContentPause(_ adsManager: IMAAdsManager!) {
         delegate?.advertisementWillPresented(provider: self)
         // The SDK is going to play ads, so pause the content.
-  
-        isPlaybackPaused = true
-        playerPlugin?.pluggablePlayerPause()
+        pausePlayback()
     }
 
     public func adsManager(_ adsManager: IMAAdsManager!, didReceive error: IMAAdError!) {
         delegate?.advertisementFailedToLoad(provider: self)
         // Something went wrong with the ads manager after ads were loaded. Log the error and play the
         // content.
-        isPlaybackPaused = false
+        isPrerollAdLoading = false
         if let completion = postrollCompletion {
             completion(true)
             postrollCompletion = nil
             adsLoader?.contentComplete()
         } else {
-            playerPlugin?.pluggablePlayerResume()
+            resumePlayback()
         }
     }
 
     public func adsManagerDidRequestContentResume(_ adsManager: IMAAdsManager!) {
         delegate?.advertisementWillDismissed(provider: self)
         // The SDK is done playing ads (at least for now), so resume the content.
-        isPlaybackPaused = false
-        playerPlugin?.pluggablePlayerResume()
+        resumePlayback()
     }
 }
