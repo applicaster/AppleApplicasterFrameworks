@@ -60,7 +60,7 @@ class ChromecastManager: NSObject, RCTBridgeModule {
         }
     }
 
-    @objc public func showIntroductoryOverlay() {
+    @objc public func showIntroductoryOverlay(_ params: NSDictionary) {
         DispatchQueue.main.async {
             self.pluginInstance?.presentIntroductionScreenIfNeeded()
         }
