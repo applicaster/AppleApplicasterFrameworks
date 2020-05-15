@@ -81,9 +81,11 @@ Frameworks/**/xcodebuild.log
 
 **/default.profraw
 
+## Node Modules
 node_modules/*
+**/node_modules/*
+Frameworks/Plugins/**/node_modules/*
 
 **/tvos.json
 **/ios.json
-Frameworks/Plugins/ZappAppleVideoSubscriberSSO/node_modules
-Frameworks/Plugins/ZappChromecast/Files/node_modules
+
