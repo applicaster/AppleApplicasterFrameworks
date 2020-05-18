@@ -39,11 +39,11 @@
     "quickbrick"
   ],
   "platform": "ios_for_quickbrick",
-  "dependency_version": "0.1.8",
-  "manifest_version": "0.1.8",
+  "dependency_version": "0.1.10",
+  "manifest_version": "0.1.10",
   "min_zapp_sdk": "20.0.0-Dev",
   "npm_dependencies": [
-    "@applicaster/zapp-generic-chromecast@0.1.8"
+    "@applicaster/zapp-generic-chromecast@0.1.10"
   ],
   "extra_dependencies": [
     {

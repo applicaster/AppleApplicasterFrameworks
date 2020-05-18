@@ -80,7 +80,7 @@ This respository is the main container for general frameworks and plugins for [Z
   - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=ios)
   - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=video_playing_now_apple&platform=tvos)
 
-##### Apple Video Subscriber SSO: *0.1.10*
+##### Apple Video Subscriber SSO: *0.1.11*
 - **Description:** This plugin performs as player prehook to login to the TV Provider before player starts.
 - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappAppleVideoSubscriberSSO/index.html)
 - **Manifest:**
@@ -96,7 +96,7 @@ This respository is the main container for general frameworks and plugins for [Z
     - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=generic_local_notifications&platform=ios)
     - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=generic_local_notifications&platform=tvos)
 
-##### Chromecast: *0.1.8*
+##### Chromecast: *0.1.10*
   - **Description:** This plugin allow to add Chromecast functionality for iOS and Android.
   - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappChromecast/index.html)
   - [**API**](https://applicaster.github.io/AppleApplicasterFrameworks/NotGeneratedDocs/ZappChromecast/ZappChromecast.html)

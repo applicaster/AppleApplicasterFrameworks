@@ -32,16 +32,6 @@ const baseManifest = {
       key: "chromecast_app_id",
       tooltip_text: "Chromecast application ID",
     },
-    {
-      type: "text",
-      key: "chromecast_poster",
-      tooltip_text: "Chromecast poster URL",
-    },
-    {
-      type: "checkbox",
-      key: "show_mini_controls",
-      tooltip_text: "Show Mini controls",
-    },
   ],
   styles: {},
   targets: ["mobile"],

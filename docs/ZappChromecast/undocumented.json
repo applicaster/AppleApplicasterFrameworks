@@ -87,7 +87,7 @@
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Bridge/Chromecast/ChromecastManagerBridge.swift",
       "line": 63,
-      "symbol": "ChromecastManager.showIntroductoryOverlay()",
+      "symbol": "ChromecastManager.showIntroductoryOverlay(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

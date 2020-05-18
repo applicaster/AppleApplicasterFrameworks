@@ -439,22 +439,27 @@ public class GoogleCastModule
     }
 
     @ReactMethod
-    private void showIntroductoryOverlay() {
+    private void showIntroductoryOverlay(final ReadableMap params) {
         if (mIntroductoryOverlay != null) {
             mIntroductoryOverlay.remove();
         }
         MediaRouteButton mediaRouteMenuItem = GoogleCastButtonManager.getGoogleCastButtonManagerInstance();
         if (mediaRouteMenuItem != null) {
             mediaRouteMenuItem.postDelayed(() -> {
-                mIntroductoryOverlay = new IntroductoryOverlay
+                IntroductoryOverlay.Builder builder = new IntroductoryOverlay
                         .Builder(getCurrentActivity(), mediaRouteMenuItem)
-                        //.setTitleText("Introducing Cast")
                         .setSingleTime()
                         .setOnOverlayDismissedListener(
-                                () -> mIntroductoryOverlay = null)
-                        .build();
+                                () -> mIntroductoryOverlay = null);
+                if(null != params) {
+                    if (params.hasKey("introductoryOverlayText")) {
+                        String text = params.getString("introductoryOverlayText");
+                        builder.setTitleText(text);
+                    }
+                }
+                mIntroductoryOverlay = builder.build();
                 mIntroductoryOverlay.show();
-            }, 500);
+            }, 100);
         }
     }
 
