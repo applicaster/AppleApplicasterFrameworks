@@ -34,13 +34,13 @@ extension GoogleInteractiveMediaAdsAdapter: IMAAdsLoaderDelegate {
         let errorCode = adErrorData.adError.code.rawValue
         let errorType = adErrorData.adError.type.rawValue
         debugPrint("Error loading ads: \(errorMessage), \(errorCode), \(errorType)")
-
+        isPrerollAdLoading = false
         if let completion = postrollCompletion {
             completion(true)
             postrollCompletion = nil
             adsLoader?.contentComplete()
         } else {
-            playerPlugin?.pluggablePlayerResume()
+            resumePlayback()
         }
     }
 }
