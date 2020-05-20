@@ -23,7 +23,12 @@ class DataManager {
     }
 
     class func splashVideoPath() -> String? {
-        let videoPath = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.tv ? AssetsKeys.splashVideoKey : LocalSplashHelper.localSplashVideoNameForScreenSize()
+        var videoPath = AssetsKeys.splashVideoKey
+
+        #if os(iOS)
+            videoPath = LocalSplashHelper.localSplashVideoNameForScreenSize()
+        #endif
+
         return Bundle.main.path(forResource: videoPath,
                                 ofType: DataKeysExtensions.mp4)
     }
