@@ -10,13 +10,12 @@ import Foundation
 let stateMachineLogCategory = "State Machine"
 
 class DataManager {
-    
     static var stylesFileName = "ZappStyles"
-    
+
     struct ApplicationFiles {
         static let featureCustomization = "FeaturesCustomization"
     }
-    
+
     struct DataKeysExtensions {
         static let mp4 = "mp4"
         static let json = "json"
@@ -24,14 +23,13 @@ class DataManager {
     }
 
     class func splashVideoPath() -> String? {
-        return Bundle.main.path(forResource: AssetsKeys.splashVideoKey,
+        let videoPath = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.tv ? AssetsKeys.splashVideoKey : LocalSplashHelper.localSplashVideoNameForScreenSize()
+        return Bundle.main.path(forResource: videoPath,
                                 ofType: DataKeysExtensions.mp4)
     }
-    
-    
+
     class func zappStylesPath() -> String? {
         return Bundle.main.path(forResource: DataManager.stylesFileName,
                                 ofType: DataKeysExtensions.json)
     }
-    
 }
