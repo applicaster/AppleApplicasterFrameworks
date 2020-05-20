@@ -16,63 +16,63 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 14,
+      "line": 13,
       "symbol": "DataManager.stylesFileName",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 16,
+      "line": 15,
       "symbol": "DataManager.ApplicationFiles",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 17,
+      "line": 16,
       "symbol": "DataManager.ApplicationFiles.featureCustomization",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 20,
+      "line": 19,
       "symbol": "DataManager.DataKeysExtensions",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 21,
+      "line": 20,
       "symbol": "DataManager.DataKeysExtensions.mp4",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 22,
+      "line": 21,
       "symbol": "DataManager.DataKeysExtensions.json",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 23,
+      "line": 22,
       "symbol": "DataManager.DataKeysExtensions.plist",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 26,
+      "line": 25,
       "symbol": "DataManager.splashVideoPath()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/AppLoading/DataManager/DataManager.swift",
-      "line": 32,
+      "line": 31,
       "symbol": "DataManager.zappStylesPath()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
