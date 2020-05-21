@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -44,11 +44,14 @@ buildscript {
 dependencies {
     // Applicaster SDK
     // Check if an open SDK is defined - if not use the closed one.
-    def devSDK = findProject(':applicaster-android-sdk')
-    if (devSDK != null) {
-        implementation project(':applicaster-android-sdk')
-    } else {
-        api('com.applicaster:applicaster-android-sdk:5.0.3')
+    if (!findProject(':applicaster-android-sdk')) {
+        // core is the same project as applicaster-android-sdk but uses a different flavor
+        api ("com.applicaster:applicaster-android-sdk-core:5.1.0") {
+            exclude group: 'com.applicaster', module: 'react-native'
+        }
+    }
+    else {
+        api (project(':applicaster-android-sdk'))
     }
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
