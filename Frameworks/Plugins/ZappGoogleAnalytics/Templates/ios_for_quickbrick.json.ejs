@@ -1,0 +1,47 @@
+{
+  "api": {
+    "require_startup_execution": false,
+    "class_name": "ZappGoogleAnalytics.GoogleAnalyticsPluginAdapter",
+    "modules": []
+  },
+  "ui_frameworks":["quickbrick"],
+  "dependency_repository_url": [],
+  "platform": "ios_for_quickbrick",
+  "author_name": "Anton Kononenko",
+  "author_email": "a.kononenko@applicaster.com",
+  "manifest_version": "<%= version_id %>",
+  "name": "Google Analytics Web Based API",
+  "description": "Provide Google Analytics as agent. Please use this plugin only if you are using quick brick",
+  "type": "analytics",
+  "identifier": "zapp_google_analytics",
+  "ui_builder_support": true,
+  "whitelisted_account_ids": [],
+  "min_zapp_sdk": "0.1.0-alpha1",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "npm_dependencies": [
+    "@applicaster/google-analytics-web-based-apple@<%= version_id %>"
+  ],
+  "extra_dependencies": [
+    {
+      "ZappGoogleAnalytics": ":path => './node_modules/@applicaster/google-analytics-web-based-apple/ZappGoogleAnalytics.podspec'"
+    }
+  ],
+  "custom_configuration_fields": [
+    {
+      "type": "text",
+      "key": "tracker_id",
+      "tooltip_text": "Tracker ID"
+    },
+    {
+      "type": "checkbox",
+      "key": "screen_views_enabled",
+      "tooltip_text": "Enable Screen Views",
+      "default": 0
+    }
+  ],
+  "targets": [
+    "mobile"
+  ]
+}
