@@ -36,7 +36,7 @@
 	<key>ZappAppleVideoSubscriptionRegistration</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.1.10</string>
+		<string>0.1.11</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
