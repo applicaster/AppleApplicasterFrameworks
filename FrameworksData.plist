@@ -43,7 +43,7 @@
 	<key>ZappAppleVideoNowPlayingInfo</key>
 	<dict>
 		<key>version_id</key>
-		<string>0.1.7</string>
+		<string>0.1.8</string>
 		<key>plugin</key>
 		<true/>
 	</dict>
