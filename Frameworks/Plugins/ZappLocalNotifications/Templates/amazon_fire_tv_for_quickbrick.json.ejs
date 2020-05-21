@@ -1,0 +1,45 @@
+{
+  "api": {
+    "require_startup_execution": false,
+    "class_name": "com.applicaster.reactnative.plugins.APReactNativeAdapter",
+    "react_packages": [
+      "com.applicaster.localnotifications.reactnative.LocalNotificationPackage"
+    ]
+  },
+  "dependency_repository_url": [],
+  "platform": "android",
+  "author_name": "Zapp Team",
+  "author_email": "zapp@applicaster.com",
+  "manifest_version": "<%= version_id %>",
+  "name": "Generic Local Notification",
+  "description": "Generic Local Notifications",
+  "type": "general",
+  "identifier": "generic_local_notifications",
+  "whitelisted_account_ids": [
+    "5ae06cef8fba0f00084bd3c6",
+    "572a0a65373163000b000000"
+  ],
+  "ui_builder_support": true,
+  "min_zapp_sdk": "0.1.0-alpha1",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": true,
+  "react_bundle_url": "",
+  "platform": "amazon_fire_tv_for_quickbrick",
+  "targets": [
+    "tv"
+  ],
+  "ui_frameworks": [
+    "quickbrick"
+  ],
+  "npm_dependencies": [
+    "@applicaster/zapp_local_notifications@<%= version_id %>"
+  ],
+  "project_dependencies": [
+    {
+      "generic_local_notifications": "node_modules/@applicaster/zapp_local_notifications/Android"
+    }
+  ],
+  "extra_dependencies": [],
+  "custom_configuration_fields": []
+}
