@@ -34,6 +34,8 @@ Pod::Spec.new do |s|
 
   s.dependency 'ZappCore'
   s.dependency 'ReachabilitySwift', '= 5.0.0'
+  s.dependency 'DeviceKit', '= 3.2.0'
+
   s.ios.dependency 'AppCenter/Distribute', '= 3.0.0'
   s.ios.dependency 'AppCenter/Analytics', '= 3.0.0'
 
