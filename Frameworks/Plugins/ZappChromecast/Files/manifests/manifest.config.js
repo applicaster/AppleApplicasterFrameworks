@@ -48,7 +48,7 @@ function createManifest({ version, platform }) {
     npm_dependencies: [`@applicaster/zapp-generic-chromecast@${version}`],
   };
 
-  if (platform === "android") {
+  if (platform.includes("android")) {
     manifest.api = {
       require_startup_execution: false,
       class_name: "com.applicaster.chromecast.ChromeCastPlugin",
@@ -66,7 +66,7 @@ function createManifest({ version, platform }) {
     manifest.extra_dependencies = [];
   }
 
-  if (platform === "ios") {
+  if (platform.includes("ios")) {
     manifest.extra_dependencies = [
       {
         ZappChromecast:
