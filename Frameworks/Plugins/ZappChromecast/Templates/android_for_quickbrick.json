@@ -2,9 +2,7 @@
   "api": {
     "require_startup_execution": false,
     "class_name": "com.applicaster.chromecast.ChromeCastPlugin",
-    "react_packages": [
-      "com.reactnative.googlecast.GoogleCastPackage"
-    ],
+    "react_packages": ["com.reactnative.googlecast.GoogleCastPackage"],
     "proguard_rules": "-keep public class com.reactnative.googlecast.** {*;}"
   },
   "dependency_repository_url": [],
@@ -33,19 +31,13 @@
     }
   ],
   "styles": {},
-  "targets": [
-    "mobile"
-  ],
-  "ui_frameworks": [
-    "quickbrick"
-  ],
+  "targets": ["mobile"],
+  "ui_frameworks": ["quickbrick"],
   "platform": "android_for_quickbrick",
   "dependency_version": "0.1.10",
   "manifest_version": "0.1.10",
-  "min_zapp_sdk": "20.0.0-Dev",
-  "npm_dependencies": [
-    "@applicaster/zapp-generic-chromecast@0.1.10"
-  ],
+  "min_zapp_sdk": "0.1.0-alpha1",
+  "npm_dependencies": ["@applicaster/zapp-generic-chromecast@0.1.10"],
   "project_dependencies": [
     {
       "react-native-google-cast": "./node_modules/@applicaster/zapp-generic-chromecast/android/"
