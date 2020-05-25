@@ -548,7 +548,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/ChromecastAdapter.swift",
-      "line": 65,
+      "line": 64,
       "symbol": "ChromecastAdapter",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -1542,7 +1542,7 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/Plugins/ZappChromecast/Files/ios/Extensions/ChromecastAdapter+ConnectivityProtocol.swift",
-      "line": 66,
+      "line": 65,
       "symbol": "ChromecastAdapter.connectivityStateChanged(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

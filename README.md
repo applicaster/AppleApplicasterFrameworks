@@ -96,7 +96,7 @@ This respository is the main container for general frameworks and plugins for [Z
     - [iOS](https://zapp.applicaster.com/admin/plugin_versions?id=generic_local_notifications&platform=ios)
     - [tvOS](https://zapp.applicaster.com/admin/plugin_versions?id=generic_local_notifications&platform=tvos)
 
-##### Chromecast: *0.1.10*
+##### Chromecast: *0.1.11*
   - **Description:** This plugin allow to add Chromecast functionality for iOS and Android.
   - [**Documentation**](https://applicaster.github.io/AppleApplicasterFrameworks/ZappChromecast/index.html)
   - [**API**](https://applicaster.github.io/AppleApplicasterFrameworks/NotGeneratedDocs/ZappChromecast/ZappChromecast.html)
