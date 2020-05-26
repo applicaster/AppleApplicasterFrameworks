@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'ZappApple'
-  s.version = '0.7.20'
+  s.version = '0.7.21'
   s.summary = 'Framework that has general logic of the Zapp Apple application'
   s.ios.deployment_target = '11.0'
   s.tvos.deployment_target = '11.0'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
   s.license = 'Appache 2.0'
   s.author = { 'a.kononenko@applicaster.com' => 'a.kononenko@applicaster.com' }
-  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.5.20.14-5-0" }
+  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.5.26.5-5-5" }
   s.static_framework = true
 
   s.ios.xcconfig =  {
@@ -35,7 +35,6 @@ Pod::Spec.new do |s|
   s.dependency 'ZappCore'
   s.dependency 'ReachabilitySwift', '= 5.0.0'
   s.dependency 'DeviceKit', '= 3.2.0'
-
   s.ios.dependency 'AppCenter/Distribute', '= 3.0.0'
   s.ios.dependency 'AppCenter/Analytics', '= 3.0.0'
 

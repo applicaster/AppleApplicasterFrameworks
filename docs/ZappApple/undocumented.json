@@ -1318,91 +1318,105 @@
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "line": 38,
+      "symbol": "ZappStorageKeys.deviceModel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 39,
-      "symbol": "ZappStorageKeys.applicaster",
+      "symbol": "ZappStorageKeys.deviceMake",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 40,
-      "symbol": "ZappStorageKeys.applicasterVersion",
+      "symbol": "ZappStorageKeys.applicaster",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 41,
-      "symbol": "ZappStorageKeys.zapp",
+      "symbol": "ZappStorageKeys.applicasterVersion",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
       "line": 42,
+      "symbol": "ZappStorageKeys.zapp",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
+      "line": 43,
       "symbol": "ZappStorageKeys.applicasterNamespace",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 44,
+      "line": 45,
       "symbol": "ZappStorageKeys.reactNativePackagerRoot",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 45,
+      "line": 46,
       "symbol": "ZappStorageKeys.riversConfigurationId",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 46,
+      "line": 47,
       "symbol": "ZappStorageKeys.sdkVersion",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 47,
+      "line": 48,
       "symbol": "ZappStorageKeys.isRtl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 49,
+      "line": 50,
       "symbol": "ZappStorageKeys.assetsUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 50,
+      "line": 51,
       "symbol": "ZappStorageKeys.stylesUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 51,
+      "line": 52,
       "symbol": "ZappStorageKeys.remoteConfigurationUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 52,
+      "line": 53,
       "symbol": "ZappStorageKeys.pluginConfigurationUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/AppleApplicasterFrameworks/Frameworks/ZappApple/Files/Universal/Helpers/Storages/StoragesConsts.swift",
-      "line": 53,
+      "line": 54,
       "symbol": "ZappStorageKeys.riversUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
