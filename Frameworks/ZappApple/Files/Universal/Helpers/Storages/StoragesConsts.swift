@@ -35,7 +35,8 @@ public struct ZappStorageKeys {
     public static let deviceType = "deviceType"
     public static let deviceWidth = "deviceWidth"
     public static let deviceHeight = "deviceHeight"
-
+    public static let deviceModel = "device_model"
+    public static let deviceMake = "device_make"
     public static let applicaster = "applicaster"
     public static let applicasterVersion = "applicaster2"
     public static let zapp = "zapp"
