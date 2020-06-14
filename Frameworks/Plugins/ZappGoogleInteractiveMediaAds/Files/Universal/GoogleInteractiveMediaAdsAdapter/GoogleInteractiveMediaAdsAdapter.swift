@@ -178,6 +178,7 @@ import ZappCore
                                        userContext: nil) {
             adRequest = request
             adsLoader?.requestAds(with: adRequest)
+            adDisplayContainer.adContainer.accessibilityIdentifier = adUrl
         }
     }
 }
