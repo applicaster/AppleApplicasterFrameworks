@@ -7,12 +7,12 @@
     ]
   },
   "npm_dependencies": [
-    "@applicaster/quick-brick-google-ima-apple@0.10.1"
+    "@applicaster/quick-brick-google-ima-apple@0.10.2"
   ],
   "platform": "tvos_for_quickbrick",
   "author_name": "Anton Kononenko",
   "author_email": "a.kononenko@applicaster.com",
-  "manifest_version": "0.10.1",
+  "manifest_version": "0.10.2",
   "name": "Google Interactive Media Ads QuickBrick,",
   "description": "This plugin allow to add Google Interactive Media Ads to supported players.",
   "type": "video_advertisement",

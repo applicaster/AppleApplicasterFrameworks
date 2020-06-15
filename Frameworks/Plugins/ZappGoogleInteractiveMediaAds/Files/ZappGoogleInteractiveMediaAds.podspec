@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 	s.author = "Applicaster LTD."
 	s.source = {
 		 :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
-		 :tag => "2020.5.21.19-5-0"
+		 :tag => "2020.6.15.8-6-4"
   }
 
     s.ios.deployment_target = '10.0'
