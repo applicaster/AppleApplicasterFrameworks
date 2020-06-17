@@ -71,10 +71,10 @@ fastlane/test_output
 Passes for documentation Project
 Frameworks/ZappCore/Project/build
 
-Frameworks/**/build
-Frameworks/**/pods
-Frameworks/**/podfile.lock
-Frameworks/**/yarn-error.log
+**/build
+**/pods
+**/podfile.lock
+**/yarn-error.log
 
 Frameworks/**/report.html
 Frameworks/**/xcodebuild.log
@@ -85,5 +85,6 @@ node_modules/*
 
 **/tvos.json
 **/ios.json
-Frameworks/Plugins/ZappAppleVideoSubscriberSSO/node_modules
-Frameworks/Plugins/ZappChromecast/Files/node_modules
+Frameworks/**/node_modules
+**/FrameworksApp.xcworkspace/
+**/Pods
