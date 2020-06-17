@@ -3,7 +3,7 @@
 const fs = require("fs");
 const shell = require("cli-task-runner/utils/shell");
 const util = require("util");
-const exec = util.promisify(require('child_process').exec);
+const exec = util.promisify(require("child_process").exec);
 
 const {
   readPluginsList,
@@ -17,14 +17,14 @@ const {
   isMasterBranch,
   automationVersionsDataJSON,
   updateAutomationVersionsDataJSON,
-  gitTagDate
+  gitTagDate,
 } = require("./helpers.js");
 
 const {
   updateTemplate,
   manifestPath,
   saveCurrentPackagesVersion,
-  packageVersionsInfoFile
+  packageVersionsInfoFile,
 } = require("./publishPluginsHelper");
 
 run();
@@ -35,16 +35,22 @@ async function run() {
   // }
 
   const pluginsList = readPluginsList();
-  await saveCurrentPackagesVersion(pluginsList)
+  await saveCurrentPackagesVersion(pluginsList);
 
-  pluginsList.forEach(plugin => {
+  pluginsList.forEach((plugin) => {
     if (plugin) {
       console.log(`readJsonFile filePath: ${packageVersionsInfoFile(plugin)}`);
 
-      const { name = null, version = null } = config = readPluginConfig(plugin);
-      const {} = currentVersions = readJsonFile(packageVersionsInfoFile(plugin))
+      const { name = null, version = null } = (config = readPluginConfig(
+        plugin
+      ));
+      const {} = (currentVersions = readJsonFile(
+        packageVersionsInfoFile(plugin)
+      ));
       if (config.name) {
-        console.log(`config.name: ${config.name}, currentVersions: ${currentVersions}`)
+        console.log(
+          `config.name: ${config.name}, currentVersions: ${currentVersions}`
+        );
       }
     }
   });
@@ -73,37 +79,49 @@ async function run() {
   // if (itemsToUpdate.length > 0) {
   //   const newGitTag = gitTagDate();
   //   console.log({ itemsToUpdate });
-  //   await updateRelevantTemplates(itemsToUpdate, newGitTag);
-  //   await unitTestAndGenerateDocumentation(itemsToUpdate);
-  //   await updateFrameworksVersionsInGeneralDocs(frameworksList);
-  //   await updateAutomationVersionsDataJSON(newAutomationObject);
-  //   await uploadNpmPackages(itemsToUpdate);
-  //   await uploadManifestsToZapp(itemsToUpdate);
-  //   await commitChangesPushAndTag(itemsToUpdate, newGitTag);
-  //   await uploadFrameworksToCocoaPodsPublic(itemsToUpdate);
+    await updateRelevantTemplates(itemsToUpdate, newGitTag);// Podspec, documenation, android
+    await unitTestAndGenerateDocumentation(itemsToUpdate); //IOS, JS, Adnroid
+    await updateFrameworksVersionsInGeneralDocs(frameworksList); //Updated docs 
+    await updateAutomationVersionsDataJSON(newAutomationObject); // JSON automation
+    await uploadNpmPackages(itemsToUpdate); // No need
+    await uploadManifestsToZapp(itemsToUpdate); // No need
+    await commitChangesPushAndTag(itemsToUpdate, newGitTag);
+    // Workflow-1
+    // If needed to be updated
+    // Unit Test
+    // Update template(native stuff) this can be moved to cli
+    // All what relevant to docs 
+    // CLI Plugin 
+    // Push everything
+
+    // Workflow-2 Nightly
+    // Unit test (posibility to start every for all) + Documentaion
+
+
+    await uploadFrameworksToCocoaPodsPublic(itemsToUpdate);
   // }
   // console.log("System update has been finished!");
 }
 
 async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
   try {
-    const promises = itemsToUpdate.map(async model => {
+    const promises = itemsToUpdate.map(async (model) => {
       const baseFolderPath = basePathForModel(model);
 
       const { framework = null, version_id = null, plugin = null } = model;
 
       const ejsData = { version_id, new_tag: newGitTag };
-      const templatesBasePath = `${baseFolderPath}/Templates`;
+      const templatesBasePath = `${baseFolderPath}/manifests`;
       const templateExtension = ".ejs";
 
       await updateTemplate(
         ejsData,
         `${templatesBasePath}/.jazzy.yaml${templateExtension}`,
-        `${baseFolderPath}/.jazzy.yaml`
+        `${baseFolderPath}/apple/.jazzy.yaml`
       );
 
       const podspecPath = plugin
-        ? `${baseFolderPath}/Files/${framework}.podspec`
+        ? `${baseFolderPath}/apple/${framework}.podspec`
         : `${framework}.podspec`;
 
       await updateTemplate(
@@ -111,35 +129,6 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
         `${templatesBasePath}/${framework}.podspec${templateExtension}`,
         podspecPath
       );
-
-      if (plugin) {
-        const iosManifestPath = manifestPath({
-          model,
-          platform: "ios",
-          template: false
-        });
-        const iosTemplatePath = manifestPath({
-          model,
-          platform: "ios",
-          template: true
-        });
-        const tvosManifestPath = manifestPath({
-          model,
-          platform: "tvos",
-          template: false
-        });
-        const tvosTemplatePath = manifestPath({
-          model,
-          platform: "tvos",
-          template: true
-        });
-        if (fs.existsSync(iosTemplatePath)) {
-          await updateTemplate(ejsData, iosTemplatePath, iosManifestPath);
-        }
-        if (fs.existsSync(tvosTemplatePath)) {
-          await updateTemplate(ejsData, tvosTemplatePath, tvosManifestPath);
-        }
-      }
     });
     return await Promise.all(promises);
   } catch (e) {
@@ -151,7 +140,7 @@ async function updateRelevantTemplates(itemsToUpdate, newGitTag) {
 async function uploadManifestsToZapp(itemsToUpdate) {
   console.log("Uploading manifests to Zapp");
   try {
-    const promises = itemsToUpdate.map(async model => {
+    const promises = itemsToUpdate.map(async (model) => {
       const { framework = null, plugin = null } = model;
 
       const zappToken = process.env["ZAPP_TOKEN"];
@@ -162,12 +151,12 @@ async function uploadManifestsToZapp(itemsToUpdate) {
         const iosManifestPath = manifestPath({
           model,
           platform: "ios",
-          template: false
+          template: false,
         });
         const tvosManifestPath = manifestPath({
           model,
           platform: "tvos",
-          template: false
+          template: false,
         });
 
         if (iosManifestPath && fs.existsSync(iosManifestPath)) {
@@ -192,12 +181,14 @@ async function uploadManifestsToZapp(itemsToUpdate) {
 async function unitTestAndGenerateDocumentation(itemsToUpdate) {
   console.log("Unit tests and generation documentation\n");
   try {
-    const result = await runInSequence(itemsToUpdate, async model => {
+    const result = await runInSequence(itemsToUpdate, async (model) => {
       const { framework = null } = model;
       console.log(`\nPreparing framework:${framework}\n`);
       const baseFolderPath = basePathForModel(model);
       const isPodfileExist = fs.existsSync(`${baseFolderPath}/Podfile`);
-      const isPackageJsonExist = fs.existsSync(`${baseFolderPath}/package.json`);
+      const isPackageJsonExist = fs.existsSync(
+        `${baseFolderPath}/package.json`
+      );
       if (isPodfileExist) {
         if (isPackageJsonExist) {
           await shell.exec(`cd ${baseFolderPath} && npm install`);
@@ -217,14 +208,13 @@ async function unitTestAndGenerateDocumentation(itemsToUpdate) {
   }
 }
 
-
 async function uploadFrameworksToCocoaPodsPublic(itemsToUpdate) {
   console.log("Publishing to CocoaPods public repo\n");
   try {
     await shell.exec(
       `pod cache clean --all && pod repo add ApplicasterSpecs git@github.com:applicaster/CocoaPods.git || true`
     );
-    const result = await runInSequence(itemsToUpdate, async model => {
+    const result = await runInSequence(itemsToUpdate, async (model) => {
       const { framework = null, plugin = null } = model;
       if (framework && !plugin) {
         console.log(`\nTrying to push CocoaPods framework:${framework}\n`);
@@ -245,7 +235,7 @@ async function updateFrameworksVersionsInGeneralDocs(itemsToUpdate) {
 
     const keys = Object.keys(itemsToUpdate);
 
-    const promises = keys.map(async framework => {
+    const promises = keys.map(async (framework) => {
       const model = itemsToUpdate[framework];
 
       const { version_id = null } = model;
@@ -266,7 +256,7 @@ async function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
     await shell.exec("git add README.md");
     await shell.exec("git add .versions_automation.json");
     let commitMessage = `System update, expected tag:${newGitTag}, frameworks:`;
-    const promises = itemsToUpdate.map(async model => {
+    const promises = itemsToUpdate.map(async (model) => {
       const baseFolderPath = basePathForModel(model);
 
       const { framework = null, plugin = null } = model;
@@ -277,7 +267,7 @@ async function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
       await shell.exec(`git add ${baseFolderPath}`);
     });
     await Promise.all(promises);
-    itemsToUpdate.forEach(model => {
+    itemsToUpdate.forEach((model) => {
       const { framework = null, version_id = null } = model;
       commitMessage += ` [${framework}:${version_id}]`;
     });
@@ -294,7 +284,7 @@ async function commitChangesPushAndTag(itemsToUpdate, newGitTag) {
 }
 
 async function uploadNpmPackages(itemsToUpdate) {
-  const promises = itemsToUpdate.map(async model => {
+  const promises = itemsToUpdate.map(async (model) => {
     const baseFolderPath = basePathForModel(model);
 
     const { version_id = null, plugin = null, framework = null } = model;

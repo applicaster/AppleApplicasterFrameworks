@@ -29,8 +29,8 @@ Pod::Spec.new do |s|
   s.dependency 'ZappCore'
 
   s.test_spec 'UnitTests' do |sp|
-    sp.ios.source_files = 'Tests/iOS/**/*.{swift}'
-    sp.ios.resources = ['Tests/iOS/**/*.{png}']
-    sp.tvos.source_files = 'Tests/iOS/**/Dummy.swift'
+    sp.ios.source_files = 'tests/iOS/**/*.{swift}'
+    sp.ios.resources = ['tests/iOS/**/*.{png}']
+    sp.tvos.source_files = 'tests/iOS/**/Dummy.swift'
   end
 end
