@@ -1,6 +1,6 @@
 //
 //  APSwiftUtils.swift
-//  ApplicasterSDK
+//  ZappApple
 //
 //  Created by Anton Kononenko on 21/12/2016.
 //  Copyright © 2016 Applicaster Ltd. All rights reserved.
