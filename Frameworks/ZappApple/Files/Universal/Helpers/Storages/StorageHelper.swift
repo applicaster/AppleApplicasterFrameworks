@@ -86,13 +86,14 @@ public class StorageHelper {
     /// - Returns: String Value represantation of the JSON. If namespace not nil will return all items for namespace domain, otherwise all storage items
     public class func getAll(inStorageDict storageDict: [String: Any],
                              namespace: String?) -> String? {
-        guard let namespace = namespace,
-            namespace.isEmpty == false else {
-            return getJSONStringFrom(dictionary: storageDict)
+      var namespaceToUse = ZappStorageKeys.applicasterNamespace
+        if let namespace = namespace,
+            namespace.isEmpty == false {
+            namespaceToUse = namespace
         }
 
         guard let namespaceDicts = storageDict[ZappStorageKeys.zapp] as? [String: Any],
-            let currentNamespaceSessionData = namespaceDicts[namespace] as? [String: Any] else { return nil }
+            let currentNamespaceSessionData = namespaceDicts[namespaceToUse] as? [String: Any] else { return nil }
 
         return getJSONStringFrom(dictionary: currentNamespaceSessionData)
     }
@@ -108,4 +109,5 @@ public class StorageHelper {
         }
         return jsonString
     }
+    
 }
