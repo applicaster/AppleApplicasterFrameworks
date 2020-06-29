@@ -111,7 +111,7 @@ async function publishPlugin(pluginFolder, latestSha) {
     const output = await exec(
       `yarn publish:plugin plugins/${pluginFolder} -v ${newVersion}`
     );
-
+// TODO Create tag for plugin ${pluginFolder}/${newVersion}
     return output;
   } catch (e) {
     throw e;
