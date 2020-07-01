@@ -11,12 +11,13 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git',
                          :tag => '2020.5.21.19-5-0'  }
   s.platform = :ios
+  s.tvos.deployment_target = '11.0'
   s.ios.deployment_target = '11.0'
   s.requires_arc = true
   s.static_framework = true
   s.swift_versions = '5.1'
 
-  s.source_files = 'ios/**/*.swift'
+  s.source_files = 'Universal/**/*.swift'
 
   s.xcconfig =  {
                   'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',

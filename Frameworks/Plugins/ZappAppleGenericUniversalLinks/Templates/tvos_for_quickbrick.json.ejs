@@ -7,17 +7,17 @@
     ]
   },
   "npm_dependencies": [
-    "@applicaster/generic_universal_links_apple@0.1.4"
+    "@applicaster/generic_universal_links_apple@<%= version_id %>"
   ],
   "extra_dependencies": [
     {
       "ZappAppleGenericUniversalLinks": ":path => './node_modules/@applicaster/generic_universal_links_apple/ZappAppleGenericUniversalLinks.podspec'"
     }
   ],
-  "platform": "ios_for_quickbrick",
+  "platform": "tvos_for_quickbrick",
   "author_name": "Alex Zchut",
   "author_email": "a.zchut@applicaster.com",
-  "manifest_version": "0.1.4",
+  "manifest_version": "<%= version_id %>",
   "name": "Generic Universal Links",
   "description": "Generic Universal Links plugin",
   "type": "general",
@@ -41,6 +41,6 @@
     }
   ],
   "targets": [
-    "mobile"
+    "tv"
   ]
 }
