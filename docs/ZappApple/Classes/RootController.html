@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">ZappApple 0.7.21 Docs</a>
+          <a href="../index.html">ZappApple 0.7.22 Docs</a>
           <span class="no-mobile"> (22% documented)</span>
         </p>
     
@@ -51,6 +51,7 @@
                     <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RootController</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorAnalyticsProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorAppDataProtocol</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorAudioSessionProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorChromecastProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorConnnectivityProtocol</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RootController</span><span class="p">:</span> <span class="kt">FacadeConnectorLocalNotificationProtocol</span></code></pre>
@@ -765,6 +766,141 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">bundleIdentifier</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappApple@objc(cs)RootController(im)enableAudioSessionWithPlayback"></a>
+                      <a name="//apple_ref/swift/Method/enableAudioSessionWithPlayback()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappApple@objc(cs)RootController(im)enableAudioSessionWithPlayback">enableAudioSessionWithPlayback()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableAudioSessionWithPlayback</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappApple@objc(cs)RootController(im)disableAudioSession"></a>
+                      <a name="//apple_ref/swift/Method/disableAudioSession()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappApple@objc(cs)RootController(im)disableAudioSession">disableAudioSession()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disableAudioSession</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappApple@objc(cs)RootController(im)notifyBackgroundAudioToContinuePlaying"></a>
+                      <a name="//apple_ref/swift/Method/notifyBackgroundAudioToContinuePlaying()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappApple@objc(cs)RootController(im)notifyBackgroundAudioToContinuePlaying">notifyBackgroundAudioToContinuePlaying()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">notifyBackgroundAudioToContinuePlaying</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@ZappApple@objc(cs)RootController(im)enablePlaybackCategoryIfNeededToMuteBackgroundAudioForItem:"></a>
+                      <a name="//apple_ref/swift/Method/enablePlaybackCategoryIfNeededToMuteBackgroundAudio(forItem:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@ZappApple@objc(cs)RootController(im)enablePlaybackCategoryIfNeededToMuteBackgroundAudioForItem:">enablePlaybackCategoryIfNeededToMuteBackgroundAudio(forItem:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enablePlaybackCategoryIfNeededToMuteBackgroundAudio</span><span class="p">(</span><span class="n">forItem</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">?)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:9ZappApple14RootControllerC51enablePlaybackCategoryIfNeededToMuteBackgroundAudio33_B280B43D7AE3184E3F905108DB387029LLyyF"></a>
+                      <a name="//apple_ref/swift/Method/enablePlaybackCategoryIfNeededToMuteBackgroundAudio()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:9ZappApple14RootControllerC51enablePlaybackCategoryIfNeededToMuteBackgroundAudio33_B280B43D7AE3184E3F905108DB387029LLyyF">enablePlaybackCategoryIfNeededToMuteBackgroundAudio()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">enablePlaybackCategoryIfNeededToMuteBackgroundAudio</span><span class="p">()</span></code></pre>
 
                           </div>
                         </div>
@@ -2512,6 +2648,9 @@
             <li class="nav-group-name">
               <a href="../Other%20Classes.html">Other Classes</a>
               <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/APSwiftUtils.html">APSwiftUtils</a>
+                </li>
                 <li class="nav-group-task">
                   <a href="../Classes/GeneralPluginsManager.html">GeneralPluginsManager</a>
                 </li>

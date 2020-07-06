@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'ZappCore'
-  s.version = '0.9.17'
+  s.version = '0.9.18'
   s.summary = 'General Applicaster iOS and tvOS framework that provides protocol'
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/applicaster/AppleApplicasterFrameworks.git'
   s.license = 'Appache 2.0'
   s.author = { 'a.kononenko@applicaster.com' => 'a.kononenko@applicaster.com' }
-  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.6.26.19-6-7" }
+  s.source = { :git => 'https://github.com/applicaster/AppleApplicasterFrameworks.git', :tag => "2020.7.6.11-7-5" }
   
   s.source_files = 'Frameworks/ZappCore/Files/Universal/**/*.{swift}'
   s.ios.source_files = 'Frameworks/ZappCore/Files/iOS/**/*.{swift}'
