@@ -1,4 +1,4 @@
-# REPOSITORY UNSUPORTED, please use (Zapp-Frameworks)[https://github.com/applicaster/Zapp-Frameworks] instead
+# REPOSITORY UNSUPORTED, please use https://github.com/applicaster/Zapp-Frameworks instead
 
 
 
