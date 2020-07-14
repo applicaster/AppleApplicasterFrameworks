@@ -26,13 +26,6 @@
 		<key>plugin</key>
 		<true/>
 	</dict>
-	<key>ZappGoogleInteractiveMediaAds</key>
-	<dict>
-		<key>version_id</key>
-		<string>0.10.2</string>
-		<key>plugin</key>
-		<true/>
-	</dict>
 	<key>ZappAppleVideoSubscriptionRegistration</key>
 	<dict>
 		<key>version_id</key>
